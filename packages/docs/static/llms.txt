@@ -617,9 +617,9 @@ Example: This sidebar is always visible. When it's close we only see iocns, when
   </div>
   <div class="drawer-side is-drawer-close:overflow-visible">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-    <div class="is-drawer-close:w-17 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
+    <div class="is-drawer-close:w-14 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
       <!-- Sidebar content here -->
-      <ul class="menu w-full grow p-4">
+      <ul class="menu w-full grow">
         <!-- list item -->
         <li>
           <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Homepage">
@@ -636,7 +636,7 @@ Example: This sidebar is always visible. When it's close we only see iocns, when
         </li>
       </ul>
       <!-- button to open/close drawer -->
-      <div class="m-3.5 is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Open">
+      <div class="m-2 is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Open">
         <label for="my-drawer-4" class="btn btn-ghost btn-circle drawer-button is-drawer-open:rotate-y-180">
           ↔️
         </label>
@@ -684,7 +684,7 @@ Using CSS focus
 ```html
 <div class="dropdown">
   <div tabindex="0" role="button">Button</div>
-  <ul tabindex="0" class="dropdown-content">{CONTENT}</ul>
+  <ul tabindex="-1" class="dropdown-content">{CONTENT}</ul>
 </div>
 ```
 

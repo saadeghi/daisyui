@@ -12,7 +12,8 @@
     }
     &:user-invalid,
     &:has(:user-invalid),
-    &[aria-invalid]:not([aria-invalid="false"]) {
+    &[aria-invalid]:not([aria-invalid="false"]),
+    &:has([aria-invalid]:not([aria-invalid="false"])) {
       &,
       &:focus,
       &:checked,

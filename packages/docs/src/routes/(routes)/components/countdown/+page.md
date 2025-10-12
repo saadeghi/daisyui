@@ -1,6 +1,6 @@
 ---
 title: Countdown
-desc: Countdown gives you a transition effect when you change a number between 0 to 99.
+desc: Countdown gives you a transition effect when you change a number between 0 to 999.
 source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/countdown.css
 layout: components
 classnames:
@@ -31,7 +31,11 @@ classnames:
 
 > :INFO:
 >
-> you need to change the span text and the `--value` CSS variable using JS. Value must be a number between 0 and 99.
+> you need to change the span text and the `--value` CSS variable using JS. Value must be a number between 0 and 999.
+
+> :INFO:
+>
+> you can set the minimum number of digits to display to 2 or 3 with `--digits: 2` or `--digits: 3` CSS variable.
 
 ### ~Countdown
 <span class="countdown">
@@ -51,20 +55,20 @@ classnames:
 ```
 
 
-### ~Large text
+### ~Large text with 2 digits
 <span class="countdown font-mono text-6xl">
-  <span style="--value:{counter};" aria-live="polite" aria-label="{counter}">{counter}</span>
+  <span style="--value:{counter}; --digits: 2;" aria-live="polite" aria-label="{counter}">{counter}</span>
 </span>
 
 ```html
 <span class="$$countdown font-mono text-6xl">
-  <span style="--$$value:59;" aria-live="polite" aria-label="59">59</span>
+  <span style="--$$value:59; --$$digits: 2;" aria-live="polite" aria-label="59">59</span>
 </span>
 ```
 ```jsx
 {/* For TSX uncomment the commented types below */}
 <span class="$$countdown font-mono text-6xl">
-  <span style={{"--$$value":59} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
+  <span style={{"--$$value":59, "--$$digits":2} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
 </span>
 ```
 
@@ -99,17 +103,17 @@ classnames:
 ### ~Clock countdown with colons
 <span class="font-mono text-2xl countdown">
   <span style="--value:10;" aria-live="polite" aria-label="10">10</span>:
-  <span style="--value:24;" aria-live="polite" aria-label="24">24</span>:
-  <span style="--value:{counter};" aria-live="polite" aria-label="{counter}">{counter}</span>
+  <span style="--value:24; --digits: 2;" aria-live="polite" aria-label="24">24</span>:
+  <span style="--value:{counter}; --digits: 2;" aria-live="polite" aria-label="{counter}">{counter}</span>
 </span>
 
 ```html
 <span class="$$countdown font-mono text-2xl">
   <span style="--$$value:10;" aria-live="polite" aria-label="10">10</span>
   :
-  <span style="--$$value:24;" aria-live="polite" aria-label="24">24</span>
+  <span style="--$$value:24; --$$digits: 2;" aria-live="polite" aria-label="24">24</span>
   :
-  <span style="--$$value:59;" aria-live="polite" aria-label="59">59</span>
+  <span style="--$$value:59; --$$digits: 2;" aria-live="polite" aria-label="59">59</span>
 </span>
 ```
 ```jsx
@@ -117,7 +121,7 @@ classnames:
 <span class="$$countdown font-mono text-2xl">
   <span style={{"--$$value":10} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>10</span>:
   <span style={{"--$$value":24} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>24</span>:
-  <span style={{"--$$value":59} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
+  <span style={{"--$$value":59, "--$$digits":2} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
 </span>
 ```
 

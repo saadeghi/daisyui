@@ -216,7 +216,7 @@ For example, a dropdown menu in daisyUI needs no JavaScript:
 <!-- A dropdown without JavaScript -->
 <div class="dropdown">
   <label tabindex="0" class="btn m-1">Click me</label>
-  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
+  <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>

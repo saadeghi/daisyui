@@ -48,12 +48,7 @@ npm install daisyui@latest
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 
 ```postcss:app/assets/tailwind/application.css
-@import "tailwindcss" source(none);
-@source "../../../public/*.html";
-@source "../../../app/helpers/**/*.rb";
-@source "../../../app/javascript/**/*.js";
-@source "../../../app/views/**/*";
-
+@import "tailwindcss";
 @plugin "daisyui";
 ```
 
@@ -75,11 +70,9 @@ curl -sLo app/assets/tailwind/daisyui-theme.mjs https://github.com/saadeghi/dais
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 
 ```postcss:app/assets/tailwind/application.css
-@import "tailwindcss" source(none);
-@source "../../../public/*.html";
-@source "../../../app/helpers/**/*.rb";
-@source "../../../app/javascript/**/*.js";
-@source "../../../app/views/**/*";
+@import "tailwindcss";
+
+@source not "./daisyui{,*}.mjs";
 
 @plugin "./daisyui.mjs";
 
@@ -100,11 +93,7 @@ This method is recommended if you want to quickly add daisyUI without adding any
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 
 ```postcss:app/assets/tailwind/application.css
-@import "tailwindcss" source(none);
-@source "../../../public/*.html";
-@source "../../../app/helpers/**/*.rb";
-@source "../../../app/javascript/**/*.js";
-@source "../../../app/views/**/*";
+@import "tailwindcss";
 
 @import "https://cdn.jsdelivr.net/npm/daisyui@5";
 ```

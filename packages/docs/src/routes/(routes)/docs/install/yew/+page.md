@@ -1,11 +1,80 @@
 ---
-title: Use daisyUI with Tailwind CSS Standalone CLI
-desc: How to run daisyUI with Tailwind CSS Standalone CLI without Node.js
+title: Install daisyUI for Yew
+desc: How to install Tailwind CSS and daisyUI in a Yew project
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
+
+### 1. Install Rust, WebAssembly Target and Trunk
+
+Install Rust according to the [official Rust docs](https://www.rust-lang.org/tools/install)
+
+Install WebAssembly target
+
+```sh:Terminal
+rustup target add wasm32-unknown-unknown
+```
+
+Install Trunk
+
+```sh:Terminal
+cargo install --locked trunk
+```
+
+### 2. Create a Yew project
+
+```sh:Terminal
+cargo new yew-app
+cd yew-app
+```
+
+Add `yew` to your `Cargo.toml` dependencies
+
+```diff:Cargo.toml
+[package]
+name = "yew-app"
+version = "0.1.0"
+edition = "2025"
+
+[dependencies]
++ yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+```
+
+### 3. Update `src/main.rs` file
+
+```rust:src/main.rs
+use yew::prelude::*;
+
+#[function_component]
+fn App() -> Html {
+    html! {
+        <button class="btn">{ "Hello daisyUI" }</button>
+    }
+}
+
+fn main() {
+    yew::Renderer::<App>::new().render();
+}
+```
+
+### 4. Create `index.html` file
+Create an `index.html` file in the project root with the following content:
+
+```html:index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Yew App</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body></body>
+</html>
+```
+
+### 5. Add Tailwind CSS and daisyUI
 
 <div class="tabs tabs-lift lg:tabs-xl max-sm:tabs-sm">
   <label class="tab">
@@ -53,7 +122,7 @@ powershell -c "irm daisyui.com/fast.ps1 | iex"
   </label>
   <div class="tab-content bg-base-100 border-base-300 px-6 py-3 ps-16">
 
-### 1. Get Tailwind CSS executable
+#### Get Tailwind CSS executable
 
 Follow [Tailwind CSS guide](https://tailwindcss.com/blog/standalone-cli) and get the latest version of Tailwind CSS executable for your OS.
 
@@ -82,7 +151,7 @@ Make the file executable (For Linux and MacOS):
 chmod +x tailwindcss
 ```
 
-### 2. Get daisyUI bundle JS file
+#### Get daisyUI bundle JS file
 
 Run this code to download latest version of daisyUI as a single js file and put it next to Tailwind's executable file.
 
@@ -91,7 +160,7 @@ curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.m
 curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.mjs
 ```
 
-### 3. Add Tailwind CSS and daisyUI
+#### Add Tailwind CSS and daisyUI
 
 Add Tailwind CSS and daisyUI to your CSS file.  
 Address your HTML and other markup files in the `source` function.
@@ -113,16 +182,24 @@ Address your HTML and other markup files in the `source` function.
 </div>
 </div>
 
-### Build CSS
+### 6. Add a hook to build `output.css` automatically
 
-Run this command to build the CSS file using Tailwind CSS executable.  
-Using `--watch` will automatically update the output.css file when you change the input.css file.  
-For CI/CD, run the command without `--watch` to generate the output.css file once.
+Create a `Trunk.toml` file in the project root with the following content:
 
-```sh:Terminal
-./tailwindcss -i input.css -o output.css --watch
-# For Windows
-tailwindcss.exe -i input.css -o output.css --watch
+```toml:Trunk.toml
+[build]
+target = "index.html"
+dist = "dist"
+
+[[hooks]]
+stage = "build"
+command = "sh"
+command_arguments = ["-c", "./tailwindcss -i input.css -o $TRUNK_STAGING_DIR/output.css"]
 ```
 
-Now you can use daisyUI class names!
+### 7. Run the app
+Run the following command to start a development server and open the app in your browser
+
+```sh:Terminal
+trunk serve --open
+```

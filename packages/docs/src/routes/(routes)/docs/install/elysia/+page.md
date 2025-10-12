@@ -33,8 +33,7 @@ bun install tailwindcss@latest @tailwindcss/cli@latest daisyui@latest
 Add Tailwind CSS and daisyUI to your CSS file
 
 ```postcss:src/app.css
-@import "tailwindcss" source(none);
-@source "../public";
+@import "tailwindcss";
 @plugin "daisyui";
 ```
 

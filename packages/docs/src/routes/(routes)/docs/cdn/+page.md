@@ -149,4 +149,6 @@ desc: How to use daisyUI from a CDN?
   </div>
 </div>
 
-Every part of daisyUI is [available on CDN](https://cdn.jsdelivr.net/npm/daisyui@5/) as separate CSS files.
+- Every part of daisyUI is [available on CDN](https://cdn.jsdelivr.net/npm/daisyui@5/) as separate CSS files.
+- Some uncommon Tailwind CSS color utility classes for daisyUI colors are available on additional CSS files for CDN usage, see [colors docs](/docs/colors/#how-to-use) for more info.
+- daisyUI variant class names like `is-drawer-open` and `is-drawer-close` are not included in the CDN files because adding them for all class names will result in a very large file size.

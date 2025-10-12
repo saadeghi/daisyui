@@ -1,231 +1,249 @@
 .timeline {
-  @apply relative flex;
+  @layer daisyui.component {
+    @apply relative flex;
 
-  > li {
-    @apply relative grid shrink-0 items-center;
-    grid-template-rows: var(--timeline-row-start, minmax(0, 1fr)) auto var(
-        --timeline-row-end,
-        minmax(0, 1fr)
-      );
-    grid-template-columns: var(--timeline-col-start, minmax(0, 1fr)) auto var(
-        --timeline-col-end,
-        minmax(0, 1fr)
-      );
+    > li {
+      @apply relative grid shrink-0 items-center;
+      grid-template-rows: var(--timeline-row-start, minmax(0, 1fr)) auto var(
+          --timeline-row-end,
+          minmax(0, 1fr)
+        );
+      grid-template-columns: var(--timeline-col-start, minmax(0, 1fr)) auto var(
+          --timeline-col-end,
+          minmax(0, 1fr)
+        );
 
-    > hr {
-      border: none;
-      @apply w-full;
+      > hr {
+        border: none;
+        @apply w-full;
 
+        &:first-child {
+          @apply col-start-1 row-start-2;
+        }
+
+        &:last-child {
+          @apply col-start-3 col-end-[none] row-start-2 row-end-auto;
+        }
+        @media print {
+          border: 0.1px solid var(--color-base-300);
+        }
+      }
+    }
+
+    :where(hr) {
+      @apply bg-base-300 h-1;
+    }
+
+    &:has(.timeline-middle hr) {
       &:first-child {
-        @apply col-start-1 row-start-2;
+        @apply rounded-e-selector rounded-s-none;
       }
 
       &:last-child {
-        @apply col-start-3 col-end-[none] row-start-2 row-end-auto;
-      }
-      @media print {
-        border: 0.1px solid var(--color-base-300);
+        @apply rounded-s-selector rounded-e-none;
       }
     }
-  }
 
-  :where(hr) {
-    @apply bg-base-300 h-1;
-  }
+    &:not(:has(.timeline-middle)) {
+      :first-child hr:last-child {
+        @apply rounded-s-selector rounded-e-none;
+      }
 
-  &:has(.timeline-middle hr) {
-    &:first-child {
-      @apply rounded-e-selector rounded-s-none;
-    }
-
-    &:last-child {
-      @apply rounded-s-selector rounded-e-none;
-    }
-  }
-
-  &:not(:has(.timeline-middle)) {
-    :first-child hr:last-child {
-      @apply rounded-s-selector rounded-e-none;
-    }
-
-    :last-child hr:first-child {
-      @apply rounded-e-selector rounded-s-none;
+      :last-child hr:first-child {
+        @apply rounded-e-selector rounded-s-none;
+      }
     }
   }
 }
 
 .timeline-box {
-  border: var(--border) solid;
-  @apply rounded-box bg-base-100 border-base-300 px-4 py-2;
-  font-size: 0.75rem;
-  box-shadow: 0 1px 2px 0 oklch(0% 0 0/0.05);
+  @layer daisyui.component {
+    border: var(--border) solid;
+    @apply rounded-box bg-base-100 border-base-300 px-4 py-2;
+    font-size: 0.75rem;
+    box-shadow: 0 1px 2px 0 oklch(0% 0 0/0.05);
+  }
 }
 
 .timeline-start {
-  @apply col-start-1 col-end-4 row-start-1 row-end-2 m-1 self-end justify-self-center;
+  @layer daisyui.component {
+    @apply col-start-1 col-end-4 row-start-1 row-end-2 m-1 self-end justify-self-center;
+  }
 }
 
 .timeline-middle {
-  @apply col-start-2 row-start-2;
+  @layer daisyui.component {
+    @apply col-start-2 row-start-2;
+  }
 }
 
 .timeline-end {
-  @apply col-start-1 col-end-4 row-start-3 row-end-4 m-1 self-start justify-self-center;
+  @layer daisyui.component {
+    @apply col-start-1 col-end-4 row-start-3 row-end-4 m-1 self-start justify-self-center;
+  }
 }
 
 .timeline-compact {
-  --timeline-row-start: 0;
-
-  .timeline-start {
-    @apply col-start-1 col-end-4 row-start-3 row-end-4 self-start justify-self-center;
-  }
-
-  li:has(.timeline-start) {
-    .timeline-end {
-      @apply col-start-[none] row-start-auto;
-    }
-  }
-
-  &.timeline-vertical {
-    > li {
-      --timeline-col-start: 0;
-    }
+  @layer daisyui.modifier {
+    --timeline-row-start: 0;
 
     .timeline-start {
-      @apply col-start-3 col-end-4 row-start-1 row-end-4 self-center justify-self-start;
+      @apply col-start-1 col-end-4 row-start-3 row-end-4 self-start justify-self-center;
     }
 
     li:has(.timeline-start) {
       .timeline-end {
-        @apply col-start-auto row-start-[none];
+        @apply col-start-[none] row-start-auto;
+      }
+    }
+
+    &.timeline-vertical {
+      > li {
+        --timeline-col-start: 0;
+      }
+
+      .timeline-start {
+        @apply col-start-3 col-end-4 row-start-1 row-end-4 self-center justify-self-start;
+      }
+
+      li:has(.timeline-start) {
+        .timeline-end {
+          @apply col-start-auto row-start-[none];
+        }
       }
     }
   }
 }
 
 .timeline-snap-icon {
-  > li {
-    --timeline-col-start: 0.5rem;
-    --timeline-row-start: minmax(0, 1fr);
+  @layer daisyui.modifier {
+    > li {
+      --timeline-col-start: 0.5rem;
+      --timeline-row-start: minmax(0, 1fr);
+    }
   }
 }
 
 .timeline-vertical {
-  @apply flex-col;
+  @layer daisyui.modifier {
+    @apply flex-col;
 
-  > li {
-    @apply justify-items-center;
-    --timeline-row-start: minmax(0, 1fr);
-    --timeline-row-end: minmax(0, 1fr);
-
-    > hr {
-      @apply h-full w-1;
-
-      &:first-child {
-        @apply col-start-2 row-start-1;
-      }
-
-      &:last-child {
-        @apply col-start-2 col-end-auto row-start-3 row-end-[none];
-      }
-    }
-  }
-
-  .timeline-start {
-    @apply col-start-1 col-end-2 row-start-1 row-end-4 self-center justify-self-end;
-  }
-
-  .timeline-end {
-    @apply col-start-3 col-end-4 row-start-1 row-end-4 self-center justify-self-start;
-  }
-
-  &:has(.timeline-middle) {
     > li {
+      @apply justify-items-center;
+      --timeline-row-start: minmax(0, 1fr);
+      --timeline-row-end: minmax(0, 1fr);
+
       > hr {
+        @apply h-full w-1;
+
         &:first-child {
-          @apply rounded-b-selector rounded-t-none;
+          @apply col-start-2 row-start-1;
         }
 
         &:last-child {
-          @apply rounded-t-selector rounded-b-none;
+          @apply col-start-2 col-end-auto row-start-3 row-end-[none];
         }
       }
     }
-  }
 
-  &:not(:has(.timeline-middle)) {
-    :first-child {
-      > hr:last-child {
-        @apply rounded-t-selector rounded-b-none;
+    .timeline-start {
+      @apply col-start-1 col-end-2 row-start-1 row-end-4 self-center justify-self-end;
+    }
+
+    .timeline-end {
+      @apply col-start-3 col-end-4 row-start-1 row-end-4 self-center justify-self-start;
+    }
+
+    &:has(.timeline-middle) {
+      > li {
+        > hr {
+          &:first-child {
+            @apply rounded-b-selector rounded-t-none;
+          }
+
+          &:last-child {
+            @apply rounded-t-selector rounded-b-none;
+          }
+        }
       }
     }
 
-    :last-child {
-      > hr:first-child {
-        @apply rounded-b-selector rounded-t-none;
+    &:not(:has(.timeline-middle)) {
+      :first-child {
+        > hr:last-child {
+          @apply rounded-t-selector rounded-b-none;
+        }
+      }
+
+      :last-child {
+        > hr:first-child {
+          @apply rounded-b-selector rounded-t-none;
+        }
       }
     }
-  }
 
-  &.timeline-snap-icon {
-    > li {
-      --timeline-col-start: minmax(0, 1fr);
-      --timeline-row-start: 0.5rem;
+    &.timeline-snap-icon {
+      > li {
+        --timeline-col-start: minmax(0, 1fr);
+        --timeline-row-start: 0.5rem;
+      }
     }
   }
 }
 
 .timeline-horizontal {
-  @apply flex-row;
+  @layer daisyui.modifier {
+    @apply flex-row;
 
-  > li {
-    @apply items-center;
-
-    > hr {
-      @apply h-1 w-full;
-
-      &:first-child {
-        @apply col-start-1 row-start-2;
-      }
-
-      &:last-child {
-        @apply col-start-3 col-end-[none] row-start-2 row-end-auto;
-      }
-    }
-  }
-
-  .timeline-start {
-    @apply col-start-1 col-end-4 row-start-1 row-end-2 self-end justify-self-center;
-  }
-
-  .timeline-end {
-    @apply col-start-1 col-end-4 row-start-3 row-end-4 self-start justify-self-center;
-  }
-
-  &:has(.timeline-middle) {
     > li {
+      @apply items-center;
+
       > hr {
+        @apply h-1 w-full;
+
         &:first-child {
-          @apply rounded-e-selector rounded-s-none;
+          @apply col-start-1 row-start-2;
         }
 
         &:last-child {
-          @apply rounded-s-selector rounded-e-none;
+          @apply col-start-3 col-end-[none] row-start-2 row-end-auto;
         }
       }
     }
-  }
 
-  &:not(:has(.timeline-middle)) {
-    :first-child {
-      > hr:last-child {
-        @apply rounded-s-selector rounded-e-none;
+    .timeline-start {
+      @apply col-start-1 col-end-4 row-start-1 row-end-2 self-end justify-self-center;
+    }
+
+    .timeline-end {
+      @apply col-start-1 col-end-4 row-start-3 row-end-4 self-start justify-self-center;
+    }
+
+    &:has(.timeline-middle) {
+      > li {
+        > hr {
+          &:first-child {
+            @apply rounded-e-selector rounded-s-none;
+          }
+
+          &:last-child {
+            @apply rounded-s-selector rounded-e-none;
+          }
+        }
       }
     }
 
-    :last-child {
-      > hr:first-child {
-        @apply rounded-e-selector rounded-s-none;
+    &:not(:has(.timeline-middle)) {
+      :first-child {
+        > hr:last-child {
+          @apply rounded-s-selector rounded-e-none;
+        }
+      }
+
+      :last-child {
+        > hr:first-child {
+          @apply rounded-e-selector rounded-s-none;
+        }
       }
     }
   }

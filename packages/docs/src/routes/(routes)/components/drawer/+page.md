@@ -59,7 +59,8 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 > :INFO:
 >
-> Opening a drawer adds a [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter) to the page to avoid layout shift on operating systems that have a fixed scrollbar.  
+> Opening a drawer adds a [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter) to the page to avoid layout shift on operating systems that have a fixed scrollbar.
+> On recent Chromium based browsers vertical scrollbar presence is detected automatically. On Safari and on mobile devices the scrollbar is displayed as overlay so there will not be gutter. On Firefox you need to detect the presence of vertical scrollbar and set the `scrollbar-gutter: stable` or `scrollbar-gutter: unset` on `:root` element yourself.
 > If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
 ### ~Drawer sidebar
@@ -224,8 +225,8 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   </div>
   <div class="drawer-side is-drawer-close:overflow-visible h-full max-lg:z-1002">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-    <div class="is-drawer-close:w-17 is-drawer-open:w-64 h-full bg-base-200 flex flex-col items-start">
-      <ul class="menu p-4 w-full grow">
+    <div class="is-drawer-close:w-14 is-drawer-open:w-64 h-full bg-base-200 flex flex-col items-start">
+      <ul class="menu w-full grow">
         <li>
           <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left" data-tip="Homepage">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5">
@@ -247,7 +248,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
           </button>
         </li>
       </ul>
-      <div class="m-3.5 is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left" data-tip="Open">
+      <div class="m-2 is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left" data-tip="Open">
         <label for="my-drawer-4" class="btn btn-ghost btn-circle drawer-button is-drawer-open:rotate-y-180">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5">
             <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
@@ -269,9 +270,9 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   
   <div class="$$drawer-side is-drawer-close:overflow-visible">
     <label for="my-drawer-4" aria-label="close sidebar" class="$$drawer-overlay"></label>
-    <div class="is-drawer-close:w-17 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
+    <div class="is-drawer-close:w-14 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
       <!-- Sidebar content here -->
-      <ul class="$$menu w-full grow p-4">
+      <ul class="$$menu w-full grow">
 
         <!-- list item -->
         <li>
@@ -291,7 +292,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
       </ul>
 
       <!-- button to open/close drawer -->
-      <div class="m-3.5 is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Open">
+      <div class="m-2 is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Open">
         <label for="my-drawer-4" class="$$btn $$btn-ghost $$btn-circle $$drawer-button is-drawer-open:rotate-y-180">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M9 4v16"></path><path d="M14 10l2 2l-2 2"></path></svg>
         </label>

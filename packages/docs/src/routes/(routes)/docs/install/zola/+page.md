@@ -52,8 +52,8 @@ chmod +x static/tailwindcss
 Run this code to download latest version of daisyUI as a single js file and put it next to Tailwind's executable file.
 
 ```sh:Terminal
-curl -sLo static/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
-curl -sLo static/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
+curl -sLo static/daisyui.mjs https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.mjs
+curl -sLo static/daisyui-theme.mjs https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.mjs
 ```
 
 ### 4. Add Tailwind CSS and daisyUI
@@ -62,10 +62,11 @@ Add Tailwind CSS and daisyUI to your CSS file.
 Address your HTML and other markup files in the `source` function.
 
 ```postcss:input.css
-@import "tailwindcss" source(none);
-@source "../templates/*.{html,md}";
-@source "../content/*.{html,md}";
-@plugin "./daisyui.js";
+@import "tailwindcss";
+
+@source not "./daisyui{,*}.mjs";
+
+@plugin "./daisyui.mjs";
 
 /* Optional for custom themes – Docs: https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme */
 @plugin "./daisyui-theme.js"{

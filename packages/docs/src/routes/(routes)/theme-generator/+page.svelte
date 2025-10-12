@@ -475,7 +475,7 @@
           </svg>
         </div>
         <ul
-          tabindex="0"
+          tabindex="-1"
           class="dropdown-content menu bg-base-100 border-base-300 rounded-box z-1 w-48 border p-2 shadow-xl"
         >
           <li class="menu-title">Options</li>

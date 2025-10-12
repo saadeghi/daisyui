@@ -39,6 +39,7 @@ const highlighter = await createHighlighter({
     "svelte",
     "toml",
     "ts",
+    "rust",
     "tsx",
     "vue",
   ],

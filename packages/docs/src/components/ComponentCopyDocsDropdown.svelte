@@ -75,7 +75,7 @@
       </svg>
     </div>
     <ul
-      tabindex="0"
+      tabindex="-1"
       class="dropdown-content menu-sm menu bg-base-200 rounded-box my-2 w-52 border border-white/5 shadow-2xl outline-[length:var(--border)] outline-black/5"
     >
       <li>

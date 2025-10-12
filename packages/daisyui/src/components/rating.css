@@ -1,101 +1,110 @@
 .rating {
-  @apply relative inline-flex align-middle;
+  @layer daisyui.component {
+    @apply relative inline-flex align-middle;
 
-  & input {
-    border: none;
-    @apply appearance-none;
-  }
-
-  :where(*) {
-    @apply bg-base-content h-6 w-6 rounded-none opacity-20;
-    @media (prefers-reduced-motion: no-preference) {
-      animation: rating 0.25s ease-out;
-    }
-    &:is(input) {
-      @apply cursor-pointer;
-    }
-  }
-
-  & .rating-hidden {
-    @apply w-2 bg-transparent;
-  }
-
-  input[type="radio"]:checked {
-    background-image: none;
-  }
-
-  * {
-    &:checked,
-    &[aria-checked="true"],
-    &[aria-current="true"],
-    &:has(~ *:checked, ~ *[aria-checked="true"], ~ *[aria-current="true"]) {
-      @apply opacity-100;
+    & input {
+      border: none;
+      @apply appearance-none;
     }
 
-    &:focus-visible {
-      scale: 1.1;
+    :where(*) {
+      @apply bg-base-content h-6 w-6 rounded-none opacity-20;
       @media (prefers-reduced-motion: no-preference) {
-        transition: scale 0.2s ease-out;
+        animation: rating 0.25s ease-out;
+      }
+      &:is(input) {
+        @apply cursor-pointer;
       }
     }
+
+    & .rating-hidden {
+      @apply w-2 bg-transparent;
+    }
+
+    input[type="radio"]:checked {
+      background-image: none;
+    }
+
+    * {
+      &:checked,
+      &[aria-checked="true"],
+      &[aria-current="true"],
+      &:has(~ *:checked, ~ *[aria-checked="true"], ~ *[aria-current="true"]) {
+        @apply opacity-100;
+      }
+
+      &:focus-visible {
+        scale: 1.1;
+        @media (prefers-reduced-motion: no-preference) {
+          transition: scale 0.2s ease-out;
+        }
+      }
+    }
+
+    & *:active:focus {
+      animation: none;
+    }
+
+    & *:active:focus {
+      scale: 1.1;
+    }
   }
 
-  & *:active:focus {
-    animation: none;
-  }
+  @layer daisyui.modifier {
+    &.rating-xs :where(*:not(.rating-hidden)) {
+      @apply size-4;
+    }
 
-  & *:active:focus {
-    scale: 1.1;
-  }
+    &.rating-sm :where(*:not(.rating-hidden)) {
+      @apply size-5;
+    }
 
-  &.rating-xs :where(*:not(.rating-hidden)) {
-    @apply size-4;
-  }
+    &.rating-md :where(*:not(.rating-hidden)) {
+      @apply size-6;
+    }
 
-  &.rating-sm :where(*:not(.rating-hidden)) {
-    @apply size-5;
-  }
+    &.rating-lg :where(*:not(.rating-hidden)) {
+      @apply size-7;
+    }
 
-  &.rating-md :where(*:not(.rating-hidden)) {
-    @apply size-6;
-  }
-
-  &.rating-lg :where(*:not(.rating-hidden)) {
-    @apply size-7;
-  }
-
-  &.rating-xl :where(*:not(.rating-hidden)) {
-    @apply size-8;
+    &.rating-xl :where(*:not(.rating-hidden)) {
+      @apply size-8;
+    }
   }
 }
 
 .rating-half {
-  :where(*:not(.rating-hidden)) {
-    @apply w-3;
+  @layer daisyui.modifier {
+    :where(*:not(.rating-hidden)) {
+      @apply w-3;
+    }
   }
 }
 
 .rating-half {
-  &.rating-xs *:not(.rating-hidden) {
-    @apply w-2;
-  }
+  @layer daisyui.modifier {
+    &.rating-xs *:not(.rating-hidden) {
+      @apply w-2;
+    }
 
-  &.rating-sm *:not(.rating-hidden) {
-    @apply w-2.5;
-  }
+    &.rating-sm *:not(.rating-hidden) {
+      @apply w-2.5;
+    }
 
-  &.rating-md *:not(.rating-hidden) {
-    @apply w-3;
-  }
+    &.rating-md *:not(.rating-hidden) {
+      @apply w-3;
+    }
 
-  &.rating-lg *:not(.rating-hidden) {
-    @apply w-[.875rem];
-  }
+    &.rating-lg *:not(.rating-hidden) {
+      @apply w-[.875rem];
+    }
 
-  &.rating-xl *:not(.rating-hidden) {
-    @apply w-4;
+    &.rating-xl *:not(.rating-hidden) {
+      @apply w-4;
+    }
   }
 }
+
 @keyframes rating {
   0%,
   40% {

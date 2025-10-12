@@ -177,7 +177,7 @@ The content gets displayed when the button is focused.
   <div class="text-sm mb-4 text-center">Click outside to close</div>
   <div class="dropdown mb-32">
     <div tabindex="0" role="button" class="m-1 btn">Click to open</div>
-    <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+    <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
       <li><button>Item 1</button></li>
       <li><button>Item 2</button></li>
     </ul>
@@ -187,7 +187,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -201,7 +201,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown / aligns to start of button horizontally
 <div class="dropdown dropdown-start mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬇️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -210,7 +210,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-start">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬇️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -220,7 +220,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown / aligns to end of button horizontally
 <div class="dropdown dropdown-end mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Click  ⬇️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -229,7 +229,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click  ⬇️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -239,7 +239,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown / aligns to center of button horizontally
 <div class="dropdown dropdown-center mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Click  ⬇️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -248,7 +248,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-center">
   <div tabindex="0" role="button" class="$$btn m-1">Click  ⬇️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -259,7 +259,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown top
 <div class="dropdown dropdown-top mt-32">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬆️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -268,7 +268,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-top">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬆️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -278,7 +278,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown top / aligns to center of button horizontally
 <div class="dropdown dropdown-top dropdown-center mt-32">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬆️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -287,7 +287,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-top $$dropdown-center">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬆️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -297,7 +297,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown top / aligns to end of button horizontally
 <div class="dropdown dropdown-top dropdown-end mt-32">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬆️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -306,7 +306,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-top $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬆️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -316,7 +316,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown bottom (default)
 <div class="dropdown dropdown-bottom mb-32">
   <div tabindex="0" class="m-1 btn">Click ⬇️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -325,7 +325,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-bottom">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬇️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -335,7 +335,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown bottom (default) / aligns to center of button horizontally
 <div class="dropdown dropdown-bottom dropdown-center mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬇️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -344,7 +344,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-bottom $$dropdown-center">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬇️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -354,7 +354,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown bottom (default) / aligns to end of button horizontally
 <div class="dropdown dropdown-bottom dropdown-end mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬇️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -363,7 +363,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-bottom $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬇️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -374,7 +374,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown left
 <div class="dropdown dropdown-left mb-16">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬅️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -383,7 +383,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-left">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬅️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -394,7 +394,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown left / aligns to center of button vertically
 <div class="dropdown dropdown-left dropdown-center my-16">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬅️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -403,7 +403,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-left $$dropdown-center">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬅️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -413,7 +413,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown left / aligns to end of button vertically
 <div class="dropdown dropdown-left dropdown-end mt-16">
   <div tabindex="0" role="button" class="m-1 btn">Click ⬅️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -422,7 +422,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-left $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click ⬅️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -433,7 +433,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown right
 <div class="dropdown dropdown-right mb-16">
   <div tabindex="0" role="button" class="m-1 btn">Click ➡️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -442,7 +442,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-right">
   <div tabindex="0" role="button" class="$$btn m-1">Click ➡️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -453,7 +453,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown right / aligns to end of button vertically
 <div class="dropdown dropdown-right dropdown-end mt-16">
   <div tabindex="0" role="button" class="m-1 btn">Click ➡️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -462,7 +462,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-right $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click ➡️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -472,7 +472,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown right / aligns to center of button vertically
 <div class="dropdown dropdown-right dropdown-center my-16">
   <div tabindex="0" role="button" class="m-1 btn">Click ➡️</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -481,7 +481,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-right $$dropdown-center">
   <div tabindex="0" role="button" class="$$btn m-1">Click ➡️</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -493,7 +493,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown on hover
 <div class="dropdown dropdown-hover mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Hover</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -502,7 +502,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-hover">
   <div tabindex="0" role="button" class="$$btn m-1">Hover</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -512,7 +512,7 @@ The content gets displayed when the button is focused.
 ### ~Force open
 <div class="dropdown dropdown-open mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Button</div>
-  <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
@@ -521,7 +521,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$dropdown $$dropdown-open">
   <div tabindex="0" role="button" class="$$btn m-1">Button</div>
-  <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -563,7 +563,7 @@ The content gets displayed when the button is focused.
       <button class="btn btn-ghost rounded-field">Button</button>
       <div class="dropdown dropdown-end">
         <div tabindex="0" role="button" class="btn btn-ghost rounded-field">Dropdown</div>
-        <ul tabindex="0" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-200 rounded-box w-52 mt-4">
+        <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-200 rounded-box w-52 mt-4">
           <li><button>Item 1</button></li>
           <li><button>Item 2</button></li>
         </ul>
@@ -583,7 +583,7 @@ The content gets displayed when the button is focused.
       <div class="$$dropdown $$dropdown-end">
         <div tabindex="0" role="button" class="$$btn $$btn-ghost rounded-field">Dropdown</div>
         <ul
-          tabindex="0"
+          tabindex="-1"
           class="$$menu $$dropdown-content bg-base-200 rounded-box z-1 mt-4 w-52 p-2 shadow-sm">
           <li><a>Item 1</a></li>
           <li><a>Item 2</a></li>
