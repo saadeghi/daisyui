@@ -1,87 +1,106 @@
 .progress {
-  @apply rounded-box text-base-content relative h-2 w-full appearance-none overflow-hidden bg-current/20;
-  &:indeterminate {
-    background-image: repeating-linear-gradient(
-      90deg,
-      currentColor -1%,
-      currentColor 10%,
-      #0000 10%,
-      #0000 90%
-    );
-    background-size: 200%;
-    background-position-x: 15%;
-    @media (prefers-reduced-motion: no-preference) {
-      animation: progress 5s ease-in-out infinite;
+  @layer daisyui.component {
+    @apply rounded-box text-base-content relative h-2 w-full appearance-none overflow-hidden bg-current/20;
+    &:indeterminate {
+      background-image: repeating-linear-gradient(
+        90deg,
+        currentColor -1%,
+        currentColor 10%,
+        #0000 10%,
+        #0000 90%
+      );
+      background-size: 200%;
+      background-position-x: 15%;
+      @media (prefers-reduced-motion: no-preference) {
+        animation: progress 5s ease-in-out infinite;
+      }
+
+      @supports (-moz-appearance: none) {
+        &::-moz-progress-bar {
+          @apply bg-transparent;
+          @media (prefers-reduced-motion: no-preference) {
+            animation: progress 5s ease-in-out infinite;
+            background-image: repeating-linear-gradient(
+              90deg,
+              currentColor -1%,
+              currentColor 10%,
+              #0000 10%,
+              #0000 90%
+            );
+            background-size: 200%;
+            background-position-x: 15%;
+          }
+        }
+      }
     }
 
     @supports (-moz-appearance: none) {
       &::-moz-progress-bar {
-        @apply bg-transparent;
-        @media (prefers-reduced-motion: no-preference) {
-          animation: progress 5s ease-in-out infinite;
-          background-image: repeating-linear-gradient(
-            90deg,
-            currentColor -1%,
-            currentColor 10%,
-            #0000 10%,
-            #0000 90%
-          );
-          background-size: 200%;
-          background-position-x: 15%;
-        }
+        @apply rounded-box bg-current;
       }
     }
-  }
 
-  @supports (-moz-appearance: none) {
-    &::-moz-progress-bar {
-      @apply rounded-box bg-current;
-    }
-  }
+    @supports (-webkit-appearance: none) {
+      &::-webkit-progress-bar {
+        @apply rounded-box bg-transparent;
+      }
 
-  @supports (-webkit-appearance: none) {
-    &::-webkit-progress-bar {
-      @apply rounded-box bg-transparent;
-    }
-
-    &::-webkit-progress-value {
-      @apply rounded-box;
-      background-color: currentColor;
+      &::-webkit-progress-value {
+        @apply rounded-box;
+        background-color: currentColor;
+      }
     }
   }
 }
 
 .progress-primary {
-  @apply text-primary;
+  @layer daisyui.modifier {
+    @apply text-primary;
+  }
 }
 
 .progress-secondary {
-  @apply text-secondary;
+  @layer daisyui.modifier {
+    @apply text-secondary;
+  }
 }
 
 .progress-accent {
-  @apply text-accent;
+  @layer daisyui.modifier {
+    @apply text-accent;
+  }
 }
 
 .progress-neutral {
-  @apply text-neutral;
+  @layer daisyui.modifier {
+    @apply text-neutral;
+  }
 }
 
 .progress-info {
-  @apply text-info;
+  @layer daisyui.modifier {
+    @apply text-info;
+  }
 }
 
 .progress-success {
-  @apply text-success;
+  @layer daisyui.modifier {
+    @apply text-success;
+  }
 }
 
 .progress-warning {
-  @apply text-warning;
+  @layer daisyui.modifier {
+    @apply text-warning;
+  }
 }
 
 .progress-error {
-  @apply text-error;
+  @layer daisyui.modifier {
+    @apply text-error;
+  }
 }
+
 @keyframes progress {
   50% {
     background-position-x: -115%;

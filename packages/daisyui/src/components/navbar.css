@@ -1,26 +1,36 @@
 .navbar {
-  @apply flex w-full items-center;
-  padding: 0.5rem;
-  min-height: 4rem;
+  @layer daisyui.component {
+    @apply flex w-full items-center;
+    padding: 0.5rem;
+    min-height: 4rem;
+  }
 }
 
 :where(.navbar) {
-  @apply relative;
+  @layer daisyui.modifier {
+    @apply relative;
+  }
 }
 
 .navbar-start {
-  @apply inline-flex items-center;
-  width: 50%;
-  justify-content: flex-start;
+  @layer daisyui.component {
+    @apply inline-flex items-center;
+    width: 50%;
+    justify-content: flex-start;
+  }
 }
 
 .navbar-center {
-  @apply inline-flex items-center;
-  @apply shrink-0;
+  @layer daisyui.component {
+    @apply inline-flex items-center;
+    @apply shrink-0;
+  }
 }
 
 .navbar-end {
-  @apply inline-flex items-center;
-  width: 50%;
-  justify-content: flex-end;
+  @layer daisyui.component {
+    @apply inline-flex items-center;
+    width: 50%;
+    justify-content: flex-end;
+  }
 }
