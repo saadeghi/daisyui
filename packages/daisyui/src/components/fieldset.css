@@ -14,8 +14,10 @@
 }
 /* deprecated in favor of label - but stays in source code to avoid breaking change */
 .fieldset-label {
-  @apply text-base-content/60 flex items-center gap-1.5;
-  &:has(input) {
-    @apply cursor-pointer;
+  @layer daisyui.component {
+    @apply text-base-content/60 flex items-center gap-1.5;
+    &:has(input) {
+      @apply cursor-pointer;
+    }
   }
 }
