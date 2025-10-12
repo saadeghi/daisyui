@@ -12,7 +12,7 @@ desc: How to install Tailwind CSS and daisyUI in a Nuxt project
 Create a new Nuxt project in the current directory
 
 ```sh:Terminal
-npx nuxi@latest init
+npx nuxi@latest init ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
@@ -29,13 +29,13 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  css: ["~/assets/app.css"],
+  css: ["./app/tailwind.css"],
 });
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   
-```postcss:assets/app.css
+```postcss:app/tailwind.css
 @import "tailwindcss";
 @plugin "daisyui";
 ```
