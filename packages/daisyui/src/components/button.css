@@ -63,26 +63,6 @@
       --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
     }
 
-    &:is(:disabled, [disabled], .btn-disabled) {
-      &:not(.btn-link, .btn-ghost) {
-        @apply bg-base-content/10;
-        box-shadow: none;
-      }
-
-      @apply pointer-events-none;
-      --btn-border: #0000;
-      --btn-noise: none;
-      --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
-
-      @media (hover: hover) {
-        &:hover {
-          @apply bg-neutral/20 pointer-events-none;
-          --btn-border: #0000;
-          --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
-        }
-      }
-    }
-
     &:is(input[type="checkbox"], input[type="radio"]) {
       @apply appearance-none;
 
@@ -98,6 +78,30 @@
       --btn-color: var(--color-primary);
       --btn-fg: var(--color-primary-content);
       isolation: isolate;
+    }
+  }
+}
+
+.btn-disabled,
+.btn:disabled,
+.btn[disabled] {
+  @layer daisyui.modifier {
+    &:not(.btn-link, .btn-ghost) {
+      @apply bg-base-content/10;
+      box-shadow: none;
+    }
+
+    @apply pointer-events-none;
+    --btn-border: #0000;
+    --btn-noise: none;
+    --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-neutral/20 pointer-events-none;
+        --btn-border: #0000;
+        --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+      }
     }
   }
 }
