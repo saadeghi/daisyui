@@ -1,285 +1,255 @@
 .select {
-  @layer daisyui.component {
-    border: var(--border) solid #0000;
-    @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
-    width: clamp(3rem, 20rem, 100%);
-    height: var(--size);
-    font-size: 0.875rem;
-    touch-action: manipulation;
-    border-start-start-radius: var(--join-ss, var(--radius-field));
-    border-start-end-radius: var(--join-se, var(--radius-field));
-    border-end-start-radius: var(--join-es, var(--radius-field));
-    border-end-end-radius: var(--join-ee, var(--radius-field));
-    background-image:
-      linear-gradient(45deg, #0000 50%, currentColor 50%),
-      linear-gradient(135deg, currentColor 50%, #0000 50%);
+  border: var(--border) solid #0000;
+  @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
+  width: clamp(3rem, 20rem, 100%);
+  height: var(--size);
+  font-size: 0.875rem;
+  touch-action: manipulation;
+  border-start-start-radius: var(--join-ss, var(--radius-field));
+  border-start-end-radius: var(--join-se, var(--radius-field));
+  border-end-start-radius: var(--join-es, var(--radius-field));
+  border-end-end-radius: var(--join-ee, var(--radius-field));
+  background-image:
+    linear-gradient(45deg, #0000 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, #0000 50%);
+  background-position:
+    calc(100% - 20px) calc(1px + 50%),
+    calc(100% - 16.1px) calc(1px + 50%);
+  background-size:
+    4px 4px,
+    4px 4px;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow:
+    0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
+    0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
+  border-color: var(--input-color);
+  --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+  --size: calc(var(--size-field, 0.25rem) * 10);
+  [dir="rtl"] & {
     background-position:
-      calc(100% - 20px) calc(1px + 50%),
-      calc(100% - 16.1px) calc(1px + 50%);
-    background-size:
-      4px 4px,
-      4px 4px;
-    background-repeat: no-repeat;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    box-shadow:
-      0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
-      0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-    border-color: var(--input-color);
-    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-    --size: calc(var(--size-field, 0.25rem) * 10);
-    [dir="rtl"] & {
-      background-position:
-        calc(0% + 12px) calc(1px + 50%),
-        calc(0% + 16px) calc(1px + 50%);
-    }
-    &[multiple] {
-      @apply h-auto py-3 pe-3;
-      background-image: none;
-    }
-    select {
-      @apply -ms-3 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-3 pe-7;
-      height: calc(100% - calc(var(--border) * 2));
-      align-items: center;
-      background: inherit;
-      border-radius: inherit;
-      border-style: none;
-      &:focus,
-      &:focus-within {
-        @apply outline-hidden;
-      }
-      &:not(:last-child) {
-        @apply -me-5.5;
-        background-image: none;
-      }
-    }
-
+      calc(0% + 12px) calc(1px + 50%),
+      calc(0% + 16px) calc(1px + 50%);
+  }
+  &:where([multiple]) {
+    @apply h-auto py-3 pe-3;
+    background-image: none;
+  }
+  select {
+    @apply -ms-3 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-3 pe-7;
+    height: calc(100% - calc(var(--border) * 2));
+    align-items: center;
+    background: inherit;
+    border-radius: inherit;
+    border-style: none;
     &:focus,
     &:focus-within {
-      --input-color: var(--color-base-content);
-      box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
-      outline: 2px solid var(--input-color);
-      outline-offset: 2px;
-      isolation: isolate;
-      z-index: 1;
+      @apply outline-hidden;
     }
+    &:not(:last-child) {
+      @apply -me-5.5;
+      background-image: none;
+    }
+  }
 
-    &:has(> select[disabled]),
-    &:is(:disabled, [disabled]),
-    fieldset:disabled & {
-      @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
-    }
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-base-content);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
+    outline: 2px solid var(--input-color);
+    outline-offset: 2px;
+    isolation: isolate;
+    z-index: 1;
+  }
 
-    &:has(> select[disabled]) > select[disabled] {
-      @apply cursor-not-allowed;
+  &:has(> select[disabled]),
+  &:is(:disabled, [disabled]),
+  fieldset:disabled & {
+    @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+  }
+
+  &:has(> select[disabled]) > select[disabled] {
+    @apply cursor-not-allowed;
+  }
+  &,
+  & select {
+    @supports (appearance: base-select) {
+      appearance: base-select;
     }
-    &,
-    & select {
-      @supports (appearance: base-select) {
+    &::picker(select) {
+      color: inherit;
+      max-height: min(24rem, 70dvh);
+      margin-inline: 0.5rem;
+      translate: -0.5rem 0;
+      border: var(--border) solid var(--color-base-200);
+      @apply rounded-box my-2 p-2;
+      background-color: inherit;
+      box-shadow: 0 2px calc(var(--depth) * 3px) -2px oklch(0% 0 0/0.2);
+      box-shadow:
+        0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
+        0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));
+    }
+    @supports (appearance: base-select) {
+      &::picker(select) {
         appearance: base-select;
       }
-      &::picker(select) {
-        color: inherit;
-        max-height: min(24rem, 70dvh);
-        margin-inline: 0.5rem;
-        translate: -0.5rem 0;
-        border: var(--border) solid var(--color-base-200);
-        @apply rounded-box my-2 p-2;
-        background-color: inherit;
-        box-shadow: 0 2px calc(var(--depth) * 3px) -2px oklch(0% 0 0/0.2);
-        box-shadow:
-          0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
-          0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));
-      }
-      @supports (appearance: base-select) {
-        &::picker(select) {
-          appearance: base-select;
-        }
-      }
-      &::picker-icon {
-        @apply hidden;
-      }
-      /* option::checkmark {
+    }
+    &::picker-icon {
       @apply hidden;
-    } */
-      optgroup {
-        @apply pt-[0.5em];
-        option {
-          &:nth-child(1) {
-            @apply mt-[0.5em];
-          }
-        }
-      }
+    }
+    /* option::checkmark {
+    @apply hidden;
+  } */
+    optgroup {
+      @apply pt-[0.5em];
       option {
-        @apply rounded-field px-3 py-1.5;
-        transition-property: color, background-color;
-        transition-duration: 0.2s;
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        white-space: normal;
-        &:not(:disabled) {
-          &:hover,
-          &:focus-visible {
-            @apply bg-base-content/10 cursor-pointer outline-hidden;
-          }
-          &:active {
-            @apply bg-neutral text-neutral-content;
-            box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--color-neutral);
-          }
+        &:nth-child(1) {
+          @apply mt-[0.5em];
         }
       }
     }
-    [dir="rtl"] & {
-      &::picker(select),
-      select::picker(select) {
-        translate: 0.5rem 0;
+    option {
+      @apply rounded-field px-3 py-1.5;
+      transition-property: color, background-color;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      white-space: normal;
+      &:not(:disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply bg-base-content/10 cursor-pointer outline-hidden;
+        }
+        &:active {
+          @apply bg-neutral text-neutral-content;
+          box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--color-neutral);
+        }
       }
+    }
+  }
+  [dir="rtl"] & {
+    &::picker(select),
+    select::picker(select) {
+      translate: 0.5rem 0;
     }
   }
 }
 
 .select-ghost {
-  @layer daisyui.modifier {
-    @apply bg-transparent;
-    transition: background-color 0.2s;
-    box-shadow: none;
-    border-color: #0000;
+  @apply bg-transparent;
+  transition: background-color 0.2s;
+  box-shadow: none;
+  border-color: #0000;
 
-    &:focus,
-    &:focus-within {
-      @apply text-base-content bg-base-100;
-      border-color: #0000;
-      box-shadow: none;
-    }
+  &:focus,
+  &:focus-within {
+    @apply text-base-content bg-base-100;
+    border-color: #0000;
+    box-shadow: none;
   }
 }
 
 .select-neutral {
-  @layer daisyui.modifier {
-    &,
-    &:focus,
-    &:focus-within {
-      --input-color: var(--color-neutral);
-    }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-neutral);
   }
 }
 
 .select-primary {
-  @layer daisyui.modifier {
-    &,
-    &:focus,
-    &:focus-within {
-      --input-color: var(--color-primary);
-    }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-primary);
   }
 }
 
 .select-secondary {
-  @layer daisyui.modifier {
-    &,
-    &:focus,
-    &:focus-within {
-      --input-color: var(--color-secondary);
-    }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-secondary);
   }
 }
 
 .select-accent {
-  @layer daisyui.modifier {
-    &,
-    &:focus,
-    &:focus-within {
-      --input-color: var(--color-accent);
-    }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-accent);
   }
 }
 
 .select-info {
-  @layer daisyui.modifier {
-    &,
-    &:focus,
-    &:focus-within {
-      --input-color: var(--color-info);
-    }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-info);
   }
 }
 
 .select-success {
-  @layer daisyui.modifier {
-    &,
-    &:focus,
-    &:focus-within {
-      --input-color: var(--color-success);
-    }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-success);
   }
 }
 
 .select-warning {
-  @layer daisyui.modifier {
-    &,
-    &:focus,
-    &:focus-within {
-      --input-color: var(--color-warning);
-    }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-warning);
   }
 }
 
 .select-error {
-  @layer daisyui.modifier {
-    &,
-    &:focus,
-    &:focus-within {
-      --input-color: var(--color-error);
-    }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-error);
   }
 }
 
 .select-xs {
-  @layer daisyui.modifier {
-    --size: calc(var(--size-field, 0.25rem) * 6);
-    font-size: 0.6875rem;
-    option {
-      @apply px-2 py-1;
-    }
+  --size: calc(var(--size-field, 0.25rem) * 6);
+  font-size: 0.6875rem;
+  option {
+    @apply px-2 py-1;
   }
 }
 
 .select-sm {
-  @layer daisyui.modifier {
-    --size: calc(var(--size-field, 0.25rem) * 8);
-    font-size: 0.75rem;
-    option {
-      @apply px-2.5 py-1;
-    }
+  --size: calc(var(--size-field, 0.25rem) * 8);
+  font-size: 0.75rem;
+  option {
+    @apply px-2.5 py-1;
   }
 }
 
 .select-md {
-  @layer daisyui.modifier {
-    --size: calc(var(--size-field, 0.25rem) * 10);
-    font-size: 0.875rem;
-    option {
-      @apply px-3 py-1.5;
-    }
+  --size: calc(var(--size-field, 0.25rem) * 10);
+  font-size: 0.875rem;
+  option {
+    @apply px-3 py-1.5;
   }
 }
 
 .select-lg {
-  @layer daisyui.modifier {
-    --size: calc(var(--size-field, 0.25rem) * 12);
-    font-size: 1.125rem;
-    option {
-      @apply px-4 py-1.5;
-    }
+  --size: calc(var(--size-field, 0.25rem) * 12);
+  font-size: 1.125rem;
+  option {
+    @apply px-4 py-1.5;
   }
 }
 
 .select-xl {
-  @layer daisyui.modifier {
-    --size: calc(var(--size-field, 0.25rem) * 14);
-    font-size: 1.375rem;
-    option {
-      @apply px-5 py-1.5;
-    }
+  --size: calc(var(--size-field, 0.25rem) * 14);
+  font-size: 1.375rem;
+  option {
+    @apply px-5 py-1.5;
   }
 }

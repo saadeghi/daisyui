@@ -1,21 +1,15 @@
 .hero {
-  @layer daisyui.component {
-    @apply grid w-full place-items-center bg-cover bg-center;
+  @apply grid w-full place-items-center bg-cover bg-center;
 
-    & > * {
-      @apply col-start-1 row-start-1;
-    }
+  & > * {
+    @apply col-start-1 row-start-1;
   }
 }
 
 .hero-overlay {
-  @layer daisyui.component {
-    @apply bg-neutral/50 col-start-1 row-start-1 h-full w-full;
-  }
+  @apply bg-neutral/50 col-start-1 row-start-1 h-full w-full;
 }
 
 .hero-content {
-  @layer daisyui.component {
-    @apply isolate flex max-w-[80rem] items-center justify-center gap-4 p-4;
-  }
+  @apply isolate flex max-w-[80rem] items-center justify-center gap-4 p-4;
 }

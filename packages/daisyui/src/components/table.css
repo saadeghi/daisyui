@@ -1,64 +1,60 @@
 .table {
-  @layer daisyui.component {
+  font-size: 0.875rem;
+  @apply rounded-box relative w-full text-left rtl:text-right;
+
+  tr.row-hover {
+    &,
+    &:nth-child(even) {
+      @apply hover:bg-base-200;
+    }
+  }
+
+  :where(th, td) {
+    @apply px-4 py-3 align-middle;
+  }
+
+  :where(thead, tfoot) {
+    @apply text-base-content/60 whitespace-nowrap;
     font-size: 0.875rem;
-    @apply rounded-box relative w-full text-left rtl:text-right;
+    font-weight: 600;
+  }
 
-    tr.row-hover {
-      &,
-      &:nth-child(even) {
-        @apply hover:bg-base-200;
-      }
-    }
+  :where(tfoot) {
+    border-top: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
+  }
 
-    :where(th, td) {
-      @apply px-4 py-3 align-middle;
-    }
+  :where(.table-pin-rows thead tr) {
+    @apply bg-base-100 sticky top-0 z-1;
+  }
 
-    :where(thead, tfoot) {
-      @apply text-base-content/60 whitespace-nowrap;
-      font-size: 0.875rem;
-      font-weight: 600;
-    }
+  :where(.table-pin-rows tfoot tr) {
+    @apply bg-base-100 sticky bottom-0 z-1;
+  }
 
-    :where(tfoot) {
-      border-top: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
-    }
+  :where(.table-pin-cols tr th) {
+    @apply bg-base-100 sticky right-0 left-0;
+  }
 
-    :where(.table-pin-rows thead tr) {
-      @apply bg-base-100 sticky top-0 z-1;
-    }
-
-    :where(.table-pin-rows tfoot tr) {
-      @apply bg-base-100 sticky bottom-0 z-1;
-    }
-
-    :where(.table-pin-cols tr th) {
-      @apply bg-base-100 sticky right-0 left-0;
-    }
-
-    :where(thead tr, tbody tr:not(:last-child)) {
-      border-bottom: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
-    }
+  :where(thead tr, tbody tr:not(:last-child)) {
+    border-bottom: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
   }
 }
 
 .table-zebra {
-  @layer daisyui.modifier {
-    tbody {
-      tr {
-        &:where(:nth-child(even)) {
+  tbody {
+    tr {
+      &:where(:nth-child(even)) {
+        @apply bg-base-200;
+
+        :where(.table-pin-cols tr th) {
           @apply bg-base-200;
-
-          :where(.table-pin-cols tr th) {
-            @apply bg-base-200;
-          }
         }
+      }
 
-        &.row-hover {
-          &,
-          &:where(:nth-child(even)) {
-            @apply hover:bg-base-300;
-          }
+      &.row-hover {
+        &,
+        &:where(:nth-child(even)) {
+          @apply hover:bg-base-300;
         }
       }
     }
@@ -66,61 +62,51 @@
 }
 
 .table-xs {
-  @layer daisyui.modifier {
-    :not(thead, tfoot) tr {
-      font-size: 0.6875rem;
-    }
+  :not(thead, tfoot) tr {
+    font-size: 0.6875rem;
+  }
 
-    :where(th, td) {
-      @apply px-2 py-1;
-    }
+  :where(th, td) {
+    @apply px-2 py-1;
   }
 }
 
 .table-sm {
-  @layer daisyui.modifier {
-    :not(thead, tfoot) tr {
-      font-size: 0.75rem;
-    }
+  :not(thead, tfoot) tr {
+    font-size: 0.75rem;
+  }
 
-    :where(th, td) {
-      @apply px-3 py-2;
-    }
+  :where(th, td) {
+    @apply px-3 py-2;
   }
 }
 
 .table-md {
-  @layer daisyui.modifier {
-    :not(thead, tfoot) tr {
-      font-size: 0.875rem;
-    }
+  :not(thead, tfoot) tr {
+    font-size: 0.875rem;
+  }
 
-    :where(th, td) {
-      @apply px-4 py-3;
-    }
+  :where(th, td) {
+    @apply px-4 py-3;
   }
 }
 
 .table-lg {
-  @layer daisyui.modifier {
-    :not(thead, tfoot) tr {
-      font-size: 1.125rem;
-    }
+  :not(thead, tfoot) tr {
+    font-size: 1.125rem;
+  }
 
-    :where(th, td) {
-      @apply px-5 py-4;
-    }
+  :where(th, td) {
+    @apply px-5 py-4;
   }
 }
 
 .table-xl {
-  @layer daisyui.modifier {
-    :not(thead, tfoot) tr {
-      font-size: 1.375rem;
-    }
+  :not(thead, tfoot) tr {
+    font-size: 1.375rem;
+  }
 
-    :where(th, td) {
-      @apply px-6 py-5;
-    }
+  :where(th, td) {
+    @apply px-6 py-5;
   }
 }

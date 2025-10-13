@@ -1,172 +1,150 @@
 .modal {
-  @layer daisyui.component {
-    @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
+  @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
+  transition:
+    visibility 0.3s allow-discrete,
+    background-color 0.3s ease-out,
+    opacity 0.1s ease-out;
+  overflow: clip;
+  overscroll-behavior: contain;
+  z-index: 999;
+  scrollbar-gutter: auto;
+
+  &::backdrop {
+    @apply hidden;
+  }
+
+  &.modal-open,
+  &[open],
+  &:target,
+  .modal-toggle:checked + & {
+    @apply pointer-events-auto visible opacity-100;
     transition:
-      visibility 0.3s allow-discrete,
+      visibility 0s allow-discrete,
       background-color 0.3s ease-out,
       opacity 0.1s ease-out;
-    overflow: clip;
-    overscroll-behavior: contain;
-    z-index: 999;
-    scrollbar-gutter: auto;
+    background-color: oklch(0% 0 0/ 0.4);
 
-    &::backdrop {
-      @apply hidden;
+    .modal-box {
+      translate: 0 0;
+      scale: 1;
+      opacity: 1;
     }
   }
 
-  @layer daisyui.modifier {
+  @starting-style {
     &.modal-open,
     &[open],
     &:target,
     .modal-toggle:checked + & {
-      @apply pointer-events-auto visible opacity-100;
-      transition:
-        visibility 0s allow-discrete,
-        background-color 0.3s ease-out,
-        opacity 0.1s ease-out;
-      background-color: oklch(0% 0 0/ 0.4);
-
-      .modal-box {
-        translate: 0 0;
-        scale: 1;
-        opacity: 1;
-      }
-    }
-
-    @starting-style {
-      &.modal-open,
-      &[open],
-      &:target,
-      .modal-toggle:checked + & {
-        @apply opacity-0;
-      }
+      @apply opacity-0;
     }
   }
 }
 
 .modal-action {
-  @layer daisyui.component {
-    @apply mt-6 flex justify-end gap-2;
-  }
+  @apply mt-6 flex justify-end gap-2;
 }
 
 .modal-toggle {
-  @layer daisyui.component {
-    @apply fixed h-0 w-0 appearance-none opacity-0;
-  }
+  @apply fixed h-0 w-0 appearance-none opacity-0;
 }
 
 .modal-backdrop {
-  @layer daisyui.component {
-    @apply col-start-1 row-start-1 grid self-stretch justify-self-stretch text-transparent;
-    z-index: -1;
+  @apply col-start-1 row-start-1 grid self-stretch justify-self-stretch text-transparent;
+  z-index: -1;
 
-    button {
-      @apply cursor-pointer;
-    }
+  button {
+    @apply cursor-pointer;
   }
 }
 
 .modal-box {
-  @layer daisyui.component {
-    @apply bg-base-100 col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
-    transition:
-      translate 0.3s ease-out,
-      scale 0.3s ease-out,
-      opacity 0.2s ease-out 0.05s,
-      box-shadow 0.3s ease-out;
-    border-top-left-radius: var(--modal-tl, var(--radius-box));
-    border-top-right-radius: var(--modal-tr, var(--radius-box));
-    border-bottom-left-radius: var(--modal-bl, var(--radius-box));
-    border-bottom-right-radius: var(--modal-br, var(--radius-box));
-    scale: 95%;
-    opacity: 0;
-    box-shadow: oklch(0% 0 0/ 0.25) 0px 25px 50px -12px;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
+  @apply bg-base-100 col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
+  transition:
+    translate 0.3s ease-out,
+    scale 0.3s ease-out,
+    opacity 0.2s ease-out 0.05s,
+    box-shadow 0.3s ease-out;
+  border-top-left-radius: var(--modal-tl, var(--radius-box));
+  border-top-right-radius: var(--modal-tr, var(--radius-box));
+  border-bottom-left-radius: var(--modal-bl, var(--radius-box));
+  border-bottom-right-radius: var(--modal-br, var(--radius-box));
+  scale: 95%;
+  opacity: 0;
+  box-shadow: oklch(0% 0 0/ 0.25) 0px 25px 50px -12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .modal-top {
-  @layer daisyui.modifier {
-    @apply place-items-start;
+  @apply place-items-start;
 
-    .modal-box {
-      @apply h-auto w-full max-w-none;
-      max-height: calc(100vh - 5em);
-      translate: 0 -100%;
-      scale: 1;
-      --modal-tl: 0;
-      --modal-tr: 0;
-      --modal-bl: var(--radius-box);
-      --modal-br: var(--radius-box);
-    }
+  :where(.modal-box) {
+    @apply h-auto w-full max-w-none;
+    max-height: calc(100vh - 5em);
+    translate: 0 -100%;
+    scale: 1;
+    --modal-tl: 0;
+    --modal-tr: 0;
+    --modal-bl: var(--radius-box);
+    --modal-br: var(--radius-box);
   }
 }
 
 .modal-middle {
-  @layer daisyui.modifier {
-    @apply place-items-center;
+  @apply place-items-center;
 
-    .modal-box {
-      @apply h-auto w-11/12 max-w-[32rem];
-      max-height: calc(100vh - 5em);
-      translate: 0 2%;
-      scale: 98%;
-      --modal-tl: var(--radius-box);
-      --modal-tr: var(--radius-box);
-      --modal-bl: var(--radius-box);
-      --modal-br: var(--radius-box);
-    }
+  :where(.modal-box) {
+    @apply h-auto w-11/12 max-w-[32rem];
+    max-height: calc(100vh - 5em);
+    translate: 0 2%;
+    scale: 98%;
+    --modal-tl: var(--radius-box);
+    --modal-tr: var(--radius-box);
+    --modal-bl: var(--radius-box);
+    --modal-br: var(--radius-box);
   }
 }
 
 .modal-bottom {
-  @layer daisyui.modifier {
-    @apply place-items-end;
+  @apply place-items-end;
 
-    .modal-box {
-      @apply h-auto w-full max-w-none;
-      max-height: calc(100vh - 5em);
-      translate: 0 100%;
-      scale: 1;
-      --modal-tl: var(--radius-box);
-      --modal-tr: var(--radius-box);
-      --modal-bl: 0;
-      --modal-br: 0;
-    }
+  :where(.modal-box) {
+    @apply h-auto w-full max-w-none;
+    max-height: calc(100vh - 5em);
+    translate: 0 100%;
+    scale: 1;
+    --modal-tl: var(--radius-box);
+    --modal-tr: var(--radius-box);
+    --modal-bl: 0;
+    --modal-br: 0;
   }
 }
 
 .modal-start {
-  @layer daisyui.modifier {
-    @apply place-items-start;
+  @apply place-items-start;
 
-    .modal-box {
-      @apply h-screen max-h-none w-auto max-w-none;
-      translate: -100% 0;
-      scale: 1;
-      --modal-tl: 0;
-      --modal-tr: var(--radius-box);
-      --modal-bl: 0;
-      --modal-br: var(--radius-box);
-    }
+  :where(.modal-box) {
+    @apply h-screen max-h-none w-auto max-w-none;
+    translate: -100% 0;
+    scale: 1;
+    --modal-tl: 0;
+    --modal-tr: var(--radius-box);
+    --modal-bl: 0;
+    --modal-br: var(--radius-box);
   }
 }
 
 .modal-end {
-  @layer daisyui.modifier {
-    @apply place-items-end;
+  @apply place-items-end;
 
-    .modal-box {
-      @apply h-screen max-h-none w-auto max-w-none;
-      translate: 100% 0;
-      scale: 1;
-      --modal-tl: var(--radius-box);
-      --modal-tr: 0;
-      --modal-bl: var(--radius-box);
-      --modal-br: 0;
-    }
+  :where(.modal-box) {
+    @apply h-screen max-h-none w-auto max-w-none;
+    translate: 100% 0;
+    scale: 1;
+    --modal-tl: var(--radius-box);
+    --modal-tr: 0;
+    --modal-bl: var(--radius-box);
+    --modal-br: 0;
   }
 }

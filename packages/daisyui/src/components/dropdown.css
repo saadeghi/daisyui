@@ -1,245 +1,227 @@
 .dropdown {
-  @layer daisyui.component {
-    @apply relative inline-block;
-    position-area: var(--anchor-v, bottom) var(--anchor-h, span-right);
+  @apply relative inline-block;
+  position-area: var(--anchor-v, bottom) var(--anchor-h, span-right);
 
-    & > *:not(summary):focus {
-      @apply outline-hidden;
-    }
-    .dropdown-content {
-      @apply absolute;
-    }
-    &:not(details, .dropdown-open, .dropdown-hover:hover, :focus-within) .dropdown-content,
-    &.dropdown-hover:not(:hover)
-      [tabindex]:first-child:focus:not(:focus-visible)
-      ~ .dropdown-content {
-      @apply hidden origin-top opacity-0;
-      scale: 95%;
-    }
+  & > *:not(summary):focus {
+    @apply outline-hidden;
+  }
+  .dropdown-content {
+    @apply absolute;
+  }
+  &:not(details, .dropdown-open, .dropdown-hover:hover, :focus-within) .dropdown-content,
+  &.dropdown-hover:not(:hover) [tabindex]:first-child:focus:not(:focus-visible) ~ .dropdown-content {
+    @apply hidden origin-top opacity-0;
+    scale: 95%;
+  }
 
+  &[popover],
+  .dropdown-content {
+    z-index: 999;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: dropdown 0.2s;
+      transition-property: opacity, scale, display;
+      transition-behavior: allow-discrete;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  @starting-style {
     &[popover],
     .dropdown-content {
-      z-index: 999;
-      @media (prefers-reduced-motion: no-preference) {
-        animation: dropdown 0.2s;
-        transition-property: opacity, scale, display;
-        transition-behavior: allow-discrete;
-        transition-duration: 0.2s;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      scale: 95%;
+      opacity: 0;
+    }
+  }
+
+  &.dropdown-open,
+  &:not(.dropdown-hover):focus,
+  &:focus-within {
+    > [tabindex]:first-child {
+      @apply pointer-events-none;
+    }
+    .dropdown-content {
+      @apply opacity-100;
+    }
+  }
+
+  &.dropdown-hover:hover {
+    .dropdown-content {
+      @apply opacity-100;
+      scale: 100%;
+    }
+  }
+
+  &:is(details) {
+    summary {
+      &::-webkit-details-marker {
+        @apply hidden;
       }
     }
-    @starting-style {
-      &[popover],
-      .dropdown-content {
-        scale: 95%;
-        opacity: 0;
-      }
+  }
+
+  &.dropdown-open,
+  &:focus,
+  &:focus-within {
+    .dropdown-content {
+      scale: 100%;
     }
+  }
 
-    &.dropdown-open,
-    &:not(.dropdown-hover):focus,
-    &:focus-within {
-      > [tabindex]:first-child {
-        @apply pointer-events-none;
-      }
-      .dropdown-content {
-        @apply opacity-100;
-      }
-    }
+  /* experimental */
+  &:where([popover]) {
+    background: #0000;
+  }
+  &[popover] {
+    @apply fixed text-inherit;
 
-    &.dropdown-hover:hover {
-      .dropdown-content {
-        @apply opacity-100;
-        scale: 100%;
-      }
-    }
+    /* align-self: anchor-center; */
+    /* justify-self: anchor-center; */
+    /* left: anchor(right); */
+    /* align-self: anchor-center; */
 
-    &:is(details) {
-      summary {
-        &::-webkit-details-marker {
-          @apply hidden;
-        }
-      }
-    }
+    @supports not (position-area: bottom) {
+      @apply m-auto;
 
-    &.dropdown-open,
-    &:focus,
-    &:focus-within {
-      .dropdown-content {
-        scale: 100%;
-      }
-    }
-
-    /* experimental */
-    &:where([popover]) {
-      background: #0000;
-    }
-    &[popover] {
-      @apply fixed text-inherit;
-
-      /* align-self: anchor-center; */
-      /* justify-self: anchor-center; */
-      /* left: anchor(right); */
-      /* align-self: anchor-center; */
-
-      @supports not (position-area: bottom) {
-        @apply m-auto;
-
-        &.dropdown-open:not(:popover-open) {
-          @apply hidden origin-top opacity-0;
-          scale: 95%;
-        }
-
-        &::backdrop {
-          background-color: color-mix(in oklab, #000 30%, #0000);
-        }
-      }
-
-      &:not(.dropdown-open, :popover-open) {
+      &.dropdown-open:not(:popover-open) {
         @apply hidden origin-top opacity-0;
         scale: 95%;
       }
+
+      &::backdrop {
+        background-color: color-mix(in oklab, #000 30%, #0000);
+      }
+    }
+
+    &:not(.dropdown-open, :popover-open) {
+      @apply hidden origin-top opacity-0;
+      scale: 95%;
     }
   }
 }
 
 .dropdown-start {
-  @layer daisyui.modifier {
-    --anchor-h: span-right;
+  --anchor-h: span-right;
 
-    :where(.dropdown-content) {
-      @apply end-auto;
+  :where(.dropdown-content) {
+    @apply end-auto;
+    translate: 0 0;
+    [dir="rtl"] & {
       translate: 0 0;
-      [dir="rtl"] & {
-        translate: 0 0;
-      }
     }
+  }
 
-    &.dropdown-left {
-      --anchor-h: left;
-      --anchor-v: span-bottom;
+  &.dropdown-left {
+    --anchor-h: left;
+    --anchor-v: span-bottom;
 
-      .dropdown-content {
-        @apply top-0 bottom-auto;
-      }
+    .dropdown-content {
+      @apply top-0 bottom-auto;
     }
+  }
 
-    &.dropdown-right {
-      --anchor-h: right;
-      --anchor-v: span-bottom;
+  &.dropdown-right {
+    --anchor-h: right;
+    --anchor-v: span-bottom;
 
-      .dropdown-content {
-        @apply top-0 bottom-auto;
-      }
+    .dropdown-content {
+      @apply top-0 bottom-auto;
     }
   }
 }
 
 .dropdown-center {
-  @layer daisyui.modifier {
-    --anchor-h: center;
+  --anchor-h: center;
 
-    :where(.dropdown-content) {
-      @apply end-1/2;
-      translate: 50% 0;
-      [dir="rtl"] & {
-        translate: -50% 0;
-      }
+  :where(.dropdown-content) {
+    @apply end-1/2;
+    translate: 50% 0;
+    [dir="rtl"] & {
+      translate: -50% 0;
     }
+  }
 
-    &.dropdown-left {
-      --anchor-h: left;
-      --anchor-v: center;
+  &.dropdown-left {
+    --anchor-h: left;
+    --anchor-v: center;
 
-      .dropdown-content {
-        @apply top-auto bottom-1/2;
-        translate: 0 50%;
-      }
+    .dropdown-content {
+      @apply top-auto bottom-1/2;
+      translate: 0 50%;
     }
+  }
 
-    &.dropdown-right {
-      --anchor-h: right;
-      --anchor-v: center;
+  &.dropdown-right {
+    --anchor-h: right;
+    --anchor-v: center;
 
-      .dropdown-content {
-        @apply top-auto bottom-1/2;
-        translate: 0 50%;
-      }
+    .dropdown-content {
+      @apply top-auto bottom-1/2;
+      translate: 0 50%;
     }
   }
 }
 
 .dropdown-end {
-  @layer daisyui.modifier {
-    --anchor-h: span-left;
+  --anchor-h: span-left;
 
-    :where(.dropdown-content) {
-      @apply end-0;
+  :where(.dropdown-content) {
+    @apply end-0;
+    translate: 0 0;
+    [dir="rtl"] & {
       translate: 0 0;
-      [dir="rtl"] & {
-        translate: 0 0;
-      }
     }
+  }
 
-    &.dropdown-left {
-      --anchor-h: left;
-      --anchor-v: span-top;
+  &.dropdown-left {
+    --anchor-h: left;
+    --anchor-v: span-top;
 
-      .dropdown-content {
-        @apply top-auto bottom-0;
-      }
+    .dropdown-content {
+      @apply top-auto bottom-0;
     }
+  }
 
-    &.dropdown-right {
-      --anchor-h: right;
-      --anchor-v: span-top;
+  &.dropdown-right {
+    --anchor-h: right;
+    --anchor-v: span-top;
 
-      .dropdown-content {
-        @apply top-auto bottom-0;
-      }
+    .dropdown-content {
+      @apply top-auto bottom-0;
     }
   }
 }
 
 .dropdown-left {
-  @layer daisyui.modifier {
-    --anchor-h: left;
-    --anchor-v: span-bottom;
+  --anchor-h: left;
+  --anchor-v: span-bottom;
 
-    .dropdown-content {
-      @apply end-full top-0 bottom-auto origin-right;
-    }
+  .dropdown-content {
+    @apply end-full top-0 bottom-auto origin-right;
   }
 }
 
 .dropdown-right {
-  @layer daisyui.modifier {
-    --anchor-h: right;
-    --anchor-v: span-bottom;
+  --anchor-h: right;
+  --anchor-v: span-bottom;
 
-    .dropdown-content {
-      @apply start-full top-0 bottom-auto origin-left;
-    }
+  .dropdown-content {
+    @apply start-full top-0 bottom-auto origin-left;
   }
 }
 
 .dropdown-bottom {
-  @layer daisyui.modifier {
-    --anchor-v: bottom;
+  --anchor-v: bottom;
 
-    .dropdown-content {
-      @apply top-full bottom-auto origin-top;
-    }
+  .dropdown-content {
+    @apply top-full bottom-auto origin-top;
   }
 }
 
 .dropdown-top {
-  @layer daisyui.modifier {
-    --anchor-v: top;
+  --anchor-v: top;
 
-    .dropdown-content {
-      @apply top-auto bottom-full origin-bottom;
-    }
+  .dropdown-content {
+    @apply top-auto bottom-full origin-bottom;
   }
 }
 @keyframes dropdown {

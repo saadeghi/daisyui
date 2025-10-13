@@ -1,73 +1,55 @@
 .stats {
-  @layer daisyui.component {
-    @apply rounded-box relative inline-grid grid-flow-col overflow-x-auto;
-  }
+  @apply rounded-box relative inline-grid grid-flow-col overflow-x-auto;
 }
 
 .stat {
-  @layer daisyui.component {
-    @apply inline-grid w-full gap-x-4 px-6 py-4;
-    grid-template-columns: repeat(1, 1fr);
+  @apply inline-grid w-full gap-x-4 px-6 py-4;
+  grid-template-columns: repeat(1, 1fr);
 
-    &:not(:last-child) {
-      border-inline-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
-      border-block-end: none;
-    }
+  &:not(:last-child) {
+    border-inline-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
+    border-block-end: none;
   }
 }
 
 .stat-figure {
-  @layer daisyui.component {
-    @apply col-start-2 row-span-3 row-start-1 place-self-center justify-self-end;
-  }
+  @apply col-start-2 row-span-3 row-start-1 place-self-center justify-self-end;
 }
 
 .stat-title {
-  @layer daisyui.component {
-    @apply text-base-content/60 col-start-1 whitespace-nowrap;
-    font-size: 0.75rem;
-  }
+  @apply text-base-content/60 col-start-1 whitespace-nowrap;
+  font-size: 0.75rem;
 }
 
 .stat-value {
-  @layer daisyui.component {
-    @apply col-start-1 whitespace-nowrap;
-    font-size: 2rem;
-    font-weight: 800;
-  }
+  @apply col-start-1 whitespace-nowrap;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 .stat-desc {
-  @layer daisyui.component {
-    @apply text-base-content/60 col-start-1 whitespace-nowrap;
-    font-size: 0.75rem;
-  }
+  @apply text-base-content/60 col-start-1 whitespace-nowrap;
+  font-size: 0.75rem;
 }
 
 .stat-actions {
-  @layer daisyui.component {
-    @apply col-start-1 whitespace-nowrap;
-  }
+  @apply col-start-1 whitespace-nowrap;
 }
 
 .stats-horizontal {
-  @layer daisyui.modifier {
-    @apply grid-flow-col overflow-x-auto;
+  @apply grid-flow-col overflow-x-auto;
 
-    .stat:not(:last-child) {
-      border-inline-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
-      border-block-end: none;
-    }
+  .stat:not(:last-child) {
+    border-inline-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
+    border-block-end: none;
   }
 }
 
 .stats-vertical {
-  @layer daisyui.modifier {
-    @apply grid-flow-row overflow-y-auto;
+  @apply grid-flow-row overflow-y-auto;
 
-    .stat:not(:last-child) {
-      border-inline-end: none;
-      border-block-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
-    }
+  .stat:not(:last-child) {
+    border-inline-end: none;
+    border-block-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
   }
 }

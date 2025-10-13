@@ -1,23 +1,17 @@
 .fieldset {
-  @layer daisyui.component {
-    @apply grid gap-1.5 py-1;
-    font-size: 0.75rem;
-    grid-template-columns: 1fr;
-    grid-auto-rows: max-content;
-  }
+  @apply grid gap-1.5 py-1;
+  font-size: 0.75rem;
+  grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
 }
 .fieldset-legend {
-  @layer daisyui.component {
-    @apply text-base-content -mb-1 flex items-center justify-between gap-2 py-2;
-    font-weight: 600;
-  }
+  @apply text-base-content -mb-1 flex items-center justify-between gap-2 py-2;
+  font-weight: 600;
 }
 /* deprecated in favor of label - but stays in source code to avoid breaking change */
 .fieldset-label {
-  @layer daisyui.component {
-    @apply text-base-content/60 flex items-center gap-1.5;
-    &:has(input) {
-      @apply cursor-pointer;
-    }
+  @apply text-base-content/60 flex items-center gap-1.5;
+  &:has(input) {
+    @apply cursor-pointer;
   }
 }

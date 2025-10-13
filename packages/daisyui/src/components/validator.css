@@ -1,35 +1,31 @@
 .validator {
-  @layer daisyui.component {
-    &:user-valid,
-    &:has(:user-valid) {
-      &,
-      &:focus,
-      &:checked,
-      &[aria-checked="true"],
-      &:focus-within {
-        --input-color: var(--color-success);
-      }
+  &:user-valid,
+  &:has(:user-valid) {
+    &,
+    &:focus,
+    &:checked,
+    &[aria-checked="true"],
+    &:focus-within {
+      --input-color: var(--color-success);
     }
-    &:user-invalid,
-    &:has(:user-invalid),
-    &[aria-invalid]:not([aria-invalid="false"]),
-    &:has([aria-invalid]:not([aria-invalid="false"])) {
-      &,
-      &:focus,
-      &:checked,
-      &[aria-checked="true"],
-      &:focus-within {
-        --input-color: var(--color-error);
-      }
-      & ~ .validator-hint {
-        @apply text-error visible block;
-      }
+  }
+  &:user-invalid,
+  &:has(:user-invalid),
+  &[aria-invalid]:not([aria-invalid="false"]),
+  &:has([aria-invalid]:not([aria-invalid="false"])) {
+    &,
+    &:focus,
+    &:checked,
+    &[aria-checked="true"],
+    &:focus-within {
+      --input-color: var(--color-error);
+    }
+    & ~ .validator-hint {
+      @apply text-error visible block;
     }
   }
 }
 .validator-hint {
-  @layer daisyui.component {
-    @apply invisible mt-2;
-    font-size: 0.75rem;
-  }
+  @apply invisible mt-2;
+  font-size: 0.75rem;
 }

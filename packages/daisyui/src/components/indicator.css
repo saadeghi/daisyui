@@ -1,76 +1,62 @@
 .indicator {
-  @layer daisyui.component {
-    @apply relative inline-flex;
-    width: max-content;
+  @apply relative inline-flex;
+  width: max-content;
 
-    :where(.indicator-item) {
-      z-index: 1;
-      @apply absolute whitespace-nowrap;
-      top: var(--indicator-t, 0);
-      bottom: var(--indicator-b, auto);
-      left: var(--indicator-s, auto);
-      right: var(--indicator-e, 0);
-      translate: var(--indicator-x, 50%) var(--indicator-y, -50%);
-    }
+  :where(.indicator-item) {
+    z-index: 1;
+    @apply absolute whitespace-nowrap;
+    top: var(--indicator-t, 0);
+    bottom: var(--indicator-b, auto);
+    left: var(--indicator-s, auto);
+    right: var(--indicator-e, 0);
+    translate: var(--indicator-x, 50%) var(--indicator-y, -50%);
   }
 }
 .indicator-start {
-  @layer daisyui.modifier {
-    --indicator-s: 0;
-    --indicator-e: auto;
-    --indicator-x: -50%;
-    [dir="rtl"] & {
-      --indicator-s: auto;
-      --indicator-e: 0;
-      --indicator-x: 50%;
-    }
+  --indicator-s: 0;
+  --indicator-e: auto;
+  --indicator-x: -50%;
+  [dir="rtl"] & {
+    --indicator-s: auto;
+    --indicator-e: 0;
+    --indicator-x: 50%;
   }
 }
 
 .indicator-center {
-  @layer daisyui.modifier {
-    --indicator-s: 50%;
-    --indicator-e: 50%;
-    --indicator-x: -50%;
-    [dir="rtl"] & {
-      --indicator-x: 50%;
-    }
+  --indicator-s: 50%;
+  --indicator-e: 50%;
+  --indicator-x: -50%;
+  [dir="rtl"] & {
+    --indicator-x: 50%;
   }
 }
 
 .indicator-end {
-  @layer daisyui.modifier {
-    --indicator-s: auto;
-    --indicator-e: 0;
-    --indicator-x: 50%;
-    [dir="rtl"] & {
-      --indicator-s: 0;
-      --indicator-e: auto;
-      --indicator-x: -50%;
-    }
+  --indicator-s: auto;
+  --indicator-e: 0;
+  --indicator-x: 50%;
+  [dir="rtl"] & {
+    --indicator-s: 0;
+    --indicator-e: auto;
+    --indicator-x: -50%;
   }
 }
 
 .indicator-bottom {
-  @layer daisyui.modifier {
-    --indicator-t: auto;
-    --indicator-b: 0;
-    --indicator-y: 50%;
-  }
+  --indicator-t: auto;
+  --indicator-b: 0;
+  --indicator-y: 50%;
 }
 
 .indicator-middle {
-  @layer daisyui.modifier {
-    --indicator-t: 50%;
-    --indicator-b: 50%;
-    --indicator-y: -50%;
-  }
+  --indicator-t: 50%;
+  --indicator-b: 50%;
+  --indicator-y: -50%;
 }
 
 .indicator-top {
-  @layer daisyui.modifier {
-    --indicator-t: 0;
-    --indicator-b: auto;
-    --indicator-y: -50%;
-  }
+  --indicator-t: 0;
+  --indicator-b: auto;
+  --indicator-y: -50%;
 }
