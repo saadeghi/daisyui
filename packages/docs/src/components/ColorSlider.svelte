@@ -644,95 +644,89 @@
       </label>
     </div>
   </div>
-  <div class="md:col-span-3">
+  <div
+    class="hide-when-range-is-active [&:has(input.range:active)_.setbgcolor]:bg-base-100/50 flex flex-col gap-6 md:col-span-3 [&:has(input.range:active)]:visible!"
+  >
     {#each sliderConfigs as config, index (index)}
-      <div class="mb-4 flex h-20 flex-col gap-1">
-        <div
-          class="hide-when-range-is-active [&:has(input.range:active)]:bg-base-100 rounded-box -mx-4 -my-4 p-4 pt-12 pb-8 md:p-8 [&:has(input.range:active)]:visible! [&:has(input.range:active)]:[box-shadow:0_1rem_2rem_-1rem_var(--color-black)]"
-        >
-          <!-- Moving tooltip above the slider thumb -->
-          {#if config.max > config.min}
-            <div class="relative mx-4 w-[calc(100%-2rem)]">
-              <div class="absolute -ms-2 -mt-[2em] text-[0.625rem]">{config.label}</div>
-              <div
-                class="tooltip tooltip-open relative block w-0 font-mono before:text-[0.6875rem]"
-                style={`inset-inline-start: ${((config.value - config.min) / (config.max - config.min)) * 100}%; pointer-events: none;`}
-              >
-                <div class="tooltip-content text-start font-mono">
-                  <div class="text-[0.6875rem]">{config.formatter(config.value)}</div>
-                </div>
+      <div
+        class="setbgcolor rounded-box border-base-100/20 h-20 border-2 px-4 pt-8 backdrop-blur-md"
+      >
+        <!-- Moving tooltip above the slider thumb -->
+        {#if config.max > config.min}
+          <div class="relative mx-4 w-[calc(100%-2rem)]">
+            <div class="absolute -ms-2 -mt-[2em] text-[0.625rem]">
+              {config.label}
+            </div>
+            <div
+              class="tooltip tooltip-open relative block w-0 font-mono before:text-[0.6875rem]"
+              style={`inset-inline-start: ${((config.value - config.min) / (config.max - config.min)) * 100}%; pointer-events: none;`}
+            >
+              <div class="tooltip-content text-start font-mono">
+                <div class="text-[0.6875rem]">{config.formatter(config.value)}</div>
               </div>
             </div>
-          {/if}
-          <input
-            id="slider-{index}"
-            type="range"
-            min={config.min}
-            max={config.max}
-            step={config.step}
-            value={config.value}
-            onchange={(e) => {
-              config.setter(parseFloat(e.target.value))
+          </div>
+        {/if}
+        <input
+          id="slider-{index}"
+          type="range"
+          min={config.min}
+          max={config.max}
+          step={config.step}
+          value={config.value}
+          onchange={(e) => {
+            config.setter(parseFloat(e.target.value))
 
-              // Mark that changes have been made in current mode
-              hasChangedInCurrentMode = true
+            // Mark that changes have been made in current mode
+            hasChangedInCurrentMode = true
 
-              const newValue = generateColorValue()
+            const newValue = generateColorValue()
 
-              // Update the bound value
-              value = newValue
+            // Update the bound value
+            value = newValue
 
-              // For OKLCH mode, update originalValue when changes are made
-              // For non-OKLCH modes, update originalValue to preserve changes
-              if (hasChangedInCurrentMode) {
-                originalValue = newValue
-              }
-            }}
-            oninput={(e) => {
-              config.setter(parseFloat(e.target.value))
+            // For OKLCH mode, update originalValue when changes are made
+            // For non-OKLCH modes, update originalValue to preserve changes
+            if (hasChangedInCurrentMode) {
+              originalValue = newValue
+            }
+          }}
+          oninput={(e) => {
+            config.setter(parseFloat(e.target.value))
 
-              // Mark that changes have been made in current mode
-              hasChangedInCurrentMode = true
+            // Mark that changes have been made in current mode
+            hasChangedInCurrentMode = true
 
-              const newValue = generateColorValue()
+            const newValue = generateColorValue()
 
-              // Update the bound value
-              value = newValue
+            // Update the bound value
+            value = newValue
 
-              // For OKLCH mode, update originalValue when changes are made
-              // For non-OKLCH modes, update originalValue to preserve changes
-              if (hasChangedInCurrentMode) {
-                originalValue = newValue
-              }
-            }}
-            class="range range-xl focus:outline-base-content/10 outline-base-content/10 w-full text-transparent outline [--range-bg:transparent] focus:outline [&.range::-webkit-slider-thumb]:shadow-[0_0_0_1px_oklch(0_0_0/.3)_inset,0_0_0_2px_oklch(100_0_0)_inset]"
-            style={`background: ${generateSliderGradient(config.gradientType, colorState)};`}
-          />
-          <!-- range indicator: show truly out-of-gamut as overlays -->
-          <!-- only for L and C of LCH -->
-          {#if config.range && (config.label === "Lightness" || config.label === "Chroma") && Array.isArray(config.range) && config.range.length > 0}
-            <div class="pointer-events-none px-2">
-              <div class="relative mt-1 h-0.5 w-full">
-                {#each Array.isArray(config.range) ? config.range : [config.range] as r}
-                  {#if r && r.width > 0.1}
-                    <div
-                      class="bg-base-content/10 absolute top-0 left-0 h-full rounded"
-                      style={`left:${r.start}%;width:${r.width}%;`}
-                    ></div>
-                  {/if}
-                {/each}
-              </div>
+            // For OKLCH mode, update originalValue when changes are made
+            // For non-OKLCH modes, update originalValue to preserve changes
+            if (hasChangedInCurrentMode) {
+              originalValue = newValue
+            }
+          }}
+          class="range range-xl focus:outline-base-content/10 outline-base-content/10 w-full text-transparent outline [--range-bg:transparent] focus:outline [&.range::-webkit-slider-thumb]:shadow-[0_0_0_1px_oklch(0_0_0/.3)_inset,0_0_0_2px_oklch(100_0_0)_inset]"
+          style={`background: ${generateSliderGradient(config.gradientType, colorState)};`}
+        />
+        <!-- range indicator: show truly out-of-gamut as overlays -->
+        <!-- only for L and C of LCH -->
+        {#if config.range && (config.label === "Lightness" || config.label === "Chroma") && Array.isArray(config.range) && config.range.length > 0}
+          <div class="pointer-events-none px-2">
+            <div class="relative mt-1 h-0.5 w-full">
+              {#each Array.isArray(config.range) ? config.range : [config.range] as r}
+                {#if r && r.width > 0.1}
+                  <div
+                    class="bg-base-content/10 absolute top-0 left-0 h-full rounded"
+                    style={`left:${r.start}%;width:${r.width}%;`}
+                  ></div>
+                {/if}
+              {/each}
             </div>
-          {/if}
-        </div>
-
-        <!-- <div class="text-base-content/50 flex justify-between text-xs">
-          <span>{config.minLabel}</span>
-          {#if config.midLabel}
-            <span>{config.midLabel}</span>
-          {/if}
-          <span>{config.maxLabel}</span>
-        </div> -->
+          </div>
+        {/if}
       </div>
     {/each}
   </div>
