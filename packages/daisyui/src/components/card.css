@@ -29,36 +29,6 @@
       border-end-end-radius: inherit;
     }
 
-    &:where(.card-border) {
-      border: var(--border) solid var(--color-base-200);
-    }
-
-    &:where(.card-dash) {
-      border: var(--border) dashed var(--color-base-200);
-    }
-
-    &.image-full {
-      @apply grid;
-
-      > * {
-        @apply col-start-1 row-start-1;
-      }
-
-      > .card-body {
-        @apply text-neutral-content relative;
-      }
-
-      :where(figure) {
-        @apply overflow-hidden;
-        border-radius: inherit;
-      }
-
-      > figure img {
-        @apply h-full object-cover;
-        filter: brightness(28%);
-      }
-    }
-
     figure {
       @apply flex items-center justify-center;
     }
@@ -68,6 +38,42 @@
     }
     &:has(> :checked) {
       outline: 2px solid currentColor;
+    }
+  }
+}
+
+.card-border {
+  @layer daisyui.modifier {
+    border: var(--border) solid var(--color-base-200);
+  }
+}
+
+.card-dash {
+  @layer daisyui.modifier {
+    border: var(--border) dashed var(--color-base-200);
+  }
+}
+
+.image-full {
+  @layer daisyui.modifier {
+    @apply grid;
+
+    > * {
+      @apply col-start-1 row-start-1;
+    }
+
+    > .card-body {
+      @apply text-neutral-content relative;
+    }
+
+    :where(figure) {
+      @apply overflow-hidden;
+      border-radius: inherit;
+    }
+
+    > figure img {
+      @apply h-full object-cover;
+      filter: brightness(28%);
     }
   }
 }
