@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.2.4 (2025-10-13)
+
+
+### Features
+
+* Add new layers to improve CSS specificity ([e5bb411](https://github.com/saadeghi/daisyui/commit/e5bb4113e0869092bd2a68f01eee9717c4bd9c5d)), closes [#3589](https://github.com/saadeghi/daisyui/issues/3589) [#3622](https://github.com/saadeghi/daisyui/issues/3622)
+
 ## 5.2.3 (2025-10-11)
 
 ### Bug Fixes
