@@ -1,118 +1,132 @@
 .drawer {
-  @apply relative grid;
-  width: 100%;
-  grid-auto-columns: max-content auto;
+  @layer daisyui.component {
+    @apply relative grid;
+    width: 100%;
+    grid-auto-columns: max-content auto;
+  }
 }
 
 .drawer-content {
-  @apply col-start-2 row-start-1 min-w-0;
+  @layer daisyui.component {
+    @apply col-start-2 row-start-1 min-w-0;
+  }
 }
 
 :where(.drawer-side) {
-  @apply overflow-x-hidden overflow-y-hidden;
+  @layer daisyui.component {
+    @apply overflow-x-hidden overflow-y-hidden;
+  }
 }
 
 .drawer-side {
-  @apply pointer-events-none invisible fixed start-0 top-0 z-10 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain opacity-0;
-  transition:
-    opacity 0.2s ease-out 0.1s allow-discrete,
-    visibility 0.3s ease-out 0.1s allow-discrete;
-  height: 100vh;
-  height: 100dvh;
-
-  > .drawer-overlay {
-    @apply sticky top-0 cursor-pointer place-self-stretch;
-    background-color: oklch(0% 0 0 / 40%);
-  }
-
-  > * {
-    @apply col-start-1 row-start-1;
-  }
-
-  > *:not(.drawer-overlay) {
-    @apply will-change-transform;
+  @layer daisyui.component {
+    @apply pointer-events-none invisible fixed start-0 top-0 z-10 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain opacity-0;
     transition:
-      translate 0.3s ease-out,
-      width 0.2s ease-out;
-    translate: -100%;
+      opacity 0.2s ease-out 0.1s allow-discrete,
+      visibility 0.3s ease-out 0.1s allow-discrete;
+    height: 100vh;
+    height: 100dvh;
 
-    [dir="rtl"] & {
-      translate: 100%;
+    > .drawer-overlay {
+      @apply sticky top-0 cursor-pointer place-self-stretch;
+      background-color: oklch(0% 0 0 / 40%);
+    }
+
+    > * {
+      @apply col-start-1 row-start-1;
+    }
+
+    > *:not(.drawer-overlay) {
+      @apply will-change-transform;
+      transition:
+        translate 0.3s ease-out,
+        width 0.2s ease-out;
+      translate: -100%;
+
+      [dir="rtl"] & {
+        translate: 100%;
+      }
     }
   }
 }
 
 .drawer-toggle {
-  @apply fixed h-0 w-0 appearance-none opacity-0;
+  @layer daisyui.component {
+    @apply fixed h-0 w-0 appearance-none opacity-0;
 
-  &:checked {
-    & ~ .drawer-side {
-      @apply pointer-events-auto visible overflow-y-auto opacity-100;
+    &:checked {
+      & ~ .drawer-side {
+        @apply pointer-events-auto visible overflow-y-auto opacity-100;
 
-      & > *:not(.drawer-overlay) {
-        translate: 0%;
-      }
-    }
-  }
-
-  &:focus-visible ~ .drawer-content label.drawer-button {
-    outline: 2px solid;
-    outline-offset: 2px;
-  }
-}
-
-.drawer-end {
-  grid-auto-columns: auto max-content;
-
-  > .drawer-toggle {
-    & ~ .drawer-content {
-      @apply col-start-1;
-    }
-
-    & ~ .drawer-side {
-      @apply col-start-2 justify-items-end;
-    }
-
-    & ~ .drawer-side > *:not(.drawer-overlay) {
-      translate: 100%;
-
-      [dir="rtl"] & {
-        translate: -100%;
-      }
-    }
-
-    &:checked ~ .drawer-side > *:not(.drawer-overlay) {
-      translate: 0%;
-    }
-  }
-}
-
-.drawer-open {
-  :where(& > .drawer-side) {
-    @apply overflow-y-auto;
-  }
-
-  > .drawer-toggle {
-    @apply hidden;
-
-    & ~ .drawer-side {
-      @apply pointer-events-auto visible sticky block w-auto overscroll-auto opacity-100;
-
-      & > .drawer-overlay {
-        @apply cursor-default bg-transparent;
-      }
-
-      & > *:not(.drawer-overlay) {
-        translate: 0%;
-
-        [dir="rtl"] & {
+        & > *:not(.drawer-overlay) {
           translate: 0%;
         }
       }
     }
 
-    &:checked ~ .drawer-side {
-      @apply pointer-events-auto visible;
+    &:focus-visible ~ .drawer-content label.drawer-button {
+      outline: 2px solid;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.drawer-end {
+  @layer daisyui.modifier {
+    grid-auto-columns: auto max-content;
+
+    > .drawer-toggle {
+      & ~ .drawer-content {
+        @apply col-start-1;
+      }
+
+      & ~ .drawer-side {
+        @apply col-start-2 justify-items-end;
+      }
+
+      & ~ .drawer-side > *:not(.drawer-overlay) {
+        translate: 100%;
+
+        [dir="rtl"] & {
+          translate: -100%;
+        }
+      }
+
+      &:checked ~ .drawer-side > *:not(.drawer-overlay) {
+        translate: 0%;
+      }
+    }
+  }
+}
+
+.drawer-open {
+  @layer daisyui.modifier {
+    :where(& > .drawer-side) {
+      @apply overflow-y-auto;
+    }
+
+    > .drawer-toggle {
+      @apply hidden;
+
+      & ~ .drawer-side {
+        @apply pointer-events-auto visible sticky block w-auto overscroll-auto opacity-100;
+
+        & > .drawer-overlay {
+          @apply cursor-default bg-transparent;
+        }
+
+        & > *:not(.drawer-overlay) {
+          translate: 0%;
+
+          [dir="rtl"] & {
+            translate: 0%;
+          }
+        }
+      }
+
+      &:checked ~ .drawer-side {
+        @apply pointer-events-auto visible;
+      }
     }
   }
 }

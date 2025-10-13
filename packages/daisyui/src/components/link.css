@@ -1,96 +1,116 @@
 .link {
-  @apply cursor-pointer underline;
+  @layer daisyui.component {
+    @apply cursor-pointer underline;
 
-  &:focus {
-    @apply outline-hidden;
-  }
+    &:focus {
+      @apply outline-hidden;
+    }
 
-  &:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
   }
 }
 
 .link-hover {
-  @apply no-underline hover:underline;
+  @layer daisyui.modifier {
+    @apply no-underline hover:underline;
+  }
 }
 
 .link-primary {
-  @apply text-primary;
+  @layer daisyui.modifier {
+    @apply text-primary;
 
-  @media (hover: hover) {
-    &:hover {
-      color: color-mix(in oklab, var(--color-primary) 80%, #000);
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in oklab, var(--color-primary) 80%, #000);
+      }
     }
   }
 }
 
 .link-secondary {
-  @apply text-secondary;
+  @layer daisyui.modifier {
+    @apply text-secondary;
 
-  @media (hover: hover) {
-    &:hover {
-      color: color-mix(in oklab, var(--color-secondary) 80%, #000);
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in oklab, var(--color-secondary) 80%, #000);
+      }
     }
   }
 }
 
 .link-accent {
-  @apply text-accent;
+  @layer daisyui.modifier {
+    @apply text-accent;
 
-  @media (hover: hover) {
-    &:hover {
-      color: color-mix(in oklab, var(--color-accent) 80%, #000);
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in oklab, var(--color-accent) 80%, #000);
+      }
     }
   }
 }
 
 .link-neutral {
-  @apply text-neutral;
+  @layer daisyui.modifier {
+    @apply text-neutral;
 
-  @media (hover: hover) {
-    &:hover {
-      color: color-mix(in oklab, var(--color-neutral) 80%, #000);
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in oklab, var(--color-neutral) 80%, #000);
+      }
     }
   }
 }
 
 .link-success {
-  @apply text-success;
+  @layer daisyui.modifier {
+    @apply text-success;
 
-  @media (hover: hover) {
-    &:hover {
-      color: color-mix(in oklab, var(--color-success) 80%, #000);
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in oklab, var(--color-success) 80%, #000);
+      }
     }
   }
 }
 
 .link-info {
-  @apply text-info;
+  @layer daisyui.modifier {
+    @apply text-info;
 
-  @media (hover: hover) {
-    &:hover {
-      color: color-mix(in oklab, var(--color-info) 80%, #000);
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in oklab, var(--color-info) 80%, #000);
+      }
     }
   }
 }
 
 .link-warning {
-  @apply text-warning;
+  @layer daisyui.modifier {
+    @apply text-warning;
 
-  @media (hover: hover) {
-    &:hover {
-      color: color-mix(in oklab, var(--color-warning) 80%, #000);
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in oklab, var(--color-warning) 80%, #000);
+      }
     }
   }
 }
 
 .link-error {
-  @apply text-error;
+  @layer daisyui.modifier {
+    @apply text-error;
 
-  @media (hover: hover) {
-    &:hover {
-      color: color-mix(in oklab, var(--color-error) 80%, #000);
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in oklab, var(--color-error) 80%, #000);
+      }
     }
   }
 }

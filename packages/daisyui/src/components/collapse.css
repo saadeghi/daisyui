@@ -1,138 +1,268 @@
 .collapse:not(td, tr, colgroup) {
   visibility: revert-layer;
-  display: grid;
 }
 
 .collapse {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-box, 1rem);
-  width: 100%;
-  grid-template-rows: max-content 0fr;
-  grid-template-columns: minmax(0, 1fr);
-  isolation: isolate;
-  @media (prefers-reduced-motion: no-preference) {
-    transition: grid-template-rows 0.2s;
-  }
+  @layer daisyui.component {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-box, 1rem);
+    width: 100%;
+    grid-template-rows: max-content 0fr;
+    grid-template-columns: minmax(0, 1fr);
+    isolation: isolate;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: grid-template-rows 0.2s;
+    }
 
-  > input:is([type="checkbox"], [type="radio"]) {
+    > input:is([type="checkbox"], [type="radio"]) {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      appearance: none;
+      opacity: 0;
+    }
+
+    &:is(
+      [open],
+      [tabindex]:focus:not(.collapse-close),
+      [tabindex]:focus-within:not(.collapse-close)
+    ),
+    &:not(.collapse-close):has(> input:is([type="checkbox"], [type="radio"]):checked) {
+      grid-template-rows: max-content 1fr;
+    }
+
+    &:is(
+        [open],
+        [tabindex]:focus:not(.collapse-close),
+        [tabindex]:focus-within:not(.collapse-close)
+      )
+      > .collapse-content,
+    &:not(.collapse-close)
+      > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
+      visibility: visible;
+      min-height: fit-content;
+    }
+    &:focus-visible,
+    &:has(> input:is([type="checkbox"], [type="radio"]):focus-visible),
+    &:has(summary:focus-visible) {
+      outline-color: var(--color-base-content);
+      outline-style: solid;
+      outline-width: 2px;
+      outline-offset: 2px;
+    }
+
+    &:not(.collapse-close) {
+      > input[type="checkbox"],
+      > input[type="radio"]:not(:checked),
+      > .collapse-title {
+        cursor: pointer;
+      }
+    }
+
+    &[tabindex]:focus:not(.collapse-close, .collapse[open]),
+    &[tabindex]:focus-within:not(.collapse-close, .collapse[open]) {
+      > .collapse-title {
+        cursor: unset;
+      }
+    }
+
+    &:is(
+        [open],
+        [tabindex]:focus:not(.collapse-close),
+        [tabindex]:focus-within:not(.collapse-close)
+      )
+      > :where(.collapse-content),
+    &:not(.collapse-close)
+      > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
+      padding-bottom: 1rem;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          padding 0.2s ease-out,
+          background-color 0.2s ease-out;
+      }
+    }
+
+    &:is([open]) {
+      &.collapse-arrow {
+        > .collapse-title:after {
+          @media (prefers-reduced-motion: no-preference) {
+            transform: translateY(-50%) rotate(225deg);
+          }
+        }
+      }
+    }
+
+    &.collapse-open {
+      &.collapse-arrow {
+        > .collapse-title:after {
+          @media (prefers-reduced-motion: no-preference) {
+            transform: translateY(-50%) rotate(225deg);
+          }
+        }
+      }
+    }
+
+    &[tabindex].collapse-arrow:focus:not(.collapse-close),
+    &.collapse-arrow[tabindex]:focus-within:not(.collapse-close) {
+      > .collapse-title:after {
+        transform: translateY(-50%) rotate(225deg);
+      }
+    }
+
+    &.collapse-arrow:not(.collapse-close) {
+      > input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-title:after {
+        transform: translateY(-50%) rotate(225deg);
+      }
+    }
+
+    &[open] {
+      &.collapse-plus {
+        > .collapse-title:after {
+          content: "−";
+        }
+      }
+    }
+
+    &.collapse-open {
+      &.collapse-plus {
+        > .collapse-title:after {
+          content: "−";
+        }
+      }
+    }
+
+    &[tabindex].collapse-plus:focus:not(.collapse-close) {
+      > .collapse-title:after {
+        content: "−";
+      }
+    }
+
+    &.collapse-plus:not(.collapse-close) {
+      > input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-title:after {
+        content: "−";
+      }
+    }
+
+    > input:is([type="checkbox"], [type="radio"]) {
+      z-index: 1;
+      width: 100%;
+      padding: 1rem;
+      padding-inline-end: 3rem;
+      min-height: 1lh;
+      transition: background-color 0.2s ease-out;
+    }
+  }
+}
+
+.collapse-title,
+.collapse-content {
+  @layer daisyui.component {
     grid-column-start: 1;
     grid-row-start: 1;
-    appearance: none;
-    opacity: 0;
   }
+}
 
-  &:is([open], [tabindex]:focus:not(.collapse-close), [tabindex]:focus-within:not(.collapse-close)),
-  &:not(.collapse-close):has(> input:is([type="checkbox"], [type="radio"]):checked) {
-    grid-template-rows: max-content 1fr;
-  }
-
-  &:is([open], [tabindex]:focus:not(.collapse-close), [tabindex]:focus-within:not(.collapse-close))
-    > .collapse-content,
-  &:not(.collapse-close)
-    > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
-    visibility: visible;
-    min-height: fit-content;
-  }
-  &:focus-visible,
-  &:has(> input:is([type="checkbox"], [type="radio"]):focus-visible),
-  &:has(summary:focus-visible) {
-    outline-color: var(--color-base-content);
-    outline-style: solid;
-    outline-width: 2px;
-    outline-offset: 2px;
-  }
-
-  &:not(.collapse-close) {
-    > input[type="checkbox"],
-    > input[type="radio"]:not(:checked),
-    > .collapse-title {
-      cursor: pointer;
-    }
-  }
-
-  &[tabindex]:focus:not(.collapse-close, .collapse[open]),
-  &[tabindex]:focus-within:not(.collapse-close, .collapse[open]) {
-    > .collapse-title {
-      cursor: unset;
-    }
-  }
-
-  &:is([open], [tabindex]:focus:not(.collapse-close), [tabindex]:focus-within:not(.collapse-close))
-    > :where(.collapse-content),
-  &:not(.collapse-close)
-    > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
-    padding-bottom: 1rem;
+.collapse-content {
+  @layer daisyui.component {
+    visibility: hidden;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    min-height: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: unset;
     @media (prefers-reduced-motion: no-preference) {
       transition:
+        visibility 0.2s,
         padding 0.2s ease-out,
         background-color 0.2s ease-out;
     }
   }
+}
 
-  &:is([open]) {
-    &.collapse-arrow {
-      > .collapse-title:after {
-        @media (prefers-reduced-motion: no-preference) {
-          transform: translateY(-50%) rotate(225deg);
+.collapse:is(details) {
+  @layer daisyui.component {
+    width: 100%;
+    @media (prefers-reduced-motion: no-preference) {
+      @supports (transition: content-visibility allow-discrete) and
+        (interpolate-size: allow-keywords) {
+        &::details-content {
+          transition:
+            content-visibility 0.2s allow-discrete,
+            height 0.2s;
+          height: 0;
+          interpolate-size: allow-keywords;
+        }
+        &:where([open], .collapse-open)::details-content {
+          height: auto;
         }
       }
     }
-  }
+    & summary {
+      position: relative;
+      display: block;
 
-  &.collapse-open {
-    &.collapse-arrow {
-      > .collapse-title:after {
-        @media (prefers-reduced-motion: no-preference) {
-          transform: translateY(-50%) rotate(225deg);
-        }
+      &::-webkit-details-marker {
+        display: none;
       }
     }
   }
+}
 
-  &[tabindex].collapse-arrow:focus:not(.collapse-close),
-  &.collapse-arrow[tabindex]:focus-within:not(.collapse-close) {
+.collapse:is(details) summary {
+  @layer daisyui.component {
+    outline: none;
+  }
+}
+
+.collapse-arrow {
+  @layer daisyui.modifier {
     > .collapse-title:after {
-      transform: translateY(-50%) rotate(225deg);
-    }
-  }
-
-  &.collapse-arrow:not(.collapse-close) {
-    > input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-title:after {
-      transform: translateY(-50%) rotate(225deg);
-    }
-  }
-
-  &[open] {
-    &.collapse-plus {
-      > .collapse-title:after {
-        content: "−";
+      position: absolute;
+      display: block;
+      height: 0.5rem;
+      width: 0.5rem;
+      transform: translateY(-100%) rotate(45deg);
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.2s;
       }
+      top: 50%;
+      inset-inline-end: 1.4rem;
+      content: "";
+      transform-origin: 75% 75%;
+      box-shadow: 2px 2px;
+      pointer-events: none;
     }
   }
+}
 
-  &.collapse-open {
-    &.collapse-plus {
-      > .collapse-title:after {
-        content: "−";
-      }
-    }
-  }
-
-  &[tabindex].collapse-plus:focus:not(.collapse-close) {
+.collapse-plus {
+  @layer daisyui.modifier {
     > .collapse-title:after {
-      content: "−";
+      position: absolute;
+      display: block;
+      height: 0.5rem;
+      width: 0.5rem;
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: all;
+        transition-duration: 300ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      top: 0.9rem;
+      inset-inline-end: 1.4rem;
+      content: "+";
+      pointer-events: none;
     }
   }
+}
 
-  &.collapse-plus:not(.collapse-close) {
-    > input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-title:after {
-      content: "−";
-    }
-  }
+.collapse-title {
+  @layer daisyui.component {
+    position: relative;
 
-  > input:is([type="checkbox"], [type="radio"]) {
-    z-index: 1;
     width: 100%;
     padding: 1rem;
     padding-inline-end: 3rem;
@@ -140,119 +270,18 @@
     transition: background-color 0.2s ease-out;
   }
 }
-
-.collapse-title,
-.collapse-content {
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-
-.collapse-content {
-  visibility: hidden;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  min-height: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  cursor: unset;
-  @media (prefers-reduced-motion: no-preference) {
-    transition:
-      visibility 0.2s,
-      padding 0.2s ease-out,
-      background-color 0.2s ease-out;
-  }
-}
-
-.collapse:is(details) {
-  width: 100%;
-  @media (prefers-reduced-motion: no-preference) {
-    @supports (transition: content-visibility allow-discrete) and (interpolate-size: allow-keywords) {
-      &::details-content {
-        transition:
-          content-visibility 0.2s allow-discrete,
-          height 0.2s;
-        height: 0;
-        interpolate-size: allow-keywords;
-      }
-      &:where([open], .collapse-open)::details-content {
-        height: auto;
-      }
-    }
-  }
-  & summary {
-    position: relative;
-    display: block;
-
-    &::-webkit-details-marker {
-      display: none;
-    }
-  }
-}
-
-.collapse:is(details) summary {
-  outline: none;
-}
-
-.collapse-arrow {
-  > .collapse-title:after {
-    position: absolute;
-    display: block;
-    height: 0.5rem;
-    width: 0.5rem;
-    transform: translateY(-100%) rotate(45deg);
-    @media (prefers-reduced-motion: no-preference) {
-      transition-property: all;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 0.2s;
-    }
-    top: 50%;
-    inset-inline-end: 1.4rem;
-    content: "";
-    transform-origin: 75% 75%;
-    box-shadow: 2px 2px;
-    pointer-events: none;
-  }
-}
-
-.collapse-plus {
-  > .collapse-title:after {
-    position: absolute;
-    display: block;
-    height: 0.5rem;
-    width: 0.5rem;
-    @media (prefers-reduced-motion: no-preference) {
-      transition-property: all;
-      transition-duration: 300ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    top: 0.9rem;
-    inset-inline-end: 1.4rem;
-    content: "+";
-    pointer-events: none;
-  }
-}
-
-.collapse-title {
-  position: relative;
-}
-
-.collapse-title {
-  width: 100%;
-  padding: 1rem;
-  padding-inline-end: 3rem;
-  min-height: 1lh;
-  transition: background-color 0.2s ease-out;
-}
 .collapse-open {
-  grid-template-rows: max-content 1fr;
-  > .collapse-content {
-    visibility: visible;
-    min-height: fit-content;
-    padding-bottom: 1rem;
-    @media (prefers-reduced-motion: no-preference) {
-      transition:
-        padding 0.2s ease-out,
-        background-color 0.2s ease-out;
+  @layer daisyui.modifier {
+    grid-template-rows: max-content 1fr;
+    > .collapse-content {
+      visibility: visible;
+      min-height: fit-content;
+      padding-bottom: 1rem;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          padding 0.2s ease-out,
+          background-color 0.2s ease-out;
+      }
     }
   }
 }

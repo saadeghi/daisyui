@@ -1,234 +1,264 @@
 .input {
-  cursor: text;
-  border: var(--border) solid #0000;
-  @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-2 px-3 align-middle whitespace-nowrap;
-  width: clamp(3rem, 20rem, 100%);
-  height: var(--size);
-  font-size: max(var(--font-size, 0.875rem), 0.875rem);
-  touch-action: manipulation;
-  border-start-start-radius: var(--join-ss, var(--radius-field));
-  border-start-end-radius: var(--join-se, var(--radius-field));
-  border-end-start-radius: var(--join-es, var(--radius-field));
-  border-end-end-radius: var(--join-ee, var(--radius-field));
-  border-color: var(--input-color);
-  box-shadow:
-    0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
-    0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-  --size: calc(var(--size-field, 0.25rem) * 10);
-  --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-  &:where(input) {
-    @apply inline-flex;
-  }
-  :where(input) {
-    @apply inline-flex h-full w-full appearance-none bg-transparent;
-    border: none;
+  @layer daisyui.component {
+    cursor: text;
+    border: var(--border) solid #0000;
+    @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-2 px-3 align-middle whitespace-nowrap;
+    width: clamp(3rem, 20rem, 100%);
+    height: var(--size);
+    font-size: max(var(--font-size, 0.875rem), 0.875rem);
+    touch-action: manipulation;
+    border-start-start-radius: var(--join-ss, var(--radius-field));
+    border-start-end-radius: var(--join-se, var(--radius-field));
+    border-end-start-radius: var(--join-es, var(--radius-field));
+    border-end-end-radius: var(--join-ee, var(--radius-field));
+    border-color: var(--input-color);
+    box-shadow:
+      0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
+      0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
+    --size: calc(var(--size-field, 0.25rem) * 10);
+    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+    &:where(input) {
+      @apply inline-flex;
+    }
+    :where(input) {
+      @apply inline-flex h-full w-full appearance-none bg-transparent;
+      border: none;
+
+      &:focus,
+      &:focus-within {
+        @apply outline-hidden;
+      }
+    }
+
+    :where(input[type="url"]),
+    :where(input[type="email"]) {
+      direction: ltr;
+    }
+
+    :where(input[type="date"]) {
+      @apply inline-flex;
+    }
 
     &:focus,
     &:focus-within {
-      @apply outline-hidden;
+      --input-color: var(--color-base-content);
+      box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
+      outline: 2px solid var(--input-color);
+      outline-offset: 2px;
+      isolation: isolate;
+      z-index: 1;
     }
-  }
 
-  :where(input[type="url"]),
-  :where(input[type="email"]) {
-    direction: ltr;
-  }
-
-  :where(input[type="date"]) {
-    @apply inline-flex;
-  }
-
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-base-content);
-    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
-    outline: 2px solid var(--input-color);
-    outline-offset: 2px;
-    isolation: isolate;
-    z-index: 1;
-  }
-
-  /* increase font size in iOS so the page won't zoom */
-  @media (pointer: coarse) {
-    @supports (-webkit-touch-callout: none) {
-      &:focus,
-      &:focus-within {
-        --font-size: 1rem;
+    /* increase font size in iOS so the page won't zoom */
+    @media (pointer: coarse) {
+      @supports (-webkit-touch-callout: none) {
+        &:focus,
+        &:focus-within {
+          --font-size: 1rem;
+        }
       }
     }
-  }
 
-  &:has(> input[disabled]),
-  &:is(:disabled, [disabled]),
-  fieldset:disabled & {
-    @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
-    box-shadow: none;
-  }
-
-  &:has(> input[disabled]) > input[disabled] {
-    @apply cursor-not-allowed;
-  }
-
-  &::-webkit-date-and-time-value {
-    text-align: inherit;
-  }
-
-  &[type="number"] {
-    &::-webkit-inner-spin-button {
-      @apply -my-3 -me-3;
-    }
-  }
-
-  &::-webkit-calendar-picker-indicator {
-    position: absolute;
-    inset-inline-end: 0.75em;
-  }
-
-  &:has(> input[type="date"]) {
-    :where(input[type="date"]) {
-      @apply inline-flex;
-      -webkit-appearance: none;
-      appearance: none;
+    &:has(> input[disabled]),
+    &:is(:disabled, [disabled]),
+    fieldset:disabled & {
+      @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+      box-shadow: none;
     }
 
-    input[type="date"]::-webkit-calendar-picker-indicator {
+    &:has(> input[disabled]) > input[disabled] {
+      @apply cursor-not-allowed;
+    }
+
+    &::-webkit-date-and-time-value {
+      text-align: inherit;
+    }
+
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-3 -me-3;
+      }
+    }
+
+    &::-webkit-calendar-picker-indicator {
       position: absolute;
       inset-inline-end: 0.75em;
-      width: 1em;
-      height: 1em;
-      cursor: pointer;
+    }
+
+    &:has(> input[type="date"]) {
+      :where(input[type="date"]) {
+        @apply inline-flex;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        inset-inline-end: 0.75em;
+        width: 1em;
+        height: 1em;
+        cursor: pointer;
+      }
     }
   }
 }
 
 .input-ghost {
-  @apply bg-transparent;
-  box-shadow: none;
-  border-color: #0000;
-
-  &:focus,
-  &:focus-within {
-    @apply text-base-content bg-base-100;
-    border-color: #0000;
+  @layer daisyui.modifier {
+    @apply bg-transparent;
     box-shadow: none;
+    border-color: #0000;
+
+    &:focus,
+    &:focus-within {
+      @apply text-base-content bg-base-100;
+      border-color: #0000;
+      box-shadow: none;
+    }
   }
 }
 
 .input-neutral {
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-neutral);
+  @layer daisyui.modifier {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-neutral);
+    }
   }
 }
 
 .input-primary {
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-primary);
+  @layer daisyui.modifier {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-primary);
+    }
   }
 }
 
 .input-secondary {
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-secondary);
+  @layer daisyui.modifier {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-secondary);
+    }
   }
 }
 
 .input-accent {
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-accent);
+  @layer daisyui.modifier {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-accent);
+    }
   }
 }
 
 .input-info {
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-info);
+  @layer daisyui.modifier {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-info);
+    }
   }
 }
 
 .input-success {
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-success);
+  @layer daisyui.modifier {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-success);
+    }
   }
 }
 
 .input-warning {
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-warning);
+  @layer daisyui.modifier {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-warning);
+    }
   }
 }
 
 .input-error {
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-error);
+  @layer daisyui.modifier {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-error);
+    }
   }
 }
 
 .input-xs {
-  --size: calc(var(--size-field, 0.25rem) * 6);
-  font-size: max(var(--font-size, 0.6875rem), 0.6875rem);
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 6);
+    font-size: max(var(--font-size, 0.6875rem), 0.6875rem);
 
-  &[type="number"] {
-    &::-webkit-inner-spin-button {
-      @apply -my-1 -me-3;
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-1 -me-3;
+      }
     }
   }
 }
 
 .input-sm {
-  --size: calc(var(--size-field, 0.25rem) * 8);
-  font-size: max(var(--font-size, 0.75rem), 0.75rem);
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 8);
+    font-size: max(var(--font-size, 0.75rem), 0.75rem);
 
-  &[type="number"] {
-    &::-webkit-inner-spin-button {
-      @apply -my-2 -me-3;
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-2 -me-3;
+      }
     }
   }
 }
 
 .input-md {
-  --size: calc(var(--size-field, 0.25rem) * 10);
-  font-size: max(var(--font-size, 0.875rem), 0.875rem);
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 10);
+    font-size: max(var(--font-size, 0.875rem), 0.875rem);
 
-  &[type="number"] {
-    &::-webkit-inner-spin-button {
-      @apply -my-3 -me-3;
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-3 -me-3;
+      }
     }
   }
 }
 
 .input-lg {
-  --size: calc(var(--size-field, 0.25rem) * 12);
-  font-size: max(var(--font-size, 1.125rem), 1.125rem);
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 12);
+    font-size: max(var(--font-size, 1.125rem), 1.125rem);
 
-  &[type="number"] {
-    &::-webkit-inner-spin-button {
-      @apply -my-3 -me-3;
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-3 -me-3;
+      }
     }
   }
 }
 
 .input-xl {
-  --size: calc(var(--size-field, 0.25rem) * 14);
-  font-size: max(var(--font-size, 1.375rem), 1.375rem);
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 14);
+    font-size: max(var(--font-size, 1.375rem), 1.375rem);
 
-  &[type="number"] {
-    &::-webkit-inner-spin-button {
-      @apply -my-4 -me-3;
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-4 -me-3;
+      }
     }
   }
 }

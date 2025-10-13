@@ -1,121 +1,152 @@
 .radio {
-  @apply relative inline-block shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
-  border: var(--border) solid var(--input-color, color-mix(in srgb, currentColor 20%, #0000));
-  box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset;
-  --size: calc(var(--size-selector, 0.25rem) * 6);
-  width: var(--size);
-  height: var(--size);
-  color: var(--input-color, currentColor);
-  &:before {
-    @apply block size-full rounded-full;
-    --tw-content: "";
-    content: var(--tw-content);
-    background-size: auto, calc(var(--noise) * 100%);
-    background-image: none, var(--fx-noise);
-  }
-
-  &:focus-visible {
-    outline: 2px solid currentColor;
-  }
-
-  &:checked,
-  &[aria-checked="true"] {
-    @apply bg-base-100 border-current;
-    @media (prefers-reduced-motion: no-preference) {
-      animation: radio 0.2s ease-out;
-    }
-
+  @layer daisyui.component {
+    @apply relative inline-block shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
+    border: var(--border) solid var(--input-color, color-mix(in srgb, currentColor 20%, #0000));
+    box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset;
+    --size: calc(var(--size-selector, 0.25rem) * 6);
+    width: var(--size);
+    height: var(--size);
+    color: var(--input-color, currentColor);
     &:before {
-      @apply bg-current;
-      box-shadow:
-        0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
-        0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
-        0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
+      @apply block size-full rounded-full;
+      --tw-content: "";
+      content: var(--tw-content);
+      background-size: auto, calc(var(--noise) * 100%);
+      background-image: none, var(--fx-noise);
     }
-    @media (forced-colors: active) {
-      &:before {
-        @apply outline -outline-offset-1;
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+    }
+
+    &:checked,
+    &[aria-checked="true"] {
+      @apply bg-base-100 border-current;
+      @media (prefers-reduced-motion: no-preference) {
+        animation: radio 0.2s ease-out;
       }
-    }
-    @media print {
+
       &:before {
-        outline: 0.25rem solid;
-        outline-offset: -1rem;
+        @apply bg-current;
+        box-shadow:
+          0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
+          0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+          0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
+      }
+      @media (forced-colors: active) {
+        &:before {
+          @apply outline -outline-offset-1;
+        }
+      }
+      @media print {
+        &:before {
+          outline: 0.25rem solid;
+          outline-offset: -1rem;
+        }
       }
     }
   }
 }
 
 .radio-primary {
-  --input-color: var(--color-primary);
+  @layer daisyui.modifier {
+    --input-color: var(--color-primary);
+  }
 }
 
 .radio-secondary {
-  --input-color: var(--color-secondary);
+  @layer daisyui.modifier {
+    --input-color: var(--color-secondary);
+  }
 }
 
 .radio-accent {
-  --input-color: var(--color-accent);
+  @layer daisyui.modifier {
+    --input-color: var(--color-accent);
+  }
 }
 
 .radio-neutral {
-  --input-color: var(--color-neutral);
+  @layer daisyui.modifier {
+    --input-color: var(--color-neutral);
+  }
 }
 
 .radio-info {
-  --input-color: var(--color-info);
+  @layer daisyui.modifier {
+    --input-color: var(--color-info);
+  }
 }
 
 .radio-success {
-  --input-color: var(--color-success);
+  @layer daisyui.modifier {
+    --input-color: var(--color-success);
+  }
 }
 
 .radio-warning {
-  --input-color: var(--color-warning);
+  @layer daisyui.modifier {
+    --input-color: var(--color-warning);
+  }
 }
 
 .radio-error {
-  --input-color: var(--color-error);
+  @layer daisyui.modifier {
+    --input-color: var(--color-error);
+  }
 }
 
 .radio:disabled {
-  @apply cursor-not-allowed opacity-20;
+  @layer daisyui.modifier {
+    @apply cursor-not-allowed opacity-20;
+  }
 }
 
 .radio-xs {
-  padding: 0.125rem;
-  &:is([type="radio"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 4);
+  @layer daisyui.modifier {
+    padding: 0.125rem;
+    &:is([type="radio"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 4);
+    }
   }
 }
 
 .radio-sm {
-  padding: 0.1875rem;
-  &:is([type="radio"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 5);
+  @layer daisyui.modifier {
+    padding: 0.1875rem;
+    &:is([type="radio"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 5);
+    }
   }
 }
 
 .radio-md {
-  padding: 0.25rem;
-  &:is([type="radio"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 6);
+  @layer daisyui.modifier {
+    padding: 0.25rem;
+    &:is([type="radio"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 6);
+    }
   }
 }
 
 .radio-lg {
-  padding: 0.3125rem;
-  &:is([type="radio"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 7);
+  @layer daisyui.modifier {
+    padding: 0.3125rem;
+    &:is([type="radio"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 7);
+    }
   }
 }
 
 .radio-xl {
-  padding: 0.375rem;
-  &:is([type="radio"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 8);
+  @layer daisyui.modifier {
+    padding: 0.375rem;
+    &:is([type="radio"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 8);
+    }
   }
 }
+
 @keyframes radio {
   0% {
     padding: 5px;
