@@ -7,7 +7,7 @@
 <p class="mx-auto mt-5 mb-2 w-full text-start">1. {$t("install-step-1")}:</p>
 <div class="tabs tabs-lift tabs-sm sm:tabs-md w-full">
   <label
-    class="tab has-checked:text-neutral-content! text-neutral gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
+    class="tab has-checked:text-neutral-content! gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
   >
     <input type="radio" name="install[packagemanager]" checked="checked" />
     <svg
@@ -32,7 +32,7 @@
     <pre data-prefix="$"><code>npm i -D daisyui@latest</code></pre>
   </div>
   <label
-    class="tab has-checked:text-neutral-content! text-neutral gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
+    class="tab has-checked:text-neutral-content! gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
   >
     <input type="radio" name="install[packagemanager]" />
     <svg
@@ -62,7 +62,7 @@
     <pre data-prefix="$"><code>pnpm add -D daisyui@latest</code></pre>
   </div>
   <label
-    class="tab has-checked:text-neutral-content! text-neutral gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
+    class="tab has-checked:text-neutral-content! gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
   >
     <input type="radio" name="install[packagemanager]" />
     <svg
@@ -94,7 +94,7 @@
   </div>
 
   <label
-    class="tab has-checked:text-neutral-content! text-neutral gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
+    class="tab has-checked:text-neutral-content! gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
   >
     <input type="radio" name="install[packagemanager]" />
 
@@ -148,7 +148,7 @@
     <pre data-prefix="$"><code>bun add -D daisyui@latest</code></pre>
   </div>
   <label
-    class="tab has-checked:text-neutral-content! text-neutral gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
+    class="tab has-checked:text-neutral-content! gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
   >
     <input type="radio" name="install[packagemanager]" class="peer" />
 
