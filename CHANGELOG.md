@@ -9,19 +9,20 @@ All notable changes to this project will be documented in this file. See [commit
 
 * Add new layers to improve CSS specificity ([5044a3f](https://github.com/saadeghi/daisyui/commit/5044a3ff84a9b21cf6d9c6d741a9bb272aa53c3e)), closes [#3589](https://github.com/saadeghi/daisyui/issues/3589) [#3622](https://github.com/saadeghi/daisyui/issues/3622)
 
+### Bug Fixes
+
+* fix: card modifier classes can be used with Tailwind variants now, closes: [#3589](https://github.com/saadeghi/daisyui/issues/3589)
+
+* fix: btn-disabled can be used with Tailwind variants now, closes: [#3622](https://github.com/saadeghi/daisyui/issues/3622)
+
 ## 5.2.5 (2025-10-13)
 
 
 ### Bug Fixes
 
-* version mismatch ([3198cda](https://github.com/saadeghi/daisyui/commit/3198cda82fa70c56a57e060c3fc5a76721d1c86c))
+* fix version mismatch ([3198cda](https://github.com/saadeghi/daisyui/commit/3198cda82fa70c56a57e060c3fc5a76721d1c86c))
 
 ## 5.2.4 (2025-10-13)
-
-
-### Features
-
-* Add new layers to improve CSS specificity ([e5bb411](https://github.com/saadeghi/daisyui/commit/e5bb4113e0869092bd2a68f01eee9717c4bd9c5d)), closes [#3589](https://github.com/saadeghi/daisyui/issues/3589) [#3622](https://github.com/saadeghi/daisyui/issues/3622)
 
 ## 5.2.3 (2025-10-11)
 
