@@ -35,7 +35,7 @@
         calc(0% + 16px) calc(1px + 50%);
     }
     &[multiple] {
-      @apply h-auto py-3 pe-3;
+      @apply h-auto overflow-auto py-3 pe-3;
       background-image: none;
     }
     select {
