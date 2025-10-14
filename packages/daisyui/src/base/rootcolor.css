@@ -3,3 +3,7 @@
   background-color: var(--root-bg, var(--color-base-100));
   color: var(--color-base-content);
 }
+
+:where(:root, [data-theme]) {
+  --root-bg: var(--color-base-100);
+}

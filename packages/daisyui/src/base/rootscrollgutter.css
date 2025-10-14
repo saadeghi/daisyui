@@ -8,11 +8,8 @@
   )
 ) {
   scrollbar-gutter: stable;
-  background-image: linear-gradient(var(--color-base-100), var(--color-base-100));
-  --root-bg: color-mix(in srgb, var(--color-base-100), oklch(0% 0 0) 40%);
-}
-:where(.modal[open], .modal-open, .modal-toggle:checked + .modal):not(.modal-start, .modal-end) {
-  scrollbar-gutter: stable;
+  background-image: linear-gradient(var(--root-bg), var(--root-bg));
+  background-color: color-mix(in srgb, var(--root-bg), oklch(0% 0 0) 40%);
 }
 
 @supports (width: if(else: 1px)) and (animation-timeline: scroll()) {

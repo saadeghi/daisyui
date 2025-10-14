@@ -20,7 +20,7 @@
 
 .drawer-side {
   @layer daisyui.component {
-    @apply pointer-events-none invisible fixed start-0 top-0 z-10 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain opacity-0;
+    @apply pointer-events-none invisible fixed start-0 top-0 z-10 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain bg-transparent opacity-0;
     transition:
       opacity 0.2s ease-out 0.1s allow-discrete,
       visibility 0.3s ease-out 0.1s allow-discrete;
