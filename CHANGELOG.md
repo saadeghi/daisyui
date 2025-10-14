@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.1 (2025-10-14)
+
+
+### Bug Fixes
+
+* allow overflow auto for select multiple. Closes: [#4178](https://github.com/saadeghi/daisyui/issues/4178) ([b4917f7](https://github.com/saadeghi/daisyui/commit/b4917f7809b0cbb85a69f9881c965090769b2fbf))
+
 ## 5.3.0 (2025-10-13)
 
 
