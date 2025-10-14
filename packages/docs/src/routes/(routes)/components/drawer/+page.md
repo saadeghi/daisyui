@@ -223,7 +223,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   <div class="h-56 drawer-content">
     <!-- Page content here -->
   </div>
-  <div class="drawer-side is-drawer-close:overflow-visible h-full max-lg:z-1002">
+  <div class="drawer-side is-drawer-close:overflow-visible h-full">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
     <div class="is-drawer-close:w-14 is-drawer-open:w-64 h-full bg-base-200 flex flex-col items-start">
       <ul class="menu w-full grow">
@@ -267,7 +267,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   <div class="$$drawer-content">
     <!-- Page content here -->
   </div>
-  
+
   <div class="$$drawer-side is-drawer-close:overflow-visible">
     <label for="my-drawer-4" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <div class="is-drawer-close:w-14 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
