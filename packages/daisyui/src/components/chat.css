@@ -75,20 +75,20 @@
 }
 
 .chat-image {
-  @layer daisyui.modifier {
+  @layer daisyui.component {
     @apply row-span-2 self-end;
   }
 }
 
 .chat-header {
-  @layer daisyui.modifier {
+  @layer daisyui.component {
     @apply row-start-1 flex gap-1;
     font-size: 0.6875rem;
   }
 }
 
 .chat-footer {
-  @layer daisyui.modifier {
+  @layer daisyui.component {
     @apply row-start-3 flex gap-1;
     font-size: 0.6875rem;
   }

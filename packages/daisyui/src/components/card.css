@@ -79,7 +79,7 @@
 }
 
 .card-title {
-  @layer daisyui.modifier {
+  @layer daisyui.component {
     @apply flex items-center gap-2;
     font-size: var(--cardtitle-fs, 1.125rem);
     font-weight: 600;
@@ -87,7 +87,7 @@
 }
 
 .card-body {
-  @layer daisyui.modifier {
+  @layer daisyui.component {
     @apply flex flex-auto flex-col gap-2;
     padding: var(--card-p, 1.5rem);
     font-size: var(--card-fs, 0.875rem);
@@ -99,7 +99,7 @@
 }
 
 .card-actions {
-  @layer daisyui.modifier {
+  @layer daisyui.component {
     @apply flex flex-wrap items-start gap-2;
   }
 }

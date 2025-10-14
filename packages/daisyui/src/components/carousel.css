@@ -28,7 +28,7 @@
 }
 
 .carousel-item {
-  @layer daisyui.modifier {
+  @layer daisyui.component {
     @apply box-content flex flex-none;
     scroll-snap-align: start;
   }
