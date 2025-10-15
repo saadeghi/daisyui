@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.2 (2025-10-15)
+
+
+### Bug Fixes
+
+* adjust layers - drawer and collapse ([#4183](https://github.com/saadeghi/daisyui/issues/4183)) ([6cb4500](https://github.com/saadeghi/daisyui/commit/6cb450034237600bd4e2c1dd4953a3bb1ea72ab3))
+
 ## 5.3.1 (2025-10-14)
 
 
