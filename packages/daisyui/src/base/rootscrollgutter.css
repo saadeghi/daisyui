@@ -1,11 +1,9 @@
-:where(
-  :root:has(
-    .modal-open,
-    .modal[open],
-    .modal:target,
-    .modal-toggle:checked,
-    .drawer:not(.drawer-open) > .drawer-toggle:checked
-  )
+:root:has(
+  .modal-open,
+  .modal[open],
+  .modal:target,
+  .modal-toggle:checked,
+  .drawer:not(.drawer-open) > .drawer-toggle:checked
 ) {
   scrollbar-gutter: stable;
   background-image: linear-gradient(var(--root-bg), var(--root-bg));
@@ -24,14 +22,12 @@
     }
   }
 
-  :where(
-    :root:has(
-      .modal-open,
-      .modal[open],
-      .modal:target,
-      .modal-toggle:checked,
-      .drawer:not(.drawer-open) > .drawer-toggle:checked
-    )
+  :root:has(
+    .modal-open,
+    .modal[open],
+    .modal:target,
+    .modal-toggle:checked,
+    .drawer:not(.drawer-open) > .drawer-toggle:checked
   ) {
     scrollbar-gutter: if(style(--page-has-scroll: 1): stable; else: unset);
   }
