@@ -72,7 +72,7 @@
 }
 
 .drawer-end {
-  @layer daisyui.modifier {
+  @layer daisyui.modifier.placement {
     grid-auto-columns: auto max-content;
 
     > .drawer-toggle {

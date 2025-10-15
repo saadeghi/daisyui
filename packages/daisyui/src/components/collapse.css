@@ -83,6 +83,17 @@
       }
     }
 
+    > input:is([type="checkbox"], [type="radio"]) {
+      z-index: 1;
+      width: 100%;
+      padding: 1rem;
+      padding-inline-end: 3rem;
+      min-height: 1lh;
+      transition: background-color 0.2s ease-out;
+    }
+  }
+
+  @layer daisyui.modifier {
     &:is([open]) {
       &.collapse-arrow {
         > .collapse-title:after {
@@ -142,15 +153,6 @@
       > input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-title:after {
         content: "−";
       }
-    }
-
-    > input:is([type="checkbox"], [type="radio"]) {
-      z-index: 1;
-      width: 100%;
-      padding: 1rem;
-      padding-inline-end: 3rem;
-      min-height: 1lh;
-      transition: background-color 0.2s ease-out;
     }
   }
 }
