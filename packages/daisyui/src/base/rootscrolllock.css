@@ -3,7 +3,7 @@
   .modal[open],
   .modal:target,
   .modal-toggle:checked,
-  .drawer:not([class*="drawer-open"]) > .drawer-toggle:checked
+  .drawer:not(.drawer-open) > .drawer-toggle:checked
 ) {
   @apply overflow-hidden;
 }
