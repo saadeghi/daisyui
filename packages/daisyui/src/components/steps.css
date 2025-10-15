@@ -131,7 +131,6 @@
       &:before {
         @apply h-2 w-full;
         translate: 0;
-        content: "";
         margin-inline-start: -100%;
       }
       [dir="rtl"] &:before {
