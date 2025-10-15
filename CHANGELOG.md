@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.3 (2025-10-15)
+
+
+### Bug Fixes
+
+* do not show the line before for first step in horizontal orientation ([#4187](https://github.com/saadeghi/daisyui/issues/4187)) ([3cce2c8](https://github.com/saadeghi/daisyui/commit/3cce2c82a318dcab6cbd96eca550d32cb5c44b43))
+
 ## 5.3.2 (2025-10-15)
 
 
