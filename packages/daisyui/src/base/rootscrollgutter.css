@@ -11,17 +11,6 @@
 }
 
 @supports (width: if(else: 1px)) and (animation-timeline: scroll()) {
-  :root {
-    animation: set-page-has-scroll forwards;
-    animation-timeline: scroll();
-  }
-
-  @keyframes set-page-has-scroll {
-    0%, to {
-      --page-has-scroll: 1;
-    }
-  }
-
   :root:has(
     .modal-open,
     .modal[open],
@@ -29,6 +18,13 @@
     .modal-toggle:checked,
     .drawer:not(.drawer-open) > .drawer-toggle:checked
   ) {
+    animation: set-page-has-scroll forwards;
+    animation-timeline: scroll();
     scrollbar-gutter: if(style(--page-has-scroll: 1): stable; else: unset);
+  }
+}
+@keyframes set-page-has-scroll {
+  0%, to {
+    --page-has-scroll: 1;
   }
 }
