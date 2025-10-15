@@ -4,30 +4,36 @@
 
 /* root has overflow hidden only when drawer is open */
 :root:has(.drawer:not([class*="drawer-open"]) > .drawer-toggle:checked) {
-  @apply overflow-hidden [--page-has-backdrop:1];
+  @apply overflow-hidden;
 }
 :root:has(.sm\:drawer-open > .drawer-toggle:checked) {
-  @apply max-sm:overflow-hidden max-sm:[--page-has-backdrop:1];
+  @apply max-sm:overflow-hidden;
 }
 :root:has(.md\:drawer-open > .drawer-toggle:checked) {
-  @apply max-md:overflow-hidden max-md:[--page-has-backdrop:1];
+  @apply max-md:overflow-hidden;
 }
 :root:has(.lg\:drawer-open > .drawer-toggle:checked) {
-  @apply max-lg:overflow-hidden max-lg:[--page-has-backdrop:1];
+  @apply max-lg:overflow-hidden;
 }
 :root:has(.xl\:drawer-open > .drawer-toggle:checked) {
-  @apply max-xl:overflow-hidden max-xl:[--page-has-backdrop:1];
+  @apply max-xl:overflow-hidden;
+}
+:root:has(.\32xl\:drawer-open > .drawer-toggle:checked) {
+  @apply max-2xl:overflow-hidden;
 }
 
 :root:has(.max-sm\:drawer-open > .drawer-toggle:checked) {
-  @apply sm:overflow-hidden sm:[--page-has-backdrop:1];
+  @apply sm:overflow-hidden;
 }
 :root:has(.max-md\:drawer-open > .drawer-toggle:checked) {
-  @apply md:overflow-hidden md:[--page-has-backdrop:1];
+  @apply md:overflow-hidden;
 }
 :root:has(.max-lg\:drawer-open > .drawer-toggle:checked) {
-  @apply lg:overflow-hidden lg:[--page-has-backdrop:1];
+  @apply lg:overflow-hidden;
 }
 :root:has(.max-xl\:drawer-open > .drawer-toggle:checked) {
-  @apply xl:overflow-hidden xl:[--page-has-backdrop:1];
+  @apply xl:overflow-hidden;
+}
+:root:has(.max-2xl\:drawer-open > .drawer-toggle:checked) {
+  @apply 2xl:overflow-hidden;
 }
