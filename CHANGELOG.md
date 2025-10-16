@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.7 (2025-10-16)
+
+
+### Bug Fixes
+
+* `btn` in `prose` shouldn't have underline by default. closes: [#4192](https://github.com/saadeghi/daisyui/issues/4192) ([1205a90](https://github.com/saadeghi/daisyui/commit/1205a90bdbbbba832e0e207a7966625b77c2a44d))
+
 ## 5.3.6 (2025-10-16)
 
 
