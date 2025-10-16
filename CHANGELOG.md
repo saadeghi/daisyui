@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.6 (2025-10-16)
+
+
+### Bug Fixes
+
+* backdrop color bleeding issue + scrollbar improvements. closes: [#3928](https://github.com/saadeghi/daisyui/issues/3928) ([240d1d8](https://github.com/saadeghi/daisyui/commit/240d1d8582f3adb0244d9d08e8b725593f268818))
+
 ## 5.3.5 (2025-10-16)
 
 
