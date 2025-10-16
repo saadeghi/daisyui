@@ -12,7 +12,7 @@
     "build:docs:dev": "bun run --bun build:dev && cd packages/docs && bun run --bun build",
     "dev": "bun run --bun build:dev && cd packages/docs && bun run --bun dev",
     "play": "bun run --bun build:dev && cd packages/playground && code src/components/Component.astro && bun run --bun dev",
-    "logs": "bun run --bun build:dev && cd packages/logs && bun run --bun dev",
+    "logs": "bun run --bun build:dev && cd packages/logs && bunx browser-sync start -s --files .",
     "format": "bunx -y prettier 'packages/{daisyui,docs}/{src,functions}/**/*.{css,js,json,svelte}' --write",
     "lang:diff": "cd packages/docs && bun run --bun langdiff",
     "lang:clean": "bun packages/docs/src/lib/scripts/cleanTranslations.js",

@@ -7,23 +7,27 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" defer></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body style="font-family: sans-serif">
     <div x-data="reportData()" x-init="init()">
-      <div style="position: sticky; top: 0; z-index: 10; background: white">
+      <div class="bg-base-200 sticky top-0 z-10 flex items-center gap-4 p-4">
+        <pre class="w-32 text-xs">
+          <span
+            x-text="timeago.format(reports[currentIndex]?.timestamp)"
+            :title="reports[currentIndex]?.timestamp"
+          ></span>
+          daisyui.css <span x-text="getFullCssSize() +'B'"></span>
+          daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span></pre>
         <input
+          class="range range-xs mx-auto block w-full max-w-5xl"
           type="range"
           :min="0"
           :max="reports.length - 1"
           x-model="currentIndex"
           @input="updateAllCharts()"
-          style="width: 16rem; margin: 0 auto; display: block"
         />
-        <pre>
-<span x-text="timeago.format(reports[currentIndex]?.timestamp)" :title="reports[currentIndex]?.timestamp"></span>
-daisyui.css <span x-text="getFullCssSize() +'B'"></span>
-daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
-            </pre>
       </div>
       <div class="charts-grid">
         <template x-for="(chart, index) in charts" :key="index">
