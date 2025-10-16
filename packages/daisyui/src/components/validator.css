@@ -22,7 +22,7 @@
         --input-color: var(--color-error);
       }
       & ~ .validator-hint {
-        @apply text-error visible block;
+        @apply text-error visible;
       }
     }
   }
@@ -31,5 +31,17 @@
   @layer daisyui.component {
     @apply invisible mt-2;
     font-size: 0.75rem;
+  }
+}
+
+/* This stays in utilities layer so it unhides hidden validator-hints */
+.validator {
+  &:user-invalid,
+  &:has(:user-invalid),
+  &[aria-invalid]:not([aria-invalid="false"]),
+  &:has([aria-invalid]:not([aria-invalid="false"])) {
+    & ~ .validator-hint {
+      display: revert-layer;
+    }
   }
 }
