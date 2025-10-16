@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.5 (2025-10-16)
+
+
+### Bug Fixes
+
+* `btn-disabled` color. closes: [#4191](https://github.com/saadeghi/daisyui/issues/4191) ([bf956c8](https://github.com/saadeghi/daisyui/commit/bf956c8d6ad0ac8ed5c5e35927aa1aafcef6a4ce))
+
 ## 5.3.4 (2025-10-16)
 
 
