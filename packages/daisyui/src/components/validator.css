@@ -27,6 +27,13 @@
     }
   }
 }
+
+.validator-hint-hidden {
+  @layer daisyui.component {
+    @apply hidden;
+  }
+}
+
 .validator-hint {
   @layer daisyui.component {
     @apply invisible mt-2;

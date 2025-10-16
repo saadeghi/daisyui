@@ -1083,7 +1083,7 @@
   "Each set of radio inputs should have unique `name` attributes to avoid conflicts with other sets of radio inputs on the same page.": "هر مجموعه از ورودی‌های رادیویی باید دارای ویژگی‌های `name` یکتا باشند تا از تداخل با سایر مجموعه‌های ورودی رادیویی در همان صفحه جلوگیری شود.",
   "`validator-hint` class will be invisible if it comes after a `validator` class, then if the input is invalid, `validator-hint` will get visible.": "کلاس `validator-hint` اگر بعد از یک کلاس `validator` بیاید نامرئی خواهد بود، سپس اگر ورودی نامعتبر باشد، `validator-hint` قابل مشاهده می‌شود.",
   "`validator-hint` still occupies space even if it's invisible because we don't want a layout shift when the hint appears.": "`validator-hint` حتی اگر نامرئی باشد، همچنان فضا را اشغال می‌کند زیرا نمی‌خواهیم هنگام ظاهر شدن hint تغییری در طرح‌بندی ایجاد شود.",
-  "If you prefer to hide the hint when it's not visible, add `hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.": "اگر ترجیح می‌دهید هنگام نامرئی بودن hint آن را پنهان کنید، کلاس `hidden` را به `validator-hint` اضافه کنید. هنگامی که پنهان است فضایی را اشغال نمی‌کند و اگر ورودی نامعتبر باشد، ظاهر می‌شود و فضا را اشغال می‌کند.",
+  "If you prefer to hide the hint when it's not visible, add `validator-hint-hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.": "اگر ترجیح می‌دهید هنگام نامرئی بودن hint آن را پنهان کنید، کلاس `hidden` را به `validator-hint` اضافه کنید. هنگامی که پنهان است فضایی را اشغال نمی‌کند و اگر ورودی نامعتبر باشد، ظاهر می‌شود و فضا را اشغال می‌کند.",
   "Submit form": "ارسال فرم",
   "New": "جدید",
   "inbox": "صندوق ورودی",

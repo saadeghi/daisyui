@@ -1083,7 +1083,7 @@
   "Each set of radio inputs should have unique `name` attributes to avoid conflicts with other sets of radio inputs on the same page.": "每组单选框输入应具有唯一的 `name` 属性，以避免与同一页面上的其他单选框组发生冲突。",
   "`validator-hint` class will be invisible if it comes after a `validator` class, then if the input is invalid, `validator-hint` will get visible.": "如果 `validator-hint` 类跟在 `validator` 类后面，它将不可见；当输入无效时，`validator-hint` 将变得可见。",
   "`validator-hint` still occupies space even if it's invisible because we don't want a layout shift when the hint appears.": "即使 `validator-hint` 不可见，它仍然占据空间，因为我们不希望在提示出现时发生布局偏移。",
-  "If you prefer to hide the hint when it's not visible, add `hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.": "如果您希望在提示不可见时隐藏它，请向 `validator-hint` 添加 `hidden` 类。这样在隐藏时它将不占用空间，而当输入无效时，它将出现并占用空间。",
+  "If you prefer to hide the hint when it's not visible, add `validator-hint-hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.": "如果您希望在提示不可见时隐藏它，请向 `validator-hint` 添加 `validator-hint-hidden` 类。这样在隐藏时它将不占用空间，而当输入无效时，它将出现并占用空间。",
   "Submit form": "提交表单",
   "New": "新",
   "inbox": "收件箱",

@@ -1083,7 +1083,7 @@
   "Each set of radio inputs should have unique `name` attributes to avoid conflicts with other sets of radio inputs on the same page.": "Each set of radio inputs should have unique `name` attributes to avoid conflicts with other sets of radio inputs on the same page.",
   "`validator-hint` class will be invisible if it comes after a `validator` class, then if the input is invalid, `validator-hint` will get visible.": "`validator-hint` class will be invisible if it comes after a `validator` class, then if the input is invalid, `validator-hint` will get visible.",
   "`validator-hint` still occupies space even if it's invisible because we don't want a layout shift when the hint appears.": "`validator-hint` still occupies space even if it's invisible because we don't want a layout shift when the hint appears.",
-  "If you prefer to hide the hint when it's not visible, add `hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.": "If you prefer to hide the hint when it's not visible, add `hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.",
+  "If you prefer to hide the hint when it's not visible, add `validator-hint-hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.": "If you prefer to hide the hint when it's not visible, add `validator-hint-hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.",
   "Submit form": "Submit form",
   "New": "New",
   "inbox": "inbox",
