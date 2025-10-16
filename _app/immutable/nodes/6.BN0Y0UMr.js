@@ -1,3 +1,0 @@
-import"../chunks/DsnmJJEf.js";import{f as i,a as d,t as n,b as a,s as l,w as c,n as v,d as h,e as _,r as u}from"../chunks/rBt4--9u.js";import{h as w}from"../chunks/5dpn8R8L.js";import{s as g}from"../chunks/EuRIAfxi.js";import{F as x}from"../chunks/Bedr6h37.js";var y=c(i(`<script>
-    window.lemonSqueezyAffiliateConfig = { store: "daisyui" }
-  <\/script> <script src="https://lmsqueezy.com/affiliate.js" defer><\/script>`,1)),b=i('<div class="w-full px-4 pt-20 md:px-20" dir="ltr"><!></div> <!>',1);function C(s,o){var t=b();w(f=>{var m=y();v(2),a(f,m)});var r=d(t),e=h(r);g(e,()=>o.children??_),u(r);var p=l(r,2);x(p,{}),n(()=>r.dir=r.dir),a(s,t)}export{C as component};
