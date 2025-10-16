@@ -4,6 +4,9 @@
   }
 }
 .btn {
+  .prose & {
+    @apply no-underline;
+  }
   @layer daisyui.component {
     @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle outline-offset-2 select-none;
     padding-inline: var(--btn-p);
@@ -40,9 +43,6 @@
       0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
       0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
     --btn-noise: var(--fx-noise);
-    .prose & {
-      @apply no-underline;
-    }
     @media (hover: hover) {
       &:hover {
         --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
