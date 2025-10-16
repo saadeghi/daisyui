@@ -1,5 +1,5 @@
 :root:has(.modal-open, .modal[open], .modal:target, .modal-toggle:checked) {
-  @apply overflow-hidden;
+  @apply overflow-hidden [--page-has-backdrop:1];
 }
 
 /* root has overflow hidden only when drawer is open */
