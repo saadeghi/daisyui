@@ -7,7 +7,7 @@
   import Footer from "$components/Footer.svelte"
   import SEO from "$components/SEO.svelte"
   import { t } from "$lib/i18n.svelte.js"
-  let { title, desc, children } = $props()
+  let { title, desc, children, data } = $props()
   async function fetchStats() {
     if (!browser) return
     const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/stats.json`)
@@ -25,22 +25,67 @@
   <div
     class="prose prose-sm lg:prose-h1:text-5xl lg:prose-h2:text-4xl lg:prose-h3:text-3xl md:prose-base w-full max-w-4xl grow pt-10 md:text-sm"
   >
-    <a class="btn btn-xs not-prose btn-soft group mb-2" href="/components/">
-      See all daisyUI components
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="hidden size-5 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
-        ><path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-        ></path></svg
-      >
-    </a>
+    <div class="not-prose mb-12 flex items-center justify-between gap-2">
+      <a class="btn btn-xs btn-ghost group" href="/components/">
+        See all daisyUI components
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="hidden size-5 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+          ></path></svg
+        >
+      </a>
+      {#if data?.pages?.length > 0}
+        <div class="mx-auto mt-6 flex w-full max-w-4xl justify-end">
+          <label for="links-modal" class="btn btn-ghost btn-circle btn-sm" aria-label="All Pages">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5">
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M9 6l11 0"></path>
+                <path d="M9 12l11 0"></path>
+                <path d="M9 18l11 0"></path>
+                <path d="M5 6l0 .01"></path>
+                <path d="M5 12l0 .01"></path>
+                <path d="M5 18l0 .01"></path>
+              </g>
+            </svg>
+          </label>
+        </div>
+        <div class="not-prose">
+          <input type="checkbox" id="links-modal" class="modal-toggle" />
+          <div class="modal modal-bottom md:modal-end">
+            <div class="modal-box max-w-5xl md:w-96 md:p-12">
+              <h3 class="mb-6 text-lg font-semibold">Pages</h3>
+              <nav class="gap-24 text-xs leading-loose">
+                {#each data.pages as page}
+                  <div>
+                    <a
+                      class="link link-hover whitespace-nowrap opacity-60 hover:opacity-100"
+                      href={page.href}
+                    >
+                      {page.label}
+                    </a>
+                  </div>
+                {/each}
+              </nav>
+            </div>
+            <label class="modal-backdrop" for="links-modal">Close</label>
+          </div>
+        </div>
+      {/if}
+    </div>
 
     {#if title}
       <h1>{@html $t(title)}</h1>
