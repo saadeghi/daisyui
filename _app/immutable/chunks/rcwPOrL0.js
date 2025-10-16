@@ -1,1 +1,0 @@
-import{P as t,Q as S,l as b,R as h,S as k}from"./rBt4--9u.js";function u(r,i){return r===i||r?.[k]===i}function d(r={},i,a,T){return t(()=>{var f,s;return S(()=>{f=s,s=[],b(()=>{r!==a(...s)&&(i(r,...s),f&&u(a(...f),r)&&i(null,...f))})}),()=>{h(()=>{s&&u(a(...s),r)&&i(null,...s)})}}),r}export{d as b};
