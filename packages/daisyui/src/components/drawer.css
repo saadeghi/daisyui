@@ -57,11 +57,7 @@
     &:checked {
       & ~ .drawer-side {
         @apply pointer-events-auto visible overflow-y-auto opacity-100;
-        scrollbar-color: color-mix(
-            in oklch,
-            currentColor 35%,
-            oklch(0 0 0 / calc(var(--page-has-backdrop, 0) * 0.4))
-          )
+        scrollbar-color: color-mix(in oklch, currentColor 35%, #0000)
           oklch(0 0 0 / calc(var(--page-has-backdrop, 0) * 0.4));
 
         & > *:not(.drawer-overlay) {
