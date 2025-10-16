@@ -1,41 +1,29 @@
-:where(
-  :root:has(
-    .modal-open,
-    .modal[open],
-    .modal:target,
-    .modal-toggle:checked,
-    .drawer:not(.drawer-open) > .drawer-toggle:checked
-  )
+:root:has(
+  .modal-open,
+  .modal[open],
+  .modal:target,
+  .modal-toggle:checked,
+  .drawer:not(.drawer-open) > .drawer-toggle:checked
 ) {
+  background-image: linear-gradient(var(--root-bg), var(--root-bg));
+  background-color: color-mix(
+    in srgb,
+    var(--root-bg),
+    oklch(0% 0 0) calc(var(--page-has-backdrop, 0) * 40%)
+  );
+  animation: set-page-has-scroll forwards;
+  animation-timeline: scroll();
+
+  /* CSS if is not supported */
   scrollbar-gutter: stable;
-  background-image: linear-gradient(var(--color-base-100), var(--color-base-100));
-  --root-bg: color-mix(in srgb, var(--color-base-100), oklch(0% 0 0) 40%);
-}
-:where(.modal[open], .modal-open, .modal-toggle:checked + .modal):not(.modal-start, .modal-end) {
-  scrollbar-gutter: stable;
+
+  /* CSS if is supported */
+  scrollbar-gutter: if(style(--page-has-scroll: 1): stable; else: unset);
 }
 
-@supports (width: if(else: 1px)) and (animation-timeline: scroll()) {
-  :root {
-    animation: set-page-has-scroll forwards;
-    animation-timeline: scroll();
-  }
-
-  @keyframes set-page-has-scroll {
-    0%, to {
-      --page-has-scroll: 1;
-    }
-  }
-
-  :where(
-    :root:has(
-      .modal-open,
-      .modal[open],
-      .modal:target,
-      .modal-toggle:checked,
-      .drawer:not(.drawer-open) > .drawer-toggle:checked
-    )
-  ) {
-    scrollbar-gutter: if(style(--page-has-scroll: 1): stable; else: unset);
+@keyframes set-page-has-scroll {
+  0%,
+  to {
+    --page-has-scroll: 1;
   }
 }

@@ -816,7 +816,10 @@ Card,/components/card/`
   <div
     class="modal-box relative max-w-4xl p-0 max-md:h-[85vh] md:mt-[10vh] md:h-[clamp(13rem,80vh,80vh)] md:w-11/12"
   >
-    <div class="rounded-box h-full overflow-y-auto" style="scroll-padding-top: 3.5rem;">
+    <div
+      class="rounded-box h-full overflow-y-auto [scrollbar-width:thin]"
+      style="scroll-padding-top: 3.5rem;"
+    >
       <label
         class="input input-lg lg:input-xl bg-base-100 border-base-300 sticky top-0 z-1 mb-2 w-full rounded-none border-0 border-b shadow-none focus-within:shadow-none focus-within:outline-none lg:px-6"
       >

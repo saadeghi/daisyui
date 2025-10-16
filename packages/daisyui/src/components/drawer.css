@@ -20,7 +20,7 @@
 
 .drawer-side {
   @layer daisyui.component {
-    @apply pointer-events-none invisible fixed start-0 top-0 z-10 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain opacity-0;
+    @apply pointer-events-none invisible fixed start-0 top-0 z-10 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain bg-transparent opacity-0;
     transition:
       opacity 0.2s ease-out 0.1s allow-discrete,
       visibility 0.3s ease-out 0.1s allow-discrete;
@@ -57,6 +57,8 @@
     &:checked {
       & ~ .drawer-side {
         @apply pointer-events-auto visible overflow-y-auto opacity-100;
+        scrollbar-color: color-mix(in oklch, currentColor 35%, #0000)
+          oklch(0 0 0 / calc(var(--page-has-backdrop, 0) * 0.4));
 
         & > *:not(.drawer-overlay) {
           translate: 0%;
