@@ -540,7 +540,9 @@ Card,/components/card/`
     <!-- Container for items with action buttons (recent and bookmarked) -->
     <div
       id="search-result-{index}"
-      class="has-[a:focus-visible]:bg-neutral rounded-box aria-selected:bg-neutral aria-selected:text-neutral-content flex w-full items-center p-4"
+      class="has-[a:focus-visible]:bg-neutral rounded-box aria-selected:bg-neutral aria-selected:text-neutral-content flex w-full items-center pe-4"
+      role="option"
+      tabindex="-1"
       aria-selected={isSelected}
       onmouseenter={() => {
         selectedIndex = index
@@ -551,12 +553,12 @@ Card,/components/card/`
     >
       <a
         href={result.url}
-        class="flex min-w-0 flex-1 cursor-pointer appearance-none items-center focus-visible:outline-none"
+        class="flex min-w-0 flex-1 cursor-pointer appearance-none items-center py-4 ps-4 focus-visible:outline-none"
         onclick={() => handleResultClick(result)}
       >
         {@render resultContent(result)}
       </a>
-      <div class="ml-2 flex gap-1">
+      <div class="ml-2 flex w-13 justify-end gap-1">
         <!-- Bookmark button -->
         <button
           class="btn btn-ghost btn-xs btn-square"
@@ -778,59 +780,28 @@ Card,/components/card/`
       </svg>
     {/if}
   </div>
-  <div>
-    {#if result.isSection}
-      <div class="text-sm">
+  <div class="grid w-full items-center gap-2 md:grid-cols-5">
+    <div class="col-span-3 text-sm">
+      {#if result.isSection}
         <span class="text-[0.625rem] opacity-60">{result.parentPageTitle}</span>
-        <span class="block">
-          <svg
-            class="mx-2 inline-block size-3 opacity-50"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <g
-              stroke-linejoin="round"
-              stroke-linecap="round"
-              stroke-width="2"
-              fill="none"
-              stroke="currentColor"
-            >
-              <path d="M15 10L20 15 15 20"></path>
-              <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
-            </g>
-          </svg>
-          {#if result.highlightedTitle}
-            {@html result.highlightedTitle}
-          {:else}
-            {result.title}
-          {/if}
-        </span>
-      </div>
-      <div class="ms-8 pt-1 font-mono text-[0.625rem] tracking-tighter opacity-30">
-        {#if result.highlightedUrl}
-          {@html result.highlightedUrl}
+      {/if}
+      <span class="block">
+        {#if result.highlightedTitle}
+          {@html result.highlightedTitle}
         {:else}
-          {result.url}
+          {result.title}
         {/if}
-      </div>
-    {:else}
-      <div class="flex items-center gap-2 text-sm">
-        <span>
-          {#if result.highlightedTitle}
-            {@html result.highlightedTitle}
-          {:else}
-            {result.title}
-          {/if}
-        </span>
-      </div>
-      <div class="pt-1 font-mono text-[0.625rem] tracking-tighter opacity-30">
-        {#if result.highlightedUrl}
-          {@html result.highlightedUrl}
-        {:else}
-          {result.url}
-        {/if}
-      </div>
-    {/if}
+      </span>
+    </div>
+    <div
+      class="col-span-2 truncate pt-1 font-mono text-[0.625rem] tracking-tighter opacity-25 lg:tracking-wide"
+    >
+      {#if result.highlightedUrl}
+        {@html result.highlightedUrl.replace(/^\/|\/$/g, "")}
+      {:else}
+        {result.url.replace(/^\/|\/$/g, "")}
+      {/if}
+    </div>
   </div>
 {/snippet}
 
@@ -843,7 +814,7 @@ Card,/components/card/`
   onkeydown={handleKeyDown}
 >
   <div
-    class="modal-box relative w-11/12 max-w-2xl p-0 max-md:h-[85vh] md:mt-[10vh] md:h-[clamp(13rem,80vh,80vh)]"
+    class="modal-box relative max-w-4xl p-0 max-md:h-[85vh] md:mt-[10vh] md:h-[clamp(13rem,80vh,80vh)] md:w-11/12"
   >
     <div class="rounded-box h-full overflow-y-auto" style="scroll-padding-top: 3.5rem;">
       <label
@@ -881,10 +852,10 @@ Card,/components/card/`
         {/if}
       </label>
 
-      <div class="pb-2">
+      <div class="pb-2 lg:pt-2 lg:pb-6">
         <!-- Search results -->
         {#if !isSearchLoading && searchQuery.trim() && searchQuery.trim().length > 1 && filteredResults.length > 0}
-          <div data-sveltekit-preload-data class="px-2">
+          <div data-sveltekit-preload-data class="px-2 lg:px-6">
             {#each displayedResults as result, index}
               {@render searchResultItem(result, index, "search")}
             {/each}
@@ -971,7 +942,7 @@ Card,/components/card/`
 
         <!-- Initial state - show recent/bookmarked items or popular components -->
         {#if (!searchQuery.trim() || searchQuery.trim().length <= 1) && filteredResults.length > 0}
-          <div class="px-2">
+          <div class="px-2 lg:px-6">
             <!-- Recent Searches Section -->
             {#if recentSearches.length > 0}
               <div
