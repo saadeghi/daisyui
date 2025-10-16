@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.4 (2025-10-16)
+
+
+### Bug Fixes
+
+* `validator-hint` overrides `hidden` class as expected. close: [#4188](https://github.com/saadeghi/daisyui/issues/4188) ([c05604d](https://github.com/saadeghi/daisyui/commit/c05604d6d9c44031b81df32cdac79d78b7d3e962))
+
 ## 5.3.3 (2025-10-15)
 
 
