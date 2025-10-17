@@ -933,17 +933,24 @@
   </div>
   <div class="group grid place-items-center *:[grid-area:1/1]">
     <div class="grid max-w-2xl grid-cols-8 grid-rows-5 place-items-center gap-4 perspective-normal">
-      <img
-        class="rounded-box col-start-1 col-end-4 row-start-2 row-end-5 translate-x-10 scale-x-80 rotate-y-18 brightness-50 transition-transform duration-500 group-has-[a:hover]:translate-x-0 group-has-[a:hover]:rotate-y-15"
-        src={data.product.media.filter((media) => media.type === "image")[1].lg}
-      />
-      <img
-        class="rounded-box col-start-6 col-end-9 row-start-2 row-end-5 -translate-x-10 scale-x-80 -rotate-y-18 brightness-50 transition-transform duration-500 group-has-[a:hover]:translate-x-0 group-has-[a:hover]:-rotate-y-15"
-        src={data.product.media.filter((media) => media.type === "image")[2].lg}
-      />
+      {#if data.product.media.filter((media) => media.type === "image")[1]}
+        <img
+          class="rounded-box col-start-1 col-end-4 row-start-2 row-end-5 translate-x-10 scale-x-80 rotate-y-18 brightness-50 transition-transform duration-500 group-has-[a:hover]:translate-x-0 group-has-[a:hover]:rotate-y-15"
+          src={data.product.media.filter((media) => media.type === "image")[1].lg}
+          alt={data.product.title}
+        />
+      {/if}
+      {#if data.product.media.filter((media) => media.type === "image")[2]}
+        <img
+          class="rounded-box col-start-6 col-end-9 row-start-2 row-end-5 -translate-x-10 scale-x-80 -rotate-y-18 brightness-50 transition-transform duration-500 group-has-[a:hover]:translate-x-0 group-has-[a:hover]:-rotate-y-15"
+          src={data.product.media.filter((media) => media.type === "image")[2].lg}
+          alt={data.product.title}
+        />
+      {/if}
       <img
         class="rounded-box col-start-3 col-end-7 row-start-1 row-end-6 shadow-xl brightness-70 transition-transform duration-500 group-has-[a:hover]:scale-102"
         src={data.product.media.filter((media) => media.type === "image")[0].lg}
+        alt={data.product.title}
       />
       <div
         class="-z-1 col-start-1 col-end-9 row-start-5 row-end-6 h-10 w-full rounded-[100%] bg-black/40 blur-2xl lg:h-20"
