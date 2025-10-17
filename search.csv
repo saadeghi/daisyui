@@ -21,149 +21,528 @@ SaaS landing page,/store/saas-landingpage/
 Blog template 2.0,/store/blog-template/
 Documentation template,/store/documentation-template/
 Mobile app landing page,/store/mobile-app-landingpage/
-Auth template,/store/auth-template/
-daisyUI Logo,/brand/
-Textarea,/components/textarea/
-Rating,/components/rating/
-Calendar,/components/calendar/
-Dropdown,/components/dropdown/
-Window mockup,/components/mockup-window/
-Theme Controller,/components/theme-controller/
-Tabs,/components/tab/
-Modal,/components/modal/
-Accordion,/components/accordion/
-Phone mockup,/components/mockup-phone/
-Join,/components/join/
-Checkbox,/components/checkbox/
-Select,/components/select/
-Radio,/components/radio/
-Radial progress,/components/radial-progress/
-Avatar,/components/avatar/
-Toast,/components/toast/
-Code mockup,/components/mockup-code/
-Browser mockup,/components/mockup-browser/
-Carousel,/components/carousel/
-Divider,/components/divider/
-Button,/components/button/
-Fieldset,/components/fieldset/
-Steps,/components/steps/
-Navbar,/components/navbar/
-Stat,/components/stat/
-Countdown,/components/countdown/
-Pagination,/components/pagination/
-Skeleton,/components/skeleton/
-Card,/components/card/
-Drawer,/components/drawer/
-Indicator,/components/indicator/
-Footer,/components/footer/
-Loading,/components/loading/
-Menu,/components/menu/
-Toggle,/components/toggle/
-Badge,/components/badge/
-Link,/components/link/
-Validator,/components/validator/
-List,/components/list/
-Tooltip,/components/tooltip/
-Table,/components/table/
-Hero,/components/hero/
-Breadcrumbs,/components/breadcrumbs/
-Collapse,/components/collapse/
-Stack,/components/stack/
-Diff,/components/diff/
-Filter,/components/filter/
-Dock,/components/dock/
-Mask,/components/mask/
-Label,/components/label/
-Status,/components/status/
-Alert,/components/alert/
-FAB / Speed Dial,/components/fab/
-Kbd,/components/kbd/
-Text Input,/components/input/
-File Input,/components/file-input/
-Timeline,/components/timeline/
-Chat bubble,/components/chat/
-Range slider,/components/range/
-Progress,/components/progress/
-Hover Gallery,/components/hover-gallery/
-Swap,/components/swap/
-FAQ,/docs/faq/
-Customize daisyUI components,/docs/customize/
+Auth template 2.0,/store/auth-template/
+Use daisyUI from CDN,/docs/cdn/
+Code editors and LLM setup,/docs/editor/
+Claude desktop setup for daisyUI,/docs/editor/claude/
+Windsurf setup for daisyUI,/docs/editor/windsurf/
+Cursor setup for daisyUI,/docs/editor/cursor/
+VSCode setup for daisyUI,/docs/editor/vscode/
+Claude Code setup for daisyUI,/docs/editor/claudecode/
+Gemini setup for daisyUI,/docs/editor/gemini/
+Zed setup for daisyUI,/docs/editor/zed/
+Grok setup for daisyUI,/docs/editor/grok/
+ChatGPT setup for daisyUI,/docs/editor/chatgpt/
+Cline setup for daisyUI,/docs/editor/cline/
 Colors,/docs/colors/
+Introduction,/docs/intro/
 Add component classes to your HTML,/docs/use/
-daisyUI themes,/docs/themes/
-daisyUI Roadmap,/docs/roadmap/
 daisyUI base style,/docs/base/
 Utility classes and CSS variables,/docs/utilities/
-Use daisyUI from CDN,/docs/cdn/
-Layout and Typography,/docs/layout-and-typography/
-Introduction,/docs/intro/
-Install daisyUI for React Router,/docs/install/reactrouter/
-Install daisyUI for React,/docs/install/react/
-Use daisyUI in a Bun dev server,/docs/install/bun/
-Install daisyUI for Nuxt,/docs/install/nuxt/
-Install daisyUI for Lit,/docs/install/lit/
-Install daisyUI for Electron,/docs/install/electron/
-Install daisyUI for Rsbuild,/docs/install/rsbuild/
+FAQ,/docs/faq/
+daisyUI Roadmap,/docs/roadmap/
+Install daisyUI as a Tailwind plugin,/docs/install/
 Install daisyUI for Qwik,/docs/install/qwik/
-Install daisyUI for Laravel,/docs/install/laravel/
-Install daisyUI for WordPress,/docs/install/wordpress/
-Install daisyUI for Vue,/docs/install/vue/
-Install daisyUI for UnoCSS,/docs/install/unocss/
-Use daisyUI with Tailwind CSS Standalone CLI,/docs/install/standalone/
-Use daisyUI with Tailwind CSS CLI,/docs/install/cli/
-Install Tailwind CSS and daisyUI for Zola,/docs/install/zola/
-Install daisyUI for Ember,/docs/install/ember/
-Install daisyUI for SvelteKit,/docs/install/sveltekit/
-Install daisyUI for Eleventy,/docs/install/11ty/
-Install daisyUI for Django,/docs/install/django/
+Install daisyUI for Waku,/docs/install/waku/
+Install daisyUI for React,/docs/install/react/
 Install daisyUI for Solid,/docs/install/solid/
-Install daisyUI for Dioxus,/docs/install/dioxus/
-Install daisyUI for Vike,/docs/install/vike/
-Use daisyUI with HTMX,/docs/install/htmx/
-Install daisyUI for Preact,/docs/install/preact/
+Install daisyUI for Elixir Phoenix,/docs/install/phoenix/
+Use daisyUI with Tailwind CSS Standalone CLI,/docs/install/standalone/
+Install daisyUI for Eleventy,/docs/install/11ty/
+Install Tailwind CSS and daisyUI for Zola,/docs/install/zola/
 Install daisyUI for Next.js,/docs/install/nextjs/
+Install daisyUI for Vike,/docs/install/vike/
+Install daisyUI for Vite,/docs/install/vite/
 Install daisyUI for Yew,/docs/install/yew/
 Install daisyUI for Solid Start,/docs/install/solid-start/
 Install daisyUI for Deno Fresh,/docs/install/fresh/
-Install daisyUI for PostCSS,/docs/install/postcss/
-Install daisyUI for Waku,/docs/install/waku/
-Install daisyUI for Rails,/docs/install/rails/
-Install daisyUI as a Tailwind plugin,/docs/install/
-Install daisyUI for Vite,/docs/install/vite/
+Install daisyUI for Laravel,/docs/install/laravel/
+Install daisyUI for Electron,/docs/install/electron/
+Install daisyUI for Django,/docs/install/django/
+Install daisyUI for Vue,/docs/install/vue/
+Install daisyUI for UnoCSS,/docs/install/unocss/
+Install daisyUI for Dioxus,/docs/install/dioxus/
+Install daisyUI for React Router,/docs/install/reactrouter/
+Install daisyUI for Preact,/docs/install/preact/
+Use daisyUI with Tailwind CSS CLI,/docs/install/cli/
 Install daisyUI for Elysia,/docs/install/elysia/
-Install daisyUI for Elixir Phoenix,/docs/install/phoenix/
-Install daisyUI for Astro,/docs/install/astro/
 Install daisyUI for Angular,/docs/install/angular/
+Install daisyUI for PostCSS,/docs/install/postcss/
+Install daisyUI for Rsbuild,/docs/install/rsbuild/
+Install daisyUI for Lit,/docs/install/lit/
+Install daisyUI for Rails,/docs/install/rails/
+Install daisyUI for Nuxt,/docs/install/nuxt/
+Install daisyUI for Ember,/docs/install/ember/
+Use daisyUI with HTMX,/docs/install/htmx/
+Install daisyUI for WordPress,/docs/install/wordpress/
+Install daisyUI for SvelteKit,/docs/install/sveltekit/
+Use daisyUI in a Bun dev server,/docs/install/bun/
+Install daisyUI for Astro,/docs/install/astro/
 Config,/docs/config/
-Gemini setup for daisyUI,/docs/editor/gemini/
-Windsurf setup for daisyUI,/docs/editor/windsurf/
-Zed setup for daisyUI,/docs/editor/zed/
-Claude desktop setup for daisyUI,/docs/editor/claude/
-Claude Code setup for daisyUI,/docs/editor/claudecode/
-Cursor setup for daisyUI,/docs/editor/cursor/
-Cline setup for daisyUI,/docs/editor/cline/
-VSCode setup for daisyUI,/docs/editor/vscode/
-Grok setup for daisyUI,/docs/editor/grok/
-Code editors and LLM setup,/docs/editor/
-ChatGPT setup for daisyUI,/docs/editor/chatgpt/
-daisyUI Name,/brand/#daisyui-name
-Brand agreement,/brand/#brand-agreement
-Examples,/brand/#examples
-daisyUI Logo,/brand/#daisyui-logo
-Textarea,/components/textarea/#textarea
-Ghost (no background),/components/textarea/#ghost-no-background
-With form control and labels,/components/textarea/#with-form-control-and-labels
-Textarea colors,/components/textarea/#textarea-colors
-Sizes,/components/textarea/#sizes
-Disabled,/components/textarea/#disabled
-Rating,/components/rating/#rating
-Read-only Rating,/components/rating/#read-only-rating
-mask-star-2 with warning color,/components/rating/#mask-star-2-with-warning-color
-mask-heart with multiple colors,/components/rating/#mask-heart-with-multiple-colors
-mask-star-2 with green-500 color,/components/rating/#mask-star-2-with-green-500-color
-Sizes,/components/rating/#sizes
-with `rating-hidden`,/components/rating/#with-rating-hidden
-half stars,/components/rating/#half-stars
+Customize daisyUI components,/docs/customize/
+Layout and Typography,/docs/layout-and-typography/
+daisyUI themes,/docs/themes/
+Window mockup,/components/mockup-window/
+Stack,/components/stack/
+Indicator,/components/indicator/
+Timeline,/components/timeline/
+FAB / Speed Dial,/components/fab/
+Dock,/components/dock/
+Status,/components/status/
+Footer,/components/footer/
+Badge,/components/badge/
+Radial progress,/components/radial-progress/
+Breadcrumbs,/components/breadcrumbs/
+Steps,/components/steps/
+Stat,/components/stat/
+Select,/components/select/
+Radio,/components/radio/
+Checkbox,/components/checkbox/
+Hover Gallery,/components/hover-gallery/
+List,/components/list/
+Diff,/components/diff/
+Range slider,/components/range/
+Tooltip,/components/tooltip/
+Label,/components/label/
+Calendar,/components/calendar/
+Theme Controller,/components/theme-controller/
+Hero,/components/hero/
+Toggle,/components/toggle/
+Textarea,/components/textarea/
+Card,/components/card/
+Join,/components/join/
+Mask,/components/mask/
+Phone mockup,/components/mockup-phone/
+Browser mockup,/components/mockup-browser/
+Button,/components/button/
+Chat bubble,/components/chat/
+Skeleton,/components/skeleton/
+Carousel,/components/carousel/
+Avatar,/components/avatar/
+Collapse,/components/collapse/
+Countdown,/components/countdown/
+Tabs,/components/tab/
+Code mockup,/components/mockup-code/
+Validator,/components/validator/
+Divider,/components/divider/
+Navbar,/components/navbar/
+Toast,/components/toast/
+Alert,/components/alert/
+Menu,/components/menu/
+Pagination,/components/pagination/
+Swap,/components/swap/
+Link,/components/link/
+Text Input,/components/input/
+Table,/components/table/
+Dropdown,/components/dropdown/
+File Input,/components/file-input/
+Fieldset,/components/fieldset/
+Kbd,/components/kbd/
+Modal,/components/modal/
+Rating,/components/rating/
+Filter,/components/filter/
+Progress,/components/progress/
+Drawer,/components/drawer/
+Loading,/components/loading/
+Accordion,/components/accordion/
+daisyUI Logo,/brand/
+Pick your tool,/docs/editor/#pick-your-tool
+Claude desktop LLM setup,/docs/editor/claude/#claude-desktop-llm-setup
+Quick use,/docs/editor/claude/#quick-use
+MCP server,/docs/editor/claude/#mcp-server
+Windsurf LLM setup,/docs/editor/windsurf/#windsurf-llm-setup
+Quick use,/docs/editor/windsurf/#quick-use
+MCP server,/docs/editor/windsurf/#mcp-server
+Cursor LLM setup,/docs/editor/cursor/#cursor-llm-setup
+Quick use,/docs/editor/cursor/#quick-use
+Project-level permanent setup,/docs/editor/cursor/#project-level-permanent-setup
+Add as an optional document to Cursor,/docs/editor/cursor/#add-as-an-optional-document-to-cursor
+MCP server,/docs/editor/cursor/#mcp-server
+VSCode and Copilot LLM setup,/docs/editor/vscode/#vscode-and-copilot-llm-setup
+Quick use,/docs/editor/vscode/#quick-use
+Project-level permanent setup,/docs/editor/vscode/#project-level-permanent-setup
+MCP server,/docs/editor/vscode/#mcp-server
+Claude Code LLM setup,/docs/editor/claudecode/#claude-code-llm-setup
+MCP server,/docs/editor/claudecode/#mcp-server
+Gemini LLM setup,/docs/editor/gemini/#gemini-llm-setup
+Quick use,/docs/editor/gemini/#quick-use
+Zed LLM setup,/docs/editor/zed/#zed-llm-setup
+Quick use,/docs/editor/zed/#quick-use
+MCP server,/docs/editor/zed/#mcp-server
+Grok LLM setup,/docs/editor/grok/#grok-llm-setup
+Quick use,/docs/editor/grok/#quick-use
+ChatGPT LLM setup,/docs/editor/chatgpt/#chatgpt-llm-setup
+Quick use,/docs/editor/chatgpt/#quick-use
+MCP server,/docs/editor/chatgpt/#mcp-server
+Cline VSCode extension,/docs/editor/cline/#cline-vscode-extension
+Quick use,/docs/editor/cline/#quick-use
+Project-level permanent setup,/docs/editor/cline/#project-level-permanent-setup
+MCP server,/docs/editor/cline/#mcp-server
+Introduction,/docs/colors/#introduction
+Benefits,/docs/colors/#benefits
+List of all daisyUI color names,/docs/colors/#list-of-all-daisyui-color-names
+How to use,/docs/colors/#how-to-use
+Opacity values,/docs/colors/#opacity-values
+Color opacity and muted colors,/docs/colors/#color-opacity-and-muted-colors
+What is daisyUI?,/docs/intro/#what-is-daisyui
+How does daisyUI work?,/docs/intro/#how-does-daisyui-work
+Why should I use daisyUI?,/docs/intro/#why-should-i-use-daisyui
+What's the difference between daisyUI and Tailwind CSS?,/docs/intro/#whats-the-difference-between-daisyui-and-tailwind-css
+Is daisyUI aligned with Tailwind CSS' utility-first philosophy?,/docs/intro/#is-daisyui-aligned-with-tailwind-css-utility-first-philosophy
+How does daisyUI fit in Atomic Design principles?,/docs/intro/#how-does-daisyui-fit-in-atomic-design-principles
+Is daisyUI free?,/docs/intro/#is-daisyui-free
+How can I support daisyUI?,/docs/intro/#how-can-i-support-daisyui
+Can I use daisyUI without Tailwind CSS?,/docs/intro/#can-i-use-daisyui-without-tailwind-css
+Can I use daisyUI with other UI frameworks?,/docs/intro/#can-i-use-daisyui-with-other-ui-frameworks
+Which frameworks can I use daisyUI with?,/docs/intro/#which-frameworks-can-i-use-daisyui-with
+Source code,/docs/base/#source-code
+Color utility classes,/docs/utilities/#color-utility-classes
+Border radius,/docs/utilities/#border-radius
+Glass,/docs/utilities/#glass
+Theme CSS variables,/docs/utilities/#theme-css-variables
+Component specific CSS variables,/docs/utilities/#component-specific-css-variables
+Examples of customizing component specific CSS variables,/docs/utilities/#examples-of-customizing-component-specific-css-variables
+Class names are not working,/docs/faq/#class-names-are-not-working
+CSS files is too big,/docs/faq/#css-files-is-too-big
+checkbox/toggle/radio styles are broken,/docs/faq/#checkboxtoggleradio-styles-are-broken
+Themes are not working,/docs/faq/#themes-are-not-working
+Tailwind's `dark:` prefix is not working,/docs/faq/#tailwinds-dark-prefix-is-not-working
+Framework install tutorials,/docs/install/#framework-install-tutorials
+Create a new Qwik project,/docs/install/qwik/#create-a-new-qwik-project
+Install Tailwind CSS and daisyUI,/docs/install/qwik/#install-tailwind-css-and-daisyui
+Create a new Waku project,/docs/install/waku/#create-a-new-waku-project
+Install daisyUI,/docs/install/waku/#install-daisyui
+Create a new React project,/docs/install/react/#create-a-new-react-project
+Install Tailwind CSS and daisyUI,/docs/install/react/#install-tailwind-css-and-daisyui
+Create a new Solid project,/docs/install/solid/#create-a-new-solid-project
+Install Tailwind CSS and daisyUI,/docs/install/solid/#install-tailwind-css-and-daisyui
+Create a new Phoenix project,/docs/install/phoenix/#create-a-new-phoenix-project
+Run your project,/docs/install/phoenix/#run-your-project
+Get Tailwind CSS executable,/docs/install/standalone/#get-tailwind-css-executable
+Get daisyUI bundle JS file,/docs/install/standalone/#get-daisyui-bundle-js-file
+Add Tailwind CSS and daisyUI,/docs/install/standalone/#add-tailwind-css-and-daisyui
+Build CSS,/docs/install/standalone/#build-css
+Initialize a new Node project and add dev and build scripts,/docs/install/11ty/#initialize-a-new-node-project-and-add-dev-and-build-scripts
+"Install 11ty, PostCSS, Tailwind CSS, Tailwind CSS Typography plugin, and daisyUI",/docs/install/11ty/#install-11ty-postcss-tailwind-css-tailwind-css-typography-plugin-and-daisyui
+Create a layout template,/docs/install/11ty/#create-a-layout-template
+Create a markdown homepage,/docs/install/11ty/#create-a-markdown-homepage
+Markdown heading 2,/docs/install/11ty/#markdown-heading-2
+Markdown heading 3,/docs/install/11ty/#markdown-heading-3
+Create a CSS file,/docs/install/11ty/#create-a-css-file
+Create a eleventy.config.mjs file at root,/docs/install/11ty/#create-a-eleventyconfigmjs-file-at-root
+Run the project,/docs/install/11ty/#run-the-project
+Create a new Zola project,/docs/install/zola/#create-a-new-zola-project
+Get Tailwind CSS executable,/docs/install/zola/#get-tailwind-css-executable
+Get daisyUI bundled JS file,/docs/install/zola/#get-daisyui-bundled-js-file
+Add Tailwind CSS and daisyUI,/docs/install/zola/#add-tailwind-css-and-daisyui
+Build CSS,/docs/install/zola/#build-css
+Run the Zola server,/docs/install/zola/#run-the-zola-server
+Create a new Next.js project,/docs/install/nextjs/#create-a-new-nextjs-project
+Install Tailwind CSS and daisyUI,/docs/install/nextjs/#install-tailwind-css-and-daisyui
+Add Tailwind CSS and daisyUI,/docs/install/nextjs/#add-tailwind-css-and-daisyui
+Note about using Turbopack,/docs/install/nextjs/#note-about-using-turbopack
+Create a new Vike project,/docs/install/vike/#create-a-new-vike-project
+Install Tailwind CSS and daisyUI,/docs/install/vike/#install-tailwind-css-and-daisyui
+Create a new Vite project,/docs/install/vite/#create-a-new-vite-project
+Install Tailwind CSS and daisyUI,/docs/install/vite/#install-tailwind-css-and-daisyui
+"Install Rust, WebAssembly Target and Trunk",/docs/install/yew/#install-rust-webassembly-target-and-trunk
+Create a Yew project,/docs/install/yew/#create-a-yew-project
+Update `src/main.rs` file,/docs/install/yew/#update-srcmainrs-file
+Create `index.html` file,/docs/install/yew/#create-indexhtml-file
+Add Tailwind CSS and daisyUI,/docs/install/yew/#add-tailwind-css-and-daisyui
+Add a hook to build `output.css` automatically,/docs/install/yew/#add-a-hook-to-build-outputcss-automatically
+Run the app,/docs/install/yew/#run-the-app
+Create a new Solid Start project,/docs/install/solid-start/#create-a-new-solid-start-project
+Install Tailwind CSS and daisyUI,/docs/install/solid-start/#install-tailwind-css-and-daisyui
+Create a new Fresh project,/docs/install/fresh/#create-a-new-fresh-project
+Install daisyUI,/docs/install/fresh/#install-daisyui
+Create a new Laravel project,/docs/install/laravel/#create-a-new-laravel-project
+Install daisyUI,/docs/install/laravel/#install-daisyui
+Run your project,/docs/install/laravel/#run-your-project
+Create a new Node project,/docs/install/electron/#create-a-new-node-project
+"Install Electron, Tailwind CSS, and daisyUI",/docs/install/electron/#install-electron-tailwind-css-and-daisyui
+Create files,/docs/install/electron/#create-files
+Build the CSS and run the project,/docs/install/electron/#build-the-css-and-run-the-project
+Create a new Django project,/docs/install/django/#create-a-new-django-project
+Create a homepage in Django,/docs/install/django/#create-a-homepage-in-django
+Add Tailwind CSS and daisyUI,/docs/install/django/#add-tailwind-css-and-daisyui
+Run the Tailwind CSS executable to generate output.css,/docs/install/django/#run-the-tailwind-css-executable-to-generate-outputcss
+Run the Django server,/docs/install/django/#run-the-django-server
+Create a new Vue project,/docs/install/vue/#create-a-new-vue-project
+Install Tailwind CSS and daisyUI,/docs/install/vue/#install-tailwind-css-and-daisyui
+Create a new Vite project,/docs/install/unocss/#create-a-new-vite-project
+"Install UnoCSS, daisyUI and unocss-preset-daisy",/docs/install/unocss/#install-unocss-daisyui-and-unocss-preset-daisy
+Create a UnoCSS config file,/docs/install/unocss/#create-a-unocss-config-file
+Add UnoCSS to your JS file,/docs/install/unocss/#add-unocss-to-your-js-file
+Create a new Dioxus project,/docs/install/dioxus/#create-a-new-dioxus-project
+Install Tailwind CSS CLI and daisyUI,/docs/install/dioxus/#install-tailwind-css-cli-and-daisyui
+Setup `src/main.rs`,/docs/install/dioxus/#setup-srcmainrs
+Run the dev server,/docs/install/dioxus/#run-the-dev-server
+Create a new React Router project,/docs/install/reactrouter/#create-a-new-react-router-project
+Install daisyUI,/docs/install/reactrouter/#install-daisyui
+Add daisyUI,/docs/install/reactrouter/#add-daisyui
+Create a new Preact project,/docs/install/preact/#create-a-new-preact-project
+Install Tailwind CSS and daisyUI,/docs/install/preact/#install-tailwind-css-and-daisyui
+Install,/docs/install/cli/#install
+Add Tailwind CSS and daisyUI,/docs/install/cli/#add-tailwind-css-and-daisyui
+Build CSS,/docs/install/cli/#build-css
+Create a new Elysia project,/docs/install/elysia/#create-a-new-elysia-project
+Install Tailwind CSS and daisyUI,/docs/install/elysia/#install-tailwind-css-and-daisyui
+Setup server file,/docs/install/elysia/#setup-server-file
+Add a index.html file,/docs/install/elysia/#add-a-indexhtml-file
+Create a new Angular project,/docs/install/angular/#create-a-new-angular-project
+"Install Tailwind CSS, PostCSS, and daisyUI",/docs/install/angular/#install-tailwind-css-postcss-and-daisyui
+Install,/docs/install/postcss/#install
+Add Tailwind CSS and daisyUI,/docs/install/postcss/#add-tailwind-css-and-daisyui
+Build CSS,/docs/install/postcss/#build-css
+Create a new Rsbuild project,/docs/install/rsbuild/#create-a-new-rsbuild-project
+Install Tailwind CSS and daisyUI,/docs/install/rsbuild/#install-tailwind-css-and-daisyui
+Create a new Vite project,/docs/install/lit/#create-a-new-vite-project
+Install Tailwind CSS and daisyUI,/docs/install/lit/#install-tailwind-css-and-daisyui
+Make the CSS available for shadow DOM elements,/docs/install/lit/#make-the-css-available-for-shadow-dom-elements
+Create a new Rails project,/docs/install/rails/#create-a-new-rails-project
+Install Tailwind CSS for Rails,/docs/install/rails/#install-tailwind-css-for-rails
+Add daisyUI,/docs/install/rails/#add-daisyui
+Create a homepage in Rails,/docs/install/rails/#create-a-homepage-in-rails
+Start Rails,/docs/install/rails/#start-rails
+Create a new Nuxt project,/docs/install/nuxt/#create-a-new-nuxt-project
+Install Tailwind CSS and daisyUI,/docs/install/nuxt/#install-tailwind-css-and-daisyui
+Create a new Ember project,/docs/install/ember/#create-a-new-ember-project
+Install Tailwind CSS and daisyUI,/docs/install/ember/#install-tailwind-css-and-daisyui
+Install,/docs/install/htmx/#install
+Add Tailwind CSS and daisyUI,/docs/install/htmx/#add-tailwind-css-and-daisyui
+Build CSS,/docs/install/htmx/#build-css
+Create a new WordPress project,/docs/install/wordpress/#create-a-new-wordpress-project
+Install the WindPress plugin,/docs/install/wordpress/#install-the-windpress-plugin
+Install daisyUI,/docs/install/wordpress/#install-daisyui
+Create a new SvelteKit project,/docs/install/sveltekit/#create-a-new-sveltekit-project
+Install Tailwind CSS and daisyUI,/docs/install/sveltekit/#install-tailwind-css-and-daisyui
+Create a new Bun project,/docs/install/bun/#create-a-new-bun-project
+Install bun-plugin-tailwind and daisyUI,/docs/install/bun/#install-bun-plugin-tailwind-and-daisyui
+Add HTML and CSS files,/docs/install/bun/#add-html-and-css-files
+Serve the HTML file,/docs/install/bun/#serve-the-html-file
+Create a new Astro project,/docs/install/astro/#create-a-new-astro-project
+Install Tailwind CSS and daisyUI,/docs/install/astro/#install-tailwind-css-and-daisyui
+themes,/docs/config/#themes
+root,/docs/config/#root
+include,/docs/config/#include
+exclude,/docs/config/#exclude
+prefix,/docs/config/#prefix
+logs,/docs/config/#logs
+Layout,/docs/layout-and-typography/#layout
+Typography,/docs/layout-and-typography/#typography
+Headers: Making a Statement,/docs/layout-and-typography/#headers-making-a-statement
+"Second Heading, for the Page Subtitle",/docs/layout-and-typography/#second-heading-for-the-page-subtitle
+"Third Heading, usually for the Section Title",/docs/layout-and-typography/#third-heading-usually-for-the-section-title
+Text Formatting: Adding Emphasis,/docs/layout-and-typography/#text-formatting-adding-emphasis
+Bold and Italic,/docs/layout-and-typography/#bold-and-italic
+Blockquotes,/docs/layout-and-typography/#blockquotes
+Lists: Organizing Information,/docs/layout-and-typography/#lists-organizing-information
+Unordered Lists,/docs/layout-and-typography/#unordered-lists
+Ordered Lists,/docs/layout-and-typography/#ordered-lists
+Links and Images: Adding Interactivity,/docs/layout-and-typography/#links-and-images-adding-interactivity
+Links,/docs/layout-and-typography/#links
+Images,/docs/layout-and-typography/#images
+Code: Showcasing Your Work,/docs/layout-and-typography/#code-showcasing-your-work
+Inline Code,/docs/layout-and-typography/#inline-code
+Code Blocks,/docs/layout-and-typography/#code-blocks
+Tables: Organizing Data,/docs/layout-and-typography/#tables-organizing-data
+Colors: Adding Vibrancy,/docs/layout-and-typography/#colors-adding-vibrancy
+Conclusion,/docs/layout-and-typography/#conclusion
+Enable a built-in theme,/docs/themes/#enable-a-built-in-theme
+List of themes,/docs/themes/#list-of-themes
+Enable all themes,/docs/themes/#enable-all-themes
+Disable a theme,/docs/themes/#disable-a-theme
+How to use a theme only for a section of a page?,/docs/themes/#how-to-use-a-theme-only-for-a-section-of-a-page
+How to add a new custom theme?,/docs/themes/#how-to-add-a-new-custom-theme
+How to customize an existing theme?,/docs/themes/#how-to-customize-an-existing-theme
+How to add custom styles for a specific theme?,/docs/themes/#how-to-add-custom-styles-for-a-specific-theme
+How to apply Tailwind's 'dark:' selector for specific themes,/docs/themes/#how-to-apply-tailwinds-dark-selector-for-specific-themes
+window mockup with border,/components/mockup-window/#window-mockup-with-border
+window mockup with background color,/components/mockup-window/#window-mockup-with-background-color
+3 divs in a stack,/components/stack/#3-divs-in-a-stack
+stacked images,/components/stack/#stacked-images
+stacked cards,/components/stack/#stacked-cards
+stacked cards (top direction),/components/stack/#stacked-cards-top-direction
+stacked cards (start direction),/components/stack/#stacked-cards-start-direction
+stacked cards (end direction),/components/stack/#stacked-cards-end-direction
+stacked cards with shadow,/components/stack/#stacked-cards-with-shadow
+stacked cards,/components/stack/#stacked-cards
+Status Indicator,/components/indicator/#status-indicator
+Badge as indicator,/components/indicator/#badge-as-indicator
+for button,/components/indicator/#for-button
+for tab,/components/indicator/#for-tab
+for avatar,/components/indicator/#for-avatar
+for an input,/components/indicator/#for-an-input
+A button as an indicator for a card,/components/indicator/#a-button-as-an-indicator-for-a-card
+in center of an image,/components/indicator/#in-center-of-an-image
+indicator-top (default) indicator-start,/components/indicator/#indicator-top-default-indicator-start
+indicator-top (default) indicator-center,/components/indicator/#indicator-top-default-indicator-center
+indicator-top (default) indicator-end (default),/components/indicator/#indicator-top-default-indicator-end-default
+indicator-middle indicator-start,/components/indicator/#indicator-middle-indicator-start
+indicator-middle indicator-center,/components/indicator/#indicator-middle-indicator-center
+indicator-middle indicator-end (default),/components/indicator/#indicator-middle-indicator-end-default
+indicator-bottom indicator-start,/components/indicator/#indicator-bottom-indicator-start
+indicator-bottom indicator-center,/components/indicator/#indicator-bottom-indicator-center
+indicator-bottom indicator-end (default),/components/indicator/#indicator-bottom-indicator-end-default
+multiple indicators,/components/indicator/#multiple-indicators
+Responsive,/components/indicator/#responsive
+Timeline with text on both sides and icon,/components/timeline/#timeline-with-text-on-both-sides-and-icon
+Timeline with bottom side only,/components/timeline/#timeline-with-bottom-side-only
+Timeline with top side only,/components/timeline/#timeline-with-top-side-only
+Timeline with different sides,/components/timeline/#timeline-with-different-sides
+Timeline with colorful lines,/components/timeline/#timeline-with-colorful-lines
+Timeline without icons,/components/timeline/#timeline-without-icons
+Vertical timeline with text on both sides and icon,/components/timeline/#vertical-timeline-with-text-on-both-sides-and-icon
+Vertical timeline with right side only,/components/timeline/#vertical-timeline-with-right-side-only
+Vertical timeline with left side only,/components/timeline/#vertical-timeline-with-left-side-only
+Vertical timeline with different sides,/components/timeline/#vertical-timeline-with-different-sides
+Vertical timeline with colorful lines,/components/timeline/#vertical-timeline-with-colorful-lines
+Vertical timeline without icons,/components/timeline/#vertical-timeline-without-icons
+"Responsive: vertical by default, horizontal on large screen",/components/timeline/#responsive-vertical-by-default-horizontal-on-large-screen
+Timeline with icon snapped to the start,/components/timeline/#timeline-with-icon-snapped-to-the-start
+FAB and Speed Dial (vertical),/components/fab/#fab-and-speed-dial-vertical
+FAB and Speed Dial with SVG icons,/components/fab/#fab-and-speed-dial-with-svg-icons
+FAB and Speed Dial with labels,/components/fab/#fab-and-speed-dial-with-labels
+FAB and Speed Dial with rectangle buttons,/components/fab/#fab-and-speed-dial-with-rectangle-buttons
+FAB and Speed Dial with labels and fab-close button,/components/fab/#fab-and-speed-dial-with-labels-and-fab-close-button
+FAB and Speed Dial with labels and fab-main-action Button,/components/fab/#fab-and-speed-dial-with-labels-and-fab-main-action-button
+A single FAB (Floating Action Button),/components/fab/#a-single-fab-floating-action-button
+FAB Flower and Speed Dial,/components/fab/#fab-flower-and-speed-dial
+FAB and Flower Speed Dial with SVG icons,/components/fab/#fab-and-flower-speed-dial-with-svg-icons
+FAB and Flower Speed Dial with tooltip,/components/fab/#fab-and-flower-speed-dial-with-tooltip
+Dock,/components/dock/#dock
+Dock Extra Small size,/components/dock/#dock-extra-small-size
+Dock Small size,/components/dock/#dock-small-size
+Dock Medium size,/components/dock/#dock-medium-size
+Dock Large size,/components/dock/#dock-large-size
+Dock Extra Large size,/components/dock/#dock-extra-large-size
+Dock with custom colors,/components/dock/#dock-with-custom-colors
+Status,/components/status/#status
+Status sizes,/components/status/#status-sizes
+Status with colors,/components/status/#status-with-colors
+Status with ping animation,/components/status/#status-with-ping-animation
+Status with bounce animation,/components/status/#status-with-bounce-animation
+"Footer (vertical by default, horizontal for sm and up)",/components/footer/#footer-vertical-by-default-horizontal-for-sm-and-up
+Footer with a logo section,/components/footer/#footer-with-a-logo-section
+Footer with a form,/components/footer/#footer-with-a-form
+Footer with logo and social icons,/components/footer/#footer-with-logo-and-social-icons
+Footer with copyright text,/components/footer/#footer-with-copyright-text
+Footer with copyright text and social icons,/components/footer/#footer-with-copyright-text-and-social-icons
+Footer with links and social icons,/components/footer/#footer-with-links-and-social-icons
+Footer with 2 rows,/components/footer/#footer-with-2-rows
+Centered footer with logo and social icons,/components/footer/#centered-footer-with-logo-and-social-icons
+Centered footer with social icons,/components/footer/#centered-footer-with-social-icons
+Two footer,/components/footer/#two-footer
+Badge,/components/badge/#badge
+Badge sizes,/components/badge/#badge-sizes
+Badge with colors,/components/badge/#badge-with-colors
+Badge with soft style,/components/badge/#badge-with-soft-style
+Badge with outline style,/components/badge/#badge-with-outline-style
+Badge with dash style,/components/badge/#badge-with-dash-style
+neutral badge with outline or dash style,/components/badge/#neutral-badge-with-outline-or-dash-style
+Badge ghost,/components/badge/#badge-ghost
+Empty badge,/components/badge/#empty-badge
+Badge with icon,/components/badge/#badge-with-icon
+Badge in a text,/components/badge/#badge-in-a-text
+Badge in a button,/components/badge/#badge-in-a-button
+Radial progress,/components/radial-progress/#radial-progress
+Different values,/components/radial-progress/#different-values
+Custom color,/components/radial-progress/#custom-color
+With background color and border,/components/radial-progress/#with-background-color-and-border
+Custom size and custom thickness,/components/radial-progress/#custom-size-and-custom-thickness
+Breadcrumbs,/components/breadcrumbs/#breadcrumbs
+Breadcrumbs with icons,/components/breadcrumbs/#breadcrumbs-with-icons
+Breadcrumbs with max-width,/components/breadcrumbs/#breadcrumbs-with-max-width
+Horizontal,/components/steps/#horizontal
+Vertical,/components/steps/#vertical
+"responsive (vertical on small screen, horizontal on large screen)",/components/steps/#responsive-vertical-on-small-screen-horizontal-on-large-screen
+With custom content in step-icon,/components/steps/#with-custom-content-in-step-icon
+With data-content,/components/steps/#with-data-content
+Custom colors,/components/steps/#custom-colors
+With scrollable wrapper,/components/steps/#with-scrollable-wrapper
+Stat,/components/stat/#stat
+Stat with icons or image,/components/stat/#stat-with-icons-or-image
+Stat,/components/stat/#stat
+Centered items,/components/stat/#centered-items
+Vertical,/components/stat/#vertical
+"Responsive (vertical on small screen, horizontal on large screen)",/components/stat/#responsive-vertical-on-small-screen-horizontal-on-large-screen
+With custom colors and button,/components/stat/#with-custom-colors-and-button
+Select,/components/select/#select
+Ghost (no background),/components/select/#ghost-no-background
+With fieldset and labels,/components/select/#with-fieldset-and-labels
+Primary color,/components/select/#primary-color
+Secondary color,/components/select/#secondary-color
+Accent color,/components/select/#accent-color
+Neutral color,/components/select/#neutral-color
+Info color,/components/select/#info-color
+Success color,/components/select/#success-color
+Warning color,/components/select/#warning-color
+Error color,/components/select/#error-color
+Sizes,/components/select/#sizes
+Disabled,/components/select/#disabled
+Using OS native style for the options dropdown,/components/select/#using-os-native-style-for-the-options-dropdown
+Radio,/components/radio/#radio
+Radio sizes,/components/radio/#radio-sizes
+Neutral color,/components/radio/#neutral-color
+Primary color,/components/radio/#primary-color
+Secondary color,/components/radio/#secondary-color
+Accent color,/components/radio/#accent-color
+Success color,/components/radio/#success-color
+Warning color,/components/radio/#warning-color
+Info color,/components/radio/#info-color
+Error color,/components/radio/#error-color
+Disabled,/components/radio/#disabled
+Radio with custom colors,/components/radio/#radio-with-custom-colors
+Checkbox,/components/checkbox/#checkbox
+With fieldset and label,/components/checkbox/#with-fieldset-and-label
+Sizes,/components/checkbox/#sizes
+Colors,/components/checkbox/#colors
+Disabled,/components/checkbox/#disabled
+Indeterminate,/components/checkbox/#indeterminate
+Checkbox with custom colors,/components/checkbox/#checkbox-with-custom-colors
+How it works,/components/hover-gallery/#how-it-works
+Hover Gallery,/components/hover-gallery/#hover-gallery
+Hover Gallery in a card,/components/hover-gallery/#hover-gallery-in-a-card
+List (second column grows - default),/components/list/#list-second-column-grows-default
+List (third column grows),/components/list/#list-third-column-grows
+List (third column wraps to next row),/components/list/#list-third-column-wraps-to-next-row
+Diff,/components/diff/#diff
+Diff text,/components/diff/#diff-text
+Range,/components/range/#range
+With steps and measure,/components/range/#with-steps-and-measure
+Neutral color,/components/range/#neutral-color
+Primary color,/components/range/#primary-color
+Secondary color,/components/range/#secondary-color
+Accent color,/components/range/#accent-color
+Success color,/components/range/#success-color
+Warning color,/components/range/#warning-color
+Info color,/components/range/#info-color
+Error color,/components/range/#error-color
+Sizes,/components/range/#sizes
+Range with custom color and no fill,/components/range/#range-with-custom-color-and-no-fill
+Tooltip,/components/tooltip/#tooltip
+Tooltip with tooltip-content,/components/tooltip/#tooltip-with-tooltip-content
+Force open,/components/tooltip/#force-open
+Top,/components/tooltip/#top
+Bottom,/components/tooltip/#bottom
+Left,/components/tooltip/#left
+Right,/components/tooltip/#right
+Neutral color,/components/tooltip/#neutral-color
+Primary color,/components/tooltip/#primary-color
+Secondary color,/components/tooltip/#secondary-color
+Accent color,/components/tooltip/#accent-color
+Info color,/components/tooltip/#info-color
+Success color,/components/tooltip/#success-color
+Warning color,/components/tooltip/#warning-color
+Error color,/components/tooltip/#error-color
+Responsive tooltip. only show for large screen,/components/tooltip/#responsive-tooltip-only-show-for-large-screen
+Label for input,/components/label/#label-for-input
+Label for input at the end,/components/label/#label-for-input-at-the-end
+Label for select,/components/label/#label-for-select
+Label for date input,/components/label/#label-for-date-input
+Floating Label,/components/label/#floating-label
+Floating Label with Different Sizes,/components/label/#floating-label-with-different-sizes
 daisyUI supports 3 calendar libraries,/components/calendar/#daisyui-supports-3-calendar-libraries
 Cally Calendar,/components/calendar/#cally-calendar
 Cally calendar example,/components/calendar/#cally-calendar-example
@@ -175,6 +554,276 @@ Pikaday Vue Example,/components/calendar/#pikaday-vue-example
 Pikaday React Example,/components/calendar/#pikaday-react-example
 React Day Picker calendar,/components/calendar/#react-day-picker-calendar
 React Day Picker Example,/components/calendar/#react-day-picker-example
+Theme Controller using a toggle,/components/theme-controller/#theme-controller-using-a-toggle
+Theme Controller using a checkbox,/components/theme-controller/#theme-controller-using-a-checkbox
+Theme Controller using a swap,/components/theme-controller/#theme-controller-using-a-swap
+Theme Controller using a toggle with text,/components/theme-controller/#theme-controller-using-a-toggle-with-text
+Theme Controller using a toggle with icons,/components/theme-controller/#theme-controller-using-a-toggle-with-icons
+Theme Controller using a toggle with icons inside,/components/theme-controller/#theme-controller-using-a-toggle-with-icons-inside
+Theme Controller using a toggle with custom colors,/components/theme-controller/#theme-controller-using-a-toggle-with-custom-colors
+Theme Controller using a radio input,/components/theme-controller/#theme-controller-using-a-radio-input
+Theme Controller using a radio button,/components/theme-controller/#theme-controller-using-a-radio-button
+Theme Controller using a dropdown,/components/theme-controller/#theme-controller-using-a-dropdown
+Centered hero,/components/hero/#centered-hero
+Hero with figure,/components/hero/#hero-with-figure
+Hero with figure but reverse order,/components/hero/#hero-with-figure-but-reverse-order
+Hero with form,/components/hero/#hero-with-form
+Hero with overlay image,/components/hero/#hero-with-overlay-image
+Toggle (switch),/components/toggle/#toggle-switch
+With fieldset and label,/components/toggle/#with-fieldset-and-label
+Sizes,/components/toggle/#sizes
+Colors,/components/toggle/#colors
+Disabled,/components/toggle/#disabled
+Indeterminate,/components/toggle/#indeterminate
+Toggle with icons inside,/components/toggle/#toggle-with-icons-inside
+Toggle with custom colors,/components/toggle/#toggle-with-custom-colors
+Textarea,/components/textarea/#textarea
+Ghost (no background),/components/textarea/#ghost-no-background
+With form control and labels,/components/textarea/#with-form-control-and-labels
+Textarea colors,/components/textarea/#textarea-colors
+Sizes,/components/textarea/#sizes
+Disabled,/components/textarea/#disabled
+Card,/components/card/#card
+Pricing Card,/components/card/#pricing-card
+Card sizes,/components/card/#card-sizes
+Card with a card-border,/components/card/#card-with-a-card-border
+Card with a dash border,/components/card/#card-with-a-dash-border
+Card with badge,/components/card/#card-with-badge
+Card with bottom image,/components/card/#card-with-bottom-image
+Card with centered content and paddings,/components/card/#card-with-centered-content-and-paddings
+Card with image overlay,/components/card/#card-with-image-overlay
+Card with no image,/components/card/#card-with-no-image
+Card with custom color,/components/card/#card-with-custom-color
+Centered card with neutral color,/components/card/#centered-card-with-neutral-color
+Card with action on top,/components/card/#card-with-action-on-top
+Card with image on side,/components/card/#card-with-image-on-side
+"Responsive card (vertical on small screen, horizontal on large screen)",/components/card/#responsive-card-vertical-on-small-screen-horizontal-on-large-screen
+Join,/components/join/#join
+Group items vertically,/components/join/#group-items-vertically
+Responsive: it's vertical on small screen and horizontal on large screen,/components/join/#responsive-its-vertical-on-small-screen-and-horizontal-on-large-screen
+With extra elements in the group,/components/join/#with-extra-elements-in-the-group
+Custom border radius,/components/join/#custom-border-radius
+Join radio inputs with btn style,/components/join/#join-radio-inputs-with-btn-style
+Squircle,/components/mask/#squircle
+Heart,/components/mask/#heart
+Hexagon,/components/mask/#hexagon
+Hexagon-2 (horizontal hexagon),/components/mask/#hexagon-2-horizontal-hexagon
+Decagon,/components/mask/#decagon
+Pentagon,/components/mask/#pentagon
+Diamond,/components/mask/#diamond
+Square,/components/mask/#square
+Circle,/components/mask/#circle
+Star,/components/mask/#star
+Star-2 (bold star),/components/mask/#star-2-bold-star
+Triangle (pointing top),/components/mask/#triangle-pointing-top
+Triangle-2 (pointing down),/components/mask/#triangle-2-pointing-down
+Triangle-3 (pointing left),/components/mask/#triangle-3-pointing-left
+Triangle-4 (pointing right),/components/mask/#triangle-4-pointing-right
+iPhone mockup,/components/mockup-phone/#iphone-mockup
+With color and wallpaper,/components/mockup-phone/#with-color-and-wallpaper
+browser mockup with border,/components/mockup-browser/#browser-mockup-with-border
+browser mockup with background color,/components/mockup-browser/#browser-mockup-with-background-color
+Button,/components/button/#button
+Button sizes,/components/button/#button-sizes
+Responsive button,/components/button/#responsive-button
+Buttons colors,/components/button/#buttons-colors
+Soft buttons,/components/button/#soft-buttons
+Outline buttons,/components/button/#outline-buttons
+Dash buttons,/components/button/#dash-buttons
+neutral button with outline or dash style,/components/button/#neutral-button-with-outline-or-dash-style
+Active buttons,/components/button/#active-buttons
+Buttons ghost and button link,/components/button/#buttons-ghost-and-button-link
+Wide button,/components/button/#wide-button
+Buttons with any HTML tags,/components/button/#buttons-with-any-html-tags
+Disabled buttons,/components/button/#disabled-buttons
+Square button and circle button,/components/button/#square-button-and-circle-button
+Button with Icon,/components/button/#button-with-icon
+Button block,/components/button/#button-block
+Button with loading spinner,/components/button/#button-with-loading-spinner
+Login buttons,/components/button/#login-buttons
+chat-start and chat-end,/components/chat/#chat-start-and-chat-end
+Chat with image,/components/chat/#chat-with-image
+"Chat with image, header and footer",/components/chat/#chat-with-image-header-and-footer
+Chat with header and footer,/components/chat/#chat-with-header-and-footer
+Chat Bubble with colors,/components/chat/#chat-bubble-with-colors
+Skeleton,/components/skeleton/#skeleton
+Skeleton - circle with content,/components/skeleton/#skeleton-circle-with-content
+Skeleton - rectangle with content,/components/skeleton/#skeleton-rectangle-with-content
+Snap to start (default),/components/carousel/#snap-to-start-default
+Snap to center,/components/carousel/#snap-to-center
+Snap to end,/components/carousel/#snap-to-end
+Carousel with full width items,/components/carousel/#carousel-with-full-width-items
+Vertical carousel,/components/carousel/#vertical-carousel
+Carousel with half width items,/components/carousel/#carousel-with-half-width-items
+Full-bleed carousel,/components/carousel/#full-bleed-carousel
+Carousel with indicator buttons,/components/carousel/#carousel-with-indicator-buttons
+Carousel with next/prev buttons,/components/carousel/#carousel-with-nextprev-buttons
+Avatar,/components/avatar/#avatar
+Avatar in custom sizes,/components/avatar/#avatar-in-custom-sizes
+Avatar rounded,/components/avatar/#avatar-rounded
+Avatar with mask,/components/avatar/#avatar-with-mask
+Avatar group,/components/avatar/#avatar-group
+Avatar group with counter,/components/avatar/#avatar-group-with-counter
+Avatar with ring,/components/avatar/#avatar-with-ring
+Avatar with presence indicator,/components/avatar/#avatar-with-presence-indicator
+Avatar placeholder,/components/avatar/#avatar-placeholder
+Collapse with focus,/components/collapse/#collapse-with-focus
+Collapse with checkbox,/components/collapse/#collapse-with-checkbox
+Collapse using details and summary tag,/components/collapse/#collapse-using-details-and-summary-tag
+Without border and background color,/components/collapse/#without-border-and-background-color
+With arrow icon,/components/collapse/#with-arrow-icon
+With arrow plus/minus icon,/components/collapse/#with-arrow-plusminus-icon
+Moving collapse icon to the start,/components/collapse/#moving-collapse-icon-to-the-start
+Force open,/components/collapse/#force-open
+Force close,/components/collapse/#force-close
+Custom colors for collapse that works with focus,/components/collapse/#custom-colors-for-collapse-that-works-with-focus
+Custom colors for collapse that works with checkbox,/components/collapse/#custom-colors-for-collapse-that-works-with-checkbox
+Countdown,/components/countdown/#countdown
+Large text with 2 digits,/components/countdown/#large-text-with-2-digits
+Clock countdown,/components/countdown/#clock-countdown
+Clock countdown with colons,/components/countdown/#clock-countdown-with-colons
+Large text with labels,/components/countdown/#large-text-with-labels
+Large text with labels under,/components/countdown/#large-text-with-labels-under
+In boxes,/components/countdown/#in-boxes
+tabs,/components/tab/#tabs
+tabs-border,/components/tab/#tabs-border
+tabs-lift,/components/tab/#tabs-lift
+tabs-box,/components/tab/#tabs-box
+tabs-box using radio inputs,/components/tab/#tabs-box-using-radio-inputs
+Sizes,/components/tab/#sizes
+radio tabs-border + tab content,/components/tab/#radio-tabs-border-tab-content
+radio tabs-lift + tab content,/components/tab/#radio-tabs-lift-tab-content
+radio tabs-lift with icons + tab content,/components/tab/#radio-tabs-lift-with-icons-tab-content
+radio tabs-lift + tab content on bottom,/components/tab/#radio-tabs-lift-tab-content-on-bottom
+radio tabs-box + tab content,/components/tab/#radio-tabs-box-tab-content
+tabs-box with a horizontal scroll when there's no space,/components/tab/#tabs-box-with-a-horizontal-scroll-when-theres-no-space
+Tabs with custom color,/components/tab/#tabs-with-custom-color
+mockup code with line prefix,/components/mockup-code/#mockup-code-with-line-prefix
+Multi line,/components/mockup-code/#multi-line
+Highlighted line,/components/mockup-code/#highlighted-line
+Long line will scroll,/components/mockup-code/#long-line-will-scroll
+Without prefix,/components/mockup-code/#without-prefix
+With color,/components/mockup-code/#with-color
+Validator,/components/validator/#validator
+Validator and validator-hint,/components/validator/#validator-and-validator-hint
+Password requirement validator,/components/validator/#password-requirement-validator
+Username requirement validator,/components/validator/#username-requirement-validator
+Phone Number requirement validator,/components/validator/#phone-number-requirement-validator
+URL input requirement validator,/components/validator/#url-input-requirement-validator
+Date input requirement validator,/components/validator/#date-input-requirement-validator
+Number input requirement validator,/components/validator/#number-input-requirement-validator
+Checkbox requirement validator,/components/validator/#checkbox-requirement-validator
+Toggle requirement validator,/components/validator/#toggle-requirement-validator
+Select requirement validator,/components/validator/#select-requirement-validator
+Divider,/components/divider/#divider
+Divider horizontal,/components/divider/#divider-horizontal
+Divider with no text,/components/divider/#divider-with-no-text
+responsive (lg:divider-horizontal),/components/divider/#responsive-lgdivider-horizontal
+Divider with colors,/components/divider/#divider-with-colors
+Divider in different positions,/components/divider/#divider-in-different-positions
+Divider in different positions (horizontal),/components/divider/#divider-in-different-positions-horizontal
+Navbar with title only,/components/navbar/#navbar-with-title-only
+Navbar with title and icon,/components/navbar/#navbar-with-title-and-icon
+Navbar with icon at start and end,/components/navbar/#navbar-with-icon-at-start-and-end
+Navbar with menu and submenu,/components/navbar/#navbar-with-menu-and-submenu
+Navbar with search input and dropdown,/components/navbar/#navbar-with-search-input-and-dropdown
+"Navbar with icon, indicator and dropdown",/components/navbar/#navbar-with-icon-indicator-and-dropdown
+"Navbar with dropdown, center logo and icon",/components/navbar/#navbar-with-dropdown-center-logo-and-icon
+"responsive (dropdown menu on small screen, center menu on large screen)",/components/navbar/#responsive-dropdown-menu-on-small-screen-center-menu-on-large-screen
+Navbar with colors,/components/navbar/#navbar-with-colors
+toast with alert inside,/components/toast/#toast-with-alert-inside
+toast-top toast-start,/components/toast/#toast-top-toast-start
+toast-top toast-center,/components/toast/#toast-top-toast-center
+toast-top toast-end,/components/toast/#toast-top-toast-end
+toast-start toast-middle,/components/toast/#toast-start-toast-middle
+toast-center toast-middle,/components/toast/#toast-center-toast-middle
+toast-end toast-middle,/components/toast/#toast-end-toast-middle
+toast-start toast-bottom (default),/components/toast/#toast-start-toast-bottom-default
+toast-center toast-bottom (default),/components/toast/#toast-center-toast-bottom-default
+toast-end (default) toast-bottom (default),/components/toast/#toast-end-default-toast-bottom-default
+Alert,/components/alert/#alert
+Info color,/components/alert/#info-color
+Success color,/components/alert/#success-color
+Warning color,/components/alert/#warning-color
+Error color,/components/alert/#error-color
+Alert soft style,/components/alert/#alert-soft-style
+Alert outline style,/components/alert/#alert-outline-style
+Alert dash style,/components/alert/#alert-dash-style
+Alert with buttons + responsive,/components/alert/#alert-with-buttons-responsive
+Alert with title and description,/components/alert/#alert-with-title-and-description
+Menu,/components/menu/#menu
+"Responsive: vertical on small screen, horizontal on large screen",/components/menu/#responsive-vertical-on-small-screen-horizontal-on-large-screen
+Menu with icon only,/components/menu/#menu-with-icon-only
+Menu with icon only (horizontal),/components/menu/#menu-with-icon-only-horizontal
+Menu with icon only with tooltip,/components/menu/#menu-with-icon-only-with-tooltip
+Menu with icon only (horizontal) with tooltip,/components/menu/#menu-with-icon-only-horizontal-with-tooltip
+Menu sizes,/components/menu/#menu-sizes
+Menu with disabled items,/components/menu/#menu-with-disabled-items
+Menu with icons,/components/menu/#menu-with-icons
+Menu with icons and badge (responsive),/components/menu/#menu-with-icons-and-badge-responsive
+Menu without padding and border radius,/components/menu/#menu-without-padding-and-border-radius
+Menu with title,/components/menu/#menu-with-title
+Menu with title as a parent,/components/menu/#menu-with-title-as-a-parent
+Submenu,/components/menu/#submenu
+Collapsible submenu,/components/menu/#collapsible-submenu
+Collapsible submenu that works with class names,/components/menu/#collapsible-submenu-that-works-with-class-names
+File tree,/components/menu/#file-tree
+Menu with active item,/components/menu/#menu-with-active-item
+Horizontal menu,/components/menu/#horizontal-menu
+Horizontal submenu,/components/menu/#horizontal-submenu
+Mega menu with submenu (responsive),/components/menu/#mega-menu-with-submenu-responsive
+Collapsible with submenu (responsive),/components/menu/#collapsible-with-submenu-responsive
+Pagination with an active button,/components/pagination/#pagination-with-an-active-button
+Sizes,/components/pagination/#sizes
+With a disabled button,/components/pagination/#with-a-disabled-button
+Extra small buttons,/components/pagination/#extra-small-buttons
+Nex/Prev outline buttons with equal width,/components/pagination/#nexprev-outline-buttons-with-equal-width
+Using radio inputs,/components/pagination/#using-radio-inputs
+Swap text,/components/swap/#swap-text
+Swap volume icons,/components/swap/#swap-volume-icons
+Swap icons with rotate effect,/components/swap/#swap-icons-with-rotate-effect
+Hamburger button,/components/swap/#hamburger-button
+Swap icons with flip effect,/components/swap/#swap-icons-with-flip-effect
+Activate using class name instead of checkbox,/components/swap/#activate-using-class-name-instead-of-checkbox
+Link,/components/link/#link
+Link,/components/link/#link
+Primary color,/components/link/#primary-color
+Secondary color,/components/link/#secondary-color
+Accent color,/components/link/#accent-color
+Success color,/components/link/#success-color
+Info color,/components/link/#info-color
+Warning color,/components/link/#warning-color
+Error color,/components/link/#error-color
+Show underline only on hover,/components/link/#show-underline-only-on-hover
+Text input,/components/input/#text-input
+Text input with text label inside,/components/input/#text-input-with-text-label-inside
+Ghost style,/components/input/#ghost-style
+With fieldset and fieldset-legend,/components/input/#with-fieldset-and-fieldset-legend
+Input colors,/components/input/#input-colors
+Sizes,/components/input/#sizes
+Disabled,/components/input/#disabled
+Input types,/components/input/#input-types
+Text input with data list suggestion,/components/input/#text-input-with-data-list-suggestion
+Date input,/components/input/#date-input
+Time input,/components/input/#time-input
+datetime-local input,/components/input/#datetime-local-input
+Username text input with icon and validator,/components/input/#username-text-input-with-icon-and-validator
+Search input with icon,/components/input/#search-input-with-icon
+Email input with icon and validator,/components/input/#email-input-with-icon-and-validator
+"Email input with icon, validator, button, join",/components/input/#email-input-with-icon-validator-button-join
+Password input with icon and validator,/components/input/#password-input-with-icon-and-validator
+Number input with validator,/components/input/#number-input-with-validator
+Telephone number input with icon and validator,/components/input/#telephone-number-input-with-icon-and-validator
+URL with icon and validator,/components/input/#url-with-icon-and-validator
+Table,/components/table/#table
+Table with border and background,/components/table/#table-with-border-and-background
+Table with an active row,/components/table/#table-with-an-active-row
+Table with a row that highlights on hover,/components/table/#table-with-a-row-that-highlights-on-hover
+Zebra,/components/table/#zebra
+Table with visual elements,/components/table/#table-with-visual-elements
+Table xs,/components/table/#table-xs
+Table with pinned-rows,/components/table/#table-with-pinned-rows
+Table with pinned-rows and pinned-cols,/components/table/#table-with-pinned-rows-and-pinned-cols
 There are 3 methods to use a dropdowns,/components/dropdown/#there-are-3-methods-to-use-a-dropdowns
 Method 1. details and summary,/components/dropdown/#method-1-details-and-summary
 Dropdown using details and summary,/components/dropdown/#dropdown-using-details-and-summary
@@ -205,31 +854,24 @@ More examples,/components/dropdown/#more-examples
 Card as dropdown,/components/dropdown/#card-as-dropdown
 Dropdown in navbar,/components/dropdown/#dropdown-in-navbar
 Helper dropdown,/components/dropdown/#helper-dropdown
-window mockup with border,/components/mockup-window/#window-mockup-with-border
-window mockup with background color,/components/mockup-window/#window-mockup-with-background-color
-Theme Controller using a toggle,/components/theme-controller/#theme-controller-using-a-toggle
-Theme Controller using a checkbox,/components/theme-controller/#theme-controller-using-a-checkbox
-Theme Controller using a swap,/components/theme-controller/#theme-controller-using-a-swap
-Theme Controller using a toggle with text,/components/theme-controller/#theme-controller-using-a-toggle-with-text
-Theme Controller using a toggle with icons,/components/theme-controller/#theme-controller-using-a-toggle-with-icons
-Theme Controller using a toggle with icons inside,/components/theme-controller/#theme-controller-using-a-toggle-with-icons-inside
-Theme Controller using a toggle with custom colors,/components/theme-controller/#theme-controller-using-a-toggle-with-custom-colors
-Theme Controller using a radio input,/components/theme-controller/#theme-controller-using-a-radio-input
-Theme Controller using a radio button,/components/theme-controller/#theme-controller-using-a-radio-button
-Theme Controller using a dropdown,/components/theme-controller/#theme-controller-using-a-dropdown
-tabs,/components/tab/#tabs
-tabs-border,/components/tab/#tabs-border
-tabs-lift,/components/tab/#tabs-lift
-tabs-box,/components/tab/#tabs-box
-tabs-box using radio inputs,/components/tab/#tabs-box-using-radio-inputs
-Sizes,/components/tab/#sizes
-radio tabs-border + tab content,/components/tab/#radio-tabs-border-tab-content
-radio tabs-lift + tab content,/components/tab/#radio-tabs-lift-tab-content
-radio tabs-lift with icons + tab content,/components/tab/#radio-tabs-lift-with-icons-tab-content
-radio tabs-lift + tab content on bottom,/components/tab/#radio-tabs-lift-tab-content-on-bottom
-radio tabs-box + tab content,/components/tab/#radio-tabs-box-tab-content
-tabs-box with a horizontal scroll when there's no space,/components/tab/#tabs-box-with-a-horizontal-scroll-when-theres-no-space
-Tabs with custom color,/components/tab/#tabs-with-custom-color
+File input,/components/file-input/#file-input
+File input ghost,/components/file-input/#file-input-ghost
+With fieldset and label,/components/file-input/#with-fieldset-and-label
+Sizes,/components/file-input/#sizes
+Primary color,/components/file-input/#primary-color
+Disabled,/components/file-input/#disabled
+Fieldset fieldset-legend and label,/components/fieldset/#fieldset-fieldset-legend-and-label
+Fieldset with background and border,/components/fieldset/#fieldset-with-background-and-border
+Fieldset with multiple inputs,/components/fieldset/#fieldset-with-multiple-inputs
+Fieldset with multiple join items,/components/fieldset/#fieldset-with-multiple-join-items
+Login form with fieldset,/components/fieldset/#login-form-with-fieldset
+Kbd,/components/kbd/#kbd
+Kbd sizes,/components/kbd/#kbd-sizes
+In text,/components/kbd/#in-text
+Key combination,/components/kbd/#key-combination
+Function Keys,/components/kbd/#function-keys
+A full keyboard,/components/kbd/#a-full-keyboard
+Arrow Keys,/components/kbd/#arrow-keys
 There are 3 methods to use modals,/components/modal/#there-are-3-methods-to-use-modals
 Method 1. HTML dialog element `recommended`,/components/modal/#method-1-html-dialog-element-recommended
 Dialog modal,/components/modal/#dialog-modal
@@ -242,460 +884,17 @@ Modal using checkbox,/components/modal/#modal-using-checkbox
 Modal that closes when clicked outside,/components/modal/#modal-that-closes-when-clicked-outside
 Method 3. using anchor links `legacy`,/components/modal/#method-3-using-anchor-links-legacy
 Modal using anchor link,/components/modal/#modal-using-anchor-link
-Accordion using radio inputs,/components/accordion/#accordion-using-radio-inputs
-Accordion with arrow icon,/components/accordion/#accordion-with-arrow-icon
-Accordion with plus/minus icon,/components/accordion/#accordion-with-plusminus-icon
-Using Accordion and Join together,/components/accordion/#using-accordion-and-join-together
-iPhone mockup,/components/mockup-phone/#iphone-mockup
-With color and wallpaper,/components/mockup-phone/#with-color-and-wallpaper
-Join,/components/join/#join
-Group items vertically,/components/join/#group-items-vertically
-Responsive: it's vertical on small screen and horizontal on large screen,/components/join/#responsive-its-vertical-on-small-screen-and-horizontal-on-large-screen
-With extra elements in the group,/components/join/#with-extra-elements-in-the-group
-Custom border radius,/components/join/#custom-border-radius
-Join radio inputs with btn style,/components/join/#join-radio-inputs-with-btn-style
-Checkbox,/components/checkbox/#checkbox
-With fieldset and label,/components/checkbox/#with-fieldset-and-label
-Sizes,/components/checkbox/#sizes
-Colors,/components/checkbox/#colors
-Disabled,/components/checkbox/#disabled
-Indeterminate,/components/checkbox/#indeterminate
-Checkbox with custom colors,/components/checkbox/#checkbox-with-custom-colors
-Select,/components/select/#select
-Ghost (no background),/components/select/#ghost-no-background
-With fieldset and labels,/components/select/#with-fieldset-and-labels
-Primary color,/components/select/#primary-color
-Secondary color,/components/select/#secondary-color
-Accent color,/components/select/#accent-color
-Neutral color,/components/select/#neutral-color
-Info color,/components/select/#info-color
-Success color,/components/select/#success-color
-Warning color,/components/select/#warning-color
-Error color,/components/select/#error-color
-Sizes,/components/select/#sizes
-Disabled,/components/select/#disabled
-Using OS native style for the options dropdown,/components/select/#using-os-native-style-for-the-options-dropdown
-Radio,/components/radio/#radio
-Radio sizes,/components/radio/#radio-sizes
-Neutral color,/components/radio/#neutral-color
-Primary color,/components/radio/#primary-color
-Secondary color,/components/radio/#secondary-color
-Accent color,/components/radio/#accent-color
-Success color,/components/radio/#success-color
-Warning color,/components/radio/#warning-color
-Info color,/components/radio/#info-color
-Error color,/components/radio/#error-color
-Disabled,/components/radio/#disabled
-Radio with custom colors,/components/radio/#radio-with-custom-colors
-Radial progress,/components/radial-progress/#radial-progress
-Different values,/components/radial-progress/#different-values
-Custom color,/components/radial-progress/#custom-color
-With background color and border,/components/radial-progress/#with-background-color-and-border
-Custom size and custom thickness,/components/radial-progress/#custom-size-and-custom-thickness
-Avatar,/components/avatar/#avatar
-Avatar in custom sizes,/components/avatar/#avatar-in-custom-sizes
-Avatar rounded,/components/avatar/#avatar-rounded
-Avatar with mask,/components/avatar/#avatar-with-mask
-Avatar group,/components/avatar/#avatar-group
-Avatar group with counter,/components/avatar/#avatar-group-with-counter
-Avatar with ring,/components/avatar/#avatar-with-ring
-Avatar with presence indicator,/components/avatar/#avatar-with-presence-indicator
-Avatar placeholder,/components/avatar/#avatar-placeholder
-toast with alert inside,/components/toast/#toast-with-alert-inside
-toast-top toast-start,/components/toast/#toast-top-toast-start
-toast-top toast-center,/components/toast/#toast-top-toast-center
-toast-top toast-end,/components/toast/#toast-top-toast-end
-toast-start toast-middle,/components/toast/#toast-start-toast-middle
-toast-center toast-middle,/components/toast/#toast-center-toast-middle
-toast-end toast-middle,/components/toast/#toast-end-toast-middle
-toast-start toast-bottom (default),/components/toast/#toast-start-toast-bottom-default
-toast-center toast-bottom (default),/components/toast/#toast-center-toast-bottom-default
-toast-end (default) toast-bottom (default),/components/toast/#toast-end-default-toast-bottom-default
-mockup code with line prefix,/components/mockup-code/#mockup-code-with-line-prefix
-Multi line,/components/mockup-code/#multi-line
-Highlighted line,/components/mockup-code/#highlighted-line
-Long line will scroll,/components/mockup-code/#long-line-will-scroll
-Without prefix,/components/mockup-code/#without-prefix
-With color,/components/mockup-code/#with-color
-browser mockup with border,/components/mockup-browser/#browser-mockup-with-border
-browser mockup with background color,/components/mockup-browser/#browser-mockup-with-background-color
-Snap to start (default),/components/carousel/#snap-to-start-default
-Snap to center,/components/carousel/#snap-to-center
-Snap to end,/components/carousel/#snap-to-end
-Carousel with full width items,/components/carousel/#carousel-with-full-width-items
-Vertical carousel,/components/carousel/#vertical-carousel
-Carousel with half width items,/components/carousel/#carousel-with-half-width-items
-Full-bleed carousel,/components/carousel/#full-bleed-carousel
-Carousel with indicator buttons,/components/carousel/#carousel-with-indicator-buttons
-Carousel with next/prev buttons,/components/carousel/#carousel-with-nextprev-buttons
-Divider,/components/divider/#divider
-Divider horizontal,/components/divider/#divider-horizontal
-Divider with no text,/components/divider/#divider-with-no-text
-responsive (lg:divider-horizontal),/components/divider/#responsive-lgdivider-horizontal
-Divider with colors,/components/divider/#divider-with-colors
-Divider in different positions,/components/divider/#divider-in-different-positions
-Divider in different positions (horizontal),/components/divider/#divider-in-different-positions-horizontal
-Button,/components/button/#button
-Button sizes,/components/button/#button-sizes
-Responsive button,/components/button/#responsive-button
-Buttons colors,/components/button/#buttons-colors
-Soft buttons,/components/button/#soft-buttons
-Outline buttons,/components/button/#outline-buttons
-Dash buttons,/components/button/#dash-buttons
-neutral button with outline or dash style,/components/button/#neutral-button-with-outline-or-dash-style
-Active buttons,/components/button/#active-buttons
-Buttons ghost and button link,/components/button/#buttons-ghost-and-button-link
-Wide button,/components/button/#wide-button
-Buttons with any HTML tags,/components/button/#buttons-with-any-html-tags
-Disabled buttons,/components/button/#disabled-buttons
-Square button and circle button,/components/button/#square-button-and-circle-button
-Button with Icon,/components/button/#button-with-icon
-Button block,/components/button/#button-block
-Button with loading spinner,/components/button/#button-with-loading-spinner
-Login buttons,/components/button/#login-buttons
-Fieldset fieldset-legend and label,/components/fieldset/#fieldset-fieldset-legend-and-label
-Fieldset with background and border,/components/fieldset/#fieldset-with-background-and-border
-Fieldset with multiple inputs,/components/fieldset/#fieldset-with-multiple-inputs
-Fieldset with multiple join items,/components/fieldset/#fieldset-with-multiple-join-items
-Login form with fieldset,/components/fieldset/#login-form-with-fieldset
-Horizontal,/components/steps/#horizontal
-Vertical,/components/steps/#vertical
-"responsive (vertical on small screen, horizontal on large screen)",/components/steps/#responsive-vertical-on-small-screen-horizontal-on-large-screen
-With custom content in step-icon,/components/steps/#with-custom-content-in-step-icon
-With data-content,/components/steps/#with-data-content
-Custom colors,/components/steps/#custom-colors
-With scrollable wrapper,/components/steps/#with-scrollable-wrapper
-Navbar with title only,/components/navbar/#navbar-with-title-only
-Navbar with title and icon,/components/navbar/#navbar-with-title-and-icon
-Navbar with icon at start and end,/components/navbar/#navbar-with-icon-at-start-and-end
-Navbar with menu and submenu,/components/navbar/#navbar-with-menu-and-submenu
-Navbar with search input and dropdown,/components/navbar/#navbar-with-search-input-and-dropdown
-"Navbar with icon, indicator and dropdown",/components/navbar/#navbar-with-icon-indicator-and-dropdown
-"Navbar with dropdown, center logo and icon",/components/navbar/#navbar-with-dropdown-center-logo-and-icon
-"responsive (dropdown menu on small screen, center menu on large screen)",/components/navbar/#responsive-dropdown-menu-on-small-screen-center-menu-on-large-screen
-Navbar with colors,/components/navbar/#navbar-with-colors
-Stat,/components/stat/#stat
-Stat with icons or image,/components/stat/#stat-with-icons-or-image
-Stat,/components/stat/#stat
-Centered items,/components/stat/#centered-items
-Vertical,/components/stat/#vertical
-"Responsive (vertical on small screen, horizontal on large screen)",/components/stat/#responsive-vertical-on-small-screen-horizontal-on-large-screen
-With custom colors and button,/components/stat/#with-custom-colors-and-button
-Countdown,/components/countdown/#countdown
-Large text with 2 digits,/components/countdown/#large-text-with-2-digits
-Clock countdown,/components/countdown/#clock-countdown
-Clock countdown with colons,/components/countdown/#clock-countdown-with-colons
-Large text with labels,/components/countdown/#large-text-with-labels
-Large text with labels under,/components/countdown/#large-text-with-labels-under
-In boxes,/components/countdown/#in-boxes
-Pagination with an active button,/components/pagination/#pagination-with-an-active-button
-Sizes,/components/pagination/#sizes
-With a disabled button,/components/pagination/#with-a-disabled-button
-Extra small buttons,/components/pagination/#extra-small-buttons
-Nex/Prev outline buttons with equal width,/components/pagination/#nexprev-outline-buttons-with-equal-width
-Using radio inputs,/components/pagination/#using-radio-inputs
-Skeleton,/components/skeleton/#skeleton
-Skeleton - circle with content,/components/skeleton/#skeleton-circle-with-content
-Skeleton - rectangle with content,/components/skeleton/#skeleton-rectangle-with-content
-Card,/components/card/#card
-Pricing Card,/components/card/#pricing-card
-Card sizes,/components/card/#card-sizes
-Card with a card-border,/components/card/#card-with-a-card-border
-Card with a dash border,/components/card/#card-with-a-dash-border
-Card with badge,/components/card/#card-with-badge
-Card with bottom image,/components/card/#card-with-bottom-image
-Card with centered content and paddings,/components/card/#card-with-centered-content-and-paddings
-Card with image overlay,/components/card/#card-with-image-overlay
-Card with no image,/components/card/#card-with-no-image
-Card with custom color,/components/card/#card-with-custom-color
-Centered card with neutral color,/components/card/#centered-card-with-neutral-color
-Card with action on top,/components/card/#card-with-action-on-top
-Card with image on side,/components/card/#card-with-image-on-side
-"Responsive card (vertical on small screen, horizontal on large screen)",/components/card/#responsive-card-vertical-on-small-screen-horizontal-on-large-screen
-Structure,/components/drawer/#structure
-Functionality,/components/drawer/#functionality
-Drawer sidebar,/components/drawer/#drawer-sidebar
-Navbar menu for desktop + sidebar drawer for mobile,/components/drawer/#navbar-menu-for-desktop-sidebar-drawer-for-mobile
-"Responsive: Sidebar is always visible on large screen, can be toggled on small screen",/components/drawer/#responsive-sidebar-is-always-visible-on-large-screen-can-be-toggled-on-small-screen
-Icon-only drawer sidebar when it's closed. Using is-drawer-close and is-drawer-open variants,/components/drawer/#icon-only-drawer-sidebar-when-its-closed-using-is-drawer-close-and-is-drawer-open-variants
-Drawer sidebar that opens from right side of page,/components/drawer/#drawer-sidebar-that-opens-from-right-side-of-page
-Status Indicator,/components/indicator/#status-indicator
-Badge as indicator,/components/indicator/#badge-as-indicator
-for button,/components/indicator/#for-button
-for tab,/components/indicator/#for-tab
-for avatar,/components/indicator/#for-avatar
-for an input,/components/indicator/#for-an-input
-A button as an indicator for a card,/components/indicator/#a-button-as-an-indicator-for-a-card
-in center of an image,/components/indicator/#in-center-of-an-image
-indicator-top (default) indicator-start,/components/indicator/#indicator-top-default-indicator-start
-indicator-top (default) indicator-center,/components/indicator/#indicator-top-default-indicator-center
-indicator-top (default) indicator-end (default),/components/indicator/#indicator-top-default-indicator-end-default
-indicator-middle indicator-start,/components/indicator/#indicator-middle-indicator-start
-indicator-middle indicator-center,/components/indicator/#indicator-middle-indicator-center
-indicator-middle indicator-end (default),/components/indicator/#indicator-middle-indicator-end-default
-indicator-bottom indicator-start,/components/indicator/#indicator-bottom-indicator-start
-indicator-bottom indicator-center,/components/indicator/#indicator-bottom-indicator-center
-indicator-bottom indicator-end (default),/components/indicator/#indicator-bottom-indicator-end-default
-multiple indicators,/components/indicator/#multiple-indicators
-Responsive,/components/indicator/#responsive
-"Footer (vertical by default, horizontal for sm and up)",/components/footer/#footer-vertical-by-default-horizontal-for-sm-and-up
-Footer with a logo section,/components/footer/#footer-with-a-logo-section
-Footer with a form,/components/footer/#footer-with-a-form
-Footer with logo and social icons,/components/footer/#footer-with-logo-and-social-icons
-Footer with copyright text,/components/footer/#footer-with-copyright-text
-Footer with copyright text and social icons,/components/footer/#footer-with-copyright-text-and-social-icons
-Footer with links and social icons,/components/footer/#footer-with-links-and-social-icons
-Footer with 2 rows,/components/footer/#footer-with-2-rows
-Centered footer with logo and social icons,/components/footer/#centered-footer-with-logo-and-social-icons
-Centered footer with social icons,/components/footer/#centered-footer-with-social-icons
-Two footer,/components/footer/#two-footer
-Loading spinner,/components/loading/#loading-spinner
-Loading dots,/components/loading/#loading-dots
-Loading ring,/components/loading/#loading-ring
-Loading ball,/components/loading/#loading-ball
-Loading bars,/components/loading/#loading-bars
-Loading infinity,/components/loading/#loading-infinity
-Loading with colors,/components/loading/#loading-with-colors
-Menu,/components/menu/#menu
-"Responsive: vertical on small screen, horizontal on large screen",/components/menu/#responsive-vertical-on-small-screen-horizontal-on-large-screen
-Menu with icon only,/components/menu/#menu-with-icon-only
-Menu with icon only (horizontal),/components/menu/#menu-with-icon-only-horizontal
-Menu with icon only with tooltip,/components/menu/#menu-with-icon-only-with-tooltip
-Menu with icon only (horizontal) with tooltip,/components/menu/#menu-with-icon-only-horizontal-with-tooltip
-Menu sizes,/components/menu/#menu-sizes
-Menu with disabled items,/components/menu/#menu-with-disabled-items
-Menu with icons,/components/menu/#menu-with-icons
-Menu with icons and badge (responsive),/components/menu/#menu-with-icons-and-badge-responsive
-Menu without padding and border radius,/components/menu/#menu-without-padding-and-border-radius
-Menu with title,/components/menu/#menu-with-title
-Menu with title as a parent,/components/menu/#menu-with-title-as-a-parent
-Submenu,/components/menu/#submenu
-Collapsible submenu,/components/menu/#collapsible-submenu
-Collapsible submenu that works with class names,/components/menu/#collapsible-submenu-that-works-with-class-names
-File tree,/components/menu/#file-tree
-Menu with active item,/components/menu/#menu-with-active-item
-Horizontal menu,/components/menu/#horizontal-menu
-Horizontal submenu,/components/menu/#horizontal-submenu
-Mega menu with submenu (responsive),/components/menu/#mega-menu-with-submenu-responsive
-Collapsible with submenu (responsive),/components/menu/#collapsible-with-submenu-responsive
-Toggle (switch),/components/toggle/#toggle-switch
-With fieldset and label,/components/toggle/#with-fieldset-and-label
-Sizes,/components/toggle/#sizes
-Colors,/components/toggle/#colors
-Disabled,/components/toggle/#disabled
-Indeterminate,/components/toggle/#indeterminate
-Toggle with icons inside,/components/toggle/#toggle-with-icons-inside
-Toggle with custom colors,/components/toggle/#toggle-with-custom-colors
-Badge,/components/badge/#badge
-Badge sizes,/components/badge/#badge-sizes
-Badge with colors,/components/badge/#badge-with-colors
-Badge with soft style,/components/badge/#badge-with-soft-style
-Badge with outline style,/components/badge/#badge-with-outline-style
-Badge with dash style,/components/badge/#badge-with-dash-style
-neutral badge with outline or dash style,/components/badge/#neutral-badge-with-outline-or-dash-style
-Badge ghost,/components/badge/#badge-ghost
-Empty badge,/components/badge/#empty-badge
-Badge with icon,/components/badge/#badge-with-icon
-Badge in a text,/components/badge/#badge-in-a-text
-Badge in a button,/components/badge/#badge-in-a-button
-Link,/components/link/#link
-Link,/components/link/#link
-Primary color,/components/link/#primary-color
-Secondary color,/components/link/#secondary-color
-Accent color,/components/link/#accent-color
-Success color,/components/link/#success-color
-Info color,/components/link/#info-color
-Warning color,/components/link/#warning-color
-Error color,/components/link/#error-color
-Show underline only on hover,/components/link/#show-underline-only-on-hover
-Validator,/components/validator/#validator
-Validator and validator-hint,/components/validator/#validator-and-validator-hint
-Password requirement validator,/components/validator/#password-requirement-validator
-Username requirement validator,/components/validator/#username-requirement-validator
-Phone Number requirement validator,/components/validator/#phone-number-requirement-validator
-URL input requirement validator,/components/validator/#url-input-requirement-validator
-Date input requirement validator,/components/validator/#date-input-requirement-validator
-Number input requirement validator,/components/validator/#number-input-requirement-validator
-Checkbox requirement validator,/components/validator/#checkbox-requirement-validator
-Toggle requirement validator,/components/validator/#toggle-requirement-validator
-Select requirement validator,/components/validator/#select-requirement-validator
-List (second column grows - default),/components/list/#list-second-column-grows-default
-List (third column grows),/components/list/#list-third-column-grows
-List (third column wraps to next row),/components/list/#list-third-column-wraps-to-next-row
-Tooltip,/components/tooltip/#tooltip
-Tooltip with tooltip-content,/components/tooltip/#tooltip-with-tooltip-content
-Force open,/components/tooltip/#force-open
-Top,/components/tooltip/#top
-Bottom,/components/tooltip/#bottom
-Left,/components/tooltip/#left
-Right,/components/tooltip/#right
-Neutral color,/components/tooltip/#neutral-color
-Primary color,/components/tooltip/#primary-color
-Secondary color,/components/tooltip/#secondary-color
-Accent color,/components/tooltip/#accent-color
-Info color,/components/tooltip/#info-color
-Success color,/components/tooltip/#success-color
-Warning color,/components/tooltip/#warning-color
-Error color,/components/tooltip/#error-color
-Responsive tooltip. only show for large screen,/components/tooltip/#responsive-tooltip-only-show-for-large-screen
-Table,/components/table/#table
-Table with border and background,/components/table/#table-with-border-and-background
-Table with an active row,/components/table/#table-with-an-active-row
-Table with a row that highlights on hover,/components/table/#table-with-a-row-that-highlights-on-hover
-Zebra,/components/table/#zebra
-Table with visual elements,/components/table/#table-with-visual-elements
-Table xs,/components/table/#table-xs
-Table with pinned-rows,/components/table/#table-with-pinned-rows
-Table with pinned-rows and pinned-cols,/components/table/#table-with-pinned-rows-and-pinned-cols
-Centered hero,/components/hero/#centered-hero
-Hero with figure,/components/hero/#hero-with-figure
-Hero with figure but reverse order,/components/hero/#hero-with-figure-but-reverse-order
-Hero with form,/components/hero/#hero-with-form
-Hero with overlay image,/components/hero/#hero-with-overlay-image
-Breadcrumbs,/components/breadcrumbs/#breadcrumbs
-Breadcrumbs with icons,/components/breadcrumbs/#breadcrumbs-with-icons
-Breadcrumbs with max-width,/components/breadcrumbs/#breadcrumbs-with-max-width
-Collapse with focus,/components/collapse/#collapse-with-focus
-Collapse with checkbox,/components/collapse/#collapse-with-checkbox
-Collapse using details and summary tag,/components/collapse/#collapse-using-details-and-summary-tag
-Without border and background color,/components/collapse/#without-border-and-background-color
-With arrow icon,/components/collapse/#with-arrow-icon
-With arrow plus/minus icon,/components/collapse/#with-arrow-plusminus-icon
-Moving collapse icon to the start,/components/collapse/#moving-collapse-icon-to-the-start
-Force open,/components/collapse/#force-open
-Force close,/components/collapse/#force-close
-Custom colors for collapse that works with focus,/components/collapse/#custom-colors-for-collapse-that-works-with-focus
-Custom colors for collapse that works with checkbox,/components/collapse/#custom-colors-for-collapse-that-works-with-checkbox
-3 divs in a stack,/components/stack/#3-divs-in-a-stack
-stacked images,/components/stack/#stacked-images
-stacked cards,/components/stack/#stacked-cards
-stacked cards (top direction),/components/stack/#stacked-cards-top-direction
-stacked cards (start direction),/components/stack/#stacked-cards-start-direction
-stacked cards (end direction),/components/stack/#stacked-cards-end-direction
-stacked cards with shadow,/components/stack/#stacked-cards-with-shadow
-stacked cards,/components/stack/#stacked-cards
-Diff,/components/diff/#diff
-Diff text,/components/diff/#diff-text
+Rating,/components/rating/#rating
+Read-only Rating,/components/rating/#read-only-rating
+mask-star-2 with warning color,/components/rating/#mask-star-2-with-warning-color
+mask-heart with multiple colors,/components/rating/#mask-heart-with-multiple-colors
+mask-star-2 with green-500 color,/components/rating/#mask-star-2-with-green-500-color
+Sizes,/components/rating/#sizes
+with `rating-hidden`,/components/rating/#with-rating-hidden
+half stars,/components/rating/#half-stars
 "Filter using HTML form, radio buttons and reset button",/components/filter/#filter-using-html-form-radio-buttons-and-reset-button
 Filter without HTML form,/components/filter/#filter-without-html-form
 "Filter using HTML form, checkboxes, and a reset button",/components/filter/#filter-using-html-form-checkboxes-and-a-reset-button
-Dock,/components/dock/#dock
-Dock Extra Small size,/components/dock/#dock-extra-small-size
-Dock Small size,/components/dock/#dock-small-size
-Dock Medium size,/components/dock/#dock-medium-size
-Dock Large size,/components/dock/#dock-large-size
-Dock Extra Large size,/components/dock/#dock-extra-large-size
-Dock with custom colors,/components/dock/#dock-with-custom-colors
-Squircle,/components/mask/#squircle
-Heart,/components/mask/#heart
-Hexagon,/components/mask/#hexagon
-Hexagon-2 (horizontal hexagon),/components/mask/#hexagon-2-horizontal-hexagon
-Decagon,/components/mask/#decagon
-Pentagon,/components/mask/#pentagon
-Diamond,/components/mask/#diamond
-Square,/components/mask/#square
-Circle,/components/mask/#circle
-Star,/components/mask/#star
-Star-2 (bold star),/components/mask/#star-2-bold-star
-Triangle (pointing top),/components/mask/#triangle-pointing-top
-Triangle-2 (pointing down),/components/mask/#triangle-2-pointing-down
-Triangle-3 (pointing left),/components/mask/#triangle-3-pointing-left
-Triangle-4 (pointing right),/components/mask/#triangle-4-pointing-right
-Label for input,/components/label/#label-for-input
-Label for input at the end,/components/label/#label-for-input-at-the-end
-Label for select,/components/label/#label-for-select
-Label for date input,/components/label/#label-for-date-input
-Floating Label,/components/label/#floating-label
-Floating Label with Different Sizes,/components/label/#floating-label-with-different-sizes
-Status,/components/status/#status
-Status sizes,/components/status/#status-sizes
-Status with colors,/components/status/#status-with-colors
-Status with ping animation,/components/status/#status-with-ping-animation
-Status with bounce animation,/components/status/#status-with-bounce-animation
-Alert,/components/alert/#alert
-Info color,/components/alert/#info-color
-Success color,/components/alert/#success-color
-Warning color,/components/alert/#warning-color
-Error color,/components/alert/#error-color
-Alert soft style,/components/alert/#alert-soft-style
-Alert outline style,/components/alert/#alert-outline-style
-Alert dash style,/components/alert/#alert-dash-style
-Alert with buttons + responsive,/components/alert/#alert-with-buttons-responsive
-Alert with title and description,/components/alert/#alert-with-title-and-description
-FAB and Speed Dial (vertical),/components/fab/#fab-and-speed-dial-vertical
-FAB and Speed Dial with SVG icons,/components/fab/#fab-and-speed-dial-with-svg-icons
-FAB and Speed Dial with labels,/components/fab/#fab-and-speed-dial-with-labels
-FAB and Speed Dial with rectangle buttons,/components/fab/#fab-and-speed-dial-with-rectangle-buttons
-FAB and Speed Dial with labels and fab-close button,/components/fab/#fab-and-speed-dial-with-labels-and-fab-close-button
-FAB and Speed Dial with labels and fab-main-action Button,/components/fab/#fab-and-speed-dial-with-labels-and-fab-main-action-button
-A single FAB (Floating Action Button),/components/fab/#a-single-fab-floating-action-button
-FAB Flower and Speed Dial,/components/fab/#fab-flower-and-speed-dial
-FAB and Flower Speed Dial with SVG icons,/components/fab/#fab-and-flower-speed-dial-with-svg-icons
-FAB and Flower Speed Dial with tooltip,/components/fab/#fab-and-flower-speed-dial-with-tooltip
-Kbd,/components/kbd/#kbd
-Kbd sizes,/components/kbd/#kbd-sizes
-In text,/components/kbd/#in-text
-Key combination,/components/kbd/#key-combination
-Function Keys,/components/kbd/#function-keys
-A full keyboard,/components/kbd/#a-full-keyboard
-Arrow Keys,/components/kbd/#arrow-keys
-Text input,/components/input/#text-input
-Text input with text label inside,/components/input/#text-input-with-text-label-inside
-Ghost style,/components/input/#ghost-style
-With fieldset and fieldset-legend,/components/input/#with-fieldset-and-fieldset-legend
-Input colors,/components/input/#input-colors
-Sizes,/components/input/#sizes
-Disabled,/components/input/#disabled
-Input types,/components/input/#input-types
-Text input with data list suggestion,/components/input/#text-input-with-data-list-suggestion
-Date input,/components/input/#date-input
-Time input,/components/input/#time-input
-datetime-local input,/components/input/#datetime-local-input
-Username text input with icon and validator,/components/input/#username-text-input-with-icon-and-validator
-Search input with icon,/components/input/#search-input-with-icon
-Email input with icon and validator,/components/input/#email-input-with-icon-and-validator
-"Email input with icon, validator, button, join",/components/input/#email-input-with-icon-validator-button-join
-Password input with icon and validator,/components/input/#password-input-with-icon-and-validator
-Number input with validator,/components/input/#number-input-with-validator
-Telephone number input with icon and validator,/components/input/#telephone-number-input-with-icon-and-validator
-URL with icon and validator,/components/input/#url-with-icon-and-validator
-File input,/components/file-input/#file-input
-File input ghost,/components/file-input/#file-input-ghost
-With fieldset and label,/components/file-input/#with-fieldset-and-label
-Sizes,/components/file-input/#sizes
-Primary color,/components/file-input/#primary-color
-Disabled,/components/file-input/#disabled
-Timeline with text on both sides and icon,/components/timeline/#timeline-with-text-on-both-sides-and-icon
-Timeline with bottom side only,/components/timeline/#timeline-with-bottom-side-only
-Timeline with top side only,/components/timeline/#timeline-with-top-side-only
-Timeline with different sides,/components/timeline/#timeline-with-different-sides
-Timeline with colorful lines,/components/timeline/#timeline-with-colorful-lines
-Timeline without icons,/components/timeline/#timeline-without-icons
-Vertical timeline with text on both sides and icon,/components/timeline/#vertical-timeline-with-text-on-both-sides-and-icon
-Vertical timeline with right side only,/components/timeline/#vertical-timeline-with-right-side-only
-Vertical timeline with left side only,/components/timeline/#vertical-timeline-with-left-side-only
-Vertical timeline with different sides,/components/timeline/#vertical-timeline-with-different-sides
-Vertical timeline with colorful lines,/components/timeline/#vertical-timeline-with-colorful-lines
-Vertical timeline without icons,/components/timeline/#vertical-timeline-without-icons
-"Responsive: vertical by default, horizontal on large screen",/components/timeline/#responsive-vertical-by-default-horizontal-on-large-screen
-Timeline with icon snapped to the start,/components/timeline/#timeline-with-icon-snapped-to-the-start
-chat-start and chat-end,/components/chat/#chat-start-and-chat-end
-Chat with image,/components/chat/#chat-with-image
-"Chat with image, header and footer",/components/chat/#chat-with-image-header-and-footer
-Chat with header and footer,/components/chat/#chat-with-header-and-footer
-Chat Bubble with colors,/components/chat/#chat-bubble-with-colors
-Range,/components/range/#range
-With steps and measure,/components/range/#with-steps-and-measure
-Neutral color,/components/range/#neutral-color
-Primary color,/components/range/#primary-color
-Secondary color,/components/range/#secondary-color
-Accent color,/components/range/#accent-color
-Success color,/components/range/#success-color
-Warning color,/components/range/#warning-color
-Info color,/components/range/#info-color
-Error color,/components/range/#error-color
-Sizes,/components/range/#sizes
-Range with custom color and no fill,/components/range/#range-with-custom-color-and-no-fill
 Progress,/components/progress/#progress
 Primary color,/components/progress/#primary-color
 Secondary color,/components/progress/#secondary-color
@@ -706,224 +905,25 @@ Success color,/components/progress/#success-color
 Warning color,/components/progress/#warning-color
 Error color,/components/progress/#error-color
 Indeterminate (without value),/components/progress/#indeterminate-without-value
-How it works,/components/hover-gallery/#how-it-works
-Hover Gallery,/components/hover-gallery/#hover-gallery
-Hover Gallery in a card,/components/hover-gallery/#hover-gallery-in-a-card
-Swap text,/components/swap/#swap-text
-Swap volume icons,/components/swap/#swap-volume-icons
-Swap icons with rotate effect,/components/swap/#swap-icons-with-rotate-effect
-Hamburger button,/components/swap/#hamburger-button
-Swap icons with flip effect,/components/swap/#swap-icons-with-flip-effect
-Activate using class name instead of checkbox,/components/swap/#activate-using-class-name-instead-of-checkbox
-Class names are not working,/docs/faq/#class-names-are-not-working
-CSS files is too big,/docs/faq/#css-files-is-too-big
-checkbox/toggle/radio styles are broken,/docs/faq/#checkboxtoggleradio-styles-are-broken
-Themes are not working,/docs/faq/#themes-are-not-working
-Tailwind's `dark:` prefix is not working,/docs/faq/#tailwinds-dark-prefix-is-not-working
-Introduction,/docs/colors/#introduction
-Benefits,/docs/colors/#benefits
-List of all daisyUI color names,/docs/colors/#list-of-all-daisyui-color-names
-How to use,/docs/colors/#how-to-use
-Opacity values,/docs/colors/#opacity-values
-Color opacity and muted colors,/docs/colors/#color-opacity-and-muted-colors
-Enable a built-in theme,/docs/themes/#enable-a-built-in-theme
-List of themes,/docs/themes/#list-of-themes
-Enable all themes,/docs/themes/#enable-all-themes
-Disable a theme,/docs/themes/#disable-a-theme
-How to use a theme only for a section of a page?,/docs/themes/#how-to-use-a-theme-only-for-a-section-of-a-page
-How to add a new custom theme?,/docs/themes/#how-to-add-a-new-custom-theme
-How to customize an existing theme?,/docs/themes/#how-to-customize-an-existing-theme
-How to add custom styles for a specific theme?,/docs/themes/#how-to-add-custom-styles-for-a-specific-theme
-How to apply Tailwind's 'dark:' selector for specific themes,/docs/themes/#how-to-apply-tailwinds-dark-selector-for-specific-themes
-Source code,/docs/base/#source-code
-Color utility classes,/docs/utilities/#color-utility-classes
-Border radius,/docs/utilities/#border-radius
-Glass,/docs/utilities/#glass
-Theme CSS variables,/docs/utilities/#theme-css-variables
-Component specific CSS variables,/docs/utilities/#component-specific-css-variables
-Examples of customizing component specific CSS variables,/docs/utilities/#examples-of-customizing-component-specific-css-variables
-Layout,/docs/layout-and-typography/#layout
-Typography,/docs/layout-and-typography/#typography
-Headers: Making a Statement,/docs/layout-and-typography/#headers-making-a-statement
-"Second Heading, for the Page Subtitle",/docs/layout-and-typography/#second-heading-for-the-page-subtitle
-"Third Heading, usually for the Section Title",/docs/layout-and-typography/#third-heading-usually-for-the-section-title
-Text Formatting: Adding Emphasis,/docs/layout-and-typography/#text-formatting-adding-emphasis
-Bold and Italic,/docs/layout-and-typography/#bold-and-italic
-Blockquotes,/docs/layout-and-typography/#blockquotes
-Lists: Organizing Information,/docs/layout-and-typography/#lists-organizing-information
-Unordered Lists,/docs/layout-and-typography/#unordered-lists
-Ordered Lists,/docs/layout-and-typography/#ordered-lists
-Links and Images: Adding Interactivity,/docs/layout-and-typography/#links-and-images-adding-interactivity
-Links,/docs/layout-and-typography/#links
-Images,/docs/layout-and-typography/#images
-Code: Showcasing Your Work,/docs/layout-and-typography/#code-showcasing-your-work
-Inline Code,/docs/layout-and-typography/#inline-code
-Code Blocks,/docs/layout-and-typography/#code-blocks
-Tables: Organizing Data,/docs/layout-and-typography/#tables-organizing-data
-Colors: Adding Vibrancy,/docs/layout-and-typography/#colors-adding-vibrancy
-Conclusion,/docs/layout-and-typography/#conclusion
-What is daisyUI?,/docs/intro/#what-is-daisyui
-How does daisyUI work?,/docs/intro/#how-does-daisyui-work
-Why should I use daisyUI?,/docs/intro/#why-should-i-use-daisyui
-What's the difference between daisyUI and Tailwind CSS?,/docs/intro/#whats-the-difference-between-daisyui-and-tailwind-css
-Is daisyUI aligned with Tailwind CSS' utility-first philosophy?,/docs/intro/#is-daisyui-aligned-with-tailwind-css-utility-first-philosophy
-How does daisyUI fit in Atomic Design principles?,/docs/intro/#how-does-daisyui-fit-in-atomic-design-principles
-Is daisyUI free?,/docs/intro/#is-daisyui-free
-How can I support daisyUI?,/docs/intro/#how-can-i-support-daisyui
-Can I use daisyUI without Tailwind CSS?,/docs/intro/#can-i-use-daisyui-without-tailwind-css
-Can I use daisyUI with other UI frameworks?,/docs/intro/#can-i-use-daisyui-with-other-ui-frameworks
-Which frameworks can I use daisyUI with?,/docs/intro/#which-frameworks-can-i-use-daisyui-with
-Create a new React Router project,/docs/install/reactrouter/#create-a-new-react-router-project
-Install daisyUI,/docs/install/reactrouter/#install-daisyui
-Add daisyUI,/docs/install/reactrouter/#add-daisyui
-Create a new React project,/docs/install/react/#create-a-new-react-project
-Install Tailwind CSS and daisyUI,/docs/install/react/#install-tailwind-css-and-daisyui
-Create a new Bun project,/docs/install/bun/#create-a-new-bun-project
-Install bun-plugin-tailwind and daisyUI,/docs/install/bun/#install-bun-plugin-tailwind-and-daisyui
-Add HTML and CSS files,/docs/install/bun/#add-html-and-css-files
-Serve the HTML file,/docs/install/bun/#serve-the-html-file
-Create a new Nuxt project,/docs/install/nuxt/#create-a-new-nuxt-project
-Install Tailwind CSS and daisyUI,/docs/install/nuxt/#install-tailwind-css-and-daisyui
-Create a new Vite project,/docs/install/lit/#create-a-new-vite-project
-Install Tailwind CSS and daisyUI,/docs/install/lit/#install-tailwind-css-and-daisyui
-Make the CSS available for shadow DOM elements,/docs/install/lit/#make-the-css-available-for-shadow-dom-elements
-Create a new Node project,/docs/install/electron/#create-a-new-node-project
-"Install Electron, Tailwind CSS, and daisyUI",/docs/install/electron/#install-electron-tailwind-css-and-daisyui
-Create files,/docs/install/electron/#create-files
-Build the CSS and run the project,/docs/install/electron/#build-the-css-and-run-the-project
-Create a new Rsbuild project,/docs/install/rsbuild/#create-a-new-rsbuild-project
-Install Tailwind CSS and daisyUI,/docs/install/rsbuild/#install-tailwind-css-and-daisyui
-Create a new Qwik project,/docs/install/qwik/#create-a-new-qwik-project
-Install Tailwind CSS and daisyUI,/docs/install/qwik/#install-tailwind-css-and-daisyui
-Create a new Laravel project,/docs/install/laravel/#create-a-new-laravel-project
-Install daisyUI,/docs/install/laravel/#install-daisyui
-Run your project,/docs/install/laravel/#run-your-project
-Create a new WordPress project,/docs/install/wordpress/#create-a-new-wordpress-project
-Install the WindPress plugin,/docs/install/wordpress/#install-the-windpress-plugin
-Install daisyUI,/docs/install/wordpress/#install-daisyui
-Create a new Vue project,/docs/install/vue/#create-a-new-vue-project
-Install Tailwind CSS and daisyUI,/docs/install/vue/#install-tailwind-css-and-daisyui
-Create a new Vite project,/docs/install/unocss/#create-a-new-vite-project
-"Install UnoCSS, daisyUI and unocss-preset-daisy",/docs/install/unocss/#install-unocss-daisyui-and-unocss-preset-daisy
-Create a UnoCSS config file,/docs/install/unocss/#create-a-unocss-config-file
-Add UnoCSS to your JS file,/docs/install/unocss/#add-unocss-to-your-js-file
-Get Tailwind CSS executable,/docs/install/standalone/#get-tailwind-css-executable
-Get daisyUI bundle JS file,/docs/install/standalone/#get-daisyui-bundle-js-file
-Add Tailwind CSS and daisyUI,/docs/install/standalone/#add-tailwind-css-and-daisyui
-Build CSS,/docs/install/standalone/#build-css
-Install,/docs/install/cli/#install
-Add Tailwind CSS and daisyUI,/docs/install/cli/#add-tailwind-css-and-daisyui
-Build CSS,/docs/install/cli/#build-css
-Create a new Zola project,/docs/install/zola/#create-a-new-zola-project
-Get Tailwind CSS executable,/docs/install/zola/#get-tailwind-css-executable
-Get daisyUI bundled JS file,/docs/install/zola/#get-daisyui-bundled-js-file
-Add Tailwind CSS and daisyUI,/docs/install/zola/#add-tailwind-css-and-daisyui
-Build CSS,/docs/install/zola/#build-css
-Run the Zola server,/docs/install/zola/#run-the-zola-server
-Create a new Ember project,/docs/install/ember/#create-a-new-ember-project
-Install Tailwind CSS and daisyUI,/docs/install/ember/#install-tailwind-css-and-daisyui
-Create a new SvelteKit project,/docs/install/sveltekit/#create-a-new-sveltekit-project
-Install Tailwind CSS and daisyUI,/docs/install/sveltekit/#install-tailwind-css-and-daisyui
-Initialize a new Node project and add dev and build scripts,/docs/install/11ty/#initialize-a-new-node-project-and-add-dev-and-build-scripts
-"Install 11ty, PostCSS, Tailwind CSS, Tailwind CSS Typography plugin, and daisyUI",/docs/install/11ty/#install-11ty-postcss-tailwind-css-tailwind-css-typography-plugin-and-daisyui
-Create a layout template,/docs/install/11ty/#create-a-layout-template
-Create a markdown homepage,/docs/install/11ty/#create-a-markdown-homepage
-Markdown heading 2,/docs/install/11ty/#markdown-heading-2
-Markdown heading 3,/docs/install/11ty/#markdown-heading-3
-Create a CSS file,/docs/install/11ty/#create-a-css-file
-Create a eleventy.config.mjs file at root,/docs/install/11ty/#create-a-eleventyconfigmjs-file-at-root
-Run the project,/docs/install/11ty/#run-the-project
-Create a new Django project,/docs/install/django/#create-a-new-django-project
-Create a homepage in Django,/docs/install/django/#create-a-homepage-in-django
-Add Tailwind CSS and daisyUI,/docs/install/django/#add-tailwind-css-and-daisyui
-Run the Tailwind CSS executable to generate output.css,/docs/install/django/#run-the-tailwind-css-executable-to-generate-outputcss
-Run the Django server,/docs/install/django/#run-the-django-server
-Create a new Solid project,/docs/install/solid/#create-a-new-solid-project
-Install Tailwind CSS and daisyUI,/docs/install/solid/#install-tailwind-css-and-daisyui
-Create a new Dioxus project,/docs/install/dioxus/#create-a-new-dioxus-project
-Install Tailwind CSS CLI and daisyUI,/docs/install/dioxus/#install-tailwind-css-cli-and-daisyui
-Setup `src/main.rs`,/docs/install/dioxus/#setup-srcmainrs
-Run the dev server,/docs/install/dioxus/#run-the-dev-server
-Create a new Vike project,/docs/install/vike/#create-a-new-vike-project
-Install Tailwind CSS and daisyUI,/docs/install/vike/#install-tailwind-css-and-daisyui
-Install,/docs/install/htmx/#install
-Add Tailwind CSS and daisyUI,/docs/install/htmx/#add-tailwind-css-and-daisyui
-Build CSS,/docs/install/htmx/#build-css
-Create a new Preact project,/docs/install/preact/#create-a-new-preact-project
-Install Tailwind CSS and daisyUI,/docs/install/preact/#install-tailwind-css-and-daisyui
-Create a new Next.js project,/docs/install/nextjs/#create-a-new-nextjs-project
-Install Tailwind CSS and daisyUI,/docs/install/nextjs/#install-tailwind-css-and-daisyui
-Add Tailwind CSS and daisyUI,/docs/install/nextjs/#add-tailwind-css-and-daisyui
-Note about using Turbopack,/docs/install/nextjs/#note-about-using-turbopack
-"Install Rust, WebAssembly Target and Trunk",/docs/install/yew/#install-rust-webassembly-target-and-trunk
-Create a Yew project,/docs/install/yew/#create-a-yew-project
-Update `src/main.rs` file,/docs/install/yew/#update-srcmainrs-file
-Create `index.html` file,/docs/install/yew/#create-indexhtml-file
-Add Tailwind CSS and daisyUI,/docs/install/yew/#add-tailwind-css-and-daisyui
-Add a hook to build `output.css` automatically,/docs/install/yew/#add-a-hook-to-build-outputcss-automatically
-Run the app,/docs/install/yew/#run-the-app
-Create a new Solid Start project,/docs/install/solid-start/#create-a-new-solid-start-project
-Install Tailwind CSS and daisyUI,/docs/install/solid-start/#install-tailwind-css-and-daisyui
-Create a new Fresh project,/docs/install/fresh/#create-a-new-fresh-project
-Install daisyUI,/docs/install/fresh/#install-daisyui
-Install,/docs/install/postcss/#install
-Add Tailwind CSS and daisyUI,/docs/install/postcss/#add-tailwind-css-and-daisyui
-Build CSS,/docs/install/postcss/#build-css
-Create a new Waku project,/docs/install/waku/#create-a-new-waku-project
-Install daisyUI,/docs/install/waku/#install-daisyui
-Create a new Rails project,/docs/install/rails/#create-a-new-rails-project
-Install Tailwind CSS for Rails,/docs/install/rails/#install-tailwind-css-for-rails
-Add daisyUI,/docs/install/rails/#add-daisyui
-Create a homepage in Rails,/docs/install/rails/#create-a-homepage-in-rails
-Start Rails,/docs/install/rails/#start-rails
-Framework install tutorials,/docs/install/#framework-install-tutorials
-Create a new Vite project,/docs/install/vite/#create-a-new-vite-project
-Install Tailwind CSS and daisyUI,/docs/install/vite/#install-tailwind-css-and-daisyui
-Create a new Elysia project,/docs/install/elysia/#create-a-new-elysia-project
-Install Tailwind CSS and daisyUI,/docs/install/elysia/#install-tailwind-css-and-daisyui
-Setup server file,/docs/install/elysia/#setup-server-file
-Add a index.html file,/docs/install/elysia/#add-a-indexhtml-file
-Create a new Phoenix project,/docs/install/phoenix/#create-a-new-phoenix-project
-Run your project,/docs/install/phoenix/#run-your-project
-Create a new Astro project,/docs/install/astro/#create-a-new-astro-project
-Install Tailwind CSS and daisyUI,/docs/install/astro/#install-tailwind-css-and-daisyui
-Create a new Angular project,/docs/install/angular/#create-a-new-angular-project
-"Install Tailwind CSS, PostCSS, and daisyUI",/docs/install/angular/#install-tailwind-css-postcss-and-daisyui
-themes,/docs/config/#themes
-root,/docs/config/#root
-include,/docs/config/#include
-exclude,/docs/config/#exclude
-prefix,/docs/config/#prefix
-logs,/docs/config/#logs
-Gemini LLM setup,/docs/editor/gemini/#gemini-llm-setup
-Quick use,/docs/editor/gemini/#quick-use
-Windsurf LLM setup,/docs/editor/windsurf/#windsurf-llm-setup
-Quick use,/docs/editor/windsurf/#quick-use
-MCP server,/docs/editor/windsurf/#mcp-server
-Zed LLM setup,/docs/editor/zed/#zed-llm-setup
-Quick use,/docs/editor/zed/#quick-use
-MCP server,/docs/editor/zed/#mcp-server
-Claude desktop LLM setup,/docs/editor/claude/#claude-desktop-llm-setup
-Quick use,/docs/editor/claude/#quick-use
-MCP server,/docs/editor/claude/#mcp-server
-Claude Code LLM setup,/docs/editor/claudecode/#claude-code-llm-setup
-MCP server,/docs/editor/claudecode/#mcp-server
-Cursor LLM setup,/docs/editor/cursor/#cursor-llm-setup
-Quick use,/docs/editor/cursor/#quick-use
-Project-level permanent setup,/docs/editor/cursor/#project-level-permanent-setup
-Add as an optional document to Cursor,/docs/editor/cursor/#add-as-an-optional-document-to-cursor
-MCP server,/docs/editor/cursor/#mcp-server
-Cline VSCode extension,/docs/editor/cline/#cline-vscode-extension
-Quick use,/docs/editor/cline/#quick-use
-Project-level permanent setup,/docs/editor/cline/#project-level-permanent-setup
-MCP server,/docs/editor/cline/#mcp-server
-VSCode and Copilot LLM setup,/docs/editor/vscode/#vscode-and-copilot-llm-setup
-Quick use,/docs/editor/vscode/#quick-use
-Project-level permanent setup,/docs/editor/vscode/#project-level-permanent-setup
-MCP server,/docs/editor/vscode/#mcp-server
-Grok LLM setup,/docs/editor/grok/#grok-llm-setup
-Quick use,/docs/editor/grok/#quick-use
-Pick your tool,/docs/editor/#pick-your-tool
-ChatGPT LLM setup,/docs/editor/chatgpt/#chatgpt-llm-setup
-Quick use,/docs/editor/chatgpt/#quick-use
-MCP server,/docs/editor/chatgpt/#mcp-server
+Structure,/components/drawer/#structure
+Functionality,/components/drawer/#functionality
+Drawer sidebar,/components/drawer/#drawer-sidebar
+Navbar menu for desktop + sidebar drawer for mobile,/components/drawer/#navbar-menu-for-desktop-sidebar-drawer-for-mobile
+"Responsive: Sidebar is always visible on large screen, can be toggled on small screen",/components/drawer/#responsive-sidebar-is-always-visible-on-large-screen-can-be-toggled-on-small-screen
+Icon-only drawer sidebar when it's closed. Using is-drawer-close and is-drawer-open variants,/components/drawer/#icon-only-drawer-sidebar-when-its-closed-using-is-drawer-close-and-is-drawer-open-variants
+Drawer sidebar that opens from right side of page,/components/drawer/#drawer-sidebar-that-opens-from-right-side-of-page
+Loading spinner,/components/loading/#loading-spinner
+Loading dots,/components/loading/#loading-dots
+Loading ring,/components/loading/#loading-ring
+Loading ball,/components/loading/#loading-ball
+Loading bars,/components/loading/#loading-bars
+Loading infinity,/components/loading/#loading-infinity
+Loading with colors,/components/loading/#loading-with-colors
+Accordion using radio inputs,/components/accordion/#accordion-using-radio-inputs
+Accordion with arrow icon,/components/accordion/#accordion-with-arrow-icon
+Accordion with plus/minus icon,/components/accordion/#accordion-with-plusminus-icon
+Using Accordion and Join together,/components/accordion/#using-accordion-and-join-together
+daisyUI Name,/brand/#daisyui-name
+Brand agreement,/brand/#brand-agreement
+Examples,/brand/#examples
+daisyUI Logo,/brand/#daisyui-logo

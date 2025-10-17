@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store//</link>
-    <lastBuildDate>Thu, 16 Oct 2025 19:23:46 GMT</lastBuildDate>
-    <pubDate>Thu, 16 Oct 2025 19:23:46 GMT</pubDate>
+    <lastBuildDate>Fri, 17 Oct 2025 14:36:47 GMT</lastBuildDate>
+    <pubDate>Fri, 17 Oct 2025 14:36:47 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -306,24 +306,23 @@ Including:
       
         <item>
           <title>
-            <![CDATA[ Auth template ]]>
+            <![CDATA[ Auth template 2.0 ]]>
           </title>
           <description>
             <![CDATA[ Professionally designed auth pages to use in your project right away.
 
 Features:
-  - 3 HTML pages made with daisyUI 5
+  - 12 HTML pages made with daisyUI 5
+  - Compatible with all daisyUI themes
   - Framework agnostic. Can be used everywhere
-  - Compatible with all 32 daisyUI themes
 
 
 Including:
-  - Login page
-  - Signup page
-  - Password recovery page
-  - Form inputs with HTML validation and validation styles
-  - Login with Google button
-  - Toggle and Alert examples ]]>
+  - Login page (4 different designs)
+  - Signup page (4 different designs)
+  - Password recovery page (4 different designs)
+  - Client-side validation and validation styles
+  - Dark mode and light mode toggle ]]>
           </description>
           <link>https://www.creem.io/payment/prod_5WTF3NMjAyFXqUppgngpBP/</link>
           <pubDate>Sat, 11 Nov 2023 00:00:00 GMT</pubDate>
