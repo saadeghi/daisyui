@@ -25,7 +25,7 @@ Here's a demo text to demonstrate the Tailwind CSS Typography plugin in combinat
 
 <div class="max-w-3xl my-20">
 
-# Tailwind CSS Typography plugin demo
+<div class="font-title text-2xl md:text-3xl lg:text-4xl font-bold">Tailwind CSS Typography plugin demo</div>
 
 This is a demo of the Tailwind CSS Typography plugin in action. The plugin provides a set of prose classes that can be used to style your HTML content with minimal effort. When combined with daisyUI, you get access to a variety of themes that are fully compatible with the Typography plugin.
 
@@ -33,7 +33,8 @@ This is a demo of the Tailwind CSS Typography plugin in action. The plugin provi
 
 Headers are essential for structuring your content and making it easy to read. With Tailwind CSS Typography and daisyUI, you can create headers that stand out and match your chosen theme.
 
-# The Big Heading, for the Page Title
+<div class="font-title text-2xl md:text-3xl lg:text-4xl font-bold">The Big Heading, for the Page Title</div>
+
 ## Second Heading, for the Page Subtitle
 ### Third Heading, usually for the Section Title
 #### Fourth Heading, usually for the Subsection Title

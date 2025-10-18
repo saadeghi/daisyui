@@ -583,7 +583,7 @@
       display: flex;
       align-items: center;
       gap: 0.25rem;
-      margin-inline-start: -1em;
+      margin-inline-start: 1em;
     }
   }
 }

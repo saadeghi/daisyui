@@ -443,7 +443,7 @@
 <SEO
   title="daisyUI and Tailwind CSS theme generator"
   formatTitle={false}
-  desc="Color Theme Generator for daisyUI and Tailwind CSS"
+  desc="Tailwind CSS Theme Generator for daisyUI - Custom Tailwind CSS themes with light mode and dark mode support"
   img={`https://img.daisyui.com/images/theme-generator.webp`}
 />
 

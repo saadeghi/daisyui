@@ -144,7 +144,7 @@
 <SEO
   title="Tailwind CSS Component Library ⸺ daisyUI"
   formatTitle={false}
-  desc="Best Tailwind Components Library - Free UI components for Tailwind CSS"
+  desc="Tailwind CSS Components Library for 2026 - Tailwind CSS components examples, Tailwind themes and Tailwind blocks for fast UI development"
 />
 
 <!-- hero content -->
