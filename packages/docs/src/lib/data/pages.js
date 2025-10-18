@@ -332,7 +332,7 @@ export const pages = [
             href: "/components/divider/",
           },
           {
-            name: "Drawer",
+            name: "Drawer sidebar",
             href: "/components/drawer/",
             badge: "updated",
           },

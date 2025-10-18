@@ -3,7 +3,7 @@ description: daisyUI 5
 alwaysApply: true
 applyTo: "**"
 downloadedFrom: https://daisyui.com/llms.txt
-version: 5.2.x
+version: 5.3.x
 ---
 
 # daisyUI 5
