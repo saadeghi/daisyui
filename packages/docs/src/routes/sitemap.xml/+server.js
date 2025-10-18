@@ -40,8 +40,22 @@ const fetchCompareData = async () => {
   }
 }
 
-const generateCompareSlugs = (frameworks = []) =>
-  frameworks.flatMap((f1) => frameworks.filter((f2) => f1 !== f2).map((f2) => `${f1}-vs-${f2}`))
+const generateCompareSlugs = (frameworks = []) => {
+  // Generate all pair permutations, then canonicalize each pair by sorting
+  // the two framework ids so that "a-vs-b" and "b-vs-a" collapse to the same
+  // slug. Finally deduplicate the list while preserving order.
+  const slugs = frameworks.flatMap((f1) =>
+    frameworks
+      .filter((f2) => f1 !== f2)
+      .map((f2) => {
+        const [smaller, larger] = [f1, f2].sort()
+        return `${smaller}-vs-${larger}`
+      }),
+  )
+
+  // Deduplicate while preserving insertion order
+  return Array.from(new Set(slugs))
+}
 
 const generateAlternativeSlugs = (frameworks = []) => frameworks.filter((key) => key !== "daisyui")
 

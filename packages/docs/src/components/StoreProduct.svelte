@@ -4,7 +4,7 @@
 
 <a
   class="group flex flex-col"
-  href={`/store/${productKey}`}
+  href={`/store/${productKey}/`}
   id={productKey}
   data-sveltekit-preload-data
 >

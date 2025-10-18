@@ -11,6 +11,23 @@
   const attributeRules = data.attributeRules
   const libraries = data.libraries
 
+  // Generate canonical compare pairs: sort the two keys so that "a-vs-b" and
+  // "b-vs-a" collapse to the same canonical ordering. Only emit a pair when
+  // the current ordering matches the canonical order, which prevents
+  // duplicated swapped links in the UI (matches sitemap/SEO canonicalization).
+  const comparePairs = libraries
+    .flatMap((a) =>
+      libraries
+        .filter((b) => a.key !== b.key)
+        .map((b) => {
+          const [smaller, larger] = [a.key, b.key].sort()
+          return a.key === smaller ? { a, b } : null
+        }),
+    )
+    .filter(Boolean)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 30)
+
   let selectedFirst = $state(data.first.key)
   let selectedSecond = $state(data.second.key)
 
@@ -86,6 +103,7 @@
 
 <SEO
   title={`${data.first.name} vs ${data.second.name} - daisyUI is a ${data.first.name} alternative`}
+  formatTitle={false}
   desc={`Comparison between ${data.first.name} and ${data.second.name}`}
 />
 
@@ -122,7 +140,7 @@
   <div class="h-6"></div>
   <p class="font-title text-base-content/60 mx-auto max-w-xl text-center text-sm">
     Looking for a <a
-      href={`/alternative/${data.first.key === "daisyui" ? data.second.key : data.first.key}`}
+      href={`/alternative/${data.first.key === "daisyui" ? data.second.key : data.first.key}/`}
       >{data.first.key === "daisyui" ? data.second.name : data.first.name} alternative</a
     >? This page compares {data.first.name}
     and {data.second.name}, two popular UI component libraries. We are comparing features, size,
@@ -231,7 +249,7 @@
                   {@html libraries.find((lib) => lib.key === "daisyui").logo}
                 </div>
               </div>
-              <a href="/compare/{data.first.key}-vs-daisyui" class="btn btn-xs md:btn-sm">
+              <a href="/compare/{data.first.key}-vs-daisyui/" class="btn btn-xs md:btn-sm">
                 Compare {data.first.name} vs daisyUI
               </a>
             {:else}
@@ -255,7 +273,7 @@
                 <span class="text-error">vs</span>
                 <div class="flex size-10 items-center">{@html data.second.logo}</div>
               </div>
-              <a href="/compare/daisyui-vs-{data.second.key}" class="btn btn-xs md:btn-sm">
+              <a href="/compare/daisyui-vs-{data.second.key}/" class="btn btn-xs md:btn-sm">
                 Compare daisyUI vs {data.second.name}
               </a>
             {:else}
@@ -282,11 +300,30 @@
   </div>
   <div class="h-16"></div>
   <div class="divider"></div>
-  <p class="text-base-content/30 mx-auto max-w-xl text-center text-xs">
+  <p class="text-base-content/30 mx-auto text-center text-xs">
     This comparison page is for informational purposes only and does not mean to criticize libraries
     or projects. Information is based on GitHub public data, NPM registry data and official
     documentation websites of the libraries. If you found any outdated information, please open a PR
     to update it. All trademarks, logos and brand names are the property of their respective owners.
   </p>
+
+  <h2 class="divider text-base-content/60 mt-8 mb-4 text-center text-xs">
+    Compare component libraries
+  </h2>
+
+  <ul class="block columns-2 text-justify text-[0.625rem] sm:columns-3 md:columns-4 lg:columns-5">
+    {#each comparePairs as { a, b }}
+      <li>
+        <a
+          href={`/compare/${a.key}-vs-${b.key}/`}
+          class="text-base-content/30 hover:text-base-content/50 mx-1"
+        >
+          <span class="sr-only">Compare</span>
+          {a.name} <span class="sr-only">component library</span> vs {b.name}
+          <span class="sr-only">component library</span>
+        </a>
+      </li>
+    {/each}
+  </ul>
 </div>
 <Footer />
