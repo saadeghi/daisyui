@@ -535,6 +535,9 @@
     <loc>https://daisyui.com/pages/tailwind-css-alternative/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/pages/tailwind-css-without-node/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/pages/ui-library-for-hackaton/</loc>
   </url>
   <url>
@@ -640,13 +643,13 @@
     <loc>https://daisyui.com/compare/daisyui-vs-heroui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/daisyui-vs-bootstrap/</loc>
+    <loc>https://daisyui.com/compare/bootstrap-vs-daisyui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/daisyui-vs-chakra/</loc>
+    <loc>https://daisyui.com/compare/chakra-vs-daisyui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/daisyui-vs-bulma/</loc>
+    <loc>https://daisyui.com/compare/bulma-vs-daisyui/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/daisyui-vs-radix/</loc>
@@ -655,103 +658,85 @@
     <loc>https://daisyui.com/compare/daisyui-vs-flux/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-bulma/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-radix/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindui-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-daisyui/</loc>
-  </url>
-  <url>
     <loc>https://daisyui.com/compare/tailwindplus-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-bulma/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-radix/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/tailwindplus-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flowbite-vs-daisyui/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/flowbite-vs-tailwindui/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/mui-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/shadcn-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/preline-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-tailwindui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/flux-vs-tailwindui/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/flowbite-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/mui-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/shadcn-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/preline-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-tailwindplus/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/flux-vs-tailwindplus/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/flowbite-vs-mui/</loc>
@@ -775,13 +760,13 @@
     <loc>https://daisyui.com/compare/flowbite-vs-heroui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/flowbite-vs-bootstrap/</loc>
+    <loc>https://daisyui.com/compare/bootstrap-vs-flowbite/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/flowbite-vs-chakra/</loc>
+    <loc>https://daisyui.com/compare/chakra-vs-flowbite/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/flowbite-vs-bulma/</loc>
+    <loc>https://daisyui.com/compare/bulma-vs-flowbite/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/flowbite-vs-radix/</loc>
@@ -790,160 +775,94 @@
     <loc>https://daisyui.com/compare/flowbite-vs-flux/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/mui-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/mui-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/mui-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/mui-vs-flowbite/</loc>
-  </url>
-  <url>
     <loc>https://daisyui.com/compare/mui-vs-shadcn/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/mui-vs-preline/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/mui-vs-hyperui/</loc>
+    <loc>https://daisyui.com/compare/hyperui-vs-mui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/mui-vs-merakiui/</loc>
+    <loc>https://daisyui.com/compare/merakiui-vs-mui/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/mui-vs-nuxtui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/mui-vs-heroui/</loc>
+    <loc>https://daisyui.com/compare/heroui-vs-mui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/mui-vs-bootstrap/</loc>
+    <loc>https://daisyui.com/compare/bootstrap-vs-mui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/mui-vs-chakra/</loc>
+    <loc>https://daisyui.com/compare/chakra-vs-mui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/mui-vs-bulma/</loc>
+    <loc>https://daisyui.com/compare/bulma-vs-mui/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/mui-vs-radix/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/mui-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-bulma/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-radix/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/shadcn-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/preline-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/preline-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/preline-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/preline-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/preline-vs-mui/</loc>
+    <loc>https://daisyui.com/compare/flux-vs-mui/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/preline-vs-shadcn/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/preline-vs-hyperui/</loc>
+    <loc>https://daisyui.com/compare/hyperui-vs-shadcn/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/preline-vs-merakiui/</loc>
+    <loc>https://daisyui.com/compare/merakiui-vs-shadcn/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/preline-vs-nuxtui/</loc>
+    <loc>https://daisyui.com/compare/nuxtui-vs-shadcn/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/preline-vs-heroui/</loc>
+    <loc>https://daisyui.com/compare/heroui-vs-shadcn/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/preline-vs-bootstrap/</loc>
+    <loc>https://daisyui.com/compare/bootstrap-vs-shadcn/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/preline-vs-chakra/</loc>
+    <loc>https://daisyui.com/compare/chakra-vs-shadcn/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/preline-vs-bulma/</loc>
+    <loc>https://daisyui.com/compare/bulma-vs-shadcn/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-shadcn/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/flux-vs-shadcn/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-preline/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-preline/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-preline/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-preline/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-preline/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-preline/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-preline/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/preline-vs-radix/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/preline-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-preline/</loc>
+    <loc>https://daisyui.com/compare/flux-vs-preline/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/hyperui-vs-merakiui/</loc>
@@ -952,190 +871,76 @@
     <loc>https://daisyui.com/compare/hyperui-vs-nuxtui/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-bulma/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-radix/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/hyperui-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-bulma/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-radix/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/merakiui-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-bulma/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-radix/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/nuxtui-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-preline/</loc>
-  </url>
-  <url>
     <loc>https://daisyui.com/compare/heroui-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-bulma/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-radix/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/heroui-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bootstrap-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bootstrap-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bootstrap-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bootstrap-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bootstrap-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bootstrap-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bootstrap-vs-preline/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/bootstrap-vs-hyperui/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/chakra-vs-hyperui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-hyperui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-radix/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/flux-vs-hyperui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-nuxtui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-merakiui/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/bootstrap-vs-merakiui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-merakiui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-merakiui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-radix/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/flux-vs-merakiui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-nuxtui/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/bootstrap-vs-nuxtui/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/chakra-vs-nuxtui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-nuxtui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-radix/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/flux-vs-nuxtui/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/bootstrap-vs-heroui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-heroui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-heroui/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-radix/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/flux-vs-heroui/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/bootstrap-vs-chakra/</loc>
@@ -1150,43 +955,7 @@
     <loc>https://daisyui.com/compare/bootstrap-vs-flux/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/chakra-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/chakra-vs-bulma/</loc>
+    <loc>https://daisyui.com/compare/bulma-vs-chakra/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/chakra-vs-radix/</loc>
@@ -1195,136 +964,10 @@
     <loc>https://daisyui.com/compare/chakra-vs-flux/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/compare/bulma-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/bulma-vs-chakra/</loc>
-  </url>
-  <url>
     <loc>https://daisyui.com/compare/bulma-vs-radix/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/bulma-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-bulma/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/radix-vs-flux/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-daisyui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-tailwindui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-tailwindplus/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-flowbite/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-mui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-shadcn/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-preline/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-hyperui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-merakiui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-nuxtui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-heroui/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-bootstrap/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-chakra/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/compare/flux-vs-bulma/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/flux-vs-radix/</loc>
