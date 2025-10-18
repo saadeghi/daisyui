@@ -15,7 +15,7 @@ desc: This guide helps you how to update your project to Tailwind CSS 4 and dais
 > Before upgrading your project, read about:  
 > 1 - [Tailwind CSS 4 breaking changes](https://tailwindcss.com/docs/upgrade-guide#changes-from-v3)  
 > 2 - [daisyUI 5 release notes](/docs/v5/)  
-> 3 - [daisyUI 5 breaking changes](/docs/upgrade#changes-from-v4)
+> 3 - [daisyUI 5 breaking changes](/docs/upgrade/#changes-from-v4)
 
 
 ### 1. Update Tailwind CSS

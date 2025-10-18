@@ -64,6 +64,7 @@
         <div class="flex flex-row-reverse items-center gap-3">
           <div class="avatar">
             <a
+              aria-label={`${testimonial.name}`}
               href={`https://twitter.com/${testimonial.username}/status/${testimonial.id}`}
               target="_blank"
               rel="noopener, noreferrer"

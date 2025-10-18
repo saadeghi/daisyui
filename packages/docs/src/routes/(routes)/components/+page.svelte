@@ -31,7 +31,7 @@
               loading="lazy"
               src={`https://img.daisyui.com/images/components/${slug}.webp`}
               class="border-base-content/5 bg-base-300 rounded-lg border"
-              alt={title}
+              alt={`Tailwind CSS ${title} component`}
             />
           </figure>
           <div class="card-body">

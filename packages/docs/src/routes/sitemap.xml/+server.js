@@ -75,7 +75,8 @@ export const GET = async () => {
 
   const excludedPaths = ["/llms.txt/"]
 
-  return await sitemap.response({
+  // Generate sitemap response, then inject a custom <tag> before the closing </urlset>
+  const sitemapResponse = await sitemap.response({
     origin: "https://daisyui.com",
     additionalPaths: ["/llms.txt"],
     excludeRoutePatterns: [
@@ -93,4 +94,27 @@ export const GET = async () => {
     processPaths: (paths) =>
       paths.map(processPath).filter((entry) => !excludedPaths.includes(entry.path)),
   })
+
+  // Read the sitemap body text. sitemap.response returns a Response, so use text().
+  let body = typeof sitemapResponse === "string" ? sitemapResponse : await sitemapResponse.text()
+
+  // Define the custom tag to insert. Update this string as needed.
+  const customContent = "<url>\n  <loc>https://daisyui.com/llms.txt</loc>\n</url>"
+
+  // Inject the custom tag right before the closing </urlset>. If </urlset> isn't found,
+  // append the tag to the end.
+  if (body.includes("</urlset>")) {
+    body = body.replace("</urlset>", `${customContent}</urlset>`)
+  } else {
+    body = body + customContent
+  }
+
+  // Preserve headers and status from the original response when returning the modified body.
+  const headers =
+    sitemapResponse && sitemapResponse.headers
+      ? sitemapResponse.headers
+      : { "Content-Type": "application/xml" }
+  const status = sitemapResponse && sitemapResponse.status ? sitemapResponse.status : 200
+
+  return new Response(body, { status, headers })
 }

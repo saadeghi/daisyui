@@ -12,7 +12,7 @@ layout: components
 
 Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes.  
 Read more at Tailwind CSS documentation:  
-[Layout](https://tailwindcss.com/docs/container), [Sizing](https://tailwindcss.com/docs/width), [Flexbox](https://tailwindcss.com/docs/flex), [Grid](https://tailwindcss.com/docs/grid-template-columns), [Box alignment](https://tailwindcss.com/docs/justify-content), [Spacing](https://tailwindcss.com/docs/padding)
+[Layout](https://tailwindcss.com/docs/flex-basis), [Sizing](https://tailwindcss.com/docs/width), [Flexbox](https://tailwindcss.com/docs/flex), [Grid](https://tailwindcss.com/docs/grid-template-columns), [Box alignment](https://tailwindcss.com/docs/justify-content), [Spacing](https://tailwindcss.com/docs/padding)
 
 ### Typography
 

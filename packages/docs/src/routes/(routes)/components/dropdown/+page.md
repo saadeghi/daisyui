@@ -114,8 +114,8 @@ Anchor positioning is a new CSS standard for positioning elements relative to an
 </button>
 <ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
   popover id="popover-1" style="position-anchor:--anchor-1">
-  <li><a>Item 1</a></li>
-  <li><a>Item 2</a></li>
+  <li><button>Item 1</button></li>
+  <li><button>Item 2</button></li>
 </ul>
 
 ```html

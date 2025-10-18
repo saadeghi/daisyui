@@ -24,7 +24,7 @@ In chat window type this and VSCode will use daisyUI's llms.txt file to generate
 
 ### Project-level permanent setup
 
-You can setup daisyUI's llms.txt file to your workspace so Copilot can use it by default. ([Read more at VSCode docs](https://code.visualstudio.com/docs/copilot/copilot-customization))
+You can setup daisyUI's llms.txt file to your workspace so Copilot can use it by default. ([Read more at VSCode docs](https://code.visualstudio.com/docs/copilot/customization/overview))
 
 Run this command to save the llms.txt file to `.github/instructions/daisyui.instructions.md`
 

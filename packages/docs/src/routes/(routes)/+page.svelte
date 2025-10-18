@@ -2133,7 +2133,7 @@
       <div class="h-10"></div>
       <div class="flex w-full flex-col items-center justify-center gap-2 md:flex-row">
         <span class="text-base-content/70">{$t("Or play with daisyUI on")}:</span>
-        <a target="_blank" rel="noopener, noreferrer" href="/codepen" class="btn-ghost btn-sm btn">
+        <a target="_blank" rel="noopener, noreferrer" href="/codepen/" class="btn-ghost btn-sm btn">
           <svg
             class="h-4 w-4 stroke-current"
             viewBox="0 0 64 64"

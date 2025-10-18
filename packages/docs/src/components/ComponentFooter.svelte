@@ -443,7 +443,7 @@
         with daisyUI Admin Dashboard
       </h2>
     </div>
-    <a class="btn btn-block btn-primary group" href="/store">
+    <a class="btn btn-block btn-primary group" href="/store/">
       More details
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -558,7 +558,7 @@
         Available on daisyUI store
       </h2>
     </div>
-    <a class="btn btn-block btn-primary group" href="/store">
+    <a class="btn btn-block btn-primary group" href="/store/">
       More details
       <svg
         xmlns="http://www.w3.org/2000/svg"

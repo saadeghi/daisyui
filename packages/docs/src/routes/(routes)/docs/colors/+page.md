@@ -170,7 +170,7 @@ These components automatically set the correct background color, text color, bor
 | `placeholder-{COLOR_NAME}` |                                                                                                                                |
 | `ring-offset-{COLOR_NAME}` |                                                                                                                                |
 
-So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI color utility classes](/docs/utilities).
+So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI color utility classes](/docs/utilities/).
 
 ### Opacity values
 

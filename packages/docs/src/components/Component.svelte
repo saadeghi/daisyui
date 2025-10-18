@@ -63,6 +63,7 @@
       <a
         class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm"
         href={`#${titleStr}`}
+        aria-label="Link to heading"
       >
         <svg
           class="size-3"
@@ -78,14 +79,14 @@
           />
         </svg>
       </a>
-      <h4 class="component-preview-title mt-2 mb-1 text-lg font-semibold">
+      <h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">
         {$t(title)}
-      </h4>
+      </h3>
     </div>
   {/if}
   {#if desc}
     <div class="pb-4 text-xs opacity-70">
-      {#if desc.includes('<')}
+      {#if desc.includes("<")}
         {@html desc}
       {:else}
         {$t(desc)}

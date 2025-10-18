@@ -185,7 +185,7 @@
             aria-label="StackBlitz"
             target="_blank"
             rel="noopener, noreferrer"
-            href="/stackblitz"
+            href="/stackblitz/"
             class="opacity-50 hover:opacity-100"
           >
             <svg
@@ -205,7 +205,7 @@
             aria-label="CodePen"
             target="_blank"
             rel="noopener, noreferrer"
-            href="/codepen"
+            href="/codepen/"
             class="opacity-50 hover:opacity-100"
           >
             <svg
@@ -232,7 +232,7 @@
             aria-label="Tailwind Play"
             target="_blank"
             rel="noopener, noreferrer"
-            href="/tailwindplay"
+            href="/tailwindplay/"
             class="opacity-50 hover:opacity-100"
           >
             <svg

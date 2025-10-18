@@ -21,10 +21,10 @@ The first image is visible by default, the other image will create invisible col
 <div class="flex justify-center not-prose">
   <div class="grid *:[grid-area:1/1] rounded-box overflow-hidden">
     <figure class="hover-gallery max-w-60">
-      <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
-      <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
-      <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
-      <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
+      <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" alt="Tailwind CSS image hover gallery" />
+      <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" alt="Tailwind CSS image hover gallery" />
+      <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" alt="Tailwind CSS image hover gallery" />
+      <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" alt="Tailwind CSS image hover gallery" />
     </figure>
     <div class="grid grid-cols-3 pointer-events-none font-mono *:to-black/10 *:via-transparent *:from-white/10 *:bg-linear-80 *:grid *:place-content-center text-white text-shadow-lg">
       <div>2</div>
@@ -40,10 +40,10 @@ The first image is visible by default, the other image will create invisible col
 #### Move your mouse on the image horizontally
 
 <figure class="hover-gallery max-w-60">
-  <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
-  <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
-  <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
-  <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
+  <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" alt="Tailwind CSS image hover gallery" />
+  <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" alt="Tailwind CSS image hover gallery" />
+  <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" alt="Tailwind CSS image hover gallery" />
+  <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" alt="Tailwind CSS image hover gallery" />
 </figure>
 
 ```html
@@ -59,10 +59,10 @@ The first image is visible by default, the other image will create invisible col
 
 <div class="card card-sm bg-base-200 max-w-60 shadow">
   <figure class="hover-gallery">
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
+    <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" alt="Tailwind CSS image hover gallery" />
+    <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" alt="Tailwind CSS image hover gallery" />
+    <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" alt="Tailwind CSS image hover gallery" />
+    <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" alt="Tailwind CSS image hover gallery" />
   </figure>
   <div class="card-body">
     <h2 class="card-title flex justify-between">

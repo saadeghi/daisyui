@@ -22,7 +22,7 @@ classnames:
   import Translate from "$components/Translate.svelte"
 </script>
 
-> For pagination, we use [join component](/components/join) to show multiple links or buttons next to each other.
+> For pagination, we use [join component](/components/join/) to show multiple links or buttons next to each other.
 
 ### ~Pagination with an active button
 <div class="join">
