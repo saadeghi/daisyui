@@ -1,15 +1,21 @@
 User-agent: AhrefsBot
 User-agent: AhrefsSiteAudit
 Disallow: /resources/
-Disallow: /blog/
-Disallow: /store/
-Disallow: /compare/
-Disallow: /alternative/
-Disallow: /docs/install/
+# Disallow: /blog/
+# Disallow: /store/
+# Disallow: /compare/
+# Disallow: /alternative/
+# Disallow: /docs/install/
 Disallow: /*-component-library/
 Disallow: /cdn-cgi/
 Disallow: /?lang=*
 Disallow: /*?lang=
+Disallow: /fast
+Disallow: /fast.ps1
+Disallow: /_app/immutable/
+Disallow: /codepen
+Disallow: /stackblitz
+Disallow: /tailwindplay
 
 User-agent: *
 Allow: /
