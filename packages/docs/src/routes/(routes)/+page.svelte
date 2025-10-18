@@ -235,7 +235,7 @@
           <div class="h-10"></div>
           <div>
             <div
-              class="inline-flex w-full animate-[reveal-slow_0.5s] flex-col items-stretch justify-center gap-2 px-4 md:flex-row xl:justify-start xl:px-0"
+              class="inline-grid w-full animate-[reveal-slow_0.5s] flex-col items-stretch justify-center gap-2 px-4 md:flex-row lg:grid-cols-2 xl:justify-start xl:px-0"
             >
               <!-- <a
                 class="btn md:btn-lg rounded-full"
@@ -255,7 +255,7 @@
               <a
                 data-sveltekit-preload-data
                 href="/components/"
-                class="btn md:btn-lg grow rounded-full px-12"
+                class="btn md:btn-lg grow rounded-full"
                 onclick={() => track("Homepage > Hero > Components")}
               >
                 <span class="hidden sm:inline">{$t("cta-1")}</span>
@@ -307,29 +307,115 @@
                   ></path></svg
                 >
               </a> -->
-              <a
-                data-sveltekit-preload-data
-                href="/docs/install/"
-                class="btn btn-neutral md:btn-lg group max-w-86 grow rounded-full px-12"
-                onclick={() => track("Homepage > Hero > HowToUse")}
-              >
-                {$t("cta-2")}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
+              <div class="[display:contents]">
+                <a
+                  data-sveltekit-preload-data
+                  href="/docs/install/"
+                  class="btn btn-neutral md:btn-lg group max-w-86 grow rounded-full"
+                  onclick={() => track("Homepage > Hero > HowToUse")}
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  {$t("cta-2")}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
                   >
-                  </path>
-                </svg>
-              </a>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                    >
+                    </path>
+                  </svg>
+                </a>
+                <br class="max-lg:hidden" />
+                <div class="text-rotator text-base-content/70 w-72 text-xs">
+                  {#await fetchStats() then stats}
+                    <div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="inline-block size-4 text-yellow-500"
+                        >
+                          <path
+                            d="M13.51 3.139c-.652-1.185-2.368-1.185-3.021 0a28 28 0 0 0-2.114 4.894.35.35 0 0 1-.33.223 30 30 0 0 0-4.375.436c-1.337.233-1.926 1.837-.91 2.83q.192.188.388.374a32 32 0 0 0 3.103 2.587.274.274 0 0 1 .11.31 27.6 27.6 0 0 0-1.172 5.065c-.19 1.424 1.318 2.298 2.495 1.694a29.3 29.3 0 0 0 4.085-2.537.4.4 0 0 1 .462 0 29 29 0 0 0 4.085 2.537c1.177.604 2.685-.27 2.495-1.694a27.6 27.6 0 0 0-1.171-5.065.274.274 0 0 1 .11-.31 32 32 0 0 0 3.49-2.96c1.016-.994.427-2.598-.91-2.831a30 30 0 0 0-4.376-.436.35.35 0 0 1-.329-.223 27.7 27.7 0 0 0-2.114-4.894"
+                          >
+                          </path>
+                        </svg>
+                        Trending on GitHub with
+                        {stats?.stargazers_count
+                          ? (Math.ceil(stats.stargazers_count / 1000) * 1000).toLocaleString(
+                              "en-US",
+                            )
+                          : "many"}
+                        stars
+                      </div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 48 48"
+                          fill="currentColor"
+                          class="inline-block size-4 text-red-500"
+                        >
+                          <path
+                            d="M34.438,11.774c-.245-.3-.462-.569-.645-.806a1,1,0,0,0-1.745.3,15.325,15.325,0,0,1-2.474,4.648c.064-3.972-.723-10.981-6.479-14.756A1,1,0,0,0,21.546,2c0,3.276-1.755,6.767-4.806,9.575C13.788,14.293,6.929,21.476,7,29.433c.05,5.54,2.871,13.2,10.027,16.241.107-3.477,1.624-5.946,3.108-8.326,1.41-2.264,2.743-4.4,2.865-7.389a1,1,0,0,1,1.685-.688c4.033,3.8,6.194,9.43,6.3,16.3,5.133-2.189,9.337-6.96,9.957-14.721C41.743,20.771,36.809,14.694,34.438,11.774Z"
+                          ></path>
+                        </svg>
+                        {stats?.npm_downloads_count_weekly
+                          ? (
+                              Math.ceil(stats.npm_downloads_count_weekly / 1000) * 1000
+                            ).toLocaleString("en-US")
+                          : "many"}
+                        NPM downloads per week
+                      </div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="inline-block size-4 text-emerald-500"
+                        >
+                          <path
+                            d="M10.565 2.075c-.394.189-.755.497-1.26.928l-.079.066a2.56 2.56 0 0 1-1.58.655l-.102.008c-.662.053-1.135.09-1.547.236a3.33 3.33 0 0 0-2.03 2.029c-.145.412-.182.885-.235 1.547l-.008.102a2.56 2.56 0 0 1-.655 1.58l-.066.078c-.431.506-.74.867-.928 1.261a3.33 3.33 0 0 0 0 2.87c.189.394.497.755.928 1.26l.066.079c.41.48.604.939.655 1.58l.008.102c.053.662.09 1.135.236 1.547a3.33 3.33 0 0 0 2.029 2.03c.412.145.885.182 1.547.235l.102.008c.629.05 1.09.238 1.58.655l.079.066c.505.431.866.74 1.26.928a3.33 3.33 0 0 0 2.87 0c.394-.189.755-.497 1.26-.928l.079-.066c.48-.41.939-.604 1.58-.655l.102-.008c.662-.053 1.135-.09 1.547-.236a3.33 3.33 0 0 0 2.03-2.029c.145-.412.182-.885.235-1.547l.008-.102c.05-.629.238-1.09.655-1.58l.066-.079c.431-.505.74-.866.928-1.26a3.33 3.33 0 0 0 0-2.87c-.189-.394-.497-.755-.928-1.26l-.066-.079a2.56 2.56 0 0 1-.655-1.58l-.008-.102c-.053-.662-.09-1.135-.236-1.547a3.33 3.33 0 0 0-2.029-2.03c-.412-.145-.885-.182-1.547-.235l-.102-.008a2.56 2.56 0 0 1-1.58-.655l-.079-.066c-.505-.431-.866-.74-1.26-.928a3.33 3.33 0 0 0-2.87 0m5.208 6.617a.75.75 0 0 1 .168 1.047l-3.597 4.981a1.75 1.75 0 0 1-2.736.128l-1.506-1.72a.75.75 0 1 1 1.13-.989l1.505 1.721a.25.25 0 0 0 .39-.018l3.598-4.981a.75.75 0 0 1 1.048-.169"
+                          ></path>
+                        </svg>
+                        Powering
+                        {stats?.dependents_count
+                          ? (Math.ceil(stats.dependents_count / 1000) * 1000).toLocaleString(
+                              "en-US",
+                            )
+                          : "many"}
+                        open source projects
+                      </div>
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="inline-block size-4 text-yellow-500"
+                        >
+                          <path
+                            d="M13.51 3.139c-.652-1.185-2.368-1.185-3.021 0a28 28 0 0 0-2.114 4.894.35.35 0 0 1-.33.223 30 30 0 0 0-4.375.436c-1.337.233-1.926 1.837-.91 2.83q.192.188.388.374a32 32 0 0 0 3.103 2.587.274.274 0 0 1 .11.31 27.6 27.6 0 0 0-1.172 5.065c-.19 1.424 1.318 2.298 2.495 1.694a29.3 29.3 0 0 0 4.085-2.537.4.4 0 0 1 .462 0 29 29 0 0 0 4.085 2.537c1.177.604 2.685-.27 2.495-1.694a27.6 27.6 0 0 0-1.171-5.065.274.274 0 0 1 .11-.31 32 32 0 0 0 3.49-2.96c1.016-.994.427-2.598-.91-2.831a30 30 0 0 0-4.376-.436.35.35 0 0 1-.329-.223 27.7 27.7 0 0 0-2.114-4.894"
+                          >
+                          </path>
+                        </svg>
+                        Trending on GitHub with
+                        {stats?.stargazers_count
+                          ? (Math.ceil(stats.stargazers_count / 1000) * 1000).toLocaleString(
+                              "en-US",
+                            )
+                          : "many"}
+                        stars
+                      </div>
+                    </div>
+                  {/await}
+                </div>
+              </div>
             </div>
           </div>
 

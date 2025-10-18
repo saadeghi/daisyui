@@ -563,3 +563,60 @@
     animation-timing-function: ease-out;
   }
 }
+
+.text-rotator {
+  overflow: clip;
+  position: relative;
+  height: 1.5em;
+  line-height: 1.5em;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(0);
+    animation: rotator-vertical 20s linear infinite;
+    height: inherit;
+    line-height: inherit;
+    & > * {
+      height: inherit;
+      line-height: inherit;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-inline-start: -1em;
+    }
+  }
+}
+
+@keyframes rotator-vertical {
+  0% {
+    transform: translateY(0%);
+  }
+  32.999% {
+    transform: translateY(0%);
+  }
+  33% {
+    transform: translateY(0%);
+  }
+  34% {
+    transform: translateY(-100%);
+  }
+  65.999% {
+    transform: translateY(-100%);
+  }
+  66% {
+    transform: translateY(-100%);
+  }
+  67% {
+    transform: translateY(-200%);
+  }
+  98.999% {
+    transform: translateY(-200%);
+  }
+  99% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
