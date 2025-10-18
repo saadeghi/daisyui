@@ -142,7 +142,7 @@ Modal,/components/modal/
 Rating,/components/rating/
 Filter,/components/filter/
 Progress,/components/progress/
-Drawer,/components/drawer/
+Drawer sidebar,/components/drawer/
 Loading,/components/loading/
 Accordion,/components/accordion/
 daisyUI Logo,/brand/
