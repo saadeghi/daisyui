@@ -32,7 +32,8 @@
       @apply min-w-fit;
 
       &:after {
-        content: attr(aria-label);
+        --tw-content: attr(aria-label);
+        content: var(--tw-content);
       }
     }
     &:is(label) {
@@ -121,8 +122,7 @@
       position: relative;
       border-radius: var(--radius-field);
       &:before {
-        --tw-content: "";
-        content: var(--tw-content);
+        content: "";
         background-color: var(--tab-border-color);
         transition: background-color 0.2s ease;
         width: 80%;

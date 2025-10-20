@@ -71,7 +71,8 @@
     } */
 
       &::after {
-        content: attr(aria-label);
+        --tw-content: attr(aria-label);
+        content: var(--tw-content);
       }
     }
     &:where(input:checked:not(.filter .btn)) {

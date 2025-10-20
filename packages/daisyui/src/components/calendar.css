@@ -408,14 +408,16 @@
       .pika-prev {
         left: 0;
         &:before {
-          content: "‹";
+          --tw-content: "‹";
+          content: var(--tw-content);
         }
       }
 
       .pika-next {
         right: 0;
         &:before {
-          content: "›";
+          --tw-content: "›";
+          content: var(--tw-content);
         }
       }
 

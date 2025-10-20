@@ -130,7 +130,8 @@
     &[open] {
       &.collapse-plus {
         > .collapse-title:after {
-          content: "−";
+          --tw-content: "−";
+          content: var(--tw-content);
         }
       }
     }
@@ -138,20 +139,23 @@
     &.collapse-open {
       &.collapse-plus {
         > .collapse-title:after {
-          content: "−";
+          --tw-content: "−";
+          content: var(--tw-content);
         }
       }
     }
 
     &[tabindex].collapse-plus:focus:not(.collapse-close) {
       > .collapse-title:after {
-        content: "−";
+        --tw-content: "−";
+        content: var(--tw-content);
       }
     }
 
     &.collapse-plus:not(.collapse-close) {
       > input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-title:after {
-        content: "−";
+        --tw-content: "−";
+        content: var(--tw-content);
       }
     }
   }
@@ -255,7 +259,8 @@
       }
       top: 0.9rem;
       inset-inline-end: 1.4rem;
-      content: "+";
+      --tw-content: "+";
+      content: var(--tw-content);
       pointer-events: none;
     }
   }

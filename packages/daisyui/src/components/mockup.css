@@ -23,7 +23,8 @@
 
       &[data-prefix] {
         &:before {
-          content: attr(data-prefix);
+          --tw-content: attr(data-prefix);
+          content: var(--tw-content);
           @apply inline-block w-8 text-right opacity-50;
         }
       }
@@ -49,7 +50,8 @@
 
     pre[data-prefix] {
       &:before {
-        content: attr(data-prefix);
+        --tw-content: attr(data-prefix);
+        content: var(--tw-content);
         @apply inline-block text-right;
       }
     }
@@ -62,7 +64,8 @@
 
     pre[data-prefix] {
       &:before {
-        content: attr(data-prefix);
+        --tw-content: attr(data-prefix);
+        content: var(--tw-content);
         @apply inline-block text-right;
       }
     }
