@@ -27,7 +27,7 @@ Here's how to use daisyUI llms.txt in Zed:
 
 ### MCP server
 
-MCP is an API to communicate with AI models. You can add MCP servers to your code editor and Cursor will communicate with them to get more accurate results.
+MCP is an API to communicate with AI models. You can add MCP servers to your code editor and Zed will communicate with them to get more accurate results.
 
 I suggest using [Context7](https://context7.com/) [MCP server](https://github.com/upstash/context7) which provides many libraries including daisyUI.
 
