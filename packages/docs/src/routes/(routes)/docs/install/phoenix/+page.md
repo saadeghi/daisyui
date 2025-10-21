@@ -15,10 +15,11 @@ desc: How to install Tailwind CSS and daisyUI in a Elixir Phoenix project
 
 Install Elixir according to the [official Elixir documentation](https://elixir-lang.org/install.html)
 
-Create a new Phoenix project in the current directory.  
+Create a new Phoenix project in the current directory.
 
 ```sh:Terminal
-mix phx.new ./ --no-ecto
+mix phx.new my_app --no-ecto
+cd my_app
 ```
 Here we are using the `--no-ecto` flag to skip the database setup, just for demonstration purposes.
 
