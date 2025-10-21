@@ -42,6 +42,9 @@
       > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
       content-visibility: visible;
       min-height: fit-content;
+      @supports not (content-visibility: visible) {
+        visibility: visible;
+      }
     }
     &:focus-visible,
     &:has(> input:is([type="checkbox"], [type="radio"]):focus-visible),
@@ -169,9 +172,13 @@
     padding-left: 1rem;
     padding-right: 1rem;
     cursor: unset;
+    @supports not (content-visibility: hidden) {
+      visibility: hidden;
+    }
     @media (prefers-reduced-motion: no-preference) {
       transition:
         content-visibility 0.2s allow-discrete,
+        visibility 0.2s allow-discrete,
         padding 0.2s ease-out,
         background-color 0.2s ease-out;
     }
@@ -185,6 +192,7 @@
       &::details-content {
         transition:
           content-visibility 0.2s allow-discrete,
+          visibility 0.2s allow-discrete,
           padding 0.2s ease-out,
           background-color 0.2s ease-out,
           height 0.2s;
@@ -278,6 +286,9 @@
       content-visibility: visible;
       min-height: fit-content;
       padding-bottom: 1rem;
+      @supports not (content-visibility: visible) {
+        visibility: visible;
+      }
     }
   }
 }
