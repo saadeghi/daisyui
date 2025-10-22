@@ -71,7 +71,8 @@
     }
     @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
       &:after {
-        content: none;
+        --tw-content: none;
+        content: var(--tw-content);
       }
     }
   }

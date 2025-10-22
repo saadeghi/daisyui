@@ -16,14 +16,14 @@
         border: 1px solid;
         color: var(--step-bg);
         background-color: var(--step-bg);
-        --tw-content: "";
-        content: var(--tw-content);
+        content: "";
         margin-inline-start: -100%;
       }
 
       > .step-icon,
       &:not(:has(.step-icon)):after {
-        content: counter(step);
+        --tw-content: counter(step);
+        content: var(--tw-content);
         counter-increment: step;
         z-index: 1;
         color: var(--step-fg);
@@ -33,11 +33,13 @@
       }
 
       &:first-child:before {
-        content: none;
+        --tw-content: none;
+        content: var(--tw-content);
       }
 
       &[data-content]:after {
-        content: attr(data-content);
+        --tw-content: attr(data-content);
+        content: var(--tw-content);
       }
     }
   }

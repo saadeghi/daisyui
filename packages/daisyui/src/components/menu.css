@@ -147,7 +147,8 @@
 
     & > li > details > ul {
       &:before {
-        content: none;
+        --tw-content: none;
+        content: var(--tw-content);
       }
     }
 

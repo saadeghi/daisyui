@@ -18,7 +18,8 @@
       &.filter-reset {
         @apply aspect-square;
         &::after {
-          content: "×";
+          --tw-content: "×";
+          content: var(--tw-content);
         }
       }
     }
