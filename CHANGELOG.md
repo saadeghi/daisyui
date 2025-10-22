@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.8 (2025-10-22)
+
+
+### Bug Fixes
+
+* easier overriding before/after content using utility classes. closes: [#4196](https://github.com/saadeghi/daisyui/issues/4196) ([f2b1e9f](https://github.com/saadeghi/daisyui/commit/f2b1e9fda1dbb9a9907bca136f0de75b7a0d3436))
+
 ## 5.3.7 (2025-10-16)
 
 
