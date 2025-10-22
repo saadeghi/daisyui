@@ -41,4 +41,20 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 @plugin "daisyui";
 ```
 
+Make sure your compiled CSS is included in the <head> (your framework might handle this for you)
+
+```index.html
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+<body>
+<button class="btn">Hello DaisyUI!</button>
+</body>
+</html>
+```
+
 Now you can use daisyUI class names!
