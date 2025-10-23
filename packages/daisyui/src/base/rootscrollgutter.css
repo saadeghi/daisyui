@@ -5,6 +5,7 @@
   .modal-toggle:checked,
   .drawer:not(.drawer-open) > .drawer-toggle:checked
 ) {
+  transition: background-color 0.3s ease-out;
   background-image: linear-gradient(var(--root-bg), var(--root-bg));
   background-color: color-mix(
     in srgb,
