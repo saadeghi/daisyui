@@ -103,8 +103,8 @@
 
 .drawer-open {
   @layer daisyui.modifier {
-    :where(& > .drawer-side) {
-      @apply overflow-y-auto;
+    & > .drawer-side {
+      @apply overflow-y-auto min-h-full h-auto;
     }
 
     > .drawer-toggle {
