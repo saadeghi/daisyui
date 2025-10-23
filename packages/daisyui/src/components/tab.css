@@ -21,6 +21,7 @@
     --tab-radius-ee: 0;
     --tab-order: 0;
     --tab-radius-min: calc(0.75rem - var(--border));
+    --tab-rm: min(var(--radius-field), var(--tab-radius-min));
     border-color: #0000;
     order: var(--tab-order);
     height: var(--tab-height);
@@ -154,14 +155,14 @@
 
     > .tab {
       --tab-border: 0 0 var(--border) 0;
-      --tab-radius-ss: min(var(--radius-field), var(--tab-radius-min));
-      --tab-radius-se: min(var(--radius-field), var(--tab-radius-min));
+      --tab-radius-ss: var(--tab-rm);
+      --tab-radius-se: var(--tab-rm);
       --tab-radius-es: 0;
       --tab-radius-ee: 0;
       --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
-      --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
+      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
+      --tab-corner-height: var(--tab-rm);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -210,8 +211,8 @@
           height: var(--tab-corner-height);
           background-position: var(--tab-corner-position);
           background-image: var(--radius-start), var(--radius-end);
-          background-size: min(var(--radius-field), var(--tab-radius-min))
-            min(var(--radius-field), var(--tab-radius-min));
+          background-size: var(--tab-rm)
+            var(--tab-rm);
           background-repeat: no-repeat;
           inset: var(--tab-inset);
         }
@@ -274,14 +275,14 @@
     > .tab {
       --tab-order: 0;
       --tab-border: 0 0 var(--border) 0;
-      --tab-radius-ss: min(var(--radius-field), var(--tab-radius-min));
-      --tab-radius-se: min(var(--radius-field), var(--tab-radius-min));
+      --tab-radius-ss: var(--tab-rm);
+      --tab-radius-se: var(--tab-rm);
       --tab-radius-es: 0;
       --tab-radius-ee: 0;
       --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
-      --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
+      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
+      --tab-corner-height: var(--tab-rm);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -355,12 +356,12 @@
       --tab-border: var(--border) 0 0 0;
       --tab-radius-ss: 0;
       --tab-radius-se: 0;
-      --tab-radius-es: min(var(--radius-field), var(--tab-radius-min));
-      --tab-radius-ee: min(var(--radius-field), var(--tab-radius-min));
+      --tab-radius-es: var(--tab-rm);
+      --tab-radius-ee: var(--tab-rm);
       --tab-border-colors: var(--tab-border-color) #0000 #0000 #0000;
       --tab-paddings: 0 var(--tab-p) var(--border) var(--tab-p);
-      --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
-      --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
+      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
+      --tab-corner-height: var(--tab-rm);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -429,14 +430,14 @@
     > .tab {
       --tab-order: 0;
       --tab-border: 0 1px 0 0;
-      --tab-radius-ss: min(var(--radius-field),var(--tab-radius-min));
+      --tab-radius-ss: var(--tab-rm);
       --tab-radius-se: 0;
-      --tab-radius-es: min(var(--radius-field),var(--tab-radius-min));
+      --tab-radius-es: var(--tab-rm);
       --tab-radius-ee: 0;
       --tab-paddings: 1px var(--tab-p) 1px calc(var(--tab-p) + 1px);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: min(var(--radius-field),var(--tab-radius-min));
-      --tab-corner-height: calc(100% + min(var(--radius-field),var(--tab-radius-min)) * 2);
+      --tab-corner-width: var(--tab-rm);
+      --tab-corner-height: calc(100% + var(--tab-rm) * 2);
       --tab-corner-position: top right, bottom right;
       --last-tab-margin: 0 0 0 0;
 
@@ -494,7 +495,7 @@
       using --tabs-box-radius CSS variable to avoid Nuxt build issue
       https://github.com/saadeghi/daisyui/issues/3724
     */
-    --tabs-box-radius: calc(var(--radius-field) + var(--radius-field) + var(--radius-field));
+    --tabs-box-radius: calc(3 * var(--radius-field));
     border-radius: calc(
       min(calc(var(--tab-height) / 2), var(--radius-field)) + min(0.25rem, var(--tabs-box-radius))
     );
