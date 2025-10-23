@@ -211,8 +211,7 @@
           height: var(--tab-corner-height);
           background-position: var(--tab-corner-position);
           background-image: var(--radius-start), var(--radius-end);
-          background-size: var(--tab-rm)
-            var(--tab-rm);
+          background-size: var(--tab-rm) var(--tab-rm);
           background-repeat: no-repeat;
           inset: var(--tab-inset);
         }
