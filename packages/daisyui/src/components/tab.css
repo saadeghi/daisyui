@@ -12,7 +12,7 @@
 .tab {
   @layer daisyui.component {
     @apply hover:text-base-content relative inline-flex cursor-pointer appearance-none flex-wrap items-center justify-center text-center select-none;
-    --tab-p: 1rem;
+    --tab-p: 0.75rem;
     --tab-bg: var(--color-base-100);
     --tab-border-color: var(--color-base-300);
     --tab-radius-ss: 0;
