@@ -53,16 +53,16 @@
 .drawer-toggle {
   @layer daisyui.component {
     @apply fixed h-0 w-0 appearance-none opacity-0;
+  }
 
-    &:checked {
-      & ~ .drawer-side {
-        @apply pointer-events-auto visible overflow-y-auto opacity-100;
-        scrollbar-color: color-mix(in oklch, currentColor 35%, #0000)
-          oklch(0 0 0 / calc(var(--page-has-backdrop, 0) * 0.4));
+  @layer daisyui.modifier {
+    :where(&:checked ~ .drawer-side) {
+      @apply pointer-events-auto visible overflow-y-auto opacity-100;
+      scrollbar-color: color-mix(in oklch, currentColor 35%, #0000)
+        oklch(0 0 0 / calc(var(--page-has-backdrop, 0) * 0.4));
 
-        & > *:not(.drawer-overlay) {
-          translate: 0%;
-        }
+      & > *:not(.drawer-overlay) {
+        translate: 0%;
       }
     }
 
@@ -105,6 +105,7 @@
   @layer daisyui.modifier {
     & > .drawer-side {
       @apply overflow-y-auto min-h-full h-auto;
+      scrollbar-color: revert-layer;
     }
 
     > .drawer-toggle {
