@@ -70,6 +70,11 @@
       outline: 2px solid;
       outline-offset: 2px;
     }
+
+    :where(:root:has(&:checked)) {
+      @apply overflow-hidden;
+      --page-has-backdrop: 1;
+    }
   }
 }
 
@@ -106,6 +111,11 @@
     & > .drawer-side {
       @apply overflow-y-auto min-h-full h-auto;
       scrollbar-color: revert-layer;
+    }
+
+    :root:has(&):not(:has(.modal-open, .modal[open], .modal:target, .modal-toggle:checked)) {
+      overflow: revert-layer;
+      --page-has-backdrop: 0;
     }
 
     > .drawer-toggle {
