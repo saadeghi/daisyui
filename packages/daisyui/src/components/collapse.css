@@ -40,8 +40,11 @@
       > .collapse-content,
     &:not(.collapse-close)
       > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
-      visibility: visible;
+      content-visibility: visible;
       min-height: fit-content;
+      @supports not (content-visibility: visible) {
+        visibility: visible;
+      }
     }
     &:focus-visible,
     &:has(> input:is([type="checkbox"], [type="radio"]):focus-visible),
@@ -76,11 +79,6 @@
     &:not(.collapse-close)
       > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
       padding-bottom: 1rem;
-      @media (prefers-reduced-motion: no-preference) {
-        transition:
-          padding 0.2s ease-out,
-          background-color 0.2s ease-out;
-      }
     }
 
     > input:is([type="checkbox"], [type="radio"]) {
@@ -171,16 +169,20 @@
 
 .collapse-content {
   @layer daisyui.component {
-    visibility: hidden;
+    content-visibility: hidden;
     grid-column-start: 1;
     grid-row-start: 2;
     min-height: 0;
     padding-left: 1rem;
     padding-right: 1rem;
     cursor: unset;
+    @supports not (content-visibility: hidden) {
+      visibility: hidden;
+    }
     @media (prefers-reduced-motion: no-preference) {
       transition:
-        visibility 0.2s,
+        content-visibility 0.2s allow-discrete,
+        visibility 0.2s allow-discrete,
         padding 0.2s ease-out,
         background-color 0.2s ease-out;
     }
@@ -191,18 +193,19 @@
   @layer daisyui.component {
     width: 100%;
     @media (prefers-reduced-motion: no-preference) {
-      @supports (transition: content-visibility allow-discrete) and
-        (interpolate-size: allow-keywords) {
-        &::details-content {
-          transition:
-            content-visibility 0.2s allow-discrete,
-            height 0.2s;
-          height: 0;
-          interpolate-size: allow-keywords;
-        }
-        &:where([open], .collapse-open)::details-content {
-          height: auto;
-        }
+      &::details-content {
+        transition:
+          content-visibility 0.2s allow-discrete,
+          visibility 0.2s allow-discrete,
+          padding 0.2s ease-out,
+          background-color 0.2s ease-out,
+          height 0.2s;
+        height: 0;
+        interpolate-size: allow-keywords;
+      }
+
+      &:where([open])::details-content {
+        height: auto;
       }
     }
     & summary {
@@ -212,6 +215,10 @@
       &::-webkit-details-marker {
         display: none;
       }
+    }
+
+    & > .collapse-content {
+      content-visibility: visible;
     }
   }
 }
@@ -281,13 +288,11 @@
   @layer daisyui.modifier {
     grid-template-rows: max-content 1fr;
     > .collapse-content {
-      visibility: visible;
+      content-visibility: visible;
       min-height: fit-content;
       padding-bottom: 1rem;
-      @media (prefers-reduced-motion: no-preference) {
-        transition:
-          padding 0.2s ease-out,
-          background-color 0.2s ease-out;
+      @supports not (content-visibility: visible) {
+        visibility: visible;
       }
     }
   }
