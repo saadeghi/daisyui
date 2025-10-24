@@ -31,11 +31,15 @@ classnames:
 
 > :INFO:
 >
-> Accordion uses the same style as the [collapse component](/components/collapse/) but it works with radio inputs. You can control which item to be open by checking/unchecking the hidden radio input.
+> Accordion uses the same style as the [collapse component](/components/collapse/) but it works with radio inputs or details elements. You can control which item to be open by checking/unchecking the hidden radio input or setting the open attribute on details element.
 
 > :INFO:
 >
-> All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs on each set.
+> All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs or details elements on each set.
+
+> :INFO:
+>
+> If you want the collapsed content to be searcheable in browser use the [Accordion using details](#accordion-using-details)
 
 
 ### ~Accordion using radio inputs
@@ -71,6 +75,36 @@ classnames:
   <div class="$$collapse-title font-semibold">How do I update my profile information?</div>
   <div class="$$collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
 </div>
+```
+
+
+### ~Accordion using details
+<details class="collapse bg-base-100 border border-base-300" name="my-accordion-det-1" open>
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+</details>
+<details class="collapse bg-base-100 border border-base-300" name="my-accordion-det-1">
+  <summary class="collapse-title font-semibold">I forgot my password. What should I do?</summary>
+  <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+</details>
+<details class="collapse bg-base-100 border border-base-300" name="my-accordion-det-1">
+  <summary class="collapse-title font-semibold">How do I update my profile information?</summary>
+  <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+</details>
+
+```html
+<details class="$$collapse bg-base-100 border border-base-300" name="my-accordion-det-1" open>
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+</details>
+<details class="$$collapse bg-base-100 border border-base-300" name="my-accordion-det-1">
+  <summary class="$$collapse-title font-semibold">I forgot my password. What should I do?</summary>
+  <div class="$$collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+</details>
+<details class="$$collapse bg-base-100 border border-base-300" name="my-accordion-det-1">
+  <summary class="$$collapse-title font-semibold">How do I update my profile information?</summary>
+  <div class="$$collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+</details>
 ```
 
 
