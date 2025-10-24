@@ -12,7 +12,7 @@
 .tab {
   @layer daisyui.component {
     @apply hover:text-base-content relative inline-flex cursor-pointer appearance-none flex-wrap items-center justify-center text-center select-none;
-    --tab-p: 1rem;
+    --tab-p: 0.75rem;
     --tab-bg: var(--color-base-100);
     --tab-border-color: var(--color-base-300);
     --tab-radius-ss: 0;
@@ -21,6 +21,7 @@
     --tab-radius-ee: 0;
     --tab-order: 0;
     --tab-radius-min: calc(0.75rem - var(--border));
+    --tab-rm: min(var(--radius-field), var(--tab-radius-min));
     border-color: #0000;
     order: var(--tab-order);
     height: var(--tab-height);
@@ -117,7 +118,7 @@
 
 .tabs-border {
   @layer daisyui.modifier {
-    .tab {
+    > .tab {
       --tab-border-color: #0000 #0000 var(--tab-border-color) #0000;
       position: relative;
       border-radius: var(--radius-field);
@@ -154,14 +155,14 @@
 
     > .tab {
       --tab-border: 0 0 var(--border) 0;
-      --tab-radius-ss: min(var(--radius-field), var(--tab-radius-min));
-      --tab-radius-se: min(var(--radius-field), var(--tab-radius-min));
+      --tab-radius-ss: var(--tab-rm);
+      --tab-radius-se: var(--tab-rm);
       --tab-radius-es: 0;
       --tab-radius-ee: 0;
       --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
-      --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
+      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
+      --tab-corner-height: var(--tab-rm);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -210,8 +211,7 @@
           height: var(--tab-corner-height);
           background-position: var(--tab-corner-position);
           background-image: var(--radius-start), var(--radius-end);
-          background-size: min(var(--radius-field), var(--tab-radius-min))
-            min(var(--radius-field), var(--tab-radius-min));
+          background-size: var(--tab-rm) var(--tab-rm);
           background-repeat: no-repeat;
           inset: var(--tab-inset);
         }
@@ -271,17 +271,17 @@
     --tabs-height: auto;
     --tabs-direction: row;
 
-    .tab {
+    > .tab {
       --tab-order: 0;
       --tab-border: 0 0 var(--border) 0;
-      --tab-radius-ss: min(var(--radius-field), var(--tab-radius-min));
-      --tab-radius-se: min(var(--radius-field), var(--tab-radius-min));
+      --tab-radius-ss: var(--tab-rm);
+      --tab-radius-se: var(--tab-rm);
       --tab-radius-es: 0;
       --tab-radius-ee: 0;
       --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
-      --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
+      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
+      --tab-corner-height: var(--tab-rm);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -314,7 +314,7 @@
       }
     }
 
-    &:has(.tab-content) {
+    &:has(> .tab-content) {
       > .tab:first-child {
         &:not(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
           --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
@@ -323,7 +323,7 @@
       }
     }
 
-    .tab-content {
+    > .tab-content {
       --tabcontent-order: 1;
       --tabcontent-margin: calc(-1 * var(--border)) 0 0 0;
       --tabcontent-radius-ss: 0;
@@ -350,17 +350,17 @@
     --tabs-height: auto;
     --tabs-direction: row;
 
-    .tab {
+    > .tab {
       --tab-order: 1;
       --tab-border: var(--border) 0 0 0;
       --tab-radius-ss: 0;
       --tab-radius-se: 0;
-      --tab-radius-es: min(var(--radius-field), var(--tab-radius-min));
-      --tab-radius-ee: min(var(--radius-field), var(--tab-radius-min));
+      --tab-radius-es: var(--tab-rm);
+      --tab-radius-ee: var(--tab-rm);
       --tab-border-colors: var(--tab-border-color) #0000 #0000 #0000;
       --tab-paddings: 0 var(--tab-p) var(--border) var(--tab-p);
-      --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
-      --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
+      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
+      --tab-corner-height: var(--tab-rm);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -393,7 +393,7 @@
       }
     }
 
-    &:has(.tab-content) {
+    &:has(> .tab-content) {
       > .tab:first-child {
         &:not(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
           --tab-border-colors: #0000 var(--tab-border-color) var(--tab-border-color)
@@ -402,7 +402,7 @@
       }
     }
 
-    .tab-content {
+    > .tab-content {
       --tabcontent-order: 0;
       --tabcontent-margin: 0 0 calc(-1 * var(--border)) 0;
       --tabcontent-radius-ss: var(--radius-box);
@@ -426,17 +426,17 @@
     --tabs-height: 10rem;
     --tabs-direction: column;
 
-    .tab {
+    > .tab {
       --tab-order: 0;
       --tab-border: 0 1px 0 0;
-      --tab-radius-ss: min(var(--radius-field),var(--tab-radius-min));
+      --tab-radius-ss: var(--tab-rm);
       --tab-radius-se: 0;
-      --tab-radius-es: min(var(--radius-field),var(--tab-radius-min));
+      --tab-radius-es: var(--tab-rm);
       --tab-radius-ee: 0;
       --tab-paddings: 1px var(--tab-p) 1px calc(var(--tab-p) + 1px);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: min(var(--radius-field),var(--tab-radius-min));
-      --tab-corner-height: calc(100% + min(var(--radius-field),var(--tab-radius-min)) * 2);
+      --tab-corner-width: var(--tab-rm);
+      --tab-corner-height: calc(100% + var(--tab-rm) * 2);
       --tab-corner-position: top right, bottom right;
       --last-tab-margin: 0 0 0 0;
 
@@ -460,15 +460,15 @@
       }
     }
 
-    &:has(.tab-content) {
-      >.tab:first-child {
+    &:has(> .tab-content) {
+      > .tab:first-child {
         &:not(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
           --tab-border-colors: var(--tab-border-color) #0000 var(--tab-border-color) var(--tab-border-color);
         }
       }
     }
 
-    .tab-content {
+    > .tab-content {
       --tabcontent-order: 1;
       --tabcontent-margin: 0 0 0 -1px;
       --tabcontent-radius-ss: 0;
@@ -480,7 +480,7 @@
     :checked,
     label:has(:checked),
     :is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
-      &+.tab-content:not(:nth-child(2)) {
+      & + .tab-content:not(:nth-child(2)) {
         --tabcontent-radius-ss: var(--radius-box);
       }
     }
@@ -494,7 +494,7 @@
       using --tabs-box-radius CSS variable to avoid Nuxt build issue
       https://github.com/saadeghi/daisyui/issues/3724
     */
-    --tabs-box-radius: calc(var(--radius-field) + var(--radius-field) + var(--radius-field));
+    --tabs-box-radius: calc(3 * var(--radius-field));
     border-radius: calc(
       min(calc(var(--tab-height) / 2), var(--radius-field)) + min(0.25rem, var(--tabs-box-radius))
     );
@@ -502,7 +502,7 @@
       0 -0.5px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 0.5px oklch(0% 0 0 / calc(var(--depth) * 0.05)) inset;
 
-    .tab {
+    > .tab {
       @apply rounded-field;
       border-style: none;
 
@@ -527,7 +527,7 @@
         border: 1px solid;
       }
     }
-    .tab-content {
+    > .tab-content {
       @apply mt-1;
       border-radius: calc(
         min(calc(var(--tab-height) / 2), var(--radius-field)) + min(0.25rem, var(--tabs-box-radius)) -
@@ -540,7 +540,7 @@
 .tabs-xs {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 6);
-    :where(.tab) {
+    :where(& > .tab) {
       font-size: 0.75rem;
       --tab-p: 0.375rem;
       --tab-radius-min: calc(0.5rem - var(--border));
@@ -551,7 +551,7 @@
 .tabs-sm {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 8);
-    :where(.tab) {
+    :where(& > .tab) {
       font-size: 0.875rem;
       --tab-p: 0.5rem;
       --tab-radius-min: calc(0.5rem - var(--border));
@@ -562,7 +562,7 @@
 .tabs-md {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 10);
-    :where(.tab) {
+    :where(& > .tab) {
       font-size: 0.875rem;
       --tab-p: 0.75rem;
       --tab-radius-min: calc(0.75rem - var(--border));
@@ -573,7 +573,7 @@
 .tabs-lg {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 12);
-    :where(.tab) {
+    :where(& > .tab) {
       font-size: 1.125rem;
       --tab-p: 1rem;
       --tab-radius-min: calc(1.5rem - var(--border));
@@ -584,7 +584,7 @@
 .tabs-xl {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 14);
-    :where(.tab) {
+    :where(& > .tab) {
       font-size: 1.125rem;
       --tab-p: 1.25rem;
       --tab-radius-min: calc(2rem - var(--border));
