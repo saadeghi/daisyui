@@ -72,8 +72,7 @@
     }
 
     :where(:root:has(&:checked)) {
-      @apply overflow-hidden;
-      --page-has-backdrop: 1;
+      @apply [--page-overflow:hidden] [--page-has-backdrop:1];
     }
   }
 }
@@ -114,8 +113,8 @@
     }
 
     :root:has(&):not(:has(.modal-open, .modal[open], .modal:target, .modal-toggle:checked)) {
-      overflow: revert-layer;
-      --page-has-backdrop: 0;
+      --page-overflow: revert-layer;
+      --page-has-backdrop: revert-layer;
     }
 
     > .drawer-toggle {

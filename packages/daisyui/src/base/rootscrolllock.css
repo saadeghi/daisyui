@@ -1,3 +1,7 @@
+:root {
+  overflow: var(--page-overflow);
+}
+
 :root:has(.modal-open, .modal[open], .modal:target, .modal-toggle:checked) {
-  @apply overflow-hidden [--page-has-backdrop:1];
+  @apply [--page-overflow:hidden] [--page-has-backdrop:1];
 }
