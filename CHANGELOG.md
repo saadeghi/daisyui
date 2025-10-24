@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.9 (2025-10-24)
+
+
+### Bug Fixes
+
+* allow browser to find text in collapse `<details>` ([bde0427](https://github.com/saadeghi/daisyui/commit/bde0427f0e841b4599a0e02465792c98c717cec1)), closes [#4194](https://github.com/saadeghi/daisyui/issues/4194)
+
 ## 5.3.8 (2025-10-22)
 
 
