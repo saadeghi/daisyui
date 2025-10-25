@@ -1,7 +1,4 @@
-:root {
+/* force higher specificity */
+:root:not(span) {
   overflow: var(--page-overflow);
-}
-
-:root:has(.modal-open, .modal[open], .modal:target, .modal-toggle:checked) {
-  @apply [--page-overflow:hidden] [--page-has-backdrop:1];
 }
