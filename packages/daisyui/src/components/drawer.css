@@ -119,18 +119,20 @@
 
 .drawer-open {
   @layer daisyui.modifier.drawer {
-    & > .drawer-side {
-      scrollbar-color: revert-layer;
-    }
+    & > .drawer-toggle:checked {
+      & ~ .drawer-side {
+        scrollbar-color: revert-layer;
+      }
 
-    :root:has(&) {
-      --page-overflow: revert-layer;
-      --page-scrollgutter: revert-layer;
-      --page-scrollbg: revert-layer;
-      --page-scrolltr: revert-layer;
-      --page-has-backdrop: revert-layer;
-      animation: revert-layer;
-      animation-timeline: revert-layer;
+      :root:has(&) {
+        --page-overflow: revert-layer;
+        --page-scrollgutter: revert-layer;
+        --page-scrollbg: revert-layer;
+        --page-scrolltr: revert-layer;
+        --page-has-backdrop: revert-layer;
+        animation: revert-layer;
+        animation-timeline: revert-layer;
+      }
     }
   }
 
