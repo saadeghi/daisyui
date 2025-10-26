@@ -46,7 +46,7 @@
     &::-webkit-slider-thumb {
       @apply relative box-border;
       border-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));
-      background-color: currentColor;
+      background-color: var(--range-thumb);
       height: var(--range-thumb-size);
       width: var(--range-thumb-size);
       border: var(--range-p) solid;
