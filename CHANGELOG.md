@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.10 (2025-10-26)
+
+
+### Bug Fixes
+
+* range thumb color on Safari ([2c4a825](https://github.com/saadeghi/daisyui/commit/2c4a8254be4c13e6c256640026339e6272e63e68))
+
 ## 5.3.9 (2025-10-24)
 
 
