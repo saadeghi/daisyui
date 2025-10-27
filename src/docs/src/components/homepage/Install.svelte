@@ -27,7 +27,7 @@ const copyText = (text) => {
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
           aria-label="copy"
-          onclick="{() => copyText('npm i -D daisyui@latest')}">
+          onclick="{() => copyText('npm i -D daisyui@v4')}">
           {#if isClipboardButtonPressed}
             <svg
               class="h-5 w-5 fill-current"
@@ -50,7 +50,7 @@ const copyText = (text) => {
         </button>
       </div>
     </div>
-    <pre data-prefix="$"><code>npm i -D daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>npm i -D daisyui@v4</code></pre>
   </div>
   <input
     type="radio"
@@ -66,7 +66,7 @@ const copyText = (text) => {
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
           aria-label="copy"
-          onclick="{() => copyText('pnpm add -D daisyui@latest')}">
+          onclick="{() => copyText('pnpm add -D daisyui@v4')}">
           {#if isClipboardButtonPressed}
             <svg
               class="h-5 w-5 fill-current"
@@ -89,7 +89,7 @@ const copyText = (text) => {
         </button>
       </div>
     </div>
-    <pre data-prefix="$"><code>pnpm add -D daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>pnpm add -D daisyui@v4</code></pre>
   </div>
   <input
     type="radio"
@@ -105,7 +105,7 @@ const copyText = (text) => {
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
           aria-label="copy"
-          onclick="{() => copyText('yarn add -D daisyui@latest')}">
+          onclick="{() => copyText('yarn add -D daisyui@v4')}">
           {#if isClipboardButtonPressed}
             <svg
               class="h-5 w-5 fill-current"
@@ -128,7 +128,7 @@ const copyText = (text) => {
         </button>
       </div>
     </div>
-    <pre data-prefix="$"><code>yarn add -D daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>yarn add -D daisyui@v4</code></pre>
   </div>
   <input
     type="radio"
@@ -144,7 +144,7 @@ const copyText = (text) => {
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
           aria-label="copy"
-          onclick="{() => copyText('bun add -D daisyui@latest')}">
+          onclick="{() => copyText('bun add -D daisyui@v4')}">
           {#if isClipboardButtonPressed}
             <svg
               class="h-5 w-5 fill-current"
@@ -167,7 +167,7 @@ const copyText = (text) => {
         </button>
       </div>
     </div>
-    <pre data-prefix="$"><code>bun add -D daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>bun add -D daisyui@v4</code></pre>
   </div>
 </div>
 <p class="mx-auto mb-2 mt-5 w-full text-start">2. {$t("install-step-2")}:</p>
