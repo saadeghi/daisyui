@@ -22,6 +22,8 @@
     --tab-order: 0;
     --tab-radius-min: calc(0.75rem - var(--border));
     --tab-rm: min(var(--radius-field), var(--tab-radius-min));
+    --tab-grad: calc(69% - var(--border));
+    --tab-rad-grad: #0000 var(--tab-grad), var(--tab-border-color) calc(var(--tab-grad) + 0.25px), var(--tab-border-color) calc(var(--tab-grad) + var(--border)), var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px);
     border-color: #0000;
     order: var(--tab-order);
     height: var(--tab-height);
@@ -185,21 +187,8 @@
         --tab-paddings: 0 calc(var(--tab-p) - var(--border)) var(--border)
           calc(var(--tab-p) - var(--border));
         --tab-inset: auto auto 0 auto;
-        --tab-grad: calc(69% - var(--border));
-        --radius-start: radial-gradient(
-          circle at top left,
-          #0000 var(--tab-grad),
-          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
-        );
-        --radius-end: radial-gradient(
-          circle at top right,
-          #0000 var(--tab-grad),
-          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
-        );
+        --radius-start: radial-gradient(circle at top left, var(--tab-rad-grad));
+        --radius-end: radial-gradient(circle at top right, var(--tab-rad-grad));
         background-color: var(--tab-bg);
 
         &:before {
@@ -297,20 +286,8 @@
         --tab-paddings: 0 calc(var(--tab-p) - var(--border)) var(--border)
           calc(var(--tab-p) - var(--border));
         --tab-inset: auto auto 0 auto;
-        --radius-start: radial-gradient(
-          circle at top left,
-          #0000 var(--tab-grad),
-          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
-        );
-        --radius-end: radial-gradient(
-          circle at top right,
-          #0000 var(--tab-grad),
-          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
-        );
+        --radius-start: radial-gradient(circle at top left, var(--tab-rad-grad));
+        --radius-end: radial-gradient(circle at top right, var(--tab-rad-grad));
       }
     }
 
@@ -376,20 +353,8 @@
         --tab-paddings: var(--border) calc(var(--tab-p) - var(--border)) 0
           calc(var(--tab-p) - var(--border));
         --tab-inset: 0 auto auto auto;
-        --radius-start: radial-gradient(
-          circle at bottom left,
-          #0000 var(--tab-grad),
-          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
-        );
-        --radius-end: radial-gradient(
-          circle at bottom right,
-          #0000 var(--tab-grad),
-          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
-        );
+        --radius-start: radial-gradient(circle at bottom left, var(--tab-rad-grad));
+        --radius-end: radial-gradient(circle at bottom right, var(--tab-rad-grad));
       }
     }
 
@@ -447,16 +412,8 @@
         --tab-border-colors: var(--tab-border-color) #0000 var(--tab-border-color) var(--tab-border-color);
         --tab-paddings: 0 calc(1px + var(--tab-p)) 0 var(--tab-p);
         --tab-inset: auto 0 auto auto;
-        --radius-start: radial-gradient(circle at top left,
-            #0000 var(--tab-grad),
-            var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-            var(--tab-border-color) calc(var(--tab-grad) + 1px),
-            var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px));
-        --radius-end: radial-gradient(circle at bottom left,
-            #0000 var(--tab-grad),
-            var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-            var(--tab-border-color) calc(var(--tab-grad) + 1px),
-            var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px));
+        --radius-start: radial-gradient(circle at top left, var(--tab-rad-grad));
+        --radius-end: radial-gradient(circle at bottom right, var(--tab-rad-grad));
       }
     }
 
