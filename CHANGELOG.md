@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.4.2 (2025-11-01)
+
+
+### Bug Fixes
+
+* drawer height issue from 5.4.0 ([261b302](https://github.com/saadeghi/daisyui/commit/261b302bec693c0418588782a158bf1df581cdb2))
+
 ## 5.4.1 (2025-11-01)
 
 
