@@ -10,13 +10,12 @@
   import { untrack } from "svelte"
 
   let {
-    colors,
     value = $bindable(),
     name = "",
     label = "",
     colorPairs = [],
+    colorDetails = [],
     themeColors = {},
-    colorInitials = {},
     pickerMode = $bindable("palette"), // "palette" or "slider"
     onModalStateChange = () => {}, // Callback for modal state changes
   } = $props()
@@ -24,35 +23,12 @@
   let inputValue = $state(value)
   let isDragging = $state(false)
   let colorState = $state({
-    changed: false,
-    mode: "",
-    value: "",
-    originalMode: "",
-    originalValue: "",
-    oklch: { l: 0, c: 0, h: 0 },
-    hsl: { h: 0, s: 0, l: 0 },
-    rgb: { r: 0, g: 0, b: 0 },
+    oklch: {},
+    hsl: {},
+    rgb: {},
   })
 
   updateColorState(value)
-
-  const colorsEnhanced = $derived(Object.entries(colors).map(([key, color]) => {
-    const names = []
-    const initials = []
-    for (const [key, themeColor] of Object.entries(themeColors)) {
-      if (themeColor === color) {
-        names.push(key.replace("--color-", ""))
-        initials.push(colorInitials[key] || null)
-      }
-    }
-
-    return [
-      key,
-      color,
-      initials.length > 0 ? `${ initials[0] }${ initials.length > 1 ? "+" : "" }` : null,
-      names,
-    ]
-  }))
 
   let useOklchPicker = $derived(pickerMode === "slider")
   let dragPreviewColor = $state(null) // Temporary color during dragging
@@ -65,6 +41,7 @@
     } else if (event.key === "Enter") {
       if (validateColor(inputValue)) {
         value = inputValue
+        inputValue = ""
         closeModal()
       }
     }
@@ -73,19 +50,20 @@
   function handleDragStart(color) {
     isDragging = true
     dragPreviewColor = color
-    value = color
+    inputValue = color
   }
 
   function handleDragOver(color) {
     if (isDragging) {
       dragPreviewColor = color
-      value = color
+      inputValue = color
     }
   }
 
   function handleDragEnd(color) {
     if (isDragging) {
       value = color
+      inputValue = ""
       isDragging = false
       dragPreviewColor = null
     }
@@ -94,6 +72,7 @@
   function handleGlobalMouseUp() {
     if (isDragging && dragPreviewColor) {
       value = dragPreviewColor // Ensure value is updated if drag ends elsewhere
+      inputValue = ""
     }
     isDragging = false
     dragPreviewColor = null
@@ -101,9 +80,11 @@
 
   function handleInput(event) {
     const newValue = event.target.value.trim()
-    inputValue = newValue
     if (validateColor(newValue)) {
       value = newValue
+      inputValue = ""
+    } else {
+      inputValue = newValue
     }
   }
 
@@ -139,32 +120,38 @@
     inputValue = value
   })
 
-  // Update value when inputValue changes and is valid
-  $effect(() => {
-    if (inputValue !== value && validateColor(inputValue)) {
-      value = inputValue
-    }
-  })
-
   // Update inputValue when colorState changes
   $effect(() => {
-    const newValue = generateColorValue(colorState)
+    const newValue = generateColorValue()
 
     untrack(() => {
-      if (newValue !== inputValue) {
+      if (inputValue !== newValue) {
         if (!colorState.changed) {
           colorState.value = newValue
+          inputValue = newValue
         }
-        inputValue = newValue
         value = newValue
       }
     })
   })
 
   // Get the color to display (preview during dragging, actual value otherwise)
-  let displayColor = $derived(dragPreviewColor || value)
+  const displayColor = $derived(dragPreviewColor || value)
 
-  let colorName = $derived(colorsEnhanced.find(([, color]) => color === inputValue)?.[0])
+  const colorName = $derived(colorDetails.find(([, color]) => color === inputValue)?.[0])
+  const colorPairsMap = $derived.by(() => {
+    const map = {
+      color: {},
+      content: {},
+    }
+
+    for (const [color, contentColor] of colorPairs) {
+      map.color[color] = contentColor
+      map.content[contentColor] = color
+    }
+
+    return map
+  })
 
   function getTextColorClass(name) {
     const numberMatch = name.match(/\d+/)
@@ -176,14 +163,8 @@
   }
 
   function getPairColor(currentColor) {
-    for (const [color, contentColor] of colorPairs) {
-      if (currentColor === color) {
-        return themeColors[contentColor]
-      } else if (currentColor === contentColor) {
-        return themeColors[color]
-      }
-    }
-    return currentColor
+    return themeColors[colorPairsMap.color[currentColor] || colorPairsMap.content[currentColor]]
+      || currentColor
   }
 
   function updateColorState(newValue) {
@@ -191,9 +172,19 @@
 
     if (colorState.value === newValue) return
 
+    if (colorState.originalValue === newValue) {
+      colorState.mode = colorState.originalMode
+      colorState.value = colorState.originalValue
+      return
+    }
+
     try {
       const parsedColor = parse(newValue)
       if (parsedColor) {
+        if (newValue.startsWith("#")) {
+          parsedColor.mode = "hex"
+        }
+
         colorState.mode = parsedColor.mode
         colorState.value = newValue
 
@@ -238,23 +229,23 @@
   }
 
   // Helper function to generate color value from color state
-  function generateColorValue(currentState) {
+  function generateColorValue() {
     if (colorState.originalMode === colorState.mode && colorState.originalValue && !colorState.changed) {
       return colorState.originalValue
     }
 
     try {
       if (colorState.mode === "oklch") {
-        const { l, c, h } = currentState.oklch
+        const { l, c, h } = colorState.oklch
         return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${h.toFixed(1)})`
       }
 
       if (colorState.mode === "hsl") {
-        const { h, s, l } = currentState.hsl
+        const { h, s, l } = colorState.hsl
         return `hsl(${h.toFixed(1)} ${(s * 100).toFixed(1)}% ${(l * 100).toFixed(1)}%)`
       }
 
-      const { r, g, b } = currentState.rgb
+      const { r, g, b } = colorState.rgb
       if (colorState.mode === "hex") {
         const color = {
           mode: "rgb",
@@ -265,7 +256,7 @@
         return formatHex(color)
       }
 
-      return `rgb(${currentState.rgb.r} ${currentState.rgb.g} ${currentState.rgb.b})`
+      return `rgb(${colorState.rgb.r} ${colorState.rgb.g} ${colorState.rgb.b})`
     } catch {
       return inputValue // Fallback to current value if conversion fails
     }
@@ -393,7 +384,7 @@
           class="mx-auto grid w-fit grid-cols-11 lg:my-auto lg:min-h-[20rem] lg:[writing-mode:vertical-lr]"
           role="listbox"
         >
-          {#each colorsEnhanced as [name, color, initials, names]}
+          {#each colorDetails as [name, color, initials, names]}
             <button
               class="appearance-none p-px [writing-mode:lr]"
               aria-label={name}
@@ -483,7 +474,7 @@
                 <li>
                   <button
                     type="button"
-                    class={colorState.mode === "oklch" ? "menu-active" : ""}
+                    class:menu-active={colorState.mode === "oklch"}
                     onclick={({ target }) => {
                       target?.blur()
                       colorState.mode = "oklch"
@@ -495,7 +486,7 @@
                 <li>
                   <button
                     type="button"
-                    class={colorState.mode === "hsl" ? "menu-active" : ""}
+                    class:menu-active={colorState.mode === "hsl"}
                     onclick={({ target }) => {
                       target?.blur()
                       colorState.mode = "hsl"
@@ -507,7 +498,7 @@
                 <li>
                   <button
                     type="button"
-                    class={colorState.mode === "rgb" ? "menu-active" : ""}
+                    class:menu-active={colorState.mode === "rgb"}
                     onclick={({ target }) => {
                       target?.blur()
                       colorState.mode = "rgb"
@@ -519,7 +510,7 @@
                 <li>
                   <button
                     type="button"
-                    class={colorState.mode === "hex" ? "menu-active" : ""}
+                    class:menu-active={colorState.mode === "hex"}
                     onclick={({ target }) => {
                       target?.blur()
                       colorState.mode = "hex"
