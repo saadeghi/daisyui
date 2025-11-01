@@ -243,6 +243,7 @@ Modal that closes when clicked outside,/components/modal/#modal-that-closes-when
 Method 3. using anchor links `legacy`,/components/modal/#method-3-using-anchor-links-legacy
 Modal using anchor link,/components/modal/#modal-using-anchor-link
 Accordion using radio inputs,/components/accordion/#accordion-using-radio-inputs
+Accordion using details,/components/accordion/#accordion-using-details
 Accordion with arrow icon,/components/accordion/#accordion-with-arrow-icon
 Accordion with plus/minus icon,/components/accordion/#accordion-with-plusminus-icon
 Using Accordion and Join together,/components/accordion/#using-accordion-and-join-together
