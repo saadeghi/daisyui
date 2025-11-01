@@ -17,10 +17,18 @@ on:
         options:
           - "latest"
           - "alpha"
+      publish_branch:
+        type: string
+        required: true
+        description: "Target branch (default: v4.12.24-static)"
   workflow_call:
     inputs:
       daisyuiversion:
         type: string
+      publish_branch:
+        type: string
+        required: true
+        description: "Target branch (default: v4.12.24-static)"
   push:
     branches:
       - master
@@ -110,3 +118,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build
           cname: ${{ secrets.CNAME }}
+          publish_branch: ${{ inputs.publish_branch || 'v4.12.24-static' }}
