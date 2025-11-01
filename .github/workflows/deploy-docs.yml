@@ -6,13 +6,13 @@ on:
       publish_branch:
         type: string
         required: false
-        description: "Target branch to deploy the built docs"
+        description: "Target branch (default: gh-pages)"
   workflow_call:
     inputs:
       publish_branch:
         type: string
         required: false
-        description: "Target branch to deploy the built docs"
+        description: "Target branch (default: gh-pages)"
   push:
     branches:
       - master
