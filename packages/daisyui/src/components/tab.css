@@ -21,9 +21,12 @@
     --tab-radius-ee: 0;
     --tab-order: 0;
     --tab-radius-min: calc(0.75rem - var(--border));
-    --tab-rm: min(var(--radius-field), var(--tab-radius-min));
-    --tab-grad: calc(69% - var(--border));
-    --tab-rad-grad: #0000 var(--tab-grad), var(--tab-border-color) calc(var(--tab-grad) + 0.25px), var(--tab-border-color) calc(var(--tab-grad) + var(--border)), var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px);
+    --tab-radius-limit: min(var(--radius-field), var(--tab-radius-min));
+    --tab-radius-grad:
+      #0000 calc(69% - var(--border)),
+      var(--tab-border-color) calc(calc(69% - var(--border)) + 0.25px),
+      var(--tab-border-color) calc(calc(69% - var(--border)) + var(--border)),
+      var(--tab-bg) calc(calc(69% - var(--border)) + var(--border) + 0.25px);
     border-color: #0000;
     order: var(--tab-order);
     height: var(--tab-height);
@@ -157,14 +160,14 @@
 
     > .tab {
       --tab-border: 0 0 var(--border) 0;
-      --tab-radius-ss: var(--tab-rm);
-      --tab-radius-se: var(--tab-rm);
+      --tab-radius-ss: var(--tab-radius-limit);
+      --tab-radius-se: var(--tab-radius-limit);
       --tab-radius-es: 0;
       --tab-radius-ee: 0;
       --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
-      --tab-corner-height: var(--tab-rm);
+      --tab-corner-width: calc(100% + var(--tab-radius-limit) * 2);
+      --tab-corner-height: var(--tab-radius-limit);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -187,8 +190,8 @@
         --tab-paddings: 0 calc(var(--tab-p) - var(--border)) var(--border)
           calc(var(--tab-p) - var(--border));
         --tab-inset: auto auto 0 auto;
-        --radius-start: radial-gradient(circle at top left, var(--tab-rad-grad));
-        --radius-end: radial-gradient(circle at top right, var(--tab-rad-grad));
+        --radius-start: radial-gradient(circle at top left, var(--tab-radius-grad));
+        --radius-end: radial-gradient(circle at top right, var(--tab-radius-grad));
         background-color: var(--tab-bg);
 
         &:before {
@@ -200,7 +203,7 @@
           height: var(--tab-corner-height);
           background-position: var(--tab-corner-position);
           background-image: var(--radius-start), var(--radius-end);
-          background-size: var(--tab-rm) var(--tab-rm);
+          background-size: var(--tab-radius-limit) var(--tab-radius-limit);
           background-repeat: no-repeat;
           inset: var(--tab-inset);
         }
@@ -263,14 +266,14 @@
     > .tab {
       --tab-order: 0;
       --tab-border: 0 0 var(--border) 0;
-      --tab-radius-ss: var(--tab-rm);
-      --tab-radius-se: var(--tab-rm);
+      --tab-radius-ss: var(--tab-radius-limit);
+      --tab-radius-se: var(--tab-radius-limit);
       --tab-radius-es: 0;
       --tab-radius-ee: 0;
       --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
-      --tab-corner-height: var(--tab-rm);
+      --tab-corner-width: calc(100% + var(--tab-radius-limit) * 2);
+      --tab-corner-height: var(--tab-radius-limit);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -286,8 +289,8 @@
         --tab-paddings: 0 calc(var(--tab-p) - var(--border)) var(--border)
           calc(var(--tab-p) - var(--border));
         --tab-inset: auto auto 0 auto;
-        --radius-start: radial-gradient(circle at top left, var(--tab-rad-grad));
-        --radius-end: radial-gradient(circle at top right, var(--tab-rad-grad));
+        --radius-start: radial-gradient(circle at top left, var(--tab-radius-grad));
+        --radius-end: radial-gradient(circle at top right, var(--tab-radius-grad));
       }
     }
 
@@ -332,12 +335,12 @@
       --tab-border: var(--border) 0 0 0;
       --tab-radius-ss: 0;
       --tab-radius-se: 0;
-      --tab-radius-es: var(--tab-rm);
-      --tab-radius-ee: var(--tab-rm);
+      --tab-radius-es: var(--tab-radius-limit);
+      --tab-radius-ee: var(--tab-radius-limit);
       --tab-border-colors: var(--tab-border-color) #0000 #0000 #0000;
       --tab-paddings: 0 var(--tab-p) var(--border) var(--tab-p);
-      --tab-corner-width: calc(100% + var(--tab-rm) * 2);
-      --tab-corner-height: var(--tab-rm);
+      --tab-corner-width: calc(100% + var(--tab-radius-limit) * 2);
+      --tab-corner-height: var(--tab-radius-limit);
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
@@ -353,8 +356,8 @@
         --tab-paddings: var(--border) calc(var(--tab-p) - var(--border)) 0
           calc(var(--tab-p) - var(--border));
         --tab-inset: 0 auto auto auto;
-        --radius-start: radial-gradient(circle at bottom left, var(--tab-rad-grad));
-        --radius-end: radial-gradient(circle at bottom right, var(--tab-rad-grad));
+        --radius-start: radial-gradient(circle at bottom left, var(--tab-radius-grad));
+        --radius-end: radial-gradient(circle at bottom right, var(--tab-radius-grad));
       }
     }
 
@@ -394,14 +397,14 @@
     > .tab {
       --tab-order: 0;
       --tab-border: 0 1px 0 0;
-      --tab-radius-ss: var(--tab-rm);
+      --tab-radius-ss: var(--tab-radius-limit);
       --tab-radius-se: 0;
-      --tab-radius-es: var(--tab-rm);
+      --tab-radius-es: var(--tab-radius-limit);
       --tab-radius-ee: 0;
       --tab-paddings: 1px var(--tab-p) 1px calc(var(--tab-p) + 1px);
       --tab-border-colors: #0000 #0000 var(--tab-border-color) #0000;
-      --tab-corner-width: var(--tab-rm);
-      --tab-corner-height: calc(100% + var(--tab-rm) * 2);
+      --tab-corner-width: var(--tab-radius-limit);
+      --tab-corner-height: calc(100% + var(--tab-radius-limit) * 2);
       --tab-corner-position: top right, bottom right;
       --last-tab-margin: 0 0 0 0;
 
@@ -412,8 +415,8 @@
         --tab-border-colors: var(--tab-border-color) #0000 var(--tab-border-color) var(--tab-border-color);
         --tab-paddings: 0 calc(1px + var(--tab-p)) 0 var(--tab-p);
         --tab-inset: auto 0 auto auto;
-        --radius-start: radial-gradient(circle at top left, var(--tab-rad-grad));
-        --radius-end: radial-gradient(circle at bottom right, var(--tab-rad-grad));
+        --radius-start: radial-gradient(circle at top left, var(--tab-radius-grad));
+        --radius-end: radial-gradient(circle at bottom right, var(--tab-radius-grad));
       }
     }
 
@@ -487,8 +490,8 @@
     > .tab-content {
       @apply mt-1;
       border-radius: calc(
-        min(calc(var(--tab-height) / 2), var(--radius-field)) + min(0.25rem, var(--tabs-box-radius)) -
-          var(--border)
+        min(calc(var(--tab-height) / 2), var(--radius-field)) +
+          min(0.25rem, var(--tabs-box-radius)) - var(--border)
       );
     }
   }
@@ -497,7 +500,7 @@
 .tabs-xs {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 6);
-    :where(& > .tab) {
+    & > .tab {
       font-size: 0.75rem;
       --tab-p: 0.375rem;
       --tab-radius-min: calc(0.5rem - var(--border));
@@ -508,7 +511,7 @@
 .tabs-sm {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 8);
-    :where(& > .tab) {
+    & > .tab {
       font-size: 0.875rem;
       --tab-p: 0.5rem;
       --tab-radius-min: calc(0.5rem - var(--border));
@@ -519,7 +522,7 @@
 .tabs-md {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 10);
-    :where(& > .tab) {
+    & > .tab {
       font-size: 0.875rem;
       --tab-p: 0.75rem;
       --tab-radius-min: calc(0.75rem - var(--border));
@@ -530,7 +533,7 @@
 .tabs-lg {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 12);
-    :where(& > .tab) {
+    & > .tab {
       font-size: 1.125rem;
       --tab-p: 1rem;
       --tab-radius-min: calc(1.5rem - var(--border));
@@ -541,7 +544,7 @@
 .tabs-xl {
   @layer daisyui.modifier {
     --tab-height: calc(var(--size-field, 0.25rem) * 14);
-    :where(& > .tab) {
+    & > .tab {
       font-size: 1.125rem;
       --tab-p: 1.25rem;
       --tab-radius-min: calc(2rem - var(--border));
