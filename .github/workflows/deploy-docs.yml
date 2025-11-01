@@ -11,12 +11,9 @@ on:
           - "bun"
           - "npm"
       daisyuiversion:
-        type: choice
-        description: DaisyUI release tag
+        type: string
+        description: DaisyUI release tag (latest, alpha, custom)
         default: "latest"
-        options:
-          - "latest"
-          - "alpha"
       publish_branch:
         type: string
         required: true
