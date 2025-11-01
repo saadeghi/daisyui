@@ -12,7 +12,8 @@ export function validateColor(color) {
     return false
   }
 
-  if (color.startsWith("#") && ![4, 7].includes(color.length)) {
+  // Ignore hex colors with alpha
+  if (color.startsWith("#") && ![ 4, 7 ].includes(color.length)) {
     return false
   }
 
