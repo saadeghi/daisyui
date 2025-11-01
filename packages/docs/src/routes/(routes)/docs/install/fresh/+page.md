@@ -25,7 +25,7 @@ deno i -D npm:daisyui@latest
 
 Add daisyUI to your CSS file (and remove old styles)
 
-```css:static/styles.css
+```css:assets/styles.css
 @import "tailwindcss";
 @plugin "daisyui";
 ```
