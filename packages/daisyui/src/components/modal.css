@@ -34,12 +34,11 @@
       }
 
       :root:has(&) {
-        @apply
-          [--page-overflow:hidden]
-          [--page-scrollgutter:stable]
-          [--page-scrollbg:var(--page-scrollbg-on)]
-          [--page-scrolltr:var(--page-scrolltr-on)]
-          [--page-has-backdrop:1];
+        --page-has-backdrop: 1;
+        --page-overflow: hidden;
+        --page-scroll-bg: var(--page-scroll-bg-on);
+        --page-scroll-gutter: stable;
+        --page-scroll-transition: var(--page-scroll-transition-on);
         animation: set-page-has-scroll forwards;
         animation-timeline: scroll();
       }

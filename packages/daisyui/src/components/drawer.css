@@ -62,12 +62,11 @@
     }
 
     :where(:root:has(&:checked)) {
-      @apply
-        [--page-overflow:hidden]
-        [--page-scrollgutter:stable]
-        [--page-scrollbg:var(--page-scrollbg-on)]
-        [--page-scrolltr:var(--page-scrolltr-on)]
-        [--page-has-backdrop:1];
+      --page-has-backdrop: 1;
+      --page-overflow: hidden;
+      --page-scroll-bg: var(--page-scroll-bg-on);
+      --page-scroll-gutter: stable;
+      --page-scroll-transition: var(--page-scroll-transition-on);
       animation: set-page-has-scroll forwards;
       animation-timeline: scroll();
     }
@@ -126,9 +125,9 @@
 
       :root:has(&) {
         --page-overflow: revert-layer;
-        --page-scrollgutter: revert-layer;
-        --page-scrollbg: revert-layer;
-        --page-scrolltr: revert-layer;
+        --page-scroll-gutter: revert-layer;
+        --page-scroll-bg: revert-layer;
+        --page-scroll-transition: revert-layer;
         --page-has-backdrop: revert-layer;
         animation: revert-layer;
         animation-timeline: revert-layer;
@@ -138,7 +137,7 @@
 
   @layer daisyui.modifier {
     & > .drawer-side {
-      @apply overflow-y-auto min-h-full h-auto;
+      @apply h-auto min-h-full overflow-y-auto;
     }
 
     > .drawer-toggle {

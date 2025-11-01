@@ -1,22 +1,20 @@
 :root {
-  --page-scrollbg-on: linear-gradient(var(--root-bg), var(--root-bg)) color-mix(
-    in srgb,
-    var(--root-bg),
-    oklch(0% 0 0) calc(var(--page-has-backdrop, 0) * 40%)
-  );
-  --page-scrolltr-on: background-color 0.3s ease-out;
-}
+  --page-scroll-bg-on: linear-gradient(var(--root-bg), var(--root-bg))
+    color-mix(in srgb, var(--root-bg), oklch(0% 0 0) calc(var(--page-has-backdrop, 0) * 40%));
+  --page-scroll-transition-on: background-color 0.3s ease-out;
 
-/* force higher specificity */
-:root:not(span) {
-  transition: var(--page-scrolltr);
-  background: var(--page-scrollbg, var(--root-bg, var(--color-base-100)));
+  transition: var(--page-scroll-transition);
 
   /* CSS if is not supported */
-  scrollbar-gutter: var(--page-scrollgutter, unset);
+  scrollbar-gutter: var(--page-scroll-gutter, unset);
 
   /* CSS if is supported */
-  scrollbar-gutter: if(style(--page-has-scroll: 1): var(--page-scrollgutter, unset); else: unset);
+  scrollbar-gutter: if(style(--page-has-scroll: 1): var(--page-scroll-gutter, unset) ; else: unset);
+}
+
+/* force higher specificity to override rootcolor */
+:root:root {
+  background: var(--page-scroll-bg, var(--root-bg, var(--color-base-100)));
 }
 
 @keyframes set-page-has-scroll {
