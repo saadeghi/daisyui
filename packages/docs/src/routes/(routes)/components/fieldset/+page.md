@@ -52,32 +52,30 @@ classnames:
 ```
 
 ### ~Fieldset with multiple inputs
+#### Add proper id and for attributes for accessibility. The id must be unique and depends on your context.
 
 <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
   <legend class="fieldset-legend">Page details</legend>
- 
-  <label for="title" class="label">Title</label>
-  <input type="text" id="title" class="input" placeholder="My awesome page" />
-
-  <label for="slug" class="label">Slug</label>
-  <input type="text" id="slug" class="input" placeholder="my-awesome-page" />
-
-  <label for="author" class="label">Author</label>
-  <input type="text" id="author" class="input" placeholder="Name" />
+  <label class="label">Title</label>
+  <input type="text" class="input" placeholder="My awesome page" />
+  <label class="label">Slug</label>
+  <input type="text" class="input" placeholder="my-awesome-page" />
+  <label class="label">Author</label>
+  <input type="text" class="input" placeholder="Name" />
 </fieldset>
 
 ```html
 <fieldset class="$$fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
   <legend class="$$fieldset-legend">Page details</legend>
 
-  <label for="title" class="$$label">Title</label>
-  <input type="text" id="title" class="$$input" placeholder="My awesome page" />
+  <label class="$$label">Title</label>
+  <input type="text" class="$$input" placeholder="My awesome page" />
 
-  <label for="slug" class="$$label">Slug</label>
-  <input type="text" id="slug" class="$$input" placeholder="my-awesome-page" />
+  <label class="$$label">Slug</label>
+  <input type="text" class="$$input" placeholder="my-awesome-page" />
 
-  <label for="author" class="$$label">Author</label>
-  <input type="text" id="author" class="$$input" placeholder="Name" />
+  <label class="$$label">Author</label>
+  <input type="text" class="$$input" placeholder="Name" />
 </fieldset>
 ```
 
@@ -102,16 +100,14 @@ classnames:
 ```
 
 ### ~Login form with fieldset
+#### Add proper id and for attributes for accessibility. The id must be unique and depends on your context.
 
 <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
   <legend class="fieldset-legend">Login</legend>
-
-  <label for="email" class="label">Email</label>
-  <input type="email" id="email" class="input" placeholder="Email" />
-
-  <label for="password" class="label">Password</label>
-  <input type="password" id="password" class="input" placeholder="Password" />
-
+  <label class="label">Email</label>
+  <input type="email" class="input" placeholder="Email" />
+  <label class="label">Password</label>
+  <input type="password" class="input" placeholder="Password" />
   <button class="btn btn-neutral mt-4">Login</button>
 </fieldset>
 
@@ -119,11 +115,11 @@ classnames:
 <fieldset class="$$fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
   <legend class="$$fieldset-legend">Login</legend>
 
-  <label for="email" class="$$label">Email</label>
-  <input type="email" id="email" class="$$input" placeholder="Email" />
+  <label class="$$label">Email</label>
+  <input type="email" class="$$input" placeholder="Email" />
 
-  <label for="password" class="$$label">Password</label>
-  <input type="password" id="password" class="$$input" placeholder="Password" />
+  <label class="$$label">Password</label>
+  <input type="password" class="$$input" placeholder="Password" />
 
   <button class="$$btn $$btn-neutral mt-4">Login</button>
 </fieldset>
