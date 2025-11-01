@@ -61,6 +61,19 @@
     checked = ""
   }
 
+  // Calculate if drawer-content should be inert
+  let innerWidth = $state(0)
+  let shouldBeInert = $derived.by(() => {
+    if (!checked) return false
+
+    const isLargeScreen = innerWidth >= 1024
+    const needsSidebar = !data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
+
+    if (isLargeScreen && needsSidebar) return false
+
+    return true
+  })
+
   Array.prototype.matchPattern = function (inputString) {
     for (const pattern of this) {
       const regexPattern = pattern.replace(/\*/g, ".*")
@@ -75,13 +88,15 @@
   }
 </script>
 
+<svelte:window bind:innerWidth />
+
 <div
   class={`bg-base-100 drawer mx-auto max-w-[100rem] ${
     data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname) ? "" : "lg:drawer-open"
   }`}
 >
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
-  <div class={`drawer-content`} inert={checked || undefined}>
+  <div class={`drawer-content`} inert={shouldBeInert || undefined}>
     <Navbar
       version={data.daisyuiVersion}
       pages={data.pages}
