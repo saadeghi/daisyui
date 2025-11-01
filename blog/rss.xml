@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Thu, 13 Mar 2025 12:06:53 GMT</lastBuildDate>
-    <pubDate>Thu, 13 Mar 2025 12:06:53 GMT</pubDate>
+    <lastBuildDate>Sat, 01 Nov 2025 22:11:36 GMT</lastBuildDate>
+    <pubDate>Sat, 01 Nov 2025 22:11:36 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
@@ -236,7 +236,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ It can be annoying to install, setup, config and import all the dependencies. But now, you can do it with a single command. ]]>
           </description>
           <link>https://daisyui.com/blog/npm-init-daisyui/</link>
-          <pubDate>Thu, 05 Oct 2023 21:00:00 GMT</pubDate>
+          <pubDate>Fri, 06 Oct 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/npm-init-daisyui.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/npm-init-daisyui.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/npm-init-daisyui.webp" medium="image" type="image/jpg" />
@@ -252,7 +252,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ In search of the most efficient way to style a website there's a lot to explore. In this post I'll share my journey to build daisyUI, a component library on top of Tailwind CSS. ]]>
           </description>
           <link>https://daisyui.com/blog/my-journey-to-build-daisyui/</link>
-          <pubDate>Tue, 03 Oct 2023 21:00:00 GMT</pubDate>
+          <pubDate>Wed, 04 Oct 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/my-journey-to-build-daisyui.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/my-journey-to-build-daisyui.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/my-journey-to-build-daisyui.webp" medium="image" type="image/jpg" />
@@ -268,7 +268,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ What is Headless UI and why it is suggested to use it with daisyUI? ]]>
           </description>
           <link>https://daisyui.com/blog/how-to-use-headless-ui-and-daisyui/</link>
-          <pubDate>Wed, 27 Sep 2023 21:00:00 GMT</pubDate>
+          <pubDate>Thu, 28 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/headless-ui.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/headless-ui.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/headless-ui.webp" medium="image" type="image/jpg" />
@@ -284,7 +284,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ In this article, we will learn how to use daisyUI component library in Next.js. ]]>
           </description>
           <link>https://daisyui.com/blog/install-daisyui-and-tailwindcss-in-nextjs/</link>
-          <pubDate>Thu, 21 Sep 2023 21:00:00 GMT</pubDate>
+          <pubDate>Fri, 22 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-nextjs-component-library.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-nextjs-component-library.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-nextjs-component-library.webp" medium="image" type="image/jpg" />
@@ -300,7 +300,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Do you want to add new color names to daisyUI color palette? Here is how you can do it. ]]>
           </description>
           <link>https://daisyui.com/blog/how-to-add-new-colors-to-daisyui/</link>
-          <pubDate>Sun, 17 Sep 2023 21:00:00 GMT</pubDate>
+          <pubDate>Mon, 18 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.webp" medium="image" type="image/jpg" />
@@ -316,7 +316,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ While working on daisyUI, I see a lot of people making this mistake when using Tailwind CSS. ]]>
           </description>
           <link>https://daisyui.com/blog/most-common-mistake-when-using-tailwind-css/</link>
-          <pubDate>Wed, 13 Sep 2023 21:00:00 GMT</pubDate>
+          <pubDate>Thu, 14 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/tailwind-mistake.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/tailwind-mistake.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/tailwind-mistake.webp" medium="image" type="image/jpg" />
@@ -332,7 +332,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Mary UI is a collection of Laravel blade components made for Livewire 3 and styled around daisyUI and Tailwind CSS ]]>
           </description>
           <link>https://daisyui.com/blog/mary-ui/</link>
-          <pubDate>Tue, 12 Sep 2023 21:00:00 GMT</pubDate>
+          <pubDate>Wed, 13 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/mary-ui.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/mary-ui.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/mary-ui.webp" medium="image" type="image/jpg" />
@@ -348,7 +348,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Why use semantic color names instead of Tailwind CSS color shades? Accessing to all color shades or using a color system... Which one is better? ]]>
           </description>
           <link>https://daisyui.com/blog/daisyui-colors-and-themes/</link>
-          <pubDate>Sun, 10 Sep 2023 21:00:00 GMT</pubDate>
+          <pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/semantic-colors.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/semantic-colors.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/semantic-colors.webp" medium="image" type="image/jpg" />
@@ -364,7 +364,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Which one is better? Which one should I use? Comparing Tailwind CSS component libraries daisyUI and Tailwind UI. ]]>
           </description>
           <link>https://daisyui.com/blog/daisyui-vs-tailwindui/</link>
-          <pubDate>Sat, 09 Sep 2023 21:00:00 GMT</pubDate>
+          <pubDate>Sun, 10 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-vs-tailwindui.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-vs-tailwindui.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-vs-tailwindui.webp" medium="image" type="image/jpg" />
@@ -380,7 +380,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Is daisyUI against the Tailwind CSS philosophy? Are we going full circle? Why not just use Bootstrap? Here I answer some of the most common questions I get asked about daisyUI. ]]>
           </description>
           <link>https://daisyui.com/blog/what-is-daisyui/</link>
-          <pubDate>Sat, 09 Sep 2023 21:00:00 GMT</pubDate>
+          <pubDate>Sun, 10 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-stars.webp</image>
           <image>https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-stars.webp</image>
           <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-stars.webp" medium="image" type="image/jpg" />
