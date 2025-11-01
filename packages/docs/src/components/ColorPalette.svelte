@@ -194,8 +194,6 @@
     try {
       const parsedColor = parse(newValue)
       if (parsedColor) {
-        if (colorState.value !== value && colorState.originalValue !== value && validateColor(value)) {
-        }
         colorState.mode = parsedColor.mode
         colorState.value = newValue
 
