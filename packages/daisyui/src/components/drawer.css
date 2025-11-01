@@ -53,16 +53,31 @@
 .drawer-toggle {
   @layer daisyui.component {
     @apply fixed h-0 w-0 appearance-none opacity-0;
+  }
 
-    &:checked {
-      & ~ .drawer-side {
-        @apply pointer-events-auto visible overflow-y-auto opacity-100;
-        scrollbar-color: color-mix(in oklch, currentColor 35%, #0000)
-          oklch(0 0 0 / calc(var(--page-has-backdrop, 0) * 0.4));
+  @layer daisyui.modifier.drawer {
+    :where(&:checked ~ .drawer-side) {
+      scrollbar-color: color-mix(in oklch, currentColor 35%, #0000)
+        oklch(0 0 0 / calc(var(--page-has-backdrop, 0) * 0.4));
+    }
 
-        & > *:not(.drawer-overlay) {
-          translate: 0%;
-        }
+    :where(:root:has(&:checked)) {
+      --page-has-backdrop: 1;
+      --page-overflow: hidden;
+      --page-scroll-bg: var(--page-scroll-bg-on);
+      --page-scroll-gutter: stable;
+      --page-scroll-transition: var(--page-scroll-transition-on);
+      animation: set-page-has-scroll forwards;
+      animation-timeline: scroll();
+    }
+  }
+
+  @layer daisyui.modifier {
+    :where(&:checked ~ .drawer-side) {
+      @apply pointer-events-auto visible overflow-y-auto opacity-100;
+
+      & > *:not(.drawer-overlay) {
+        translate: 0%;
       }
     }
 
@@ -102,9 +117,27 @@
 }
 
 .drawer-open {
+  @layer daisyui.modifier.drawer {
+    & > .drawer-toggle:checked {
+      & ~ .drawer-side {
+        scrollbar-color: revert-layer;
+      }
+
+      :root:has(&) {
+        --page-overflow: revert-layer;
+        --page-scroll-gutter: revert-layer;
+        --page-scroll-bg: revert-layer;
+        --page-scroll-transition: revert-layer;
+        --page-has-backdrop: revert-layer;
+        animation: revert-layer;
+        animation-timeline: revert-layer;
+      }
+    }
+  }
+
   @layer daisyui.modifier {
-    :where(& > .drawer-side) {
-      @apply overflow-y-auto;
+    & > .drawer-side {
+      @apply h-auto min-h-full overflow-y-auto;
     }
 
     > .drawer-toggle {
