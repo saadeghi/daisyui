@@ -12,6 +12,10 @@ export function validateColor(color) {
     return false
   }
 
+  if (color.startsWith("#") && ![4, 7].includes(color.length)) {
+    return false
+  }
+
   try {
     const temp = document.createElement("div")
     temp.style.color = color

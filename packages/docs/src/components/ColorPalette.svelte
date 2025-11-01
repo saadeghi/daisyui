@@ -1,8 +1,13 @@
 <script>
   import ContrastMeter from "$components/themegenerator/ContrastMeter.svelte"
+  import ColorSpaceSelectorOklch from "$components/themegenerator/ColorSpaceSelectorOklch.svelte"
+  import ColorSpaceSelectorHsl from "$components/themegenerator/ColorSpaceSelectorHsl.svelte"
+  import ColorSpaceSelectorRgb from "$components/themegenerator/ColorSpaceSelectorRgb.svelte"
+  import ColorSpaceSelectorHex from "$components/themegenerator/ColorSpaceSelectorHex.svelte"
   import ColorSlider from "$components/ColorSlider.svelte"
   import { validateColor } from "$lib/themeGeneratorValidation"
-  import { parse, rgb, formatRgb, toGamut, clampGamut } from "culori"
+  import { parse, oklch, hsl, rgb, formatHex, clampGamut } from "culori"
+  import { untrack } from "svelte"
 
   let {
     colors,
@@ -18,22 +23,36 @@
   let open = $state(false)
   let inputValue = $state(value)
   let isDragging = $state(false)
-
-  // Derived RGB version of inputValue for non-P3 color spaces
-  let inputValueRgb = $derived.by(() => {
-    try {
-      const parsedColor = parse(inputValue)
-      if (parsedColor) {
-        // Convert to RGB and clamp to sRGB gamut
-        const rgbColor = clampGamut("rgb")(parsedColor)
-        // Use formatRgb for better compatibility
-        return formatRgb(rgbColor)
-      }
-      return inputValue
-    } catch {
-      return inputValue
-    }
+  let colorState = $state({
+    changed: false,
+    mode: "",
+    value: "",
+    originalMode: "",
+    originalValue: "",
+    oklch: { l: 0, c: 0, h: 0 },
+    hsl: { h: 0, s: 0, l: 0 },
+    rgb: { r: 0, g: 0, b: 0 },
   })
+
+  updateColorState(value)
+
+  const colorsEnhanced = $derived(Object.entries(colors).map(([key, color]) => {
+    const names = []
+    const initials = []
+    for (const [key, themeColor] of Object.entries(themeColors)) {
+      if (themeColor === color) {
+        names.push(key.replace("--color-", ""))
+        initials.push(colorInitials[key] || null)
+      }
+    }
+
+    return [
+      key,
+      color,
+      initials.length > 0 ? `${ initials[0] }${ initials.length > 1 ? "+" : "" }` : null,
+      names,
+    ]
+  }))
 
   let useOklchPicker = $derived(pickerMode === "slider")
   let dragPreviewColor = $state(null) // Temporary color during dragging
@@ -54,20 +73,19 @@
   function handleDragStart(color) {
     isDragging = true
     dragPreviewColor = color
-    inputValue = color
+    value = color
   }
 
   function handleDragOver(color) {
     if (isDragging) {
       dragPreviewColor = color
-      inputValue = color
+      value = color
     }
   }
 
   function handleDragEnd(color) {
     if (isDragging) {
-      value = color // Only update the bound value on drag end
-      inputValue = color
+      value = color
       isDragging = false
       dragPreviewColor = null
     }
@@ -76,7 +94,6 @@
   function handleGlobalMouseUp() {
     if (isDragging && dragPreviewColor) {
       value = dragPreviewColor // Ensure value is updated if drag ends elsewhere
-      inputValue = dragPreviewColor
     }
     isDragging = false
     dragPreviewColor = null
@@ -114,38 +131,40 @@
   }
 
   $effect(() => {
+    untrack(() => {
+      if (value !== inputValue) {
+        updateColorState(value)
+      }
+    })
     inputValue = value
   })
 
   // Update value when inputValue changes and is valid
   $effect(() => {
-    if (validateColor(inputValue) && inputValue !== value) {
+    if (inputValue !== value && validateColor(inputValue)) {
       value = inputValue
     }
+  })
+
+  // Update inputValue when colorState changes
+  $effect(() => {
+    const newValue = generateColorValue(colorState)
+
+    untrack(() => {
+      if (newValue !== inputValue) {
+        if (!colorState.changed) {
+          colorState.value = newValue
+        }
+        inputValue = newValue
+        value = newValue
+      }
+    })
   })
 
   // Get the color to display (preview during dragging, actual value otherwise)
   let displayColor = $derived(dragPreviewColor || value)
 
-  function getColorNames(color) {
-    const names = []
-    for (const [key, themeColor] of Object.entries(themeColors)) {
-      if (themeColor === color) {
-        names.push(key.replace("--color-", ""))
-      }
-    }
-    return names.length > 0 ? names : null
-  }
-
-  function getColorInitials(color) {
-    const initials = []
-    for (const [key, themeColor] of Object.entries(themeColors)) {
-      if (themeColor === color) {
-        initials.push(colorInitials[key] || null)
-      }
-    }
-    return initials.length > 0 ? initials : null
-  }
+  let colorName = $derived(colorsEnhanced.find(([, color]) => color === inputValue)?.[0])
 
   function getTextColorClass(name) {
     const numberMatch = name.match(/\d+/)
@@ -165,6 +184,93 @@
       }
     }
     return currentColor
+  }
+
+  function updateColorState(newValue) {
+    colorState.changed = false
+
+    if (colorState.value === newValue) return
+
+    try {
+      const parsedColor = parse(newValue)
+      if (parsedColor) {
+        if (colorState.value !== value && colorState.originalValue !== value && validateColor(value)) {
+        }
+        colorState.mode = parsedColor.mode
+        colorState.value = newValue
+
+        colorState.originalMode = parsedColor.mode
+        colorState.originalValue = newValue
+
+        const oklchColor = oklch(parsedColor)
+        if (oklchColor) {
+          // Handle black/white/achromatic colors properly
+          colorState.oklch.l = oklchColor.l ?? colorState.oklch.l
+          colorState.oklch.c = oklchColor.c ?? colorState.oklch.c
+          // Only update hue if chroma > 0, otherwise keep current hue
+          if (oklchColor.c && oklchColor.c > 0) {
+            colorState.oklch.h = oklchColor.h ?? colorState.oklch.h
+          }
+        }
+
+        const hslColor = hsl(parsedColor)
+        if (hslColor) {
+          // Validate and clamp HSL values to prevent weird gradients
+          colorState.hsl.h = isNaN(hslColor.h)
+            ? colorState.hsl.h
+            : Math.max(0, Math.min(360, hslColor.h ?? colorState.hsl.h))
+          colorState.hsl.s = isNaN(hslColor.s)
+            ? colorState.hsl.s
+            : Math.max(0, Math.min(1, hslColor.s ?? colorState.hsl.s))
+          colorState.hsl.l = isNaN(hslColor.l)
+            ? colorState.hsl.l
+            : Math.max(0, Math.min(1, hslColor.l ?? colorState.hsl.l))
+        }
+
+        const rgbColor = rgb(clampGamut("rgb")(parsedColor))
+        if (rgbColor) {
+          colorState.rgb.r = Math.round(rgbColor.r * 255)
+          colorState.rgb.g = Math.round(rgbColor.g * 255)
+          colorState.rgb.b = Math.round(rgbColor.b * 255)
+        }
+      }
+    } catch {
+      // Do not change if value cannot be parsed
+    }
+  }
+
+  // Helper function to generate color value from color state
+  function generateColorValue(currentState) {
+    if (colorState.originalMode === colorState.mode && colorState.originalValue && !colorState.changed) {
+      return colorState.originalValue
+    }
+
+    try {
+      if (colorState.mode === "oklch") {
+        const { l, c, h } = currentState.oklch
+        return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${h.toFixed(1)})`
+      }
+
+      if (colorState.mode === "hsl") {
+        const { h, s, l } = currentState.hsl
+        return `hsl(${h.toFixed(1)} ${(s * 100).toFixed(1)}% ${(l * 100).toFixed(1)}%)`
+      }
+
+      const { r, g, b } = currentState.rgb
+      if (colorState.mode === "hex") {
+        const color = {
+          mode: "rgb",
+          r: r / 255,
+          g: g / 255,
+          b: b / 255,
+        }
+        return formatHex(color)
+      }
+
+      return `rgb(${currentState.rgb.r} ${currentState.rgb.g} ${currentState.rgb.b})`
+    } catch {
+      return inputValue // Fallback to current value if conversion fails
+    }
   }
 </script>
 
@@ -281,7 +387,7 @@
       {#if useOklchPicker}
         <!-- OKLCH Color Picker -->
         <div class="flex justify-center px-8 py-4">
-          <ColorSlider bind:value={inputValue} rgbValue={inputValueRgb} width={400} height={240} />
+          <ColorSlider bind:colorState={colorState} width={400} height={240} />
         </div>
       {:else}
         <!-- Traditional Color Palette -->
@@ -289,7 +395,7 @@
           class="mx-auto grid w-fit grid-cols-11 lg:my-auto lg:min-h-[20rem] lg:[writing-mode:vertical-lr]"
           role="listbox"
         >
-          {#each Object.entries(colors) as [name, color]}
+          {#each colorsEnhanced as [name, color, initials, names]}
             <button
               class="appearance-none p-px [writing-mode:lr]"
               aria-label={name}
@@ -306,15 +412,15 @@
                 class:outline-offset-[-3px]={displayColor === color}
                 style:background-color={color}
               >
-                {#if getColorInitials(color)}
+                {#if initials != null}
                   <div class={`tooltip px-px ${getTextColorClass(name)}`}>
                     <div class="tooltip-content max-w-28 text-[10px] lowercase">
-                      {#each getColorNames(color) as name}
+                      {#each names as name}
                         <div>{name}</div>
                       {/each}
                     </div>
                     <div class="font-mono text-[9px] font-semibold uppercase">
-                      {getColorInitials(color)[0]}{#if getColorInitials(color).length > 1}+{/if}
+                      {initials}
                     </div>
                   </div>
                 {/if}
@@ -328,41 +434,105 @@
       >
         <div class="flex grow flex-col gap-1">
           <span class="text-base-content/60 shrink-0 text-xs">Color value</span>
-          <label dir="ltr" class="input input-bordered flex items-center gap-2 px-2">
-            <input
-              type="text"
-              class="grow"
-              bind:value={inputValue}
-              oninput={handleInput}
-              onkeydown={(event) => {
-                if (event.key === "Enter") {
-                  event.preventDefault()
-                  if (validateColor(inputValue)) {
-                    value = inputValue
-                    closeModal()
+          <div class="flex items-center gap-1">
+            <label dir="ltr" class="input input-bordered flex items-center gap-2 px-2">
+              <input
+                type="text"
+                class="grow"
+                bind:value={inputValue}
+                oninput={handleInput}
+                onkeydown={(event) => {
+                  if (event.key === "Enter") {
+                    event.preventDefault()
+                    if (validateColor(inputValue)) {
+                      value = inputValue
+                      closeModal()
+                    }
                   }
-                }
-              }}
-              aria-label={`${name} value`}
-            />
-            {#if Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
-              <span
-                class="opacity/50 badge badge-xs badge-soft shrink-0 gap-1 select-none max-md:hidden"
-              >
-                {Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
-                <svg
-                  width="16px"
-                  height="16px"
-                  viewBox="0 0 32 32"
-                  xmlns="http://www.w3.org/2000/svg"
-                  ><path
-                    d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"
-                    fill="currentColor"
-                  /></svg
-                >
-              </span>
-            {/if}
-          </label>
+                }}
+                aria-label={`${name} value`}
+              />
+              {#if colorName}
+                <span class="opacity/50 badge badge-xs badge-soft shrink-0 gap-1 select-none max-md:hidden">
+                  {colorName}
+                  <svg
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                      d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"
+                      fill="currentColor"
+                    /></svg
+                  >
+                </span>
+              {/if}
+            </label>
+
+            <div class="dropdown dropdown-top">
+              <div tabindex="0" role="button" class="btn btn-sm btn-neutral w-24">
+                {#if colorState.mode === "hex"}
+                  <ColorSpaceSelectorHex />
+                {:else if colorState.mode === "hsl"}
+                  <ColorSpaceSelectorHsl />
+                {:else if colorState.mode === "rgb"}
+                  <ColorSpaceSelectorRgb />
+                {:else}
+                  <ColorSpaceSelectorOklch />
+                {/if}
+              </div>
+              <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box p-2 mb-1 shadow-sm">
+                <li>
+                  <button
+                    type="button"
+                    class={colorState.mode === "oklch" ? "menu-active" : ""}
+                    onclick={({ target }) => {
+                      target?.blur()
+                      colorState.mode = "oklch"
+                    }}
+                  >
+                    <ColorSpaceSelectorOklch />
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class={colorState.mode === "hsl" ? "menu-active" : ""}
+                    onclick={({ target }) => {
+                      target?.blur()
+                      colorState.mode = "hsl"
+                    }}
+                  >
+                    <ColorSpaceSelectorHsl />
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class={colorState.mode === "rgb" ? "menu-active" : ""}
+                    onclick={({ target }) => {
+                      target?.blur()
+                      colorState.mode = "rgb"
+                    }}
+                  >
+                    <ColorSpaceSelectorRgb />
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class={colorState.mode === "hex" ? "menu-active" : ""}
+                    onclick={({ target }) => {
+                      target?.blur()
+                      colorState.mode = "hex"
+                    }}
+                  >
+                    <ColorSpaceSelectorHex />
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <ContrastMeter color1={displayColor} color2={getPairColor(name)} />
       </div>

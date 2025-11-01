@@ -722,7 +722,7 @@
           class:col-span-2={group !== "base"}
         >
           <div class="flex gap-4">
-            {#each Object.entries(currentTheme) as [key, value]}
+            {#each Object.entries(currentTheme) as [key]}
               {#if key.startsWith(`--color-${group}`)}
                 <ColorPalette
                   name={key}
