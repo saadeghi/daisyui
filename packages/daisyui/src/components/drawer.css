@@ -137,7 +137,7 @@
 
   @layer daisyui.modifier {
     & > .drawer-side {
-      @apply h-auto min-h-full overflow-y-auto;
+      @apply overflow-y-auto;
     }
 
     > .drawer-toggle {
