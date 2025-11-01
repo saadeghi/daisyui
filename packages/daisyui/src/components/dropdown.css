@@ -3,7 +3,7 @@
     @apply relative inline-block;
     position-area: var(--anchor-v, bottom) var(--anchor-h, span-right);
 
-    & > *:not(summary):focus {
+    & > *:not(:has(~ [class*="dropdown-content"])):focus {
       @apply outline-hidden;
     }
     .dropdown-content {
