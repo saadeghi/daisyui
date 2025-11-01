@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.3.11 (2025-11-01)
+
+
+### Bug Fixes
+
+* prevent tab style bleeding to children tabs. closes: [#4200](https://github.com/saadeghi/daisyui/issues/4200) ([15044b2](https://github.com/saadeghi/daisyui/commit/15044b2f77edc2e04290ce1493638cba42430c29))
+
 ## 5.3.10 (2025-10-26)
 
 
