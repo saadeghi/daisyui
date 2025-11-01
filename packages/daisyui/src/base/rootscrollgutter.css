@@ -10,7 +10,7 @@
 /* force higher specificity */
 :root:not(span) {
   transition: var(--page-scrolltr);
-  background: var(--page-scrollbg);
+  background: var(--page-scrollbg, var(--root-bg, var(--color-base-100)));
 
   /* CSS if is not supported */
   scrollbar-gutter: var(--page-scrollgutter, unset);
