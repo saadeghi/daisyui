@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.4.0 (2025-11-01)
+
+
+### Features
+
+* scrollbar, drawer and modal improvements ([e36be21](https://github.com/saadeghi/daisyui/commit/e36be217eb2b3ab73862ccfbed8c31fac1a9a854))
+
 ## 5.3.11 (2025-11-01)
 
 
