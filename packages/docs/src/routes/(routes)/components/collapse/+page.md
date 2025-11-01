@@ -32,6 +32,10 @@ classnames:
 >
 > Also see [accordion](/components/accordion/) examples
 
+> :INFO:
+>
+> If you want the collapsed content to be searcheable in browser use the [Collapse using details and summary tag](#-collapse-using-details-and-summary-tag)
+
 ### ~Collapse with focus
 
 #### This collapse works with focus. When div loses focus, it gets closed
