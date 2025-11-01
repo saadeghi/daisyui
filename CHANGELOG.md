@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.4.1 (2025-11-01)
+
+
+### Bug Fixes
+
+* allow outline on all methods of dropdown, not just summary ([624a0a6](https://github.com/saadeghi/daisyui/commit/624a0a6845f8f49f9f525422733687ec60bf4bfa))
+
 ## 5.4.0 (2025-11-01)
 
 
