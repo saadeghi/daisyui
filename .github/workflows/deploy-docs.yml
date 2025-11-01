@@ -2,7 +2,17 @@ name: "📘 Deploy docs"
 
 on:
   workflow_dispatch:
+    inputs:
+      publish_branch:
+        type: string
+        required: false
+        description: "Target branch to deploy the built docs"
   workflow_call:
+    inputs:
+      publish_branch:
+        type: string
+        required: false
+        description: "Target branch to deploy the built docs"
   push:
     branches:
       - master
@@ -27,7 +37,7 @@ jobs:
         with:
           fetch-depth: 1
           clean: false
-          ref: master
+          ref: ${{ github.ref_name }}
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -50,3 +60,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./packages/docs/build
           cname: ${{ secrets.CNAME }}
+          publish_branch: ${{ inputs.publish_branch || 'gh-pages' }}
