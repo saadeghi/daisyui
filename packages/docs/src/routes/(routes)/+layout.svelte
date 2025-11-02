@@ -139,7 +139,7 @@
     </div>
   </div>
   <div
-    class="drawer-side z-40"
+    class="drawer-side h-screen z-40"
     style="scroll-behavior: smooth; scroll-padding-top: 5rem;"
     bind:this={drawersidebar}
     onscroll={parseSidebarScroll}

@@ -63,6 +63,10 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 > On recent Chromium based browsers vertical scrollbar presence is detected automatically. On Safari and on mobile devices the scrollbar is displayed as overlay so there will not be gutter. On Firefox you need to detect the presence of vertical scrollbar and set the `scrollbar-gutter: stable` or `scrollbar-gutter: unset` on `:root` element yourself.
 > If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
+> :INFO:
+>
+> When using `drawer-open` the drawer will be rendered in the document flow. If you want to limit it to the screen height add `h-screen` class to the `.drawer-side` element.
+
 ### ~Drawer sidebar
 
 <div class="drawer h-56 rounded overflow-hidden">
@@ -101,7 +105,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 #### Change screen size to show/hide menu
 
-<div class="drawer h-56 rounded overflow-hidden">
+<div class="drawer lg:drawer-open h-56 rounded overflow-hidden">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col drawer-content">
     <div class="w-full navbar bg-base-300">
@@ -120,7 +124,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
     </div>
     <div class="flex justify-center items-center grow">Content</div>
   </div>
-  <div class="drawer-side z-1002">
+  <div class="drawer-side lg:hidden z-1002">
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="p-4 menu w-60 md:w-80 min-h-full bg-base-200">
       <li><button>Sidebar Item 1</button></li>
@@ -130,7 +134,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 </div>
 
 ```html
-<div class="$$drawer">
+<div class="$$drawer lg:$$drawer-open">
   <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content flex flex-col">
     <!-- Navbar -->
@@ -164,7 +168,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
     <!-- Page content here -->
     Content
   </div>
-  <div class="$$drawer-side">
+  <div class="$$drawer-side lg:hidden">
     <label for="my-drawer-2" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <ul class="$$menu bg-base-200 min-h-full w-80 p-4">
       <!-- Sidebar content here -->
