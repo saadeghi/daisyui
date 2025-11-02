@@ -54,7 +54,6 @@
     &:is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
       & + .tab-content {
         @apply block;
-        height: calc(100% - var(--tab-height) + var(--border));
       }
     }
     &:not(
@@ -105,6 +104,7 @@
 
     --tabcontent-order: 1;
     width: 100%;
+    height: calc(100% - var(--tab-height) + var(--border));
     margin: var(--tabcontent-margin);
     order: var(--tabcontent-order);
     border-width: var(--border);
@@ -489,6 +489,8 @@
     }
     > .tab-content {
       @apply mt-1;
+      /* Compensate for p-1 */
+      height: calc(100% - var(--tab-height) + var(--border) - 0.5rem);
       border-radius: calc(
         min(calc(var(--tab-height) / 2), var(--radius-field)) +
           min(0.25rem, var(--tabs-box-radius)) - var(--border)
