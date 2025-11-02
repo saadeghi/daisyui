@@ -26,6 +26,7 @@ daisyUI Discord,/discord/
 daisyUI Swag Store,https://swag.daisyui.com/
 daisyUI GitHub,https://github.com/saadeghi/daisyui
 daisyUI Changelog,/docs/changelog/
+Blueprint MCP server,/blueprint/
 daisyUI llms.txt,/llms.txt`
 
 // List of paths to ignore (relative to routes directory)

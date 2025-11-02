@@ -153,7 +153,7 @@ The content gets displayed when the button is focused.
                                                             │
 <div>                                                       │
   <div tabindex="0" role="button">Click to open</div>  ─────╯
-  <div tabindex="0">Content</div>   ───────╮ 
+  <div tabindex="-1">Content</div>  ───────╮ 
 </div>                                     │
                            Content shown when button is focused
 ```
