@@ -663,7 +663,7 @@ Dropdown can open a menu or any other element when the button is clicked
 - component: `dropdown`
 - part: `dropdown-content`
 - placement: `dropdown-start`, `dropdown-center`, `dropdown-end`, `dropdown-top`, `dropdown-bottom`, `dropdown-left`, `dropdown-right`
-- modifier: `dropdown-hover`, `dropdown-open`
+- modifier: `dropdown-hover`, `dropdown-open`, `dropdown-close`
 
 #### Syntax
 Using details and summary
