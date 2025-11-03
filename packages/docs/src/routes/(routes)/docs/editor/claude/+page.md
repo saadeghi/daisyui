@@ -11,7 +11,20 @@ desc: Setup Claude desktop to correctly generate daisyUI code based on your prom
 
 ### Quick use
 
-coming soon…
+[daisyui.com/llms.txt](https://daisyui.com/llms.txt) file is a compact, text version of daisyUI docs to help AI generate accurate daisyUI code based on your prompt.
+
+In Chat window, enable `🌐 Search` feature, and add this before your prompt:
+
+```md:prompt
+https://daisyui.com/llms.txt
+```
+
+For example:
+
+```md:prompt
+https://daisyui.com/llms.txt give me a light daisyUI 5 theme with tropical color palette
+```
+
 
 ### MCP server
 
@@ -19,7 +32,46 @@ MCP is a an API to communicate with AI models. You can add MCP servers and Claud
 You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in Claude desktop.
 
 <div class="tabs tabs-lift max-sm:tabs-sm">
-  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" checked />
+  <input type="radio" name="mcp_options" class="tab" aria-label="Blueprint" checked />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
+
+#### daisyUI Blueprint
+
+Blueprint is the official MCP server for daisyUI. [Read more about Blueprint](/blueprint/).
+
+1. Get a [Blueprint License](/blueprint/checkout/)
+2. Set up the server
+
+```diff:claude_desktop_config.json
+{
+  "mcpServers": {
++   "daisyui-blueprint": {
++     "type": "stdio",
++     "command": "npx",
++     "args": ["-y", "daisyui-blueprint@latest"],
++     "env": {
++       "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
++       "EMAIL": "YOUR EMAIL ADDRESS",
++       "FIGMA": "YOUR FIGMA API KEY (optional)"
++     }
++   }
+  }
+}
+```
+
+#### Usage
+
+Now you can ask AI anything about daisyUI, and write `use Blueprint MCP` at the end of your prompt.  
+For example:
+
+```md:prompt
+give me a light daisyUI 5 theme with tropical color palette. use Blueprint MCP
+```
+
+
+  </div>
+
+  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" />
   <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
 
 #### Setup Context7 MCP server
@@ -63,12 +115,9 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
    ```diff:claude_desktop_config.json
    {
      "mcpServers": {
-   +   "daisyui Docs": {
+   +   "daisyui-github": {
    +     "command": "npx",
-   +     "args": [
-   +       "mcp-remote",
-   +       "https://gitmcp.io/saadeghi/daisyui"
-   +     ]
+   +     "args": ["-y", "mcp-remote", "https://gitmcp.io/saadeghi/daisyui"]
    +   }
      }
    }

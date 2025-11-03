@@ -28,7 +28,48 @@ MCP is a an API to communicate with AI models. You can add MCP servers and Winds
 You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in Windsurf.
 
 <div class="tabs tabs-lift max-sm:tabs-sm">
-  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" checked />
+  <input type="radio" name="mcp_options" class="tab" aria-label="Blueprint" checked />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
+
+#### daisyUI Blueprint
+
+Blueprint is the official MCP server for daisyUI. [Read more about Blueprint](/blueprint/).
+
+1. Get a [Blueprint License](/blueprint/checkout/)
+2. In VS Code press <kbd class="kbd kbd-sm">⌘ CMD</kbd> + <kbd class="kbd kbd-sm">⇧ Shift</kbd> + <kbd class="kbd kbd-sm">P</kbd> ( Or <kbd class="kbd kbd-sm">Ctrl</kbd> + <kbd class="kbd kbd-sm">Shift</kbd> + <kbd class="kbd kbd-sm">P</kbd> )
+3. Search for `Windsurf: MCP Configuration Panel`
+4. Click `Add custom server +`
+5. Add this and set your `license key` + `email address` in it
+
+```diff:~/.codeium/windsurf/mcp_config.json
+{
+  "mcpServers": {
++   "daisyui-blueprint": {
++     "type": "stdio",
++     "command": "npx",
++     "args": ["-y", "daisyui-blueprint@latest"],
++     "env": {
++       "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
++       "EMAIL": "YOUR EMAIL ADDRESS",
++       "FIGMA": "YOUR FIGMA API KEY (optional)"
++     }
++   }
+  }
+}
+```
+
+#### Usage
+
+Now you can ask AI anything about daisyUI, and write `use Blueprint MCP` at the end of your prompt.  
+For example:
+
+```md:prompt
+give me a light daisyUI 5 theme with tropical color palette. use Blueprint MCP
+```
+
+
+  </div>
+  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" />
   <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
 
 #### Setup Context7 MCP server
@@ -73,7 +114,7 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
 ```diff:~/.codeium/windsurf/mcp_config.json
 {
   "mcpServers": {
-+   "daisyui Docs": {
++   "daisyui-github": {
 +     "serverUrl": "https://gitmcp.io/saadeghi/daisyui"
 +   }
   }

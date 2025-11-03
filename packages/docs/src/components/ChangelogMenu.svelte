@@ -63,6 +63,9 @@
     <li>
       <a href="/docs/v5/">v5 release notes </a>
     </li>
+    <li>
+      <a href="/docs/upgrade/">v5 upgrade guide</a>
+    </li>
     <li></li>
     <li>
       <a target="_blank" rel="noopener, noreferrer" href="https://v4.daisyui.com/">Version 4.x</a>

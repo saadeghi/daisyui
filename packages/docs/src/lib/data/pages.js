@@ -42,10 +42,10 @@ export const pages = [
         href: "/docs/editor/",
         badge: "updated",
       },
-      {
-        name: "v5 upgrade guide",
-        href: "/docs/upgrade/",
-      },
+      // {
+      //   name: "v5 upgrade guide",
+      //   href: "/docs/upgrade/",
+      // },
       // {
       //   name: "V5 release notes",
       //   href: "/docs/v5/",

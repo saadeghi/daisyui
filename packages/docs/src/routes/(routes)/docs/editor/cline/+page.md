@@ -36,12 +36,56 @@ MCP is a an API to communicate with AI models. You can add MCP servers and Cline
 You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in Cline.
 
 <div class="tabs tabs-lift max-sm:tabs-sm">
-  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" checked />
+  <input type="radio" name="mcp_options" class="tab" aria-label="Blueprint" checked />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
+
+#### daisyUI Blueprint
+
+Blueprint is the official MCP server for daisyUI. [Read more about Blueprint](/blueprint/).
+
+1. Get a [Blueprint License](/blueprint/checkout/)
+2. Click the MCP Servers icon at the top navigation bar of the Cline pane.
+3. Select the `Configure` tab.
+4. Click the `Configure MCP Servers` button at the bottom of the pane.
+5. Add this and set your `license key` + `email address` in it
+  Figma API Key is optional - Only needed for Figma-to-code conversion
+
+```diff:cline_mcp_settings.json
+{
+  "servers": {
++   "daisyui-blueprint": {
++     "type": "stdio",
++     "command": "npx",
++     "args": ["-y", "daisyui-blueprint@latest"],
++     "env": {
++       "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
++       "EMAIL": "YOUR EMAIL ADDRESS",
++       "FIGMA": "YOUR FIGMA API KEY (optional)"
++     }
++     "disabled": false,
++     "autoApprove": []
++   }
+  }
+}
+```
+
+#### Usage
+
+Now you can ask AI anything about daisyUI, and write `use Blueprint MCP` at the end of your prompt.  
+For example:
+
+```md:prompt
+give me a light daisyUI 5 theme with tropical color palette. use Blueprint MCP
+```
+
+
+  </div>
+  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" />
   <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
 
 #### Setup Context7 MCP server
 
-1. Install `Context7` from Cline MCP marketplace
+Install `Context7` from Cline MCP marketplace
 
 #### Usage
 
@@ -59,12 +103,15 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
 
 #### Setup daisyUI GitMCP server
 
-Update your Cline MCP settings file at `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`:
+1. Click the MCP Servers icon at the top navigation bar of the Cline pane.
+2. Select the `Configure` tab.
+3. Click the `Configure MCP Servers` button at the bottom of the pane.
+4. Add this config:
 
 ```diff:cline_mcp_settings.json
 {
   "mcpServers": {
-+   "daisyui Docs": {
++   "daisyui-github": {
 +     "url": "https://gitmcp.io/saadeghi/daisyui",
 +     "disabled": false,
 +     "autoApprove": []

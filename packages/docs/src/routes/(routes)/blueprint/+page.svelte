@@ -4415,7 +4415,7 @@
               3. Search for <span class="badge">MCP: Open User Configuration</span>
             </p>
             <p>
-              4. Add this and put your <span class="font-bold">license key</span> +
+              4. Add this and set your <span class="font-bold">license key</span> +
               <span class="font-bold">email address</span> in it
             </p>
           </div>
