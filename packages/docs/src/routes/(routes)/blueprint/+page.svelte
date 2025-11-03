@@ -3,6 +3,30 @@
   import Footer from "$components/Footer.svelte"
   let dialogs = $state({})
 
+  let videoModal = $state({
+    dialog: null,
+    videoId: "",
+    ratio: "16/9",
+    title: "",
+    isLoading: true,
+  })
+
+  function openVideoModal(videoData) {
+    return (event) => {
+      const title = event.currentTarget.textContent?.trim() || "Video"
+      const isSameVideo = videoModal.videoId === videoData.id
+
+      videoModal.videoId = videoData.id || ""
+      videoModal.ratio = videoData.ratio || "16/9"
+      videoModal.title = title
+      videoModal.isLoading = !isSameVideo
+
+      if (videoModal.dialog) {
+        videoModal.dialog.showModal()
+      }
+    }
+  }
+
   $effect(() => {
     const handleHash = () => {
       const hash = window.location.hash.slice(1)
@@ -715,7 +739,10 @@
     <div class="grow">
       <div class="prose pt-10 lg:min-h-[60vh]">
         <span class="badge badge-soft mb-4">Problem</span>
-        <h2 class="text-error font-title mt-0 mb-8 text-[clamp(2.5rem,8vw,3rem)] leading-none">
+        <h2
+          id="problem"
+          class="text-error font-title mt-0 mb-8 text-[clamp(2.5rem,8vw,3rem)] leading-none"
+        >
           Why AI sucks at UI?
         </h2>
         <div>
@@ -922,7 +949,7 @@
     <div class="grow max-lg:mb-20">
       <div class="prose lg:min-h-[80vh]">
         <span class="badge badge-soft mb-4">Solution</span>
-        <h2 class="font-title mt-0 mb-8 text-[clamp(2.5rem,8vw,3rem)] leading-none">
+        <h2 id="solution" class="font-title mt-0 mb-8 text-[clamp(2.5rem,8vw,3rem)] leading-none">
           Providing <span class="text-blue-500">context</span> to LLM
           <div class="font-semibold">right time, right place</div>
         </h2>
@@ -1045,7 +1072,10 @@
           </div>
           MCP server
         </div>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-5xl">
+        <h2
+          id="design-system-provider"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-5xl"
+        >
           Design System
           <br />
           Resource Provider
@@ -1518,7 +1548,10 @@
           >
           MCP Tool
         </span>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl">
+        <h2
+          id="feature-1"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl"
+        >
           <div class="text-base-content/30 me-2 inline-block tabular-nums lg:me-4 lg:-ml-12">
             1.
           </div>
@@ -1816,6 +1849,18 @@
     </div>
   </div>
 
+  <div class="sm:bg-base-300 rounded-box mt-30 mb-10 max-sm:-mx-4 sm:px-4 sm:py-20">
+    <div class="mx-auto aspect-[16/10.05] max-h-[80vh] w-auto overflow-hidden sm:rounded-xl">
+      <iframe
+        class="h-full w-full"
+        src="https://www.youtube.com/embed/ICmVdS-sJKU?mute=1&autoplay=0&controls=1&rel=0&modestbranding=1&loop=1&playlist=ICmVdS-sJKU"
+        title="Blueprint MCP server"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
   <!-- Design system resources -->
 
   <div class="relative mt-20 flex items-start gap-12 max-lg:flex-col lg:flex-row-reverse lg:gap-24">
@@ -1834,7 +1879,10 @@
           </svg>
           MCP Resource
         </span>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl">
+        <h2
+          id="feature-2"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl"
+        >
           <div class="text-base-content/30 me-2 inline-block tabular-nums lg:me-4 lg:-ml-12">
             2.
           </div>
@@ -2059,7 +2107,10 @@
           MCP Tool
         </span>
         <span class="badge badge-soft mb-4">Experimental</span>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl">
+        <h2
+          id="feature-3"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl"
+        >
           <div class="text-base-content/30 me-2 inline-block tabular-nums lg:me-4 lg:-ml-12">
             3.
           </div>
@@ -2376,6 +2427,18 @@
     </div>
   </div>
 
+  <div class="sm:bg-base-300 rounded-box mt-30 mb-10 max-sm:-mx-4 sm:px-4 sm:py-20">
+    <div class="mx-auto aspect-[16/10.05] max-h-[80vh] w-auto overflow-hidden sm:rounded-xl">
+      <iframe
+        class="h-full w-full"
+        src="https://www.youtube.com/embed/4ZYKxkibJT0?mute=1&autoplay=0&controls=1&rel=0&modestbranding=1&loop=1&playlist=4ZYKxkibJT0"
+        title="Blueprint MCP server"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
   <!-- Screenshot to daisyUI -->
 
   <div class="relative mt-20 flex items-start gap-12 max-lg:flex-col lg:flex-row-reverse lg:gap-24">
@@ -2398,7 +2461,10 @@
           </svg>
           MCP Prompt
         </span>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl">
+        <h2
+          id="feature-4"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl"
+        >
           <div class="text-base-content/30 me-2 inline-block tabular-nums lg:me-4 lg:-ml-12">
             4.
           </div>
@@ -2701,7 +2767,10 @@
           </svg>
           MCP Prompt
         </span>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl">
+        <h2
+          id="feature-5"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl"
+        >
           <div class="text-base-content/30 me-2 inline-block tabular-nums lg:me-4 lg:-ml-12">
             5.
           </div>
@@ -2970,6 +3039,18 @@
     </div>
   </div>
 
+  <div class="sm:bg-base-300 rounded-box mt-30 mb-10 max-sm:-mx-4 sm:px-4 sm:py-20">
+    <div class="mx-auto aspect-[16/10.05] max-h-[80vh] w-auto overflow-hidden sm:rounded-xl">
+      <iframe
+        class="h-full w-full"
+        src="https://www.youtube.com/embed/S4Xz2iEMaAA?mute=1&autoplay=0&controls=1&rel=0&modestbranding=1&loop=1&playlist=S4Xz2iEMaAA"
+        title="Blueprint MCP server"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
   <!-- Bootstrap to daisyUI -->
 
   <div class="relative mt-20 flex items-start gap-12 max-lg:flex-col lg:flex-row-reverse lg:gap-24">
@@ -2992,7 +3073,10 @@
           </svg>
           MCP Prompt
         </span>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl">
+        <h2
+          id="feature-6"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl"
+        >
           <div class="text-base-content/30 me-2 inline-block tabular-nums lg:me-4 lg:-ml-12">
             6.
           </div>
@@ -3283,7 +3367,10 @@
           </svg>
           MCP Prompt
         </span>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl">
+        <h2
+          id="feature-7"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl"
+        >
           <div class="text-base-content/30 me-2 inline-block tabular-nums lg:me-4 lg:-ml-12">
             7.
           </div>
@@ -3567,7 +3654,10 @@
           </svg>
           MCP Resource
         </span>
-        <h2 class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl">
+        <h2
+          id="feature-8"
+          class="font-title mt-0 mb-8 text-xl leading-none font-semibold lg:text-3xl"
+        >
           <div class="text-base-content/30 me-2 inline-block tabular-nums lg:me-4 lg:-ml-12">
             8.
           </div>
@@ -3826,7 +3916,7 @@
   <!-- compare table -->
 
   {#if compareTable}
-    <div class="mt-50 mb-16 flex justify-center">
+    <div id="compare" class="mt-50 mb-16 flex justify-center">
       <div class="font-title text-base-content/50 text-center text-2xl">
         <div
           class="inline-grid grid-cols-[.5rem_1fr_.5rem] grid-rows-[.5rem_1fr_.5rem] align-middle"
@@ -3909,7 +3999,7 @@
 
   <!-- steps -->
 
-  <div class="mt-40 flex justify-center">
+  <div id="steps" class="mt-40 flex justify-center">
     <div class="flex w-full max-w-3xl flex-col items-center gap-2">
       <div class="font-title mb-8 flex items-center text-lg lg:text-[1.75rem]">
         Get Started with daisyUI
@@ -3992,7 +4082,7 @@
   </div>
 
   <!-- FAQ -->
-  <div class="mx-auto max-w-[100rem]">
+  <div id="faq" class="mx-auto max-w-[100rem]">
     <div class="w-full px-4 pt-20 md:px-20">
       <div class="mx-auto my-40 grid gap-2 gap-y-16 lg:grid-cols-2" id="faq">
         <div class="flex flex-col gap-6">
@@ -4585,6 +4675,48 @@
     <button>close</button>
   </form>
 </dialog>
+
+<!-- video  modal -->
+<!-- <button onclick={openVideoModal({ id: "4ZYKxkibJT0", ratio: "16/9" })} class="btn"
+  >Figma to daisyUI</button
+> -->
+<!-- <dialog
+  bind:this={videoModal.dialog}
+  class="modal max-md:modal-bottom"
+  onclose={() => {
+    const iframe = videoModal.dialog?.querySelector("iframe")
+    if (iframe) {
+      iframe.src = iframe.src
+    }
+  }}
+>
+  <div
+    class="modal-box rounded-box overflow-hidden p-0 shadow-none md:h-[75vh] md:w-auto md:max-w-none"
+    style={`aspect-ratio: ${videoModal.ratio};`}
+  >
+    <div class="max-xl:h-full xl:w-full" style={`aspect-ratio: ${videoModal.ratio};`}>
+      {#if videoModal.isLoading}
+        <div class="bg-base-200 flex h-full w-full items-center justify-center">
+          <span class="loading loading-spinner loading-lg"></span>
+        </div>
+      {/if}
+      <iframe
+        class="h-full w-full"
+        class:hidden={videoModal.isLoading}
+        src="https://www.youtube.com/embed/{videoModal.videoId}?mute=0&autoplay=0&controls=0&rel=0&modestbranding=1&loop=1&playlist={videoModal.videoId}"
+        title={videoModal.title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        onload={() => {
+          videoModal.isLoading = false
+        }}
+      ></iframe>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog> -->
 
 <Footer />
 
