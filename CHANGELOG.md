@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.4.3 (2025-11-03)
+
+
+### Bug Fixes
+
+* kbd box-shadow in prose ([1f3e4d1](https://github.com/saadeghi/daisyui/commit/1f3e4d1d60a6bbb3bb065843e9f51a4dbdb27957))
+
 ## 5.4.2 (2025-11-01)
 
 
