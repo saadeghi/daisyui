@@ -97,6 +97,26 @@
     return styleString
   })
 
+  const colorDetails = $derived(
+    Object.entries(data.tailwindcolors).map(([key, color]) => {
+      const names = []
+      const initials = []
+      for (const [key, themeColor] of Object.entries(currentTheme)) {
+        if (themeColor === color) {
+          names.push(key.replace("--color-", ""))
+          initials.push(data.colorInitials[key] || null)
+        }
+      }
+
+      return [
+        key,
+        color,
+        initials.length > 0 ? `${initials[0]}${initials.length > 1 ? "+" : ""}` : null,
+        names,
+      ]
+    }),
+  )
+
   let firstItemStyle = $state("scale:1;opacity:1;")
   const createNewTheme = (id, name, colors) => {
     if (!customThemes.some((theme) => theme.id === id)) {
@@ -424,13 +444,13 @@
 
 <!-- <button onclick={() => {
   const url = new URL(window.location);
-  url.searchParams.set('theme', pack(currentTheme));
+  url.searchParams.set("theme", pack(currentTheme));
   pushState(url);
 }}>Set param</button>
 
 <button onclick={() => {
   const url = new URL(window.location);
-  const param = url.searchParams.get('theme');
+  const param = url.searchParams.get("theme");
   if (param) {
     console.log(unpack(param));
   }
@@ -722,12 +742,10 @@
           class:col-span-2={group !== "base"}
         >
           <div class="flex gap-4">
-            {#each Object.entries(currentTheme) as [key, value]}
+            {#each Object.entries(currentTheme) as [key]}
               {#if key.startsWith(`--color-${group}`)}
                 <ColorPalette
                   name={key}
-                  colors={data.tailwindcolors}
-                  colorInitials={data.colorInitials}
                   bind:value={currentTheme[key]}
                   label={key.endsWith("-content")
                     ? "A"
@@ -735,6 +753,7 @@
                       ? key.replace(`--color-${group}-`, "")
                       : ""}
                   colorPairs={data.colorPairs}
+                  {colorDetails}
                   themeColors={currentTheme}
                   bind:pickerMode
                   onModalStateChange={handleColorModalStateChange}

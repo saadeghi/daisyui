@@ -34,7 +34,7 @@
           />
         </svg>
       {:else if ["good"].includes(contrastRating(color1, color2))}
-        <span class="badge badge-dash font-black">AA</span>
+        <span class="badge badge-dash badge-sm font-black">AA</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -48,7 +48,7 @@
           />
         </svg>
       {:else if ["great"].includes(contrastRating(color1, color2))}
-        <span class="badge badge-dash font-black">AAA</span>
+        <span class="badge badge-dash badge-sm font-black">AAA</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

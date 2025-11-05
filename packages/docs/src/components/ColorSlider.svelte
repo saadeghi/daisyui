@@ -1,19 +1,7 @@
 <script>
-  import { formatHex, parse, oklch, hsl, rgb, inGamut } from "culori"
+  import { rgb, inGamut } from "culori"
 
-  let { value = $bindable(), rgbValue = undefined } = $props()
-
-  let colorState = $state({
-    mode: "oklch",
-    oklch: { l: 0.7, c: 0.15, h: 0 },
-    hsl: { h: 0, s: 0.5, l: 0.5 },
-    rgb: { r: 128, g: 128, b: 128 },
-  })
-
-  // Track original OKLCH value to preserve it when switching modes
-  let originalValue = $state(value)
-  let previousMode = $state("oklch")
-  let hasChangedInCurrentMode = $state(false)
+  let { colorState = $bindable() } = $props()
 
   // Calculate range indicators for OKLCH sliders (L and C) - only show out-of-gamut for all (not in sRGB, P3, Rec2020)
   function calculateOKLCHRange(type, currentState) {
@@ -106,7 +94,9 @@
       }
     }
     return []
-  } // Generate gradient backgrounds for sliders
+  }
+
+  // Generate gradient backgrounds for sliders
   function generateSliderGradient(type, currentState) {
     const steps = 10
     const colors = []
@@ -235,130 +225,6 @@
     // Fallback
     return "linear-gradient(to right, #ccc, #666)"
   }
-
-  // Convert current value to all formats when value changes
-  $effect(() => {
-    // When switching modes, reset the change tracking
-    if (colorState.mode !== previousMode) {
-      hasChangedInCurrentMode = false
-      previousMode = colorState.mode
-    }
-
-    // When the value prop changes from parent (like text input), update originalValue
-    // and reset change tracking to ensure sliders reflect the new value
-    if (value !== originalValue) {
-      originalValue = value
-      hasChangedInCurrentMode = false
-    }
-
-    // Determine which color value to use:
-    // - For OKLCH mode: always use originalValue to preserve P3 colors
-    // - For other modes: use rgbValue (if available) to avoid P3 gamut issues
-    let colorToUse
-    if (colorState.mode === "oklch") {
-      colorToUse = originalValue
-    } else {
-      colorToUse = rgbValue || value
-    }
-
-    if (colorToUse) {
-      try {
-        const parsedColor = parse(colorToUse)
-        if (parsedColor) {
-          // Convert to OKLCH
-          const oklchColor = oklch(parsedColor)
-          if (oklchColor) {
-            // Handle black/white/achromatic colors properly
-            colorState.oklch.l = oklchColor.l ?? colorState.oklch.l
-            colorState.oklch.c = oklchColor.c ?? colorState.oklch.c
-            // Only update hue if chroma > 0, otherwise keep current hue
-            if (oklchColor.c && oklchColor.c > 0) {
-              colorState.oklch.h = oklchColor.h ?? colorState.oklch.h
-            }
-          }
-
-          // Convert to HSL
-          const hslColor = hsl(parsedColor)
-          if (hslColor) {
-            // Validate and clamp HSL values to prevent weird gradients
-            colorState.hsl.h = isNaN(hslColor.h)
-              ? colorState.hsl.h
-              : Math.max(0, Math.min(360, hslColor.h ?? colorState.hsl.h))
-            colorState.hsl.s = isNaN(hslColor.s)
-              ? colorState.hsl.s
-              : Math.max(0, Math.min(1, hslColor.s ?? colorState.hsl.s))
-            colorState.hsl.l = isNaN(hslColor.l)
-              ? colorState.hsl.l
-              : Math.max(0, Math.min(1, hslColor.l ?? colorState.hsl.l))
-          }
-
-          // Convert to RGB
-          const rgbColor = rgb(parsedColor)
-          if (rgbColor) {
-            colorState.rgb.r = Math.round(rgbColor.r * 255)
-            colorState.rgb.g = Math.round(rgbColor.g * 255)
-            colorState.rgb.b = Math.round(rgbColor.b * 255)
-          }
-        }
-      } catch {
-        // Keep current values if conversion fails
-      }
-    }
-  })
-
-  // Helper function to generate color value from current state
-  function generateColorValue() {
-    try {
-      let generatedValue
-
-      if (colorState.mode === "oklch") {
-        const l = colorState.oklch.l
-        const c = colorState.oklch.c
-        const h = colorState.oklch.h
-        generatedValue = `oklch(${l.toFixed(3)} ${c.toFixed(3)} ${h.toFixed(1)})`
-      } else if (colorState.mode === "hsl") {
-        generatedValue = `hsl(${colorState.hsl.h.toFixed(1)} ${(colorState.hsl.s * 100).toFixed(1)}% ${(colorState.hsl.l * 100).toFixed(1)}%)`
-      } else if (colorState.mode === "hex") {
-        const color = {
-          mode: "rgb",
-          r: colorState.rgb.r / 255,
-          g: colorState.rgb.g / 255,
-          b: colorState.rgb.b / 255,
-        }
-        generatedValue = formatHex(color)
-      } else if (colorState.mode === "rgb") {
-        generatedValue = `rgb(${colorState.rgb.r} ${colorState.rgb.g} ${colorState.rgb.b})`
-      }
-
-      // If we're in OKLCH mode, check if changes were made
-      // For other modes, mark that changes have been made and return the generated value
-      if (colorState.mode === "oklch") {
-        // If changes were made in OKLCH mode, return the generated value
-        if (hasChangedInCurrentMode) {
-          return generatedValue
-        } else {
-          // If no changes, return original value to preserve P3 colors
-          return originalValue
-        }
-      } else {
-        hasChangedInCurrentMode = true
-        return generatedValue
-      }
-    } catch {
-      return value // Fallback to current value if conversion fails
-    }
-  }
-
-  // Get current background color for preview
-  let previewColor = $derived(() => {
-    if (colorState.mode === "oklch") {
-      return `oklch(${colorState.oklch.l} ${colorState.oklch.c} ${colorState.oklch.h})`
-    } else if (colorState.mode === "hsl") {
-      return `hsl(${colorState.hsl.h} ${colorState.hsl.s * 100}% ${colorState.hsl.l * 100}%)`
-    } else {
-      return `rgb(${colorState.rgb.r} ${colorState.rgb.g} ${colorState.rgb.b})`
-    }
-  })
 
   // Slider configurations
   let sliderConfigs = $derived.by(() => {
@@ -543,191 +409,63 @@
   })
 </script>
 
-<div class="grid w-full gap-12 md:grid-cols-4 md:p-4">
-  <div class="hide-when-range-is-active">
-    <h3 class="text-base-content/40 mb-2 px-2 text-[0.6875rem] font-semibold">Change Format</h3>
-    <div class="tabs tabs-box flex-col">
-      <label class="tab justify-start gap-2">
-        <input
-          type="radio"
-          name="color_mode"
-          value="oklch"
-          bind:group={colorState.mode}
-          checked={colorState.mode === "oklch"}
-        />
-        <svg class="size-4 p-0.25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g
-            stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-width="2"
-            fill="none"
-            stroke="currentColor"
+<div
+  class="hide-when-range-is-active [&:has(input.range:active)_.setbgcolor]:bg-base-100/50 flex w-full flex-col gap-6 md:col-span-3 md:p-4 [&:has(input.range:active)]:visible!"
+>
+  {#each sliderConfigs as config, index (index)}
+    <div class="setbgcolor rounded-box border-base-100/20 h-20 border-2 px-4 pt-8 backdrop-blur-md">
+      <!-- Moving tooltip above the slider thumb -->
+      {#if config.max > config.min}
+        <div class="relative mx-4 w-[calc(100%-2rem)]">
+          <div class="absolute -ms-2 -mt-[2em] text-[0.625rem]">
+            {config.label}
+          </div>
+          <div
+            class="tooltip tooltip-open relative block w-0 font-mono before:text-[0.6875rem]"
+            style={`inset-inline-start: ${((config.value - config.min) / (config.max - config.min)) * 100}%; pointer-events: none;`}
           >
-            <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
-          </g>
-        </svg>
-        OKLCH
-      </label>
-      <label class="tab justify-start gap-2">
-        <input
-          type="radio"
-          name="color_mode"
-          value="hsl"
-          bind:group={colorState.mode}
-          checked={colorState.mode === "hsl"}
-        />
-        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g
-            stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-width="2"
-            fill="none"
-            stroke="currentColor"
-          >
-            <path d="M12 6m-7 0a7 3 0 1 0 14 0a7 3 0 1 0 -14 0"></path>
-            <path d="M5 6v12c0 1.657 3.134 3 7 3s7 -1.343 7 -3v-12"></path>
-          </g>
-        </svg>
-        HSL
-      </label>
-      <label class="tab justify-start gap-2">
-        <input
-          type="radio"
-          name="color_mode"
-          value="rgb"
-          bind:group={colorState.mode}
-          checked={colorState.mode === "rgb"}
-        />
-        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g
-            stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-width="2"
-            fill="none"
-            stroke="currentColor"
-          >
-            <path
-              d="M21 16.008v-8.018a1.98 1.98 0 0 0 -1 -1.717l-7 -4.008a2.016 2.016 0 0 0 -2 0l-7 4.008c-.619 .355 -1 1.01 -1 1.718v8.018c0 .709 .381 1.363 1 1.717l7 4.008a2.016 2.016 0 0 0 2 0l7 -4.008c.619 -.355 1 -1.01 1 -1.718z"
-            ></path>
-            <path d="M12 22v-10"></path>
-            <path d="M12 12l8.73 -5.04"></path>
-            <path d="M3.27 6.96l8.73 5.04"></path>
-          </g>
-        </svg>
-        RGB
-      </label>
-      <label class="tab justify-start gap-2">
-        <input
-          type="radio"
-          name="color_mode"
-          value="hex"
-          bind:group={colorState.mode}
-          checked={colorState.mode === "hex"}
-        />
-        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g
-            stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-width="2"
-            fill="none"
-            stroke="currentColor"
-          >
-            <path
-              d="M21 16.008v-8.018a1.98 1.98 0 0 0 -1 -1.717l-7 -4.008a2.016 2.016 0 0 0 -2 0l-7 4.008c-.619 .355 -1 1.01 -1 1.718v8.018c0 .709 .381 1.363 1 1.717l7 4.008a2.016 2.016 0 0 0 2 0l7 -4.008c.619 -.355 1 -1.01 1 -1.718z"
-            ></path>
-            <path d="M12 22v-10"></path>
-            <path d="M12 12l8.73 -5.04"></path>
-            <path d="M3.27 6.96l8.73 5.04"></path>
-          </g>
-        </svg>
-        Hex
-      </label>
+            <div class="tooltip-content text-start font-mono">
+              <div class="text-[0.6875rem]">{config.formatter(config.value)}</div>
+            </div>
+          </div>
+        </div>
+      {/if}
+      <input
+        id="slider-{index}"
+        type="range"
+        min={config.min}
+        max={config.max}
+        step={config.step}
+        value={config.value}
+        onchange={(e) => {
+          // Update the bound value
+          config.setter(parseFloat(e.target.value))
+          colorState.changed = true
+        }}
+        oninput={(e) => {
+          // Update the bound value
+          config.setter(parseFloat(e.target.value))
+          colorState.changed = true
+        }}
+        class="range range-xl focus:outline-base-content/10 outline-base-content/10 w-full text-transparent outline [--range-thumb:transparent] focus:outline [&.range::-webkit-slider-thumb]:shadow-[0_0_0_1px_oklch(0_0_0/.3)_inset,0_0_0_2px_oklch(100_0_0)_inset]"
+        style={`background: ${generateSliderGradient(config.gradientType, colorState)};`}
+      />
+      <!-- range indicator: show truly out-of-gamut as overlays -->
+      <!-- only for L and C of LCH -->
+      {#if config.range && (config.label === "Lightness" || config.label === "Chroma") && Array.isArray(config.range) && config.range.length > 0}
+        <div class="pointer-events-none px-2">
+          <div class="relative mt-1 h-0.5 w-full">
+            {#each Array.isArray(config.range) ? config.range : [config.range] as r}
+              {#if r && r.width > 0.1}
+                <div
+                  class="bg-base-content/10 absolute top-0 left-0 h-full rounded"
+                  style={`left:${r.start}%;width:${r.width}%;`}
+                ></div>
+              {/if}
+            {/each}
+          </div>
+        </div>
+      {/if}
     </div>
-  </div>
-  <div
-    class="hide-when-range-is-active [&:has(input.range:active)_.setbgcolor]:bg-base-100/50 flex flex-col gap-6 md:col-span-3 [&:has(input.range:active)]:visible!"
-  >
-    {#each sliderConfigs as config, index (index)}
-      <div
-        class="setbgcolor rounded-box border-base-100/20 h-20 border-2 px-4 pt-8 backdrop-blur-md"
-      >
-        <!-- Moving tooltip above the slider thumb -->
-        {#if config.max > config.min}
-          <div class="relative mx-4 w-[calc(100%-2rem)]">
-            <div class="absolute -ms-2 -mt-[2em] text-[0.625rem]">
-              {config.label}
-            </div>
-            <div
-              class="tooltip tooltip-open relative block w-0 font-mono before:text-[0.6875rem]"
-              style={`inset-inline-start: ${((config.value - config.min) / (config.max - config.min)) * 100}%; pointer-events: none;`}
-            >
-              <div class="tooltip-content text-start font-mono">
-                <div class="text-[0.6875rem]">{config.formatter(config.value)}</div>
-              </div>
-            </div>
-          </div>
-        {/if}
-        <input
-          id="slider-{index}"
-          type="range"
-          min={config.min}
-          max={config.max}
-          step={config.step}
-          value={config.value}
-          onchange={(e) => {
-            config.setter(parseFloat(e.target.value))
-
-            // Mark that changes have been made in current mode
-            hasChangedInCurrentMode = true
-
-            const newValue = generateColorValue()
-
-            // Update the bound value
-            value = newValue
-
-            // For OKLCH mode, update originalValue when changes are made
-            // For non-OKLCH modes, update originalValue to preserve changes
-            if (hasChangedInCurrentMode) {
-              originalValue = newValue
-            }
-          }}
-          oninput={(e) => {
-            config.setter(parseFloat(e.target.value))
-
-            // Mark that changes have been made in current mode
-            hasChangedInCurrentMode = true
-
-            const newValue = generateColorValue()
-
-            // Update the bound value
-            value = newValue
-
-            // For OKLCH mode, update originalValue when changes are made
-            // For non-OKLCH modes, update originalValue to preserve changes
-            if (hasChangedInCurrentMode) {
-              originalValue = newValue
-            }
-          }}
-          class="range range-xl focus:outline-base-content/10 outline-base-content/10 w-full text-transparent outline [--range-bg:transparent] focus:outline [&.range::-webkit-slider-thumb]:shadow-[0_0_0_1px_oklch(0_0_0/.3)_inset,0_0_0_2px_oklch(100_0_0)_inset]"
-          style={`background: ${generateSliderGradient(config.gradientType, colorState)};`}
-        />
-        <!-- range indicator: show truly out-of-gamut as overlays -->
-        <!-- only for L and C of LCH -->
-        {#if config.range && (config.label === "Lightness" || config.label === "Chroma") && Array.isArray(config.range) && config.range.length > 0}
-          <div class="pointer-events-none px-2">
-            <div class="relative mt-1 h-0.5 w-full">
-              {#each Array.isArray(config.range) ? config.range : [config.range] as r}
-                {#if r && r.width > 0.1}
-                  <div
-                    class="bg-base-content/10 absolute top-0 left-0 h-full rounded"
-                    style={`left:${r.start}%;width:${r.width}%;`}
-                  ></div>
-                {/if}
-              {/each}
-            </div>
-          </div>
-        {/if}
-      </div>
-    {/each}
-  </div>
+  {/each}
 </div>
