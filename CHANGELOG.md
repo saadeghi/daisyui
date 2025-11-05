@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.4.5 (2025-11-05)
+
+
+### Bug Fixes
+
+* leaking grid style issue in list ([a22e54d](https://github.com/saadeghi/daisyui/commit/a22e54d100e542e020967c72cd297ba3ae4a1833))
+
 ## 5.4.4 (2025-11-05)
 
 
