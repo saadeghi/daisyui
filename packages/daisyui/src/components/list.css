@@ -44,7 +44,7 @@
         --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto)
           minmax(0, auto) 1fr;
       }
-      :not(.list-col-wrap) {
+      > :not(.list-col-wrap) {
         @apply row-start-1;
       }
     }
