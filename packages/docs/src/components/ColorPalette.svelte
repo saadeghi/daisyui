@@ -429,45 +429,9 @@
       >
         <div class="flex grow flex-col gap-1">
           <span class="text-base-content/60 shrink-0 text-xs">Color value</span>
-          <div class="flex items-center gap-1">
-            <label dir="ltr" class="input input-bordered flex items-center gap-2 px-2">
-              <input
-                type="text"
-                class="grow"
-                bind:value={inputValue}
-                oninput={handleInput}
-                onkeydown={(event) => {
-                  if (event.key === "Enter") {
-                    event.preventDefault()
-                    if (validateColor(inputValue)) {
-                      value = inputValue
-                      closeModal()
-                    }
-                  }
-                }}
-                aria-label={`${name} value`}
-              />
-              {#if colorName}
-                <span
-                  class="opacity/50 badge badge-xs badge-soft shrink-0 gap-1 select-none max-md:hidden"
-                >
-                  {colorName}
-                  <svg
-                    width="16px"
-                    height="16px"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    ><path
-                      d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"
-                      fill="currentColor"
-                    /></svg
-                  >
-                </span>
-              {/if}
-            </label>
-
+          <div class="flex items-center gap-1 max-md:flex-col">
             <div class="dropdown dropdown-top">
-              <div tabindex="0" role="button" class="btn btn-sm btn-neutral w-24">
+              <div tabindex="0" role="button" class="btn btn-sm">
                 {#if colorState.mode === "hex"}
                   <ColorSpaceSelectorHex />
                 {:else if colorState.mode === "hsl"}
@@ -477,11 +441,21 @@
                 {:else}
                   <ColorSpaceSelectorOklch />
                 {/if}
+                <svg
+                  width="12px"
+                  height="12px"
+                  class="inline-block size-2 rotate-x-180 fill-current opacity-60"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 2048 2048"
+                >
+                  <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                </svg>
               </div>
               <ul
                 tabindex="-1"
-                class="dropdown-content menu bg-base-100 rounded-box mb-1 p-2 shadow-sm"
+                class="dropdown-content menu rounded-box bg-base-200 mb-1 w-40 border-[length:var(--border)] border-white/5 p-2 shadow-2xl outline-[length:var(--border)] outline-black/5"
               >
+                <li class="menu-title text-xs font-semibold">Convert format</li>
                 <li>
                   <button
                     type="button"
@@ -532,6 +506,41 @@
                 </li>
               </ul>
             </div>
+            <label dir="ltr" class="input input-sm flex items-center gap-2 px-2">
+              <input
+                type="text"
+                class="grow xl:font-mono xl:normal-nums"
+                bind:value={inputValue}
+                oninput={handleInput}
+                onkeydown={(event) => {
+                  if (event.key === "Enter") {
+                    event.preventDefault()
+                    if (validateColor(inputValue)) {
+                      value = inputValue
+                      closeModal()
+                    }
+                  }
+                }}
+                aria-label={`${name} value`}
+              />
+              {#if colorName}
+                <span
+                  class="opacity/50 badge badge-xs badge-soft shrink-0 gap-1 select-none max-md:hidden"
+                >
+                  {colorName}
+                  <svg
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                      d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"
+                      fill="currentColor"
+                    /></svg
+                  >
+                </span>
+              {/if}
+            </label>
           </div>
         </div>
         <ContrastMeter color1={displayColor} color2={getPairColor(name)} />

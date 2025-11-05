@@ -447,7 +447,7 @@
           config.setter(parseFloat(e.target.value))
           colorState.changed = true
         }}
-        class="range range-xl focus:outline-base-content/10 outline-base-content/10 w-full text-transparent outline [--range-bg:transparent] focus:outline [&.range::-webkit-slider-thumb]:shadow-[0_0_0_1px_oklch(0_0_0/.3)_inset,0_0_0_2px_oklch(100_0_0)_inset]"
+        class="range range-xl focus:outline-base-content/10 outline-base-content/10 w-full text-transparent outline [--range-thumb:transparent] focus:outline [&.range::-webkit-slider-thumb]:shadow-[0_0_0_1px_oklch(0_0_0/.3)_inset,0_0_0_2px_oklch(100_0_0)_inset]"
         style={`background: ${generateSliderGradient(config.gradientType, colorState)};`}
       />
       <!-- range indicator: show truly out-of-gamut as overlays -->
