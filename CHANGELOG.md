@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.4.4 (2025-11-05)
+
+
+### Bug Fixes
+
+* substract padding from tab-content height for tabs-box ([#4235](https://github.com/saadeghi/daisyui/issues/4235)) ([e59a7a0](https://github.com/saadeghi/daisyui/commit/e59a7a07b9c3961e02f4a2679cbf381830d631bf))
+
 ## 5.4.3 (2025-11-03)
 
 
