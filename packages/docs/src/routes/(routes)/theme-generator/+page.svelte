@@ -97,23 +97,25 @@
     return styleString
   })
 
-  const colorDetails = $derived(Object.entries(data.tailwindcolors).map(([key, color]) => {
-    const names = []
-    const initials = []
-    for (const [key, themeColor] of Object.entries(currentTheme)) {
-      if (themeColor === color) {
-        names.push(key.replace("--color-", ""))
-        initials.push(data.colorInitials[key] || null)
+  const colorDetails = $derived(
+    Object.entries(data.tailwindcolors).map(([key, color]) => {
+      const names = []
+      const initials = []
+      for (const [key, themeColor] of Object.entries(currentTheme)) {
+        if (themeColor === color) {
+          names.push(key.replace("--color-", ""))
+          initials.push(data.colorInitials[key] || null)
+        }
       }
-    }
 
-    return [
-      key,
-      color,
-      initials.length > 0 ? `${ initials[0] }${ initials.length > 1 ? "+" : "" }` : null,
-      names,
-    ]
-  }))
+      return [
+        key,
+        color,
+        initials.length > 0 ? `${initials[0]}${initials.length > 1 ? "+" : ""}` : null,
+        names,
+      ]
+    }),
+  )
 
   let firstItemStyle = $state("scale:1;opacity:1;")
   const createNewTheme = (id, name, colors) => {
@@ -751,7 +753,7 @@
                       ? key.replace(`--color-${group}-`, "")
                       : ""}
                   colorPairs={data.colorPairs}
-                  colorDetails={colorDetails}
+                  {colorDetails}
                   themeColors={currentTheme}
                   bind:pickerMode
                   onModalStateChange={handleColorModalStateChange}

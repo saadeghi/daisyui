@@ -409,7 +409,9 @@
   })
 </script>
 
-<div class="hide-when-range-is-active [&:has(input.range:active)_.setbgcolor]:bg-base-100/50 w-full md:p-4 flex flex-col gap-6 md:col-span-3 [&:has(input.range:active)]:visible!">
+<div
+  class="hide-when-range-is-active [&:has(input.range:active)_.setbgcolor]:bg-base-100/50 flex w-full flex-col gap-6 md:col-span-3 md:p-4 [&:has(input.range:active)]:visible!"
+>
   {#each sliderConfigs as config, index (index)}
     <div class="setbgcolor rounded-box border-base-100/20 h-20 border-2 px-4 pt-8 backdrop-blur-md">
       <!-- Moving tooltip above the slider thumb -->

@@ -163,8 +163,10 @@
   }
 
   function getPairColor(currentColor) {
-    return themeColors[colorPairsMap.color[currentColor] || colorPairsMap.content[currentColor]]
-      || currentColor
+    return (
+      themeColors[colorPairsMap.color[currentColor] || colorPairsMap.content[currentColor]] ||
+      currentColor
+    )
   }
 
   function updateColorState(newValue) {
@@ -230,7 +232,11 @@
 
   // Helper function to generate color value from color state
   function generateColorValue() {
-    if (colorState.originalMode === colorState.mode && colorState.originalValue && !colorState.changed) {
+    if (
+      colorState.originalMode === colorState.mode &&
+      colorState.originalValue &&
+      !colorState.changed
+    ) {
       return colorState.originalValue
     }
 
@@ -376,7 +382,7 @@
       {#if useOklchPicker}
         <!-- OKLCH Color Picker -->
         <div class="flex justify-center px-8 py-4">
-          <ColorSlider bind:colorState={colorState} width={400} height={240} />
+          <ColorSlider bind:colorState width={400} height={240} />
         </div>
       {:else}
         <!-- Traditional Color Palette -->
@@ -442,7 +448,9 @@
                 aria-label={`${name} value`}
               />
               {#if colorName}
-                <span class="opacity/50 badge badge-xs badge-soft shrink-0 gap-1 select-none max-md:hidden">
+                <span
+                  class="opacity/50 badge badge-xs badge-soft shrink-0 gap-1 select-none max-md:hidden"
+                >
                   {colorName}
                   <svg
                     width="16px"
@@ -470,7 +478,10 @@
                   <ColorSpaceSelectorOklch />
                 {/if}
               </div>
-              <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box p-2 mb-1 shadow-sm">
+              <ul
+                tabindex="-1"
+                class="dropdown-content menu bg-base-100 rounded-box mb-1 p-2 shadow-sm"
+              >
                 <li>
                   <button
                     type="button"
