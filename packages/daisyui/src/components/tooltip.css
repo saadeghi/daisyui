@@ -18,16 +18,6 @@
       content: var(--tw-content);
     }
 
-    @media (prefers-reduced-motion: no-preference) {
-      & > .tooltip-content,
-      &[data-tip]:before,
-      &:after {
-        transition:
-          opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms,
-          transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
-      }
-    }
-
     &:after {
       @apply absolute opacity-0;
       background-color: var(--tt-bg);
@@ -43,23 +33,31 @@
       mask-image: var(--mask-tooltip);
     }
 
-    &.tooltip-open,
-    &[data-tip]:not([data-tip=""]):hover,
-    &:not(:has(.tooltip-content:empty)):has(.tooltip-content):hover,
-    &[data-tip]:not([data-tip=""]):has(:focus-visible) {
-      > .tooltip-content,
+    @media (prefers-reduced-motion: no-preference) {
+      & > .tooltip-content,
       &[data-tip]:before,
       &:after {
-        @apply opacity-100;
-        --tt-pos: 0rem;
+        transition:
+          opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms,
+          transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
       }
-      @media (prefers-reduced-motion: no-preference) {
+    }
+
+    &:is([data-tip]:not([data-tip=""]), :has(.tooltip-content:not(:empty))) {
+      &.tooltip-open,
+      &:hover,
+      &:has(:focus-visible) {
         & > .tooltip-content,
         &[data-tip]:before,
         &:after {
-          transition:
-            opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-            transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+          @apply opacity-100;
+          --tt-pos: 0rem;
+
+          @media (prefers-reduced-motion: no-preference) {
+            transition:
+              opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+          }
         }
       }
     }
