@@ -29,12 +29,14 @@
           .replace(/[ ]/g, "-") // replace spaces with -
           .replace(/[^A-Za-z0-9-]/g, "") // replace all non-alphanumeric chars
           .toLowerCase()
+          .trim()
       : "",
   )
 
   onMount(() => {
-    if (document.getElementById(location.hash.slice(1)) && location.hash.slice(1) === titleStr) {
-      document.getElementById(location.hash.slice(1)).click()
+    const hash = location.hash.slice(1).trim()
+    if (hash !== "" && hash === titleStr && document.getElementById(hash)) {
+      document.getElementById(hash).click()
     }
   })
 
