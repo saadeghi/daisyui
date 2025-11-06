@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.4.6 (2025-11-06)
+
+
+### Bug Fixes
+
+* prevent empty tooltips from showing on focus ([#4258](https://github.com/saadeghi/daisyui/issues/4258)) closes: [#4254](https://github.com/saadeghi/daisyui/issues/4254) ([a5766b8](https://github.com/saadeghi/daisyui/commit/a5766b8774852faaddff7ec8a5bc07a1d337a29c))
+
 ## 5.4.5 (2025-11-05)
 
 
