@@ -104,7 +104,7 @@ export function remarkTranslate() {
     })
 
     // Helper function to check if we should skip processing a node or its ancestors
-    const shouldSkip = (node, parent) => {
+    const _shouldSkip = (node, parent) => {
       if (skipNodes.has(node)) return true
       if (parent && skipNodes.has(parent)) return true
       return false
@@ -217,7 +217,7 @@ export function remarkTranslate() {
                   // fallback: just ignore other types for now
                 }
               }
-              combinedText += `<a href=\"${escapeQuotes(child.url)}\">${linkText}</a>`
+              combinedText += `<a href=\${escapeQuotes(child.url)}\>${linkText}</a>`
             }
           }
 
@@ -268,7 +268,7 @@ export function remarkTranslate() {
                   // fallback: just ignore other types for now
                 }
               }
-              const linkHtml = `<a href=\"${escapeQuotes(child.url)}\">${linkText}</a>`
+              const linkHtml = `<a href=\${escapeQuotes(child.url)}\>${linkText}</a>`
               node.children[i] = handleTextWithCode(linkHtml)
               i++
             } else {

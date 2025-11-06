@@ -68,13 +68,13 @@ async function scanPagesForKeywords() {
               originalKeyword: keyword,
             })
           })
-        } catch (err) {
+        } catch (_err) {
           // Skip files that can't be read
           console.warn(`Could not read page file: ${pageFile}`)
         }
       }
     }
-  } catch (err) {
+  } catch (_err) {
     console.warn(`Could not scan pages directory: ${pagesDir}`)
   }
 

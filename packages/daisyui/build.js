@@ -150,7 +150,7 @@ async function generateFiles() {
 
 async function build() {
   try {
-    !isDev &&
+    if (!isDev) {
       (await removeFiles([
         "base",
         "colors",
@@ -162,10 +162,11 @@ async function build() {
         "imports.js",
         "themes.css",
       ]))
+    }
     console.time(`${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${version}`)
     await generateFiles()
     console.timeEnd(`${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${version}`)
-    !isDev &&
+    if (!isDev) {
       (await report([
         "base",
         "components",
@@ -175,6 +176,7 @@ async function build() {
         "themes.css",
         "daisyui.css",
       ]))
+    }
   } catch (error) {
     throw new Error("Build error: " + error.message)
   }
