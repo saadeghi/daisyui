@@ -110,6 +110,11 @@
       &:hover {
         background-color: var(--color-base-200);
       }
+      &:disabled:hover,
+      &[aria-disabled="true"]:hover {
+        background-color: transparent;
+        cursor: not-allowed;
+      }
     }
     .rdp-caption_label {
       z-index: 1;
