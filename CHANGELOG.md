@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.4.7 (2025-11-06)
+
+
+### Bug Fixes
+
+* remove hover effect from disabled calendar dates ([#4257](https://github.com/saadeghi/daisyui/issues/4257)) closes: [#4253](https://github.com/saadeghi/daisyui/issues/4253) ([0a9cd05](https://github.com/saadeghi/daisyui/commit/0a9cd053c73c7cfba96811192fdd0f4460dbf6f0))
+
 ## 5.4.6 (2025-11-06)
 
 
