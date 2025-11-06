@@ -111,7 +111,22 @@
       }
 
       &.menu-disabled {
-        @apply text-base-content/20 pointer-events-none;
+        @apply text-base-content/20 pointer-events-none cursor-not-allowed;
+
+        & > *:not(ul) {
+          @apply cursor-not-allowed;
+
+          &:hover,
+          &:focus,
+          &:focus-visible,
+          &:active,
+          &.menu-active {
+            @apply outline-hidden bg-transparent;
+            box-shadow: none;
+            color: inherit;
+            cursor: not-allowed;
+          }
+        }
       }
     }
     .dropdown:focus-within {

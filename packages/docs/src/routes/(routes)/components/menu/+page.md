@@ -434,6 +434,10 @@ classnames:
 </ul>
 ```
 
+> :INFO:
+>
+> `menu-disabled` provides visual styling only. To prevent keyboard focus, add `inert` attribute or `tabindex="-1"` to the disabled item.
+
 
 ### ~Menu with icons
 <ul class="menu bg-base-200 w-56 rounded-box">
