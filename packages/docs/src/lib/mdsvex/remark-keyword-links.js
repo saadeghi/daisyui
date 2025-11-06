@@ -68,14 +68,14 @@ async function scanPagesForKeywords() {
               originalKeyword: keyword,
             })
           })
-        } catch (_err) {
+        } catch (err) {
           // Skip files that can't be read
-          console.warn(`Could not read page file: ${pageFile}`)
+          console.warn(`Could not read page file: ${pageFile}`, err)
         }
       }
     }
-  } catch (_err) {
-    console.warn(`Could not scan pages directory: ${pagesDir}`)
+  } catch (err) {
+    console.warn(`Could not scan pages directory: ${pagesDir}`, err)
   }
 
   keywordMappings = mappings
