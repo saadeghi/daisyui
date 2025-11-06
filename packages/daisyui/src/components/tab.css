@@ -530,8 +530,8 @@
     .tab-content {
       @apply mt-1;
       border-radius: calc(
-        min(calc(var(--tab-height) / 2), var(--radius-field)) + min(0.25rem, var(--tabs-box-radius)) -
-          var(--border)
+        min(calc(var(--tab-height) / 2), var(--radius-field)) +
+          min(0.25rem, var(--tabs-box-radius)) - var(--border)
       );
     }
   }
