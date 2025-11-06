@@ -13,7 +13,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 - You can help by [fixing existing issues](https://github.com/saadeghi/daisyui/issues?q=)
 - Don't work on issues assigned to others (to avoid duplicate efforts)
 - Before starting to work on an issue, please first add a comment and ask to get assigned to that issue. This way everyone will know you're working on that and it avoids duplicate efforts.
-- Commit messages must start with: `fix: #1 [description]` which `1` is the number of issue, so the issue will close automatically and it gets added to changelog file on a release.
+- Commit messages must start with: `fix: #1 [description]` where `1` is the number of the issue, so the issue will close automatically and it gets added to the changelog file on a release.
 
 ## Feature requests
 
@@ -25,7 +25,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 
 - A pull request must fix [an open issue](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue+is%3Aopen) **assigned to you**. If there's no issue, please create one first. If it's not assigned to you, please ask for it in the comments. This is for avoiding duplicate efforts.
 - Fixing typos doesn't need to be an issue. You can just open a pull request.
-- Fixing a mistake in document website doesn't need to be an issue. You can just open a pull request.
+- Fixing a mistake in the document website doesn't need to be an issue. You can just open a pull request.
 
 ## Contribute translations
 
@@ -34,7 +34,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 
 ## Building on local
 
-### To build the daisyUI node package on local:
+### To build the daisyUI node package locally:
 
 1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local – only fork the master branch
 2. [Install Bun](https://bun.sh/) if you don't have it:
