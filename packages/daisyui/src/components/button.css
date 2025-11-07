@@ -189,25 +189,22 @@
     }
   }
 }
+
 .btn-link {
   @layer daisyui.modifier {
     @apply underline outline-current;
     --btn-border: #0000;
     --btn-bg: #0000;
-    --btn-fg: var(--color-primary);
     --btn-noise: none;
     --btn-shadow: "";
 
-    &:is(.btn-active, :hover, :active:focus, :focus-visible) {
-      @apply underline;
-      --btn-border: #0000;
-      --btn-bg: #0000;
+    &:not(.btn-disabled, .btn:disabled, .btn[disabled]) {
+      --btn-fg: var(--btn-color, var(--color-primary));
     }
 
-    @media (hover: none) {
-      &:hover:not(.btn-active, :active, :focus-visible, :disabled, [disabled], .btn-disabled) {
-        @apply no-underline;
-      }
+    &:is(.btn-active, :hover, :active:focus, :focus-visible) {
+      --btn-border: #0000;
+      --btn-bg: #0000;
     }
   }
 }
