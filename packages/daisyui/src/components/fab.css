@@ -54,14 +54,6 @@
     > :nth-child(6) {
       transition-delay: 120ms;
     }
-    /* checkbox method experiment - not a good idea because it needs a second click to close */
-    /* > label {
-    @apply relative;
-    > input {
-      @apply pointer-events-none absolute inset-0 opacity-0;
-    }
-  } */
-    /* &:has(:checked), */
     &:focus-within {
       > [tabindex]:first-child {
         @apply pointer-events-none;
