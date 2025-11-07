@@ -174,17 +174,18 @@
       --btn-noise: none;
       &:not(:disabled, [disabled], .btn-disabled) {
         @apply outline-current;
-        --btn-fg: currentColor;
+        --btn-fg: var(--btn-color, currentColor);
       }
     }
 
     @media (hover: none) {
-      &:hover:not(.btn-active, :active, :focus-visible, :disabled, [disabled], .btn-disabled) {
+      &:not(.btn-active, :active, :focus-visible):hover {
+        @apply outline-current;
         --btn-shadow: "";
         --btn-bg: #0000;
+        --btn-fg: var(--btn-color, currentColor);
         --btn-border: #0000;
         --btn-noise: none;
-        --btn-fg: currentColor;
       }
     }
   }
