@@ -210,7 +210,8 @@
   }
 }
 
-.btn-outline {
+.btn-outline,
+.btn-dash {
   @layer daisyui.modifier {
     &:not(
       .btn-active,
@@ -242,36 +243,7 @@
 }
 
 .btn-dash {
-  @layer daisyui.modifier {
-    &:not(
-      .btn-active,
-      :hover,
-      :active:focus,
-      :focus-visible,
-      input:checked:not(.filter .btn),
-      :disabled,
-      [disabled],
-      .btn-disabled
-    ) {
-      --btn-shadow: "";
-      --btn-bg: #0000;
-      --btn-fg: var(--btn-color);
-      --btn-border: var(--btn-color);
-      --btn-noise: none;
-      border-style: dashed;
-    }
-
-    @media (hover: none) {
-      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
-        --btn-shadow: "";
-        --btn-bg: #0000;
-        --btn-fg: var(--btn-color);
-        --btn-border: var(--btn-color);
-        --btn-noise: none;
-        border-style: dashed;
-      }
-    }
-  }
+  border-style: dashed;
 }
 
 .btn-soft {
