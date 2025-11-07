@@ -87,7 +87,7 @@
         border: var(--border) solid var(--color-base-200);
         @apply rounded-box my-2 p-2;
         background-color: inherit;
-        box-shadow: 0 2px calc(var(--depth) * 3px) -2px oklch(0% 0 0/0.2);
+        box-shadow: 0 2px calc(var(--depth) * 3px) -2px oklch(0% 0 0 / 0.2);
         box-shadow:
           0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
           0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));

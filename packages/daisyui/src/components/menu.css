@@ -155,8 +155,8 @@
     :where(& > li:not(.menu-title) > details > ul) {
       @apply bg-base-100 rounded-box;
       box-shadow:
-        0 1px 3px 0 oklch(0% 0 0/0.1),
-        0 1px 2px -1px oklch(0% 0 0/0.1);
+        0 1px 3px 0 oklch(0% 0 0 / 0.1),
+        0 1px 2px -1px oklch(0% 0 0 / 0.1);
     }
   }
 }
