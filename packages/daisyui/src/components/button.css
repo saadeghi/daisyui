@@ -281,6 +281,7 @@
       :hover,
       :active:focus,
       :focus-visible,
+      input:checked:not(.filter .btn),
       :disabled,
       [disabled],
       .btn-disabled
@@ -301,7 +302,7 @@
     }
 
     @media (hover: none) {
-      &:hover:not(.btn-active, :active, :focus-visible, :disabled, [disabled], .btn-disabled) {
+      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
         --btn-shadow: "";
         --btn-fg: var(--btn-color, var(--color-base-content));
         --btn-bg: color-mix(
