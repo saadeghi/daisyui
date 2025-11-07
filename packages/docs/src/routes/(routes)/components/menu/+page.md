@@ -421,16 +421,16 @@ classnames:
 
 ### ~Menu with disabled items
 <ul class="menu bg-base-200 w-56 rounded-box">
-  <li><button>Enabled item</button></li>
-  <li class="menu-disabled"><button>disabled item</button></li>
-  <li class="menu-disabled"><button>disabled item</button></li>
+  <li><a href="#enabled">Enabled item</a></li>
+  <li class="menu-disabled"><a role="link" aria-disabled="true">disabled item</a></li>
+  <li class="menu-disabled"><a role="link" aria-disabled="true">disabled item</a></li>
 </ul>
 
 ```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
-  <li><a>Enabled item</a></li>
-  <li class="$$menu-disabled"><a>disabled item</a></li>
-  <li class="$$menu-disabled"><a>disabled item</a></li>
+  <li><a href="#enabled">Enabled item</a></li>
+  <li class="$$menu-disabled"><a role="link" aria-disabled="true">disabled item</a></li>
+  <li class="$$menu-disabled"><a role="link" aria-disabled="true">disabled item</a></li>
 </ul>
 ```
 
