@@ -167,7 +167,7 @@
 
 .btn-ghost {
   @layer daisyui.modifier {
-    &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+    &:not(.btn-active, :hover, :active:focus, :focus-visible, input:checked:not(.filter .btn)) {
       --btn-shadow: "";
       --btn-bg: #0000;
       --btn-border: #0000;
@@ -179,7 +179,7 @@
     }
 
     @media (hover: none) {
-      &:not(.btn-active, :active, :focus-visible):hover {
+      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
         @apply outline-current;
         --btn-shadow: "";
         --btn-bg: #0000;
