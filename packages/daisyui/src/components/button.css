@@ -248,35 +248,27 @@
       :hover,
       :active:focus,
       :focus-visible,
+      input:checked:not(.filter .btn),
       :disabled,
       [disabled],
-      .btn-disabled,
-      :checked
+      .btn-disabled
     ) {
       --btn-shadow: "";
-      border-style: dashed;
       --btn-bg: #0000;
       --btn-fg: var(--btn-color);
       --btn-border: var(--btn-color);
       --btn-noise: none;
+      border-style: dashed;
     }
 
     @media (hover: none) {
-      &:hover:not(
-          .btn-active,
-          :active,
-          :focus-visible,
-          :disabled,
-          [disabled],
-          .btn-disabled,
-          :checked
-        ) {
+      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
         --btn-shadow: "";
-        border-style: dashed;
         --btn-bg: #0000;
         --btn-fg: var(--btn-color);
         --btn-border: var(--btn-color);
         --btn-noise: none;
+        border-style: dashed;
       }
     }
   }
