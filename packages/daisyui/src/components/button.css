@@ -69,8 +69,8 @@
       @apply appearance-none;
 
       /* &:not(.btn-square, .btn-circle) {
-      @apply w-auto;
-    } */
+        @apply w-auto;
+      } */
 
       &::after {
         --tw-content: attr(aria-label);
