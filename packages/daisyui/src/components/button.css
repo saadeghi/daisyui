@@ -96,14 +96,6 @@
     --btn-border: #0000;
     --btn-noise: none;
     --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
-
-    @media (hover: hover) {
-      &:hover {
-        @apply bg-neutral/20 pointer-events-none;
-        --btn-border: #0000;
-        --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
-      }
-    }
   }
 }
 
