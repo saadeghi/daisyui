@@ -3,10 +3,12 @@
     width: unset;
   }
 }
+
+.prose :where(.btn-link):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  @apply no-underline;
+}
+
 .btn {
-  .prose & {
-    @apply no-underline;
-  }
   @layer daisyui.component {
     @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle outline-offset-2 select-none;
     padding-inline: var(--btn-p);
