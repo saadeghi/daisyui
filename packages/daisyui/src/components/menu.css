@@ -241,7 +241,7 @@
   }
 }
 
-/* allow usecases like group-hover:menu-active to make a menu item active when the menu is hovered */
+/* allow use cases like group-hover:menu-active to make a menu item active when the menu is hovered */
 :where(:not(ul, details, .menu-title, .btn)).menu-active {
   @layer daisyui.modifier {
     @apply outline-hidden;
