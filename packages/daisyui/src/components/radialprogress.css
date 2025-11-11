@@ -13,8 +13,8 @@
       @apply absolute inset-0 rounded-full;
       content: "";
       background:
-        radial-gradient(farthest-side, currentColor 98%, #0000) top/var(--thickness) var(--thickness)
-          no-repeat,
+        radial-gradient(farthest-side, currentColor 98%, #0000) top/var(--thickness)
+          var(--thickness) no-repeat,
         conic-gradient(currentColor var(--radialprogress), #0000 0);
       -webkit-mask: radial-gradient(
         farthest-side,
