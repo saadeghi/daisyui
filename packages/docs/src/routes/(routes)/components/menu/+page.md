@@ -16,7 +16,7 @@ classnames:
     desc: For the toggle to show/hide the menu-dropdown using JS
   modifier:
   - class: menu-disabled
-    desc: For disabling a <li>
+    desc: For the element inside <li> to look disabled
   - class: menu-active
     desc: For the element inside <li> to look active
   - class: menu-focus
@@ -46,6 +46,13 @@ classnames:
   import Component from "$components/Component.svelte"
   import Translate from "$components/Translate.svelte"
 </script>
+
+> :INFO:
+>
+> When using `menu-disabled` to present a menu item as disabled take care to also disable the element.
+> If you use `<button>` this can be done by adding a `disabled` attribute.
+> If you use `<a>` this can be done by removing the `href` attribute and adding `role="link" aria-disabled="true"` attributes.
+
 
 ### ~Menu
 <ul class="menu bg-base-200 w-56 rounded-box">
@@ -422,15 +429,17 @@ classnames:
 ### ~Menu with disabled items
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Enabled item</button></li>
-  <li class="menu-disabled"><button>disabled item</button></li>
-  <li class="menu-disabled"><button>disabled item</button></li>
+  <li class="menu-disabled"><button disabled>disabled item</button></li>
+  <li class="menu-disabled"><button disabled>disabled item</button></li>
 </ul>
 
 ```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Enabled item</a></li>
-  <li class="$$menu-disabled"><a>disabled item</a></li>
-  <li class="$$menu-disabled"><a>disabled item</a></li>
+  <!-- If you use <button> disable it with disabled attribute -->
+  <li class="$$menu-disabled"><button disabled>disabled item</button></li>
+  <!-- If you use <a> disable it by removing the href attribute and adding role="link" and aria-disabled="true" attributes -->
+  <li class="$$menu-disabled"><a role="link" aria-disabled="true">disabled item</a></li>
 </ul>
 ```
 
