@@ -1,5 +1,10 @@
 export const articles = [
   {
+    title: "Howto Build a Theme Switcher with DaisyUI and TanStack Router",
+    site: "JSDev Space",
+    link: "https://jsdev.space/howto/daisyui-theme-switcher/",
+  },
+  {
     title: "Cookie-Based Theme Selection in SvelteKit with daisyUI",
     site: "Scott Spence",
     link: "https://scottspence.com/posts/cookie-based-theme-selection-in-sveltekit-with-daisyui",
