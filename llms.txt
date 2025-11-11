@@ -1471,10 +1471,15 @@ Skeleton is a component that can be used to show a loading state
 
 #### Class names
 - component: `skeleton`
+- modifier: `skeleton-text`
 
 #### Syntax
 ```html
 <div class="skeleton"></div>
+```
+Example with text skeleton:
+```html
+<div class="skeleton skeleton-text">Loading data...</div>
 ```
 
 #### Rules
