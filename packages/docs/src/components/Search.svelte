@@ -494,7 +494,8 @@ Card,/components/card/`
 
       let csvResults = []
       try {
-        const response = await fetch("/search.csv")
+        const today = new Date().toISOString().slice(0, 10)
+        const response = await fetch(`/search.csv?t=${today}`)
         if (response.ok) {
           const csvText = await response.text()
           // Parse CSV data (skip header row for external CSV)

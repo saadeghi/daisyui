@@ -17,7 +17,7 @@
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       href="/blueprint/"
-      class="alert bg-base-300 flex w-full justify-center rounded-t-none border-none p-2 text-center text-xs shadow-none"
+      class="alert border-base-300 hover:bg-base-200 bg-base-100 flex w-full justify-center rounded-none border-x-0 border-t-0 p-2 text-center text-xs shadow-none transition-colors"
     >
       <div class="font-mono text-[0.6875rem]">
         <div
