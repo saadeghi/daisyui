@@ -178,6 +178,9 @@
     <loc>https://daisyui.com/components/hero/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/components/hover-3d/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/components/hover-gallery/</loc>
   </url>
   <url>
@@ -272,6 +275,9 @@
   </url>
   <url>
     <loc>https://daisyui.com/components/table/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/components/text-rotate/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/components/textarea/</loc>
