@@ -4,7 +4,22 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.5.0 (2025-11-11)
 
-## 5.4.8 (2025-11-11)
+### Features
+
+* new component `hover-3d` to make a 3D card
+* new component `text-rotate` to rotate between multiple words
+* new `skeleton` variant: `skeleton-text` for animated gradient text
+* improve `diff` drag area
+* improve `<code>` padding in `prose`. closes: #4243
+* new `dropdown` modifier: `dropdown-close` to force close a dropdown
+* `btn` selector improvements (7% smaller CSS size)
+* details in menu now has smooth transition
+
+### Docs
+
+* search now includes all class names and variables
+* update disable menu example to be more accessible
+* update llms.txt
 
 ## 5.4.7 (2025-11-06)
 
