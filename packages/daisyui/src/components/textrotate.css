@@ -1,7 +1,7 @@
 .text-rotate {
   height: 1lh;
   @layer daisyui.component {
-    @apply overflow-hidden whitespace-nowrap inline-block align-bottom;
+    @apply inline-block overflow-hidden align-bottom whitespace-nowrap;
     transition-property: none;
     /* aliasing Tailwind's variable so it inherits */
     --duration: var(--tw-duration);

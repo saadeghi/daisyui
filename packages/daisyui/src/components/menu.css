@@ -56,11 +56,11 @@
       }
     }
 
-    details{
+    details {
       overflow: hidden;
       interpolate-size: allow-keywords;
     }
-    details::details-content{
+    details::details-content {
       block-size: 0;
       @media (prefers-reduced-motion: no-preference) {
         transition-behavior: allow-discrete;
@@ -69,7 +69,7 @@
         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
       }
     }
-    details[open]::details-content{
+    details[open]::details-content {
       block-size: auto;
     }
 

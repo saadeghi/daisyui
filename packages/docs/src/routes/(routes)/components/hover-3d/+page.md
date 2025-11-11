@@ -36,7 +36,7 @@ Only use non-interactive content inside the `hover-3d` wrapper. If you want to m
 </div>
 
 ```html
-<div class="hover-3d">
+<div class="$$hover-3d">
   <!-- content -->
   <figure class="max-w-100 rounded-2xl">
     <img src="https://img.daisyui.com/images/stock/creditcard.webp" alt="3D card" />
@@ -86,7 +86,7 @@ Only use non-interactive content inside the `hover-3d` wrapper. If you want to m
 </div>
 
 ```html
-<a href="" class="$$hover-3d my-12 mx-2 cursor-pointer">
+<a href="#" class="$$hover-3d my-12 mx-2 cursor-pointer">
   
   <!-- content -->
   <div class="$$card w-96 bg-black text-white bg-[radial-gradient(circle_at_bottom_left,#ffffff04_35%,transparent_36%),radial-gradient(circle_at_top_right,#ffffff04_35%,transparent_36%)] bg-size-[4.95em_4.95em]">
@@ -166,7 +166,7 @@ Only use non-interactive content inside the `hover-3d` wrapper. If you want to m
 </div>
 
 ```html
-<div class="hover-3d">
+<div class="$$hover-3d">
   <!-- content -->
   <figure class="w-60 rounded-2xl">
     <img src="https://img.daisyui.com/images/stock/creditcard.webp" alt="3D card" />
@@ -182,7 +182,7 @@ Only use non-interactive content inside the `hover-3d` wrapper. If you want to m
   <div></div>
 </div>
 
-<div class="hover-3d">
+<div class="$$hover-3d">
   <!-- content -->
   <figure class="w-60 rounded-2xl">
     <img src="https://img.daisyui.com/images/stock/creditcard.webp" alt="3D card" />
@@ -198,7 +198,7 @@ Only use non-interactive content inside the `hover-3d` wrapper. If you want to m
   <div></div>
 </div>
 
-<div class="hover-3d">
+<div class="$$hover-3d">
   <!-- content -->
   <figure class="w-60 rounded-2xl">
     <img src="https://img.daisyui.com/images/stock/creditcard.webp" alt="3D card" />
