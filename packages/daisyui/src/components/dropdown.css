@@ -9,6 +9,7 @@
     .dropdown-content {
       @apply absolute;
     }
+    &.dropdown-close .dropdown-content,
     &:not(details, .dropdown-open, .dropdown-hover:hover, :focus-within) .dropdown-content,
     &.dropdown-hover:not(:hover)
       [tabindex]:first-child:focus:not(:focus-visible)
@@ -36,21 +37,24 @@
       }
     }
 
-    &.dropdown-open,
-    &:not(.dropdown-hover):focus,
-    &:focus-within {
-      > [tabindex]:first-child {
-        @apply pointer-events-none;
+    &:not(.dropdown-close) {
+      &.dropdown-open,
+      &:not(.dropdown-hover):focus,
+      &:focus-within {
+        > [tabindex]:first-child {
+          @apply pointer-events-none;
+        }
+        .dropdown-content {
+          @apply opacity-100;
+          scale: 100%;
+        }
       }
-      .dropdown-content {
-        @apply opacity-100;
-      }
-    }
 
-    &.dropdown-hover:hover {
-      .dropdown-content {
-        @apply opacity-100;
-        scale: 100%;
+      &.dropdown-hover:hover {
+        .dropdown-content {
+          @apply opacity-100;
+          scale: 100%;
+        }
       }
     }
 
@@ -59,14 +63,6 @@
         &::-webkit-details-marker {
           @apply hidden;
         }
-      }
-    }
-
-    &.dropdown-open,
-    &:focus,
-    &:focus-within {
-      .dropdown-content {
-        scale: 100%;
       }
     }
 
@@ -85,6 +81,7 @@
       @supports not (position-area: bottom) {
         @apply m-auto;
 
+        &.dropdown-close,
         &.dropdown-open:not(:popover-open) {
           @apply hidden origin-top opacity-0;
           scale: 95%;
@@ -95,6 +92,7 @@
         }
       }
 
+      &.dropdown-close,
       &:not(.dropdown-open, :popover-open) {
         @apply hidden origin-top opacity-0;
         scale: 95%;

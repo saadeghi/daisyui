@@ -32,6 +32,8 @@ classnames:
     desc: Opens on hover too
   - class: dropdown-open
     desc: Force open
+  - class: dropdown-close
+    desc: Force close
 ---
 
 <script>
@@ -527,6 +529,26 @@ The content gets displayed when the button is focused.
   </ul>
 </div>
 ```
+
+### ~Force close
+<div class="dropdown dropdown-close mb-32">
+  <div tabindex="0" role="button" class="m-1 btn">Button</div>
+  <ul tabindex="-1" class="p-2 shadow-sm menu dropdown-content z-1 bg-base-100 rounded-box w-52">
+    <li><button>Item 1</button></li>
+    <li><button>Item 2</button></li>
+  </ul>
+</div>
+
+```html
+<div class="$$dropdown $$dropdown-close">
+  <div tabindex="0" role="button" class="$$btn m-1">Button</div>
+  <ul tabindex="-1" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>
+```
+
 ## More examples
 
 ### ~Card as dropdown
