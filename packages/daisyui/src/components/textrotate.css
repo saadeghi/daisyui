@@ -1,0 +1,71 @@
+.text-rotate {
+  height: 1lh;
+  @layer daisyui.component {
+    @apply overflow-hidden whitespace-nowrap inline-block align-bottom;
+    transition-property: none;
+    /* aliasing Tailwind's variable so it inherits */
+    --duration: var(--tw-duration);
+    > * {
+      @apply grid justify-items-start;
+      height: calc(var(--items, 1) * 100%);
+      &:has(*:nth-child(2)) {
+        --items: 2;
+        animation: rotator var(--duration, 10s) linear(0 0% 49%, 0.5 50% 99%, 1 100% 100%) infinite;
+      }
+      &:has(*:nth-child(3)) {
+        --items: 3;
+        animation: rotator var(--duration, 10s)
+          linear(0 0% 32%, 0.333333 33% 65%, 0.666666 66% 99%, 1 100% 100%) infinite;
+      }
+      &:has(*:nth-child(4)) {
+        --items: 4;
+        animation: rotator var(--duration, 10s)
+          linear(0 0% 24%, 0.25 25% 49%, 0.5 50% 74%, 0.75 75% 99%, 1 100% 100%) infinite;
+      }
+      &:has(*:nth-child(5)) {
+        --items: 5;
+        animation: rotator var(--duration, 10s)
+          linear(0 0% 19%, 0.2 20% 39%, 0.4 40% 59%, 0.6 60% 79%, 0.8 80% 99%, 1 100% 100%) infinite;
+      }
+      &:has(*:nth-child(6)) {
+        --items: 6;
+        animation: rotator var(--duration, 10s)
+          linear(
+            0 0% 15%,
+            0.16666 16% 32%,
+            0.333333 33% 49%,
+            0.5 50% 65%,
+            0.666666 66% 82%,
+            0.833333 83% 99%,
+            1 100% 100%
+          )
+          infinite;
+      }
+      > * {
+        align-content: baseline;
+        clip-path: inset(0.5px 0px 0.5px 0px);
+        &:nth-child(1) {
+          translate: var(--first-item-position);
+        }
+      }
+    }
+    &:hover {
+      > * {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+@keyframes rotator {
+  89.9999%,
+  100% {
+    --first-item-position: 0 0%;
+  }
+  90%,
+  99.9999% {
+    --first-item-position: 0 calc(var(--items) * 100%);
+  }
+  100% {
+    translate: 0 -100%;
+  }
+}

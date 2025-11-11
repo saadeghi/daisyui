@@ -105,6 +105,8 @@ async function generateFiles() {
           "skeleton",
           "swap",
           "validator",
+          "hover3d",
+          "textrotate",
         ],
         layer: "utilities",
       }),

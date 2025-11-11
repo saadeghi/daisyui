@@ -1,3 +1,41 @@
+// Helper to extract values from markdown tables by column header name
+function extractTableColumn(content, headerName) {
+  // Find all markdown tables
+  const tables = content.match(/\|(.+\|)+\n\|[-| ]+\n([\s\S]+?)(?=\n\n|$)/g)
+  if (!tables) return []
+  let values = []
+  for (const table of tables) {
+    // Find header row
+    const headerRow = table.split("\n")[0]
+    const headers = headerRow
+      .split("|")
+      .map((h) => h.trim())
+      .filter(Boolean)
+    const colIdx = headers.findIndex(
+      (h) => h.replace(/`/g, "").toLowerCase() === headerName.toLowerCase(),
+    )
+    if (colIdx === -1) continue
+    // Find all rows
+    const rows = table.split("\n").slice(2)
+    for (const row of rows) {
+      const cells = row
+        .split("|")
+        .map((c) => c.trim())
+        .filter(Boolean)
+      if (cells[colIdx]) {
+        let val = cells[colIdx].trim()
+        // Only include if value is a code (backtick) or CSS variable (starts with -- or var(--))
+        if (/^`[^`]+`$/.test(cells[colIdx])) {
+          val = val.replace(/`/g, "")
+          values.push(val)
+        } else if (/^(var\(--[^)]+\)|--[a-zA-Z0-9-]+)/.test(val)) {
+          values.push(val)
+        }
+      }
+    }
+  }
+  return values
+}
 export const prerender = true
 
 import { readFileSync, readdirSync, statSync } from "node:fs"
@@ -169,22 +207,13 @@ function parseFrontmatter(content) {
   if (!match) return {}
 
   const frontmatterText = match[1]
-  const frontmatter = {}
-
-  // Simple YAML parser for frontmatter
-  frontmatterText.split("\n").forEach((line) => {
-    const colonIndex = line.indexOf(":")
-    if (colonIndex > 0) {
-      const key = line.substring(0, colonIndex).trim()
-      const value = line
-        .substring(colonIndex + 1)
-        .trim()
-        .replace(/^["']|["']$/g, "")
-      frontmatter[key] = value
-    }
-  })
-
-  return frontmatter
+  // Use js-yaml to parse frontmatter for nested arrays/objects
+  try {
+    return yaml.load(frontmatterText) || {}
+  } catch (e) {
+    console.error("YAML parse error in frontmatter", e)
+    return {}
+  }
 }
 
 // Filter function to remove tilde (~) prefix
@@ -390,7 +419,7 @@ export async function GET() {
     const headingEntries = []
 
     // Add CSV header
-    csvRows.push("title,url")
+    csvRows.push("title,url,classnames")
 
     // Add store entries first
     const storeEntries = await generateStoreEntries()
@@ -408,8 +437,48 @@ export async function GET() {
         // Convert file path to URL
         const url = filePathToUrl(file.path)
 
+        let classnamesArr = []
+
+        // Special handling for /docs/utilities/: extract class names and CSS variables from tables
+        if (url === "/docs/utilities/") {
+          classnamesArr.push(...extractTableColumn(content, "Class Name"))
+          classnamesArr.push(...extractTableColumn(content, "CSS Variable"))
+          classnamesArr.push(...extractTableColumn(content, "Component")) // for component-specific CSS variables
+        }
+        // /docs/colors/: extract color names and CSS variables from tables
+        else if (url === "/docs/colors/") {
+          classnamesArr.push(...extractTableColumn(content, "Color name"))
+          classnamesArr.push(...extractTableColumn(content, "CSS variable"))
+        }
+        // /docs/base/: only include code (backtick) values from Name column
+        else if (url === "/docs/base/") {
+          classnamesArr.push(
+            ...extractTableColumn(content, "Name").filter((val) =>
+              /^`[^`]+`$/.test("`" + val + "`"),
+            ),
+          )
+        }
+        // Default: use frontmatter classnames
+        else if (frontmatter.classnames) {
+          for (const key in frontmatter.classnames) {
+            const arr = frontmatter.classnames[key]
+            if (Array.isArray(arr)) {
+              for (const entry of arr) {
+                if (entry.class) {
+                  classnamesArr.push(entry.class)
+                }
+              }
+            }
+          }
+        }
+
+        // Flatten and join all classnames
+        const classnamesStr = classnamesArr.join(" ").replace(/\s+/g, " ").trim()
+
         // Add page entry
-        pageEntries.push(`${escapeCsvValue(title)},${escapeCsvValue(url)}`)
+        pageEntries.push(
+          `${escapeCsvValue(title)},${escapeCsvValue(url)},${escapeCsvValue(classnamesStr)}`,
+        )
       } catch (fileError) {
         console.error(`Error processing file ${file.path}:`, fileError)
         // Continue processing other files
@@ -421,14 +490,12 @@ export async function GET() {
       try {
         const content = file.content
         const headings = extractHeadings(content)
-
-        // Convert file path to URL
         const url = filePathToUrl(file.path)
 
-        // Add heading entries
+        // Add heading entries (no classnames)
         headings.forEach((heading) => {
           headingEntries.push(
-            `${escapeCsvValue(heading.title)},${escapeCsvValue(url)}#${heading.anchor}`,
+            `${escapeCsvValue(heading.title)},${escapeCsvValue(url)}#${heading.anchor},`,
           )
         })
       } catch (fileError) {
@@ -439,6 +506,8 @@ export async function GET() {
 
     // Add all page entries first (higher priority)
     csvRows.push(...pageEntries)
+
+    // Remove separate classnames rows (now included in page/headings)
 
     // Then add all heading entries (lower priority)
     csvRows.push(...headingEntries)

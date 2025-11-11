@@ -9,12 +9,24 @@
       #0000 60% 100%
     );
     background-size: 200% auto;
-    background-repeat: no-repeat;
     background-position-x: -50%;
 
     @media (prefers-reduced-motion: no-preference) {
       animation: skeleton 1.8s ease-in-out infinite;
     }
+  }
+}
+.skeleton-text {
+  @layer daisyui.modifier {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      105deg,
+      color-mix(in oklab, var(--color-base-content) 20%, transparent) 0% 40%,
+      var(--color-base-content) 50%,
+      color-mix(in oklab, var(--color-base-content) 20%, transparent) 60% 100%
+    );
   }
 }
 

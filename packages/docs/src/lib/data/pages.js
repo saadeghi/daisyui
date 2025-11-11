@@ -159,6 +159,11 @@ export const pages = [
             href: "/components/diff/",
           },
           {
+            name: "Hover 3D card",
+            href: "/components/hover-3d/",
+            badge: "new",
+          },
+          {
             name: "Hover Gallery",
             href: "/components/hover-gallery/",
             badge: "new",
@@ -182,6 +187,11 @@ export const pages = [
           {
             name: "Table",
             href: "/components/table/",
+          },
+          {
+            name: "Text Rotate",
+            href: "/components/text-rotate/",
+            badge: "new",
           },
           {
             name: "Timeline",
@@ -250,6 +260,7 @@ export const pages = [
           {
             name: "Skeleton",
             href: "/components/skeleton/",
+            badge: "updated",
           },
           {
             name: "Toast",

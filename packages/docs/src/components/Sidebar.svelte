@@ -103,7 +103,9 @@
   <li></li>
 </ul>
 
-<ul class="menu menu-horizontal menu-xs -mt-2 w-full justify-center gap-1">
+<ul
+  class="menu menu-xs menu-horizontal -mt-2 w-full gap-1 px-8 *:grow *:text-center **:justify-center"
+>
   <li>
     <a
       href="https://github.com/saadeghi/daisyui"
@@ -178,8 +180,8 @@
   <li>
     <a
       href="https://github.com/saadeghi/daisyui?sponsor=1"
-      aria-label="Support daisyUI"
-      data-tip="Support daisyUI"
+      aria-label="Donate"
+      data-tip="Donate"
       rel="noopener noreferrer"
       target="_blank"
       class="tooltip px-1"

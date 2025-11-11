@@ -41,8 +41,8 @@
 }
 .diff-resizer {
   @layer daisyui.component {
-    @apply relative z-1 col-start-1 row-start-2 h-4 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
-    transform: scaleY(3) translate(0.35rem, 0.35rem);
+    @apply relative isolate z-2 col-start-1 row-start-2 h-3 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
+    transform: scaleY(5) translate(0.32rem, 50%);
     cursor: ew-resize;
     transform-origin: 100% 100%;
     clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
@@ -55,15 +55,17 @@
   @layer daisyui.component {
     @apply relative col-start-1 row-span-3 row-start-1;
     &:after {
-      @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 rounded-full;
+      @apply bg-base-100/98 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 rounded-full;
       width: 1.2rem;
       height: 1.8rem;
       border: 2px solid var(--color-base-100);
       content: "";
-      outline: 1px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);
+      border: 0.5px solid #0000001f;
+      outline: 1px solid color-mix(in oklab, var(--color-base-content) 10%, #0000);
       outline-offset: -3px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 1px 2px 0 oklch(0% 0 0 / 0.1);
+      /* disable blur and shadow becuse of performance */
+      /* backdrop-filter: blur(8px); */
+      /* box-shadow: 0 1px 2px 0 oklch(0% 0 0 / 0.1); */
       translate: 50% -50%;
     }
     > * {

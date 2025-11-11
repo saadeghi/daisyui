@@ -1,3 +1,4 @@
+// Please add new items to the end of the list
 export const courses = [
   {
     title: "Tailwind + DaisyUI",

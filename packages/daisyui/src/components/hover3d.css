@@ -1,0 +1,128 @@
+.hover-3d {
+  @layer daisyui.component {
+    display: inline-grid;
+    perspective: 75rem;
+    --transform: 0, 0;
+    --shine: 100% 100%;
+    --shadow: 0rem 0rem 0rem;
+    --ease: linear(0, 0.931 13.8%, 1.196 21.4%, 1.343 29.8%, 1.378 36%, 1.365 43.2%, 1.059 78%, 1);
+
+    filter: drop-shadow(var(--shadow) 0.1rem #00000003) drop-shadow(var(--shadow) 0.2rem #00000003)
+      drop-shadow(var(--shadow) 0.3rem #00000003) drop-shadow(var(--shadow) 0.4rem #00000003);
+    transition: filter ease-out 400ms;
+    > :nth-child(n + 2) {
+      isolation: isolate;
+      z-index: 1;
+    }
+    > :first-child {
+      overflow: hidden;
+      grid-area: 1/1/4/4;
+      transform: rotate3d(var(--transform), 0, 10deg);
+      transition:
+        transform var(--ease) 500ms,
+        scale var(--ease) 500ms,
+        outline-color ease-out 500ms;
+      outline: 0.5px solid #0000;
+      outline-offset: -1px;
+      &:before {
+        @apply size-1/3;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        z-index: 1;
+        scale: 500%;
+        opacity: 0;
+        filter: blur(0.75rem);
+        background-image: radial-gradient(circle at 50%, #fff3 10%, transparent 50%);
+        translate: var(--shine);
+        transition:
+          translate ease-out 400ms,
+          opacity ease-out 400ms;
+      }
+    }
+    &:hover {
+      --ease: linear(0, 0.708 15.2%, 0.927 23.6%, 1.067 33%, 1.12 41%, 1.13 50.2%, 1.019 83.2%, 1);
+      & > :first-child {
+        outline-color: #fff1;
+        &:before,
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    > :nth-child(n + 2) {
+      scale: 1.2;
+    }
+    > :nth-child(2) {
+      grid-area: 1/1/2/2;
+    }
+    > :nth-child(3) {
+      grid-area: 1/2/2/3;
+    }
+    > :nth-child(4) {
+      grid-area: 1/3/2/4;
+    }
+    > :nth-child(5) {
+      grid-area: 2/1/3/2;
+    }
+    > :nth-child(6) {
+      grid-area: 2/3/3/4;
+    }
+    > :nth-child(7) {
+      grid-area: 3/1/4/2;
+    }
+    > :nth-child(8) {
+      grid-area: 3/2/4/3;
+    }
+
+    > :nth-child(9) {
+      grid-area: 3/3/4/4;
+    }
+    &:hover {
+      > :first-child {
+        scale: 1.05;
+      }
+    }
+
+    &:has(> :nth-child(2):hover) {
+      --transform: -1, 1;
+      --shine: 0% 0%;
+      --shadow: -0.5rem -0.5rem;
+    }
+    &:has(> :nth-child(3):hover) {
+      --transform: -1, 0;
+      --shine: 100% 0%;
+      --shadow: 0rem -0.5rem;
+    }
+    &:has(> :nth-child(4):hover) {
+      --transform: -1, -1;
+      --shine: 200% 0%;
+      --shadow: 0.5rem -0.5rem;
+    }
+    &:has(> :nth-child(5):hover) {
+      --transform: 0, 1;
+      --shine: 0% 100%;
+      --shadow: -0.5rem 0rem;
+    }
+    &:has(> :nth-child(6):hover) {
+      --transform: 0, -1;
+      --shine: 200% 100%;
+      --shadow: 0.5rem 0rem;
+    }
+    &:has(> :nth-child(7):hover) {
+      --transform: 1, 1;
+      --shine: 0% 200%;
+      --shadow: -0.5rem 0.5rem;
+    }
+    &:has(> :nth-child(8):hover) {
+      --transform: 1, 0;
+      --shine: 100% 200%;
+      --shadow: 0rem 0.5rem;
+    }
+    &:has(> :nth-child(9):hover) {
+      --transform: 1, -1;
+      --shine: 200% 200%;
+      --shadow: 0.5rem 0.5rem;
+    }
+  }
+}

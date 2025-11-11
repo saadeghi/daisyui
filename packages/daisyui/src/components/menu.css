@@ -56,6 +56,23 @@
       }
     }
 
+    details{
+      overflow: hidden;
+      interpolate-size: allow-keywords;
+    }
+    details::details-content{
+      block-size: 0;
+      @media (prefers-reduced-motion: no-preference) {
+        transition-behavior: allow-discrete;
+        transition-property: block-size, content-visibility;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+    details[open]::details-content{
+      block-size: auto;
+    }
+
     :where(li > details[open] > summary):after,
     :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
       rotate: 45deg;

@@ -88,24 +88,35 @@ Card,/components/card/`
 
   // Helper function to check if item matches search query
   function matchesSearchQuery(item, query) {
-    // Normalize the query by trimming whitespace and collapsing multiple spaces
-    const normalizedQuery = query.trim().replace(/\s+/g, " ")
-    const lowercaseQuery = normalizedQuery.toLowerCase()
-
-    // Skip empty queries
-    if (!lowercaseQuery) {
+    // Normalize for dash, underscore, parentheses, comma, and case
+    const normalize = (str) =>
+      str
+        .toLowerCase()
+        .replace(/[-_,()]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+    const normalizedQuery = normalize(query)
+    if (!normalizedQuery) {
       return false
     }
 
-    // Check title
-    if (item.title.toLowerCase().includes(lowercaseQuery)) {
+    // Check normalized title
+    if (normalize(item.title).includes(normalizedQuery)) {
       return true
     }
 
-    // Check URL words
-    const urlWords = extractWordsFromUrl(item.url)
-    const urlMatch = urlWords.some((word) => word.includes(lowercaseQuery))
+    // Check normalized classnames (only for page items)
+    if (
+      item.classnames &&
+      normalize(item.classnames).includes(normalizedQuery) &&
+      !item.url.includes("#")
+    ) {
+      return true
+    }
 
+    // Check normalized URL words
+    const urlWords = extractWordsFromUrl(item.url).map(normalize)
+    const urlMatch = urlWords.some((word) => word.includes(normalizedQuery))
     return urlMatch
   }
 
@@ -150,8 +161,7 @@ Card,/components/card/`
     // Remove duplicates based on URL and add highlighting for search results
     const uniqueItems = []
     const seenUrls = new Set()
-
-    matchingItems.forEach((item) => {
+    for (const item of matchingItems) {
       if (!seenUrls.has(item.url)) {
         seenUrls.add(item.url)
         uniqueItems.push({
@@ -160,26 +170,78 @@ Card,/components/card/`
           highlightedUrl: highlightSearchTerms(item.url, normalizedQuery),
         })
       }
-    })
+    }
 
-    // Sort by multiple criteria with proper prioritization
     return uniqueItems.sort((a, b) => {
       const query = normalizedQuery.toLowerCase()
 
       // 1. Pages before sections (pages don't have # in URL) - HIGHEST PRIORITY
       const aIsPage = !a.url.includes("#")
       const bIsPage = !b.url.includes("#")
-
       if (aIsPage !== bIsPage) {
         return aIsPage ? -1 : 1 // Pages first
       }
 
-      // 2. Exact match priority: exact title match > exact URL segment match
-      const aExactTitleMatch = a.title.toLowerCase() === query
-      const bExactTitleMatch = b.title.toLowerCase() === query
+      // Normalize for dash, underscore, parentheses, comma
+      const normalize = (str) =>
+        str
+          .toLowerCase()
+          .replace(/[-_,()]/g, " ")
+          .replace(/\s+/g, " ")
+          .trim()
+      const normQuery = normalize(query)
+      const aNormTitle = normalize(a.title)
+      const bNormTitle = normalize(b.title)
 
+      // 2. Title match priority: exact normalized title match > partial normalized title match > exact section title match > class name match
+      const aExactTitleMatch = aNormTitle === normQuery
+      const bExactTitleMatch = bNormTitle === normQuery
       if (aExactTitleMatch !== bExactTitleMatch) {
         return aExactTitleMatch ? -1 : 1
+      }
+
+      // Partial normalized title match (query is contained in normalized title)
+      const aPartialTitleMatch = aNormTitle.includes(normQuery)
+      const bPartialTitleMatch = bNormTitle.includes(normQuery)
+      if (aPartialTitleMatch !== bPartialTitleMatch) {
+        return aPartialTitleMatch ? -1 : 1
+      }
+
+      // Section title match (for sections only)
+      const aSectionTitleMatch =
+        a.isSection && a.parentPageTitle && a.parentPageTitle.toLowerCase() === query
+      const bSectionTitleMatch =
+        b.isSection && b.parentPageTitle && b.parentPageTitle.toLowerCase() === query
+      if (aSectionTitleMatch !== bSectionTitleMatch) {
+        return aSectionTitleMatch ? -1 : 1
+      }
+
+      // Class name match (only for pages)
+      const aClassNameMatch = a.classnames && aIsPage && a.classnames.toLowerCase().includes(query)
+      const bClassNameMatch = b.classnames && bIsPage && b.classnames.toLowerCase().includes(query)
+      if (aClassNameMatch !== bClassNameMatch) {
+        return aClassNameMatch ? -1 : 1
+      }
+
+      // If both are class name matches, prioritize:
+      // 1. classnames that start with the query
+      // 2. classnames that contain the query as a full word (not just substring)
+      if (aClassNameMatch && bClassNameMatch) {
+        const aClassnames = a.classnames.toLowerCase()
+        const bClassnames = b.classnames.toLowerCase()
+        const aStartsWith = aClassnames.startsWith(query)
+        const bStartsWith = bClassnames.startsWith(query)
+        if (aStartsWith !== bStartsWith) {
+          return aStartsWith ? -1 : 1
+        }
+        // Check for full word match
+        const aWords = aClassnames.split(/\s+/)
+        const bWords = bClassnames.split(/\s+/)
+        const aFullWord = aWords.includes(query)
+        const bFullWord = bWords.includes(query)
+        if (aFullWord !== bFullWord) {
+          return aFullWord ? -1 : 1
+        }
       }
 
       // Check for exact URL segment match (extract last segment for comparison)
@@ -188,10 +250,8 @@ Card,/components/card/`
         const segments = pathPart.split("/").filter(Boolean)
         return segments[segments.length - 1] || ""
       }
-
       const aExactUrlMatch = getLastUrlSegment(a.url).toLowerCase() === query
       const bExactUrlMatch = getLastUrlSegment(b.url).toLowerCase() === query
-
       if (aExactUrlMatch !== bExactUrlMatch) {
         return aExactUrlMatch ? -1 : 1
       }
@@ -199,7 +259,6 @@ Card,/components/card/`
       // 3. URL priority (components > docs > others)
       const aPriority = getUrlPriority(a.url)
       const bPriority = getUrlPriority(b.url)
-
       if (aPriority !== bPriority) {
         return aPriority - bPriority
       }
@@ -207,7 +266,6 @@ Card,/components/card/`
       // 4. Shorter URLs have higher priority (within same category)
       const aUrlLength = a.url.length
       const bUrlLength = b.url.length
-
       if (aUrlLength !== bUrlLength) {
         return aUrlLength - bUrlLength // Shorter URLs first
       }
@@ -410,7 +468,6 @@ Card,/components/card/`
             const parts = []
             let current = ""
             let inQuotes = false
-
             for (let i = 0; i < line.length; i++) {
               const char = line[i]
               if (char === '"') {
@@ -423,10 +480,10 @@ Card,/components/card/`
               }
             }
             parts.push(current.trim())
-
             return {
               title: parts[0]?.replace(/^"|"$/g, "") || "",
               url: parts[1]?.replace(/^"|"$/g, "") || "",
+              classnames: parts[2]?.replace(/^"|"$/g, "") || "",
             }
           })
           .filter((item) => item.title && item.url)

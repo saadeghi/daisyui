@@ -144,6 +144,11 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--anchor-h`                  | horizontal position of the anchor                        |
 | File input      | `--input-color`               | color of the file input                                  |
 |                 | `--size`                      | size of the file input                                   |
+| Hover 3D        | `--ease`                      | easing-animation                                         |
+|                 | `--shadow`                    | underlying shadow effect                                 |
+|                 | `--shine`                     | overlay shine effect                                     |
+|                 | `--transform`                 | transform angle                                          |
+| Hover Gallery   | `--items`                     | number of items                                          |
 | Indicator       | `--indicator-t`               | top position of the indicator                            |
 |                 | `--indicator-b`               | bottom position of the indicator                         |
 |                 | `--indicator-s`               | start position of the indicator                          |
@@ -201,6 +206,9 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--tabcontent-radius-es`      | end start border radius of the tab content               |
 |                 | `--tabcontent-radius-ee`      | end end border radius of the tab content                 |
 |                 | `--tabcontent-order`          | order of the tab content                                 |
+| Text Rotate     | `--items`                     | number of items                                          |
+|                 | `--duration`                  | total duration of loop in milliseconds                   |
+|                 | `--first-item-position`       | dynamic position of the first item                       |
 | Textarea        | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the textarea                                     |
 |                 | `--font-size`                 | font-size of the textarea                                |

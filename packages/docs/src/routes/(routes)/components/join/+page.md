@@ -1,5 +1,5 @@
 ---
-title: Join
+title: Join (group items)
 desc: Join is a container for grouping multiple items, it can be used to group buttons, inputs, etc. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items.
 source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/utilities/join.css
 layout: components

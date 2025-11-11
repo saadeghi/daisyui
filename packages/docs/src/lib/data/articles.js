@@ -1,9 +1,5 @@
+// Please add new items to the end of the list
 export const articles = [
-  {
-    title: "Howto Build a Theme Switcher with DaisyUI and TanStack Router",
-    site: "JSDev Space",
-    link: "https://jsdev.space/howto/daisyui-theme-switcher/",
-  },
   {
     title: "Cookie-Based Theme Selection in SvelteKit with daisyUI",
     site: "Scott Spence",
@@ -118,5 +114,10 @@ export const articles = [
     title: "Template design directly in CMS admin panel ( with DaisyUI and TailwindCSS )",
     site: "LinkedIn",
     link: "https://www.linkedin.com/pulse/cms-template-redesign-mobile-device-ide21-nebojsa-tomic-edsvf",
+  },
+  {
+    title: "Howto Build a Theme Switcher with DaisyUI and TanStack Router",
+    site: "JSDev Space",
+    link: "https://jsdev.space/howto/daisyui-theme-switcher/",
   },
 ]

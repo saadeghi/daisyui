@@ -47,13 +47,6 @@ classnames:
   import Translate from "$components/Translate.svelte"
 </script>
 
-> :INFO:
->
-> When using `menu-disabled` to present a menu item as disabled take care to also disable the element.
-> If you use `<button>` this can be done by adding a `disabled` attribute.
-> If you use `<a>` this can be done by removing the `href` attribute and adding `role="link" aria-disabled="true"` attributes.
-
-
 ### ~Menu
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>
@@ -425,7 +418,6 @@ classnames:
 </ul>
 ```
 
-
 ### ~Menu with disabled items
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Enabled item</button></li>
@@ -436,12 +428,16 @@ classnames:
 ```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Enabled item</a></li>
-  <!-- If you use <button> disable it with disabled attribute -->
   <li class="$$menu-disabled"><button disabled>disabled item</button></li>
-  <!-- If you use <a> disable it by removing the href attribute and adding role="link" and aria-disabled="true" attributes -->
   <li class="$$menu-disabled"><a role="link" aria-disabled="true">disabled item</a></li>
 </ul>
 ```
+
+> :INFO:
+>
+> `menu-disabled` disables an item visually.
+> To disable a `<button>` add a `disabled` attribute.
+> To disable a `<a>`, remove the `href` attribute and add `role="link" aria-disabled="true"` attributes.
 
 
 ### ~Menu with icons

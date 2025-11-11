@@ -7,6 +7,9 @@ classnames:
   component:
   - class: skeleton
     desc: A placeholder div with loading animation
+  modifier:
+  - class: skeleton-text
+    desc: Animates the text color instead of background color
 ---
 
 <script>
@@ -63,4 +66,12 @@ classnames:
   <div class="$$skeleton h-4 w-full"></div>
   <div class="$$skeleton h-4 w-full"></div>
 </div>
+```
+
+
+### ~skeleton-text - animated gradient text
+<span class="skeleton skeleton-text">AI is thinking harder...</span>
+
+```html
+<span class="$$skeleton $$skeleton-text">AI is thinking harder...</span>
 ```

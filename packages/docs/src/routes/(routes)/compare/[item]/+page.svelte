@@ -109,7 +109,7 @@
 
 <div class="mx-auto max-w-4xl px-4 py-20">
   <div class="text-center">
-    <span class="badge badge-outline">
+    <span class="badge badge-outline h-auto">
       Comparing {data.first.name} vs {data.second.name}. Which one is better in
       {new Date().getFullYear()}?
     </span>
