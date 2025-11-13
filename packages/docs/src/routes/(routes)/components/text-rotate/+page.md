@@ -1,7 +1,7 @@
 ---
 title: Text Rotate
 desc: Text Rotate can show up to 6 lines of text, one at a time, with a an infinite loop animation. Duration is 10 seconds by default. The animation will pause on hover.
-source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/text-rotate.css
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/textrotate.css
 layout: components
 classnames:
   component:

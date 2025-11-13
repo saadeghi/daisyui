@@ -8,7 +8,47 @@
     desc: "Free Tailwind Component examples",
     card: "https://img.daisyui.com/images/default.webp",
   }
+
   let { formatTitle = true, title = "", desc = siteData.desc, img = siteData.card } = $props()
+
+  function cleanDescription(str) {
+    if (!str) return ""
+    let text = str
+    // Remove HTML tags robustly
+    if (typeof window !== "undefined" && window.DOMParser) {
+      // Browser: use DOMParser
+      const parser = new window.DOMParser()
+      const doc = parser.parseFromString(`<body>${str}</body>`, "text/html")
+      text = doc.body.textContent || ""
+    } else {
+      // Fallback: remove tags
+      text = str.replace(/<[^>]*>/g, " ")
+    }
+    // Decode HTML entities (works in browser)
+    if (typeof window !== "undefined") {
+      const el = document.createElement("textarea")
+      el.innerHTML = text
+      text = el.value
+    } else {
+      // Fallback: decode common entities
+      text = text
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+    }
+    // Replace newlines with space
+    text = text.replace(/[\r\n]+/g, " ")
+    // Collapse multiple spaces
+    text = text.replace(/\s+/g, " ").trim()
+    if (text.length <= 155) return text
+    // Find last space before 155th char
+    let cut = text.slice(0, 155)
+    let lastSpace = cut.lastIndexOf(" ")
+    if (lastSpace > 0) cut = cut.slice(0, lastSpace)
+    return cut
+  }
 
   let formattedTitle = $derived(
     formatTitle
@@ -40,15 +80,18 @@
 
 <svelte:head>
   <title>{formattedTitle}</title>
-  <meta name="description" content={desc} />
+  <meta name="description" content={cleanDescription(desc)} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={formattedTitle} />
-  <meta name="twitter:description" content={desc} />
+  <meta name="twitter:description" content={cleanDescription(desc)} />
   <meta name="twitter:image" content={img} />
   <meta name="twitter:image:alt" content={formattedTitle} />
   <meta property="og:title" content={formattedTitle} />
-  <meta property="og:description" content={desc} />
+  <meta property="og:description" content={cleanDescription(desc)} />
   <meta property="og:image" content={img} />
+  <meta property="og:type" content="website" />
+  <meta property="og:logo" content="https://img.daisyui.com/images/daisyui/daisyui-logo-192.png" />
+  <meta property="og:url" content={getCanonicalUrl(page.url.pathname)} />
 
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
   <link rel="canonical" href={getCanonicalUrl(page.url.pathname)} />
