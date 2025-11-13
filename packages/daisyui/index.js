@@ -44,12 +44,12 @@ export default plugin.withOptions(
 
       // drawer variants. Can not be nested in layers so defined here
       addVariant(
-        "is-drawer-close",
-        "&:where(.drawer-toggle:not(:checked) ~ .drawer-side, .drawer-toggle:not(:checked) ~ .drawer-side *)",
+        `${prefix}is-drawer-close`,
+        `&:where(.${prefix}drawer-toggle:not(:checked) ~ .${prefix}drawer-side, .${prefix}drawer-toggle:not(:checked) ~ .${prefix}drawer-side *)`,
       )
       addVariant(
-        "is-drawer-open",
-        "&:where(.drawer-toggle:checked ~ .drawer-side, .drawer-toggle:checked ~ .drawer-side *)",
+        `${prefix}is-drawer-open`,
+        `&:where(.${prefix}drawer-toggle:checked ~ .${prefix}drawer-side, .${prefix}drawer-toggle:checked ~ .${prefix}drawer-side *)`,
       )
     }
   },
