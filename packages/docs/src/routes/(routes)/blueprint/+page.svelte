@@ -4490,10 +4490,11 @@
 
           <div class="mockup-code my-2 w-full leading-none">
             <pre><code class="text-xs"
-                >claude mcp add daisyui-blueprint -- npx -y daisyui-blueprint@latest
+                >claude mcp add daisyui-blueprint
     --env LICENSE=<span class="text-info">YOUR_LICENSE_KEY</span>
     --env EMAIL=<span class="text-info">YOUR_EMAIL</span>
-    --env FIGMA=<span class="text-info">YOUR_FIGMA_API_KEY</span></code
+    --env FIGMA=<span class="text-info">YOUR_FIGMA_API_KEY</span>
+    -- npx -y daisyui-blueprint@latest</code
               ></pre>
           </div>
 

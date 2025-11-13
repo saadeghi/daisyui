@@ -27,10 +27,11 @@ Blueprint is the official MCP server for daisyUI. [Read more about Blueprint](/b
   Figma API Key is optional - Only needed for Figma-to-code conversion
 
 ```sh:terminal
-claude mcp add daisyui-blueprint -- npx -y daisyui-blueprint@latest
+claude mcp add daisyui-blueprint
   --env LICENSE=YOUR_LICENSE_KEY
   --env EMAIL=YOUR_EMAIL
   --env FIGMA=YOUR_FIGMA_API_KEY
+  -- npx -y daisyui-blueprint@latest
 ```
 
 #### Usage
