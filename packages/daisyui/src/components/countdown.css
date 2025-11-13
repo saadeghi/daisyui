@@ -3,7 +3,7 @@
     line-height: 1em;
   }
 
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply inline-flex;
 
     & > * {

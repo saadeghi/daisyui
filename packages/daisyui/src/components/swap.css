@@ -1,5 +1,5 @@
 .swap {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative inline-grid cursor-pointer place-content-center align-middle select-none;
 
     input {
@@ -37,7 +37,7 @@
 }
 
 .swap-active {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     .swap-off {
       @apply opacity-0;
     }
@@ -49,7 +49,7 @@
 }
 
 .swap-rotate {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     .swap-on,
     input:indeterminate ~ .swap-on {
       @apply rotate-45;
@@ -68,7 +68,7 @@
 }
 
 .swap-flip {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     transform-style: preserve-3d;
     perspective: 20rem;
 

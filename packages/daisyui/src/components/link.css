@@ -1,5 +1,5 @@
 .link {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply cursor-pointer underline;
 
     &:focus {
@@ -14,13 +14,13 @@
 }
 
 .link-hover {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply no-underline hover:underline;
   }
 }
 
 .link-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-primary;
 
     @media (hover: hover) {
@@ -32,7 +32,7 @@
 }
 
 .link-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-secondary;
 
     @media (hover: hover) {
@@ -44,7 +44,7 @@
 }
 
 .link-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-accent;
 
     @media (hover: hover) {
@@ -56,7 +56,7 @@
 }
 
 .link-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-neutral;
 
     @media (hover: hover) {
@@ -68,7 +68,7 @@
 }
 
 .link-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-success;
 
     @media (hover: hover) {
@@ -80,7 +80,7 @@
 }
 
 .link-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-info;
 
     @media (hover: hover) {
@@ -92,7 +92,7 @@
 }
 
 .link-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-warning;
 
     @media (hover: hover) {
@@ -104,7 +104,7 @@
 }
 
 .link-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-error;
 
     @media (hover: hover) {

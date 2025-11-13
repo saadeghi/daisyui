@@ -1,5 +1,5 @@
 .table {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     font-size: 0.875rem;
     @apply rounded-box relative w-full text-left rtl:text-right;
 
@@ -43,7 +43,7 @@
 }
 
 .table-zebra {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     tbody {
       tr {
         &:where(:nth-child(even)) {
@@ -66,7 +66,7 @@
 }
 
 .table-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :not(thead, tfoot) tr {
       font-size: 0.6875rem;
     }
@@ -78,7 +78,7 @@
 }
 
 .table-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :not(thead, tfoot) tr {
       font-size: 0.75rem;
     }
@@ -90,7 +90,7 @@
 }
 
 .table-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :not(thead, tfoot) tr {
       font-size: 0.875rem;
     }
@@ -102,7 +102,7 @@
 }
 
 .table-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :not(thead, tfoot) tr {
       font-size: 1.125rem;
     }
@@ -114,7 +114,7 @@
 }
 
 .table-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :not(thead, tfoot) tr {
       font-size: 1.375rem;
     }

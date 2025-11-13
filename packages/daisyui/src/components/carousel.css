@@ -1,5 +1,5 @@
 .carousel {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply inline-flex overflow-x-scroll;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
@@ -14,28 +14,28 @@
 }
 
 .carousel-vertical {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply flex-col overflow-y-scroll;
     scroll-snap-type: y mandatory;
   }
 }
 
 .carousel-horizontal {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply flex-row overflow-x-scroll;
     scroll-snap-type: x mandatory;
   }
 }
 
 .carousel-item {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply box-content flex flex-none;
     scroll-snap-align: start;
   }
 }
 
 .carousel-start {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     .carousel-item {
       scroll-snap-align: start;
     }
@@ -43,7 +43,7 @@
 }
 
 .carousel-center {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     .carousel-item {
       scroll-snap-align: center;
     }
@@ -51,7 +51,7 @@
 }
 
 .carousel-end {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     .carousel-item {
       scroll-snap-align: end;
     }

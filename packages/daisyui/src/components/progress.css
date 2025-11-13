@@ -1,5 +1,5 @@
 .progress {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply rounded-box text-base-content relative h-2 w-full appearance-none overflow-hidden bg-current/20;
     &:indeterminate {
       background-image: repeating-linear-gradient(
@@ -54,49 +54,49 @@
 }
 
 .progress-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-primary;
   }
 }
 
 .progress-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-secondary;
   }
 }
 
 .progress-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-accent;
   }
 }
 
 .progress-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-neutral;
   }
 }
 
 .progress-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-info;
   }
 }
 
 .progress-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-success;
   }
 }
 
 .progress-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-warning;
   }
 }
 
 .progress-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-error;
   }
 }

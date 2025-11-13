@@ -1,5 +1,5 @@
 .list {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply flex flex-col;
     font-size: 0.875rem;
 
@@ -23,7 +23,7 @@
     }
   }
 
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     .list-row {
       &:has(.list-col-grow:nth-child(1)) {
         --list-grid-cols: 1fr;
@@ -52,7 +52,7 @@
 }
 
 .list-col-wrap {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply row-start-2;
   }
 }

@@ -1,5 +1,5 @@
 .divider {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply flex h-4 flex-row items-center self-stretch whitespace-nowrap;
     margin: var(--divider-m, 1rem 0);
     /*
@@ -30,7 +30,7 @@
 }
 
 .divider-horizontal {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --divider-m: 0 1rem;
     &.divider {
       @apply h-auto w-4 flex-col;
@@ -47,7 +47,7 @@
 }
 
 .divider-vertical {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --divider-m: 1rem 0;
     &.divider {
       @apply h-4 w-auto flex-row;
@@ -64,7 +64,7 @@
 }
 
 .divider-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:before,
     &:after {
       @apply bg-neutral;
@@ -73,7 +73,7 @@
 }
 
 .divider-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:before,
     &:after {
       @apply bg-primary;
@@ -82,7 +82,7 @@
 }
 
 .divider-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:before,
     &:after {
       @apply bg-secondary;
@@ -91,7 +91,7 @@
 }
 
 .divider-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:before,
     &:after {
       @apply bg-accent;
@@ -100,7 +100,7 @@
 }
 
 .divider-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:before,
     &:after {
       @apply bg-success;
@@ -109,7 +109,7 @@
 }
 
 .divider-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:before,
     &:after {
       @apply bg-warning;
@@ -118,7 +118,7 @@
 }
 
 .divider-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:before,
     &:after {
       @apply bg-info;
@@ -127,7 +127,7 @@
 }
 
 .divider-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:before,
     &:after {
       @apply bg-error;
@@ -136,13 +136,13 @@
 }
 
 .divider-start:before {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply hidden;
   }
 }
 
 .divider-end:after {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply hidden;
   }
 }

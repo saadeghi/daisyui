@@ -1,5 +1,5 @@
 .diff {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative grid w-full overflow-hidden select-none;
     grid-template-rows: 1fr 1.8rem 1fr;
     direction: ltr;
@@ -40,7 +40,7 @@
   }
 }
 .diff-resizer {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative isolate z-2 col-start-1 row-start-2 h-3 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
     transform: scaleY(5) translate(0.32rem, 50%);
     cursor: ew-resize;
@@ -52,7 +52,7 @@
   }
 }
 .diff-item-2 {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative col-start-1 row-span-3 row-start-1;
     &:after {
       @apply bg-base-100/98 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 rounded-full;
@@ -80,7 +80,7 @@
   }
 }
 .diff-item-1 {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative z-1 col-start-1 row-span-3 row-start-1 overflow-hidden;
     border-right: 2px solid var(--color-base-100);
     &:focus-visible {

@@ -1,5 +1,5 @@
 .dock {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply bg-base-100 fixed right-0 bottom-0 left-0 z-1 flex w-full flex-row items-center justify-around p-2 text-current;
     border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);
     height: 4rem;
@@ -37,14 +37,14 @@
   }
 }
 .dock-active {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:after {
       @apply w-10 bg-current text-current;
     }
   }
 }
 .dock-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     height: 3rem;
     height: calc(3rem + env(safe-area-inset-bottom));
 
@@ -61,7 +61,7 @@
 }
 
 .dock-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply h-14;
     height: 3.5rem;
     height: calc(3.5rem + env(safe-area-inset-bottom));
@@ -79,7 +79,7 @@
 }
 
 .dock-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     height: 4rem;
     height: calc(4rem + env(safe-area-inset-bottom));
     .dock-label {
@@ -89,7 +89,7 @@
 }
 
 .dock-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     height: 4.5rem;
     height: calc(4.5rem + env(safe-area-inset-bottom));
 
@@ -106,7 +106,7 @@
 }
 
 .dock-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     height: 5rem;
     height: calc(5rem + env(safe-area-inset-bottom));
 

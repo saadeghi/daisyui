@@ -1,5 +1,5 @@
 .badge {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply rounded-selector inline-flex items-center justify-center gap-2 align-middle;
     color: var(--badge-fg);
     border: var(--border) solid var(--badge-color, var(--color-base-200));
@@ -17,7 +17,7 @@
 }
 
 .badge-outline {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     color: var(--badge-color);
     --badge-bg: #0000;
     background-image: none;
@@ -26,7 +26,7 @@
 }
 
 .badge-dash {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     color: var(--badge-color);
     --badge-bg: #0000;
     background-image: none;
@@ -36,7 +36,7 @@
 }
 
 .badge-soft {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     color: var(--badge-color, var(--color-base-content));
     background-color: color-mix(
       in oklab,
@@ -53,70 +53,70 @@
 }
 
 .badge-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --badge-color: var(--color-primary);
     --badge-fg: var(--color-primary-content);
   }
 }
 
 .badge-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --badge-color: var(--color-secondary);
     --badge-fg: var(--color-secondary-content);
   }
 }
 
 .badge-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --badge-color: var(--color-accent);
     --badge-fg: var(--color-accent-content);
   }
 }
 
 .badge-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --badge-color: var(--color-neutral);
     --badge-fg: var(--color-neutral-content);
   }
 }
 
 .badge-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --badge-color: var(--color-info);
     --badge-fg: var(--color-info-content);
   }
 }
 
 .badge-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --badge-color: var(--color-success);
     --badge-fg: var(--color-success-content);
   }
 }
 
 .badge-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --badge-color: var(--color-warning);
     --badge-fg: var(--color-warning-content);
   }
 }
 
 .badge-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --badge-color: var(--color-error);
     --badge-fg: var(--color-error-content);
   }
 }
 
 .badge-ghost {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply border-base-200 bg-base-200 text-base-content;
     background-image: none;
   }
 }
 
 .badge-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 4);
     font-size: 0.625rem;
     padding-inline: calc(0.25rem * 2 - var(--border));
@@ -124,7 +124,7 @@
 }
 
 .badge-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 5);
     font-size: 0.75rem;
     padding-inline: calc(0.25rem * 2.5 - var(--border));
@@ -132,7 +132,7 @@
 }
 
 .badge-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 6);
     font-size: 0.875rem;
     padding-inline: calc(0.25rem * 3 - var(--border));
@@ -140,7 +140,7 @@
 }
 
 .badge-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 7);
     font-size: 1rem;
     padding-inline: calc(0.25rem * 3.5 - var(--border));
@@ -148,7 +148,7 @@
 }
 
 .badge-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 8);
     font-size: 1.125rem;
     padding-inline: calc(0.25rem * 4 - var(--border));

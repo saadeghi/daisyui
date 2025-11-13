@@ -2,7 +2,7 @@
   /* override the border style of Tailwind CSS Typography plugin */
   border-width: var(--border);
   border-color: var(--alert-border-color, var(--color-base-200));
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     border-style: solid;
     --alert-border-color: var(--color-base-200);
     @apply rounded-box text-base-content grid items-center gap-4 px-4 py-3;
@@ -33,7 +33,7 @@
 }
 
 .alert-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-info-content;
     --alert-border-color: var(--color-info);
     --alert-color: var(--color-info);
@@ -41,7 +41,7 @@
 }
 
 .alert-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-success-content;
     --alert-border-color: var(--color-success);
     --alert-color: var(--color-success);
@@ -49,7 +49,7 @@
 }
 
 .alert-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-warning-content;
     --alert-border-color: var(--color-warning);
     --alert-color: var(--color-warning);
@@ -57,7 +57,7 @@
 }
 
 .alert-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-error-content;
     --alert-border-color: var(--color-error);
     --alert-color: var(--color-error);
@@ -65,7 +65,7 @@
 }
 
 .alert-soft {
-  @layer daisyui.style {
+  @layer daisyui.l1 {
     color: var(--alert-color, var(--color-base-content));
     background: color-mix(
       in oklab,
@@ -82,7 +82,7 @@
   }
 }
 .alert-outline {
-  @layer daisyui.style {
+  @layer daisyui.l1 {
     @apply bg-transparent;
     color: var(--alert-color);
     box-shadow: none;
@@ -90,7 +90,7 @@
   }
 }
 .alert-dash {
-  @layer daisyui.style {
+  @layer daisyui.l1 {
     @apply bg-transparent;
     color: var(--alert-color);
     border-style: dashed;
@@ -100,7 +100,7 @@
 }
 
 .alert-vertical {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     justify-content: center;
     justify-items: center;
     grid-auto-flow: row;
@@ -113,7 +113,7 @@
 }
 
 .alert-horizontal {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     justify-content: start;
     justify-items: start;
     grid-auto-flow: column;

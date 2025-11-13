@@ -3,7 +3,7 @@
 }
 
 .collapse {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     display: grid;
     position: relative;
     overflow: hidden;
@@ -91,7 +91,7 @@
     }
   }
 
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:is([open]) {
       &.collapse-arrow {
         > .collapse-title:after {
@@ -161,14 +161,14 @@
 
 .collapse-title,
 .collapse-content {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     grid-column-start: 1;
     grid-row-start: 1;
   }
 }
 
 .collapse-content {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     content-visibility: hidden;
     grid-column-start: 1;
     grid-row-start: 2;
@@ -190,7 +190,7 @@
 }
 
 .collapse:is(details) {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     width: 100%;
     @media (prefers-reduced-motion: no-preference) {
       &::details-content {
@@ -224,13 +224,13 @@
 }
 
 .collapse:is(details) summary {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     outline: none;
   }
 }
 
 .collapse-arrow {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     > .collapse-title:after {
       position: absolute;
       display: block;
@@ -253,7 +253,7 @@
 }
 
 .collapse-plus {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     > .collapse-title:after {
       position: absolute;
       display: block;
@@ -274,7 +274,7 @@
 }
 
 .collapse-title {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     position: relative;
 
     width: 100%;
@@ -285,7 +285,7 @@
   }
 }
 .collapse-open {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     grid-template-rows: max-content 1fr;
     > .collapse-content {
       content-visibility: visible;

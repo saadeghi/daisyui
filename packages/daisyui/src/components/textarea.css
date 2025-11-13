@@ -1,5 +1,5 @@
 .textarea {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     border: var(--border) solid #0000;
     @apply bg-base-100 rounded-field min-h-20 shrink appearance-none py-2 align-middle;
     width: clamp(3rem, 20rem, 100%);
@@ -54,7 +54,7 @@
 }
 
 .textarea-ghost {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-transparent;
     box-shadow: none;
     border-color: #0000;
@@ -69,7 +69,7 @@
 }
 
 .textarea-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -79,7 +79,7 @@
 }
 
 .textarea-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -89,7 +89,7 @@
 }
 
 .textarea-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -99,7 +99,7 @@
 }
 
 .textarea-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -109,7 +109,7 @@
 }
 
 .textarea-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -119,7 +119,7 @@
 }
 
 .textarea-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -129,7 +129,7 @@
 }
 
 .textarea-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -139,7 +139,7 @@
 }
 
 .textarea-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -149,31 +149,31 @@
 }
 
 .textarea-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     font-size: max(var(--font-size, 0.6875rem), 0.6875rem);
   }
 }
 
 .textarea-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     font-size: max(var(--font-size, 0.75rem), 0.75rem);
   }
 }
 
 .textarea-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     font-size: max(var(--font-size, 0.875rem), 0.875rem);
   }
 }
 
 .textarea-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     font-size: max(var(--font-size, 1.125rem), 1.125rem);
   }
 }
 
 .textarea-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     font-size: max(var(--font-size, 1.375rem), 1.375rem);
   }
 }

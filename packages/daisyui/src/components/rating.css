@@ -1,5 +1,5 @@
 .rating {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative inline-flex align-middle;
 
     & input {
@@ -50,7 +50,7 @@
     }
   }
 
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &.rating-xs :where(*:not(.rating-hidden)) {
       @apply size-4;
     }
@@ -74,7 +74,7 @@
 }
 
 .rating-half {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :where(*:not(.rating-hidden)) {
       @apply w-3;
     }
@@ -82,7 +82,7 @@
 }
 
 .rating-half {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &.rating-xs *:not(.rating-hidden) {
       @apply w-2;
     }

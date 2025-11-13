@@ -1,5 +1,5 @@
 .dropdown {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative inline-block;
     position-area: var(--anchor-v, bottom) var(--anchor-h, span-right);
 
@@ -102,7 +102,7 @@
 }
 
 .dropdown-start {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --anchor-h: span-right;
 
     :where(.dropdown-content) {
@@ -134,7 +134,7 @@
 }
 
 .dropdown-center {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --anchor-h: center;
 
     :where(.dropdown-content) {
@@ -168,7 +168,7 @@
 }
 
 .dropdown-end {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --anchor-h: span-left;
 
     :where(.dropdown-content) {
@@ -200,7 +200,7 @@
 }
 
 .dropdown-left {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --anchor-h: left;
     --anchor-v: span-bottom;
 
@@ -211,7 +211,7 @@
 }
 
 .dropdown-right {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --anchor-h: right;
     --anchor-v: span-bottom;
 
@@ -222,7 +222,7 @@
 }
 
 .dropdown-bottom {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --anchor-v: bottom;
 
     .dropdown-content {
@@ -232,7 +232,7 @@
 }
 
 .dropdown-top {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --anchor-v: top;
 
     .dropdown-content {

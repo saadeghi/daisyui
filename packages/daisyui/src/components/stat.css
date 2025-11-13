@@ -1,11 +1,11 @@
 .stats {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply rounded-box relative inline-grid grid-flow-col overflow-x-auto;
   }
 }
 
 .stat {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply inline-grid w-full gap-x-4 px-6 py-4;
     grid-template-columns: repeat(1, 1fr);
 
@@ -17,20 +17,20 @@
 }
 
 .stat-figure {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply col-start-2 row-span-3 row-start-1 place-self-center justify-self-end;
   }
 }
 
 .stat-title {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply text-base-content/60 col-start-1 whitespace-nowrap;
     font-size: 0.75rem;
   }
 }
 
 .stat-value {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply col-start-1 whitespace-nowrap;
     font-size: 2rem;
     font-weight: 800;
@@ -38,20 +38,20 @@
 }
 
 .stat-desc {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply text-base-content/60 col-start-1 whitespace-nowrap;
     font-size: 0.75rem;
   }
 }
 
 .stat-actions {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply col-start-1 whitespace-nowrap;
   }
 }
 
 .stats-horizontal {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply grid-flow-col overflow-x-auto;
 
     .stat:not(:last-child) {
@@ -62,7 +62,7 @@
 }
 
 .stats-vertical {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply grid-flow-row overflow-y-auto;
 
     .stat:not(:last-child) {

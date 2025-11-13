@@ -1,5 +1,5 @@
 .range {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     appearance: none;
     -webkit-appearance: none;
     --range-thumb: var(--color-base-100);
@@ -100,87 +100,87 @@
 }
 
 .range-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-primary;
     --range-thumb: var(--color-primary-content);
   }
 }
 
 .range-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-secondary;
     --range-thumb: var(--color-secondary-content);
   }
 }
 
 .range-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-accent;
     --range-thumb: var(--color-accent-content);
   }
 }
 
 .range-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-neutral;
     --range-thumb: var(--color-neutral-content);
   }
 }
 
 .range-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-success;
     --range-thumb: var(--color-success-content);
   }
 }
 
 .range-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-warning;
     --range-thumb: var(--color-warning-content);
   }
 }
 
 .range-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-info;
     --range-thumb: var(--color-info-content);
   }
 }
 
 .range-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-error;
     --range-thumb: var(--color-error-content);
   }
 }
 
 .range-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --range-thumb-size: calc(var(--size-selector, 0.25rem) * 4);
   }
 }
 
 .range-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --range-thumb-size: calc(var(--size-selector, 0.25rem) * 5);
   }
 }
 
 .range-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --range-thumb-size: calc(var(--size-selector, 0.25rem) * 6);
   }
 }
 
 .range-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --range-thumb-size: calc(var(--size-selector, 0.25rem) * 7);
   }
 }
 
 .range-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --range-thumb-size: calc(var(--size-selector, 0.25rem) * 8);
   }
 }

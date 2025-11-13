@@ -1,5 +1,5 @@
 .indicator {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative inline-flex;
     width: max-content;
 
@@ -15,7 +15,7 @@
   }
 }
 .indicator-start {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --indicator-s: 0;
     --indicator-e: auto;
     --indicator-x: -50%;
@@ -28,7 +28,7 @@
 }
 
 .indicator-center {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --indicator-s: 50%;
     --indicator-e: 50%;
     --indicator-x: -50%;
@@ -39,7 +39,7 @@
 }
 
 .indicator-end {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --indicator-s: auto;
     --indicator-e: 0;
     --indicator-x: 50%;
@@ -52,7 +52,7 @@
 }
 
 .indicator-bottom {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --indicator-t: auto;
     --indicator-b: 0;
     --indicator-y: 50%;
@@ -60,7 +60,7 @@
 }
 
 .indicator-middle {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --indicator-t: 50%;
     --indicator-b: 50%;
     --indicator-y: -50%;
@@ -68,7 +68,7 @@
 }
 
 .indicator-top {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --indicator-t: 0;
     --indicator-b: auto;
     --indicator-y: -50%;

@@ -1,5 +1,5 @@
 .toast {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply fixed start-auto end-4 top-auto bottom-4 flex flex-col gap-2 bg-transparent;
     translate: var(--toast-x, 0) var(--toast-y, 0);
     width: max-content;
@@ -14,42 +14,42 @@
 }
 
 .toast-start {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply start-4 end-auto;
     --toast-x: 0;
   }
 }
 
 .toast-center {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply start-1/2 end-1/2;
     --toast-x: -50%;
   }
 }
 
 .toast-end {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply start-auto end-4;
     --toast-x: 0;
   }
 }
 
 .toast-bottom {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply top-auto bottom-4;
     --toast-y: 0;
   }
 }
 
 .toast-middle {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply top-1/2 bottom-auto;
     --toast-y: -50%;
   }
 }
 
 .toast-top {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply top-4 bottom-auto;
     --toast-y: 0;
   }

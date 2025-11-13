@@ -1,5 +1,5 @@
 .cally {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     font-size: 0.7rem;
 
     &::part(container) {
@@ -65,7 +65,7 @@
 }
 
 .react-day-picker {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     user-select: none;
     background-color: var(--color-base-100);
     border-radius: var(--radius-box);
@@ -323,7 +323,7 @@
 }
 
 .pika-single {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     &:is(div) {
       user-select: none;
       font-size: 0.75rem;

@@ -1,6 +1,6 @@
 .kbd {
   box-shadow: none;
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply bg-base-200 rounded-field inline-flex items-center justify-center align-middle;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -15,35 +15,35 @@
 }
 
 .kbd-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 4);
     font-size: 0.625rem;
   }
 }
 
 .kbd-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 5);
     font-size: 0.75rem;
   }
 }
 
 .kbd-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 6);
     font-size: 0.875rem;
   }
 }
 
 .kbd-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 7);
     font-size: 1rem;
   }
 }
 
 .kbd-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-selector, 0.25rem) * 8);
     font-size: 1.125rem;
   }

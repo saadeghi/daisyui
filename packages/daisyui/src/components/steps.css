@@ -1,5 +1,5 @@
 .steps {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply inline-grid grid-flow-col overflow-hidden overflow-x-auto;
     counter-reset: step;
     grid-auto-columns: 1fr;
@@ -44,7 +44,7 @@
     }
   }
 
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     .step-neutral {
       + .step-neutral:before,
       &:after,
@@ -120,7 +120,7 @@
 }
 
 .steps-horizontal {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     grid-auto-columns: 1fr;
     @apply inline-grid grid-flow-col overflow-hidden overflow-x-auto;
 
@@ -143,7 +143,7 @@
 }
 
 .steps-vertical {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     grid-auto-rows: 1fr;
     @apply grid-flow-row;
 

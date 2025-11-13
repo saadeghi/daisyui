@@ -1,5 +1,5 @@
 .file-input {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     cursor: pointer;
     border: var(--border) solid #0000;
     @apply bg-base-100 inline-flex cursor-pointer appearance-none items-center align-middle select-none;
@@ -77,7 +77,7 @@
   }
 }
 .file-input-ghost {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-transparent;
     transition: background-color 0.2s;
     box-shadow: none;
@@ -99,7 +99,7 @@
 }
 
 .file-input-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --btn-color: var(--color-neutral);
     &::file-selector-button {
       color: var(--color-neutral-content);
@@ -113,7 +113,7 @@
 }
 
 .file-input-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --btn-color: var(--color-primary);
     &::file-selector-button {
       color: var(--color-primary-content);
@@ -127,7 +127,7 @@
 }
 
 .file-input-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --btn-color: var(--color-secondary);
     &::file-selector-button {
       color: var(--color-secondary-content);
@@ -141,7 +141,7 @@
 }
 
 .file-input-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --btn-color: var(--color-accent);
     &::file-selector-button {
       color: var(--color-accent-content);
@@ -155,7 +155,7 @@
 }
 
 .file-input-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --btn-color: var(--color-info);
     &::file-selector-button {
       color: var(--color-info-content);
@@ -168,7 +168,7 @@
   }
 }
 .file-input-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --btn-color: var(--color-success);
     &::file-selector-button {
       color: var(--color-success-content);
@@ -182,7 +182,7 @@
 }
 
 .file-input-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --btn-color: var(--color-warning);
     &::file-selector-button {
       color: var(--color-warning-content);
@@ -196,7 +196,7 @@
 }
 
 .file-input-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --btn-color: var(--color-error);
     &::file-selector-button {
       color: var(--color-error-content);
@@ -209,7 +209,7 @@
   }
 }
 .file-input-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 6);
     font-size: 0.6875rem;
     line-height: 1rem;
@@ -220,7 +220,7 @@
 }
 
 .file-input-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 8);
     font-size: 0.75rem;
     line-height: 1.5rem;
@@ -231,7 +231,7 @@
 }
 
 .file-input-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 10);
     font-size: 0.875rem;
     line-height: 2;
@@ -242,7 +242,7 @@
 }
 
 .file-input-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 12);
     font-size: 1.125rem;
     line-height: 2.5rem;
@@ -253,7 +253,7 @@
 }
 
 .file-input-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply pe-6;
     --size: calc(var(--size-field, 0.25rem) * 14);
     font-size: 1.125rem;

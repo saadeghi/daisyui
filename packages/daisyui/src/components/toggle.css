@@ -1,5 +1,5 @@
 .toggle {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     border: var(--border) solid currentColor;
     color: var(--input-color);
     @apply relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
@@ -120,7 +120,7 @@
 }
 
 .toggle-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:checked,
     &[aria-checked="true"] {
       --input-color: var(--color-primary);
@@ -129,7 +129,7 @@
 }
 
 .toggle-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:checked,
     &[aria-checked="true"] {
       --input-color: var(--color-secondary);
@@ -138,7 +138,7 @@
 }
 
 .toggle-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:checked,
     &[aria-checked="true"] {
       --input-color: var(--color-accent);
@@ -147,7 +147,7 @@
 }
 
 .toggle-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:checked,
     &[aria-checked="true"] {
       --input-color: var(--color-neutral);
@@ -156,7 +156,7 @@
 }
 
 .toggle-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:checked,
     &[aria-checked="true"] {
       --input-color: var(--color-success);
@@ -165,7 +165,7 @@
 }
 
 .toggle-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:checked,
     &[aria-checked="true"] {
       --input-color: var(--color-warning);
@@ -174,7 +174,7 @@
 }
 
 .toggle-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:checked,
     &[aria-checked="true"] {
       --input-color: var(--color-info);
@@ -183,7 +183,7 @@
 }
 
 .toggle-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:checked,
     &[aria-checked="true"] {
       --input-color: var(--color-error);
@@ -194,7 +194,7 @@
 /* responsive */
 
 .toggle-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:is([type="checkbox"]),
     &:has([type="checkbox"]) {
       --size: calc(var(--size-selector, 0.25rem) * 4);
@@ -203,7 +203,7 @@
 }
 
 .toggle-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:is([type="checkbox"]),
     &:has([type="checkbox"]) {
       --size: calc(var(--size-selector, 0.25rem) * 5);
@@ -212,7 +212,7 @@
 }
 
 .toggle-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:is([type="checkbox"]),
     &:has([type="checkbox"]) {
       --size: calc(var(--size-selector, 0.25rem) * 6);
@@ -221,7 +221,7 @@
 }
 
 .toggle-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:is([type="checkbox"]),
     &:has([type="checkbox"]) {
       --size: calc(var(--size-selector, 0.25rem) * 7);
@@ -230,7 +230,7 @@
 }
 
 .toggle-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &:is([type="checkbox"]),
     &:has([type="checkbox"]) {
       --size: calc(var(--size-selector, 0.25rem) * 8);

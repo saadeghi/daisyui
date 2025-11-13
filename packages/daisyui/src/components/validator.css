@@ -1,5 +1,5 @@
 .validator {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     &:user-valid,
     &:has(:user-valid) {
       &,
@@ -28,7 +28,7 @@
   }
 }
 .validator-hint {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply invisible mt-2;
     font-size: 0.75rem;
   }

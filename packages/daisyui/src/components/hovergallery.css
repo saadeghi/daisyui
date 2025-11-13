@@ -1,5 +1,5 @@
 .hover-gallery {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     --items: 1;
     grid-template-columns: repeat(var(--items), 1fr);
     width: 100%;

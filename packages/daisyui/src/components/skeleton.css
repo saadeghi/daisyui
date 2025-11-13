@@ -1,5 +1,5 @@
 .skeleton {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply bg-base-300 rounded-box motion-reduce:[transition-duration:15s];
     will-change: background-position;
     background-image: linear-gradient(
@@ -17,7 +17,7 @@
   }
 }
 .skeleton-text {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

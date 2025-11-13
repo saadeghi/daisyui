@@ -1,5 +1,5 @@
 .tooltip {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative inline-block;
     --tt-bg: var(--color-neutral);
     --tt-off: calc(100% + 0.5rem);
@@ -66,7 +66,7 @@
 
 .tooltip,
 .tooltip-top {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
@@ -81,7 +81,7 @@
 }
 
 .tooltip-bottom {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(-50%) translateY(var(--tt-pos, -0.25rem));
@@ -96,7 +96,7 @@
 }
 
 .tooltip-left {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem)) translateY(-50%);
@@ -111,7 +111,7 @@
 }
 
 .tooltip-right {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem)) translateY(-50%);
@@ -126,7 +126,7 @@
 }
 
 .tooltip-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --tt-bg: var(--color-primary);
 
     > .tooltip-content,
@@ -137,7 +137,7 @@
 }
 
 .tooltip-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --tt-bg: var(--color-secondary);
 
     > .tooltip-content,
@@ -148,7 +148,7 @@
 }
 
 .tooltip-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --tt-bg: var(--color-accent);
 
     > .tooltip-content,
@@ -159,7 +159,7 @@
 }
 
 .tooltip-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --tt-bg: var(--color-info);
 
     > .tooltip-content,
@@ -170,7 +170,7 @@
 }
 
 .tooltip-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --tt-bg: var(--color-success);
 
     > .tooltip-content,
@@ -181,7 +181,7 @@
 }
 
 .tooltip-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --tt-bg: var(--color-warning);
 
     > .tooltip-content,
@@ -192,7 +192,7 @@
 }
 
 .tooltip-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --tt-bg: var(--color-error);
 
     > .tooltip-content,

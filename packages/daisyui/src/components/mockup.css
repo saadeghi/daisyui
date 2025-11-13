@@ -1,5 +1,5 @@
 .mockup-code {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply bg-neutral text-neutral-content rounded-box relative overflow-hidden overflow-x-auto py-5;
     font-size: 0.875rem;
     direction: ltr;
@@ -33,7 +33,7 @@
 }
 
 .mockup-window {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply rounded-box relative flex flex-col overflow-hidden overflow-x-auto pt-5;
 
     &:before {
@@ -59,7 +59,7 @@
 }
 
 .mockup-browser {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply rounded-box relative overflow-hidden overflow-x-auto;
 
     pre[data-prefix] {
@@ -101,7 +101,7 @@
 }
 
 .mockup-phone {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply inline-grid justify-items-center;
     border: 5px solid #6b6b6b;
     border-radius: 65px;
@@ -118,7 +118,7 @@
   }
 }
 .mockup-phone-camera {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     grid-column: 1/1;
     grid-row: 1/1;
     background: #000;
@@ -130,7 +130,7 @@
   }
 }
 .mockup-phone-display {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     border-radius: 54px;
     grid-column: 1/1;
     grid-row: 1/1;

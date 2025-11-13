@@ -1,5 +1,5 @@
 .menu {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply flex w-fit flex-col flex-wrap p-2;
     --menu-active-fg: var(--color-neutral-content);
     --menu-active-bg: var(--color-neutral);
@@ -147,7 +147,7 @@
 }
 
 .menu-title {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply text-base-content/40 px-3 py-2;
     font-size: 0.875rem;
     font-weight: 600;
@@ -155,7 +155,7 @@
 }
 
 .menu-horizontal {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply inline-flex flex-row;
 
     & > li:not(.menu-title) > details > ul {
@@ -179,7 +179,7 @@
 }
 
 .menu-vertical {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply inline-flex flex-col;
 
     & > li:not(.menu-title) > details > ul {
@@ -189,7 +189,7 @@
 }
 
 .menu-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-2 py-1;
@@ -203,7 +203,7 @@
 }
 
 .menu-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-2.5 py-1;
@@ -217,7 +217,7 @@
 }
 
 .menu-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-3 py-1.5;
@@ -231,7 +231,7 @@
 }
 
 .menu-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-4 py-1.5;
@@ -245,7 +245,7 @@
 }
 
 .menu-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-5 py-1.5;
@@ -260,7 +260,7 @@
 
 /* allow use cases like group-hover:menu-active to make a menu item active when the menu is hovered */
 :where(:not(ul, details, .menu-title, .btn)).menu-active {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply outline-hidden;
     color: var(--menu-active-fg);
     background-color: var(--menu-active-bg);

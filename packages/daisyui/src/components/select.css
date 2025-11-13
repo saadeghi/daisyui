@@ -1,5 +1,5 @@
 .select {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     border: var(--border) solid #0000;
     @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
     width: clamp(3rem, 20rem, 100%);
@@ -139,7 +139,7 @@
 }
 
 .select-ghost {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-transparent;
     transition: background-color 0.2s;
     box-shadow: none;
@@ -155,7 +155,7 @@
 }
 
 .select-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -165,7 +165,7 @@
 }
 
 .select-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -175,7 +175,7 @@
 }
 
 .select-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -185,7 +185,7 @@
 }
 
 .select-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -195,7 +195,7 @@
 }
 
 .select-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -205,7 +205,7 @@
 }
 
 .select-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -215,7 +215,7 @@
 }
 
 .select-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -225,7 +225,7 @@
 }
 
 .select-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &:focus,
     &:focus-within {
@@ -235,7 +235,7 @@
 }
 
 .select-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 6);
     font-size: 0.6875rem;
     option {
@@ -245,7 +245,7 @@
 }
 
 .select-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 8);
     font-size: 0.75rem;
     option {
@@ -255,7 +255,7 @@
 }
 
 .select-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 10);
     font-size: 0.875rem;
     option {
@@ -265,7 +265,7 @@
 }
 
 .select-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 12);
     font-size: 1.125rem;
     option {
@@ -275,7 +275,7 @@
 }
 
 .select-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --size: calc(var(--size-field, 0.25rem) * 14);
     font-size: 1.375rem;
     option {

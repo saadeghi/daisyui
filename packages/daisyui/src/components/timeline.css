@@ -1,5 +1,5 @@
 .timeline {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative flex;
 
     > li {
@@ -57,7 +57,7 @@
 }
 
 .timeline-box {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     border: var(--border) solid;
     @apply rounded-box bg-base-100 border-base-300 px-4 py-2;
     font-size: 0.75rem;
@@ -66,25 +66,25 @@
 }
 
 .timeline-start {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply col-start-1 col-end-4 row-start-1 row-end-2 m-1 self-end justify-self-center;
   }
 }
 
 .timeline-middle {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply col-start-2 row-start-2;
   }
 }
 
 .timeline-end {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply col-start-1 col-end-4 row-start-3 row-end-4 m-1 self-start justify-self-center;
   }
 }
 
 .timeline-compact {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --timeline-row-start: 0;
 
     .timeline-start {
@@ -116,7 +116,7 @@
 }
 
 .timeline-snap-icon {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     > li {
       --timeline-col-start: 0.5rem;
       --timeline-row-start: minmax(0, 1fr);
@@ -125,7 +125,7 @@
 }
 
 .timeline-vertical {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply flex-col;
 
     > li {
@@ -192,7 +192,7 @@
 }
 
 .timeline-horizontal {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply flex-row;
 
     > li {

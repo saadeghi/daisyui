@@ -1,5 +1,5 @@
 .checkbox {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     border: var(--border) solid
       var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
     @apply text-base-content rounded-selector relative inline-block shrink-0 cursor-pointer appearance-none p-1 align-middle;
@@ -77,97 +77,97 @@
 }
 
 .checkbox-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-primary-content;
     --input-color: var(--color-primary);
   }
 }
 
 .checkbox-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-secondary-content;
     --input-color: var(--color-secondary);
   }
 }
 
 .checkbox-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-accent-content;
     --input-color: var(--color-accent);
   }
 }
 
 .checkbox-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-neutral-content;
     --input-color: var(--color-neutral);
   }
 }
 
 .checkbox-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-info-content;
     --input-color: var(--color-info);
   }
 }
 
 .checkbox-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-success-content;
     --input-color: var(--color-success);
   }
 }
 
 .checkbox-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-warning-content;
     --input-color: var(--color-warning);
   }
 }
 
 .checkbox-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply text-error-content;
     --input-color: var(--color-error);
   }
 }
 
 .checkbox:disabled {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply cursor-not-allowed opacity-20;
   }
 }
 
 .checkbox-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply p-[0.125rem];
     --size: calc(var(--size-selector, 0.25rem) * 4);
   }
 }
 
 .checkbox-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply p-[0.1875rem];
     --size: calc(var(--size-selector, 0.25rem) * 5);
   }
 }
 
 .checkbox-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply p-[0.25rem];
     --size: calc(var(--size-selector, 0.25rem) * 6);
   }
 }
 
 .checkbox-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply p-[0.3125rem];
     --size: calc(var(--size-selector, 0.25rem) * 7);
   }
 }
 
 .checkbox-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply p-[0.375rem];
     --size: calc(var(--size-selector, 0.25rem) * 8);
   }

@@ -1,12 +1,12 @@
 .chat {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply grid gap-x-3 py-1;
     --mask-chat: url("data:image/svg+xml,%3csvg width='13' height='13' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='M0 11.5004C0 13.0004 2 13.0004 2 13.0004H12H13V0.00036329L12.5 0C12.5 0 11.977 2.09572 11.8581 2.50033C11.6075 3.35237 10.9149 4.22374 9 5.50036C6 7.50036 0 10.0004 0 11.5004Z'/%3e%3c/svg%3e");
   }
 }
 
 .chat-bubble {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply rounded-field bg-base-300 text-base-content relative block w-fit px-4 py-2;
     grid-row-end: 3;
     min-height: 2rem;
@@ -26,76 +26,76 @@
 }
 
 .chat-bubble-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-primary text-primary-content;
   }
 }
 
 .chat-bubble-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-secondary text-secondary-content;
   }
 }
 
 .chat-bubble-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-accent text-accent-content;
   }
 }
 
 .chat-bubble-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-neutral text-neutral-content;
   }
 }
 
 /* state colors */
 .chat-bubble-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-info text-info-content;
   }
 }
 
 .chat-bubble-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-success text-success-content;
   }
 }
 
 .chat-bubble-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-warning text-warning-content;
   }
 }
 
 .chat-bubble-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply bg-error text-error-content;
   }
 }
 
 .chat-image {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply row-span-2 self-end;
   }
 }
 
 .chat-header {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply row-start-1 flex gap-1;
     font-size: 0.6875rem;
   }
 }
 
 .chat-footer {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply row-start-3 flex gap-1;
     font-size: 0.6875rem;
   }
 }
 
 .chat-start {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply place-items-start;
     grid-template-columns: auto 1fr;
 
@@ -126,7 +126,7 @@
 }
 
 .chat-end {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply place-items-end;
     grid-template-columns: 1fr auto;
 

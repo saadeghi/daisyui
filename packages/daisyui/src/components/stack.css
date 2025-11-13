@@ -1,5 +1,5 @@
 .stack {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply inline-grid;
     grid-template-columns: 3px 4px 1fr 4px 3px;
     grid-template-rows: 3px 4px 1fr 4px 3px;
@@ -18,7 +18,7 @@
     }
   }
 
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     &,
     &.stack-bottom {
       > * {

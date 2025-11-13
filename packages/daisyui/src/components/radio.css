@@ -1,5 +1,5 @@
 .radio {
-  @layer daisyui.component {
+  @layer daisyui.l1.l2.l3 {
     @apply relative inline-block shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
     border: var(--border) solid var(--input-color, color-mix(in srgb, currentColor 20%, #0000));
     box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset;
@@ -49,61 +49,61 @@
 }
 
 .radio-primary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --input-color: var(--color-primary);
   }
 }
 
 .radio-secondary {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --input-color: var(--color-secondary);
   }
 }
 
 .radio-accent {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --input-color: var(--color-accent);
   }
 }
 
 .radio-neutral {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --input-color: var(--color-neutral);
   }
 }
 
 .radio-info {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --input-color: var(--color-info);
   }
 }
 
 .radio-success {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --input-color: var(--color-success);
   }
 }
 
 .radio-warning {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --input-color: var(--color-warning);
   }
 }
 
 .radio-error {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     --input-color: var(--color-error);
   }
 }
 
 .radio:disabled {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     @apply cursor-not-allowed opacity-20;
   }
 }
 
 .radio-xs {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     padding: 0.125rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 4);
@@ -112,7 +112,7 @@
 }
 
 .radio-sm {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     padding: 0.1875rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 5);
@@ -121,7 +121,7 @@
 }
 
 .radio-md {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     padding: 0.25rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 6);
@@ -130,7 +130,7 @@
 }
 
 .radio-lg {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     padding: 0.3125rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 7);
@@ -139,7 +139,7 @@
 }
 
 .radio-xl {
-  @layer daisyui.modifier {
+  @layer daisyui.l1.l2 {
     padding: 0.375rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 8);
