@@ -93,15 +93,15 @@
     </p>
     <div class="flex w-full justify-center">
       <div
-        class="flex w-full max-w-6xl flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
+        class="flex w-full max-w-6xl flex-wrap justify-center p-10 [&_.mask]:size-8 [&_.mask]:bg-no-repeat [&_.mask]:[transition:opacity_1s_ease-out_15s,scale_1s_ease-out_15s,filter_1s_ease-out_15s] [&_.mask]:pointer-fine:scale-70 [&_.mask]:pointer-fine:opacity-30 [&_.mask]:pointer-fine:contrast-70 [&_.mask]:pointer-fine:grayscale [&_.mask]:pointer-fine:group-hover:scale-120 [&_.mask]:pointer-fine:group-hover:opacity-100 [&_.mask]:pointer-fine:group-hover:contrast-100 [&_.mask]:pointer-fine:group-hover:grayscale-0 [&_.mask]:pointer-fine:group-hover:[transition:opacity_0s_ease-out_0s,scale_0.05s_ease-out_0s,filter_0s_ease-out_0s] max-sm:[&>*:nth-child(n+50)]:hidden"
       >
         {#each contributors as contributor, index}
           <div class="avatar tooltip group p-1" data-tip={contributor}>
             <div
-              class="mask mask-squircle size-8 [transition:opacity_1s_ease-out_15s,scale_1s_ease-out_15s,filter_1s_ease-out_15s] pointer-fine:scale-70 pointer-fine:opacity-30 pointer-fine:contrast-70 pointer-fine:grayscale pointer-fine:group-hover:scale-120 pointer-fine:group-hover:opacity-100 pointer-fine:group-hover:contrast-100 pointer-fine:group-hover:grayscale-0 pointer-fine:group-hover:[transition:opacity_0s_ease-out_0s,scale_0.05s_ease-out_0s,filter_0s_ease-out_0s]"
+              class="mask mask-squircle"
               style="background-image: url('https://img.daisyui.com/generated/contributors.webp?v=2'); background-size: {contributorSpriteMeta.imagesPerRow *
                 (contributorSpriteMeta.avatarSize /
-                  2)}px auto; background-repeat: no-repeat; background-position: {getBackgroundPosition(
+                  2)}px auto; background-position: {getBackgroundPosition(
                 index,
                 contributorSpriteMeta,
               )};"
@@ -125,7 +125,7 @@
     </p>
     <div class="flex w-full justify-center">
       <div
-        class="max-w-8xl flex w-full flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
+        class="max-w-8xl flex w-full flex-wrap justify-center p-10 [&_.mask]:bg-no-repeat max-sm:[&>*:nth-child(n+50)]:hidden"
       >
         {#each sponsors as sponsor, index}
           <div class="tooltip" data-tip={sponsor.name}>
@@ -135,7 +135,7 @@
                   class="mask mask-squircle size-8"
                   style="background-image: url('https://img.daisyui.com/generated/sponsors.webp?v=2'); background-size: {sponsorSpriteMeta.imagesPerRow *
                     (sponsorSpriteMeta.avatarSize /
-                      2)}px auto; background-repeat: no-repeat; background-position: {getBackgroundPosition(
+                      2)}px auto; background-position: {getBackgroundPosition(
                     index,
                     sponsorSpriteMeta,
                   )};"
