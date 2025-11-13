@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.2 (2025-11-13)
+
+
+### Bug Fixes
+
+* prefix for `is-drawer-close` and `is-drawer-open`. closes: [#4197](https://github.com/saadeghi/daisyui/issues/4197) ([f3005f4](https://github.com/saadeghi/daisyui/commit/f3005f403b059e02c2d0868807a6de745d513b52))
+
 ## 5.5.1 (2025-11-13)
 
 
