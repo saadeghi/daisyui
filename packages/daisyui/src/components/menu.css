@@ -160,7 +160,7 @@
 
     & > li:not(.menu-title) > details {
       & > ul {
-        @apply absolute origin-top opacity-0 ms-0 mt-4 py-2 pe-2 bg-base-100 rounded-box;
+        @apply bg-base-100 rounded-box absolute ms-0 mt-4 origin-top py-2 pe-2 opacity-0;
         scale: 95%;
         box-shadow:
           0 1px 3px 0 oklch(0% 0 0/0.1),
