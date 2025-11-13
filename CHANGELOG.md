@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.1 (2025-11-13)
+
+
+### Bug Fixes
+
+* layer nesting. closes: [#4209](https://github.com/saadeghi/daisyui/issues/4209) ([c20d12c](https://github.com/saadeghi/daisyui/commit/c20d12c92c51cefb5f26c95a9449ae3e9c3c4b11))
+
 ## 5.5.0 (2025-11-11)
 
 ### Features
