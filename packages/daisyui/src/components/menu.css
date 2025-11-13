@@ -158,8 +158,32 @@
   @layer daisyui.l1.l2 {
     @apply inline-flex flex-row;
 
-    & > li:not(.menu-title) > details > ul {
-      @apply absolute ms-0 mt-4 py-2 pe-2;
+    & > li:not(.menu-title) > details {
+      & > ul {
+        @apply absolute origin-top opacity-0 ms-0 mt-4 py-2 pe-2 bg-base-100 rounded-box;
+        scale: 95%;
+        box-shadow:
+          0 1px 3px 0 oklch(0% 0 0/0.1),
+          0 1px 2px -1px oklch(0% 0 0/0.1);
+
+        @media (prefers-reduced-motion: no-preference) {
+          @starting-style {
+            scale: 95%;
+            opacity: 0;
+          }
+
+          animation: menu 0.2s;
+          transition-property: opacity, scale, display;
+          transition-behavior: allow-discrete;
+          transition-duration: 0.2s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+
+      &[open] > ul {
+        @apply opacity-100;
+        scale: 100%;
+      }
     }
 
     & > li > details > ul {
@@ -167,13 +191,6 @@
         --tw-content: none;
         content: var(--tw-content);
       }
-    }
-
-    :where(& > li:not(.menu-title) > details > ul) {
-      @apply bg-base-100 rounded-box;
-      box-shadow:
-        0 1px 3px 0 oklch(0% 0 0/0.1),
-        0 1px 2px -1px oklch(0% 0 0/0.1);
     }
   }
 }
@@ -184,6 +201,11 @@
 
     & > li:not(.menu-title) > details > ul {
       @apply relative ms-4 mt-0 py-0 pe-0;
+      background-color: revert-layer;
+      border-radius: revert-layer;
+      animation: revert-layer;
+      transition: revert-layer;
+      box-shadow: revert-layer;
     }
   }
 }
@@ -266,5 +288,11 @@
     background-color: var(--menu-active-bg);
     background-size: auto, calc(var(--noise) * 100%);
     background-image: none, var(--fx-noise);
+  }
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
   }
 }
