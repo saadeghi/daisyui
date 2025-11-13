@@ -1,7 +1,7 @@
 .table {
   @layer daisyui.l1.l2.l3 {
     font-size: 0.875rem;
-    @apply rounded-box relative w-full text-left rtl:text-right;
+    @apply rounded-box relative w-full border-separate border-spacing-0 text-left rtl:text-right;
 
     tr.row-hover {
       &,
@@ -20,7 +20,7 @@
       font-weight: 600;
     }
 
-    :where(tfoot) {
+    :where(tfoot tr:first-child :is(td, th)) {
       border-top: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
     }
 
@@ -36,7 +36,7 @@
       @apply bg-base-100 sticky right-0 left-0;
     }
 
-    :where(thead tr, tbody tr:not(:last-child)) {
+    :where(thead tr :is(td, th), tbody tr:not(:last-child) :is(td, th)) {
       border-bottom: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
     }
   }
