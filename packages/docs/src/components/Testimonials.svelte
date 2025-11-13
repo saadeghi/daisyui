@@ -47,41 +47,35 @@
 </script>
 
 <div
-  class="mx-auto max-w-7xl gap-8 px-10 md:columns-2 lg:columns-3 xl:columns-3 max-md:[&>*:nth-child(n+9)]:hidden"
+  class="[&_a]:outline-base-content [&_.card]:bg-base-200 [&_p]:text-base-content/70 mx-auto max-w-7xl gap-8 px-10 md:columns-2 lg:columns-3 xl:columns-3 [&_.card]:mb-8 [&_.card]:break-inside-avoid [&_.card]:rounded-ee-[2.5rem] [&_.card]:text-start [&_.card-body>div]:flex [&_.card-body>div]:flex-row-reverse [&_.card-body>div]:items-center [&_.card-body>div]:gap-3 [&_a]:w-12 [&_a]:rounded-full [&_a]:outline-offset-2 [&_a]:hover:brightness-90 [&_a]:focus-visible:outline-2 [&_a_div]:size-12 [&_a_div]:rounded-full [&_a_div]:bg-no-repeat [&_p]:px-1 [&_p]:text-[0.75rem] [&_p]:leading-[1.75] [&_p]:[text-wrap:balance] max-md:[&>*:nth-child(n+9)]:hidden"
 >
   {#each [...items.testimonials]
     .map((t, i) => ({ ...t, originalIndex: i }))
     .sort(() => Math.random() - 0.5)
     .slice(0, limit) as testimonial, index}
-    <div class="card card-sm bg-base-200 mb-8 break-inside-avoid rounded-ee-[2.5rem] text-start">
+    <div class="card card-sm">
       <div class="card-body gap-4">
-        <p
-          class="text-base-content/70 px-1 text-[0.75rem] leading-[1.75] [text-wrap:balance]"
-          use:highlight
-        >
+        <p use:highlight>
           {testimonial.content}
         </p>
-        <div class="flex flex-row-reverse items-center gap-3">
+        <div>
           <div class="avatar">
             <a
               aria-label={`${testimonial.name}`}
-              href={`https://twitter.com/${testimonial.username}/status/${testimonial.id}`}
+              href={`https://x.com/${testimonial.username}/status/${testimonial.id}`}
               target="_blank"
               rel="noopener, noreferrer"
-              class="outline-base-content w-12 rounded-full outline-offset-2 hover:brightness-90 focus-visible:outline-2"
             >
               <div
-                class="size-12 rounded-full"
                 style={`background-image: url('https://img.daisyui.com/generated/x.webp?${items.generated_at}'); 
                        background-size: ${spriteMetadata.imagesPerRow * 48}px auto;
-                       background-repeat: no-repeat;
                        background-position: ${getBackgroundPosition(testimonial.originalIndex)};`}
               ></div>
             </a>
           </div>
-          <div class="flex flex-col items-end text-xs">
-            <div class="text-base-content font-bold">{testimonial.name}</div>
-            <div class="text-base-content/70">{testimonial.bio}</div>
+          <div class="flex flex-col items-end gap-1">
+            <div class="text-xs font-semibold">{testimonial.name}</div>
+            <div class="text-base-content/60 text-[0.625rem]">{testimonial.bio}</div>
           </div>
         </div>
       </div>
