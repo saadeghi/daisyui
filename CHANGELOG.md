@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.3 (2025-11-13)
+
+
+### Bug Fixes
+
+* table borders. closes: [#3723](https://github.com/saadeghi/daisyui/issues/3723) ([5cf7bf7](https://github.com/saadeghi/daisyui/commit/5cf7bf7b833197f3a8f19bfee496956de1258579))
+
 ## 5.5.2 (2025-11-13)
 
 
