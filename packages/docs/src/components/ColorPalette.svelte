@@ -198,6 +198,10 @@
           // Handle black/white/achromatic colors properly
           colorState.oklch.l = oklchColor.l ?? colorState.oklch.l
           colorState.oklch.c = oklchColor.c ?? colorState.oklch.c
+          // Set hue if not initialized yet
+          if (colorState.oklch.h == null) {
+            colorState.oklch.h = 0
+          }
           // Only update hue if chroma > 0, otherwise keep current hue
           if (oklchColor.c && oklchColor.c > 0) {
             colorState.oklch.h = oklchColor.h ?? colorState.oklch.h
