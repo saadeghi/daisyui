@@ -39,6 +39,7 @@
     if (event.key === "Escape") {
       closeModal()
     } else if (event.key === "Enter") {
+      event.preventDefault()
       if (validateColor(inputValue)) {
         value = inputValue
         inputValue = ""
@@ -519,15 +520,6 @@
                 class="grow xl:font-mono xl:normal-nums"
                 bind:value={inputValue}
                 oninput={handleInput}
-                onkeydown={(event) => {
-                  if (event.key === "Enter") {
-                    event.preventDefault()
-                    if (validateColor(inputValue)) {
-                      value = inputValue
-                      closeModal()
-                    }
-                  }
-                }}
                 aria-label={`${name} value`}
               />
               {#if colorName}
@@ -557,7 +549,7 @@
   <div
     class="modal-backdrop"
     onclick={closeModal}
-    onkeydown={(e) => e.key === "Enter" && closeModal()}
+    onkeydown={handleKeydown}
     role="button"
     tabindex="0"
     aria-label="Close modal"
