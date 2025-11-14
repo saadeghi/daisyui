@@ -138,7 +138,10 @@
   // Get the color to display (preview during dragging, actual value otherwise)
   const displayColor = $derived(dragPreviewColor || value)
 
-  const colorName = $derived(colorDetails.find(([, color]) => color === inputValue)?.[0])
+  const colorName = $derived.by(() => {
+    const name = colorDetails.find(([, color]) => color === inputValue)?.[0]
+    return name === "zinc-50" ? "neutral-50" : name
+  })
   const colorPairsMap = $derived.by(() => {
     const map = {
       color: {},

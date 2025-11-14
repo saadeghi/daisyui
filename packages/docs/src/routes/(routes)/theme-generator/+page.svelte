@@ -98,18 +98,21 @@
   })
 
   const colorDetails = $derived(
-    Object.entries(data.tailwindcolors).map(([key, color]) => {
+    Object.entries(data.tailwindcolors).map(([keyTw, color]) => {
       const names = []
       const initials = []
-      for (const [key, themeColor] of Object.entries(currentTheme)) {
-        if (themeColor === color) {
-          names.push(key.replace("--color-", ""))
-          initials.push(data.colorInitials[key] || null)
+
+      if (keyTw !== "zinc-50") {
+        for (const [keyTheme, themeColor] of Object.entries(currentTheme)) {
+          if (themeColor === color) {
+            names.push(keyTheme.replace("--color-", ""))
+            initials.push(data.colorInitials[keyTheme] || null)
+          }
         }
       }
 
       return [
-        key,
+        keyTw,
         color,
         initials.length > 0 ? `${initials[0]}${initials.length > 1 ? "+" : ""}` : null,
         names,
