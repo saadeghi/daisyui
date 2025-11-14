@@ -41,8 +41,11 @@
     } else if (event.key === "Enter") {
       event.preventDefault()
       if (validateColor(inputValue)) {
-        value = inputValue
-        inputValue = ""
+        if (value !== inputValue) {
+          const v = inputValue
+          inputValue = ""
+          value = v
+        }
         closeModal()
       }
     }
@@ -63,8 +66,12 @@
 
   function handleDragEnd(color) {
     if (isDragging) {
-      value = color
-      inputValue = ""
+      if (value !== color) {
+        inputValue = ""
+        value = color
+      } else {
+        inputValue = color
+      }
       isDragging = false
       dragPreviewColor = null
     }
@@ -72,21 +79,33 @@
 
   function handleGlobalMouseUp() {
     if (isDragging && dragPreviewColor) {
-      value = dragPreviewColor // Ensure value is updated if drag ends elsewhere
-      inputValue = ""
+      if (value !== dragPreviewColor) {
+        inputValue = ""
+        value = dragPreviewColor // Ensure value is updated if drag ends elsewhere
+      } else {
+        inputValue = dragPreviewColor
+      }
     }
     isDragging = false
     dragPreviewColor = null
   }
 
+  let inputDebounce = null
   function handleInput(event) {
-    const newValue = event.target.value
-    if (validateColor(newValue)) {
-      value = newValue
-      inputValue = ""
-    } else {
-      inputValue = newValue
+    if (inputDebounce != null) {
+      clearTimeout(inputDebounce)
     }
+    inputDebounce = setTimeout(() => {
+      inputDebounce = null
+
+      const newValue = event.target.value
+      if (validateColor(newValue) && value !== newValue) {
+        inputValue = ""
+        value = newValue
+      } else {
+        inputValue = newValue
+      }
+    }, 300)
   }
 
   function toggleModal() {
@@ -112,21 +131,23 @@
     onModalStateChange(false)
   }
 
-  $effect(() => {
-    untrack(() => {
-      if (value !== inputValue) {
-        updateColorState(value)
-      }
-    })
-    inputValue = value
+  $effect.pre(() => {
+    if (open) {
+      untrack(() => {
+        if (value !== inputValue) {
+          updateColorState(value)
+        }
+      })
+      inputValue = value
+    }
   })
 
   // Update inputValue when colorState changes
-  $effect(() => {
+  $effect.pre(() => {
     const newValue = generateColorValue()
 
     untrack(() => {
-      if (inputValue !== newValue) {
+      if (newValue != null && inputValue !== newValue) {
         if (!colorState.changed) {
           colorState.value = newValue
           inputValue = newValue
@@ -272,7 +293,7 @@
 
       return `rgb(${colorState.rgb.r} ${colorState.rgb.g} ${colorState.rgb.b})`
     } catch {
-      return inputValue // Fallback to current value if conversion fails
+      return null
     }
   }
 </script>
@@ -518,7 +539,7 @@
               <input
                 type="text"
                 class="grow xl:font-mono xl:normal-nums"
-                bind:value={inputValue}
+                value={inputValue}
                 oninput={handleInput}
                 aria-label={`${name} value`}
               />
