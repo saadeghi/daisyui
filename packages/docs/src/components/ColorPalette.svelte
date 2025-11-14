@@ -410,9 +410,9 @@
             >
               <div
                 class="border-base-content/10 relative grid aspect-square w-5 place-items-center rounded-full border bg-transparent select-none sm:m-px sm:w-7"
-                class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={displayColor === color}
-                class:outline-white={displayColor === color}
-                class:outline-offset-[-3px]={displayColor === color}
+                class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={colorName === name}
+                class:outline-white={colorName === name}
+                class:outline-offset-[-3px]={colorName === name}
                 style:background-color={color}
               >
                 {#if initials != null}
