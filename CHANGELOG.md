@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.4 (2025-11-14)
+
+
+### Bug Fixes
+
+* menu animation for 1st level menu in menu-horizontal ([#4278](https://github.com/saadeghi/daisyui/issues/4278)) ([3a7919a](https://github.com/saadeghi/daisyui/commit/3a7919a1ce0edff8eca6af9d0fa62c6cbd8bc290)), closes [#4273](https://github.com/saadeghi/daisyui/issues/4273)
+
 ## 5.5.3 (2025-11-13)
 
 
