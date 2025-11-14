@@ -17,6 +17,11 @@ export function validateColor(color) {
     return false
   }
 
+  // Ignore unbalanced paranthesis
+  if (color.split("(").length !== color.split(")").length) {
+    return false
+  }
+
   try {
     const temp = document.createElement("div")
     temp.style.color = color
