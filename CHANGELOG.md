@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.5 (2025-11-15)
+
+
+### Bug Fixes
+
+* button layer ([e3d3f5b](https://github.com/saadeghi/daisyui/commit/e3d3f5bed86706e41be727536109f93760ee6f2f)), closes [#4288](https://github.com/saadeghi/daisyui/issues/4288)
+
 ## 5.5.4 (2025-11-14)
 
 
