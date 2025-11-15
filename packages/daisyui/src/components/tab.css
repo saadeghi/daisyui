@@ -24,9 +24,9 @@
     --tab-radius-limit: min(var(--radius-field), var(--tab-radius-min));
     --tab-radius-grad:
       #0000 calc(69% - var(--border)),
-      var(--tab-border-color) calc(calc(69% - var(--border)) + 0.25px),
-      var(--tab-border-color) calc(calc(69% - var(--border)) + var(--border)),
-      var(--tab-bg) calc(calc(69% - var(--border)) + var(--border) + 0.25px);
+      var(--tab-border-color) calc(69% - var(--border) + 0.25px),
+      var(--tab-border-color) calc(69%),
+      var(--tab-bg) calc(69% + 0.25px);
     border-color: #0000;
     order: var(--tab-order);
     height: var(--tab-height);
@@ -456,7 +456,7 @@
     */
     --tabs-box-radius: calc(3 * var(--radius-field));
     border-radius: calc(
-      min(calc(var(--tab-height) / 2), var(--radius-field)) + min(0.25rem, var(--tabs-box-radius))
+      min(var(--tab-height) / 2, var(--radius-field)) + min(0.25rem, var(--tabs-box-radius))
     );
     box-shadow:
       0 -0.5px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
@@ -492,7 +492,7 @@
       /* Compensate for p-1 */
       height: calc(100% - var(--tab-height) + var(--border) - 0.5rem);
       border-radius: calc(
-        min(calc(var(--tab-height) / 2), var(--radius-field)) +
+        min(var(--tab-height) / 2, var(--radius-field)) +
           min(0.25rem, var(--tabs-box-radius)) - var(--border)
       );
     }
