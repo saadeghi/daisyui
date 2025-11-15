@@ -110,56 +110,56 @@
 }
 
 .btn-primary {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-primary);
     --btn-fg: var(--color-primary-content);
   }
 }
 
 .btn-secondary {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-secondary);
     --btn-fg: var(--color-secondary-content);
   }
 }
 
 .btn-accent {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-accent);
     --btn-fg: var(--color-accent-content);
   }
 }
 
 .btn-neutral {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-neutral);
     --btn-fg: var(--color-neutral-content);
   }
 }
 
 .btn-info {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-info);
     --btn-fg: var(--color-info-content);
   }
 }
 
 .btn-success {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-success);
     --btn-fg: var(--color-success-content);
   }
 }
 
 .btn-warning {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-warning);
     --btn-fg: var(--color-warning-content);
   }
 }
 
 .btn-error {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-error);
     --btn-fg: var(--color-error-content);
   }
