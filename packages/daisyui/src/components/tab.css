@@ -25,7 +25,7 @@
     --tab-radius-grad:
       #0000 calc(69% - var(--border)),
       var(--tab-border-color) calc(69% - var(--border) + 0.25px),
-      var(--tab-border-color) calc(69%),
+      var(--tab-border-color) 69%,
       var(--tab-bg) calc(69% + 0.25px);
     border-color: #0000;
     order: var(--tab-order);
