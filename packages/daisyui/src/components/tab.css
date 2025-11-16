@@ -31,8 +31,7 @@
     order: var(--tab-order);
     height: var(--tab-height);
     font-size: 0.875rem;
-    padding-inline-start: var(--tab-p);
-    padding-inline-end: var(--tab-p);
+    padding-inline: var(--tab-p);
 
     &:is(input[type="radio"]) {
       @apply min-w-fit;
