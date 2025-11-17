@@ -98,6 +98,9 @@
           @media (prefers-reduced-motion: no-preference) {
             transform: translateY(-50%) rotate(225deg);
           }
+          @media (prefers-reduced-motion: reduce) {
+            transition: none;
+          }
         }
       }
     }
@@ -107,6 +110,9 @@
         > .collapse-title:after {
           @media (prefers-reduced-motion: no-preference) {
             transform: translateY(-50%) rotate(225deg);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            transition: none;
           }
         }
       }
@@ -186,6 +192,9 @@
         padding 0.2s ease-out,
         background-color 0.2s ease-out;
     }
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 }
 
@@ -206,6 +215,11 @@
 
       &:where([open])::details-content {
         height: auto;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      &::details-content {
+        transition: none;
       }
     }
     & summary {
