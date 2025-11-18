@@ -95,9 +95,6 @@
     box-shadow: oklch(0% 0 0/ 0.25) 0px 25px 50px -12px;
     overflow-y: auto;
     overscroll-behavior: contain;
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
   }
 }
 
