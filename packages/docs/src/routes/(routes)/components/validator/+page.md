@@ -46,6 +46,7 @@ classnames:
 > :INFO:
 >
 > `validator-hint` class will be invisible if it comes after a `validator` class, then if the input is invalid, `validator-hint` will get visible.  
+> `validator-hint` will be visible if any previous (sibling) invalid `validator` element is present - wrap the elements (eg. in `fieldset`) to only show the hint for one invalid input.  
 > `validator-hint` still occupies space even if it's invisible because we don't want a layout shift when the hint appears.  
 > If you prefer to hide the hint when it's not visible, add `hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.
 
@@ -170,7 +171,7 @@ min="1" max="10"
 
 ### ~Select requirement validator
 #### Click the button before picking an option to see the error color.
-<form class="w-full max-w-xs">
+<form class="w-full max-w-xs" onsubmit={(event) => event.preventDefault()}>
   <select class="select validator" required>
     <option disabled selected value="">Choose:</option>
     <option>Tabs</option>
@@ -189,5 +190,42 @@ min="1" max="10"
   </select>
   <p class="$$validator-hint">Required</p>
   <button class="$$btn" type="submit">Submit form</button>
+</form>
+```
+
+### ~Form requirement validator
+<form class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4" onsubmit={(event) => event.preventDefault()}>
+  <fieldset class="fieldset">
+    <label class="label">Email</label>
+    <input type="email" class="input validator" placeholder="Email" required />
+    <p class="validator-hint hidden">Required</p>
+  </fieldset>
+
+  <label class="fieldset">
+    <span class="label">Password</span>
+    <input type="password" class="input validator" placeholder="Password" required />
+    <span class="validator-hint hidden">Required</span>
+  </label>
+
+  <button class="btn btn-neutral mt-4" type="submit">Login</button>
+  <button class="btn btn-ghost mt-1" type="reset">Reset</button>
+</form>
+
+```html
+<form class="$$fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+  <fieldset class="$$fieldset">
+    <label class="$$label">Email</label>
+    <input type="email" class="$$input $$validator" placeholder="Email" required />
+    <p class="$$validator-hint hidden">Required</p>
+  </fieldset>
+
+  <label class="$$fieldset">
+    <span class="$$label">Password</span>
+    <input type="password" class="$$input $$validator" placeholder="Password" required />
+    <span class="$$validator-hint hidden">Required</span>
+  </label>
+
+  <button class="$$btn $$btn-neutral mt-4" type="submit">Login</button>
+  <button class="$$btn $$btn-ghost mt-1" type="reset">Reset</button>
 </form>
 ```
