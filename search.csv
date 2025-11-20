@@ -525,6 +525,7 @@ Number input requirement validator,/components/validator/#number-input-requireme
 Checkbox requirement validator,/components/validator/#checkbox-requirement-validator,
 Toggle requirement validator,/components/validator/#toggle-requirement-validator,
 Select requirement validator,/components/validator/#select-requirement-validator,
+Form requirement validator,/components/validator/#form-requirement-validator,
 List (second column grows - default),/components/list/#list-second-column-grows-default,
 List (third column grows),/components/list/#list-third-column-grows,
 List (third column wraps to next row),/components/list/#list-third-column-wraps-to-next-row,
