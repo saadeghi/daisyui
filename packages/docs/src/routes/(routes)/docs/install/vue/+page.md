@@ -18,7 +18,7 @@ npm create vite@latest ./ -- --template vue
 ### 2. Install Tailwind CSS and daisyUI
 
 ```sh:Terminal
-npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 ```
 
 Add Tailwind CSS to Vite config
