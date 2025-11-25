@@ -269,7 +269,7 @@
     try {
       if (colorState.mode === "oklch") {
         const { l, c, h } = colorState.oklch
-        return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${h.toFixed(1)})`
+        return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${h.toFixed(3)})`
       }
 
       if (colorState.mode === "hsl") {
