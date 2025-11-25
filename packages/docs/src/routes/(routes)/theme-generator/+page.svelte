@@ -101,13 +101,10 @@
     Object.entries(data.tailwindcolors).map(([keyTw, color]) => {
       const names = []
       const initials = []
-
-      if (keyTw !== "zinc-50") {
-        for (const [keyTheme, themeColor] of Object.entries(currentTheme)) {
-          if (themeColor === color) {
-            names.push(keyTheme.replace("--color-", ""))
-            initials.push(data.colorInitials[keyTheme] || null)
-          }
+      for (const [keyTheme, themeColor] of Object.entries(currentTheme)) {
+        if (themeColor === color) {
+          names.push(keyTheme.replace("--color-", ""))
+          initials.push(data.colorInitials[keyTheme] || null)
         }
       }
 
