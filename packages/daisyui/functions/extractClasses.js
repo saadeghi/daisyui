@@ -58,9 +58,9 @@ export const extractClasses = async ({ srcDir }) => {
 
     // Process each CSS file and sum up the total number of class names
     const classNameCounts = await Promise.all(
-      filteredCssFiles.map(async (file) => {
+      filteredCssFiles.map((file) => {
         const filePath = path.join(stylesDir, file)
-        return await processCssFile(srcDir, filePath)
+        return processCssFile(srcDir, filePath)
       }),
     )
 
