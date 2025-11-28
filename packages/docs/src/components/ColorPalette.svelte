@@ -22,6 +22,7 @@
   let open = $state(false)
   let inputValue = $state(value)
   let isDragging = $state(false)
+  let selectedTailwindColorName = $state(null)
   let colorState = $state({
     oklch: {},
     hsl: {},
@@ -39,31 +40,41 @@
     if (event.key === "Escape") {
       closeModal()
     } else if (event.key === "Enter") {
+      event.preventDefault()
       if (validateColor(inputValue)) {
-        value = inputValue
-        inputValue = ""
+        if (value !== inputValue) {
+          const v = inputValue
+          inputValue = ""
+          value = v
+        }
         closeModal()
       }
     }
   }
 
-  function handleDragStart(color) {
+  function handleDragStart(color, name) {
     isDragging = true
     dragPreviewColor = color
     inputValue = color
+    selectedTailwindColorName = name
   }
 
-  function handleDragOver(color) {
+  function handleDragOver(color, name) {
     if (isDragging) {
       dragPreviewColor = color
       inputValue = color
+      selectedTailwindColorName = name
     }
   }
 
   function handleDragEnd(color) {
     if (isDragging) {
-      value = color
-      inputValue = ""
+      if (value !== color) {
+        inputValue = ""
+        value = color
+      } else {
+        inputValue = color
+      }
       isDragging = false
       dragPreviewColor = null
     }
@@ -71,21 +82,34 @@
 
   function handleGlobalMouseUp() {
     if (isDragging && dragPreviewColor) {
-      value = dragPreviewColor // Ensure value is updated if drag ends elsewhere
-      inputValue = ""
+      if (value !== dragPreviewColor) {
+        inputValue = ""
+        value = dragPreviewColor // Ensure value is updated if drag ends elsewhere
+      } else {
+        inputValue = dragPreviewColor
+      }
     }
     isDragging = false
     dragPreviewColor = null
   }
 
+  let inputDebounce = null
   function handleInput(event) {
-    const newValue = event.target.value
-    if (validateColor(newValue)) {
-      value = newValue
-      inputValue = ""
-    } else {
-      inputValue = newValue
+    if (inputDebounce != null) {
+      clearTimeout(inputDebounce)
     }
+    inputDebounce = setTimeout(() => {
+      inputDebounce = null
+
+      const newValue = event.target.value
+      if (validateColor(newValue) && value !== newValue) {
+        inputValue = ""
+        value = newValue
+        selectedTailwindColorName = null
+      } else {
+        inputValue = newValue
+      }
+    }, 300)
   }
 
   function toggleModal() {
@@ -111,26 +135,31 @@
     onModalStateChange(false)
   }
 
-  $effect(() => {
-    untrack(() => {
-      if (value !== inputValue) {
-        updateColorState(value)
-      }
-    })
-    inputValue = value
+  $effect.pre(() => {
+    if (open) {
+      untrack(() => {
+        if (value !== inputValue) {
+          updateColorState(value)
+        }
+      })
+      inputValue = value
+    }
   })
 
   // Update inputValue when colorState changes
-  $effect(() => {
+  $effect.pre(() => {
     const newValue = generateColorValue()
 
     untrack(() => {
-      if (inputValue !== newValue) {
+      if (newValue != null && inputValue !== newValue) {
         if (!colorState.changed) {
           colorState.value = newValue
           inputValue = newValue
         }
         value = newValue
+        if (colorState.changed) {
+          selectedTailwindColorName = null
+        }
       }
     })
   })
@@ -138,7 +167,9 @@
   // Get the color to display (preview during dragging, actual value otherwise)
   const displayColor = $derived(dragPreviewColor || value)
 
-  const colorName = $derived(colorDetails.find(([, color]) => color === inputValue)?.[0])
+  const colorName = $derived(
+    selectedTailwindColorName || colorDetails.find(([, color]) => color === inputValue)?.[0],
+  )
   const colorPairsMap = $derived.by(() => {
     const map = {
       color: {},
@@ -247,7 +278,7 @@
     try {
       if (colorState.mode === "oklch") {
         const { l, c, h } = colorState.oklch
-        return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${h.toFixed(1)})`
+        return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${h.toFixed(3)})`
       }
 
       if (colorState.mode === "hsl") {
@@ -268,7 +299,7 @@
 
       return `rgb(${colorState.rgb.r} ${colorState.rgb.g} ${colorState.rgb.b})`
     } catch {
-      return inputValue // Fallback to current value if conversion fails
+      return null
     }
   }
 </script>
@@ -398,17 +429,17 @@
             <button
               class="appearance-none p-px [writing-mode:lr]"
               aria-label={name}
-              onmousedown={() => handleDragStart(color)}
-              onmouseover={() => handleDragOver(color)}
-              onfocus={() => handleDragOver(color)}
+              onmousedown={() => handleDragStart(color, name)}
+              onmouseover={() => handleDragOver(color, name)}
+              onfocus={() => handleDragOver(color, name)}
               onmouseup={() => handleDragEnd(color)}
-              onkeypress={() => handleDragStart(color)}
+              onkeypress={() => handleDragStart(color, name)}
             >
               <div
                 class="border-base-content/10 relative grid aspect-square w-5 place-items-center rounded-full border bg-transparent select-none sm:m-px sm:w-7"
-                class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={displayColor === color}
-                class:outline-white={displayColor === color}
-                class:outline-offset-[-3px]={displayColor === color}
+                class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={colorName === name}
+                class:outline-white={colorName === name}
+                class:outline-offset-[-3px]={colorName === name}
                 style:background-color={color}
               >
                 {#if initials != null}
@@ -514,17 +545,8 @@
               <input
                 type="text"
                 class="grow xl:font-mono xl:normal-nums"
-                bind:value={inputValue}
+                value={inputValue}
                 oninput={handleInput}
-                onkeydown={(event) => {
-                  if (event.key === "Enter") {
-                    event.preventDefault()
-                    if (validateColor(inputValue)) {
-                      value = inputValue
-                      closeModal()
-                    }
-                  }
-                }}
                 aria-label={`${name} value`}
               />
               {#if colorName}
@@ -554,7 +576,7 @@
   <div
     class="modal-backdrop"
     onclick={closeModal}
-    onkeydown={(e) => e.key === "Enter" && closeModal()}
+    onkeydown={handleKeydown}
     role="button"
     tabindex="0"
     aria-label="Close modal"
