@@ -431,7 +431,7 @@ classnames:
       <li>
         <details>
           <summary>Parent</summary>
-          <ul class="p-2">
+          <ul class="p-2 bg-base-100 w-40 z-1">
             <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
