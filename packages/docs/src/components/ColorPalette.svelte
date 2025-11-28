@@ -22,6 +22,7 @@
   let open = $state(false)
   let inputValue = $state(value)
   let isDragging = $state(false)
+  let selectedTailwindColorName = $state(null)
   let colorState = $state({
     oklch: {},
     hsl: {},
@@ -51,16 +52,18 @@
     }
   }
 
-  function handleDragStart(color) {
+  function handleDragStart(color, name) {
     isDragging = true
     dragPreviewColor = color
     inputValue = color
+    selectedTailwindColorName = name
   }
 
-  function handleDragOver(color) {
+  function handleDragOver(color, name) {
     if (isDragging) {
       dragPreviewColor = color
       inputValue = color
+      selectedTailwindColorName = name
     }
   }
 
@@ -102,6 +105,7 @@
       if (validateColor(newValue) && value !== newValue) {
         inputValue = ""
         value = newValue
+        selectedTailwindColorName = null
       } else {
         inputValue = newValue
       }
@@ -153,6 +157,9 @@
           inputValue = newValue
         }
         value = newValue
+        if (colorState.changed) {
+          selectedTailwindColorName = null
+        }
       }
     })
   })
@@ -160,7 +167,9 @@
   // Get the color to display (preview during dragging, actual value otherwise)
   const displayColor = $derived(dragPreviewColor || value)
 
-  const colorName = $derived(colorDetails.find(([, color]) => color === inputValue)?.[0])
+  const colorName = $derived(
+    selectedTailwindColorName || colorDetails.find(([, color]) => color === inputValue)?.[0],
+  )
   const colorPairsMap = $derived.by(() => {
     const map = {
       color: {},
@@ -420,11 +429,11 @@
             <button
               class="appearance-none p-px [writing-mode:lr]"
               aria-label={name}
-              onmousedown={() => handleDragStart(color)}
-              onmouseover={() => handleDragOver(color)}
-              onfocus={() => handleDragOver(color)}
+              onmousedown={() => handleDragStart(color, name)}
+              onmouseover={() => handleDragOver(color, name)}
+              onfocus={() => handleDragOver(color, name)}
               onmouseup={() => handleDragEnd(color)}
-              onkeypress={() => handleDragStart(color)}
+              onkeypress={() => handleDragStart(color, name)}
             >
               <div
                 class="border-base-content/10 relative grid aspect-square w-5 place-items-center rounded-full border bg-transparent select-none sm:m-px sm:w-7"
