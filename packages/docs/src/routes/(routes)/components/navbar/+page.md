@@ -388,7 +388,7 @@ classnames:
       <li>
         <details>
           <summary>Parent</summary>
-          <ul class="p-2 bg-base-100 w-40">
+          <ul class="p-2 bg-base-100 w-40 z-1">
             <li><button>Submenu 1</button></li>
             <li><button>Submenu 2</button></li>
           </ul>
