@@ -316,13 +316,13 @@ var properties_default = ({ addBase, prefix = "" }) => {
   addBase({ ...prefixedproperties });
 };
 
-// packages/daisyui/base/rootscrolllock/object.js
+// packages/daisyui/base/rootscrollock/object.js
 var object_default5 = { ":root:not(span)": { overflow: "var(--page-overflow)" } };
 
-// packages/daisyui/base/rootscrolllock/index.js
-var rootscrolllock_default = ({ addBase, prefix = "" }) => {
-  const prefixedrootscrolllock = addPrefix(object_default5, prefix);
-  addBase({ ...prefixedrootscrolllock });
+// packages/daisyui/base/rootscrollock/index.js
+var rootscrollock_default = ({ addBase, prefix = "" }) => {
+  const prefixedrootscrollock = addPrefix(object_default5, prefix);
+  addBase({ ...prefixedrootscrollock });
 };
 
 // packages/daisyui/base/rootscrollgutter/object.js
@@ -946,7 +946,7 @@ var radius_default = ({ addUtilities, prefix = "" }) => {
 };
 
 // packages/daisyui/imports.js
-var base = { svg: svg_default, scrollbar: scrollbar_default, properties: properties_default, rootscrolllock: rootscrolllock_default, rootscrollgutter: rootscrollgutter_default, rootcolor: rootcolor_default };
+var base = { svg: svg_default, scrollbar: scrollbar_default, properties: properties_default, rootscrollock: rootscrollock_default, rootscrollgutter: rootscrollgutter_default, rootcolor: rootcolor_default };
 var components = { textarea: textarea_default, rating: rating_default, calendar: calendar_default, dropdown: dropdown_default, tab: tab_default, fileinput: fileinput_default, modal: modal_default, radialprogress: radialprogress_default, checkbox: checkbox_default, select: select_default, radio: radio_default, avatar: avatar_default, toast: toast_default, hover3d: hover3d_default, carousel: carousel_default, textrotate: textrotate_default, mockup: mockup_default, divider: divider_default, button: button_default, fieldset: fieldset_default, steps: steps_default, navbar: navbar_default, stat: stat_default, countdown: countdown_default, skeleton: skeleton_default, card: card_default, drawer: drawer_default, indicator: indicator_default, footer: footer_default, loading: loading_default, menu: menu_default, toggle: toggle_default, badge: badge_default, link: link_default, validator: validator_default, list: list_default, tooltip: tooltip_default, table: table_default, hero: hero_default, breadcrumbs: breadcrumbs_default, collapse: collapse_default, stack: stack_default, diff: diff_default, filter: filter_default, dock: dock_default, mask: mask_default, label: label_default, status: status_default, hovergallery: hovergallery_default, alert: alert_default, fab: fab_default, kbd: kbd_default, input: input_default, timeline: timeline_default, chat: chat_default, range: range_default, progress: progress_default, swap: swap_default };
 var utilities = { glass: glass_default, join: join_default, typography: typography_default, radius: radius_default };
 
