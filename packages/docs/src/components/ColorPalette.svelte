@@ -265,6 +265,15 @@
     }
   }
 
+  const reNoDecimals = /\.0+$/
+  function toFixed(value, decimals) {
+    if (!value) return '0'
+    const text = value.toFixed(decimals)
+    return reNoDecimals.test(text)
+      ? text.split('.')[0]
+      : text
+  }
+
   // Helper function to generate color value from color state
   function generateColorValue() {
     if (
@@ -278,12 +287,12 @@
     try {
       if (colorState.mode === "oklch") {
         const { l, c, h } = colorState.oklch
-        return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${h.toFixed(3)})`
+        return `oklch(${toFixed(l * 100, 1)}% ${toFixed(c, 3)} ${toFixed(h, 3)})`
       }
 
       if (colorState.mode === "hsl") {
         const { h, s, l } = colorState.hsl
-        return `hsl(${h.toFixed(1)} ${(s * 100).toFixed(1)}% ${(l * 100).toFixed(1)}%)`
+        return `hsl(${toFixed(h, 1)} ${toFixed(s * 100, 1)}% ${toFixed(l * 100, 1)}%)`
       }
 
       const { r, g, b } = colorState.rgb
