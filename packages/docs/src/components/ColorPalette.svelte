@@ -440,6 +440,7 @@
                 class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={colorName === name}
                 class:outline-white={colorName === name}
                 class:outline-offset-[-3px]={colorName === name}
+                class:z-1={colorName === name}
                 style:background-color={color}
               >
                 {#if initials != null}
