@@ -260,11 +260,9 @@
 
   const reNoDecimals = /\.0+$/
   function toFixed(value, decimals) {
-    if (!value) return '0'
+    if (!value) return "0"
     const text = value.toFixed(decimals)
-    return reNoDecimals.test(text)
-      ? text.split('.')[0]
-      : text
+    return reNoDecimals.test(text) ? text.split(".")[0] : text
   }
 
   // Helper function to generate color value from color state
