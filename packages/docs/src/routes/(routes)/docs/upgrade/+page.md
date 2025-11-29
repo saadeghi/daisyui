@@ -48,7 +48,7 @@ npx @tailwindcss/upgrade
 ```bash:Terminal
 npm i -D daisyui@latest
 ```
-3. Add daisyUI to your CSS file
+2. Add daisyUI to your CSS file
   
 ```postcss:app.css
 @import "tailwindcss";
