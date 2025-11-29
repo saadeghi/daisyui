@@ -322,11 +322,11 @@
 
 <dialog
   bind:this={dialog}
-  class="modal modal-bottom lg:modal-middle [&::backdrop]:hidden [&:has(input.range:active)]:bg-transparent"
+  class="modal modal-bottom lg:modal-middle [&::backdrop]:hidden [&:has(.range-is-active)]:bg-transparent"
   inert={!open ? true : undefined}
 >
   <div
-    class="modal-box border-base-300 flex flex-col gap-4 overflow-x-hidden border p-0 max-lg:max-h-[80vh] lg:max-w-[50rem] [&:has(input.range:active)]:border-transparent [&:has(input.range:active)]:bg-transparent [&:has(input.range:active)]:shadow-none [&:has(input.range:active)_.hide-when-range-is-active]:invisible"
+    class="modal-box border-base-300 flex flex-col gap-4 overflow-x-hidden border p-0 max-lg:max-h-[80vh] lg:max-w-[50rem] [&:has(.range-is-active)]:border-transparent [&:has(.range-is-active)]:bg-transparent [&:has(.range-is-active)]:shadow-none [&:has(.range-is-active)_.hide-when-range-is-active]:invisible"
   >
     {#if open}
       <div class="flex items-center justify-between gap-2 px-8 pt-6 pb-0 max-md:flex-col">
