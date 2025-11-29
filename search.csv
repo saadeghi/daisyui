@@ -14,15 +14,15 @@ title,url,classnames
 Store,/store/
 Nexus Dashboard 3.1,/store/nexus/
 Scalo Startup Template 3.0,/store/scalo/
-Official daisyUI Figma Library 2.0,/store/daisyui-figma-library/
+Official daisyUI Figma Library,/store/daisyui-figma-library/
 HTML Dashboard template,/store/html-dashboard/
 Blink template,/store/blink/
 Online Store template 2.0,/store/online-store/
 SaaS landing page,/store/saas-landingpage/
 Blog template 2.0,/store/blog-template/
 Documentation template,/store/documentation-template/
-Mobile app landing page,/store/mobile-app-landingpage/
 Auth template 2.0,/store/auth-template/
+Mobile app landing page,/store/mobile-app-landingpage/
 daisyUI Logo,/brand/,
 Textarea,/components/textarea/,textarea textarea-ghost textarea-neutral textarea-primary textarea-secondary textarea-accent textarea-info textarea-success textarea-warning textarea-error textarea-xs textarea-sm textarea-md textarea-lg textarea-xl
 Rating,/components/rating/,rating rating-half rating-hidden rating-xs rating-sm rating-md rating-lg rating-xl

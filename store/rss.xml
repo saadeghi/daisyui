@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store//</link>
-    <lastBuildDate>Fri, 28 Nov 2025 13:53:35 GMT</lastBuildDate>
-    <pubDate>Fri, 28 Nov 2025 13:53:35 GMT</pubDate>
+    <lastBuildDate>Sat, 29 Nov 2025 09:04:12 GMT</lastBuildDate>
+    <pubDate>Sat, 29 Nov 2025 09:04:12 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -107,12 +107,10 @@ Team and Enterprise license:
       
         <item>
           <title>
-            <![CDATA[ Official daisyUI Figma Library 2.0 ]]>
+            <![CDATA[ Official daisyUI Figma Library ]]>
           </title>
           <description>
-            <![CDATA[ 🎉 New version is available!
-
-**Available in 3 plans**, Including:
+            <![CDATA[ **Available in 3 plans**, Including:
   - Documentation and step by step tutorial for everything
   - All daisyUI components (61+)
   - All daisyUI variants (2500+)
@@ -282,30 +280,6 @@ Including:
       
         <item>
           <title>
-            <![CDATA[ Mobile app landing page ]]>
-          </title>
-          <description>
-            <![CDATA[ Landing page for mobile app introduction.
-
-Features:
-  - A landing page layout made with daisyUI 5
-  - Available for HTML, React, Svelte, Vue
-
-
-Including:
-  - 2 exclusive daisyUI themes (dark/light)
-  - Compatible with all daisyUI themes (32 themes)
-  - Responsive layout
-  - Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons
-  - Theme changer menu ]]>
-          </description>
-          <link>https://www.creem.io/payment/prod_5P3uPzHqmIapdYrfcN3kYa/</link>
-          <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-          <guid isPermaLink="false">https://www.creem.io/payment/prod_5P3uPzHqmIapdYrfcN3kYa/</guid>
-        </item>
-      
-        <item>
-          <title>
             <![CDATA[ Auth template 2.0 ]]>
           </title>
           <description>
@@ -327,6 +301,30 @@ Including:
           <link>https://www.creem.io/payment/prod_5WTF3NMjAyFXqUppgngpBP/</link>
           <pubDate>Sat, 11 Nov 2023 00:00:00 GMT</pubDate>
           <guid isPermaLink="false">https://www.creem.io/payment/prod_5WTF3NMjAyFXqUppgngpBP/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ Mobile app landing page ]]>
+          </title>
+          <description>
+            <![CDATA[ Landing page for mobile app introduction.
+
+Features:
+  - A landing page layout made with daisyUI 5
+  - Available for HTML, React, Svelte, Vue
+
+
+Including:
+  - 2 exclusive daisyUI themes (dark/light)
+  - Compatible with all daisyUI themes (32 themes)
+  - Responsive layout
+  - Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons
+  - Theme changer menu ]]>
+          </description>
+          <link>https://www.creem.io/payment/prod_5P3uPzHqmIapdYrfcN3kYa/</link>
+          <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
+          <guid isPermaLink="false">https://www.creem.io/payment/prod_5P3uPzHqmIapdYrfcN3kYa/</guid>
         </item>
       
   </channel>
