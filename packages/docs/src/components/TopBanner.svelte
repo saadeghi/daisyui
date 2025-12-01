@@ -13,7 +13,7 @@
 </script>
 
 <!-- Without timer -->
-{#if false && !$page.url.pathname.startsWith("/blueprint/")}
+{#if true && !$page.url.pathname.startsWith("/blueprint/")}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       href="/blueprint/"
