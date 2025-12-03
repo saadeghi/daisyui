@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.5.6 (2025-12-03)
 
+### Bug Fixes
+
+* chat bubble height overflow on Safari ([e36afac](https://github.com/saadeghi/daisyui/commit/e36afacd5af19955caff8360befbc6ef38b1847c)), closes [/github.com/saadeghi/daisyui/issues/3712#issuecomment-3599503502](https://github.com/saadeghi//github.com/saadeghi/daisyui/issues/3712/issues/issuecomment-3599503502)
+
 ## 5.5.5 (2025-11-15)
 
 
