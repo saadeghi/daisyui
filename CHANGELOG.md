@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.8 (2025-12-03)
+
+
+### Bug Fixes
+
+* badge padding to respect --size-selector, clean up kbd and tab padding properties. closes: [#4293](https://github.com/saadeghi/daisyui/issues/4293) ([e713958](https://github.com/saadeghi/daisyui/commit/e7139585b3a35c40578777c0c70d8faae1c8f504))
+
 ## 5.5.7 (2025-12-03)
 
 
