@@ -3,6 +3,8 @@
 
   let { colorState = $bindable() } = $props()
 
+  let isActive = $state(false)
+
   // Calculate range indicators for OKLCH sliders (L and C) - only show out-of-gamut for all (not in sRGB, P3, Rec2020)
   function calculateOKLCHRange(type, currentState) {
     // Helper: is truly out of all gamuts
@@ -409,11 +411,14 @@
   })
 </script>
 
-<div
-  class="hide-when-range-is-active [&:has(input.range:active)_.setbgcolor]:bg-base-100/50 flex w-full flex-col gap-6 md:col-span-3 md:p-4 [&:has(input.range:active)]:visible!"
->
+<div class={["flex w-full flex-col gap-6 md:col-span-3 md:p-4", isActive ? "range-is-active" : ""]}>
   {#each sliderConfigs as config, index (index)}
-    <div class="setbgcolor rounded-box border-base-100/20 h-20 border-2 px-4 pt-8 backdrop-blur-md">
+    <div
+      class={[
+        "rounded-box border-base-100/20 h-20 border-2 px-4 pt-8 backdrop-blur-md",
+        isActive ? "bg-base-100/50" : "",
+      ]}
+    >
       <!-- Moving tooltip above the slider thumb -->
       {#if config.max > config.min}
         <div class="relative mx-4 w-[calc(100%-2rem)]">
@@ -446,6 +451,21 @@
           // Update the bound value
           config.setter(parseFloat(e.target.value))
           colorState.changed = true
+        }}
+        ontouchstart={() => {
+          isActive = true
+        }}
+        ontouchend={() => {
+          isActive = false
+        }}
+        ontouchcancel={() => {
+          isActive = false
+        }}
+        onmousedown={() => {
+          isActive = true
+        }}
+        onmouseup={() => {
+          isActive = false
         }}
         class="range range-xl focus:outline-base-content/10 outline-base-content/10 w-full text-transparent outline [--range-thumb:transparent] focus:outline [&.range::-webkit-slider-thumb]:shadow-[0_0_0_1px_oklch(0_0_0/.3)_inset,0_0_0_2px_oklch(100_0_0)_inset]"
         style={`background: ${generateSliderGradient(config.gradientType, colorState)};`}

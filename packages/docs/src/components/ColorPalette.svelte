@@ -229,14 +229,7 @@
           // Handle black/white/achromatic colors properly
           colorState.oklch.l = oklchColor.l ?? colorState.oklch.l
           colorState.oklch.c = oklchColor.c ?? colorState.oklch.c
-          // Set hue if not initialized yet
-          if (colorState.oklch.h == null) {
-            colorState.oklch.h = 0
-          }
-          // Only update hue if chroma > 0, otherwise keep current hue
-          if (oklchColor.c && oklchColor.c > 0) {
-            colorState.oklch.h = oklchColor.h ?? colorState.oklch.h
-          }
+          colorState.oklch.h = oklchColor.h ?? colorState.oklch.h
         }
 
         const hslColor = hsl(parsedColor)
@@ -265,6 +258,13 @@
     }
   }
 
+  const reNoDecimals = /\.0+$/
+  function toFixed(value, decimals) {
+    if (!value) return "0"
+    const text = value.toFixed(decimals)
+    return reNoDecimals.test(text) ? text.split(".")[0] : text
+  }
+
   // Helper function to generate color value from color state
   function generateColorValue() {
     if (
@@ -278,12 +278,12 @@
     try {
       if (colorState.mode === "oklch") {
         const { l, c, h } = colorState.oklch
-        return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${h.toFixed(3)})`
+        return `oklch(${toFixed(l * 100, 1)}% ${toFixed(c, 3)} ${toFixed(h, 3)})`
       }
 
       if (colorState.mode === "hsl") {
         const { h, s, l } = colorState.hsl
-        return `hsl(${h.toFixed(1)} ${(s * 100).toFixed(1)}% ${(l * 100).toFixed(1)}%)`
+        return `hsl(${toFixed(h, 1)} ${toFixed(s * 100, 1)}% ${toFixed(l * 100, 1)}%)`
       }
 
       const { r, g, b } = colorState.rgb
@@ -320,11 +320,11 @@
 
 <dialog
   bind:this={dialog}
-  class="modal modal-bottom lg:modal-middle [&::backdrop]:hidden [&:has(input.range:active)]:bg-transparent"
+  class="modal modal-bottom lg:modal-middle [&::backdrop]:hidden [&:has(.range-is-active)]:bg-transparent"
   inert={!open ? true : undefined}
 >
   <div
-    class="modal-box border-base-300 flex flex-col gap-4 overflow-x-hidden border p-0 max-lg:max-h-[80vh] lg:max-w-[50rem] [&:has(input.range:active)]:border-transparent [&:has(input.range:active)]:bg-transparent [&:has(input.range:active)]:shadow-none [&:has(input.range:active)_.hide-when-range-is-active]:invisible"
+    class="modal-box border-base-300 flex flex-col gap-4 overflow-x-hidden border p-0 max-lg:max-h-[80vh] lg:max-w-[50rem] [&:has(.range-is-active)]:border-transparent [&:has(.range-is-active)]:bg-transparent [&:has(.range-is-active)]:shadow-none [&:has(.range-is-active)_.hide-when-range-is-active]:invisible"
   >
     {#if open}
       <div class="flex items-center justify-between gap-2 px-8 pt-6 pb-0 max-md:flex-col">
@@ -440,6 +440,7 @@
                 class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={colorName === name}
                 class:outline-white={colorName === name}
                 class:outline-offset-[-3px]={colorName === name}
+                class:z-1={colorName === name}
                 style:background-color={color}
               >
                 {#if initials != null}
