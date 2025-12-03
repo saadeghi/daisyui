@@ -2,8 +2,7 @@
   box-shadow: none;
   @layer daisyui.l1.l2.l3 {
     @apply bg-base-200 rounded-field inline-flex items-center justify-center align-middle;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-inline: 0.5em;
     border: var(--border) solid color-mix(in srgb, var(--color-base-content) 20%, #0000);
     border-bottom: calc(var(--border) + 1px) solid
       color-mix(in srgb, var(--color-base-content) 20%, #0000);
