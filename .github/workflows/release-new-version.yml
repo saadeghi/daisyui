@@ -28,6 +28,9 @@ jobs:
     needs: run-tests
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -71,7 +74,7 @@ jobs:
         if: github.repository == 'saadeghi/daisyui'
         run: |
           cd packages/daisyui
-          npm publish --provenance
+          npm publish --provenance --access public
 
   deploy-docs:
     name: 📘 Docs
