@@ -41,6 +41,9 @@ jobs:
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
+        with:
+          registries: |
+            https://registry.npmjs.org/
 
       - name: Install dependencies
         run: bun i
