@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.7 (2025-12-03)
+
+
+### Bug Fixes
+
+* cleanup a few instances of calc in tabs and FAB ([#4292](https://github.com/saadeghi/daisyui/issues/4292)) ([589c5ad](https://github.com/saadeghi/daisyui/commit/589c5ad766cdcb61947a003812eb4b4005f92629))
+
 ## 5.5.6 (2025-12-03)
 
 ### Bug Fixes
