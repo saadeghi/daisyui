@@ -70,12 +70,8 @@ jobs:
       - name: Publish package to NPM
         if: github.repository == 'saadeghi/daisyui'
         run: |
-          echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
           cd packages/daisyui
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          NPM_CONFIG_LOGLEVEL: verbose
+          npm publish --provenance
 
   deploy-docs:
     name: 📘 Docs
