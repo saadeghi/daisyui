@@ -28,9 +28,6 @@ jobs:
     needs: run-tests
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,9 +38,6 @@ jobs:
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-        with:
-          registries: |
-            https://registry.npmjs.org/
 
       - name: Install dependencies
         run: bun i
@@ -76,8 +70,12 @@ jobs:
       - name: Publish package to NPM
         if: github.repository == 'saadeghi/daisyui'
         run: |
+          echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
           cd packages/daisyui
-          npm publish --provenance --access public
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_LOGLEVEL: verbose
 
   deploy-docs:
     name: 📘 Docs
