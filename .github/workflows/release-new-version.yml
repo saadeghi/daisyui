@@ -29,7 +29,7 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       id-token: write
     steps:
       - name: Checkout
