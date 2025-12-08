@@ -36,7 +36,7 @@
       @apply col-start-1 row-start-1;
     }
 
-    > *:not(.drawer-overlay) {
+    > :not(.drawer-overlay) {
       @apply will-change-transform;
       transition:
         translate 0.3s ease-out,
@@ -73,7 +73,7 @@
     :where(&:checked ~ .drawer-side) {
       @apply pointer-events-auto visible overflow-y-auto opacity-100;
 
-      & > *:not(.drawer-overlay) {
+      & > :not(.drawer-overlay) {
         translate: 0%;
       }
     }
@@ -98,7 +98,7 @@
         @apply col-start-2 justify-items-end;
       }
 
-      & ~ .drawer-side > *:not(.drawer-overlay) {
+      & ~ .drawer-side > :not(.drawer-overlay) {
         translate: 100%;
 
         [dir="rtl"] & {
@@ -106,7 +106,7 @@
         }
       }
 
-      &:checked ~ .drawer-side > *:not(.drawer-overlay) {
+      &:checked ~ .drawer-side > :not(.drawer-overlay) {
         translate: 0%;
       }
     }
@@ -147,7 +147,7 @@
           @apply cursor-default bg-transparent;
         }
 
-        & > *:not(.drawer-overlay) {
+        & > :not(.drawer-overlay) {
           translate: 0%;
 
           [dir="rtl"] & {
