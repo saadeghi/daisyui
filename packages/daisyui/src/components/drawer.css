@@ -146,18 +146,20 @@
         > .drawer-overlay {
           @apply cursor-default bg-transparent;
         }
-
-        > :not(.drawer-overlay) {
-          translate: 0%;
-
-          [dir="rtl"] & {
-            translate: 0%;
-          }
-        }
       }
 
       &:checked ~ .drawer-side {
         @apply pointer-events-auto visible;
+      }
+    }
+  }
+
+  @layer daisyui.l1 {
+    > .drawer-toggle ~ .drawer-side > :not(.drawer-overlay) {
+      translate: 0%;
+
+      [dir="rtl"] & {
+        translate: 0%;
       }
     }
   }
