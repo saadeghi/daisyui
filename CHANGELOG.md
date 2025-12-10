@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.10 (2025-12-10)
+
+
+### Bug Fixes
+
+* rule priority for `.drawer-end` and `.drawer-open`. closes [#4331](https://github.com/saadeghi/daisyui/issues/4331) ([82e68d4](https://github.com/saadeghi/daisyui/commit/82e68d4ec793b5a9d415d090ba766eaa9b20a4ba))
+
 ## 5.5.9 (2025-12-10)
 
 
