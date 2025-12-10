@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.9 (2025-12-10)
+
+
+### Bug Fixes
+
+* improve root color. closes: [#4294](https://github.com/saadeghi/daisyui/issues/4294) ([5cf3e89](https://github.com/saadeghi/daisyui/commit/5cf3e89a08197288d3cad0188e313db5d77f38f6))
+
 ## 5.5.8 (2025-12-03)
 
 
