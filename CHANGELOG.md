@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.11 (2025-12-10)
+
+
+### Bug Fixes
+
+* range color issue when there's a ling range slider on a ultrawide screen ([#4335](https://github.com/saadeghi/daisyui/issues/4335)). closes [#4334](https://github.com/saadeghi/daisyui/issues/4334) ([810f519](https://github.com/saadeghi/daisyui/commit/810f519eff7eda0498f23f86dc015d14a8799945))
+
 ## 5.5.10 (2025-12-10)
 
 
