@@ -36,7 +36,7 @@
       @apply col-start-1 row-start-1;
     }
 
-    > *:not(.drawer-overlay) {
+    > :not(.drawer-overlay) {
       @apply will-change-transform;
       transition:
         translate 0.3s ease-out,
@@ -73,7 +73,7 @@
     :where(&:checked ~ .drawer-side) {
       @apply pointer-events-auto visible overflow-y-auto opacity-100;
 
-      & > *:not(.drawer-overlay) {
+      > :not(.drawer-overlay) {
         translate: 0%;
       }
     }
@@ -90,15 +90,15 @@
     grid-auto-columns: auto max-content;
 
     > .drawer-toggle {
-      & ~ .drawer-content {
+      ~ .drawer-content {
         @apply col-start-1;
       }
 
-      & ~ .drawer-side {
+      ~ .drawer-side {
         @apply col-start-2 justify-items-end;
       }
 
-      & ~ .drawer-side > *:not(.drawer-overlay) {
+      ~ .drawer-side > :not(.drawer-overlay) {
         translate: 100%;
 
         [dir="rtl"] & {
@@ -106,7 +106,7 @@
         }
       }
 
-      &:checked ~ .drawer-side > *:not(.drawer-overlay) {
+      &:checked ~ .drawer-side > :not(.drawer-overlay) {
         translate: 0%;
       }
     }
@@ -115,8 +115,8 @@
 
 .drawer-open {
   @layer daisyui.l1.l2.l3 {
-    & > .drawer-toggle:checked {
-      & ~ .drawer-side {
+    > .drawer-toggle:checked {
+      ~ .drawer-side {
         scrollbar-color: revert-layer;
       }
 
@@ -133,31 +133,33 @@
   }
 
   @layer daisyui.l1.l2 {
-    & > .drawer-side {
+    > .drawer-side {
       @apply overflow-y-auto;
     }
 
     > .drawer-toggle {
       @apply hidden;
 
-      & ~ .drawer-side {
+      ~ .drawer-side {
         @apply pointer-events-auto visible sticky block w-auto overscroll-auto opacity-100;
 
-        & > .drawer-overlay {
+        > .drawer-overlay {
           @apply cursor-default bg-transparent;
-        }
-
-        & > *:not(.drawer-overlay) {
-          translate: 0%;
-
-          [dir="rtl"] & {
-            translate: 0%;
-          }
         }
       }
 
       &:checked ~ .drawer-side {
         @apply pointer-events-auto visible;
+      }
+    }
+  }
+
+  @layer daisyui.l1 {
+    > .drawer-toggle ~ .drawer-side > :not(.drawer-overlay) {
+      translate: 0%;
+
+      [dir="rtl"] & {
+        translate: 0%;
       }
     }
   }
