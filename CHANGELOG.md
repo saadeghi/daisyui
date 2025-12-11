@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.13 (2025-12-11)
+
+
+### Bug Fixes
+
+* allow `.list-col-wrap` to work with Tailwind CSS variant prefixes. closes: [#4336](https://github.com/saadeghi/daisyui/issues/4336) ([56ef803](https://github.com/saadeghi/daisyui/commit/56ef803c89f1e9bfa4e879a0f111d0a59ec885d8))
+
 ## 5.5.12 (2025-12-11)
 
 
