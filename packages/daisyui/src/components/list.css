@@ -44,7 +44,7 @@
         --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto)
           minmax(0, auto) 1fr;
       }
-      > :not(.list-col-wrap) {
+      > * {
         @apply row-start-1;
       }
     }
@@ -52,7 +52,7 @@
 }
 
 .list-col-wrap {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1 {
     @apply row-start-2;
   }
 }
