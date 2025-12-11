@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.12 (2025-12-11)
+
+
+### Bug Fixes
+
+* add transition for collapse `min-height`. closes: [#2615](https://github.com/saadeghi/daisyui/issues/2615) ([600ab73](https://github.com/saadeghi/daisyui/commit/600ab73a271e42433d078408f34265f684f617ce))
+
 ## 5.5.11 (2025-12-10)
 
 
