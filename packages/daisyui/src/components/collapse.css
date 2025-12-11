@@ -183,7 +183,8 @@
       transition:
         content-visibility 0.2s allow-discrete,
         visibility 0.2s allow-discrete,
-        padding 0.2s ease-out,
+        min-height 0.2s ease-out allow-discrete,
+        padding 0.1s ease-out 20ms,
         background-color 0.2s ease-out;
     }
   }
@@ -197,7 +198,8 @@
         transition:
           content-visibility 0.2s allow-discrete,
           visibility 0.2s allow-discrete,
-          padding 0.2s ease-out,
+          min-height 0.2s ease-out allow-discrete,
+          padding 0.1s ease-out 20ms,
           background-color 0.2s ease-out,
           height 0.2s;
         height: 0;
@@ -284,6 +286,7 @@
     transition: background-color 0.2s ease-out;
   }
 }
+
 .collapse-open {
   @layer daisyui.l1.l2 {
     grid-template-rows: max-content 1fr;
