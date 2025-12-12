@@ -65,6 +65,16 @@
       --join-ee: var(--radius-field);
     }
   }
+
+  > :where(:focus, :has(:focus)) {
+    z-index: 1;
+  }
+
+  @media (hover: hover) {
+    > :where(.btn:hover, :has(.btn:hover)) {
+      isolation: isolate;
+    }
+  }
 }
 
 .join-item {
