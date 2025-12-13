@@ -5,7 +5,7 @@
     --menu-active-bg: var(--color-neutral);
     font-size: 0.875rem;
 
-    :where(li ul) {
+    :where(li ul, li menu) {
       @apply relative ms-4 ps-2 whitespace-nowrap;
 
       &:before {
@@ -19,7 +19,7 @@
       @apply hidden;
     }
 
-    :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)),
+    :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title, .btn)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field grid grid-flow-col content-start items-center gap-2 px-3 py-1.5 text-start;
       transition-property: color, background-color, box-shadow;
@@ -80,7 +80,7 @@
     }
 
     :where(
-      li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title),
+      li:not(.menu-title, .disabled) > *:not(ul, menu, details, .menu-title),
       li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
     ):not(.menu-active, :active, .btn) {
       &.menu-focus,
@@ -90,7 +90,7 @@
     }
     :where(
       li:not(.menu-title, .disabled)
-        > *:not(ul, details, .menu-title):not(.menu-active, :active, .btn):hover,
+        > *:not(ul, menu, details, .menu-title):not(.menu-active, :active, .btn):hover,
       li:not(.menu-title, .disabled)
         > details
         > summary:not(.menu-title):not(.menu-active, :active, .btn):hover
@@ -114,8 +114,8 @@
         @apply justify-self-end;
       }
 
-      & > *:not(ul, .menu-title, details, .btn):active,
-      & > *:not(ul, .menu-title, details, .btn).menu-active,
+      & > *:not(ul, menu, .menu-title, details, .btn):active,
+      & > *:not(ul, menu, .menu-title, details, .btn).menu-active,
       & > details > summary:active {
         @apply outline-hidden;
         color: var(--menu-active-fg);
@@ -159,7 +159,7 @@
     @apply inline-flex flex-row;
 
     & > li:not(.menu-title) > details {
-      & > ul {
+      & > :is(ul, menu) {
         @apply bg-base-100 rounded-box absolute ms-0 mt-4 origin-top py-2 pe-2 opacity-0;
         scale: 95%;
         box-shadow:
@@ -180,13 +180,13 @@
         }
       }
 
-      &[open] > ul {
+      &[open] > :is(ul, menu) {
         @apply opacity-100;
         scale: 100%;
       }
     }
 
-    & > li > details > ul {
+    & > li > details > :is(ul, menu) {
       &:before {
         --tw-content: none;
         content: var(--tw-content);
@@ -199,7 +199,7 @@
   @layer daisyui.l1.l2 {
     @apply inline-flex flex-col;
 
-    & > li:not(.menu-title) > details > ul {
+    & > li:not(.menu-title) > details > is:(ul, menu) {
       @apply relative ms-4 mt-0 py-0 pe-0;
       background-color: revert-layer;
       border-radius: revert-layer;
@@ -212,7 +212,7 @@
 
 .menu-xs {
   @layer daisyui.l1.l2 {
-    :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+    :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-2 py-1;
       font-size: 0.6875rem;
@@ -226,7 +226,7 @@
 
 .menu-sm {
   @layer daisyui.l1.l2 {
-    :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+    :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-2.5 py-1;
       font-size: 0.75rem;
@@ -240,7 +240,7 @@
 
 .menu-md {
   @layer daisyui.l1.l2 {
-    :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+    :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-3 py-1.5;
       font-size: 0.875rem;
@@ -254,7 +254,7 @@
 
 .menu-lg {
   @layer daisyui.l1.l2 {
-    :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+    :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-4 py-1.5;
       font-size: 1.125rem;
@@ -268,7 +268,7 @@
 
 .menu-xl {
   @layer daisyui.l1.l2 {
-    :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+    :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-5 py-1.5;
       font-size: 1.375rem;
@@ -281,7 +281,7 @@
 }
 
 /* allow use cases like group-hover:menu-active to make a menu item active when the menu is hovered */
-:where(:not(ul, details, .menu-title, .btn)).menu-active {
+:where(:not(ul, menu, details, .menu-title, .btn)).menu-active {
   @layer daisyui.l1.l2 {
     @apply outline-hidden;
     color: var(--menu-active-fg);
