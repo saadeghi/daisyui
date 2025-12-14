@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.14 (2025-12-14)
+
+
+### Bug Fixes
+
+* z-index of focused join items. closes: [#4320](https://github.com/saadeghi/daisyui/issues/4320) ([5a37a13](https://github.com/saadeghi/daisyui/commit/5a37a1314220bc6724633c9b33411d8d1f901c6f))
+
 ## 5.5.13 (2025-12-11)
 
 
