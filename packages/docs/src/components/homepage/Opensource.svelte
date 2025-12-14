@@ -115,7 +115,7 @@
   <div class="text-center">
     <p class="font-title font-light md:text-2xl">
       <a
-        href="https://opencollective.com/daisyui"
+        href="https://github.com/saadeghi/daisyui?sponsor"
         rel="noopener, noreferrer"
         target="_blank"
         class="link link-hover text-base-content/70"
@@ -125,43 +125,43 @@
     </p>
     <div class="flex w-full justify-center">
       <div
-        class="max-w-8xl flex w-full flex-wrap justify-center p-10 [&_.mask]:bg-no-repeat max-sm:[&>*:nth-child(n+50)]:hidden"
+        class="flex w-full max-w-6xl flex-wrap justify-center p-10 [&_.mask]:size-8 [&_.mask]:bg-no-repeat [&_.mask]:[transition:opacity_1s_ease-out_15s,scale_1s_ease-out_15s,filter_1s_ease-out_15s] [&_.mask]:pointer-fine:scale-70 [&_.mask]:pointer-fine:opacity-30 [&_.mask]:pointer-fine:contrast-70 [&_.mask]:pointer-fine:grayscale [&_.mask]:pointer-fine:group-hover:scale-120 [&_.mask]:pointer-fine:group-hover:opacity-100 [&_.mask]:pointer-fine:group-hover:contrast-100 [&_.mask]:pointer-fine:group-hover:grayscale-0 [&_.mask]:pointer-fine:group-hover:[transition:opacity_0s_ease-out_0s,scale_0.05s_ease-out_0s,filter_0s_ease-out_0s] max-sm:[&>*:nth-child(n+50)]:hidden"
       >
         {#each sponsors as sponsor, index}
-          <div class="tooltip" data-tip={sponsor.name}>
-            {#if sponsor.image}
-              <div class="avatar p-2">
-                <div
-                  class="mask mask-squircle size-8"
-                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp?v=2'); background-size: {sponsorSpriteMeta.imagesPerRow *
-                    (sponsorSpriteMeta.avatarSize /
-                      2)}px auto; background-position: {getBackgroundPosition(
-                    index,
-                    sponsorSpriteMeta,
-                  )};"
-                ></div>
-              </div>
-            {:else}
-              <div class="avatar avatar-placeholder p-2">
-                <div
-                  class="mask mask-squircle size-8 text-black"
-                  style={`background-color:oklch(80% 0.03 ${Math.floor(Math.random() * 360)}/.7)`}
+          {#if sponsor.image}
+            <div class="avatar tooltip group p-1" data-tip={sponsor.name}>
+              <div
+                class="mask mask-squircle"
+                style="background-image: url('https://img.daisyui.com/generated/sponsors.webp?v=3'); background-size: {sponsorSpriteMeta.imagesPerRow *
+                  (sponsorSpriteMeta.avatarSize /
+                    2)}px auto; background-position: {getBackgroundPosition(
+                  index,
+                  sponsorSpriteMeta,
+                )};"
+              ></div>
+            </div>
+          {:else}
+            <div class="avatar tooltip group p-1" data-tip={sponsor.name}>
+              <div
+                class="mask mask-squircle text-black"
+                style={`background-color:oklch(80% 0.1 ${Math.floor(Math.random() * 360)}/.7)`}
+              >
+                <span
+                  class="font-mono text-[0.625rem] leading-[3.25] tracking-[2px] uppercase select-none"
                 >
-                  <span class="text-xs uppercase select-none">
-                    {sponsor.name
-                      .split(" ")
-                      .map((n, i, arr) => (i === 0 || i === arr.length - 1 ? n[0] : ""))
-                      .join("")}
-                  </span>
-                </div>
+                  {sponsor.name
+                    .split(" ")
+                    .map((n, i, arr) => (i === 0 || i === arr.length - 1 ? n[0] : ""))
+                    .join("")}
+                </span>
               </div>
-            {/if}
-          </div>
+            </div>
+          {/if}
         {/each}
       </div>
     </div>
     <a
-      href="https://opencollective.com/daisyui"
+      href="https://github.com/saadeghi/daisyui?sponsor"
       rel="noopener, noreferrer"
       target="_blank"
       class="btn"
