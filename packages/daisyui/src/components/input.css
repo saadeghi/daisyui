@@ -46,7 +46,6 @@
       outline: 2px solid var(--input-color);
       outline-offset: 2px;
       isolation: isolate;
-      z-index: 1;
     }
 
     /* increase font size in iOS so the page won't zoom */
