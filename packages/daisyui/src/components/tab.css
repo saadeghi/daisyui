@@ -1,9 +1,12 @@
 .tabs {
   @layer daisyui.l1.l2.l3 {
     @apply flex flex-wrap;
+    /* Reset inheritable properties to prevent bleeding from parent .tabs */
     --tabs-height: auto;
     --tabs-direction: row;
     --tab-height: calc(var(--size-field, 0.25rem) * 10);
+    --tab-p: 0.75rem;
+    --tab-radius-min: calc(0.75rem - var(--border));
     height: var(--tabs-height);
     flex-direction: var(--tabs-direction);
   }
@@ -23,10 +26,8 @@
     --tab-radius-min: calc(0.75rem - var(--border));
     --tab-radius-limit: min(var(--radius-field), var(--tab-radius-min));
     --tab-radius-grad:
-      #0000 calc(69% - var(--border)),
-      var(--tab-border-color) calc(69% - var(--border) + 0.25px),
-      var(--tab-border-color) 69%,
-      var(--tab-bg) calc(69% + 0.25px);
+      #0000 calc(69% - var(--border)), var(--tab-border-color) calc(69% - var(--border) + 0.25px),
+      var(--tab-border-color) 69%, var(--tab-bg) calc(69% + 0.25px);
     border-color: #0000;
     order: var(--tab-order);
     height: var(--tab-height);
@@ -491,8 +492,8 @@
       /* Compensate for p-1 */
       height: calc(100% - var(--tab-height) + var(--border) - 0.5rem);
       border-radius: calc(
-        min(var(--tab-height) / 2, var(--radius-field)) +
-          min(0.25rem, var(--tabs-box-radius)) - var(--border)
+        min(var(--tab-height) / 2, var(--radius-field)) + min(0.25rem, var(--tabs-box-radius)) -
+          var(--border)
       );
     }
   }
