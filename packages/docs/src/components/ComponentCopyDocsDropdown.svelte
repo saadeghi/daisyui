@@ -21,7 +21,7 @@
   }
 </script>
 
-<div class="join">
+<div class="join z-2">
   <button
     class="btn join-item btn-sm lg:min-w-28"
     aria-label="Copy markdown to clipboard"
