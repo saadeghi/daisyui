@@ -1,21 +1,21 @@
 :root {
-  background: var(--page-scroll-bg, var(--root-bg));
-  --page-scroll-bg-on: linear-gradient(var(--root-bg, #0000), var(--root-bg, #0000))
+  --page-has-backdrop: var(--page-scroll-lock) 1;
+  --page-scroll-bg: var(--page-scroll-lock)
     color-mix(in srgb, var(--root-bg, #0000), oklch(0% 0 0) calc(var(--page-has-backdrop, 0) * 40%));
-  --page-scroll-transition-on: background-color 0.3s ease-out;
+  background-image: var(--page-scroll-lock)
+    linear-gradient(var(--root-bg, #0000), var(--root-bg, #0000));
 
-  transition: var(--page-scroll-transition);
+  transition: var(--page-scroll-lock) background-color 0.3s ease-out;
+  animation: var(--page-scroll-lock) set-page-has-scroll forwards;
+  animation-timeline: var(--page-scroll-lock) scroll();
 
-  /* CSS if is not supported */
-  scrollbar-gutter: var(--page-scroll-gutter, unset);
-
-  /* CSS if is supported */
-  scrollbar-gutter: if(style(--page-has-scroll: 1): var(--page-scroll-gutter, unset) ; else: unset);
+  --page-has-scroll: initial;
+  scrollbar-gutter: var(--page-has-scroll) var(--page-scroll-lock) stable;
 }
 
 @keyframes set-page-has-scroll {
   0%,
   to {
-    --page-has-scroll: 1;
+    --page-has-scroll: ;
   }
 }

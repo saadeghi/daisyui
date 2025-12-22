@@ -5,7 +5,7 @@
 }
 
 :root {
-  background: var(--page-scroll-bg, var(--root-bg));
+  background-color: var(--page-scroll-bg, var(--root-bg));
 }
 
 :where(:root, [data-theme]) {
