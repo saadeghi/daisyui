@@ -360,3 +360,42 @@
     @apply w-full;
   }
 }
+
+.btn-bubble {
+  @layer daisyui.l1.l2.l3 {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-color: var(--btn-bubble-bg, var(--btn-bubble-contrast-bg, var(--btn-color, var(--color-primary))));
+      border-radius: inherit;
+      transform: scale(0);
+      transition: transform var(--btn-bubble-duration, 350ms) var(--btn-bubble-easing, cubic-bezier(0.4, 0, 0.2, 1));
+      will-change: transform;
+    }
+    
+    /* Contrast preservation: Ensure bubble background maintains sufficient contrast with text */
+    --btn-bubble-contrast-bg: color-mix(
+      in oklab,
+      var(--btn-color, var(--color-primary)) var(--btn-bubble-contrast-mix, 85%),
+      var(--btn-fg) var(--btn-bubble-contrast-adjust, 15%)
+    );
+    
+    @media (hover: hover) {
+      &:hover::before {
+        transform: scaleX(var(--btn-bubble-scale-x, 1.5)) scaleY(var(--btn-bubble-scale-y, 2.2));
+      }
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      &::before {
+        transition: none;
+      }
+    }
+  }
+}
