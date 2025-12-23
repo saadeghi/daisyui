@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store//</link>
-    <lastBuildDate>Mon, 15 Dec 2025 11:06:03 GMT</lastBuildDate>
-    <pubDate>Mon, 15 Dec 2025 11:06:03 GMT</pubDate>
+    <lastBuildDate>Tue, 23 Dec 2025 20:11:14 GMT</lastBuildDate>
+    <pubDate>Tue, 23 Dec 2025 20:11:14 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -159,7 +159,7 @@ Including:
             <![CDATA[ Blink template ]]>
           </title>
           <description>
-            <![CDATA[ Blink is a template for agencies, companies, startups, or small businesses <br/>Available for React and Svelte
+            <![CDATA[ Blink is a multi-page template for agencies, companies, startups, or small businesses <br/>Available for React and Svelte
 
 Features:
   - Made with Tailwind CSS and daisyUI
@@ -168,7 +168,7 @@ Features:
   - Dark and light theme switch button
 
 Including:
-  - Landing page
+  - 4 different landing page layouts (Agency, SaaS, Startup, Marketing)
   - Pricing page and pricing table
   - Projects (portfolio) page
   - About page
