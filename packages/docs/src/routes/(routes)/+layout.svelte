@@ -95,7 +95,7 @@
     data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname) ? "" : "lg:drawer-open"
   }`}
 >
-  <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
+  <input id="drawer" type="checkbox" autocomplete="off" class="drawer-toggle" bind:checked />
   <div class={`drawer-content`} inert={shouldBeInert || undefined}>
     <Navbar
       version={data.daisyuiVersion}

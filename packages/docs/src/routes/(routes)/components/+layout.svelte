@@ -6,7 +6,7 @@
 {@render children?.()}
 
 {#if $page.url.pathname == "/components/modal/"}
-  <input type="checkbox" id="my_modal_6" class="modal-toggle" aria-label="Open or close modal" />
+  <input type="checkbox" id="my_modal_6" autocomplete="off" class="modal-toggle" aria-label="Open or close modal" />
   <div class="modal" role="dialog">
     <div class="modal-box">
       <h3 class="text-lg font-bold">Hello!</h3>
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <input type="checkbox" id="my_modal_7" class="modal-toggle" aria-label="Open or close modal" />
+  <input type="checkbox" id="my_modal_7" autocomplete="off" class="modal-toggle" aria-label="Open or close modal" />
   <div class="modal" role="dialog">
     <div class="modal-box">
       <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
