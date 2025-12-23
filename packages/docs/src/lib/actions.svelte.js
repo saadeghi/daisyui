@@ -40,6 +40,8 @@ export const htmlToJsx = (node) => {
     '"0"': "{0}",
     "&lt;!--": "{/*",
     "--&gt;": "*/}",
+    '<span style="color:var(--shiki-attr-name)">class</span>':
+      '<span style="color:var(--shiki-attr-name)">className</span>',
     '<span style="color:var(--shiki-attr-name)"> class</span>':
       '<span style="color:var(--shiki-attr-name)"> className</span>',
     '<span style="color:var(--shiki-attr-name)">  class</span>':
