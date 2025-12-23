@@ -214,16 +214,16 @@
     try {
       const parsedColor = parse(newValue)
       if (parsedColor) {
-        colorState.mode = parsedColor.mode
-        colorState.value = newValue
-
-        colorState.originalMode = parsedColor.mode
-        colorState.originalValue = newValue
-
         if (newValue.startsWith("#")) {
           colorState.mode = "hex"
           colorState.originalMode = "hex"
+        } else {
+          colorState.mode = parsedColor.mode
+          colorState.originalMode = parsedColor.mode
         }
+
+        colorState.value = newValue
+        colorState.originalValue = newValue
 
         const oklchColor = oklch(parsedColor)
         if (oklchColor) {
