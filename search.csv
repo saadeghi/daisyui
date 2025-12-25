@@ -12,7 +12,7 @@ Blueprint MCP server,/blueprint/
 daisyUI llms.txt,/llms.txt
 title,url,classnames
 Store,/store/
-Nexus Dashboard 3.1,/store/nexus/
+Nexus Dashboard 3.2,/store/nexus/
 Scalo Startup Template 3.0,/store/scalo/
 Official daisyUI Figma Library,/store/daisyui-figma-library/
 HTML Dashboard template,/store/html-dashboard/

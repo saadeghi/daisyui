@@ -15,18 +15,20 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store//</link>
-    <lastBuildDate>Tue, 23 Dec 2025 20:11:14 GMT</lastBuildDate>
-    <pubDate>Tue, 23 Dec 2025 20:11:14 GMT</pubDate>
+    <lastBuildDate>Thu, 25 Dec 2025 11:06:22 GMT</lastBuildDate>
+    <pubDate>Thu, 25 Dec 2025 11:06:22 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
 
     
         <item>
           <title>
-            <![CDATA[ Nexus Dashboard 3.1 ]]>
+            <![CDATA[ Nexus Dashboard 3.2 ]]>
           </title>
           <description>
             <![CDATA[ The ultimate dashboard template
+
+> Use code "NEXUS26" at checkout and get 26% discount on Nexus Dashboard Template until January 5th, 2026.
 
 Made with Tailwind CSS 4 and daisyUI 5
 
@@ -57,7 +59,7 @@ Solo license:
 
 
 Team and Enterprise license:
-  - includes HTML, React, Next.js, Nuxt, SvelteKit and 🆕 Laravel versions
+  - includes HTML, React, Next.js, Nuxt, SvelteKit, Laravel Blade versions + Elixir Phoenix version 🆕
   - For unlimited developers
   - For unlimited projects (Enterprise only) ]]>
           </description>
