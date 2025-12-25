@@ -2,7 +2,7 @@
 title: UI library for hackathons
 desc: How can you build fast, unique UIs in a few minutes, and win competitions with minimal effort?
 layout: contentLanding
-keywords: hackathon, rapid prototyping, fast development, UI library, competition, startup weekend, build fast
+keywords: hackathon, rapid prototyping, fast development, competition, startup weekend, build fast
 ---
 
 <script>

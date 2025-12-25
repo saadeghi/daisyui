@@ -13,7 +13,7 @@
 </script>
 
 <!-- Without timer -->
-{#if true && !$page.url.pathname.startsWith("/blueprint/")}
+{#if false && !$page.url.pathname.startsWith("/blueprint/")}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       href="/blueprint/"
@@ -65,11 +65,12 @@
   </div>
 {/if}
 <!-- With timer -->
-{#if false && !$page.url.pathname.startsWith("/store/")}
+<!-- {#if true && !$page.url.pathname.startsWith("/store/")} -->
+{#if true}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       data-sveltekit-preload-data
-      href="/store/"
+      href="/store/nexus/"
       class="alert border-base-300 hover:bg-base-200 bg-base-100 flex w-full justify-center rounded-none border-x-0 border-t-0 p-2 text-center text-xs shadow-none transition-colors"
     >
       <p class="leading-relaxed [text-wrap:balance]">
@@ -86,16 +87,16 @@
               </path>
             </g>
           </svg>
-          Use code
+          Happy New Year! Use code
           <code
             class="decoration-success font-mono tracking-wide underline decoration-wavy underline-offset-4"
           >
-            BLACKFRIDAY
+            NEXUS26
           </code>
-          and get 40% discount on daisyUI templates & Figma library
+          and get 26% discount on Nexus Dashboard Template!
           <span class="inline-block w-2"></span>
           <Countdown
-            from={new Date("2025-12-01T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
+            from={new Date("2026-01-06T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
             dateFormat="DD/MM/YYYY, HH:mm:ss"
           >
             {#snippet children({ remaining })}
