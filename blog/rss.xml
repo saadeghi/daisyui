@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Mon, 29 Dec 2025 09:23:45 GMT</lastBuildDate>
-    <pubDate>Mon, 29 Dec 2025 09:23:45 GMT</pubDate>
+    <lastBuildDate>Mon, 29 Dec 2025 11:26:25 GMT</lastBuildDate>
+    <pubDate>Mon, 29 Dec 2025 11:26:25 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ daisyUI 2025 Wrapped ]]>
+          </title>
+          <description>
+            <![CDATA[ The best year for daisyUI yet! Here are the highlights from 2025. ]]>
+          </description>
+          <link>https://daisyui.com/blog/daisyui-2025-wrapped/</link>
+          <pubDate>Sun, 21 Dec 2025 00:00:00 GMT</pubDate>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/2025-wrapped.webp?</image>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/2025-wrapped.webp?</image>
+          <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/2025-wrapped.webp?" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.comhttps://img.daisyui.com/images/blog/2025-wrapped.webp?" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/daisyui-2025-wrapped/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Abstraction ownership ]]>
