@@ -4,6 +4,7 @@
     --tt-bg: var(--color-neutral);
     --tt-off: calc(100% + 0.5rem);
     --tt-tail: calc(100% + 1px + 0.25rem);
+    --tt-tail-off: 0.5rem;
 
     & > .tooltip-content,
     &[data-tip]:before {
@@ -69,13 +70,15 @@
   @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
-      transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
-      inset: auto auto var(--tt-off) 50%;
+      transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, 0.25rem));
+      inset-inline: var(--tt-inset, 50% auto);
+      inset-block: auto var(--tt-off);
     }
 
     &:after {
-      transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
-      inset: auto auto var(--tt-tail) 50%;
+      transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, 0.25rem));
+      inset-inline: var(--tt-tail-inset, 50% auto);
+      inset-block: auto var(--tt-tail);
     }
   }
 }
@@ -84,13 +87,16 @@
   @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
-      transform: translateX(-50%) translateY(var(--tt-pos, -0.25rem));
-      inset: var(--tt-off) auto auto 50%;
+      transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, -0.25rem));
+      inset-inline: var(--tt-inset, 50% auto);
+      inset-block: var(--tt-off) auto;
     }
 
     &:after {
-      transform: translateX(-50%) translateY(var(--tt-pos, -0.25rem)) rotate(180deg);
-      inset: var(--tt-tail) auto auto 50%;
+      transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, -0.25rem))
+        rotate(180deg);
+      inset-inline: var(--tt-tail-inset, 50% auto);
+      inset-block: var(--tt-tail) auto;
     }
   }
 }
@@ -99,13 +105,15 @@
   @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
-      transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem)) translateY(-50%);
-      inset: 50% var(--tt-off) auto auto;
+      transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem)) translateY(var(--tt-trans, -50%));
+      inset-inline: auto var(--tt-off);
+      inset-block: var(--tt-inset, 50% auto);
     }
 
     &:after {
-      transform: translateX(var(--tt-pos, 0.25rem)) translateY(-50%) rotate(-90deg);
-      inset: 50% calc(var(--tt-tail) + 1px) auto auto;
+      transform: translateX(var(--tt-pos, 0.25rem)) translateY(var(--tt-trans, -50%)) rotate(-90deg);
+      inset-inline: auto calc(var(--tt-tail) + 1px);
+      inset-block: var(--tt-tail-inset, 50% auto);
     }
   }
 }
@@ -114,14 +122,40 @@
   @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
-      transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem)) translateY(-50%);
-      inset: 50% auto auto var(--tt-off);
+      transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem)) translateY(var(--tt-trans, -50%));
+      inset-inline: var(--tt-off) auto;
+      inset-block: var(--tt-inset, 50% auto);
     }
 
     &:after {
-      transform: translateX(var(--tt-pos, -0.25rem)) translateY(-50%) rotate(90deg);
-      inset: 50% auto auto calc(var(--tt-tail) + 1px);
+      transform: translateX(var(--tt-pos, -0.25rem)) translateY(var(--tt-trans, -50%)) rotate(90deg);
+      inset-inline: calc(var(--tt-tail) + 1px) auto;
+      inset-block: var(--tt-tail-inset, 50% auto);
     }
+  }
+}
+
+.tooltip-start {
+  @layer daisyui.l1.l2 {
+    --tt-trans: 0;
+    --tt-inset: 0 auto;
+    --tt-tail-inset: var(--tt-tail-off) auto;
+  }
+}
+
+.tooltip-center {
+  @layer daisyui.l1.l2 {
+    --tt-trans: -50%;
+    --tt-inset: 50% auto;
+    --tt-tail-inset: 50% auto;
+  }
+}
+
+.tooltip-end {
+  @layer daisyui.l1.l2 {
+    --tt-trans: 0;
+    --tt-inset: auto 0;
+    --tt-tail-inset: auto var(--tt-tail-off);
   }
 }
 
