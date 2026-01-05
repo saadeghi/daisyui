@@ -54,7 +54,7 @@ classnames:
 ### ~Password requirement validator
 
 <form class="w-full max-w-xs">
-  <input type="password" class="input validator" required placeholder="Password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,}" title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+  <input type="password" class="input validator" required placeholder="Password" minLength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,}" title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
   <p class="validator-hint">
     Must be more than 8 characters, including
     <br/>At least one number
