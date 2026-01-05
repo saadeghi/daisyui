@@ -2,106 +2,89 @@
   @layer daisyui.l1.l2.l3 {
     @apply relative inline-flex align-middle;
 
-    & input {
-      border: none;
-      @apply appearance-none;
-    }
+    --size: var(--size-selector, 0.25rem) * var(--size-mul);
 
-    :where(*) {
-      @apply bg-base-content h-6 w-6 rounded-none opacity-20;
-      @media (prefers-reduced-motion: no-preference) {
-        animation: rating 0.25s ease-out;
-      }
-      &:is(input) {
-        @apply cursor-pointer;
-      }
-    }
-
-    & .rating-hidden {
-      @apply w-2 bg-transparent;
-    }
-
-    input[type="radio"]:checked {
-      background-image: none;
+    input {
+      @apply appearance-none cursor-pointer;
     }
 
     * {
-      &:checked,
-      &[aria-checked="true"],
-      &[aria-current="true"],
-      &:has(~ *:checked, ~ *[aria-checked="true"], ~ *[aria-current="true"]) {
-        @apply opacity-100;
-      }
+      @apply bg-base-content rounded-none opacity-20;
 
-      &:focus-visible {
-        scale: 1.1;
-        @media (prefers-reduced-motion: no-preference) {
-          transition: scale 0.2s ease-out;
-        }
+      width: calc(var(--size) * var(--size-w-mul));
+      height: calc(var(--size));
+
+      @media (prefers-reduced-motion: no-preference) {
+        animation: rating 0.25s ease-out;
       }
     }
 
-    & *:active:focus {
+    .rating-hidden {
+      @apply w-2 bg-transparent;
+    }
+
+    :checked,
+    [aria-checked="true"],
+    [aria-current="true"],
+    :has(~ :checked, ~ [aria-checked="true"], ~ [aria-current="true"]) {
+      @apply opacity-100;
+    }
+
+    :focus-visible {
+      scale: 1.1;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: scale 0.2s ease-out;
+      }
+    }
+
+    :active:focus {
       animation: none;
-    }
-
-    & *:active:focus {
       scale: 1.1;
     }
   }
-
-  @layer daisyui.l1.l2 {
-    &.rating-xs :where(*:not(.rating-hidden)) {
-      @apply size-4;
-    }
-
-    &.rating-sm :where(*:not(.rating-hidden)) {
-      @apply size-5;
-    }
-
-    &.rating-md :where(*:not(.rating-hidden)) {
-      @apply size-6;
-    }
-
-    &.rating-lg :where(*:not(.rating-hidden)) {
-      @apply size-7;
-    }
-
-    &.rating-xl :where(*:not(.rating-hidden)) {
-      @apply size-8;
-    }
-  }
 }
 
 .rating-half {
   @layer daisyui.l1.l2 {
-    :where(*:not(.rating-hidden)) {
-      @apply w-3;
-    }
+    --size-w-mul: 0.5;
   }
 }
 
-.rating-half {
+.rating,
+.rating-full {
   @layer daisyui.l1.l2 {
-    &.rating-xs *:not(.rating-hidden) {
-      @apply w-2;
-    }
+    --size-w-mul: 1;
+  }
+}
 
-    &.rating-sm *:not(.rating-hidden) {
-      @apply w-2.5;
-    }
+.rating-xs {
+  @layer daisyui.l1.l2 {
+    --size-mul: 4;
+  }
+}
 
-    &.rating-md *:not(.rating-hidden) {
-      @apply w-3;
-    }
+.rating-sm {
+  @layer daisyui.l1.l2 {
+    --size-mul: 5;
+  }
+}
 
-    &.rating-lg *:not(.rating-hidden) {
-      @apply w-[.875rem];
-    }
+.rating,
+.rating-md {
+  @layer daisyui.l1.l2 {
+    --size-mul: 6;
+  }
+}
 
-    &.rating-xl *:not(.rating-hidden) {
-      @apply w-4;
-    }
+.rating-lg {
+  @layer daisyui.l1.l2 {
+    --size-mul: 7;
+  }
+}
+
+.rating-xl {
+  @layer daisyui.l1.l2 {
+    --size-mul: 8;
   }
 }
 

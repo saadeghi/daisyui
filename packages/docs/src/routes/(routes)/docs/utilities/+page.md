@@ -178,6 +178,7 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--range-fill`                | binary, whether to fill the range slider progress or not |
 |                 | `--range-p`                   | padding of the range slider thumb                        |
 |                 | `--size`                      | size of the range slider                                 |
+| Rating          | `--size`                      | size of the rating element                               |
 | Select          | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the select                                       |
 | Tab             | `--tabs-height`               | height of the tabs                                       |
