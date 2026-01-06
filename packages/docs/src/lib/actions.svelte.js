@@ -40,6 +40,19 @@ export const htmlToJsx = (node) => {
     '"0"': "{0}",
     "&lt;!--": "{/*",
     "--&gt;": "*/}",
+    '<span style="color:var(--shiki-attr-name)">minlength</span>':
+      '<span style="color:var(--shiki-attr-name)">minLength</span>',
+    '<span style="color:var(--shiki-attr-name)"> minlength</span>':
+      '<span style="color:var(--shiki-attr-name)"> minLength</span>',
+    '<span style="color:var(--shiki-attr-name)">    minlength</span>':
+      '<span style="color:var(--shiki-attr-name)">    minLength</span>',
+    '<span style="color:var(--shiki-attr-name)">maxlength</span>':
+      '<span style="color:var(--shiki-attr-name)">maxLength</span>',
+    '<span style="color:var(--shiki-attr-name)"> maxlength</span>':
+      '<span style="color:var(--shiki-attr-name)"> maxLength</span>',
+    '<span style="color:var(--shiki-attr-name)">    maxlength</span>':
+      '<span style="color:var(--shiki-attr-name)">    maxLength</span>',
+
     '<span style="color:var(--shiki-attr-name)">class</span>':
       '<span style="color:var(--shiki-attr-name)">className</span>',
     '<span style="color:var(--shiki-attr-name)"> class</span>':
