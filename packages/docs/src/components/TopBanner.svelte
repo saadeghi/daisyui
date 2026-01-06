@@ -65,8 +65,8 @@
   </div>
 {/if}
 <!-- With timer -->
-<!-- {#if false && !$page.url.pathname.startsWith("/store/")} -->
-{#if true}
+<!-- {#if true && !$page.url.pathname.startsWith("/store/")} -->
+{#if false}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       data-sveltekit-preload-data
