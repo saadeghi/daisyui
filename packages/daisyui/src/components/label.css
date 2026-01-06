@@ -20,25 +20,13 @@
 }
 .floating-label {
   @layer daisyui.l1.l2.l3 {
-    @apply relative block;
-    input {
-      @apply block;
-      &::placeholder {
-        transition:
-          top 0.1s ease-out,
-          translate 0.1s ease-out,
-          scale 0.1s ease-out,
-          opacity 0.1s ease-out;
-      }
-    }
-    textarea {
-      &::placeholder {
-        transition:
-          top 0.1s ease-out,
-          translate 0.1s ease-out,
-          scale 0.1s ease-out,
-          opacity 0.1s ease-out;
-      }
+    @apply relative flex;
+    ::placeholder {
+      transition:
+        top 0.1s ease-out,
+        translate 0.1s ease-out,
+        scale 0.1s ease-out,
+        opacity 0.1s ease-out;
     }
     > span {
       @apply bg-base-100 absolute start-3 z-1 px-1 opacity-0;

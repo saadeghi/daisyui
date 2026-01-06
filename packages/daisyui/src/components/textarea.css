@@ -1,20 +1,25 @@
 .textarea {
   @layer daisyui.l1.l2.l3 {
-    border: var(--border) solid #0000;
-    @apply bg-base-100 rounded-field min-h-20 shrink appearance-none py-2 align-middle;
+    @apply bg-base-100 rounded-field min-h-20 shrink appearance-none px-3 py-2 align-middle;
+
+    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+
     width: clamp(3rem, 20rem, 100%);
-    padding-inline-start: 0.75rem;
-    padding-inline-end: 0.75rem;
-    font-size: max(var(--font-size, 0.875rem), 0.875rem);
+    font-size: max(var(--font-size, 0rem), var(--font-size-min));
     touch-action: manipulation;
-    border-color: var(--input-color);
+    border: var(--border) solid var(--input-color, #0000);
     box-shadow:
       0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
       0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+
     textarea {
       @apply appearance-none bg-transparent;
       border: none;
+
+      &::placeholder {
+        /* color and opacity to work with safari */
+        @apply text-base-content opacity-50;
+      }
 
       &:focus,
       &:focus-within {
@@ -43,8 +48,14 @@
 
     &:has(> textarea[disabled]),
     &:is(:disabled, [disabled]) {
-      @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+      @apply border-base-200 bg-base-200 text-base-content/40 cursor-not-allowed;
       box-shadow: none;
+
+      &::placeholder,
+      ::placeholder {
+        /* color and opacity to work with safari */
+        @apply text-base-content opacity-20;
+      }
     }
 
     &:has(> textarea[disabled]) > textarea[disabled] {
@@ -150,30 +161,31 @@
 
 .textarea-xs {
   @layer daisyui.l1.l2 {
-    font-size: max(var(--font-size, 0.6875rem), 0.6875rem);
+    --font-size-min: 0.6875rem;
   }
 }
 
 .textarea-sm {
   @layer daisyui.l1.l2 {
-    font-size: max(var(--font-size, 0.75rem), 0.75rem);
+    --font-size-min: 0.75rem;
   }
 }
 
+.textarea,
 .textarea-md {
   @layer daisyui.l1.l2 {
-    font-size: max(var(--font-size, 0.875rem), 0.875rem);
+    --font-size-min: 0.875rem;
   }
 }
 
 .textarea-lg {
   @layer daisyui.l1.l2 {
-    font-size: max(var(--font-size, 1.125rem), 1.125rem);
+    --font-size-min: 1.125rem;
   }
 }
 
 .textarea-xl {
   @layer daisyui.l1.l2 {
-    font-size: max(var(--font-size, 1.375rem), 1.375rem);
+    --font-size-min: 1.375rem;
   }
 }
