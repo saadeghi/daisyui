@@ -255,6 +255,11 @@
     --sl-size-mul: 6;
     --font-size-min: 0.6875rem;
     --option-px: 2;
+
+    .floating-label:has(&) {
+      --top-mul: 3;
+      --font-size: 0.6875rem;
+    }
   }
 }
 
@@ -263,6 +268,11 @@
     --sl-size-mul: 8;
     --font-size-min: 0.75rem;
     --option-px: 2.5;
+
+    .floating-label:has(&) {
+      --top-mul: 4;
+      --font-size: 0.75rem;
+    }
   }
 }
 
@@ -272,6 +282,11 @@
     --sl-size-mul: 10;
     --font-size-min: 0.875rem;
     --option-px: 3;
+
+    .floating-label:has(&) {
+      --top-mul: 5;
+      --font-size: 0.875rem;
+    }
   }
 }
 
@@ -280,6 +295,11 @@
     --sl-size-mul: 12;
     --font-size-min: 1.125rem;
     --option-px: 4;
+
+    .floating-label:has(&) {
+      --top-mul: 6;
+      --font-size: 1.125rem;
+    }
   }
 }
 
@@ -288,5 +308,10 @@
     --sl-size-mul: 14;
     --font-size-min: 1.375rem;
     --option-px: 5;
+
+    .floating-label:has(&) {
+      --top-mul: 7;
+      --font-size: 1.375rem;
+    }
   }
 }

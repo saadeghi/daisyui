@@ -162,12 +162,22 @@
 .textarea-xs {
   @layer daisyui.l1.l2 {
     --font-size-min: 0.6875rem;
+
+    .floating-label:has(&) {
+      --top-mul: 3;
+      --font-size: 0.6875rem;
+    }
   }
 }
 
 .textarea-sm {
   @layer daisyui.l1.l2 {
     --font-size-min: 0.75rem;
+
+    .floating-label:has(&) {
+      --top-mul: 4;
+      --font-size: 0.75rem;
+    }
   }
 }
 
@@ -175,17 +185,32 @@
 .textarea-md {
   @layer daisyui.l1.l2 {
     --font-size-min: 0.875rem;
+
+    .floating-label:has(&) {
+      --top-mul: 5;
+      --font-size: 0.875rem;
+    }
   }
 }
 
 .textarea-lg {
   @layer daisyui.l1.l2 {
     --font-size-min: 1.125rem;
+
+    .floating-label:has(&) {
+      --top-mul: 6;
+      --font-size: 1.125rem;
+    }
   }
 }
 
 .textarea-xl {
   @layer daisyui.l1.l2 {
     --font-size-min: 1.375rem;
+
+    .floating-label:has(&) {
+      --top-mul: 7;
+      --font-size: 1.375rem;
+    }
   }
 }
