@@ -2,7 +2,7 @@
   @layer daisyui.l1.l2.l3 {
     @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
 
-    --size: calc(var(--size-field, 0.25rem) * var(--size-mul));
+    --size: calc(var(--size-field, 0.25rem) * var(--sl-size-mul));
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
 
     width: clamp(3rem, 20rem, 100%);
@@ -252,7 +252,7 @@
 
 .select-xs {
   @layer daisyui.l1.l2 {
-    --size-mul: 6;
+    --sl-size-mul: 6;
     --font-size-min: 0.6875rem;
     --option-px: 2;
   }
@@ -260,7 +260,7 @@
 
 .select-sm {
   @layer daisyui.l1.l2 {
-    --size-mul: 8;
+    --sl-size-mul: 8;
     --font-size-min: 0.75rem;
     --option-px: 2.5;
   }
@@ -269,7 +269,7 @@
 .select,
 .select-md {
   @layer daisyui.l1.l2 {
-    --size-mul: 10;
+    --sl-size-mul: 10;
     --font-size-min: 0.875rem;
     --option-px: 3;
   }
@@ -277,7 +277,7 @@
 
 .select-lg {
   @layer daisyui.l1.l2 {
-    --size-mul: 12;
+    --sl-size-mul: 12;
     --font-size-min: 1.125rem;
     --option-px: 4;
   }
@@ -285,7 +285,7 @@
 
 .select-xl {
   @layer daisyui.l1.l2 {
-    --size-mul: 14;
+    --sl-size-mul: 14;
     --font-size-min: 1.375rem;
     --option-px: 5;
   }
