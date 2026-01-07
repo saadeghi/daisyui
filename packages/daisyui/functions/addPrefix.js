@@ -154,13 +154,14 @@ const processArrayValue = (value, prefix, excludedPrefixes) => {
   })
 }
 
+const reVariableName = /var\s*\(\s*--([a-zA-Z0-9_-]+)/g
 const processStringValue = (value, prefix, excludedPrefixes) => {
   if (prefix === 0) return value
-  return value.replace(/var\(--([^)]+)\)/g, (match, variableName) => {
+  return value.replace(reVariableName, (match, variableName) => {
     if (shouldExcludeVariable(variableName, excludedPrefixes)) {
       return match
     }
-    return `var(--${prefix}${variableName})`
+    return `var(--${prefix}${variableName}`
   })
 }
 
