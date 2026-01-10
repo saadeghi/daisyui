@@ -5,7 +5,7 @@
     --size: var(--size-selector, 0.25rem) * var(--rt-size-mul);
 
     input {
-      @apply appearance-none cursor-pointer;
+      @apply cursor-pointer appearance-none;
     }
 
     * {
