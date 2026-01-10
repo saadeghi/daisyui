@@ -105,7 +105,8 @@
   @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
-      transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem)) translateY(var(--tt-trans, -50%));
+      transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem))
+        translateY(var(--tt-trans, -50%));
       inset-inline: auto var(--tt-off);
       inset-block: var(--tt-inset, 50% auto);
     }
@@ -122,7 +123,8 @@
   @layer daisyui.l1.l2 {
     > .tooltip-content,
     &[data-tip]:before {
-      transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem)) translateY(var(--tt-trans, -50%));
+      transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem))
+        translateY(var(--tt-trans, -50%));
       inset-inline: var(--tt-off) auto;
       inset-block: var(--tt-inset, 50% auto);
     }
