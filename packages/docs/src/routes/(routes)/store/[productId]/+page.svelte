@@ -636,7 +636,7 @@
 
         {#if data.product.tech}
           <div class="flex items-center gap-4 lg:gap-6">
-            <span class="text-base-content/60 text-xs whitespace-nowrap">Made with:</span>
+            <!-- <span class="text-base-content/60 text-xs whitespace-nowrap">Made with:</span> -->
             {#each data.product.tech as tech}
               <div class="tooltip" data-tip={data.tech[tech]}>
                 <img
