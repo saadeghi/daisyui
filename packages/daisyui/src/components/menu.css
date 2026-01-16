@@ -156,7 +156,7 @@
 
 .menu-horizontal {
   @layer daisyui.l1.l2 {
-    @apply inline-flex flex-row;
+    @apply inline-flex flex-row items-center;
 
     & > li:not(.menu-title) > details {
       & > :is(ul, menu) {
@@ -197,7 +197,7 @@
 
 .menu-vertical {
   @layer daisyui.l1.l2 {
-    @apply inline-flex flex-col;
+    @apply inline-flex flex-col items-stretch;
 
     & > li:not(.menu-title) > details > is:(ul, menu) {
       @apply relative ms-4 mt-0 py-0 pe-0;
