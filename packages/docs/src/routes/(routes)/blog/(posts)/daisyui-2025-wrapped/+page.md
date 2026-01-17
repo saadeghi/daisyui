@@ -22,11 +22,11 @@ Hey!
 
 - 📦 daisyUI had `22,000,000` NPM downloads this year, which is a `70%` jump over the `13,000,000` downloads in 2024. Our weekly downloads are around `530,000` now. This is apart from downloads from CDN websites or direct downloads from GitHub, so the real stats for daisyUI usage are even higher but hard to track!
 - 🌐 daisyUI is now used in `428,000` open source projects on GitHub, up `28.5%` from `333,000` last year. Including projects from big companies like Amazon, Google, Meta, Alibaba, Adobe and more.
-- 🤝 daisyUI has 299 open source contributors now (86 new contributors joined in 2024). Thank you everyone! Especially <a class="inline" href="https://github.com/pdanpdan" target="_blank" rel="noopener noreferrer"> <img class="inline-block size-4 m-0! rounded-full" src="https://unavatar.io/github/pdanpdan" alt="Popescu Dan" /> Popescu Dan</a> for his amazing PRs recently.
+- 🤝 daisyUI has 299 open source contributors now (86 new contributors joined in 2025). Thank you everyone! Especially <a class="inline" href="https://github.com/pdanpdan" target="_blank" rel="noopener noreferrer"> <img class="inline-block size-4 m-0! rounded-full" src="https://unavatar.io/github/pdanpdan" alt="Popescu Dan" /> Popescu Dan</a> for his amazing PRs recently.
 - ⭐ This year daisyUI reached `39,000` GitHub stars! daisyUI is now among the top 400 repositories on GitHub.
 - 🚀 Monthly jsDelivr hits are at `16.8M`, and our Discord community grew to `6.4k` members from `3.8k`, that's `68%` growth.
 - 📝 daisyUI repo had `1,800` commits and `360` merged PRs this year.
-- 🛠️ We closed `710` issues in 2024; overall there are `2,064` closed issues and just `16` open issues, so `99.2%` of issues are resolved.
+- 🛠️ We closed `710` issues in 2025; overall there are `2,064` closed issues and just `16` open issues, so `99.2%` of issues are resolved.
 - 💸 We received `180` donations via Open Collective and GitHub Sponsors. Thank you, your support keeps this project going.
 
 Thank you to everyone who contributed to daisyUI in 2025, whether by reporting issues, sending PRs, or spreading the word. This project wouldn't be possible without you 💚
