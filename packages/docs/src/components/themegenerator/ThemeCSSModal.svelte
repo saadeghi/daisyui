@@ -114,7 +114,7 @@
     <textarea
       spellcheck="false"
       data-theme="dark"
-      class="textarea textarea-border textarea-xs block h-96 min-h-80 w-full max-w-none resize-none font-mono"
+      class="textarea textarea-border textarea-xs block h-96 min-h-80 w-full max-w-none resize-none font-mono text-primary"
       value={themeCSS}
       oninput={handleThemeCSSInput}
     ></textarea>
