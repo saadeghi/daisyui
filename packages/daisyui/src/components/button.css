@@ -4,7 +4,7 @@
   }
 }
 
-.prose :where(.btn-link):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+.prose :where(:not(.btn-link)):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   @apply no-underline;
 }
 
