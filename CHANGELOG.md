@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* hide underline for `.btn` when used in `.prose` closes [#4400](https://github.com/saadeghi/daisyui/issues/4400) ([c1e1e11](https://github.com/saadeghi/daisyui/commit/c1e1e112545423f41fae99a4b3bf7379749bbebe)), closes [/github.com/saadeghi/daisyui/issues/4400#issuecomment-3795403617](https://github.com/saadeghi//github.com/saadeghi/daisyui/issues/4400/issues/issuecomment-3795403617)
+* hide underline for `.btn` when used in `.prose` closes [#4400](https://github.com/saadeghi/daisyui/issues/4400) ([c1e1e11](https://github.com/saadeghi/daisyui/commit/c1e1e112545423f41fae99a4b3bf7379749bbebe))
 
 ## 5.5.14 (2025-12-14)
 
