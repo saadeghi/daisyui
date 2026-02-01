@@ -1,0 +1,1 @@
+import{J as s,a6 as n}from"./B0aRlOUY.js";function b(o,i,r,f,a){var d=()=>{f(r[o])};r.addEventListener(i,d),a?s(()=>{r[o]=a()}):d(),(r===document.body||r===window||r===document)&&n(()=>{r.removeEventListener(i,d)})}export{b};
