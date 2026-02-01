@@ -54,7 +54,7 @@
       }
     }
     &:before {
-      @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current;
+      @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full w-full bg-current;
       translate: 0;
       --tw-content: "";
       content: var(--tw-content);
