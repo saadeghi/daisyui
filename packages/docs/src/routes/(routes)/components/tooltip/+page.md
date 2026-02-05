@@ -20,6 +20,12 @@ classnames:
     desc: Put tooltip on left
   - class: tooltip-right
     desc: Put tooltip on right
+  - class: tooltip-start
+    desc: Align tooltip on start
+  - class: tooltip-center
+    desc: Align tooltip on center
+  - class: tooltip-end
+    desc: Align tooltip on end
   modifier:
   - class: tooltip-open
     desc: Force open tooltip
@@ -95,8 +101,14 @@ classnames:
 
 
 ### ~Top
-<div class="my-6">
+<div class="my-6 flex flex-wrap gap-6">
+  <div class="tooltip tooltip-open tooltip-top tooltip-start" data-tip="hello">
+    <button class="btn">Top</button>
+  </div>
   <div class="tooltip tooltip-open tooltip-top" data-tip="hello">
+    <button class="btn">Top</button>
+  </div>
+  <div class="tooltip tooltip-open tooltip-top tooltip-end" data-tip="hello">
     <button class="btn">Top</button>
   </div>
 </div>
@@ -109,8 +121,14 @@ classnames:
 
 
 ### ~Bottom
-<div class="my-6">
+<div class="my-6 flex flex-wrap gap-6">
+  <div class="tooltip tooltip-open tooltip-bottom tooltip-start" data-tip="hello">
+    <button class="btn">Bottom</button>
+  </div>
   <div class="tooltip tooltip-open tooltip-bottom" data-tip="hello">
+    <button class="btn">Bottom</button>
+  </div>
+  <div class="tooltip tooltip-open tooltip-bottom tooltip-end" data-tip="hello">
     <button class="btn">Bottom</button>
   </div>
 </div>
@@ -123,8 +141,14 @@ classnames:
 
 
 ### ~Left
-<div class="my-6">
+<div class="my-6 flex flex-col gap-6">
+  <div class="tooltip tooltip-open tooltip-left tooltip-start" data-tip="hello">
+    <button class="btn">Left</button>
+  </div>
   <div class="tooltip tooltip-open tooltip-left" data-tip="hello">
+    <button class="btn">Left</button>
+  </div>
+  <div class="tooltip tooltip-open tooltip-left tooltip-end" data-tip="hello">
     <button class="btn">Left</button>
   </div>
 </div>
@@ -137,8 +161,14 @@ classnames:
 
 
 ### ~Right
-<div class="my-6">
+<div class="my-6 flex flex-col gap-6">
+  <div class="tooltip tooltip-open tooltip-right tooltip-start" data-tip="hello">
+    <button class="btn">Right</button>
+  </div>
   <div class="tooltip tooltip-open tooltip-right" data-tip="hello">
+    <button class="btn">Right</button>
+  </div>
+  <div class="tooltip tooltip-open tooltip-right tooltip-end" data-tip="hello">
     <button class="btn">Right</button>
   </div>
 </div>
@@ -271,6 +301,19 @@ classnames:
 
 ```html
 <div class="$$lg:tooltip" data-tip="hello">
+  <button class="$$btn">Hover me</button>
+</div>
+```
+
+### ~Responsive tooltip position
+<div class="my-6">
+  <div class="tooltip tooltip-start md:tooltip-right md:tooltip-center" data-tip="hello">
+    <button class="btn">Hover me</button>
+  </div>
+</div>
+
+```html
+<div class="$$tooltip $$tooltip-start $$md:tooltip-right $$md:tooltip-center" data-tip="hello">
   <button class="$$btn">Hover me</button>
 </div>
 ```
