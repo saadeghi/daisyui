@@ -10,6 +10,11 @@
     &:has(> :checked, > :is([type="checkbox"], [type="radio"]):focus-visible) {
       outline-color: currentColor;
     }
+    &:has(> :checked:focus-visible),
+    &[aria-checked="true"]:focus-visible,
+    &[aria-checked="true"]:has(> :is([type="checkbox"], [type="radio"]):focus-visible) {
+      outline-width: 4px;
+    }
 
     :where(figure:first-child) {
       @apply overflow-hidden;
