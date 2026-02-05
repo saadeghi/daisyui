@@ -1,3 +1,8 @@
+:root {
+  --page-scroll-lock: initial;
+  --page-overflow: var(--page-scroll-lock) hidden;
+}
+
 /* force higher specificity */
 :root:not(span) {
   overflow: var(--page-overflow);
