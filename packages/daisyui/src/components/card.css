@@ -6,6 +6,7 @@
     outline-offset: 2px;
 
     &:focus-visible,
+    &[aria-checked="true"],
     &:has(> :checked, > :is([type="checkbox"], [type="radio"]):focus-visible) {
       outline-color: currentColor;
     }
