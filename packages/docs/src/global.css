@@ -67,6 +67,10 @@
   } */
 }
 
+pre.shiki[tabindex="0"]:focus-visible {
+  @apply outline-2 outline-base-300 -outline-offset-4;
+}
+
 .code-wrapper {
   background-color: var(--color-neutral);
   border-radius: var(--radius-box);
