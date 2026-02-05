@@ -469,6 +469,9 @@
       &:is(label:has(:checked:focus-visible)) {
         outline-offset: 2px;
       }
+      &:focus-visible {
+        @apply z-1;
+      }
     }
 
     > :is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]):not(
