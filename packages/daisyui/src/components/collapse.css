@@ -6,7 +6,6 @@
   @layer daisyui.l1.l2.l3 {
     display: grid;
     position: relative;
-    overflow: hidden;
     border-radius: var(--radius-box, 1rem);
     width: 100%;
     grid-template-rows: max-content 0fr;
@@ -40,6 +39,7 @@
       > .collapse-content,
     &:not(.collapse-close)
       > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
+      overflow: revert-layer;
       content-visibility: visible;
       min-height: fit-content;
       @supports not (content-visibility: visible) {
@@ -88,6 +88,10 @@
       padding-inline-end: 3rem;
       min-height: 1lh;
       transition: background-color 0.2s ease-out;
+
+      &:has(~ label) {
+        z-index: revert-layer;
+      }
     }
   }
 
@@ -170,6 +174,7 @@
 .collapse-content {
   @layer daisyui.l1.l2.l3 {
     content-visibility: hidden;
+    overflow: clip;
     grid-column-start: 1;
     grid-row-start: 2;
     min-height: 0;
@@ -181,6 +186,7 @@
     }
     @media (prefers-reduced-motion: no-preference) {
       transition:
+        overflow 0.2s allow-discrete,
         content-visibility 0.2s allow-discrete,
         visibility 0.2s allow-discrete,
         min-height 0.2s ease-out allow-discrete,
@@ -195,7 +201,9 @@
     width: 100%;
     @media (prefers-reduced-motion: no-preference) {
       &::details-content {
+        overflow: clip;
         transition:
+          overflow 0.2s allow-discrete,
           content-visibility 0.2s allow-discrete,
           visibility 0.2s allow-discrete,
           min-height 0.2s ease-out allow-discrete,
@@ -208,6 +216,7 @@
 
       &:where([open])::details-content {
         height: auto;
+        overflow: revert-layer;
       }
     }
     & summary {
@@ -291,6 +300,7 @@
   @layer daisyui.l1.l2 {
     grid-template-rows: max-content 1fr;
     > .collapse-content {
+      overflow: revert-layer;
       content-visibility: visible;
       min-height: fit-content;
       padding-bottom: 1rem;
