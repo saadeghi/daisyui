@@ -596,3 +596,78 @@ classnames:
   </div>
 </div>
 ```
+
+### ~Selectable cards
+<div class="flex flex-wrap items-start gap-3">
+  <label class="card bg-accent text-accent-content">
+    <input type="checkbox" name="card-urgent-1" />
+    <div class="card-body">
+      <h2 class="card-title">Urgent</h2>
+      <p>Same day delivery</p>
+    </div>
+  </label>
+
+  <div class="join bg-base-300 rounded-selector">
+    <label class="join-item card">
+      <input type="radio" value="sm" name="card-size-1" />
+      <div class="card-body">
+        <h2 class="card-title">Size SM</h2>
+        <p>Available</p>
+      </div>
+    </label>
+
+    <label class="join-item card">
+      <input type="radio" value="md" name="card-size-1" disabled />
+      <div class="card-body opacity-60">
+        <h2 class="card-title">Size MD</h2>
+        <p>Not available</p>
+      </div>
+    </label>
+
+    <label class="join-item card">
+      <input type="radio" value="lg" name="card-size-1" />
+      <div class="card-body">
+        <h2 class="card-title">Size LG</h2>
+        <p>Short supply</p>
+      </div>
+    </label>
+  </div>
+</div>
+
+```html
+<div class="flex flex-wrap items-start gap-3">
+  <label class="$$card bg-accent text-accent-content">
+    <input type="checkbox" name="card-urgent-1" />
+    <div class="$$card-body">
+      <h2 class="$$card-title">Urgent</h2>
+      <p>Same day delivery</p>
+    </div>
+  </label>
+
+  <div class="$$join bg-base-300 rounded-selector">
+    <label class="$$join-item $$card">
+      <input type="radio" value="sm" name="card-size-1" />
+      <div class="$$card-body">
+        <h2 class="$$card-title">Size SM</h2>
+        <p>Available</p>
+      </div>
+    </label>
+
+    <label class="$$join-item $$card">
+      <input type="radio" value="md" name="card-size-1" disabled />
+      <div class="$$card-body opacity-60">
+        <h2 class="$$card-title">Size MD</h2>
+        <p>Not available</p>
+      </div>
+    </label>
+
+    <label class="$$join-item $$card">
+      <input type="radio" value="lg" name="card-size-1" />
+      <div class="$$card-body">
+        <h2 class="$$card-title">Size LG</h2>
+        <p>Short supply</p>
+      </div>
+    </label>
+  </div>
+</div>
+```
