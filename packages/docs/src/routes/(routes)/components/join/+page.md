@@ -127,9 +127,9 @@ classnames:
 
 ### ~Join radio inputs with btn style
 <div class="join">
-  <input class="join-item btn" type="radio" name="options" aria-label="Radio 1" />
-  <input class="join-item btn" type="radio" name="options" aria-label="Radio 2" />
-  <input class="join-item btn" type="radio" name="options" aria-label="Radio 3" />
+  <input class="join-item btn" type="radio" name="options" autocomplete="off" aria-label="Radio 1" />
+  <input class="join-item btn" type="radio" name="options" autocomplete="off" aria-label="Radio 2" />
+  <input class="join-item btn" type="radio" name="options" autocomplete="off" aria-label="Radio 3" />
 </div>
 
 ```html

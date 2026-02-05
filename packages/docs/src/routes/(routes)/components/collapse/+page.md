@@ -59,7 +59,7 @@ classnames:
 #### This collapse works with checkbox instead of focus. It needs to get clicked again to get closed.
 
 <div class="collapse bg-base-100 border border-base-300">
-  <input type="checkbox" />
+  <input type="checkbox" autocomplete="off" />
   <div class="collapse-title font-semibold">How do I create an account?</div>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
@@ -215,7 +215,7 @@ classnames:
 #### Use Tailwind CSS `peer` and `peer-checked` utilities to apply style when sibling checkbox is checked
 
 <div class="collapse bg-base-100 border border-base-300">
-  <input type="checkbox" class="peer" />
+  <input type="checkbox" autocomplete="off" class="peer" />
   <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     How do I create an account?
   </div>
