@@ -96,6 +96,8 @@ export const htmlToJsx = (node) => {
 
   const update = () => {
     node.innerHTML = replaceStrings(originalContent, stringsToReplace)
+      // fix the broken tabIndex={0} in JSX tab
+      .replaceAll('var(--shiki-punctuation)" tabIndex={0}>', 'var(--shiki-punctuation)" tabindex="0">',)
   }
 
   update()
