@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.18 (2026-02-05)
+
+
+### Bug Fixes
+
+* apply `z-1` on box tab when focus-visible ([#4425](https://github.com/saadeghi/daisyui/issues/4425)) ([b2907eb](https://github.com/saadeghi/daisyui/commit/b2907eb92f5aa887f8ff8ea267c72ab6d0162a43)), closes [#4424](https://github.com/saadeghi/daisyui/issues/4424)
+
 ## 5.5.17 (2026-02-02)
 
 ## 5.5.16 (2026-02-01)
