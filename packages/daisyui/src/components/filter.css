@@ -10,6 +10,7 @@
       @apply overflow-hidden opacity-100;
       scale: 1;
       transition:
+        visibility 0.1s allow-discrete,
         margin 0.1s,
         opacity 0.3s,
         padding 0.3s,
@@ -29,15 +30,16 @@
     }
   }
 
-  @layer daisyui.l1.l2 {
-    &:not(:has(:focus-visible)) {
-      &:not(:has(:checked:not(.filter-reset))) :is(.filter-reset, [type="reset"]),
-      &:has(:checked:not(.filter-reset):not([type="checkbox"]))
-        :not(:checked, .filter-reset, [type="reset"]) {
-        @apply mx-0 w-0 px-0 opacity-0;
-        scale: 0;
-        border-width: 0;
-      }
+  @layer daisyui.l1 {
+    &:not(:has(:checked:not(.filter-reset))) :is(.filter-reset, [type="reset"]) {
+      @apply invisible;
+    }
+    &:not(:has(:checked:not(.filter-reset))) :is(.filter-reset, [type="reset"]),
+    &:not(:has(:focus-visible)):has(:checked:not(.filter-reset):not([type="checkbox"]))
+      :not(:checked, .filter-reset, [type="reset"]) {
+      @apply mx-0 w-0 px-0 opacity-0;
+      scale: 0;
+      border-width: 0;
     }
   }
 }
