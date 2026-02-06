@@ -54,9 +54,9 @@ classnames:
 </div>
 ```
 ### ~Filter using HTML form, checkboxes, and a reset button
-#### For having multiple choices, use checkboxes. It doesn't need the filter class name.
+#### For having multiple choices, use checkboxes.
 
-<form>
+<form class="filter">
   <input class="btn" type="checkbox" name="frameworks" aria-label="Svelte"/>
   <input class="btn" type="checkbox" name="frameworks" aria-label="Vue"/>
   <input class="btn" type="checkbox" name="frameworks" aria-label="React"/>
@@ -64,7 +64,7 @@ classnames:
 </form>
 
 ```html
-<form>
+<form class="$$filter">
   <input class="$$btn" type="checkbox" name="frameworks" aria-label="Svelte"/>
   <input class="$$btn" type="checkbox" name="frameworks" aria-label="Vue"/>
   <input class="$$btn" type="checkbox" name="frameworks" aria-label="React"/>

@@ -65,7 +65,7 @@
       --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
     }
 
-    &:is(input[type="checkbox"], input[type="radio"]) {
+    &:is([type="checkbox"], [type="radio"]) {
       @apply appearance-none;
 
       /* &:not(.btn-square, .btn-circle) {
@@ -77,7 +77,7 @@
         content: var(--tw-content);
       }
     }
-    &:where(input:checked:not(.filter .btn)) {
+    &:where(:checked:not(.filter [type="radio"].btn)) {
       --btn-color: var(--color-primary);
       --btn-fg: var(--color-primary-content);
       isolation: isolate;
@@ -167,7 +167,13 @@
 
 .btn-ghost {
   @layer daisyui.l1 {
-    &:not(.btn-active, :hover, :active:focus, :focus-visible, input:checked:not(.filter .btn)) {
+    &:not(
+      .btn-active,
+      :hover,
+      :active:focus,
+      :focus-visible,
+      :checked:not(.filter [type="radio"].btn)
+    ) {
       --btn-shadow: "";
       --btn-bg: #0000;
       --btn-border: #0000;
@@ -179,7 +185,7 @@
     }
 
     @media (hover: none) {
-      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
+      &:not(.btn-active, :active, :focus-visible, :checked:not(.filter [type="radio"].btn)):hover {
         @apply outline-current;
         --btn-shadow: "";
         --btn-bg: #0000;
@@ -218,7 +224,7 @@
       :hover,
       :active:focus,
       :focus-visible,
-      input:checked:not(.filter .btn),
+      :checked:not(.filter [type="radio"].btn),
       :disabled,
       [disabled],
       .btn-disabled
@@ -231,7 +237,7 @@
     }
 
     @media (hover: none) {
-      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
+      &:not(.btn-active, :active, :focus-visible, :checked:not(.filter [type="radio"].btn)):hover {
         --btn-shadow: "";
         --btn-bg: #0000;
         --btn-fg: var(--btn-color);
@@ -253,7 +259,7 @@
       :hover,
       :active:focus,
       :focus-visible,
-      input:checked:not(.filter .btn),
+      :checked:not(.filter [type="radio"].btn),
       :disabled,
       [disabled],
       .btn-disabled
@@ -274,7 +280,7 @@
     }
 
     @media (hover: none) {
-      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
+      &:not(.btn-active, :active, :focus-visible, :checked:not(.filter [type="radio"].btn)):hover {
         --btn-shadow: "";
         --btn-fg: var(--btn-color, var(--color-base-content));
         --btn-bg: color-mix(

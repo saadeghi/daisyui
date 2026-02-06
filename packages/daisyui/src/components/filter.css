@@ -1,20 +1,25 @@
 .filter {
   @layer daisyui.l1.l2.l3 {
     @apply flex flex-wrap;
-    input[type="radio"] {
+
+    [type="radio"] {
       @apply w-auto;
     }
+
     input {
       @apply overflow-hidden opacity-100;
       scale: 1;
       transition:
+        visibility 0.1s allow-discrete,
         margin 0.1s,
         opacity 0.3s,
         padding 0.3s,
         border-width 0.1s;
+
       &:not(:last-child) {
         @apply me-1;
       }
+
       &.filter-reset {
         @apply aspect-square;
         &::after {
@@ -23,20 +28,18 @@
         }
       }
     }
-    &:not(:has(input:checked:not(.filter-reset))) {
-      .filter-reset,
-      input[type="reset"] {
-        scale: 0;
-        border-width: 0;
-        @apply mx-0 w-0 px-0 opacity-0;
-      }
+  }
+
+  @layer daisyui.l1 {
+    &:not(:has(:checked:not(.filter-reset))) :is(.filter-reset, [type="reset"]) {
+      @apply invisible;
     }
-    &:has(input:checked:not(.filter-reset)) {
-      input:not(:checked, .filter-reset, input[type="reset"]) {
-        scale: 0;
-        border-width: 0;
-        @apply mx-0 w-0 px-0 opacity-0;
-      }
+    &:not(:has(:checked:not(.filter-reset))) :is(.filter-reset, [type="reset"]),
+    &:not(:has(:focus-visible)):has(:checked:not(.filter-reset):not([type="checkbox"]))
+      :not(:checked, .filter-reset, [type="reset"]) {
+      @apply mx-0 w-0 px-0 opacity-0;
+      scale: 0;
+      border-width: 0;
     }
   }
 }
