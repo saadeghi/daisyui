@@ -13,6 +13,13 @@
         4.2em 0;
     }
 
+    .mockup-code-btn {
+      @apply absolute top-2 right-2 z-10 cursor-pointer rounded-md border-none bg-current/10 px-2 py-1 text-xs text-current opacity-60 transition-opacity;
+      &:hover {
+        @apply opacity-100;
+      }
+    }
+
     pre {
       @apply pr-5;
 

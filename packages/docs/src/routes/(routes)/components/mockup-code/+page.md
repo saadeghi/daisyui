@@ -7,6 +7,9 @@ classnames:
   component:
     - class: mockup-code
       desc: Code terminal mockup
+  part:
+    - class: mockup-code-btn
+      desc: Optional button for code mockup
 ---
 
 <script>
@@ -79,6 +82,20 @@ classnames:
 ```html
 <div class="$$mockup-code w-full">
   <pre><code>without prefix</code></pre>
+</div>
+```
+
+
+### ~With button
+<div class="mockup-code w-full">
+  <button class="mockup-code-btn">Copy</button>
+  <pre data-prefix="$"><code>npm i daisyui</code></pre>
+</div>
+
+```html
+<div class="$$mockup-code w-full">
+  <button class="$$mockup-code-btn">Copy</button>
+  <pre data-prefix="$"><code>npm i daisyui</code></pre>
 </div>
 ```
 
