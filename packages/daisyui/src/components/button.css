@@ -87,14 +87,14 @@
 
 .btn-disabled,
 .btn:disabled,
-.btn[disabled] {
+.btn[disabled],
+.btn[aria-disabled="true"] {
   @layer daisyui.l1.l2 {
     &:not(.btn-link, .btn-ghost) {
       @apply bg-base-content/10;
-      box-shadow: none;
     }
 
-    @apply pointer-events-none;
+    @apply pointer-events-none shadow-none;
     --btn-border: #0000;
     --btn-noise: none;
     --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
@@ -113,6 +113,7 @@
   @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-primary);
     --btn-fg: var(--color-primary-content);
+    --btn-soft-bg: initial;
   }
 }
 
@@ -120,6 +121,7 @@
   @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-secondary);
     --btn-fg: var(--color-secondary-content);
+    --btn-soft-bg: initial;
   }
 }
 
@@ -127,6 +129,7 @@
   @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-accent);
     --btn-fg: var(--color-accent-content);
+    --btn-soft-bg: initial;
   }
 }
 
@@ -134,6 +137,8 @@
   @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-neutral);
     --btn-fg: var(--color-neutral-content);
+    --btn-soft-bg: var(--color-neutral-content) 80%;
+    --btn-rest-fg: initial;
   }
 }
 
@@ -141,6 +146,7 @@
   @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-info);
     --btn-fg: var(--color-info-content);
+    --btn-soft-bg: initial;
   }
 }
 
@@ -148,6 +154,7 @@
   @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-success);
     --btn-fg: var(--color-success-content);
+    --btn-soft-bg: initial;
   }
 }
 
@@ -155,6 +162,7 @@
   @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-warning);
     --btn-fg: var(--color-warning-content);
+    --btn-soft-bg: initial;
   }
 }
 
@@ -162,6 +170,7 @@
   @layer daisyui.l1.l2.l3 {
     --btn-color: var(--color-error);
     --btn-fg: var(--color-error-content);
+    --btn-soft-bg: initial;
   }
 }
 
@@ -178,9 +187,9 @@
       --btn-bg: #0000;
       --btn-border: #0000;
       --btn-noise: none;
-      &:not(:disabled, [disabled], .btn-disabled) {
+      &:not(:disabled, [disabled], .btn-disabled, [aria-disabled="true"]) {
         @apply outline-current;
-        --btn-fg: var(--btn-color, currentColor);
+        --btn-fg: var(--btn-rest-fg, var(--btn-color, currentColor));
       }
     }
 
@@ -189,7 +198,7 @@
         @apply outline-current;
         --btn-shadow: "";
         --btn-bg: #0000;
-        --btn-fg: var(--btn-color, currentColor);
+        --btn-fg: var(--btn-rest-fg, var(--btn-color, currentColor));
         --btn-border: #0000;
         --btn-noise: none;
       }
@@ -205,7 +214,7 @@
     --btn-noise: none;
     --btn-shadow: "";
 
-    &:not(.btn-disabled, .btn:disabled, .btn[disabled]) {
+    &:not(.btn-disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"]) {
       --btn-fg: var(--btn-color, var(--color-primary));
     }
 
@@ -227,11 +236,12 @@
       :checked:not(.filter [type="radio"].btn),
       :disabled,
       [disabled],
-      .btn-disabled
+      .btn-disabled,
+      [aria-disabled="true"]
     ) {
       --btn-shadow: "";
       --btn-bg: #0000;
-      --btn-fg: var(--btn-color);
+      --btn-fg: var(--btn-rest-fg, var(--btn-color));
       --btn-border: var(--btn-color);
       --btn-noise: none;
     }
@@ -240,7 +250,7 @@
       &:not(.btn-active, :active, :focus-visible, :checked:not(.filter [type="radio"].btn)):hover {
         --btn-shadow: "";
         --btn-bg: #0000;
-        --btn-fg: var(--btn-color);
+        --btn-fg: var(--btn-rest-fg, var(--btn-color));
         --btn-border: var(--btn-color);
         --btn-noise: none;
       }
@@ -262,19 +272,20 @@
       :checked:not(.filter [type="radio"].btn),
       :disabled,
       [disabled],
-      .btn-disabled
+      .btn-disabled,
+      [aria-disabled="true"]
     ) {
       --btn-shadow: "";
-      --btn-fg: var(--btn-color, var(--color-base-content));
+      --btn-fg: var(--btn-rest-fg, var(--btn-color, var(--color-base-content)));
       --btn-bg: color-mix(
         in oklab,
         var(--btn-color, var(--color-base-content)) 8%,
-        var(--color-base-100)
+        var(--btn-soft-bg, var(--color-base-100))
       );
       --btn-border: color-mix(
         in oklab,
         var(--btn-color, var(--color-base-content)) 10%,
-        var(--color-base-100)
+        var(--btn-soft-bg, var(--color-base-100))
       );
       --btn-noise: none;
     }
@@ -282,16 +293,16 @@
     @media (hover: none) {
       &:not(.btn-active, :active, :focus-visible, :checked:not(.filter [type="radio"].btn)):hover {
         --btn-shadow: "";
-        --btn-fg: var(--btn-color, var(--color-base-content));
+        --btn-fg: var(--btn-rest-fg, var(--btn-color, var(--color-base-content)));
         --btn-bg: color-mix(
           in oklab,
           var(--btn-color, var(--color-base-content)) 8%,
-          var(--color-base-100)
+          var(--btn-soft-bg, var(--color-base-100))
         );
         --btn-border: color-mix(
           in oklab,
           var(--btn-color, var(--color-base-content)) 10%,
-          var(--color-base-100)
+          var(--btn-soft-bg, var(--color-base-100))
         );
         --btn-noise: none;
       }
