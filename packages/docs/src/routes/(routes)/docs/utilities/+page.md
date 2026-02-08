@@ -129,6 +129,7 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--size`                      | size of the badge                                        |
 | Button          | `--btn-color`                 | background color of the button                           |
 |                 | `--btn-fg`                    | foreground color of the button                           |
+|                 | `--btn-rest-fg`               | foreground color of the button in default/rest state     |
 |                 | `--btn-shadow`                | shadow of the button                                     |
 |                 | `--btn-noise`                 | noise background of the button if enabled                |
 |                 | `--btn-p`                     | padding of the button                                    |
