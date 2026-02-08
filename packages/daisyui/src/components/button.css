@@ -8,7 +8,6 @@
   @apply no-underline;
 }
 
-/* 1. BASE STRUCTURE */
 .btn {
   @layer daisyui.l1.l2.l3 {
     /* User-facing defaults */
@@ -19,7 +18,6 @@
     --btn-fg: var(--color-base-content);
     --btn-noise: var(--fx-noise);
 
-    /* Non-changing styles */
     @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle outline-offset-2 select-none;
     font-weight: 600;
     border-start-start-radius: var(--join-ss, var(--radius-field));
@@ -32,7 +30,6 @@
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transition-duration: 0.2s;
 
-    /* Internal logic */
     --int-bg: var(--btn-color, var(--color-base-200));
     --int-fg: var(--btn-fg);
     --int-border: color-mix(
@@ -51,7 +48,6 @@
     --int-inset-def: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
     --int-inset: var(--int-inset-def);
 
-    /* Apply internals */
     height: var(--size);
     padding-inline: var(--btn-p);
     font-size: var(--fontsize, 0.875rem);
@@ -62,7 +58,6 @@
     outline-color: var(--btn-color, var(--color-base-content));
     --tw-prose-links: var(--int-fg);
 
-    /* Effects */
     background-image: none, var(--int-noise);
     background-size: auto, calc(var(--noise, 0) * 100%);
     text-shadow: 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 0.15));
@@ -70,7 +65,6 @@
       var(--int-inset) inset,
       var(--int-shadow);
 
-    /* Checkable label */
     &:is([type="checkbox"], [type="radio"]) {
       @apply appearance-none;
 
@@ -80,13 +74,62 @@
       }
     }
   }
+
+  @layer daisyui.l1.l2 {
+    &:where(:checked:not(.filter [type="radio"].btn), .btn-active) {
+      --btn-color: var(--color-primary);
+      --btn-fg: var(--color-primary-content);
+      isolation: isolate;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        --int-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+        --int-fg: var(--btn-fg);
+        --int-border: color-mix(in oklab, var(--int-bg), #000 calc(var(--depth) * 5%));
+        --int-noise: var(--fx-noise);
+        --int-inset: var(--int-inset-def);
+        --int-shadow: var(--int-shadow-def);
+      }
+    }
+
+    &:active:not(.btn-active) {
+      translate: 0 0.5px;
+      --int-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
+      --int-fg: var(--btn-fg, var(--color-base-content));
+      --int-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+      --int-border-style: solid;
+      --int-inset: var(--int-no-shadow);
+      --int-shadow: var(--int-no-shadow);
+    }
+
+    &:where(
+      :checked:not(.filter [type="radio"].btn),
+      .btn-active,
+      :not([type="radio"], [type="checkbox"]):focus-visible
+    ) {
+      --int-bg: var(--btn-color, var(--color-base-200));
+      --int-fg: var(--btn-fg, var(--color-base-content));
+      --int-border: color-mix(in oklab, var(--int-bg), #000 calc(var(--depth) * 5%));
+      --int-border-style: solid;
+      --int-noise: var(--fx-noise);
+      --int-inset: var(--int-inset-def);
+      --int-shadow: var(--int-shadow-def);
+      isolation: isolate;
+    }
+
+    &:focus-visible,
+    &:has(:focus-visible) {
+      outline-width: 2px;
+      outline-style: solid;
+      isolation: isolate;
+    }
+  }
 }
 
-/* 2. MODIFIERS */
-/* 2a. Style modifiers */
 .btn-outline,
 .btn-dash {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --int-bg: #0000;
     --int-fg: var(--btn-rest-fg, var(--btn-color, var(--color-base-content)));
     --int-border: var(--btn-color, var(--color-base-content));
@@ -98,13 +141,13 @@
 }
 
 .btn-dash {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --int-border-style: dashed;
   }
 }
 
 .btn-ghost {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --int-bg: #0000;
     --int-fg: var(--btn-rest-fg, var(--btn-color, var(--color-base-content, currentColor)));
     --int-border: #0000;
@@ -115,7 +158,7 @@
 }
 
 .btn-soft {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1.l2.l3 {
     --int-bg: color-mix(
       in oklab,
       var(--btn-color, var(--color-base-content)) 8%,
@@ -134,7 +177,6 @@
   }
 }
 
-/* Link is a special case, it goes in higher layer */
 .btn-link {
   @layer daisyui.l1 {
     @apply underline;
@@ -147,16 +189,6 @@
   }
 }
 
-/* 2b. Checked/active defaults (must be first to be overridden by specific colors) */
-.btn:where(:checked:not(.filter [type="radio"].btn), .btn-active) {
-  @layer daisyui.l1.l2 {
-    --btn-color: var(--color-primary);
-    --btn-fg: var(--color-primary-content);
-    isolation: isolate;
-  }
-}
-
-/* 2c. Color modifiers */
 .btn-primary {
   @layer daisyui.l1.l2 {
     --btn-color: var(--color-primary);
@@ -222,7 +254,6 @@
   }
 }
 
-/* 2d. Sizes */
 .btn-xs {
   @layer daisyui.l1.l2 {
     --fontsize: 0.6875rem;
@@ -291,56 +322,6 @@
   }
 }
 
-/* 3. INTERACTION & STATE */
-.btn {
-  @layer daisyui.l1.l2 {
-    @media (hover: hover) {
-      &:hover {
-        --int-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-        --int-fg: var(--btn-fg);
-        --int-border: color-mix(in oklab, var(--int-bg), #000 calc(var(--depth) * 5%));
-        --int-noise: var(--fx-noise);
-        --int-inset: var(--int-inset-def);
-        --int-shadow: var(--int-shadow-def);
-      }
-    }
-
-    &:active:not(.btn-active) {
-      translate: 0 0.5px;
-      --int-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
-      --int-fg: var(--btn-fg, var(--color-base-content));
-      --int-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-      --int-border-style: solid;
-      --int-inset: var(--int-no-shadow);
-      --int-shadow: var(--int-no-shadow);
-    }
-
-    /* Force solid state (checked/active/focus-visible if not checkable) */
-    &:where(
-      :checked:not(.filter [type="radio"].btn),
-      .btn-active,
-      :not([type="radio"], [type="checkbox"]):focus-visible
-    ) {
-      --int-bg: var(--btn-color, var(--color-base-200));
-      --int-fg: var(--btn-fg, var(--color-base-content));
-      --int-border: color-mix(in oklab, var(--int-bg), #000 calc(var(--depth) * 5%));
-      --int-border-style: solid;
-      --int-noise: var(--fx-noise);
-      --int-inset: var(--int-inset-def);
-      --int-shadow: var(--int-shadow-def);
-      isolation: isolate;
-    }
-
-    &:focus-visible,
-    &:has(:focus-visible) {
-      outline-width: 2px;
-      outline-style: solid;
-      isolation: isolate;
-    }
-  }
-}
-
-/* Disabled State */
 .btn-disabled,
 .btn:is(:disabled, [disabled], [aria-disabled="true"]) {
   @layer daisyui {
