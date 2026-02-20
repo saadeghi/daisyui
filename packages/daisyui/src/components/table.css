@@ -1,7 +1,7 @@
 .table {
   @layer daisyui.l1.l2.l3 {
     font-size: 0.875rem;
-    @apply rounded-box relative w-full border-separate border-spacing-0 text-left rtl:text-right;
+    @apply rounded-box relative w-full border-separate border-spacing-0 text-start;
 
     tr.row-hover {
       &,
