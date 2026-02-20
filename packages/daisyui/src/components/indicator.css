@@ -19,7 +19,7 @@
     --indicator-s: 0;
     --indicator-e: auto;
     --indicator-x: -50%;
-    [dir="rtl"] & {
+    &:dir(rtl) {
       --indicator-s: auto;
       --indicator-e: 0;
       --indicator-x: 50%;
@@ -32,7 +32,7 @@
     --indicator-s: 50%;
     --indicator-e: auto;
     --indicator-x: -50%;
-    [dir="rtl"] & {
+    &:dir(rtl) {
       --indicator-e: 50%;
       --indicator-x: 50%;
     }
@@ -44,7 +44,7 @@
     --indicator-s: auto;
     --indicator-e: 0;
     --indicator-x: 50%;
-    [dir="rtl"] & {
+    &:dir(rtl) {
       --indicator-s: 0;
       --indicator-e: auto;
       --indicator-x: -50%;

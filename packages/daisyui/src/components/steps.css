@@ -135,7 +135,7 @@
         translate: 0;
         margin-inline-start: -100%;
       }
-      [dir="rtl"] &:before {
+      &:dir(rtl):before {
         translate: 0;
       }
     }
@@ -160,7 +160,7 @@
         translate: -50% -50%;
         margin-inline-start: 50%;
       }
-      [dir="rtl"] &:before {
+      &:dir(rtl):before {
         translate: 50% -50%;
       }
     }
