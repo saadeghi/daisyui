@@ -3,14 +3,23 @@
     @apply relative inline-flex;
     width: max-content;
 
+    --indicator-s: auto;
+    --indicator-e: 0;
+    --indicator-x: 50%;
+    &:dir(rtl) {
+      --indicator-s: 0;
+      --indicator-e: auto;
+      --indicator-x: -50%;
+    }
+
     :where(.indicator-item) {
       z-index: 1;
       @apply absolute whitespace-nowrap;
       top: var(--indicator-t, 0);
       bottom: var(--indicator-b, auto);
-      left: var(--indicator-s, auto);
-      right: var(--indicator-e, 0);
-      translate: var(--indicator-x, 50%) var(--indicator-y, -50%);
+      left: var(--indicator-s);
+      right: var(--indicator-e);
+      translate: var(--indicator-x) var(--indicator-y, -50%);
     }
   }
 }
