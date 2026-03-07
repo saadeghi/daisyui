@@ -59,13 +59,7 @@
     }
 
     :where(:root:has(&:checked)) {
-      --page-has-backdrop: 1;
-      --page-overflow: hidden;
-      --page-scroll-bg: var(--page-scroll-bg-on);
-      --page-scroll-gutter: stable;
-      --page-scroll-transition: var(--page-scroll-transition-on);
-      animation: set-page-has-scroll forwards;
-      animation-timeline: scroll();
+      --page-scroll-lock: ;
     }
   }
 
@@ -121,13 +115,7 @@
       }
 
       :root:has(&) {
-        --page-overflow: revert-layer;
-        --page-scroll-gutter: revert-layer;
-        --page-scroll-bg: revert-layer;
-        --page-scroll-transition: revert-layer;
-        --page-has-backdrop: revert-layer;
-        animation: revert-layer;
-        animation-timeline: revert-layer;
+        --page-scroll-lock: revert-layer;
       }
     }
   }
