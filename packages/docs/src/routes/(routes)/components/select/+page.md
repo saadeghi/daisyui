@@ -104,7 +104,7 @@ classnames:
 
 <fieldset class="fieldset w-xs">
   <legend class="fieldset-legend">Browsers</legend>
-  <select class="select">
+  <select class="select max-h-60 overflow-y-auto z-[1]">
     <option disabled selected>Pick a Browser</option>
     <option>Chrome</option>
     <option>FireFox</option>
