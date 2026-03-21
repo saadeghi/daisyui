@@ -1,8 +1,11 @@
 .otp-input {
-  @layer daisyui.l1.l2.l3 {
+  @layer daisyui.component {
+    --digits: 6;
     --_w: 1ch;
     --_g: 0px;
     --_b: var(--border);
+    --_h: 2.4em;
+    --_bg: var(--color-base-100);
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
 
     box-sizing: content-box;
@@ -14,10 +17,11 @@
     font-size: max(var(--font-size, 1.25rem), 1.25rem);
     line-height: 2.4;
     letter-spacing: calc(var(--_w) + var(--_g));
-    width: calc(var(--digits) * (1ch + var(--_w) + var(--_g)));
+    /* trailing half-gap is clipped by overflow:hidden so both corners round correctly */
+    width: calc(var(--digits) * (1ch + var(--_w) + var(--_g)) - (var(--_w) + var(--_g)) / 2);
     padding-inline-start: calc(var(--_w) / 2);
     padding-inline-end: 0;
-    clip-path: inset(0 calc((var(--_w) + var(--_g)) / 2) 0 0);
+    overflow: hidden;
     touch-action: manipulation;
     border-start-start-radius: var(--join-ss, var(--radius-field));
     border-start-end-radius: var(--join-se, var(--radius-field));
@@ -27,12 +31,13 @@
       0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
       0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
 
-    /* Internal vertical separators only — real CSS border handles the outer border */
-    background-image: repeating-linear-gradient(90deg,
+    /* (digits-1) strides avoids a phantom stripe at the right inner edge of the last cell */
+    background-image: repeating-linear-gradient(
+      90deg,
       var(--input-color) 0 var(--_b),
       #0000 var(--_b) calc(1ch + var(--_w) + var(--_g))
     );
-    background-size: calc(var(--digits) * (1ch + var(--_w) + var(--_g))) 100%;
+    background-size: calc((var(--digits) - 1) * (1ch + var(--_w) + var(--_g))) 100%;
     background-position: calc(1ch + var(--_w) + var(--_g) / 2 - var(--_b) / 2) 0;
     background-repeat: no-repeat;
 
@@ -40,11 +45,12 @@
     &:focus-within {
       --input-color: var(--color-base-content);
       box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
-      outline: none;
+      outline: 2px solid var(--input-color);
+      outline-offset: 2px;
       isolation: isolate;
     }
 
-    /* iOS zoom prevention */
+    /* prevent iOS auto-zoom on focus */
     @media (pointer: coarse) {
       @supports (-webkit-touch-callout: none) {
         &:focus,
@@ -52,6 +58,15 @@
           --font-size: 1rem;
         }
       }
+    }
+
+    /* glow selection for legibility over digit separators */
+    &::selection {
+      background-color: transparent;
+      text-shadow:
+        var(--input-color) 0 0 0.025ch,
+        var(--input-color) 0 0 0.05ch,
+        var(--input-color) 0 0 0.075ch;
     }
 
     &:is(:disabled, [disabled]),
@@ -63,9 +78,8 @@
   }
 }
 
-/* Ghost variant */
 .otp-input-ghost {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     @apply bg-transparent;
     border-color: transparent;
     box-shadow: none;
@@ -75,134 +89,196 @@
     &:focus-within {
       @apply text-base-content bg-base-100;
       border-color: var(--input-color);
-      background-image: repeating-linear-gradient(90deg,
+      background-image: repeating-linear-gradient(
+        90deg,
         var(--input-color) 0 var(--_b),
         #0000 var(--_b) calc(1ch + var(--_w) + var(--_g))
       );
-      background-size: calc(var(--digits) * (1ch + var(--_w) + var(--_g))) 100%;
+      background-size: calc((var(--digits) - 1) * (1ch + var(--_w) + var(--_g))) 100%;
       background-position: calc(1ch + var(--_w) + var(--_g) / 2 - var(--_b) / 2) 0;
       background-repeat: no-repeat;
     }
   }
 }
 
-/* Separated variant */
+/*
+ * Separated variant — each cell is a background-repeat:repeat-x tile drawn with
+ * tiled radial-gradients. All visual borders and fills come from gradients;
+ * the outer CSS border is hidden. Preserves theme border-radius across all themes.
+ */
 .otp-input-separated {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     --_g: 0.5ch;
-    width: calc(var(--digits) * (1ch + var(--_w) + var(--_g)));
-    clip-path: inset(0 calc((var(--_w) + var(--_g)) / 2) 0 0);
+    --_cell-w: calc(1ch + var(--_w));
+    --_stride: calc(var(--_cell-w) + var(--_g));
+
+    --_rc: min(var(--radius-field), calc(var(--_cell-w) / 2), calc(var(--_h) / 2));
+    --_dpf: 1; /* device pixel factor — overridden by resolution media queries */
+    --_r: max(0.01px, var(--_rc));
+    --_rs: max(0px, calc(var(--_r) - 1px / var(--_dpf)));
+    --_ir: max(0px, calc(var(--_rc) - var(--_b)));
+    --_irs: max(0px, calc(var(--_ir) - 1px / var(--_dpf)));
+    --_icx: calc(var(--_b) + var(--_ir));
+    --_icxs: calc(var(--_b) + var(--_irs));
+
+    width: calc((var(--digits) + 1) * var(--_stride) - var(--_g));
+    --_clip: calc(var(--_stride) + var(--_w) / 2 + var(--_b));
+    clip-path: inset(0 var(--_clip) 0 0);
+    margin-inline-end: calc(var(--_clip) * -1);
+
     border-color: transparent;
     border-radius: 0;
     box-shadow: none;
+    background-color: transparent;
+
     background-image:
-      /* Top borders */
-      repeating-linear-gradient(90deg,
-        var(--input-color) 0 calc(1ch + var(--_w)),
-        #0000 0 calc(1ch + var(--_w) + var(--_g))
-      ),
-      /* Bottom borders */
-      repeating-linear-gradient(90deg,
-        var(--input-color) 0 calc(1ch + var(--_w)),
-        #0000 0 calc(1ch + var(--_w) + var(--_g))
-      ),
-      /* Left + Right borders */
-      repeating-linear-gradient(90deg,
-        var(--input-color) 0 var(--_b),
-        #0000 var(--_b) calc(1ch + var(--_w) - var(--_b)),
-        var(--input-color) calc(1ch + var(--_w) - var(--_b)) calc(1ch + var(--_w)),
-        #0000 calc(1ch + var(--_w)) calc(1ch + var(--_w) + var(--_g))
-      );
-    --_total: calc(var(--digits) * (1ch + var(--_w) + var(--_g)) - var(--_g));
+      /* inner fill corners */
+      radial-gradient(circle at var(--_icx) var(--_icx), var(--_bg) var(--_irs), transparent var(--_ir)),
+      radial-gradient(circle at calc(var(--_cell-w) - var(--_icx)) var(--_icx), var(--_bg) var(--_irs), transparent var(--_ir)),
+      radial-gradient(circle at var(--_icx) calc(var(--_h) - var(--_icx)), var(--_bg) var(--_irs), transparent var(--_ir)),
+      radial-gradient(circle at calc(var(--_cell-w) - var(--_icx)) calc(var(--_h) - var(--_icx)), var(--_bg) var(--_irs), transparent var(--_ir)),
+      /* inner fill horizontal strips */
+      linear-gradient(to right, transparent var(--_icxs), var(--_bg) var(--_icxs), var(--_bg) calc(var(--_cell-w) - var(--_icxs)), transparent calc(var(--_cell-w) - var(--_icxs))),
+      /* inner fill center */
+      linear-gradient(to right, transparent var(--_b), var(--_bg) var(--_b), var(--_bg) calc(var(--_cell-w) - var(--_b)), transparent calc(var(--_cell-w) - var(--_b))),
+      /* border corners */
+      radial-gradient(circle at var(--_r) var(--_r), var(--input-color) var(--_rs), transparent var(--_r)),
+      radial-gradient(circle at calc(var(--_cell-w) - var(--_r)) var(--_r), var(--input-color) var(--_rs), transparent var(--_r)),
+      radial-gradient(circle at var(--_r) calc(var(--_h) - var(--_r)), var(--input-color) var(--_rs), transparent var(--_r)),
+      radial-gradient(circle at calc(var(--_cell-w) - var(--_r)) calc(var(--_h) - var(--_r)), var(--input-color) var(--_rs), transparent var(--_r)),
+      /* border horizontal sides */
+      linear-gradient(to right, transparent var(--_rs), var(--input-color) var(--_rs), var(--input-color) calc(var(--_cell-w) - var(--_rs)), transparent calc(var(--_cell-w) - var(--_rs))),
+      /* border vertical sides */
+      linear-gradient(to right, var(--input-color) 0, var(--input-color) var(--_cell-w), transparent var(--_cell-w));
+
     background-size:
-      var(--_total) var(--_b),
-      var(--_total) var(--_b),
-      var(--_total) 100%;
+      var(--_stride) var(--_h),
+      var(--_stride) var(--_h),
+      var(--_stride) var(--_h),
+      var(--_stride) var(--_h),
+      var(--_stride) calc(var(--_h) - (var(--_b) * 2)),
+      var(--_stride) calc(var(--_h) - (var(--_icxs) * 2)),
+      var(--_stride) var(--_h),
+      var(--_stride) var(--_h),
+      var(--_stride) var(--_h),
+      var(--_stride) var(--_h),
+      var(--_stride) var(--_h),
+      var(--_stride) calc(var(--_h) - (var(--_rs) * 2));
+
     background-position:
-      0 0,
-      0 100%,
-      0 0;
-    background-repeat: no-repeat;
+      0 0, 0 0, 0 0, 0 0,
+      0 var(--_b),
+      0 var(--_icxs),
+      0 0, 0 0, 0 0, 0 0, 0 0,
+      0 var(--_rs);
+
+    background-repeat: repeat-x;
+
+    &:focus,
+    &:focus-within {
+      --_bg: var(--color-base-200);
+      outline: none;
+    }
+
+    &:is(:disabled, [disabled]),
+    fieldset:disabled & {
+      --input-color: var(--color-base-300);
+      --_bg: var(--color-base-200);
+      background-color: transparent;
+    }
+
+    /* AA zone = 1 device pixel at each zoom/DPR level */
+    @media (resolution: 1.25dppx) { --_dpf: 1.25; }
+    @media (resolution: 1.33dppx) { --_dpf: 1.33; }
+    @media (resolution: 1.5dppx)  { --_dpf: 1.5;  }
+    @media (resolution: 1.75dppx) { --_dpf: 1.75; }
+    @media (resolution: 2dppx)    { --_dpf: 2;     }
+    @media (resolution: 2.5dppx)  { --_dpf: 2.5;  }
+    @media (resolution: 3dppx)    { --_dpf: 3;     }
+    @media (resolution: 4dppx)    { --_dpf: 4;     }
+    @media (resolution: 5dppx)    { --_dpf: 5;     }
   }
 }
 
-/* Color variants */
 .otp-input-neutral {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     &, &:focus, &:focus-within { --input-color: var(--color-neutral); }
   }
 }
 .otp-input-primary {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     &, &:focus, &:focus-within { --input-color: var(--color-primary); }
   }
 }
 .otp-input-secondary {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     &, &:focus, &:focus-within { --input-color: var(--color-secondary); }
   }
 }
 .otp-input-accent {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     &, &:focus, &:focus-within { --input-color: var(--color-accent); }
   }
 }
 .otp-input-info {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     &, &:focus, &:focus-within { --input-color: var(--color-info); }
   }
 }
 .otp-input-success {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     &, &:focus, &:focus-within { --input-color: var(--color-success); }
   }
 }
 .otp-input-warning {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     &, &:focus, &:focus-within { --input-color: var(--color-warning); }
   }
 }
 .otp-input-error {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     &, &:focus, &:focus-within { --input-color: var(--color-error); }
   }
 }
 
-/* Size variants */
 .otp-input-xs {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     font-size: max(var(--font-size, 0.875rem), 0.875rem);
     line-height: 2;
+    --_h: 2em;
   }
 }
 .otp-input-sm {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     font-size: max(var(--font-size, 1rem), 1rem);
     line-height: 2.2;
+    --_h: 2.2em;
   }
 }
 .otp-input-md {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     font-size: max(var(--font-size, 1.25rem), 1.25rem);
     line-height: 2.4;
+    --_h: 2.4em;
   }
 }
 .otp-input-lg {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     font-size: max(var(--font-size, 1.5rem), 1.5rem);
     line-height: 2.4;
+    --_h: 2.4em;
   }
 }
 .otp-input-xl {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.modifier {
     font-size: max(var(--font-size, 1.75rem), 1.75rem);
     line-height: 2.4;
+    --_h: 2.4em;
   }
 }
 
-/* Digit count variants */
-.otp-input-4 { @layer daisyui.l1.l2 { --digits: 4; } }
-.otp-input-5 { @layer daisyui.l1.l2 { --digits: 5; } }
-.otp-input-6 { @layer daisyui.l1.l2 { --digits: 6; } }
-.otp-input-7 { @layer daisyui.l1.l2 { --digits: 7; } }
-.otp-input-8 { @layer daisyui.l1.l2 { --digits: 8; } }
+.otp-input-4 { @layer daisyui.modifier { --digits: 4; } }
+.otp-input-5 { @layer daisyui.modifier { --digits: 5; } }
+.otp-input-6 { @layer daisyui.modifier { --digits: 6; } }
+.otp-input-7 { @layer daisyui.modifier { --digits: 7; } }
+.otp-input-8 { @layer daisyui.modifier { --digits: 8; } }
