@@ -1,1 +1,0 @@
-import"./DsnmJJEf.js";import{p as i,h as n,f,a as l,b as c}from"./DZ7ed1v3.js";import{h}from"./Cqh9_nkR.js";import{p as u}from"./Zf4_lxma.js";import{s as v,a as b}from"./DiAER02C.js";import{t as d}from"./Hsk3wayF.js";function k(r,t){i(t,!0);const s=()=>b(d,"$t",o),[o,e]=v();let m=u(t,"variables",19,()=>({}));var a=n(),p=f(a);h(p,()=>s()(t.text,m())),l(r,a),c(),e()}export{k as T};
