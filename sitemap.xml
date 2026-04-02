@@ -592,19 +592,19 @@
     <loc>https://daisyui.com/vue-component-library/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/store/nexus/</loc>
+    <loc>https://daisyui.com/store/daisyui-charts/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/store/scalo/</loc>
+    <loc>https://daisyui.com/store/nexus/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/store/daisyui-figma-library/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/store/html-dashboard/</loc>
+    <loc>https://daisyui.com/store/scalo/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/store/blink/</loc>
+    <loc>https://daisyui.com/store/html-dashboard/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/store/online-store/</loc>
@@ -613,10 +613,13 @@
     <loc>https://daisyui.com/store/saas-landingpage/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/store/documentation-template/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/store/blog-template/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/store/documentation-template/</loc>
+    <loc>https://daisyui.com/store/blink/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/store/auth-template/</loc>
