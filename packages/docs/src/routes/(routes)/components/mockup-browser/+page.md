@@ -26,7 +26,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$mockup-browser border-base-300 border w-full">
+<div class="$$mockup-browser border border-base-300 w-full">
   <div class="$$mockup-browser-toolbar">
     <div class="$$input">https://daisyui.com</div>
   </div>
@@ -44,7 +44,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$mockup-browser border border-base-300 w-full">
+<div class="$$mockup-browser bg-base-100 w-full border border-base-300">
   <div class="$$mockup-browser-toolbar">
     <div class="$$input">https://daisyui.com</div>
   </div>
