@@ -65,28 +65,25 @@
   </div>
 {/if}
 <!-- With timer -->
-{#if false}
+{#if true && new Date() < new Date("2026-04-21T00:00:00.000000Z")}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       data-sveltekit-preload-data
-      href="/store/daisyui-charts/"
-      class="alert border-base-300 hover:bg-base-200 bg-base-100 flex w-full justify-center rounded-none border-x-0 border-t-0 p-2 text-center text-xs shadow-none transition-colors"
+      href="/store/nexus/"
+      class="alert border-base-300 hover:bg-base-200 bg-base-100 flex w-full justify-center rounded-none border-x-0 border-t-0 p-2 text-center text-[0.6875rem] shadow-none transition-colors"
     >
       <p class="leading-relaxed [text-wrap:balance]">
         <span class="text-base-content/70">
-          <span class="bg-warning text-warning-content rounded-selector px-2 font-semibold">
-            NEW
-          </span>
-          <span class="font-bold">daisyUI Charts</span> – Use code
+          🎉 Celebrating <span class="font-bold">Nexus Dashboard</span> anniversary – Use code
           <code
             class="decoration-success font-mono tracking-wide underline decoration-wavy underline-offset-4"
           >
-            CHART30
+            NEXUS27
           </code>
-          to get 30% discount
+          to get 27% discount
           <span class="inline-block w-2"></span>
           <Countdown
-            from={new Date("2026-04-13T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
+            from={new Date("2026-04-21T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
             dateFormat="DD/MM/YYYY, HH:mm:ss"
           >
             {#snippet children({ remaining })}
