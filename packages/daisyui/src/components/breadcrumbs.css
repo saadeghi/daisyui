@@ -25,7 +25,7 @@
 
         & + *:before {
           content: "";
-          @apply mr-3 ml-2 block h-1.5 w-1.5 opacity-40;
+          @apply me-3 ms-2 block h-1.5 w-1.5 opacity-40;
           rotate: 45deg;
           border-top: 1px solid;
           border-right: 1px solid;

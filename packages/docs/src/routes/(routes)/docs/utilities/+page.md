@@ -178,6 +178,7 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--range-fill`                | binary, whether to fill the range slider progress or not |
 |                 | `--range-p`                   | padding of the range slider thumb                        |
 |                 | `--size`                      | size of the range slider                                 |
+| Rating          | `--size`                      | size of the rating element                               |
 | Select          | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the select                                       |
 | Tab             | `--tabs-height`               | height of the tabs                                       |
@@ -222,7 +223,8 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--size`                      | size of the toggle                                       |
 | Tooltip         | `--tt-bg`                     | background color of the tooltip                          |
 |                 | `--tt-off`                    | offset of the tooltip                                    |
-|                 | `--tt-tailw`                  | position of the tooltip tail                             |
+|                 | `--tt-tail`                   | position of the tooltip tail                             |
+|                 | `--tt-tail-off`               | offset of the tooltip tail from start/end                |
 | Glass           | `--glass-blur`                | blur of the glass effect                                 |
 |                 | `--glass-opacity`             | opacity of the glass effect                              |
 |                 | `--glass-reflect-degree`      | degree of the glass reflection                           |

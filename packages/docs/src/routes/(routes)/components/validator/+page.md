@@ -148,7 +148,7 @@ min="1" max="10"
 ```
 
 ### ~Checkbox requirement validator
-<form>
+<form autocomplete="off">
   <input type="checkbox" class="checkbox validator" required title="Required" />
   <p class="validator-hint">Required</p>
 </form>
@@ -159,7 +159,7 @@ min="1" max="10"
 ```
 
 ### ~Toggle requirement validator
-<form>
+<form autocomplete="off">
   <input type="checkbox" class="toggle validator" required title="Required" />
   <p class="validator-hint">Required</p>
 </form>
@@ -171,7 +171,7 @@ min="1" max="10"
 
 ### ~Select requirement validator
 #### Click the button before picking an option to see the error color.
-<form class="w-full max-w-xs" onsubmit={(event) => event.preventDefault()}>
+<form autocomplete="off" class="w-full max-w-xs" onsubmit={(event) => event.preventDefault()}>
   <select class="select validator" required>
     <option disabled selected value="">Choose:</option>
     <option>Tabs</option>
@@ -194,7 +194,7 @@ min="1" max="10"
 ```
 
 ### ~Form requirement validator
-<form class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4" onsubmit={(event) => event.preventDefault()}>
+<form autocomplete="off" class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4" onsubmit={(event) => event.preventDefault()}>
   <fieldset class="fieldset">
     <label class="label">Email</label>
     <input type="email" class="input validator" placeholder="Email" required />

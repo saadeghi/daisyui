@@ -59,6 +59,9 @@
     }
 
     &:is(details) {
+      /* undo overflow hidden from menu */
+      overflow: revert-layer;
+
       summary {
         &::-webkit-details-marker {
           @apply hidden;

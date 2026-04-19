@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "daisyui",
-  "version": "5.5.18",
+  "version": "5.5.19",
   "description": "daisyUI 5 - The Tailwind CSS Component Library",
   "author": "Pouya Saadeghi",
   "license": "MIT",

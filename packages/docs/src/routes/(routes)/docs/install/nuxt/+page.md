@@ -27,15 +27,15 @@ Add Tailwind CSS to Vite config
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss() as any],
   },
-  css: ["./app/tailwind.css"],
+  css: ['~/assets/css/main.css'],
 });
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   
-```postcss:app/tailwind.css
+```postcss:app/assets/css/main.css
 @import "tailwindcss";
 @plugin "daisyui";
 ```

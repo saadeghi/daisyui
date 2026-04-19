@@ -1,16 +1,19 @@
 .card {
   @layer daisyui.l1.l2.l3 {
     @apply rounded-box relative flex flex-col;
-    outline-width: 2px;
     transition: outline 0.2s ease-in-out;
-    outline: 0 solid #0000;
+    outline: 2px solid #0000;
     outline-offset: 2px;
-    &:focus {
-      @apply outline-hidden;
-    }
 
-    &:focus-visible {
+    &:focus-visible,
+    &[aria-checked="true"],
+    &:has(> :checked, > :is([type="checkbox"], [type="radio"]):focus-visible) {
       outline-color: currentColor;
+    }
+    &:has(> :checked:focus-visible),
+    &[aria-checked="true"]:focus-visible,
+    &[aria-checked="true"]:has(> :is([type="checkbox"], [type="radio"]):focus-visible) {
+      outline-width: 4px;
     }
 
     :where(figure:first-child) {
@@ -32,12 +35,12 @@
     figure {
       @apply flex items-center justify-center;
     }
-    &:has(> input:is(input[type="checkbox"], input[type="radio"])) {
+    &:has(> :is([type="checkbox"], [type="radio"])) {
       @apply cursor-pointer;
       user-select: none;
     }
-    &:has(> :checked) {
-      outline: 2px solid currentColor;
+    > :is([type="checkbox"], [type="radio"]) {
+      @apply appearance-none;
     }
   }
 }

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.19 (2026-02-20)
+
+
+### Bug Fixes
+
+* use logical margins for breadcrumbs so it works in RTL. closes: [#4443](https://github.com/saadeghi/daisyui/issues/4443) ([6208471](https://github.com/saadeghi/daisyui/commit/6208471c91234462a365c71f2f4a87e3b5f69ede))
+
 ## 5.5.18 (2026-02-05)
 
 

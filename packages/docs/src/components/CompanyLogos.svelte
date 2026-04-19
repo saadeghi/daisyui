@@ -1,12 +1,12 @@
 <div class="max-w-9xl mx-auto flex flex-col items-center">
   <p class="font-title text-base-content/70 font-light">Used by engineers at</p>
   <div class="w-full overflow-x-auto py-12">
-    <div class="grid w-full grid-cols-[repeat(7,1fr)] place-items-center gap-16">
-      <div></div>
+    <div class="grid w-full grid-cols-[repeat(8,1fr)] place-items-center gap-16">
+      <div class="size-px"></div>
 
       <div
         class="tooltip group flex flex-col gap-4 text-center"
-        data-tip="Used for Chameleon and SAM 2"
+        data-tip="Using for Chameleon and SAM 2"
       >
         <div>
           <svg
@@ -31,7 +31,10 @@
         <span class="text-base-content/70 text-xs whitespace-nowrap">Meta Research</span>
       </div>
 
-      <div class="tooltip group flex flex-col gap-4 text-center" data-tip="Used for Alibaba Arthas">
+      <div
+        class="tooltip group flex flex-col gap-4 text-center"
+        data-tip="Using for Alibaba Arthas"
+      >
         <div>
           <svg
             class="mx-auto h-10 w-auto max-w-none"
@@ -50,7 +53,7 @@
 
       <div
         class="tooltip group flex flex-col gap-4 text-center"
-        data-tip="Used for Amazon IVS and aws-samples"
+        data-tip="Using for Amazon IVS and aws-samples"
       >
         <div>
           <svg
@@ -74,7 +77,7 @@
 
       <div
         class="tooltip group flex flex-col gap-4 text-center"
-        data-tip="Used for Adobe Nala sites"
+        data-tip="Using for Adobe Nala sites"
       >
         <div>
           <svg
@@ -92,7 +95,46 @@
         <span class="text-base-content/70 text-xs whitespace-nowrap">Adobe</span>
       </div>
 
-      <div class="tooltip group flex flex-col gap-4 text-center" data-tip="Used for RAD Lab">
+      <div
+        class="tooltip group flex flex-col gap-4 text-center"
+        data-tip="Using daisyUI + daisyUI Figma Library"
+      >
+        <div>
+          <svg
+            class="mx-auto h-10 w-auto max-w-none"
+            viewBox="0 0 278 328"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#73A7E3]"
+              d="M269.112 70.8C271.712 80.3 284.512 125.9 235.512 166.4C235.512 134 231.512 120.2 225.012 110.4C211.412 89.5999 197.412 92.2999 197.412 68.0999C197.412 43.8999 209.912 35.7 229.812 35.7C249.712 35.7 265.212 56.2 269.112 70.8Z"
+            />
+            <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#91BC31]"
+              d="M277.212 190.6C277.212 205.1 224.312 278 139.512 259V216.9C139.512 215.1 140.912 214 141.712 214.7C153.012 224.3 165.312 228.6 175.312 228.6C203.412 228.6 223.612 211.7 232.712 177.4C236.412 177.1 241.212 177 244.612 177.1C264.112 177.3 277.212 186 277.212 190.7V190.6Z"
+            />
+            <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#EDA106]"
+              d="M177.712 155.5C177.712 180.4 168.812 191.8 156.712 191.8C144.612 191.8 135.212 175.8 135.212 155.5C135.212 135.2 143.712 119.5 156.712 119.5C169.712 119.5 177.712 128.9 177.712 155.5Z"
+            />
+            <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#EDA106]"
+              d="M186.512 83.8C183.712 83.3 180.812 83 177.612 83C162.012 83 152.112 87.4 140.112 101.7C136.012 93.8 128.612 86.3 117.712 86.3H79.9122V239.3C14.2122 200.7 -3.38776 129.7 0.51224 107C23.7122 108.7 39.2122 114.4 54.4122 124.8C68.6122 34.2 147.312 0 163.612 0C179.912 0 184.512 45.2 186.512 83.8Z"
+            />
+            <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#EDA106]"
+              d="M48.1123 60.1C55.7123 80.6 45.3123 105 45.3123 105C45.3123 105 22.7122 99.2 13.0122 73.2C4.31225 49.8 16.3122 28.8 16.3122 28.8C16.3122 28.8 38.8123 34.9 48.2123 60.1H48.1123Z"
+            />
+            <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#62960C]"
+              d="M120.912 325.7C18.112 309.2 2.31201 216.3 2.31201 206C2.31201 195.7 9.31201 198 13.612 204.4C42.812 247.6 91.012 272.4 142.912 278C218.412 286.2 254.512 240.9 258.512 255.8C261.212 265.8 205.912 339.4 120.912 325.7Z"
+            />
+          </svg>
+        </div>
+        <span class="text-base-content/70 text-xs whitespace-nowrap">Pepsico</span>
+      </div>
+
+      <div class="tooltip group flex flex-col gap-4 text-center" data-tip="Using for RAD Lab">
         <div>
           <svg
             class="mx-auto h-10 w-auto max-w-none"
@@ -127,7 +169,7 @@
         </div>
         <span class="text-base-content/70 text-xs whitespace-nowrap">Google Cloud</span>
       </div>
-      <div></div>
+      <div class="size-px"></div>
     </div>
   </div>
 </div>
