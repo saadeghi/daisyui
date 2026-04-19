@@ -56,7 +56,7 @@ classnames:
 ### ~Filter using HTML form, checkboxes, and a reset button
 #### For having multiple choices, use checkboxes.
 
-<form>
+<form class="filter">
   <input class="btn" type="checkbox" name="frameworks" autocomplete="off" aria-label="Svelte"/>
   <input class="btn" type="checkbox" name="frameworks" autocomplete="off" aria-label="Vue"/>
   <input class="btn" type="checkbox" name="frameworks" autocomplete="off" aria-label="React"/>
