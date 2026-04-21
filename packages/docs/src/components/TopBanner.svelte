@@ -65,7 +65,7 @@
   </div>
 {/if}
 <!-- With timer -->
-{#if true && new Date() < new Date("2026-04-21T00:00:00.000000Z")}
+{#if false && new Date() < new Date("2026-04-21T00:00:00.000000Z")}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       data-sveltekit-preload-data
