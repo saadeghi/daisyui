@@ -1,0 +1,1 @@
+import{K as k,k as t,L as S,M as b,S as h}from"./jjN9-rEF.js";function u(r,i){return r===i||r?.[h]===i}function T(r={},i,a,L){return k(()=>{var f,s;return t(()=>{f=s,s=[],S(()=>{r!==a(...s)&&(i(r,...s),f&&u(a(...f),r)&&i(null,...f))})}),()=>{b(()=>{s&&u(a(...s),r)&&i(null,...s)})}}),r}export{T as b};
