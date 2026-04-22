@@ -496,9 +496,9 @@
     {/each}
   </div>
 
-  <div class="divider text-base-content/30 my-20"></div>
+  <!-- <div class="divider text-base-content/30 my-20"></div> -->
 
-  <div class="card mt-10">
+  <!-- <div class="card mt-10">
     <div class="card-body flex flex-col gap-4 p-0">
       <h2 class="font-title text-xl font-semibold lg:text-4xl">
         Get notified about products and discounts!
@@ -539,5 +539,5 @@
         </p>
       </form>
     </div>
-  </div>
+  </div> -->
 </div>

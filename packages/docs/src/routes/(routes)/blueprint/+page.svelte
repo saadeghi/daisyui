@@ -1,6 +1,7 @@
 <script>
   import SEO from "$components/SEO.svelte"
-  import Footer from "$components/Footer.svelte"
+  import StoreFooter from "$components/StoreFooter.svelte"
+
   let dialogs = $state({})
 
   let videoModal = $state({
@@ -4090,7 +4091,7 @@
             F.A.Q
           </h2>
           <p class="text-base-content/60 text-xs">
-            If you have any questions before purchase <br />send me an email to pouya@daisyui.com
+            If you have any questions before purchase <br />send me an email to help@daisyui.com
             <br />I will do my best to help you.
           </p>
         </div>
@@ -4720,7 +4721,7 @@
   </form>
 </dialog> -->
 
-<Footer />
+<StoreFooter />
 
 <style>
   @keyframes fade-in {
