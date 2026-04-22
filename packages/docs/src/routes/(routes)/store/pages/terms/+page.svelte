@@ -33,8 +33,16 @@
 </p>
 <p>By placing an order, you also agree to Creem's terms and privacy policy:</p>
 <ul>
-  <li><a href="https://www.creem.io/terms">Creem Terms</a></li>
-  <li><a href="https://www.creem.io/privacy">Creem Privacy Policy</a></li>
+  <li>
+    <a href="https://www.creem.io/terms" target="_blank" rel="nofollow noopener noreferrer"
+      >Creem Terms</a
+    >
+  </li>
+  <li>
+    <a href="https://www.creem.io/privacy" target="_blank" rel="nofollow noopener noreferrer"
+      >Creem Privacy Policy</a
+    >
+  </li>
 </ul>
 
 <h2>3. What information is received</h2>
