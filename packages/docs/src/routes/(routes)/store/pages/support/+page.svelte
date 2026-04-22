@@ -16,7 +16,9 @@
 <h2>Discord community</h2>
 <p>
   You can also get help in the daisyUI Discord server at
-  <a href="https://daisyui.com/discord">daisyui.com/discord</a>.
+  <a href="https://daisyui.com/discord" target="_blank" rel="nofollow noopener noreferrer"
+    >daisyui.com/discord</a
+  >.
 </p>
 
 <h2>Email support</h2>
