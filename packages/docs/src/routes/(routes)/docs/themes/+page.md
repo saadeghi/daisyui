@@ -112,6 +112,8 @@ To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the 
   prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
   color-scheme: light; /* color of browser-provided UI */
   themecontroller: true; /* set to false to skip the theme-controller selector */
+  root: '.my-custom-root'; /* OPTIONAL - use same value used in @plugin "daisyui" if you used a custom root */
+  prefix: 'my-custom-prefix-'; /* OPTIONAL - use same value used in @plugin "daisyui" if you used a custom daisyui prefix */
 
   --color-base-100: oklch(98% 0.02 240);
   --color-base-200: oklch(95% 0.03 240);
