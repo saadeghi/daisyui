@@ -12,10 +12,10 @@ Blueprint MCP server,/blueprint/
 daisyUI llms.txt,/llms.txt
 title,url,classnames
 Store,/store/
-daisyUI Charts,/store/daisyui-charts/
 Nexus Dashboard 3.3,/store/nexus/
 Official daisyUI Figma Library,/store/daisyui-figma-library/
 Scalo Startup Template 3.0,/store/scalo/
+daisyUI Charts,/store/daisyui-charts/
 HTML Dashboard template,/store/html-dashboard/
 Online Store template 2.0,/store/online-store/
 SaaS landing page,/store/saas-landingpage/

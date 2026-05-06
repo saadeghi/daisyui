@@ -601,9 +601,6 @@
     <loc>https://daisyui.com/vue-component-library/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/store/daisyui-charts/</loc>
-  </url>
-  <url>
     <loc>https://daisyui.com/store/nexus/</loc>
   </url>
   <url>
@@ -611,6 +608,9 @@
   </url>
   <url>
     <loc>https://daisyui.com/store/scalo/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/store/daisyui-charts/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/store/html-dashboard/</loc>

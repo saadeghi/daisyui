@@ -15,36 +15,12 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store//</link>
-    <lastBuildDate>Wed, 22 Apr 2026 17:02:00 GMT</lastBuildDate>
-    <pubDate>Wed, 22 Apr 2026 17:02:00 GMT</pubDate>
+    <lastBuildDate>Wed, 06 May 2026 19:14:13 GMT</lastBuildDate>
+    <pubDate>Wed, 06 May 2026 19:14:13 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
 
     
-        <item>
-          <title>
-            <![CDATA[ daisyUI Charts ]]>
-          </title>
-          <description>
-            <![CDATA[ > 🎁 Use code **CHART30** to get 30% discount. Valid until April 12th.
-
-daisyUI Charts is a collection of chart integrations for daisyUI.
-
-
-- 39 different chart examples, easy to copy
-- Made with daisyUI and Apex Charts
-- Compatible with all daisyUI themes
-- Provides code examples for React, Vue, Svelte, Vanilla JS
-- Only one package dependency: Apex Charts (Or can be used with CDN link instead of Node package)
-- Easy copy/paste codes, no additional config or styles needed
-- Includes multiple examples for line charts, bar charts, area charts, column charts and pie charts.
-- Coming soon: raidal chart, heatmap charts and radar charts ]]>
-          </description>
-          <link>undefined/</link>
-          <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
-          <guid isPermaLink="false">undefined/</guid>
-        </item>
-      
         <item>
           <title>
             <![CDATA[ Nexus Dashboard 3.3 ]]>
@@ -122,8 +98,8 @@ Made with Tailwind CSS 4 and daisyUI 5
 
 Including:
   - Components and blocks
-  - 36 Pages
-  - 4 Landing pages (Automation, Developer, Sales, Storage)
+  - 40 Pages
+  - 7 Landing pages (Automation, Developer, Sales, Storage, Crypto, Builder, Cloud AI)
   - 7 Pricing sections (Lifetime, Subscription, User-based & comparison-based)
   - 6 Auth pages (Login, Register, 2FA, Forgot password, Reset password, Verify)
   - Settings (Profile, Account, Notification & Manage plans)
@@ -147,6 +123,30 @@ Team and Enterprise license:
           </description>
           <link>undefined/</link>
           <pubDate>Tue, 11 Feb 2025 00:00:00 GMT</pubDate>
+          <guid isPermaLink="false">undefined/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ daisyUI Charts ]]>
+          </title>
+          <description>
+            <![CDATA[ > 🎁 Use code **CHART30** to get 30% discount. Valid until April 12th.
+
+daisyUI Charts is a collection of chart integrations for daisyUI.
+
+
+- 39 different chart examples, easy to copy
+- Made with daisyUI and Apex Charts
+- Compatible with all daisyUI themes
+- Provides code examples for React, Vue, Svelte, Vanilla JS
+- Only one package dependency: Apex Charts (Or can be used with CDN link instead of Node package)
+- Easy copy/paste codes, no additional config or styles needed
+- Includes multiple examples for line charts, bar charts, area charts, column charts and pie charts.
+- Coming soon: raidal chart, heatmap charts and radar charts ]]>
+          </description>
+          <link>undefined/</link>
+          <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
           <guid isPermaLink="false">undefined/</guid>
         </item>
       
