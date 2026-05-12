@@ -1,42 +1,76 @@
 .input {
   @layer daisyui.l1.l2.l3 {
-    cursor: text;
-    border: var(--border) solid #0000;
     @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-2 px-3 align-middle whitespace-nowrap;
+
+    --size: calc(var(--size-field, 0.25rem) * var(--in-size-mul));
+    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+
+    cursor: text;
     width: clamp(3rem, 20rem, 100%);
     height: var(--size);
-    font-size: max(var(--font-size, 0.875rem), 0.875rem);
+    font-size: max(var(--font-size, 0rem), var(--font-size-min));
     touch-action: manipulation;
     border-start-start-radius: var(--join-ss, var(--radius-field));
     border-start-end-radius: var(--join-se, var(--radius-field));
     border-end-start-radius: var(--join-es, var(--radius-field));
     border-end-end-radius: var(--join-ee, var(--radius-field));
-    border-color: var(--input-color);
+    border: var(--border) solid var(--input-color, #0000);
     box-shadow:
       0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
       0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-    --size: calc(var(--size-field, 0.25rem) * 10);
-    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-    &:where(input) {
-      @apply inline-flex;
-    }
-    :where(input) {
-      @apply inline-flex h-full w-full appearance-none bg-transparent;
+
+    input {
+      @apply h-full w-full appearance-none bg-transparent;
       border: none;
+
+      &::placeholder {
+        /* color and opacity to work with safari */
+        @apply text-base-content opacity-50;
+      }
 
       &:focus,
       &:focus-within {
         @apply outline-hidden;
       }
+
+      &::-webkit-calendar-picker-indicator {
+        inset-inline-end: -0.15em;
+      }
+
+      &::-webkit-inner-spin-button {
+        margin-inline-end: -0.15em;
+      }
     }
 
-    :where(input[type="url"]),
-    :where(input[type="email"]) {
-      direction: ltr;
-    }
+    input&,
+    input {
+      @apply relative inline-flex;
 
-    :where(input[type="date"]) {
-      @apply inline-flex;
+      &[type="url"],
+      &[type="email"] {
+        direction: ltr;
+      }
+
+      &::-webkit-date-and-time-value {
+        text-align: inherit;
+      }
+
+      &::-webkit-inner-spin-button {
+        @apply -me-3;
+        margin-block: calc(var(--spacing) * var(--spin-my));
+      }
+
+      &::-webkit-calendar-picker-indicator {
+        position: absolute;
+        inset-inline-end: 0.75em;
+        width: 1em;
+        height: 1em;
+        cursor: pointer;
+      }
+
+      &::-webkit-color-swatch-wrapper {
+        @apply py-1;
+      }
     }
 
     &:focus,
@@ -61,43 +95,18 @@
     &:has(> input[disabled]),
     &:is(:disabled, [disabled]),
     fieldset:disabled & {
-      @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+      @apply border-base-200 bg-base-200 text-base-content/40 cursor-not-allowed;
       box-shadow: none;
+
+      &::placeholder,
+      ::placeholder {
+        /* color and opacity to work with safari */
+        @apply text-base-content opacity-20;
+      }
     }
 
     &:has(> input[disabled]) > input[disabled] {
       @apply cursor-not-allowed;
-    }
-
-    &::-webkit-date-and-time-value {
-      text-align: inherit;
-    }
-
-    &[type="number"] {
-      &::-webkit-inner-spin-button {
-        @apply -my-3 -me-3;
-      }
-    }
-
-    &::-webkit-calendar-picker-indicator {
-      position: absolute;
-      inset-inline-end: 0.75em;
-    }
-
-    &:has(> input[type="date"]) {
-      :where(input[type="date"]) {
-        @apply inline-flex;
-        -webkit-appearance: none;
-        appearance: none;
-      }
-
-      input[type="date"]::-webkit-calendar-picker-indicator {
-        position: absolute;
-        inset-inline-end: 0.75em;
-        width: 1em;
-        height: 1em;
-        cursor: pointer;
-      }
     }
   }
 }
@@ -199,65 +208,66 @@
 
 .input-xs {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 6);
-    font-size: max(var(--font-size, 0.6875rem), 0.6875rem);
+    --in-size-mul: 6;
+    --font-size-min: 0.6875rem;
+    --spin-my: -1;
 
-    &[type="number"] {
-      &::-webkit-inner-spin-button {
-        @apply -my-1 -me-3;
-      }
+    .floating-label:has(&) {
+      --top-mul: 3;
+      --font-size: 0.6875rem;
     }
   }
 }
 
 .input-sm {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 8);
-    font-size: max(var(--font-size, 0.75rem), 0.75rem);
+    --in-size-mul: 8;
+    --font-size-min: 0.75rem;
+    --spin-my: -2;
 
-    &[type="number"] {
-      &::-webkit-inner-spin-button {
-        @apply -my-2 -me-3;
-      }
+    .floating-label:has(&) {
+      --top-mul: 4;
+      --font-size: 0.75rem;
     }
   }
 }
 
+.input,
 .input-md {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 10);
-    font-size: max(var(--font-size, 0.875rem), 0.875rem);
+    --in-size-mul: 10;
+    --font-size-min: 0.875rem;
+    --spin-my: -3;
 
-    &[type="number"] {
-      &::-webkit-inner-spin-button {
-        @apply -my-3 -me-3;
-      }
+    .floating-label:has(&) {
+      --top-mul: 5;
+      --font-size: 0.875rem;
     }
   }
 }
 
 .input-lg {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 12);
-    font-size: max(var(--font-size, 1.125rem), 1.125rem);
+    --in-size-mul: 12;
+    --font-size-min: 1.125rem;
+    --spin-my: -3;
 
-    &[type="number"] {
-      &::-webkit-inner-spin-button {
-        @apply -my-3 -me-3;
-      }
+    .floating-label:has(&) {
+      --top-mul: 6;
+      --font-size: 1.125rem;
     }
   }
 }
 
 .input-xl {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 14);
-    font-size: max(var(--font-size, 1.375rem), 1.375rem);
+    --in-size-mul: 14;
+    --font-size-min: 1.375rem;
+    --spin-my: -4;
 
-    &[type="number"] {
-      &::-webkit-inner-spin-button {
-        @apply -my-4 -me-3;
-      }
+    .floating-label:has(&) {
+      --top-mul: 7;
+      --font-size: 1.375rem;
     }
   }
 }

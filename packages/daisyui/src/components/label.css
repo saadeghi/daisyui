@@ -20,30 +20,18 @@
 }
 .floating-label {
   @layer daisyui.l1.l2.l3 {
-    @apply relative block;
-    input {
-      @apply block;
-      &::placeholder {
-        transition:
-          top 0.1s ease-out,
-          translate 0.1s ease-out,
-          scale 0.1s ease-out,
-          opacity 0.1s ease-out;
-      }
-    }
-    textarea {
-      &::placeholder {
-        transition:
-          top 0.1s ease-out,
-          translate 0.1s ease-out,
-          scale 0.1s ease-out,
-          opacity 0.1s ease-out;
-      }
+    @apply relative flex;
+    ::placeholder {
+      transition:
+        top 0.1s ease-out,
+        translate 0.1s ease-out,
+        scale 0.1s ease-out,
+        opacity 0.1s ease-out;
     }
     > span {
       @apply bg-base-100 absolute start-3 z-1 px-1 opacity-0;
-      font-size: 0.875rem;
-      top: calc(var(--size-field, 0.25rem) * 10 / 2);
+      font-size: var(--font-size, 0.875rem);
+      top: calc(var(--size-field, 0.25rem) * var(--top-mul, 5));
       line-height: 1;
       border-radius: 2px;
       pointer-events: none;
@@ -76,26 +64,6 @@
       > span {
         @apply opacity-0;
       }
-    }
-    &:has(.input-xs, .select-xs, .textarea-xs) span {
-      font-size: 0.6875rem;
-      top: calc(var(--size-field, 0.25rem) * 6 / 2);
-    }
-    &:has(.input-sm, .select-sm, .textarea-sm) span {
-      font-size: 0.75rem;
-      top: calc(var(--size-field, 0.25rem) * 8 / 2);
-    }
-    &:has(.input-md, .select-md, .textarea-md) span {
-      font-size: 0.875rem;
-      top: calc(var(--size-field, 0.25rem) * 10 / 2);
-    }
-    &:has(.input-lg, .select-lg, .textarea-lg) span {
-      font-size: 1.125rem;
-      top: calc(var(--size-field, 0.25rem) * 12 / 2);
-    }
-    &:has(.input-xl, .select-xl, .textarea-xl) span {
-      font-size: 1.375rem;
-      top: calc(var(--size-field, 0.25rem) * 14 / 2);
     }
   }
 }
