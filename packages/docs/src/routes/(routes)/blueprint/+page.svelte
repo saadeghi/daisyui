@@ -4149,8 +4149,9 @@
             <div
               class="collapse-content text-base-content/70 border-base-content/10 ms-4 border-s-2 px-6 text-xs"
             >
-              Yes you can cancel your subscription at any time. If you cancel, you will still have
-              access to the product until the end of your billing cycle.
+              Yes you can cancel your subscription at any time at
+              https://www.creem.io/my-orders/login. If you cancel, you will still have access to the
+              product until the end of your billing cycle.
             </div>
           </div>
           <div class="collapse-plus collapse">

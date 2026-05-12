@@ -61,7 +61,7 @@ export function parseThemeCSS(text, currentThemeData) {
 
       // Handle base theme properties
       if (key === "name") {
-        const cleanName = value.replace(/['"]/g, "")
+        const cleanName = value.replace(/['"]/g, "").trim()
         if (!validateThemeName(cleanName)) {
           console.error(`Invalid theme name: ${cleanName} (must be 3-20 lowercase letters)`)
           hasErrors = true
