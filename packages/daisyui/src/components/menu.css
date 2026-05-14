@@ -199,7 +199,7 @@
   @layer daisyui.l1.l2 {
     @apply inline-flex flex-col items-stretch;
 
-    & > li:not(.menu-title) > details > is:(ul, menu) {
+    & > li:not(.menu-title) > details > :is(ul, menu) {
       @apply relative ms-4 mt-0 py-0 pe-0;
       background-color: revert-layer;
       border-radius: revert-layer;
