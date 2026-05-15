@@ -66,7 +66,8 @@
     }
 
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-base-content);
       box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
       outline: 2px solid var(--input-color);
@@ -162,7 +163,8 @@
     border-color: #0000;
 
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       @apply text-base-content bg-base-100;
       border-color: #0000;
       box-shadow: none;
@@ -174,7 +176,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-neutral);
     }
   }
@@ -184,7 +187,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-primary);
     }
   }
@@ -194,7 +198,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-secondary);
     }
   }
@@ -204,7 +209,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-accent);
     }
   }
@@ -214,7 +220,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-info);
     }
   }
@@ -224,7 +231,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-success);
     }
   }
@@ -234,7 +242,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-warning);
     }
   }
@@ -244,7 +253,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-error);
     }
   }
