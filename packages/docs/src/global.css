@@ -568,9 +568,9 @@ pre.shiki[tabindex="0"]:focus-visible {
 }
 
 /* 3rd party */
-.ed-bar .ed-left-section {
+#ed-banner-bottom-root .ed-bar .ed-left-section {
   visibility: hidden;
 }
-.ed-bar #ed-banner-bottom-root .ed-country-flag {
+#ed-banner-bottom-root .ed-bar .ed-country-flag {
   border: none;
 }
