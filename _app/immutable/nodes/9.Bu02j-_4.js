@@ -1,0 +1,3 @@
+import"../chunks/DsnmJJEf.js";import{a7 as d,bb as f,y as t,b4 as c,aa as s,aE as l,M as v,aF as _,aS as h,bk as w}from"../chunks/Bs1BiH1j.js";import{B as b}from"../chunks/DeWLOQrM.js";import{s as u}from"../chunks/CBfFnm84.js";import{S as g}from"../chunks/BiZ4QA5e.js";var x=w(s(`<script>
+    window.lemonSqueezyAffiliateConfig = { store: "daisyui" }
+  <\/script> <script src="https://www.evendeals.com/banner.js"><\/script>`,1)),y=s('<div class="w-full px-4 pt-20 md:px-20" dir="ltr"><!></div> <!>',1);function z(i,o){var a=y();b(n=>{var m=x();l(2),t(n,m)});var r=d(a),e=v(r);u(e,()=>o.children??_),h(r);var p=c(r,2);g(p,{}),f(()=>r.dir=r.dir),t(i,a)}export{z as component};
