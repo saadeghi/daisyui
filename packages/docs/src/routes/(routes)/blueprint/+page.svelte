@@ -171,6 +171,7 @@
     href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap"
     rel="stylesheet"
   />
+  <script src="https://www.evendeals.com/banner.js"></script>
 </svelte:head>
 
 <div class="w-full px-4 pt-20 md:px-20" dir="ltr">
