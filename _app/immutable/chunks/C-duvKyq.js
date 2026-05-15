@@ -1,0 +1,1 @@
+import{aR as s,ba as n}from"./Bs1BiH1j.js";function c(o,a,r,f,i){var d=()=>{f(r[o])};r.addEventListener(a,d),i?s(()=>{r[o]=i()}):d(),(r===document.body||r===window||r===document)&&n(()=>{r.removeEventListener(a,d)})}export{c as b};
