@@ -68,7 +68,7 @@
 }
 
 pre.shiki[tabindex="0"]:focus-visible {
-  @apply outline-2 outline-base-300 -outline-offset-4;
+  @apply outline-base-300 outline-2 -outline-offset-4;
 }
 
 .code-wrapper {
@@ -565,4 +565,12 @@ pre.shiki[tabindex="0"]:focus-visible {
     transform: translateY(0);
     animation-timing-function: ease-out;
   }
+}
+
+/* 3rd party */
+.ed-bar .ed-left-section {
+  visibility: hidden;
+}
+.ed-bar #ed-banner-bottom-root .ed-country-flag {
+  border: none;
 }
