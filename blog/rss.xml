@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Fri, 15 May 2026 18:27:20 GMT</lastBuildDate>
-    <pubDate>Fri, 15 May 2026 18:27:20 GMT</pubDate>
+    <lastBuildDate>Sun, 17 May 2026 18:12:13 GMT</lastBuildDate>
+    <pubDate>Sun, 17 May 2026 18:12:13 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ Using daisyUI means less LLM cost and faster UI generation ]]>
+          </title>
+          <description>
+            <![CDATA[ If AI is writing the code, does it still matter if we use an efficient component library? See how Tailwind and daisyUI reduce token costs and speed up UI generation. ]]>
+          </description>
+          <link>https://daisyui.com/blog/generate-ui-with-less-token/</link>
+          <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/generate-ui-code-with-less-tokens.webp</image>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/generate-ui-code-with-less-tokens.webp</image>
+          <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/generate-ui-code-with-less-tokens.webp" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.comhttps://img.daisyui.com/images/blog/generate-ui-code-with-less-tokens.webp" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/generate-ui-with-less-token/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ daisyUI 2025 Wrapped ]]>
