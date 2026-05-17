@@ -2,7 +2,7 @@
 title: CSS Library for HTML
 desc: Why you need a CSS component library that's framework-agnostic, portable, and gives you both the speed of Bootstrap and the customizability of Tailwind CSS
 layout: contentLanding
-keywords: css library for html, component library, framework agnostic, tailwind css components, html css library, css only library
+keywords: css library for html, CSS component library, framework agnostic, tailwind css components, html css library, css only library
 ---
 
 <script>
