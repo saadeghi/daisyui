@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.20 (2026-05-18)
+
+
+### Bug Fixes
+
+* dropdown animation inside a modal ([#4526](https://github.com/saadeghi/daisyui/issues/4526)) ([568d85f](https://github.com/saadeghi/daisyui/commit/568d85f6ec4d84a16244ac4c986fa20a976aca1e))
+
 ## 5.5.19 (2026-02-20)
 
 
