@@ -11,6 +11,13 @@
       chance: 3,
     },
     {
+      title: "daisyUI Charts",
+      desc: "Beautiful chart integrations",
+      link: "https://daisyui.com/store/daisyui-charts/",
+      img: "https://img.daisyui.com/images/store/banner/daisyui-charts.webp",
+      chance: 3,
+    },
+    {
       title: "daisyUI swag!",
       desc: "T-shirts and more",
       link: "https://swag.daisyui.com/collections/shirts",
