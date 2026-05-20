@@ -1,6 +1,7 @@
 ---
-title: Colors
-desc: How to use daisyUI colors?
+title: daisyUI colors
+desc: How to use daisyUI semantic colors and theme-aware color variables in Tailwind CSS.
+keywords: daisyui colors, tailwind colors, semantic colors, color variables, theme colors
 ---
 
 <script>
@@ -9,7 +10,7 @@ desc: How to use daisyUI colors?
 
 ## <Translate text="Introduction" />
 
-<Translate text="daisyUI is fully themeable and colorable," />
+<Translate text="daisyUI is fully themeable and colorable in Tailwind CSS," />
 <Translate text="So instead of using constant color utility classes like:" />
 
 - <span class="badge badge-xs bg-green-500"></span> bg-green-500

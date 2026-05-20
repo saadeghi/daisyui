@@ -8,9 +8,9 @@
 </script>
 
 <SEO
-  title="Tailwind Components"
+  title="Tailwind CSS Components"
   formatTitle={false}
-  desc="Tailwind CSS component examples by daisyUI"
+  desc="Tailwind CSS component examples by daisyUI. Browse semantic UI components, copy-ready markup, and reusable design patterns."
 />
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div class="flex flex-col gap-6 ps-6 pt-10">

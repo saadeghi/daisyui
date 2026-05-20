@@ -142,9 +142,9 @@
 <svelte:window bind:scrollY bind:innerHeight />
 
 <SEO
-  title="Tailwind CSS Component Library ⸺ daisyUI"
+  title="daisyUI - Tailwind CSS Component Library"
   formatTitle={false}
-  desc="Tailwind CSS Components Library for 2026 - Tailwind CSS components examples, Tailwind themes and Tailwind blocks for fast UI development"
+  desc="Tailwind CSS component library by daisyUI. Build faster with semantic components, built-in themes, and reusable UI blocks."
 />
 
 <!-- hero content -->

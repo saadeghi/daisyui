@@ -25,12 +25,9 @@
 </script>
 
 <SEO
-  title="{data.library.name} Alternative in {new Date().getFullYear()} - Why daisyUI is better?"
+  title="{data.library.name} alternative in {new Date().getFullYear()}"
   desc="Looking for a {data.library
-    .name} alternative? daisyUI is the best CSS components library and a better alternative to {data
-    .library
-    .name}. Compare features, size, and performance to see why developers choose daisyUI over {data
-    .library.name}."
+    .name} alternative? daisyUI is the Tailwind CSS component library with cleaner markup, built-in themes, and reusable UI components."
   keywords={seoKeywords.join(", ")}
 />
 
