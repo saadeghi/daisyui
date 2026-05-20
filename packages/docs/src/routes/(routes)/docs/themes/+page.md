@@ -1,6 +1,7 @@
 ---
-title: daisyUI themes
-desc: How to use daisyUI themes?
+title: daisyUI themes for Tailwind CSS
+desc: How to enable, customize, and manage daisyUI themes in Tailwind CSS.
+keywords: daisyui themes, tailwind themes, custom themes, theme setup, theme generator
 ---
 
 <script>
@@ -9,7 +10,7 @@ desc: How to use daisyUI themes?
   export let data
 </script>
 
-daisyUI comes with {data.themes.length} built-in themes that instantly transform your website's entire look - a time-saver that lets you focus on building rather than deciding on colors.  
+daisyUI comes with {data.themes.length} built-in themes for Tailwind CSS. They instantly transform your website's look and save you from designing a color system from scratch.  
 You can also create your own custom themes or customize built-in themes.
 
 You can manage themes by adding brackets in front of `@plugin "daisyui"` in your CSS file.
