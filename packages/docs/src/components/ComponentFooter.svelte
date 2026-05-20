@@ -463,16 +463,30 @@
 </div> -->
 
 <div
-  class="card not-prose outline-base-content/5 bg-primary/5 relative overflow-hidden font-sans shadow-lg outline-[length:var(--border)] -outline-offset-[var(--border)] [direction:ltr] md:flex-row-reverse"
+  class="card not-prose outline-base-content/5 relative overflow-hidden bg-blue-600 font-sans text-white shadow-lg outline-[length:var(--border)] -outline-offset-[var(--border)] [direction:ltr] md:flex-row-reverse"
+  style="background-image: linear-gradient(#3B72FE 1px, transparent 1px), linear-gradient(90deg, #3B72FE 1px, transparent 1px), linear-gradient(#3B72FE 0.5px, transparent 0.5px), linear-gradient(90deg, #3B72FE 0.5px, #155dfc 0.5px); background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px; background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;"
 >
   <figure class="max-md:bg-primary/10 isolate md:w-2/3">
-    <img
+    <!-- <img
       class="pointer-events-none"
       alt="daisyUI store"
       src="https://img.daisyui.com/images/store/nexus.webp"
-    />
+    /> -->
+    <div
+      class="my-6 ms-1 inline-grid grid-cols-[.75rem_1fr_.75rem] grid-rows-[.75rem_1fr_.75rem] align-middle"
+    >
+      <div class="border-s-2 border-t-2 border-white [grid-area:1/1/2/2]"></div>
+      <div class="border-e-2 border-t-2 border-white [grid-area:1/3/2/4]"></div>
+      <div class="border-s-2 border-b-2 border-white [grid-area:3/1/4/2]"></div>
+      <div class="border-e-2 border-b-2 border-white [grid-area:3/3/4/4]"></div>
+      <div
+        class="font-title m-2 border-2 border-white px-1 text-3xl font-semibold text-white [grid-area:1/1/4/4] sm:text-4xl md:text-5xl lg:text-5xl xl:text-7xl"
+      >
+        BLUEPRINT
+      </div>
+    </div>
   </figure>
-  <div class="card-body relative isolate z-3">
+  <!-- <div class="card-body relative isolate z-3">
     <h2
       class="card-title text-base-content text-xl [text-wrap:balance] contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
     >
@@ -576,7 +590,7 @@
         </path>
       </svg>
     </a>
-  </div>
+  </div> -->
   <!-- <div class="card-body relative isolate z-3">
     <h2
       class="card-title text-base-content text-xl [text-wrap:balance] contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
@@ -624,4 +638,42 @@
       </svg>
     </a>
   </div> -->
+  <div class="card-body relative isolate z-3">
+    <h2
+      class="card-title text-xl [text-wrap:balance] text-white contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
+    >
+      <span>
+        <span class="font-black">Official daisyUI</span>
+        <br />
+        <span class="font-black">Code Generator</span>
+        <br />
+        <span class="font-black"> MCP server </span>
+      </span>
+    </h2>
+    <div class="grow">
+      <h2
+        class="card-title text-sm font-light sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
+      >
+        Generate daisyUI code with any LLM
+      </h2>
+    </div>
+    <a class="btn btn-block group btn-outline mt-6 shadow-none" href="/blueprint/">
+      More details
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+        >
+        </path>
+      </svg>
+    </a>
+  </div>
 </div>
