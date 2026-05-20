@@ -65,7 +65,7 @@
   </div>
 {/if}
 <!-- With timer -->
-{#if false && new Date() < new Date("2026-04-21T00:00:00.000000Z")}
+{#if true && new Date() < new Date("2026-05-28T00:00:00.000000Z")}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       data-sveltekit-preload-data
@@ -74,16 +74,17 @@
     >
       <p class="leading-relaxed [text-wrap:balance]">
         <span class="text-base-content/70">
-          🎉 Celebrating <span class="font-bold">Nexus Dashboard</span> anniversary – Use code
+          <span class="font-bold">Nexus Dashboard</span> v4.0 is now available! – Use code
           <code
             class="decoration-success font-mono tracking-wide underline decoration-wavy underline-offset-4"
           >
-            NEXUS27
+            SPRING40
           </code>
-          to get 27% discount
+          to get 40% discount on <span class="font-bold">Nexus</span> or
+          <span class="font-bold">Scalo</span>
           <span class="inline-block w-2"></span>
           <Countdown
-            from={new Date("2026-04-21T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
+            from={new Date("2026-05-28T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
             dateFormat="DD/MM/YYYY, HH:mm:ss"
           >
             {#snippet children({ remaining })}
@@ -102,7 +103,7 @@
                     <span style={`--value:${remaining.seconds}`}></span>
                     s
                   </date>
-                  remaining
+                  <!-- remaining -->
                 </span>
               {/if}
             {/snippet}

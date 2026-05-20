@@ -4,9 +4,9 @@
 </script>
 
 <svelte:head>
-  <script>
+  <!-- <script>
     window.lemonSqueezyAffiliateConfig = { store: "daisyui" }
-  </script>
+  </script> -->
   <!-- <script src="https://lmsqueezy.com/affiliate.js" defer></script> -->
   <script src="https://www.evendeals.com/banner.js"></script>
 </svelte:head>
