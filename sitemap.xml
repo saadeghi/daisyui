@@ -517,6 +517,15 @@
     <loc>https://daisyui.com/nuxt-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/pages/ai-frontend-code-generation/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/pages/ai-tailwind-code-generator/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/pages/ai-ui-code-generation/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/pages/best-component-library-for-2026/</loc>
   </url>
   <url>
@@ -529,16 +538,37 @@
     <loc>https://daisyui.com/pages/css-library-for-html/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/pages/design-website-with-ai/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/pages/easy-component-library/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/pages/easy-css-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/pages/generate-ui-from-text/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/pages/generate-ui-with-claude/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/pages/generate-ui-with-codex/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/pages/generate-ui-with-llm/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/pages/install-tailwind-css-vite/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/pages/llm-ui-generation/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/pages/minimal-css-framework/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/pages/prompt-to-ui/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/pages/scalable-component-library/</loc>
@@ -551,6 +581,9 @@
   </url>
   <url>
     <loc>https://daisyui.com/pages/tailwind-css-without-node/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/pages/tailwind-ui-components/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/pages/ui-library-for-hackaton/</loc>

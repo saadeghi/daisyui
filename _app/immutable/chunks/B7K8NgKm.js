@@ -1,0 +1,1 @@
+import{F as i,h as o,G as f,_ as p,ai as c,ah as h,aC as _}from"./BdDkSVYR.js";function l(e,n,...t){var s=e,r=_,a;i(()=>{r!==(r=n())&&(a&&(p(a),a=null),a=f(()=>r(s,...t)))},o),c&&(s=h)}export{l as s};

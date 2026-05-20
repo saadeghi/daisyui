@@ -12,7 +12,7 @@ Blueprint MCP server,/blueprint/
 daisyUI llms.txt,/llms.txt
 title,url,classnames
 Store,/store/
-Nexus Dashboard 3.3,/store/nexus/
+Nexus Dashboard 4.0,/store/nexus/
 Official daisyUI Figma Library,/store/daisyui-figma-library/
 Scalo Startup Template 4.0,/store/scalo/
 daisyUI Charts,/store/daisyui-charts/
@@ -25,7 +25,7 @@ Blink template,/store/blink/
 Auth template 2.0,/store/auth-template/
 Mobile app landing page,/store/mobile-app-landingpage/
 FAQ,/docs/faq/,
-Colors,/docs/colors/,
+daisyUI colors,/docs/colors/,
 Install daisyUI for Eleventy,/docs/install/11ty/,
 Install daisyUI for Astro,/docs/install/astro/,
 Install daisyUI for Waku,/docs/install/waku/,
@@ -65,7 +65,7 @@ Install daisyUI as a Tailwind plugin,/docs/install/,
 Install daisyUI for Vike,/docs/install/vike/,
 daisyUI Roadmap,/docs/roadmap/,
 Add component classes to your HTML,/docs/use/,
-daisyUI themes,/docs/themes/,
+daisyUI themes for Tailwind CSS,/docs/themes/,
 Config,/docs/config/,
 Customize daisyUI components,/docs/customize/,
 Introduction,/docs/intro/,
