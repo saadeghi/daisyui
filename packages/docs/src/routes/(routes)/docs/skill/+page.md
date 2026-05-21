@@ -9,7 +9,7 @@ desc: Setup your coding agent to correctly generate daisyUI code based on your p
   export let data
 </script>
 
-[daisyUI skill](https://github.com/saadeghi/daisyui/blob/master/skills/daisyui/SKILL.md) is a compact, markdown version of daisyUI docs to help AI generate accurate daisyUI code based on your prompt.  
+[daisyUI skill](https://daisyui.com/SKILL.md) is a compact, markdown version of daisyUI docs to help AI generate accurate daisyUI code based on your prompt.  
 You can easily add daisyUI skill to your project and your agent will be able to use it automatically when you ask for daisyUI code.
 
 ## Install daisyUI skill
