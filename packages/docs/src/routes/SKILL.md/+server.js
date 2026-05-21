@@ -1,11 +1,9 @@
-import { readFile } from "node:fs/promises"
+import skillContent from "../../../../../skills/daisyui/SKILL.md?raw"
 
 export const prerender = true
 
-const skillFileUrl = new URL("../../../../../skills/daisyui/SKILL.md", import.meta.url)
-
-export async function GET() {
-  const content = await readFile(skillFileUrl, "utf8")
+export function GET() {
+  const content = skillContent
 
   return new Response(content, {
     headers: {

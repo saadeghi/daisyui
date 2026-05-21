@@ -1,8 +1,7 @@
-import { readFile } from "node:fs/promises"
+import skillContent from "../../../../../skills/daisyui/SKILL.md?raw"
 
 export const prerender = true
 
-const skillFileUrl = new URL("../../../../../skills/daisyui/SKILL.md", import.meta.url)
 const sourceUrl = "https://daisyui.com/llms.txt"
 
 function parseFrontmatter(content) {
@@ -59,9 +58,8 @@ function withRuntimeFrontmatter(content) {
   return serializeFrontmatter(transformedLines, parsed.body)
 }
 
-export async function GET() {
-  const content = await readFile(skillFileUrl, "utf8")
-  const servedContent = withRuntimeFrontmatter(content)
+export function GET() {
+  const servedContent = withRuntimeFrontmatter(skillContent)
 
   return new Response(servedContent, {
     headers: {
