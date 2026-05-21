@@ -2,6 +2,7 @@ import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import { error } from "@sveltejs/kit"
 import * as sitemap from "super-sitemap"
 import yaml from "js-yaml"
+import { load as loadSkillEditors } from "../(routes)/docs/skill/+layout.server.js"
 
 export const prerender = true
 
@@ -75,6 +76,7 @@ export const GET = async () => {
   let productIds = []
   let comparePages = []
   let alternativeLibraries = []
+  let skillPages = []
 
   try {
     const compareData = await fetchCompareData()
@@ -83,6 +85,8 @@ export const GET = async () => {
     comparePages = generateCompareSlugs(frameworks)
     alternativeLibraries = generateAlternativeSlugs(frameworks)
     productIds = await fetchProductIds()
+    const { skillEditors } = await loadSkillEditors()
+    skillPages = skillEditors.map((editor) => editor.slug)
   } catch (err) {
     throw error(500, `Could not load data for sitemap: ${err.message}`)
   }
@@ -104,6 +108,7 @@ export const GET = async () => {
       "/store/[productId]": productIds,
       "/compare/[item]": comparePages,
       "/alternative/[library]": alternativeLibraries,
+      "/docs/skill/[slug]": skillPages,
     },
     processPaths: (paths) =>
       paths.map(processPath).filter((entry) => !excludedPaths.includes(entry.path)),

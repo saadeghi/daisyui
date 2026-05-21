@@ -42,3 +42,11 @@ Or you can modify the component with Tailwind CSS utility classes
 ```
 
 <button class="w-64 rounded-full btn">Button</button>
+
+
+### Agent skill and MCP servers
+
+Use daisyUI skill and MCP servers to generate daisyUI code with AI.
+
+- [Skill guides →](/docs/skill/)
+- [MCP guides →](/docs/mcp/)

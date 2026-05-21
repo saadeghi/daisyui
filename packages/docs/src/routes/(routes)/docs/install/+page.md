@@ -34,3 +34,10 @@ desc: How to install daisyUI as a Tailwind CSS plugin?
 {/each}
 
 </div>
+
+### Agent skill and MCP servers
+
+Use daisyUI skill and MCP servers to generate daisyUI code with AI.
+
+- [Skill guides →](/docs/skill/)
+- [MCP guides →](/docs/mcp/)
