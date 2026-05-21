@@ -22,7 +22,7 @@
 <h1><img src="https://img.daisyui.com/images/logos/{data.editor.icon}.svg" alt="{data.editor.name}" width="40" height="40" class="inline-block me-2 -mt-2 not-prose"> {@html $t(`Add daisyUI skill to ${data.editor.name}`)}</h1>
 <p>{@html $t(`Setup ${data.editor.name} to correctly generate daisyUI code based on your prompt.`)}</p>
 
-[daisyUI skill](https://github.com/saadeghi/daisyui/blob/master/skills/daisyui/SKILL.md) is a compact, markdown version of daisyUI docs to help AI generate accurate daisyUI code based on your prompt.  
+[daisyUI skill](https://daisyui.com/SKILL.md) is a compact, markdown version of daisyUI docs to help AI generate accurate daisyUI code based on your prompt.  
 You can easily add daisyUI skill to your project and your agent will be able to use it automatically when you ask for daisyUI code.
 
 ### Install
