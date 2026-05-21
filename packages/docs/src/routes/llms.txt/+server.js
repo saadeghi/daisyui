@@ -1,5 +1,7 @@
 import { readFile } from "node:fs/promises"
 
+export const prerender = true
+
 const skillFileUrl = new URL("../../../../../skills/daisyui/SKILL.md", import.meta.url)
 const sourceUrl = "https://daisyui.com/llms.txt"
 
