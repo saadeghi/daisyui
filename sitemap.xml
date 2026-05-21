@@ -481,7 +481,43 @@
     <loc>https://daisyui.com/docs/layout-and-typography/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/docs/mcp/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/claude/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/claudecode/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/cline/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/codex/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/cursor/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/openclaw/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/opencode/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/vscode/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/windsurf/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/mcp/zed/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/docs/roadmap/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/docs/themes/</loc>
@@ -1076,6 +1112,33 @@
   </url>
   <url>
     <loc>https://daisyui.com/alternative/flux/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/copilot/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/claude-code/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/codex/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/cursor/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/opencode/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/openclaw/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/windsurf/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/gemini-cli/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/skill/antigravity/</loc>
   </url>
 <url>
   <loc>https://daisyui.com/llms.txt</loc>
