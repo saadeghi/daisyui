@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte"
   import { page } from "$app/stores"
   import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
   import ComponentFooter from "$components/ComponentFooter.svelte"
@@ -20,6 +21,23 @@
     alert,
     children,
   } = $props()
+
+  onMount(() => {
+    const handleClick = async (event) => {
+      const button = event.target.closest("button[data-copy-code]")
+      if (!button) return
+
+      const tooltip = button.closest(".tooltip")
+      const code = decodeURIComponent(button.dataset.copyCode || "")
+
+      await navigator.clipboard.writeText(code)
+      tooltip?.setAttribute("data-tip", "copied")
+      setTimeout(() => tooltip?.setAttribute("data-tip", "copy"), 2000)
+    }
+
+    document.addEventListener("click", handleClick)
+    return () => document.removeEventListener("click", handleClick)
+  })
 </script>
 
 <SEO

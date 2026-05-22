@@ -1,9 +1,27 @@
 <script>
+  import { onMount } from "svelte"
   import { page } from "$app/stores"
   import SEO from "$components/SEO.svelte"
   import { timeago, formattedDate } from "$lib/util"
   let { title, desc, date, author, tags, thumbnail, published, children } = $props()
   const slug = $page.url.pathname.split("/").at(-2) || ""
+
+  onMount(() => {
+    const handleClick = async (event) => {
+      const button = event.target.closest("button[data-copy-code]")
+      if (!button) return
+
+      const tooltip = button.closest(".tooltip")
+      const code = decodeURIComponent(button.dataset.copyCode || "")
+
+      await navigator.clipboard.writeText(code)
+      tooltip?.setAttribute("data-tip", "copied")
+      setTimeout(() => tooltip?.setAttribute("data-tip", "copy"), 2000)
+    }
+
+    document.addEventListener("click", handleClick)
+    return () => document.removeEventListener("click", handleClick)
+  })
 </script>
 
 <SEO {title} {desc} img={thumbnail} />
