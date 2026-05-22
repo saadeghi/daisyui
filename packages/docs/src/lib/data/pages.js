@@ -331,6 +331,11 @@ export const pages = [
             name: "Validator",
             href: "/components/validator/",
           },
+          {
+            name: "OTP",
+            href: "/components/otp/",
+            badge: "new",
+          },
         ],
       },
       {

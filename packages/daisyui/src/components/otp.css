@@ -1,0 +1,160 @@
+.otp {
+  @layer daisyui.l1.l2.l3 {
+    @apply relative inline-flex font-mono;
+    border-radius: var(--radius-field);
+    font-size: 1.75rem;
+    gap: var(--otp-gap);
+    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+    --otp-gap: 0.5ch;
+    --otp-w: 2ch;
+    --otp-size: calc(var(--size-field, 0.25rem) * 10);
+    --stride: calc(var(--otp-w) + var(--otp-gap));
+    > input {
+      @apply pointer-events-none absolute start-0 top-0 bottom-0 m-0 appearance-none border-0 bg-transparent p-0 outline-0;
+      inline-size: calc(100% + var(--stride));
+      clip-path: inset(0 var(--stride) 0 0);
+      padding-inline-start: 0.5ch;
+      line-height: 1;
+      letter-spacing: calc(var(--stride) - 1ch);
+      font-variant-numeric: tabular-nums;
+      &::selection {
+        @apply bg-transparent;
+        color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+      }
+    }
+
+    > span {
+      @apply relative flex transition-colors;
+      inline-size: var(--otp-w);
+      block-size: var(--otp-size);
+      background-color: var(--color-base-100);
+      border: var(--border) solid var(--input-color);
+      border-radius: inherit;
+      outline: 2px solid #0000;
+      outline-offset: 1px;
+      box-shadow:
+        0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
+        0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
+    }
+
+    &:focus-within {
+      isolation: isolate;
+      --input-color: var(--color-base-content);
+      > span {
+        outline-color: var(--input-color);
+        box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
+      }
+    }
+  }
+}
+
+.otp-xs {
+  @layer daisyui.l1.l2 {
+    font-size: 1.25rem;
+    --otp-size: calc(var(--size-field, 0.25rem) * 6);
+  }
+}
+.otp-sm {
+  @layer daisyui.l1.l2 {
+    font-size: 1.5rem;
+    --otp-size: calc(var(--size-field, 0.25rem) * 8);
+  }
+}
+.otp-md {
+  @layer daisyui.l1.l2 {
+    font-size: 1.75rem;
+    --otp-size: calc(var(--size-field, 0.25rem) * 10);
+  }
+}
+.otp-lg {
+  @layer daisyui.l1.l2 {
+    font-size: 2rem;
+    --otp-size: calc(var(--size-field, 0.25rem) * 12);
+  }
+}
+.otp-xl {
+  @layer daisyui.l1.l2 {
+    font-size: 2.5rem;
+    --otp-size: calc(var(--size-field, 0.25rem) * 14);
+  }
+}
+
+.otp-neutral {
+  @layer daisyui.l1.l2 {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-neutral);
+    }
+  }
+}
+
+.otp-primary {
+  @layer daisyui.l1.l2 {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-primary);
+    }
+  }
+}
+
+.otp-secondary {
+  @layer daisyui.l1.l2 {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-secondary);
+    }
+  }
+}
+
+.otp-accent {
+  @layer daisyui.l1.l2 {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-accent);
+    }
+  }
+}
+
+.otp-info {
+  @layer daisyui.l1.l2 {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-info);
+    }
+  }
+}
+
+.otp-success {
+  @layer daisyui.l1.l2 {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-success);
+    }
+  }
+}
+
+.otp-warning {
+  @layer daisyui.l1.l2 {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-warning);
+    }
+  }
+}
+
+.otp-error {
+  @layer daisyui.l1.l2 {
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-error);
+    }
+  }
+}
