@@ -123,7 +123,7 @@ const rehypePlugins = [
   //     },
   //   },
   // ],
-  [rehypeExternalLinks, { rel: ["nofollow"], target: ["_blank"] }],
+  [rehypeExternalLinks, { rel: ["nofollow"], target: "_blank" }],
 ]
 
 const remarkPlugins = [
