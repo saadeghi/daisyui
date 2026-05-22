@@ -4,6 +4,19 @@ import path from "path"
 // Helper function to escape quotes in the text
 const escapeQuotes = (text) => text.replace(/"/g, "&quot;")
 
+const isExternalUrl = (url) => /^https?:\/\//i.test(url) || url.startsWith("//")
+
+const createLinkHtml = (url, text) => {
+  const attributes = [`href="${escapeQuotes(url)}"`]
+
+  if (isExternalUrl(url)) {
+    attributes.push('rel="nofollow"')
+    attributes.push('target="_blank"')
+  }
+
+  return `<a ${attributes.join(" ")}>${text}</a>`
+}
+
 // Creates a Translate node for a given text
 const createTranslateNode = (text) => ({
   type: "html",
@@ -210,7 +223,7 @@ export function remarkTranslate() {
                   // fallback: just ignore other types for now
                 }
               }
-              combinedText += `<a href="${escapeQuotes(child.url)}">${linkText}</a>`
+              combinedText += createLinkHtml(child.url, linkText)
             }
           }
 
@@ -261,7 +274,7 @@ export function remarkTranslate() {
                   // fallback: just ignore other types for now
                 }
               }
-              const linkHtml = `<a href="${escapeQuotes(child.url)}">${linkText}</a>`
+              const linkHtml = createLinkHtml(child.url, linkText)
               node.children[i] = handleTextWithCode(linkHtml)
               i++
             } else {
