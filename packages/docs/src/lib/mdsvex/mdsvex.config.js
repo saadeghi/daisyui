@@ -86,6 +86,18 @@ function customClasses(options) {
   }
 }
 
+function renderHighlightedBlock(html, code, extraPreClass = "", showCopyButton = true) {
+  const clipboardText = encodeURIComponent(code)
+  const renderedHtml =
+    extraPreClass.length > 0 ? html.replace('<pre class="', `<pre class="${extraPreClass} `) : html
+
+  if (!showCopyButton) {
+    return `<div class="relative">\n{@html \`${renderedHtml}\` }\n</div>`
+  }
+
+  return `<div class="relative">\n  <div class="tooltip tooltip-left tooltip-accent self-start [justify-self:right] absolute right-2 top-2 z-10" data-tip="copy">\n    <button\n      class="btn btn-square btn-xs btn-neutral"\n      data-copy-code="${clipboardText}"\n      aria-label="Copy to clipboard"\n    >\n      <svg class="size-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">\n        <path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 5.445313 15.445313 5 16 5 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"></path>\n      </svg>\n    </button>\n  </div>\n{@html \`${renderedHtml}\` }\n</div>`
+}
+
 const rehypePlugins = [
   rehypeSlug,
   // [
@@ -173,9 +185,9 @@ const config = {
           /<span class="shiki-punctuation" style="color:var\(--shiki-punctuation\)">([+-])<\/span>/g,
           '<span class="select-none" style="color:var(--shiki-punctuation)">$1</span>',
         )
-        return `{@html \`${html.replace('<pre class="', '<pre class="shiki-diff ')}\` }`
+        return renderHighlightedBlock(html, code, "shiki-diff", false)
       }
-      return `{@html \`${escapeSvelte(html)}\` }`
+      return renderHighlightedBlock(escapeSvelte(html), code)
     },
   },
 }
