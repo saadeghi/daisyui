@@ -1,6 +1,7 @@
 .otp {
   @layer daisyui.l1.l2.l3 {
     @apply relative inline-flex font-mono;
+    clip-path: inset(-3.5px 3.5px -3.5px -3.5px);
     border-radius: var(--radius-field);
     font-size: 1.75rem;
     gap: var(--otp-gap);
@@ -10,9 +11,8 @@
     --otp-size: calc(var(--size-field, 0.25rem) * 10);
     --stride: calc(var(--otp-w) + var(--otp-gap));
     > input {
-      @apply pointer-events-none absolute start-0 top-0 bottom-0 m-0 appearance-none border-0 bg-transparent p-0 outline-0;
-      inline-size: calc(100% + var(--stride));
-      clip-path: inset(0 var(--stride) 0 0);
+      @apply pointer-events-none start-0 z-1 m-0 appearance-none border-0 bg-transparent p-0 outline-0;
+      field-sizing: content;
       padding-inline-start: 0.5ch;
       line-height: 1;
       letter-spacing: calc(var(--stride) - 1ch);
@@ -23,8 +23,37 @@
       }
     }
 
+    &:has(> span:nth-child(1)) {
+      width: calc(var(--stride) * 1);
+    }
+    &:has(> span:nth-child(2)) {
+      width: calc(var(--stride) * 2);
+    }
+    &:has(> span:nth-child(3)) {
+      width: calc(var(--stride) * 3);
+    }
+    &:has(> span:nth-child(4)) {
+      width: calc(var(--stride) * 4);
+    }
+    &:has(> span:nth-child(4)) {
+      width: calc(var(--stride) * 4);
+    }
+    &:has(> span:nth-child(5)) {
+      width: calc(var(--stride) * 5);
+    }
+    &:has(> span:nth-child(6)) {
+      width: calc(var(--stride) * 6);
+    }
+    &:has(> span:nth-child(7)) {
+      width: calc(var(--stride) * 7);
+    }
+    &:has(> span:nth-child(8)) {
+      width: calc(var(--stride) * 8);
+    }
+
     > span {
-      @apply relative flex transition-colors;
+      position: absolute;
+      @apply flex transition-colors;
       inline-size: var(--otp-w);
       block-size: var(--otp-size);
       background-color: var(--color-base-100);
@@ -35,16 +64,77 @@
       box-shadow:
         0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
         0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
+      &:nth-child(1) {
+        left: 1px;
+      }
+      &:nth-child(2) {
+        left: calc(var(--stride) * 1);
+      }
+      &:nth-child(3) {
+        left: calc(var(--stride) * 2);
+      }
+      &:nth-child(4) {
+        left: calc(var(--stride) * 3);
+      }
+      &:nth-child(5) {
+        left: calc(var(--stride) * 4);
+      }
+      &:nth-child(6) {
+        left: calc(var(--stride) * 5);
+      }
+      &:nth-child(7) {
+        left: calc(var(--stride) * 6);
+      }
+      &:nth-child(8) {
+        left: calc(var(--stride) * 7);
+      }
+    }
+
+    &:after {
+      @apply shrink-0;
+      content: "";
+      width: var(--otp-w);
+      height: var(--otp-size);
+      border-radius: var(--radius-field);
+      outline: 2px solid #0000;
+      outline-offset: 1px;
+      z-index: 10;
+      margin-inline-start: calc(-1 * (var(--otp-gap) + 0.5ch));
     }
 
     &:focus-within {
       isolation: isolate;
       --input-color: var(--color-base-content);
       > span {
-        outline-color: var(--input-color);
         box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
       }
+      &:after {
+        outline-color: var(--input-color);
+      }
     }
+  }
+}
+
+.otp-joined {
+  --otp-gap: 0rem;
+  clip-path: inset(-3.5px 0 -3.5px -3.5px);
+  > span {
+    &:first-of-type {
+      @apply rounded-e-none;
+    }
+    &:not(&:last-of-type) {
+      @apply border-e-0;
+    }
+    &:not(&:first-of-type, &:last-of-type) {
+      @apply rounded-none;
+    }
+    &:last-of-type {
+      @apply rounded-s-none;
+    }
+  }
+  &:after {
+    outline-offset: calc((-1 * var(--border)) - 3px);
+    translate: -2 0;
   }
 }
 

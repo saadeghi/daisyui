@@ -1334,10 +1334,12 @@ OTP (One-Time Password) component for inputting verification codes. It's usually
 #### Class names
 - component: `otp`
 - size: `otp-xs`, `otp-sm`, `otp-md`, `otp-lg`, `otp-xl`
+- modifier: `otp-joined`
+- color: `otp-neutral`, `otp-primary`, `otp-secondary`, `otp-accent`, `otp-info`, `otp-success`, `otp-warning`, `otp-error`
 
 #### Syntax
 ```html
-<label class="otp">
+<label class="otp {MODIFIER}">
   <span></span>
   <span></span>
   <span></span>
@@ -1347,6 +1349,8 @@ OTP (One-Time Password) component for inputting verification codes. It's usually
 ```
 
 #### Rules
+- {MODIFIER} is optional and can have one of the size/color class names
+- `otp-joined` modifier connects the character boxes together
 - the `otp` class is for a label. The label should have 4 to 6 empty `<span>` elements for the visual representation of each digit and an input field for entering the code
 - The number of `<span>` elements must match the `maxlength` attribute and the pattern in the input field. For example, if you have 6 `<span>` elements, the input should have `maxlength="6"` and `pattern="\d{6}"`
 - `autocomplete="one-time-code"` and `inputmode="numeric"` are important for mobile devices to show the appropriate keyboard and to allow autofill of the OTP code

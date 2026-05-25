@@ -7,6 +7,9 @@ classnames:
   component:
     - class: otp
       desc: For the container label
+  modifier:
+  - class: otp-joined
+    desc: Connects the character boxes together
   size:
   - class: otp-xs
     desc: Extra small size
@@ -19,6 +22,23 @@ classnames:
     desc: Large size
   - class: otp-xl
     desc: Extra large size
+  color:
+  - class: otp-neutral
+    desc: neutral color
+  - class: otp-primary
+    desc: primary color
+  - class: otp-secondary
+    desc: secondary color
+  - class: otp-accent
+    desc: accent color
+  - class: otp-success
+    desc: success color
+  - class: otp-info
+    desc: info color
+  - class: otp-warning
+    desc: warning color
+  - class: otp-error
+    desc: error color
 ---
 
 <script>
@@ -70,23 +90,22 @@ classnames:
 </label>
 ```
 
-### ~OTP with connected boxes
-<label class="otp [--otp-gap:0rem]">
-  <span class="rounded-e-none border-e-0 outline-none"></span>
-  <span class="rounded-none border-e-0 outline-none"></span>
-  <span class="rounded-none border-e-0 outline-none"></span>
-  <span class="rounded-none border-e-0 outline-none"></span>
-  <span class="rounded-s-none outline-none"></span>
+### ~OTP joined
+#### Connects the character boxes together
+<label class="otp otp-joined">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
   <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" required />
 </label>
 
 ```html
-<label class="$$otp [--otp-gap:0rem]">
-  <span class="rounded-e-none border-e-0 outline-none"></span>
-  <span class="rounded-none border-e-0 outline-none"></span>
-  <span class="rounded-none border-e-0 outline-none"></span>
-  <span class="rounded-none border-e-0 outline-none"></span>
-  <span class="rounded-s-none outline-none"></span>
+<label class="$$otp $$otp-joined">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
   <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" required />
 </label>
 ```
