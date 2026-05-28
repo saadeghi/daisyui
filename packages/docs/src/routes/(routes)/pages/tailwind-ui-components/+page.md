@@ -2,7 +2,7 @@
 title: Tailwind UI components
 desc: Build Tailwind UI-style components with daisyUI for cleaner HTML, built-in themes, and a faster path to consistent UI.
 layout: contentLanding
-keywords: tailwind ui components, tailwind ui alternative, tailwind css components, tailwind component library, daisyui components
+keywords: tailwind ui components, tailwind ui alternative, tailwind css components, tailwind component library
 ---
 
 <script>

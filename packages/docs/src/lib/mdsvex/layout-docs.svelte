@@ -5,7 +5,7 @@
   import ComponentFooter from "$components/ComponentFooter.svelte"
   import SEO from "$components/SEO.svelte"
   import { t } from "$lib/i18n.svelte.js"
-  let { data, title, desc, alert, children } = $props()
+  let { data, title, desc, alert, seo = true, componentfooter = true, children } = $props()
 
   onMount(() => {
     const handleClick = async (event) => {
@@ -25,11 +25,13 @@
   })
 </script>
 
-<SEO
-  {title}
-  {desc}
-  img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
-/>
+{#if seo}
+  <SEO
+    {title}
+    {desc}
+    img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
+  />
+{/if}
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div
@@ -47,7 +49,9 @@
       </div>
     {/if}
     {@render children?.()}
-    <ComponentFooter pages={data?.pages} />
+    {#if componentfooter}
+      <ComponentFooter pages={data?.pages} />
+    {/if}
   </div>
   <AlternativeSidebar />
 </div>
