@@ -1,3 +1,8 @@
+---
+layout: docs
+seo: false
+---
+
 <script>
   import SEO from "$components/SEO.svelte"
   import Translate from "$components/Translate.svelte"
