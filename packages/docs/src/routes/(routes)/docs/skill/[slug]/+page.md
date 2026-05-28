@@ -7,7 +7,6 @@
 
 <SEO
   title={`How to add daisyUI skill to ${data.editor.name}`}
-  desc="Setup your code editor and agent to correctly generate daisyUI code based on your prompt."
 />
 
 
