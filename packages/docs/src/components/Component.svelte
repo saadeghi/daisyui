@@ -2,8 +2,6 @@
   import { onMount } from "svelte"
   import { htmlToJsx, prefixClassNames } from "$lib/actions.svelte.js"
   import { t } from "$lib/i18n.svelte.js"
-  import Clipboard from "$components/Clipboard.svelte"
-  import { prefix } from "$lib/stores"
 
   let {
     title = undefined,
@@ -16,12 +14,6 @@
     jsx,
     uuid = crypto.randomUUID(),
   } = $props()
-
-  let wrapper = $state()
-  let htmlSlot = $state()
-  let jsxSlot = $state()
-  let htmlContent = $state("")
-  let jsxContent = $state("")
 
   let titleStr = $derived(
     title
@@ -39,27 +31,9 @@
       document.getElementById(hash).click()
     }
   })
-
-  // Subscribe to prefix changes
-  $effect(() => {
-    const unsubscribe = prefix.subscribe((value) => {
-      if (htmlSlot) {
-        htmlContent = htmlSlot.firstChild.innerHTML
-      }
-      if (jsxSlot) {
-        jsxContent = jsxSlot.firstChild.innerHTML
-      }
-    })
-
-    return () => unsubscribe()
-  })
 </script>
 
-<div
-  class="component-preview not-prose text-base-content my-6 lg:my-12"
-  id={titleStr}
-  bind:this={wrapper}
->
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id={titleStr}>
   {#if title}
     <div class="flex items-center gap-2 pb-3 text-sm font-bold">
       <a
@@ -122,15 +96,9 @@
       />
       <div class="tab-content">
         <div class="grid *:[grid-area:1/1]">
-          <div class="hidden" bind:this={htmlSlot} use:prefixClassNames>
-            <pre>{@render html()}</pre>
-          </div>
           <div class="code-wrapper" use:prefixClassNames>
             {@render html()}
           </div>
-          {#if onMount}
-            <Clipboard strip={true} text={htmlContent} />
-          {/if}
         </div>
       </div>
 
@@ -142,15 +110,6 @@
       />
       <div class="tab-content">
         <div class="grid *:[grid-area:1/1]">
-          <div class="hidden" bind:this={jsxSlot}>
-            <pre use:htmlToJsx use:prefixClassNames>
-            {#if jsx}
-                {@render jsx()}
-              {:else}
-                {@render html()}
-              {/if}
-          </pre>
-          </div>
           <div class="code-wrapper">
             <div use:htmlToJsx use:prefixClassNames>
               {#if jsx}
@@ -160,9 +119,6 @@
               {/if}
             </div>
           </div>
-          {#if onMount}
-            <Clipboard strip={true} text={jsxContent} />
-          {/if}
         </div>
       </div>
     {/if}
