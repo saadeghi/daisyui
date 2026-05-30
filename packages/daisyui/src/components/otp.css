@@ -6,16 +6,20 @@
     font-size: 1.75rem;
     gap: var(--otp-gap);
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-    --otp-gap: 0.5ch;
-    --otp-w: 2ch;
+    --otp-ch: 0.60205em;
+    @supports (font: -apple-system-body) {
+      --otp-ch: 0.618164em;
+    }
+    --otp-gap: calc(var(--otp-ch) * 0.5);
+    --otp-w: calc(var(--otp-ch) * 2);
     --otp-size: calc(var(--size-field, 0.25rem) * 10);
     --stride: calc(var(--otp-w) + var(--otp-gap));
     > input {
       @apply pointer-events-none start-0 z-1 m-0 appearance-none border-0 bg-transparent p-0 outline-0;
       field-sizing: content;
-      padding-inline-start: 0.5ch;
+      padding-inline-start: calc(var(--otp-ch) * 0.5);
       line-height: 1;
-      letter-spacing: calc(var(--stride) - 1ch);
+      letter-spacing: calc(var(--stride) - var(--otp-ch));
       font-variant-numeric: tabular-nums;
       &::selection {
         @apply bg-transparent;
@@ -65,7 +69,10 @@
         0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
         0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
       &:nth-child(1) {
-        left: 1px;
+        left: calc(var(--otp-ch) * 0.059319);
+        @supports (font: -apple-system-body) {
+          left: calc(0.035714em + 1px);
+        }
       }
       &:nth-child(2) {
         left: calc(var(--stride) * 1);
@@ -99,7 +106,7 @@
       outline: 2px solid #0000;
       outline-offset: 1px;
       z-index: 10;
-      margin-inline-start: calc(-1 * (var(--otp-gap) + 0.5ch));
+      margin-inline-start: calc(-1 * (var(--otp-gap) + (var(--otp-ch) * 0.5)));
     }
 
     &:focus-within {
