@@ -147,6 +147,8 @@
 @keyframes aura {
   to {
     --aura-angle: 360deg;
+    /* force GPU acceleration, fixes Safari lag */
+    transform: translateZ(1px);
   }
 }
 
