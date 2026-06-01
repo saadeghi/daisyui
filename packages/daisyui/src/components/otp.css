@@ -6,8 +6,9 @@
     font-size: 1.75rem;
     gap: var(--otp-gap);
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-    --otp-ch: 0.60205em;
+    --otp-ch: 1ch;
     @supports (font: -apple-system-body) {
+      /* safari patch */
       --otp-ch: 0.618164em;
     }
     --otp-gap: calc(var(--otp-ch) * 0.5);
@@ -72,9 +73,9 @@
         0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
         0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
       &:nth-child(1) {
-        left: calc(var(--otp-ch) * 0.059319);
+        left: 1px;
         @supports (font: -apple-system-body) {
-          left: calc(0.035714em + 1px);
+          left: 2px;
         }
       }
       &:nth-child(2) {
