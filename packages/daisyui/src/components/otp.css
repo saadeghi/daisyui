@@ -25,6 +25,9 @@
         @apply bg-transparent;
         color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
       }
+      &:valid {
+        @apply caret-transparent;
+      }
     }
 
     &:has(> span:nth-child(1)) {
