@@ -1,1 +1,0 @@
-import{aO as s,b7 as n}from"./BdDkSVYR.js";function c(o,i,r,f,a){var d=()=>{f(r[o])};r.addEventListener(i,d),a?s(()=>{r[o]=a()}):d(),(r===document.body||r===window||r===document)&&n(()=>{r.removeEventListener(i,d)})}export{c as b};
