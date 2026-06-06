@@ -120,12 +120,12 @@
 
 .aura-xs {
   @layer daisyui.l1.l2 {
-    --aura-padding: 0.0625rem;
+    --aura-padding: 0rem;
   }
 }
 .aura-sm {
   @layer daisyui.l1.l2 {
-    --aura-padding: 0.09375rem;
+    --aura-padding: 0.0625rem;
   }
 }
 .aura-md {
@@ -140,7 +140,7 @@
 }
 .aura-xl {
   @layer daisyui.l1.l2 {
-    --aura-padding: 0.1875rem;
+    --aura-padding: 0.25rem;
   }
 }
 
