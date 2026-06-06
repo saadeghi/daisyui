@@ -254,6 +254,28 @@
         <div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data
+            href="/store/daisyui-charts/"
+            class="btn btn-sm btn-ghost drawer-button font-normal"
+            onclick={() => track("Navbar > Store")}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4 opacity-50">
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                <path d="M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7"></path>
+              </g>
+            </svg>
+            {$t("Charts")}
+          </a>
+        </div>
+        <div class="hidden flex-none items-center lg:inline-block">
+          <a
+            data-sveltekit-preload-data
             href="/store/daisyui-figma-library/"
             class="btn btn-sm btn-ghost drawer-button font-normal"
             onclick={() => track("Navbar > Store")}
