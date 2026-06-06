@@ -159,8 +159,8 @@
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}
       >
         <div>
-          <div class="flex animate-[reveal-top-slow_0.5s] flex-col items-center gap-6 xl:flex-row">
-            <div
+          <div class="flex animate-[reveal-top-slow_0.5s] flex-col items-center gap-2 xl:flex-row">
+            <!-- <div
               data-tip={isClipboardButtonPressed ? "copied" : "copy"}
               class="tooltip tooltip-accent"
             >
@@ -171,8 +171,79 @@
                   track("Homepage > Hero > Copy to clipboard")
                 }}
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="inline-block size-3 opacity-30"
+                >
+                  <g
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                  </g>
+                </svg>
                 <pre><code>npm i -D daisyui@latest</code></pre>
               </button>
+            </div> -->
+            <div class="group">
+              <div
+                data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+                class="tooltip tooltip-accent"
+              >
+                <button
+                  class="btn btn-sm cursor-copy rounded-full font-mono font-light"
+                  onclick={() => {
+                    copyText("npx -y skills add saadeghi/daisyui")
+                    track("Homepage > Hero > Copy to clipboard")
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="inline-block size-3 opacity-30"
+                  >
+                    <g
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </g>
+                  </svg>
+                  <pre><code>npx skills add saadeghi/daisyui</code></pre>
+                </button>
+              </div>
+              <a
+                href="/docs/skill"
+                class="btn btn-xs btn-circle relative -start-0.5 opacity-0 transition-all duration-600 group-hover:start-0 group-hover:opacity-100"
+                aria-label="Learn about daisyUI Skill.md file"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  class="inline-block size-4 opacity-30"
+                >
+                  <g fill="currentColor">
+                    <circle cx="10" cy="15.5" r="1.5" fill="currentColor" stroke-width="0"></circle>
+                    <path
+                      d="m7.358,6.107c.368-1.506,1.501-2.107,3.079-2.107,1.362,0,2.567.817,2.567,2.553,0,2.444-3.01,2.025-3.01,4.947"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
             </div>
 
             <!-- <a
