@@ -75,6 +75,8 @@
 
       > :not(.drawer-overlay) {
         translate: 0%;
+        transform: none;
+        will-change: auto;
       }
     }
 
