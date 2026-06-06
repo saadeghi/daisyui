@@ -49,9 +49,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura">
-  <div class="card bg-base-100">
-    <div class="card-body">
+<div class="$$aura">
+  <div class="$$card bg-base-100">
+    <div class="$$card-body">
       <p>This card has aura</p>
     </div>
   </div>
@@ -64,8 +64,8 @@ classnames:
 </div>
 
 ```html
-<div class="aura">
-  <button class="btn">button with aura</button>
+<div class="$$aura">
+  <button class="$$btn">button with aura</button>
 </div>
 ```
 
@@ -79,9 +79,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-dual">
-  <div class="card bg-base-100">
-    <div class="card-body">
+<div class="$$aura $$aura-dual">
+  <div class="$$card bg-base-100">
+    <div class="$$card-body">
       <p>This card has dual aura</p>
     </div>
   </div>
@@ -99,9 +99,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-rainbow">
-  <div class="card bg-base-100">
-    <div class="card-body">
+<div class="$$aura $$aura-rainbow">
+  <div class="$$card bg-base-100">
+    <div class="$$card-body">
       <p>This card has rainbow aura</p>
     </div>
   </div>
@@ -118,9 +118,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-holo">
-  <div class="card bg-base-100">
-    <div class="card-body">
+<div class="$$aura $$aura-holo">
+  <div class="$$card bg-base-100">
+    <div class="$$card-body">
       <p>This card has holo aura</p>
     </div>
   </div>
@@ -137,9 +137,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-glow">
-  <div class="card bg-base-100">
-    <div class="card-body">
+<div class="$$aura $$aura-glow">
+  <div class="$$card bg-base-100">
+    <div class="$$card-body">
       <p>This card has glow aura</p>
     </div>
   </div>
@@ -156,9 +156,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-gold">
-  <div class="card bg-base-100">
-    <div class="card-body">
+<div class="$$aura $$aura-gold">
+  <div class="$$card bg-base-100">
+    <div class="$$card-body">
       <p>This card has gold aura</p>
     </div>
   </div>
@@ -176,9 +176,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-silver">
-  <div class="card bg-base-100">
-    <div class="card-body">
+<div class="$$aura $$aura-silver">
+  <div class="$$card bg-base-100">
+    <div class="$$card-body">
       <p>This card has silver aura</p>
     </div>
   </div>
@@ -197,9 +197,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura text-orange-600">
-    <div class="card bg-base-100 text-base-content">
-    <div class="card-body">
+<div class="$$aura text-orange-600">
+    <div class="$$card bg-base-100 text-base-content">
+    <div class="$$card-body">
       <p>This card has custom color aura</p>
     </div>
   </div>
@@ -216,9 +216,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura text-orange-600 bg-yellow-200">
-    <div class="card bg-base-100 text-base-content">
-    <div class="card-body">
+<div class="$$aura text-orange-600 bg-yellow-200">
+    <div class="$$card bg-base-100 text-base-content">
+    <div class="$$card-body">
       <p>This card has custom color and background aura</p>
     </div>
   </div>
@@ -269,10 +269,10 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-rainbow">
-  <div class="card w-96 bg-base-100 shadow-sm">
-    <div class="card-body">
-      <span class="badge badge-xs badge-warning">Most Popular</span>
+<div class="$$aura $$aura-rainbow">
+  <div class="$$card w-96 bg-base-100 shadow-sm">
+    <div class="$$card-body">
+      <span class="$$badge $$badge-xs $$badge-warning">Most Popular</span>
       <div class="flex justify-between">
         <h2 class="text-3xl font-bold">Premium</h2>
         <span class="text-xl">$29/mo</span>
@@ -332,20 +332,20 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-xs">
-  <button class="btn">XS</button>
+<div class="$$aura $$aura-xs">
+  <button class="$$btn">XS</button>
 </div>
-<div class="aura aura-sm">
-  <button class="btn">SM</button>
+<div class="$$aura $$aura-sm">
+  <button class="$$btn">SM</button>
 </div>
-<div class="aura">
-  <button class="btn">MD</button>
+<div class="$$aura">
+  <button class="$$btn">MD</button>
 </div>
-<div class="aura aura-lg">
-  <button class="btn">LG</button>
+<div class="$$aura $$aura-lg">
+  <button class="$$btn">LG</button>
 </div>
-<div class="aura aura-xl">
-  <button class="btn">XL</button>
+<div class="$$aura $$aura-xl">
+  <button class="$$btn">XL</button>
 </div>
 ```
 
@@ -359,9 +359,9 @@ classnames:
 </div>
 
 ```html
-<div class="aura aura-rainbow duration-2000">
-  <div class="card bg-base-100">
-    <div class="card-body">
+<div class="$$aura $$aura-rainbow duration-2000">
+  <div class="$$card bg-base-100">
+    <div class="$$card-body">
       <p>2000ms duration aura</p>
     </div>
   </div>
