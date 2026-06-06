@@ -73,7 +73,7 @@ Example: This sidebar is always visible. When it's close we only see iocns, when
         <!-- list item -->
         <li>
           <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
-            ⚙️
+            🔧
             <span class="is-drawer-close:hidden">Settings</span>
           </button>
         </li>
@@ -81,7 +81,7 @@ Example: This sidebar is always visible. When it's close we only see iocns, when
       <!-- button to open/close drawer -->
       <div class="m-2 is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Open">
         <label for="my-drawer-4" class="btn btn-ghost btn-circle drawer-button is-drawer-open:rotate-y-180">
-          ↔️
+          🔄
         </label>
       </div>
     </div>
