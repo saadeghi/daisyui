@@ -1,0 +1,1 @@
+import{C as d,u,D as n,e as c,aI as p}from"./K_5B0834.js";function y(s,o,r){d(()=>{var a=u(()=>o(s,r?.())||{});if(r&&a?.update){var t=!1,f={};n(()=>{var e=r();c(e),t&&p(f,e)&&(f=e,a.update(e))}),t=!0}if(a?.destroy)return()=>a.destroy()})}export{y as a};
