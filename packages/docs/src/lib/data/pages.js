@@ -134,6 +134,11 @@ export const pages = [
             href: "/components/avatar/",
           },
           {
+            name: "Aura",
+            href: "/components/aura/",
+            badge: "new",
+          },
+          {
             name: "Badge",
             href: "/components/badge/",
           },
