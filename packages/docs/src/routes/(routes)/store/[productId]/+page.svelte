@@ -217,7 +217,7 @@
   </a>
 </div>
 
-{#if false}
+{#if true}
   {#await fetchDiscount then discount}
     {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate}
       <div class="my-12">

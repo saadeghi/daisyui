@@ -260,7 +260,7 @@
 <hr class="border-base-content/10 mx-4 mt-10 mb-16" />
 
 <div>
-  {#if false}
+  {#if true}
     {#await fetchDiscount then discount}
       {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate}
         <div class="mb-12">
