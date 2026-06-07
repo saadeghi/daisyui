@@ -634,7 +634,7 @@
           </form>
         </dialog>
         <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
-          <div class="modal-box max-h-[80vh] w-full max-w-[90vw] p-0 max-md:max-h-[80vh]">
+          <div class="modal-box max-h-[80vh] w-full p-0 max-md:max-h-[80vh] lg:max-w-[90vw]">
             <img src={screenshotUrl} alt="Screenshot" class="h-full w-full object-cover" />
           </div>
           <form method="dialog" class="modal-backdrop">
