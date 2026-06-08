@@ -273,7 +273,7 @@
             {$t("Charts")}
           </a>
         </div>
-        <div class="hidden flex-none items-center lg:inline-block">
+        <!--<div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data
             href="/store/daisyui-figma-library/"
@@ -305,7 +305,7 @@
             </svg>
             {$t("Figma")}
           </a>
-        </div>
+        </div>-->
         <div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data
