@@ -21,7 +21,7 @@
             src={media.lg}
             alt={product.title}
             loading="lazy"
-            class="bg-base-300 h-full w-full bg-cover bg-center object-cover"
+            class="bg-base-300 h-auto w-full bg-cover bg-center object-cover"
           />
         {/each}
       </div>
