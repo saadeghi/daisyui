@@ -5,6 +5,7 @@
   import StoreProduct from "$components/StoreProduct.svelte"
   import Countdown from "svelte-countdown"
   import { fade, slide } from "svelte/transition"
+  import { getProductCreemIds, isDiscountApplicableToProduct } from "$lib/storeDiscount.js"
   let { data } = $props()
   let currentDate = $state(new Date().toISOString())
   $effect(() => {
@@ -21,25 +22,6 @@
       return expiresAt > currentDate
     }
     return false
-  }
-
-  function extractCreemProductId(url) {
-    if (!url || typeof url !== "string") return null
-    const match = url.match(/\/payment\/(prod_[^/?#]+)/)
-    return match ? match[1] : null
-  }
-
-  function getCheckoutProductIds(packages) {
-    if (!packages) return []
-    const checkoutRow = packages.slice(1).find((row) => row[0] === "checkout")
-    if (!checkoutRow) return []
-    return checkoutRow.slice(1).map(extractCreemProductId).filter(Boolean)
-  }
-
-  function isDiscountApplicableToProduct(discount, checkoutProductIds) {
-    const appliesTo = discount?.data?.attributes?.applies_to_products
-    if (!appliesTo?.length) return true
-    return appliesTo.some((id) => checkoutProductIds.includes(id))
   }
 
   let discount = $state(null)
@@ -74,8 +56,8 @@
   function getProductDiscount(product) {
     if (!discount?.data?.attributes?.expires_at) return null
     if (new Date(discount.data.attributes.expires_at).toISOString() <= currentDate) return null
-    const checkoutProductIds = getCheckoutProductIds(product.packages)
-    if (!isDiscountApplicableToProduct(discount, checkoutProductIds)) return null
+    const productIds = getProductCreemIds(product)
+    if (!isDiscountApplicableToProduct(discount, productIds)) return null
     return discount.data.attributes
   }
 

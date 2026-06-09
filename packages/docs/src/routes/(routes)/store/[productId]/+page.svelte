@@ -4,6 +4,7 @@
   import StoreProduct from "$components/StoreProduct.svelte"
   import Countdown from "svelte-countdown"
   import { fade, slide } from "svelte/transition"
+  import { getProductCreemIds, isDiscountApplicableToProduct } from "$lib/storeDiscount.js"
 
   let { data } = $props()
 
@@ -151,24 +152,6 @@
     return false
   }
 
-  function extractCreemProductId(url) {
-    if (!url || typeof url !== "string") return null
-    const match = url.match(/\/payment\/(prod_[^/?#]+)/)
-    return match ? match[1] : null
-  }
-
-  function getCheckoutProductIds(packages) {
-    if (!packages) return []
-    const checkoutRow = packages.slice(1).find((row) => row[0] === "checkout")
-    if (!checkoutRow) return []
-    return checkoutRow.slice(1).map(extractCreemProductId).filter(Boolean)
-  }
-
-  function isDiscountApplicableToProduct(discount, checkoutProductIds) {
-    const appliesTo = discount?.data?.attributes?.applies_to_products
-    if (!appliesTo?.length) return true
-    return appliesTo.some((id) => checkoutProductIds.includes(id))
-  }
   const fetchDiscount = (async () => {
     // Fetch both discount types
     const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
@@ -237,8 +220,8 @@
 </div>
 
 {#await fetchDiscount then discount}
-  {@const checkoutProductIds = getCheckoutProductIds(data.product.packages)}
-  {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate && isDiscountApplicableToProduct(discount, checkoutProductIds)}
+  {@const productIds = getProductCreemIds(data.product)}
+  {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate && isDiscountApplicableToProduct(discount, productIds)}
     <div class="my-12">
       <div
         class="alert bg-neutral text-neutral-content min-h-24 border-transparent"
