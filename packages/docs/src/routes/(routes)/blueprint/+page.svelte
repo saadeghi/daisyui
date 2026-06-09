@@ -1,6 +1,9 @@
 <script>
+  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import SEO from "$components/SEO.svelte"
   import StoreFooter from "$components/StoreFooter.svelte"
+  import Countdown from "svelte-countdown"
+  import { fade, slide } from "svelte/transition"
 
   let dialogs = $state({})
 
@@ -111,6 +114,73 @@
 
   const checkoutUrl = "/blueprint/checkout/"
 
+  const blueprintProductIds = [
+    "prod_7bSjj3UImBhfsYHclXQHt4",
+    "prod_4GWzcIFPubIXjTBvzo9pKA",
+    "prod_4EC2CMwyCoPAeJ6GhKabZd",
+  ]
+
+  const dateFormat = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }
+
+  let isClipboardButtonPressed = $state(false)
+  const copyText = (text) => {
+    navigator.clipboard.writeText(text)
+    isClipboardButtonPressed = true
+    setTimeout(() => {
+      isClipboardButtonPressed = false
+    }, 2000)
+  }
+
+  let currentDate = $state(new Date().toISOString())
+  $effect(() => {
+    const interval = setInterval(() => {
+      currentDate = new Date().toISOString()
+    }, 1000)
+    return () => clearInterval(interval)
+  })
+
+  const isDiscountValid = (discount) => {
+    if (discount.data?.attributes.expires_at) {
+      const expiresAt = new Date(discount.data.attributes.expires_at).toISOString()
+      const currentDate = new Date().toISOString()
+      return expiresAt > currentDate
+    }
+    return false
+  }
+
+  function isDiscountApplicableToBlueprint(discount) {
+    const appliesTo = discount?.data?.attributes?.applies_to_products
+    if (!appliesTo?.length) return true
+    return appliesTo.some((id) => blueprintProductIds.includes(id))
+  }
+
+  const fetchDiscount = (async () => {
+    const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
+      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_shorttime.json`),
+      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_special.json`),
+    ])
+
+    const shorttimeDiscount = await shorttimeDiscountResponse.json()
+    const specialDiscount = await specialDiscountResponse.json()
+
+    if (isDiscountValid(specialDiscount)) {
+      return specialDiscount
+    }
+
+    if (isDiscountValid(shorttimeDiscount)) {
+      return shorttimeDiscount
+    }
+
+    return null
+  })()
+
   const code = `<body class="flex min-h-screen items-center justify-center bg-base-200">
     <div class="card w-96 bg-base-100 card-border">
       <div class="card-body">
@@ -174,6 +244,198 @@
 </svelte:head>
 
 <div class="w-full px-4 pt-20 md:px-20" dir="ltr">
+  {#await fetchDiscount then discount}
+    {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate && isDiscountApplicableToBlueprint(discount)}
+      <div class="fixed end-2 bottom-2 z-20 max-lg:hidden">
+        <button
+          class="btn btn-sm btn-neutral h-auto max-h-none flex-col py-2"
+          onclick={() => dialogs.discount.showModal()}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="mx-4 size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+            />
+          </svg>
+
+          {discount.data.attributes.amount}% Discount code
+
+          {#if discount.data.attributes.expires_at}
+            <Countdown
+              from={new Date(discount.data.attributes.expires_at).toLocaleString(
+                "en-GB",
+                dateFormat,
+              )}
+              dateFormat="DD/MM/YYYY, HH:mm:ss"
+            >
+              {#snippet children({ remaining })}
+                {#if remaining.done === false}
+                  <div class="shrink-0" transition:fade={{ duration: 400 }}>
+                    <date
+                      datetime={new Date(discount.data.attributes.expires_at).toLocaleString(
+                        "en-GB",
+                        dateFormat,
+                      )}
+                      class={`grid ${remaining.days > 0 ? "grid-cols-4" : "grid-cols-3"} gap-2 text-center font-mono text-xs`}
+                    >
+                      {#if remaining.days > 0}
+                        <div class="rounded-field px-2 py-1">
+                          <span class="countdown block text-lg font-normal">
+                            <span style={`--value:${remaining.days};`}></span>
+                          </span>
+                          <span
+                            class="text-neutral-content/40 block text-[0.5rem] tracking-wide uppercase"
+                            >day</span
+                          >
+                        </div>
+                      {/if}
+                      <div class="rounded-field px-2 py-1">
+                        <span class="countdown block text-lg font-normal">
+                          <span style={`--value:${remaining.hours};`}></span>
+                        </span>
+                        <span
+                          class="text-neutral-content/40 block text-[0.5rem] tracking-wide uppercase"
+                          >hour</span
+                        >
+                      </div>
+                      <div class="rounded-field px-2 py-1">
+                        <span class="countdown block text-lg font-normal">
+                          <span style={`--value:${remaining.minutes};`}></span>
+                        </span>
+                        <span
+                          class="text-neutral-content/40 block text-[0.5rem] tracking-wide uppercase"
+                          >min</span
+                        >
+                      </div>
+                      <div class="rounded-field px-2 py-1">
+                        <span class="countdown block text-lg font-normal">
+                          <span style={`--value:${remaining.seconds};`}></span>
+                        </span>
+                        <span
+                          class="text-neutral-content/40 block text-[0.5rem] tracking-wide uppercase"
+                          >sec</span
+                        >
+                      </div>
+                    </date>
+                  </div>
+                {/if}
+              {/snippet}
+            </Countdown>
+          {/if}
+        </button>
+      </div>
+      <dialog bind:this={dialogs.discount} class="modal">
+        <div class="modal-box">
+          <div class="bg-base-200 mb-6 grid h-24 place-items-center rounded-lg p-6 text-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="mx-4 size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+              />
+            </svg>
+          </div>
+          <h2 class="font-title mb-4 text-center text-2xl font-bold">Limited time discount code</h2>
+          <div
+            class="flex w-full flex-col items-center justify-between gap-10"
+            transition:fade={{ duration: 400 }}
+          >
+            <div class="flex flex-col gap-1">
+              <div class="text-center text-sm [text-wrap:balance]">
+                Use <span
+                  data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+                  class="tooltip tooltip-error"
+                >
+                  <button
+                    class="badge badge-error cursor-copy px-2 font-mono tracking-wide"
+                    onclick={() => copyText(discount.data.attributes.code)}
+                  >
+                    {discount.data.attributes.code}
+                  </button>
+                </span>
+                code at checkout to get {discount.data.attributes.amount}% discount.
+              </div>
+            </div>
+
+            {#if discount.data.attributes.expires_at}
+              <Countdown
+                from={new Date(discount.data.attributes.expires_at).toLocaleString(
+                  "en-GB",
+                  dateFormat,
+                )}
+                dateFormat="DD/MM/YYYY, HH:mm:ss"
+              >
+                {#snippet children({ remaining })}
+                  {#if remaining.done === false}
+                    <div
+                      class="tooltip shrink-0 after:hidden"
+                      data-tip="Remaining time"
+                      transition:fade={{ duration: 400 }}
+                    >
+                      <date
+                        datetime={new Date(discount.data.attributes.expires_at).toLocaleString(
+                          "en-GB",
+                          dateFormat,
+                        )}
+                        class={`grid ${remaining.days > 0 ? "grid-cols-4" : "grid-cols-3"} gap-2 text-center font-mono`}
+                      >
+                        {#if remaining.days > 0}
+                          <div class="bg-base-200 rounded-field border-base-content/5 border p-2">
+                            <span class="countdown block text-3xl font-normal">
+                              <span style={`--value:${remaining.days};`}></span>
+                            </span>
+                            <span class="block text-xs tracking-wide uppercase opacity-40">day</span
+                            >
+                          </div>
+                        {/if}
+                        <div class="bg-base-200 rounded-field border-base-content/5 border p-2">
+                          <span class="countdown block text-3xl font-normal">
+                            <span style={`--value:${remaining.hours};`}></span>
+                          </span>
+                          <span class="block text-xs tracking-wide uppercase opacity-40">hour</span>
+                        </div>
+                        <div class="bg-base-200 rounded-field border-base-content/5 border p-2">
+                          <span class="countdown block text-3xl font-normal">
+                            <span style={`--value:${remaining.minutes};`}></span>
+                          </span>
+                          <span class="block text-xs tracking-wide uppercase opacity-40">min</span>
+                        </div>
+                        <div class="bg-base-200 rounded-field border-base-content/5 border p-2">
+                          <span class="countdown block text-3xl font-normal">
+                            <span style={`--value:${remaining.seconds};`}></span>
+                          </span>
+                          <span class="block text-xs tracking-wide uppercase opacity-40">sec</span>
+                        </div>
+                      </date>
+                    </div>
+                  {/if}
+                {/snippet}
+              </Countdown>
+            {/if}
+          </div>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+    {/if}
+  {/await}
+
   <!-- hero -->
 
   <div>
