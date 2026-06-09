@@ -581,4 +581,62 @@
       </form>
     </div>
   </div> -->
+
+  <div class="mt-12">
+    <div class="alert min-h-24" transition:slide={{ duration: 400 }}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 18 18"
+        class="mx-4 size-6 -rotate-6 max-sm:hidden"
+      >
+        <g fill="currentColor">
+          <path
+            d="M1.75,6.75c0-.728,.396-1.361,1.034-1.713L8.517,1.874c.301-.166,.665-.166,.966,0l5.733,3.163c.638,.352,1.034,.984,1.034,1.713"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          >
+          </path>
+          <path
+            d="M16.25,6.754v6.496c0,1.105-.895,2-2,2H3.75c-1.105,0-2-.895-2-2V6.75l6.815,3.29c.275,.133,.595,.133,.869,0l6.815-3.29v.004h0Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          >
+          </path>
+        </g>
+      </svg>
+
+      <div
+        class="flex w-full flex-col items-center justify-between gap-4 lg:flex-row"
+        transition:fade={{ duration: 400 }}
+      >
+        <div class="flex w-full grow flex-col gap-1">
+          <h2 class="text-lg font-bold">daisyUI Newsletter</h2>
+          <div class="text-sm [text-wrap:balance]">
+            Join the daisyUI Newsletter to get a discount code!
+          </div>
+        </div>
+        <form
+          action="https://app.kit.com/forms/8466638/subscriptions"
+          method="post"
+          target="_blank"
+          class="flex shrink-0 gap-1 max-lg:w-full sm:gap-2 sm:pe-4"
+        >
+          <input
+            type="email"
+            class="input sm:min-w-64"
+            name="email_address"
+            placeholder="email@site.com"
+            required
+          />
+          <button class="btn">Get Discount</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
