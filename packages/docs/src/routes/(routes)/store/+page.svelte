@@ -22,6 +22,27 @@
     }
     return false
   }
+
+  function extractCreemProductId(url) {
+    if (!url || typeof url !== "string") return null
+    const match = url.match(/\/payment\/(prod_[^/?#]+)/)
+    return match ? match[1] : null
+  }
+
+  function getCheckoutProductIds(packages) {
+    if (!packages) return []
+    const checkoutRow = packages.slice(1).find((row) => row[0] === "checkout")
+    if (!checkoutRow) return []
+    return checkoutRow.slice(1).map(extractCreemProductId).filter(Boolean)
+  }
+
+  function isDiscountApplicableToProduct(discount, checkoutProductIds) {
+    const appliesTo = discount?.data?.attributes?.applies_to_products
+    if (!appliesTo?.length) return true
+    return appliesTo.some((id) => checkoutProductIds.includes(id))
+  }
+
+  let discount = $state(null)
   const fetchDiscount = (async () => {
     // Fetch both discount types
     const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
@@ -46,6 +67,17 @@
     // If neither discount is valid, return null or handle accordingly
     return null
   })()
+  fetchDiscount.then((d) => {
+    discount = d
+  })
+
+  function getProductDiscount(product) {
+    if (!discount?.data?.attributes?.expires_at) return null
+    if (new Date(discount.data.attributes.expires_at).toISOString() <= currentDate) return null
+    const checkoutProductIds = getCheckoutProductIds(product.packages)
+    if (!isDiscountApplicableToProduct(discount, checkoutProductIds)) return null
+    return discount.data.attributes
+  }
 
   function convertCurrency(number) {
     const formatted = (number / 100).toFixed(2)
@@ -260,7 +292,7 @@
 <hr class="border-base-content/10 mx-4 mt-10 mb-16" />
 
 <div>
-  {#if true}
+  {#if false}
     {#await fetchDiscount then discount}
       {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate}
         <div class="mb-12">
@@ -447,7 +479,13 @@
     class="*:border-base-content/10 mx-auto grid *:border-t *:border-dashed *:px-4 *:py-16 *:nth-[1]:border-t-0 md:*:px-16 lg:grid-cols-2 lg:px-4 lg:*:border-e lg:*:even:border-e-0 lg:*:nth-[2]:border-t-0"
   >
     {#each sortedFilteredProducts as product}
-      <StoreProduct {product} productKey={product._key} {convertCurrency} />
+      <StoreProduct
+        {product}
+        productKey={product._key}
+        {convertCurrency}
+        productDiscount={getProductDiscount(product)}
+        {dateFormat}
+      />
     {:else}
       <div
         class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20 py-32"

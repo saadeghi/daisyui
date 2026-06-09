@@ -1,5 +1,8 @@
 <script>
-  let { product, productKey, convertCurrency } = $props()
+  import Countdown from "svelte-countdown"
+  import { fade } from "svelte/transition"
+
+  let { product, productKey, convertCurrency, productDiscount = null, dateFormat } = $props()
 </script>
 
 <a
@@ -8,8 +11,10 @@
   id={productKey}
   data-sveltekit-preload-data
 >
-  <div class="flex grow items-center">
-    <div class="rounded-box gallery-column-reveal w-full">
+  <div class="relative flex grow items-center">
+    <div
+      class={`rounded-box gallery-column-reveal w-full ${productDiscount ? "outline-error outline-4 outline-offset-4" : ""}`}
+    >
       <div class="gallery-column-reveal-images">
         {#each product.media.filter((media) => media.type === "image") as media}
           <img
@@ -49,6 +54,76 @@
         {/each}
       </div>
     </div>
+    {#if productDiscount?.expires_at && dateFormat}
+      <div class="absolute start-6 -top-5 z-2 flex gap-1.5">
+        <div
+          class="bg-error text-error-content rounded-field font-title p-2 text-center text-sm font-semibold text-shadow-2xs text-shadow-white/30 xl:px-4 xl:tracking-widest"
+        >
+          {productDiscount.amount}% DISCOUNT
+        </div>
+        <Countdown
+          from={new Date(productDiscount.expires_at).toLocaleString("en-GB", dateFormat)}
+          dateFormat="DD/MM/YYYY, HH:mm:ss"
+        >
+          {#snippet children({ remaining })}
+            {#if remaining.done === false}
+              <div class="shrink-0 after:hidden" transition:fade={{ duration: 400 }}>
+                <date
+                  datetime={new Date(productDiscount.expires_at).toLocaleString(
+                    "en-GB",
+                    dateFormat,
+                  )}
+                  class={`grid ${remaining.days > 0 ? "grid-cols-4" : "grid-cols-3"} gap-1 text-center font-mono text-shadow-2xs text-shadow-white/30`}
+                >
+                  {#if remaining.days > 0}
+                    <div class="bg-error text-error-content rounded-field flex flex-col pt-1">
+                      <span class="countdown block xl:mx-2">
+                        <span style={`--value:${remaining.days};`}></span>
+                      </span>
+                      <span
+                        class="bg-error-content/20 m-px block rounded-[calc(var(--radius-field)-1px)] px-1 text-[0.5rem] uppercase text-shadow-none"
+                      >
+                        day
+                      </span>
+                    </div>
+                  {/if}
+                  <div class="bg-error text-error-content rounded-field flex flex-col pt-1">
+                    <span class="countdown block xl:mx-2">
+                      <span style={`--value:${remaining.hours};`}></span>
+                    </span>
+                    <span
+                      class="bg-error-content/20 m-px block rounded-[calc(var(--radius-field)-1px)] px-1 text-[0.5rem] uppercase text-shadow-none"
+                    >
+                      hour
+                    </span>
+                  </div>
+                  <div class="bg-error text-error-content rounded-field flex flex-col pt-1">
+                    <span class="countdown block xl:mx-2">
+                      <span style={`--value:${remaining.minutes};`}></span>
+                    </span>
+                    <span
+                      class="bg-error-content/20 m-px block rounded-[calc(var(--radius-field)-1px)] px-1 text-[0.5rem] uppercase text-shadow-none"
+                    >
+                      min
+                    </span>
+                  </div>
+                  <div class="bg-error text-error-content rounded-field flex flex-col pt-1">
+                    <span class="countdown block xl:mx-2">
+                      <span style={`--value:${remaining.seconds};`}></span>
+                    </span>
+                    <span
+                      class="bg-error-content/20 m-px block rounded-[calc(var(--radius-field)-1px)] px-1 text-[0.5rem] uppercase text-shadow-none"
+                    >
+                      sec
+                    </span>
+                  </div>
+                </date>
+              </div>
+            {/if}
+          {/snippet}
+        </Countdown>
+      </div>
+    {/if}
   </div>
 
   <div class="flex justify-between gap-4 pt-6">
@@ -102,16 +177,16 @@
         <span class="flex flex-col">
           <span class="flex items-center gap-2">
             {#if product.displayprice}
-              <span class="font-title">
+              <span class={`font-title ${productDiscount ? "line-through" : ""}`}>
                 {convertCurrency(product.displayprice)}
               </span>
             {:else if product.from_price && product.to_price && product.from_price !== product.to_price}
               <span class="text-[0.625rem] italic opacity-50">from</span>
-              <span class="font-title">
+              <span class={`font-title ${productDiscount ? "line-through" : ""}`}>
                 {convertCurrency(product.from_price)}
               </span>
             {:else}
-              <span class="font-title">
+              <span class={`font-title ${productDiscount ? "line-through" : ""}`}>
                 {convertCurrency(product.price)}
               </span>
             {/if}

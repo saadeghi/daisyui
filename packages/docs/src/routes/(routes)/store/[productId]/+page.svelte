@@ -150,6 +150,25 @@
     }
     return false
   }
+
+  function extractCreemProductId(url) {
+    if (!url || typeof url !== "string") return null
+    const match = url.match(/\/payment\/(prod_[^/?#]+)/)
+    return match ? match[1] : null
+  }
+
+  function getCheckoutProductIds(packages) {
+    if (!packages) return []
+    const checkoutRow = packages.slice(1).find((row) => row[0] === "checkout")
+    if (!checkoutRow) return []
+    return checkoutRow.slice(1).map(extractCreemProductId).filter(Boolean)
+  }
+
+  function isDiscountApplicableToProduct(discount, checkoutProductIds) {
+    const appliesTo = discount?.data?.attributes?.applies_to_products
+    if (!appliesTo?.length) return true
+    return appliesTo.some((id) => checkoutProductIds.includes(id))
+  }
   const fetchDiscount = (async () => {
     // Fetch both discount types
     const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
@@ -217,126 +236,119 @@
   </a>
 </div>
 
-{#if true}
-  {#await fetchDiscount then discount}
-    {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate}
-      <div class="my-12">
-        <div
-          class="alert bg-neutral text-neutral-content min-h-24 border-transparent"
-          transition:slide={{ duration: 400 }}
+{#await fetchDiscount then discount}
+  {@const checkoutProductIds = getCheckoutProductIds(data.product.packages)}
+  {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate && isDiscountApplicableToProduct(discount, checkoutProductIds)}
+    <div class="my-12">
+      <div
+        class="alert bg-neutral text-neutral-content min-h-24 border-transparent"
+        transition:slide={{ duration: 400 }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="mx-4 size-6"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="mx-4 size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
-            />
-          </svg>
-          <div
-            class="flex w-full flex-col items-center justify-between gap-10 sm:flex-row"
-            transition:fade={{ duration: 400 }}
-          >
-            <div class="flex flex-col gap-1">
-              <h2 class="text-lg font-bold">
-                {discount.data.attributes.name}
-              </h2>
-              <div class="text-neutral-content/70 text-sm [text-wrap:balance]">
-                Use <span
-                  data-tip={isClipboardButtonPressed ? "copied" : "copy"}
-                  class="tooltip tooltip-info"
-                >
-                  <button
-                    class="badge badge-info cursor-copy px-2 font-mono tracking-wide"
-                    onclick={() => copyText(discount.data.attributes.code)}
-                  >
-                    {discount.data.attributes.code}
-                  </button>
-                </span>
-                code at checkout to get {discount.data.attributes.amount}% discount on all products.
-              </div>
-            </div>
-
-            {#if discount.data.attributes.expires_at}
-              <Countdown
-                from={new Date(discount.data.attributes.expires_at).toLocaleString(
-                  "en-GB",
-                  dateFormat,
-                )}
-                dateFormat="DD/MM/YYYY, HH:mm:ss"
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+          />
+        </svg>
+        <div
+          class="flex w-full flex-col items-center justify-between gap-10 sm:flex-row"
+          transition:fade={{ duration: 400 }}
+        >
+          <div class="flex flex-col gap-1">
+            <h2 class="text-lg font-bold">
+              {discount.data.attributes.name}
+            </h2>
+            <div class="text-neutral-content/70 text-sm [text-wrap:balance]">
+              Use <span
+                data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+                class="tooltip tooltip-error"
               >
-                {#snippet children({ remaining })}
-                  {#if remaining.done === false}
-                    <div
-                      class="tooltip shrink-0 after:hidden"
-                      data-tip="Remaining time"
-                      transition:fade={{ duration: 400 }}
-                    >
-                      <date
-                        datetime={new Date(discount.data.attributes.expires_at).toLocaleString(
-                          "en-GB",
-                          dateFormat,
-                        )}
-                        class={`grid ${remaining.days > 0 ? "grid-cols-4" : "grid-cols-3"} gap-2 text-center font-mono text-xs`}
-                      >
-                        {#if remaining.days > 0}
-                          <div
-                            class="border-neutral-content/40 rounded-field border border-dashed p-2"
-                          >
-                            <span class="countdown block text-2xl">
-                              <span style={`--value:${remaining.days};`}></span>
-                            </span>
-                            <span class="text-neutral-content/40 text-xs">day</span>
-                          </div>
-                        {/if}
-                        <div
-                          class="border-neutral-content/40 rounded-field border border-dashed p-2"
-                        >
-                          <span class="countdown block text-2xl">
-                            <span style={`--value:${remaining.hours};`}></span>
-                          </span>
-                          <span class="text-neutral-content/40 text-xs">hour</span>
-                        </div>
-                        <div
-                          class="border-neutral-content/40 rounded-field border border-dashed p-2"
-                        >
-                          <span class="countdown block text-2xl">
-                            <span style={`--value:${remaining.minutes};`}></span>
-                          </span>
-                          <span class="text-neutral-content/40 text-xs">min</span>
-                        </div>
-                        <div
-                          class="border-neutral-content/40 rounded-field border border-dashed p-2"
-                        >
-                          <span class="countdown block text-2xl">
-                            <span style={`--value:${remaining.seconds};`}></span>
-                          </span>
-                          <span class="text-neutral-content/40 text-xs">sec</span>
-                        </div>
-                      </date>
-                    </div>
-                  {:else if !data}
-                    <div
-                      class="text-neutral-content/20 rounded-field shrink-0 border border-dashed p-2"
-                    >
-                      Ended
-                    </div>
-                  {/if}
-                {/snippet}
-              </Countdown>
-            {/if}
+                <button
+                  class="badge badge-error cursor-copy px-2 font-mono tracking-wide"
+                  onclick={() => copyText(discount.data.attributes.code)}
+                >
+                  {discount.data.attributes.code}
+                </button>
+              </span>
+              code at checkout to get {discount.data.attributes.amount}% discount.
+            </div>
           </div>
+
+          {#if discount.data.attributes.expires_at}
+            <Countdown
+              from={new Date(discount.data.attributes.expires_at).toLocaleString(
+                "en-GB",
+                dateFormat,
+              )}
+              dateFormat="DD/MM/YYYY, HH:mm:ss"
+            >
+              {#snippet children({ remaining })}
+                {#if remaining.done === false}
+                  <div
+                    class="tooltip shrink-0 after:hidden"
+                    data-tip="Remaining time"
+                    transition:fade={{ duration: 400 }}
+                  >
+                    <date
+                      datetime={new Date(discount.data.attributes.expires_at).toLocaleString(
+                        "en-GB",
+                        dateFormat,
+                      )}
+                      class={`grid ${remaining.days > 0 ? "grid-cols-4" : "grid-cols-3"} gap-2 text-center font-mono text-xs`}
+                    >
+                      {#if remaining.days > 0}
+                        <div
+                          class="border-neutral-content/40 rounded-field border border-dashed p-2"
+                        >
+                          <span class="countdown block text-2xl">
+                            <span style={`--value:${remaining.days};`}></span>
+                          </span>
+                          <span class="text-neutral-content/40 text-xs">day</span>
+                        </div>
+                      {/if}
+                      <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
+                        <span class="countdown block text-2xl">
+                          <span style={`--value:${remaining.hours};`}></span>
+                        </span>
+                        <span class="text-neutral-content/40 text-xs">hour</span>
+                      </div>
+                      <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
+                        <span class="countdown block text-2xl">
+                          <span style={`--value:${remaining.minutes};`}></span>
+                        </span>
+                        <span class="text-neutral-content/40 text-xs">min</span>
+                      </div>
+                      <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
+                        <span class="countdown block text-2xl">
+                          <span style={`--value:${remaining.seconds};`}></span>
+                        </span>
+                        <span class="text-neutral-content/40 text-xs">sec</span>
+                      </div>
+                    </date>
+                  </div>
+                {:else if !data}
+                  <div
+                    class="text-neutral-content/20 rounded-field shrink-0 border border-dashed p-2"
+                  >
+                    Ended
+                  </div>
+                {/if}
+              {/snippet}
+            </Countdown>
+          {/if}
         </div>
       </div>
-    {/if}
-  {/await}
-{/if}
+    </div>
+  {/if}
+{/await}
 
 <div class="mx-auto py-10">
   <div class="grid gap-12 xl:grid-cols-12">
