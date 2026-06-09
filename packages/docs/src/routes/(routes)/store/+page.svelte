@@ -5,7 +5,12 @@
   import StoreProduct from "$components/StoreProduct.svelte"
   import Countdown from "svelte-countdown"
   import { fade, slide } from "svelte/transition"
-  import { getProductCreemIds, isDiscountApplicableToProduct } from "$lib/storeDiscount.js"
+  import {
+    discountDateFormat,
+    fetchActiveDiscount,
+    getProductCreemIds,
+    isDiscountApplicableToProduct,
+  } from "$lib/storeDiscount.js"
   let { data } = $props()
   let currentDate = $state(new Date().toISOString())
   $effect(() => {
@@ -15,40 +20,8 @@
     return () => clearInterval(interval)
   })
 
-  const isDiscountValid = (discount) => {
-    if (discount.data?.attributes.expires_at) {
-      const expiresAt = new Date(discount.data.attributes.expires_at).toISOString()
-      const currentDate = new Date().toISOString()
-      return expiresAt > currentDate
-    }
-    return false
-  }
-
   let discount = $state(null)
-  const fetchDiscount = (async () => {
-    // Fetch both discount types
-    const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
-      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_shorttime.json`),
-      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_special.json`),
-    ])
-
-    // Parse the JSON responses
-    const shorttimeDiscount = await shorttimeDiscountResponse.json()
-    const specialDiscount = await specialDiscountResponse.json()
-
-    // Check if special discount exists and is still valid
-    if (isDiscountValid(specialDiscount)) {
-      return specialDiscount
-    }
-
-    // Check if short-time discount exists and is still valid
-    if (isDiscountValid(shorttimeDiscount)) {
-      return shorttimeDiscount
-    }
-
-    // If neither discount is valid, return null or handle accordingly
-    return null
-  })()
+  const fetchDiscount = fetchActiveDiscount(PUBLIC_DAISYUI_API_PATH)
   fetchDiscount.then((d) => {
     discount = d
   })
@@ -66,14 +39,7 @@
     return `$${formatted.endsWith(".00") ? formatted.slice(0, -3) : formatted}`
   }
 
-  const dateFormat = {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  }
+  const dateFormat = discountDateFormat
 
   let isClipboardButtonPressed = $state(false)
   const copyText = (text) => {
@@ -466,7 +432,6 @@
         productKey={product._key}
         {convertCurrency}
         productDiscount={getProductDiscount(product)}
-        {dateFormat}
       />
     {:else}
       <div

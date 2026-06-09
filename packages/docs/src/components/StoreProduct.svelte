@@ -1,8 +1,7 @@
 <script>
-  import Countdown from "svelte-countdown"
-  import { fade } from "svelte/transition"
+  import DiscountCountdown from "$components/DiscountCountdown.svelte"
 
-  let { product, productKey, convertCurrency, productDiscount = null, dateFormat } = $props()
+  let { product, productKey, convertCurrency, productDiscount = null } = $props()
 </script>
 
 <a
@@ -54,74 +53,14 @@
         {/each}
       </div>
     </div>
-    {#if productDiscount?.expires_at && dateFormat}
+    {#if productDiscount?.expires_at}
       <div class="absolute start-6 -top-5 z-2 flex gap-1.5">
         <div
           class="bg-error text-error-content rounded-field font-title p-2 text-center text-sm font-semibold text-shadow-2xs text-shadow-white/30 xl:px-4 xl:tracking-widest"
         >
           {productDiscount.amount}% DISCOUNT
         </div>
-        <Countdown
-          from={new Date(productDiscount.expires_at).toLocaleString("en-GB", dateFormat)}
-          dateFormat="DD/MM/YYYY, HH:mm:ss"
-        >
-          {#snippet children({ remaining })}
-            {#if remaining.done === false}
-              <div class="shrink-0 after:hidden" transition:fade={{ duration: 400 }}>
-                <date
-                  datetime={new Date(productDiscount.expires_at).toLocaleString(
-                    "en-GB",
-                    dateFormat,
-                  )}
-                  class={`grid ${remaining.days > 0 ? "grid-cols-4" : "grid-cols-3"} gap-1 text-center font-mono text-shadow-2xs text-shadow-white/30`}
-                >
-                  {#if remaining.days > 0}
-                    <div class="bg-error text-error-content rounded-field flex flex-col pt-1">
-                      <span class="countdown block xl:mx-2">
-                        <span style={`--value:${remaining.days};`}></span>
-                      </span>
-                      <span
-                        class="bg-error-content/20 m-px block rounded-[calc(var(--radius-field)-1px)] px-1 text-[0.5rem] uppercase text-shadow-none"
-                      >
-                        day
-                      </span>
-                    </div>
-                  {/if}
-                  <div class="bg-error text-error-content rounded-field flex flex-col pt-1">
-                    <span class="countdown block xl:mx-2">
-                      <span style={`--value:${remaining.hours};`}></span>
-                    </span>
-                    <span
-                      class="bg-error-content/20 m-px block rounded-[calc(var(--radius-field)-1px)] px-1 text-[0.5rem] uppercase text-shadow-none"
-                    >
-                      hour
-                    </span>
-                  </div>
-                  <div class="bg-error text-error-content rounded-field flex flex-col pt-1">
-                    <span class="countdown block xl:mx-2">
-                      <span style={`--value:${remaining.minutes};`}></span>
-                    </span>
-                    <span
-                      class="bg-error-content/20 m-px block rounded-[calc(var(--radius-field)-1px)] px-1 text-[0.5rem] uppercase text-shadow-none"
-                    >
-                      min
-                    </span>
-                  </div>
-                  <div class="bg-error text-error-content rounded-field flex flex-col pt-1">
-                    <span class="countdown block xl:mx-2">
-                      <span style={`--value:${remaining.seconds};`}></span>
-                    </span>
-                    <span
-                      class="bg-error-content/20 m-px block rounded-[calc(var(--radius-field)-1px)] px-1 text-[0.5rem] uppercase text-shadow-none"
-                    >
-                      sec
-                    </span>
-                  </div>
-                </date>
-              </div>
-            {/if}
-          {/snippet}
-        </Countdown>
+        <DiscountCountdown expiresAt={productDiscount.expires_at} />
       </div>
     {/if}
   </div>

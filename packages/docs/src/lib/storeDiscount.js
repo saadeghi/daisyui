@@ -1,3 +1,34 @@
+export const discountDateFormat = {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+}
+
+export function isDiscountValid(discount) {
+  if (discount?.data?.attributes?.expires_at) {
+    const expiresAt = new Date(discount.data.attributes.expires_at).toISOString()
+    return expiresAt > new Date().toISOString()
+  }
+  return false
+}
+
+export async function fetchActiveDiscount(apiPath) {
+  const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
+    fetch(`${apiPath}/api/discount_shorttime.json`),
+    fetch(`${apiPath}/api/discount_special.json`),
+  ])
+
+  const shorttimeDiscount = await shorttimeDiscountResponse.json()
+  const specialDiscount = await specialDiscountResponse.json()
+
+  if (isDiscountValid(specialDiscount)) return specialDiscount
+  if (isDiscountValid(shorttimeDiscount)) return shorttimeDiscount
+  return null
+}
+
 export function extractCreemProductId(url) {
   if (!url || typeof url !== "string") return null
   const match = url.match(/\/payment\/(prod_[^/?#]+)/)

@@ -2,9 +2,13 @@
   import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import SEO from "$components/SEO.svelte"
   import StoreProduct from "$components/StoreProduct.svelte"
-  import Countdown from "svelte-countdown"
+  import DiscountCountdown from "$components/DiscountCountdown.svelte"
   import { fade, slide } from "svelte/transition"
-  import { getProductCreemIds, isDiscountApplicableToProduct } from "$lib/storeDiscount.js"
+  import {
+    fetchActiveDiscount,
+    getProductCreemIds,
+    isDiscountApplicableToProduct,
+  } from "$lib/storeDiscount.js"
 
   let { data } = $props()
 
@@ -117,15 +121,6 @@
     licenseDialog.showModal()
   }
 
-  const dateFormat = {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  }
-
   let isClipboardButtonPressed = $state(false)
   const copyText = (text) => {
     navigator.clipboard.writeText(text)
@@ -143,39 +138,7 @@
     return () => clearInterval(interval)
   })
 
-  const isDiscountValid = (discount) => {
-    if (discount.data?.attributes.expires_at) {
-      const expiresAt = new Date(discount.data.attributes.expires_at).toISOString()
-      const currentDate = new Date().toISOString()
-      return expiresAt > currentDate
-    }
-    return false
-  }
-
-  const fetchDiscount = (async () => {
-    // Fetch both discount types
-    const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
-      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_shorttime.json`),
-      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_special.json`),
-    ])
-
-    // Parse the JSON responses
-    const shorttimeDiscount = await shorttimeDiscountResponse.json()
-    const specialDiscount = await specialDiscountResponse.json()
-
-    // Check if special discount exists and is still valid
-    if (isDiscountValid(specialDiscount)) {
-      return specialDiscount
-    }
-
-    // Check if short-time discount exists and is still valid
-    if (isDiscountValid(shorttimeDiscount)) {
-      return shorttimeDiscount
-    }
-
-    // If neither discount is valid, return null or handle accordingly
-    return null
-  })()
+  const fetchDiscount = fetchActiveDiscount(PUBLIC_DAISYUI_API_PATH)
 </script>
 
 <SEO
@@ -266,66 +229,10 @@
           </div>
 
           {#if discount.data.attributes.expires_at}
-            <Countdown
-              from={new Date(discount.data.attributes.expires_at).toLocaleString(
-                "en-GB",
-                dateFormat,
-              )}
-              dateFormat="DD/MM/YYYY, HH:mm:ss"
-            >
-              {#snippet children({ remaining })}
-                {#if remaining.done === false}
-                  <div
-                    class="tooltip shrink-0 after:hidden"
-                    data-tip="Remaining time"
-                    transition:fade={{ duration: 400 }}
-                  >
-                    <date
-                      datetime={new Date(discount.data.attributes.expires_at).toLocaleString(
-                        "en-GB",
-                        dateFormat,
-                      )}
-                      class={`grid ${remaining.days > 0 ? "grid-cols-4" : "grid-cols-3"} gap-2 text-center font-mono text-xs`}
-                    >
-                      {#if remaining.days > 0}
-                        <div
-                          class="border-neutral-content/40 rounded-field border border-dashed p-2"
-                        >
-                          <span class="countdown block text-2xl">
-                            <span style={`--value:${remaining.days};`}></span>
-                          </span>
-                          <span class="text-neutral-content/40 text-xs">day</span>
-                        </div>
-                      {/if}
-                      <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
-                        <span class="countdown block text-2xl">
-                          <span style={`--value:${remaining.hours};`}></span>
-                        </span>
-                        <span class="text-neutral-content/40 text-xs">hour</span>
-                      </div>
-                      <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
-                        <span class="countdown block text-2xl">
-                          <span style={`--value:${remaining.minutes};`}></span>
-                        </span>
-                        <span class="text-neutral-content/40 text-xs">min</span>
-                      </div>
-                      <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
-                        <span class="countdown block text-2xl">
-                          <span style={`--value:${remaining.seconds};`}></span>
-                        </span>
-                        <span class="text-neutral-content/40 text-xs">sec</span>
-                      </div>
-                    </date>
-                  </div>
-                {:else if !data}
-                  <div
-                    class="text-neutral-content/20 rounded-field shrink-0 border border-dashed p-2"
-                  >
-                    Ended
-                  </div>
-                {/if}
-              {/snippet}
-            </Countdown>
+            <DiscountCountdown
+              expiresAt={discount.data.attributes.expires_at}
+              variant="neutral"
+            />
           {/if}
         </div>
       </div>
