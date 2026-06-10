@@ -7,6 +7,22 @@
 
   let dialogs = $state({})
 
+  const editors = [
+    { name: "Cursor", slug: "cursor", icon: "cursor.svg" },
+    { name: "VSCode Copilot", slug: "vscode", icon: "copilot.svg" },
+    { name: "Codex", slug: "codex", icon: "codex.svg" },
+    { name: "OpenCode", slug: "opencode", icon: "opencode.svg" },
+    { name: "Antigravity", slug: "antigravity", icon: "antigravity.svg" },
+    { name: "Claude Code", slug: "claudecode", icon: "claude-code.svg" },
+    { name: "Claude Desktop", slug: "claude", icon: "claude.webp" },
+    { name: "Cline – VSCode", slug: "cline", icon: "cline.webp" },
+    { name: "Windsurf", slug: "windsurf", icon: "windsurf.webp" },
+    { name: "OpenClaw", slug: "openclaw", icon: "openclaw.svg" },
+    { name: "Zed", slug: "zed", icon: "zed.webp" },
+  ]
+
+  let selectedEditor = $state(null)
+
   let videoModal = $state({
     dialog: null,
     videoId: "",
@@ -441,7 +457,7 @@
   <div>
     <div class="inline-block">
       <div class="me-6 -mb-2 self-end text-end font-mono text-[0.625rem] text-blue-600">
-        Version 1.2
+        Version 1.3
       </div>
       <div class="mb-4 inline-grid grid-cols-[1rem_1fr_1rem] grid-rows-[1rem_1fr_1rem]">
         <div class="border-s-2 border-t-2 border-blue-600 [grid-area:1/1/2/2]"></div>
@@ -4542,313 +4558,600 @@
 
 <!-- install modal -->
 
-<dialog bind:this={dialogs.install} class="modal max-md:modal-bottom">
+<dialog
+  bind:this={dialogs.install}
+  class="modal max-md:modal-bottom"
+  onclose={() => (selectedEditor = null)}
+>
   <div
-    class="modal-box bg-base-300 p-0 shadow-none md:max-h-[70vh] md:max-w-3xl"
+    class="modal-box bg-base-300 p-0 shadow-none md:max-h-[80vh] md:max-w-3xl"
     style="filter: drop-shadow(0 1rem 2rem #0005);"
   >
     <!-- name of each tab group should be unique -->
-    <div class="tabs max-sm:tabs-xs max-md:tabs-sm tabs-lift p-1">
-      <label class="tab">
-        <input type="radio" name="editors" checked />
-        <img
-          class="me-2 size-4 max-sm:hidden"
-          src="https://img.daisyui.com/images/logos/cursor.webp?2"
-          alt="Cursor"
-        />
-        Cursor
-      </label>
-      <div class="tab-content bg-base-100 border-base-300 p-6">
-        <div>
-          <div class="prose prose-sm !ps-0 text-sm">
-            <p>
-              1. Get a <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">
-                Blueprint License
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  class="ms-1 inline-block size-3 fill-current opacity-50"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z"
-                  ></path></svg
-                >
-              </a>
-            </p>
-            <p>2. Click this button to open the MCP server in Cursor settings</p>
-          </div>
-          <div
-            class="bg-base-200 border-base-content/10 my-6 flex items-center justify-center rounded border py-8"
-          >
-            <a
-              class="btn btn-neutral"
-              target="_blank"
-              href={`https://cursor.com/en/install-mcp?name=daisyui-blueprint&config=${btoa(
-                JSON.stringify({
-                  command: "npx",
-                  args: ["-y", "daisyui-blueprint@latest"],
-                  env: {
-                    LICENSE: "",
-                    EMAIL: "",
-                    FIGMA: "",
-                  },
-                }),
-              )}`}
-            >
-              <img
-                class="me-2 size-4 max-sm:hidden"
-                src="https://img.daisyui.com/images/logos/cursor.webp?2"
-                alt="Cursor"
-              />
-              Install MCP Server
-            </a>
-          </div>
-          <div class="prose prose-sm !ps-0 text-sm">
-            <p>3. In the MCP settings page, add the following environment variables:</p>
-            <ul>
-              <li>
-                <span class="font-bold">LICENSE</span>: Your license key
-              </li>
-              <li>
-                <span class="font-bold">EMAIL</span>: Your email address
-              </li>
-            </ul>
-          </div>
-          <div class="prose prose-sm ps-0!">
-            <p>
-              4. Now tell the LLM to <span class="font-bold">use daisyUI Blueprint MCP</span> to access
-              the tools on demand.
-            </p>
-            <p>
-              Read <a
-                href="https://cursor.com/docs/context/mcp"
-                target="_blank"
-                rel="noopener noreferrer">Cursor docs</a
-              > for more info about using MCP.
-            </p>
-          </div>
-        </div>
+    {#if !selectedEditor}
+      <div class="px-10 pt-10">
+        <h3 class="text-lg font-bold">Install daisyUI Blueprint MCP</h3>
+        <p class="text-base-content/60 mt-1 text-xs">Choose your coding tool</p>
       </div>
 
-      <label class="tab">
-        <input type="radio" name="editors" />
-        <img
-          class="me-2 size-4 max-sm:hidden"
-          src="https://img.daisyui.com/images/logos/vscode.webp"
-          alt="VS Code"
-        />
-        VS Code
-      </label>
-      <div class="tab-content bg-base-100 border-base-300 p-6">
-        <div>
-          <div class="prose prose-sm !ps-0 text-sm">
-            <p>
-              1. Get a <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">
-                Blueprint License
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  class="ms-1 inline-block size-3 fill-current opacity-50"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z"
-                  ></path></svg
-                >
+      <div class="grid grid-cols-2 gap-3 p-10 sm:grid-cols-3">
+        {#each editors as editor}
+          <button
+            onclick={() => (selectedEditor = editor.slug)}
+            class="btn btn-ghost h-auto max-h-none flex-col gap-4 py-6"
+          >
+            <img
+              class="size-12 object-contain"
+              src="https://img.daisyui.com/images/logos/{editor.icon}"
+              alt={editor.name}
+            />
+            <span class="text-xs font-semibold">{editor.name}</span>
+          </button>
+        {/each}
+      </div>
+    {:else}
+      <!-- Breadcrumbs at top -->
+      <div class="breadcrumbs mx-6 my-2">
+        <ul>
+          <li>
+            <button
+              onclick={() => (selectedEditor = null)}
+              class="link link-hover flex items-center gap-1"
+            >
+              All Tools
+            </button>
+          </li>
+          <li class="text-base-content/60 flex items-center gap-1">
+            <img
+              class="me-2 size-4 object-contain"
+              src="https://img.daisyui.com/images/logos/{editors.find(
+                (e) => e.slug === selectedEditor,
+              )?.icon}"
+              alt={editors.find((e) => e.slug === selectedEditor)?.name}
+            />
+            {editors.find((e) => e.slug === selectedEditor)?.name}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Guide content -->
+      <div
+        class="prose prose-sm bg-base-100 rounded-box border-base-300 max-w-none border p-6 text-xs leading-normal"
+      >
+        {#if selectedEditor === "cursor"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
+            </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="mb-1 text-xs font-semibold">Option 1: Automatic Setup</p>
+            <p class="text-base-content/70 mb-3">
+              Click the button below to automatically install in Cursor:
+            </p>
+            <div
+              class="bg-base-200 border-base-content/10 my-4 flex items-center justify-center rounded border py-4"
+            >
+              <a
+                class="btn btn-sm btn-neutral"
+                target="_blank"
+                href={`https://cursor.com/en/install-mcp?name=daisyui-blueprint&config=${btoa(
+                  JSON.stringify({
+                    command: "npx",
+                    args: ["-y", "daisyui-blueprint@latest"],
+                    env: {
+                      LICENSE: "",
+                      EMAIL: "",
+                      FIGMA: "",
+                    },
+                  }),
+                )}`}
+              >
+                <img
+                  class="me-2 size-4"
+                  src="https://img.daisyui.com/images/logos/cursor.svg"
+                  alt="Cursor"
+                />
+                Install MCP Server
               </a>
+            </div>
+            <p class="text-base-content/70 mb-4">
+              On the MCP settings page, configure these environment variables:
             </p>
-            <p>
-              2. In VS Code press
-              <kbd class="kbd kbd-sm">⌘ CMD</kbd>
-              +
-              <kbd class="kbd kbd-sm">⇧ Shift</kbd>
-              +
-              <kbd class="kbd kbd-sm">P</kbd>
-              ( Or
-              <kbd class="kbd kbd-sm">Ctrl</kbd>
-              +
-              <kbd class="kbd kbd-sm">Shift</kbd>
-              +
-              <kbd class="kbd kbd-sm">P</kbd>
-              )
+            <ul class="text-base-content/70 my-2 list-disc space-y-1 ps-4">
+              <li><span class="font-bold">LICENSE</span>: Your Blueprint license key</li>
+              <li><span class="font-bold">EMAIL</span>: Your email address</li>
+              <li><span class="font-bold">FIGMA</span>: Your Figma API key (optional)</li>
+            </ul>
+
+            <p class="mt-6 mb-1 text-xs font-semibold">Option 2: Manual Setup</p>
+            <p class="text-base-content/70 mb-2">
+              In Cursor press <kbd class="kbd kbd-xs">⌘ CMD</kbd> +
+              <kbd class="kbd kbd-xs">⇧ Shift</kbd>
+              + <kbd class="kbd kbd-xs">P</kbd> (or <kbd class="kbd kbd-xs">Ctrl</kbd> +
+              <kbd class="kbd kbd-xs">Shift</kbd>
+              + <kbd class="kbd kbd-xs">P</kbd>), search for
+              <span class="badge badge-sm">MCP: Open MCP Settings</span>, and add this configuration
+              to <code class="text-xs">mcp.json</code>:
             </p>
-            <p>
-              3. Search for <span class="badge">MCP: Open User Configuration</span>
-            </p>
-            <p>
-              4. Add this and set your <span class="font-bold">license key</span> +
-              <span class="font-bold">email address</span> in it
-            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`{
+    "mcpServers": {
+      "daisyui-blueprint": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "daisyui-blueprint@latest"],
+        "env": {
+          "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
+          "EMAIL": "YOUR EMAIL ADDRESS",
+          "FIGMA": "YOUR FIGMA API KEY (optional)"
+        }
+      }
+    }
+  }`}</code
+                ></pre>
+            </div>
           </div>
-          <div class="mockup-code my-2 w-full leading-none">
-            <pre><code class="text-xs"
-                >{`{
+        {:else if selectedEditor === "vscode"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
+            </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              1. In VS Code press <kbd class="kbd kbd-xs">⌘ CMD</kbd> +
+              <kbd class="kbd kbd-xs">⇧ Shift</kbd>
+              + <kbd class="kbd kbd-xs">P</kbd> (or <kbd class="kbd kbd-xs">Ctrl</kbd> +
+              <kbd class="kbd kbd-xs">Shift</kbd>
+              + <kbd class="kbd kbd-xs">P</kbd>).
+            </p>
+            <p class="text-base-content/70 mb-2">
+              2. Search for <span class="badge badge-sm">MCP: Open User Configuration</span>.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              3. Add this and set your <span class="font-bold">LICENSE</span>,
+              <span class="font-bold">EMAIL</span>
+              and <span class="font-bold">FIGMA</span> variables in it:
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`{
     "servers": {
       "daisyui-blueprint": {
         "type": "stdio",
         "command": "npx",
         "args": ["-y", "daisyui-blueprint@latest"],
         "env": {
-          "LICENSE": "",
-          "EMAIL": ""
+          "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
+          "EMAIL": "YOUR EMAIL ADDRESS",
+          "FIGMA": "YOUR FIGMA API KEY (optional)"
         }
       }
     }
   }`}</code
-              ></pre>
-          </div>
-          <div class="prose prose-sm ps-0!">
-            <p>
-              5. Now tell the LLM to <span class="font-bold">use daisyUI Blueprint MCP</span> to access
-              the tools on demand.
-            </p>
-            <p>
+                ></pre>
+            </div>
+            <p class="text-base-content/70 mt-4">
               Read <a
                 href="https://code.visualstudio.com/docs/copilot/customization/mcp-servers"
                 target="_blank"
-                rel="noopener noreferrer">VS Code docs</a
+                rel="noopener noreferrer"
+                class="link link-primary">VS Code docs</a
               > for more info about using MCP.
             </p>
           </div>
-        </div>
-      </div>
-
-      <label class="tab">
-        <input type="radio" name="editors" />
-        <img
-          class="me-2 size-4 max-sm:hidden"
-          src="https://img.daisyui.com/images/logos/claude.webp"
-          alt="Claude"
-        />
-        Claude Code
-      </label>
-      <div class="tab-content bg-base-100 border-base-300 p-6">
-        <div>
-          <div class="prose prose-sm !ps-0 text-sm">
-            <p>
-              1. Get a <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">
-                Blueprint License
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  class="ms-1 inline-block size-3 fill-current opacity-50"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z"
-                  ></path></svg
-                >
-              </a>
+        {:else if selectedEditor === "claudecode"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
             </p>
-            <p>
-              2. Run this command
-              <br />
-              <span class="inline-block w-[2ch]"></span><span class="font-bold">Figma API Key</span>
-              is optional - Only needed for Figma-to-code conversion
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              Run this command to add the Blueprint MCP server. Figma API Key is optional (needed
+              only for Figma-to-code conversion):
             </p>
-          </div>
-
-          <div class="mockup-code my-2 w-full leading-none">
-            <pre><code class="text-xs"
-                >claude mcp add daisyui-blueprint
-    --env LICENSE=<span class="text-info">YOUR_LICENSE_KEY</span>
-    --env EMAIL=<span class="text-info">YOUR_EMAIL</span>
-    --env FIGMA=<span class="text-info">YOUR_FIGMA_API_KEY</span>
-    -- npx -y daisyui-blueprint@latest</code
-              ></pre>
-          </div>
-
-          <div class="prose prose-sm ps-0!">
-            <p>
-              3. Now tell the Claude Code to <span class="font-bold">use daisyUI Blueprint MCP</span
-              > to access the tools on demand.
-            </p>
-            <p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`claude mcp add daisyui-blueprint \\
+  --env LICENSE=YOUR_LICENSE_KEY \\
+  --env EMAIL=YOUR_EMAIL \\
+  --env FIGMA=YOUR_FIGMA_API_KEY \\
+  -- npx -y daisyui-blueprint@latest`}</code
+                ></pre>
+            </div>
+            <p class="text-base-content/70 mt-4">
               Read <a
                 href="https://docs.claude.com/en/docs/claude-code/mcp"
                 target="_blank"
-                rel="noopener noreferrer">Claude Code docs</a
+                rel="noopener noreferrer"
+                class="link link-primary">Claude Code docs</a
               > for more info about using MCP.
             </p>
           </div>
-        </div>
-      </div>
-
-      <label class="tab">
-        <input type="radio" name="editors" />
-        <svg
-          class="me-2 size-4 max-sm:hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 100"
-          fill="currentColor"
-        >
-          <path
-            d="M86.257 23.405l-3.866 3.866-3.737 3.737-4.759 4.759a9.08 9.08 0 0 1-9.663-9.663l4.759-4.759 3.737-3.737 3.866-3.866a.645.645 0 0 0 0-.911c-.046-.046-.101-.074-.155-.103l.001-.001-.01-.004a.649.649 0 0 0-.102-.043 21.424 21.424 0 0 0-8.749-1.878c-11.939 0-21.618 9.679-21.618 21.618 0 2.28.358 4.475 1.012 6.538L24.428 61.504c-7.545.122-13.627 6.267-13.627 13.842 0 7.65 6.203 13.853 13.853 13.853 7.574 0 13.72-6.083 13.842-13.628l22.546-22.546a21.602 21.602 0 0 0 6.539 1.012c11.939 0 21.618-9.679 21.618-21.618 0-3.118-.686-6.066-1.877-8.742a.605.605 0 0 0-.05-.118l-.022-.052-.007.007c-.024-.037-.041-.078-.074-.111a.646.646 0 0 0-.912.002zM30.378 75.346a5.724 5.724 0 1 1-11.449 0 5.724 5.724 0 0 1 11.449 0z"
-          ></path>
-        </svg>
-        <div>Manual <span class="max-sm:hidden">Setup</span></div>
-      </label>
-      <div class="tab-content bg-base-100 border-base-300 p-6">
-        <div>
-          <div class="prose prose-sm !ps-0 text-sm">
-            <p>
-              1. Get a <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">
-                Blueprint License
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  class="ms-1 inline-block size-3 fill-current opacity-50"
-                  ><path
-                    fill-rule="evenodd"
-                    d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z"
-                  ></path></svg
-                >
-              </a>
+        {:else if selectedEditor === "claude"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
             </p>
-            <p>2. Find and open MCP settings in your LLM tool or code editor</p>
-            <p>3. Add this MCP server and put your license key + email address in it</p>
-          </div>
-
-          <div class="mockup-code my-2 w-full leading-none">
-            <pre><code class="text-xs"
-                >{`"daisyui-blueprint": {
-    "type": "stdio",
-    "command": "npx",
-    "args": ["-y", "daisyui-blueprint@latest"],
-    "env": {
-      "LICENSE": "",
-      "EMAIL": ""
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              1. Go to <span class="font-bold">Settings &gt; Developer</span> in Claude Desktop.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              2. Click <span class="font-bold">Edit Config</span> button.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              3. Add this to the config file (<code class="text-xs">claude_desktop_config.json</code
+              >):
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`{
+    "mcpServers": {
+      "daisyui-blueprint": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "daisyui-blueprint@latest"],
+        "env": {
+          "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
+          "EMAIL": "YOUR EMAIL ADDRESS",
+          "FIGMA": "YOUR FIGMA API KEY (optional)"
+        }
+      }
     }
   }`}</code
-              ></pre>
+                ></pre>
+            </div>
           </div>
-
-          <div class="prose prose-sm ps-0!">
-            <p>
-              4. Now tell the LLM to <span class="font-bold">use daisyUI Blueprint MCP</span> to access
-              the tools on demand.
+        {:else if selectedEditor === "cline"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
             </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              1. Click the MCP Servers icon at the top navigation bar of the Cline pane.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              2. Select the <span class="font-bold">Configure</span> tab.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              3. Click the <span class="font-bold">Configure MCP Servers</span> button at the bottom
+              of the pane.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              4. Add this configuration to <code class="text-xs">cline_mcp_settings.json</code>:
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`{
+    "servers": {
+      "daisyui-blueprint": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "daisyui-blueprint@latest"],
+        "env": {
+          "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
+          "EMAIL": "YOUR EMAIL ADDRESS",
+          "FIGMA": "YOUR FIGMA API KEY (optional)"
+        },
+        "disabled": false,
+        "autoApprove": []
+      }
+    }
+  }`}</code
+                ></pre>
+            </div>
           </div>
+        {:else if selectedEditor === "windsurf"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
+            </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              1. Press <kbd class="kbd kbd-xs">⌘ CMD</kbd> + <kbd class="kbd kbd-xs">⇧ Shift</kbd> +
+              <kbd class="kbd kbd-xs">P</kbd>
+              (or <kbd class="kbd kbd-xs">Ctrl</kbd> + <kbd class="kbd kbd-xs">Shift</kbd> +
+              <kbd class="kbd kbd-xs">P</kbd>).
+            </p>
+            <p class="text-base-content/70 mb-2">
+              2. Search for <span class="badge badge-sm">Windsurf: MCP Configuration Panel</span>.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              3. Click <span class="font-bold">Add custom server +</span>.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              4. Add this configuration to <code class="text-xs">mcp_config.json</code>:
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`{
+    "mcpServers": {
+      "daisyui-blueprint": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "daisyui-blueprint@latest"],
+        "env": {
+          "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
+          "EMAIL": "YOUR EMAIL ADDRESS",
+          "FIGMA": "YOUR FIGMA API KEY (optional)"
+        }
+      }
+    }
+  }`}</code
+                ></pre>
+            </div>
+          </div>
+        {:else if selectedEditor === "zed"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
+            </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              1. In Zed press <kbd class="kbd kbd-xs">⌘ CMD</kbd> +
+              <kbd class="kbd kbd-xs">⇧ Shift</kbd>
+              + <kbd class="kbd kbd-xs">P</kbd> (or <kbd class="kbd kbd-xs">Ctrl</kbd> +
+              <kbd class="kbd kbd-xs">Shift</kbd>
+              + <kbd class="kbd kbd-xs">P</kbd>).
+            </p>
+            <p class="text-base-content/70 mb-2">
+              2. Choose <span class="badge badge-sm">agent: add context server</span>.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              3. Add this configuration and set your licensing environment variables:
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`{
+    "daisyui-blueprint": {
+      "command": "npx",
+      "args": ["-y", "daisyui-blueprint@latest"],
+      "env": {
+        "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
+        "EMAIL": "YOUR EMAIL ADDRESS",
+        "FIGMA": "YOUR FIGMA API KEY (optional)"
+      }
+    }
+  }`}</code
+                ></pre>
+            </div>
+          </div>
+        {:else if selectedEditor === "codex"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
+            </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">1. Install Codex CLI (if you haven't already):</p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]">npm install -g @codex/cli</code></pre>
+            </div>
+            <p class="text-base-content/70 mb-2">
+              2. Run this command to add the Blueprint MCP server:
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`codex mcp add daisyui-blueprint \\
+  --env LICENSE=YOUR_LICENSE_KEY \\
+  --env EMAIL=YOUR_EMAIL \\
+  --env FIGMA=YOUR_FIGMA_API_KEY \\
+  -- npx -y daisyui-blueprint@latest`}</code
+                ></pre>
+            </div>
+          </div>
+        {:else if selectedEditor === "openclaw"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
+            </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              Run this command to add the Blueprint MCP server:
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`openclaw mcp set daisyui-blueprint \\
+  '{"command":"npx","args":["-y","daisyui-blueprint@latest"],"env":{"LICENSE":"YOUR_LICENSE_KEY","EMAIL":"YOUR_EMAIL","FIGMA":"YOUR_FIGMA_API_KEY"}}'`}</code
+                ></pre>
+            </div>
+          </div>
+        {:else if selectedEditor === "opencode"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
+            </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              1. Install OpenCode CLI (if you haven't already):
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]">npm install -g opencode-ai</code></pre>
+            </div>
+            <p class="text-base-content/70 mb-2">
+              2. Create or edit your <code class="text-xs">opencode.json</code> in your project root
+              and add the Blueprint MCP configuration:
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`{
+    "$schema": "https://opencode.ai/config.json",
+    "mcp": {
+      "daisyui-blueprint": {
+        "type": "local",
+        "command": ["npx", "-y", "daisyui-blueprint@latest"],
+        "enabled": true,
+        "environment": {
+          "LICENSE": "YOUR_LICENSE_KEY",
+          "EMAIL": "YOUR_EMAIL",
+          "FIGMA": "YOUR_FIGMA_API_KEY (optional)"
+        }
+      }
+    }
+  }`}</code
+                ></pre>
+            </div>
+          </div>
+        {:else if selectedEditor === "antigravity"}
+          <div>
+            <h3 class="mb-1 text-lg font-semibold">Step 1: License Key</h3>
+            <p class="mb-1 text-xs">
+              Get a
+              <a
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link font-semibold"
+              >
+                Blueprint license key
+              </a>.
+            </p>
+            <h3 class="mb-1 text-lg font-semibold">Step 2: Configure MCP settings</h3>
+            <p class="text-base-content/70 mb-2">
+              1. Open the Antigravity MCP config file at <code class="text-xs"
+                >~/.gemini/config/mcp_config.json</code
+              >.
+            </p>
+            <p class="text-base-content/70 mb-2">
+              2. Add this configuration block and set your license details:
+            </p>
+            <div class="mockup-code w-full leading-none">
+              <pre><code class="text-[10px]"
+                  >{`{
+    "mcpServers": {
+      "daisyui-blueprint": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "daisyui-blueprint@latest"],
+        "env": {
+          "LICENSE": "YOUR BLUEPRINT LICENSE KEY",
+          "EMAIL": "YOUR EMAIL ADDRESS",
+          "FIGMA": "YOUR FIGMA API KEY (optional)"
+        }
+      }
+    }
+  }`}</code
+                ></pre>
+            </div>
+          </div>
+        {/if}
+
+        <p class="border-base-content/10 text-base-content/60 mt-4 border-t pt-4">
+          After configuring the server, tell the AI model to <span class="font-bold">
+            use Blueprint MCP
+          </span>
+        </p>
+        <div class="m-2 flex justify-end">
+          <button
+            onclick={() => {
+              dialogs.figma.showModal()
+              dialogs.install.close()
+            }}
+            class="btn btn-sm rounded-full"
+          >
+            <img
+              class="me-2 size-3 lg:size-4"
+              src="https://img.daisyui.com/images/logos/figma.svg"
+              alt="figma"
+            />
+            Next: Setup the Figma API
+          </button>
         </div>
       </div>
-    </div>
-    <div class="flex justify-end">
-      <button
-        onclick={() => {
-          dialogs.figma.showModal()
-          dialogs.install.close()
-        }}
-        class="link link-hover mx-4 mb-2 text-xs decoration-dashed underline-offset-5 opacity-80"
-        >Next: Setup Figma API key for Figma-to-code conversion</button
-      >
-    </div>
+    {/if}
   </div>
+
   <form method="dialog" class="modal-backdrop">
     <button>close</button>
   </form>

@@ -1,6 +1,6 @@
 const skillEditors = [
   {
-    name: "Copilot",
+    name: "VSCode Copilot",
     slug: "copilot",
     icon: "copilot",
     agent: "github-copilot",
