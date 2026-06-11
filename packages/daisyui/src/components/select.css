@@ -73,6 +73,9 @@
       outline: 2px solid var(--input-color);
       outline-offset: 2px;
       isolation: isolate;
+      background-image:
+        linear-gradient(135deg, #0000 50%, currentColor 50%),
+        linear-gradient(45deg, currentColor 50%, #0000 50%);
     }
 
     &:has(> select[disabled]),
@@ -93,7 +96,10 @@
     &,
     & select {
       @supports (appearance: base-select) {
-        appearance: base-select;
+        &,
+        &::picker(select) {
+          appearance: base-select;
+        }
       }
       &::picker(select) {
         color: inherit;
@@ -108,13 +114,11 @@
           0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
           0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));
       }
-      @supports (appearance: base-select) {
-        &::picker(select) {
-          appearance: base-select;
-        }
-      }
       &::picker-icon {
         @apply hidden;
+      }
+      selectedcontent {
+        @apply overflow-hidden whitespace-nowrap text-ellipsis;
       }
       /* option::checkmark {
         @apply hidden;
