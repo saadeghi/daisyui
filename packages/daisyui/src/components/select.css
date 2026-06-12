@@ -118,7 +118,7 @@
         @apply hidden;
       }
       selectedcontent {
-        @apply overflow-hidden whitespace-nowrap text-ellipsis;
+        @apply w-full overflow-hidden text-ellipsis whitespace-nowrap;
       }
       /* option::checkmark {
         @apply hidden;
