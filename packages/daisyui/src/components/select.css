@@ -1,6 +1,6 @@
 .select {
   @layer daisyui.l1.l2.l3 {
-    @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
+    @apply relative inline-flex shrink appearance-none items-center gap-1.5 bg-base-100 ps-3 pe-7 align-middle;
 
     --size: calc(var(--size-field, 0.25rem) * var(--sl-size-mul));
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
@@ -81,7 +81,7 @@
     &:has(> select[disabled]),
     &:is(:disabled, [disabled]),
     fieldset:disabled & {
-      @apply border-base-200 bg-base-200 text-base-content/40 cursor-not-allowed;
+      @apply cursor-not-allowed border-base-200 bg-base-200 text-base-content/40;
 
       &::placeholder,
       ::placeholder {
@@ -107,7 +107,7 @@
         margin-inline: 0.5rem;
         translate: -0.5rem 0;
         border: var(--border) solid var(--color-base-200);
-        @apply rounded-box my-2 p-2;
+        @apply my-2 rounded-box p-2;
         background-color: inherit;
         box-shadow: 0 2px calc(var(--depth) * 3px) -2px oklch(0% 0 0/0.2);
         box-shadow:
@@ -141,7 +141,7 @@
         &:not(:disabled) {
           &:hover,
           &:focus-visible {
-            @apply bg-base-content/10 cursor-pointer outline-hidden;
+            @apply cursor-pointer bg-base-content/10 outline-hidden;
           }
           &:active {
             @apply bg-neutral text-neutral-content;
@@ -169,7 +169,7 @@
     &:focus,
     &:focus-within,
     &:open {
-      @apply text-base-content bg-base-100;
+      @apply bg-base-100 text-base-content;
       border-color: #0000;
       box-shadow: none;
     }
