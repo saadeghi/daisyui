@@ -103,6 +103,10 @@ export const pages = [
             href: "/components/modal/",
           },
           {
+            name: "Sheet",
+            href: "/components/sheet/",
+          },
+          {
             name: "Swap",
             href: "/components/swap/",
           },
