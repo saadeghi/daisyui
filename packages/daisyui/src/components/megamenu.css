@@ -1,6 +1,6 @@
 .megamenu {
   @layer daisyui.l1.l2.l3 {
-    @apply relative flex items-center;
+    @apply relative flex items-center overflow-x-hidden;
     width: unset;
     background-color: transparent;
     border-radius: calc(var(--radius-field) + var(--border));
