@@ -800,7 +800,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
     <div class="p-4">Content for the third item</div>
   </div>
 </div>
-<div class="$$megamenu $$megamenu-sm w-full p-2 border border-base-300">
+<div class="$$megamenu $$megamenu-sm p-2 border border-base-300">
   <span class="$$megamenu-active"></span>
 
   <button popovertarget="g1">One</button>
@@ -818,7 +818,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
     <div class="p-4">Content for the third item</div>
   </div>
 </div>
-<div class="$$megamenu $$megamenu-md w-full p-2 border border-base-300">
+<div class="$$megamenu $$megamenu-md p-2 border border-base-300">
   <span class="megamenu-active"></span>
 
   <button popovertarget="h1">One</button>
@@ -836,7 +836,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
     <div class="p-4">Content for the third item</div>
   </div>
 </div>
-<div class="$$megamenu $$megamenu-lg w-full p-2 border border-base-300">
+<div class="$$megamenu $$megamenu-lg p-2 border border-base-300">
   <span class="$$megamenu-active"></span>
 
   <button popovertarget="i1">One</button>
@@ -854,7 +854,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
     <div class="p-4">Content for the third item</div>
   </div>
 </div>
-<div class="$$megamenu $$megamenu-xl w-full p-2 border border-base-300">
+<div class="$$megamenu $$megamenu-xl p-2 border border-base-300">
   <span class="$$megamenu-active"></span>
 
   <button popovertarget="j1">One</button>

@@ -1,7 +1,8 @@
 .megamenu {
   @layer daisyui.l1.l2.l3 {
-    background-color: transparent;
     @apply relative flex items-center;
+    width: unset;
+    background-color: transparent;
     border-radius: calc(var(--radius-field) + var(--border));
     --mm-anchor: --mm1;
     --size: calc(var(--size-field, 0.25rem) * 10);
