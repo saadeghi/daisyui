@@ -29,7 +29,7 @@
     border-color: var(--input-color);
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
     --size: calc(var(--size-field, 0.25rem) * 10);
-    [dir="rtl"] & {
+    &:dir(rtl) {
       background-position:
         calc(0% + 12px) calc(1px + 50%),
         calc(0% + 16px) calc(1px + 50%);
@@ -128,7 +128,7 @@
         }
       }
     }
-    [dir="rtl"] & {
+    &:dir(rtl) {
       &::picker(select),
       select::picker(select) {
         translate: 0.5rem 0;

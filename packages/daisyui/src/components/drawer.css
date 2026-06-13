@@ -43,7 +43,7 @@
         width 0.2s ease-out;
       translate: -100%;
 
-      [dir="rtl"] & {
+      &:dir(rtl) {
         translate: 100%;
       }
     }
@@ -105,7 +105,7 @@
       ~ .drawer-side > :not(.drawer-overlay) {
         translate: 100%;
 
-        [dir="rtl"] & {
+        &:dir(rtl) {
           translate: -100%;
         }
       }
@@ -162,7 +162,7 @@
     > .drawer-toggle ~ .drawer-side > :not(.drawer-overlay) {
       translate: 0%;
 
-      [dir="rtl"] & {
+      &:dir(rtl) {
         translate: 0%;
       }
     }

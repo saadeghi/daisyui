@@ -74,7 +74,7 @@
     display: inline-block;
     position: relative;
     overflow: clip;
-    &[dir="rtl"] {
+    &:dir(rtl) {
       .rdp-nav {
         .rdp-chevron {
           transform-origin: 50%;

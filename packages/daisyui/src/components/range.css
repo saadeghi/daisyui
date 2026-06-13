@@ -18,7 +18,7 @@
     border: none;
     height: var(--range-thumb-size);
 
-    [dir="rtl"] & {
+    &:dir(rtl) {
       --range-dir: -1;
     }
 

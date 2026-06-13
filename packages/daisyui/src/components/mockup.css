@@ -44,7 +44,7 @@
         2.8em 0,
         4.2em 0;
     }
-    [dir="rtl"] &:before {
+    &:dir(rtl):before {
       @apply self-end;
     }
 
