@@ -8,6 +8,15 @@
     --range-fill: 1;
     --range-p: 0.25rem;
     --range-bg: color-mix(in oklab, currentColor 10%, #0000);
+    /* Horizontal fill direction: 1 for ltr, -1 for rtl (set in the [dir=rtl] block below). */
+    --range-dir: 1;
+    /* Fill is painted by the thumb's last box-shadow layer, clipped by overflow:hidden.
+       These variables let .range-vertical swap the fill from the x axis to the y axis. */
+    --range-fill-x: calc(
+      (var(--range-dir, 1) * -100cqw) - (var(--range-dir, 1) * var(--range-thumb-size) / 2)
+    );
+    --range-fill-y: 0;
+    --range-fill-spread: calc(100cqw * var(--range-fill));
     @apply cursor-pointer overflow-hidden bg-transparent align-middle;
     width: clamp(3rem, 20rem, 100%);
     /* --radius-selector-max is a separate variable because ~ calc(min(calc(--var))) ~ gives build error in PostCSS+Nuxt */
@@ -52,7 +61,7 @@
       border: var(--range-p) solid;
       appearance: none;
       -webkit-appearance: none;
-      top: 50%;
+      inset-block-start: 50%;
       color: var(--range-progress);
       transform: translateY(-50%);
       box-shadow:
@@ -60,8 +69,7 @@
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000),
         0 0 0 2rem var(--range-thumb) inset,
-        calc((var(--range-dir, 1) * -100cqw) - (var(--range-dir, 1) * var(--range-thumb-size) / 2))
-          0 0 calc(100cqw * var(--range-fill));
+        var(--range-fill-x) var(--range-fill-y) 0 var(--range-fill-spread);
     }
 
     &::-moz-range-track {
@@ -83,15 +91,13 @@
       height: var(--range-thumb-size);
       width: var(--range-thumb-size);
       border: var(--range-p) solid;
-      top: 50%;
       color: var(--range-progress);
       box-shadow:
         0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000),
         0 0 0 2rem var(--range-thumb) inset,
-        calc((var(--range-dir, 1) * -100cqw) - (var(--range-dir, 1) * var(--range-thumb-size) / 2))
-          0 0 calc(100cqw * var(--range-fill));
+        var(--range-fill-x) var(--range-fill-y) 0 var(--range-fill-spread);
     }
     &:disabled {
       @apply cursor-not-allowed opacity-30;
@@ -182,5 +188,40 @@
 .range-xl {
   @layer daisyui.l1.l2 {
     --range-thumb-size: calc(var(--size-selector, 0.25rem) * 8);
+  }
+}
+
+.range-vertical {
+  @layer daisyui.l1.l2 {
+    /* Native vertical form control. writing-mode + direction:rtl put min at the
+       bottom (the usual vertical-slider convention). */
+    writing-mode: vertical-lr;
+    direction: rtl;
+    /* Swap the base width/height so the control occupies a vertical box. */
+    width: var(--range-thumb-size);
+    height: clamp(3rem, 20rem, 100%);
+    /* Repoint the fill from the x axis to the y axis; it grows from the bottom. */
+    --range-fill-x: 0;
+    --range-fill-y: calc(100cqh + var(--range-thumb-size) / 2);
+    --range-fill-spread: calc(100cqh * var(--range-fill));
+    /* Switch the WebKit track dimensions for vertical so the unfilled groove is a
+       thin strip spanning the full height (otherwise it fills the whole width). */
+    &::-webkit-slider-runnable-track {
+      @apply h-full;
+      width: calc(var(--range-thumb-size) * 0.5);
+    }
+    /* The base thumb centers on its track with inset-block-start:50% +
+       translateY(-50%). inset-block-start follows the writing-mode, so it already
+       targets the cross-axis here; only the transform axis needs swapping. */
+    &::-webkit-slider-thumb {
+      transform: translateX(-50%);
+    }
+    /* Firefox sizes -moz-range-track physically, so the horizontal width/height
+       defaults collapse it in vertical mode. Swap them so the unfilled groove
+       spans the full height. */
+    &::-moz-range-track {
+      @apply h-full;
+      width: calc(var(--range-thumb-size) * 0.5);
+    }
   }
 }
