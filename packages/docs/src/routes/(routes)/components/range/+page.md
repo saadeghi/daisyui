@@ -36,6 +36,11 @@ classnames:
     desc: Large size
   - class: range-xl
     desc: Extra large size
+  direction:
+  - class: range-vertical
+    desc: Vertical slider
+  - class: range-invert
+    desc: Reverses the slider direction (horizontal or vertical, RTL-aware)
 ---
 
 <script>
@@ -179,4 +184,33 @@ classnames:
 ```html
 <input type="range" min="0" max="100" value="40" 
   class="$$range text-blue-300 [--range-bg:orange] [--range-thumb:blue] [--range-fill:0]" />
+```
+
+
+### ~Reversed direction
+<input type="range" min="0" max="100" value="30" class="range range-invert" />
+
+```html
+<input type="range" min="0" max="100" value="30" class="$$range $$range-invert" />
+```
+
+
+### ~Vertical
+<div class="flex gap-6 h-48">
+  <input type="range" min="0" max="100" value="40" aria-orientation="vertical" class="range range-vertical" />
+  <input type="range" min="0" max="100" value="60" aria-orientation="vertical" class="range range-vertical range-primary" />
+</div>
+
+```html
+<input type="range" min="0" max="100" value="40" aria-orientation="vertical" class="$$range $$range-vertical" />
+```
+
+
+### ~Vertical with reversed direction
+<div class="h-48">
+  <input type="range" min="0" max="100" value="40" aria-orientation="vertical" class="range range-vertical range-invert" />
+</div>
+
+```html
+<input type="range" min="0" max="100" value="40" aria-orientation="vertical" class="$$range $$range-vertical $$range-invert" />
 ```

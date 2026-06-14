@@ -8,6 +8,18 @@
     --range-fill: 1;
     --range-p: 0.25rem;
     --range-bg: color-mix(in oklab, currentColor 10%, #0000);
+    /* Horizontal fill direction. --range-rtl is the page direction (1 ltr, -1 rtl)
+       and --range-invert-sign is flipped by range-invert, so the fill mirrors
+       correctly for every LTR/RTL + invert combination. */
+    --range-rtl: 1;
+    --range-dir: calc(var(--range-rtl) * var(--range-invert-sign, 1));
+    /* Fill is painted by the thumb's last box-shadow layer, clipped by overflow:hidden.
+       These variables let .range-vertical swap the fill from the x axis to the y axis. */
+    --range-fill-x: calc(
+      (var(--range-dir) * -100cqw) - (var(--range-dir) * var(--range-thumb-size) / 2)
+    );
+    --range-fill-y: 0;
+    --range-fill-spread: calc(100cqw * var(--range-fill));
     @apply cursor-pointer overflow-hidden bg-transparent align-middle;
     width: clamp(3rem, 20rem, 100%);
     /* --radius-selector-max is a separate variable because ~ calc(min(calc(--var))) ~ gives build error in PostCSS+Nuxt */
@@ -19,7 +31,7 @@
     height: var(--range-thumb-size);
 
     [dir="rtl"] & {
-      --range-dir: -1;
+      --range-rtl: -1;
     }
 
     &:focus {
@@ -60,8 +72,7 @@
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000),
         0 0 0 2rem var(--range-thumb) inset,
-        calc((var(--range-dir, 1) * -100cqw) - (var(--range-dir, 1) * var(--range-thumb-size) / 2))
-          0 0 calc(100cqw * var(--range-fill));
+        var(--range-fill-x) var(--range-fill-y) 0 var(--range-fill-spread);
     }
 
     &::-moz-range-track {
@@ -90,8 +101,7 @@
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000),
         0 0 0 2rem var(--range-thumb) inset,
-        calc((var(--range-dir, 1) * -100cqw) - (var(--range-dir, 1) * var(--range-thumb-size) / 2))
-          0 0 calc(100cqw * var(--range-fill));
+        var(--range-fill-x) var(--range-fill-y) 0 var(--range-fill-spread);
     }
     &:disabled {
       @apply cursor-not-allowed opacity-30;
@@ -182,5 +192,70 @@
 .range-xl {
   @layer daisyui.l1.l2 {
     --range-thumb-size: calc(var(--size-selector, 0.25rem) * 8);
+  }
+}
+
+.range-vertical {
+  @layer daisyui.l1.l2 {
+    /* Native vertical form control. writing-mode puts min at the top; the
+       direction below flips the slider so min sits at the bottom (the usual
+       vertical-slider convention). range-invert overrides both signals through
+       custom properties rather than a compound selector, so it survives
+       responsive variant generation (which only prefixes a selector's first
+       class) and stays inert on horizontal ranges. */
+    writing-mode: vertical-lr;
+    direction: var(--range-invert-dir, rtl);
+    /* Swap the base width/height so the control occupies a vertical box. */
+    width: var(--range-thumb-size);
+    height: clamp(3rem, 20rem, 100%);
+    /* Fill grows downward toward the min end (the bottom); range-invert flips
+       the sign so it grows upward instead. */
+    --range-vdir: var(--range-invert-sign, 1);
+    /* Repoint the fill from the x axis to the y axis. */
+    --range-fill-x: 0;
+    --range-fill-y: calc(
+      (var(--range-vdir) * 100cqh) + (var(--range-vdir) * var(--range-thumb-size) / 2)
+    );
+    --range-fill-spread: calc(100cqh * var(--range-fill));
+    /* The horizontal thumb is centered on its track with top:50% +
+       translateY(-50%) (a cross-axis nudge). In vertical writing-mode those
+       become a *travel-axis* shift, pushing the thumb — and the box-shadow fill
+       that rides with it — off by ~half the track on WebKit/Chromium (value 50%
+       renders as 0, 100% as 50%). Firefox ignores top/transform on the range
+       thumb, so it stays correct. Reset them here; the thumb spans the full
+       cross-axis width and needs no centering in vertical mode. */
+    &::-webkit-slider-thumb {
+      top: auto;
+      transform: none;
+    }
+    /* Firefox sizes -moz-range-track physically, so the horizontal
+       width:100%/height defaults collapse it in vertical mode. Swap them so the
+       unfilled groove spans the full height. WebKit/Chromium use the separate
+       -webkit-slider-runnable-track and already render the vertical track. */
+    &::-moz-range-track {
+      width: calc(var(--range-thumb-size) * 0.5);
+      height: 100%;
+    }
+  }
+}
+
+/* Standalone (not .range-vertical.range-invert) so `md:range-invert` and other
+   responsive variants are generated correctly. It only sets custom properties
+   that .range-vertical reads, so it is inert on a horizontal range. */
+.range-invert {
+  @layer daisyui.l1.l2 {
+    /* Vertical: read by .range-vertical to move min to the top. */
+    --range-invert-dir: ltr;
+    /* Both axes: flips the fill direction (horizontal --range-dir, vertical --range-vdir). */
+    --range-invert-sign: -1;
+    /* Horizontal: also reverse the native slider, relative to the page direction,
+       so it matches the (RTL-aware) fill. Excluded for vertical, which controls
+       its own direction via --range-invert-dir above. */
+    &:not(.range-vertical) {
+      direction: rtl;
+    }
+    [dir="rtl"] &:not(.range-vertical) {
+      direction: ltr;
+    }
   }
 }
