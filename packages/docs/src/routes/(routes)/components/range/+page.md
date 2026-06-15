@@ -36,6 +36,9 @@ classnames:
     desc: Large size
   - class: range-xl
     desc: Extra large size
+  direction:
+  - class: range-vertical
+    desc: Vertical slider
 ---
 
 <script>
@@ -179,4 +182,12 @@ classnames:
 ```html
 <input type="range" min="0" max="100" value="40" 
   class="$$range text-blue-300 [--range-bg:orange] [--range-thumb:blue] [--range-fill:0]" />
+```
+
+
+### ~Vertical
+<input type="range" min="0" max="100" value="40" class="range range-vertical" />
+
+```html
+<input type="range" min="0" max="100" value="40" class="$$range $$range-vertical" />
 ```

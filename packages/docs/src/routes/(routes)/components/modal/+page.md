@@ -44,13 +44,14 @@ classnames:
 </script>
 
 
-## There are 3 methods to use modals
-1. [Using HTML `<dialog>` element](#method-1-html-dialog-element-recommended)  
-  It needs JS to open but it has better accessibility and we can close it using `Esc` key  
-2. [Using checkbox](#method-2-checkbox-legacy)  
-  A hidden `<input type="checkbox">` to control the state of modal and `<label>` to check/uncheck the checkbox and open/close the modal  
-3. [Using `<a>` anchor links](#method-3-using-anchor-links-legacy)  
-  A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
+## There are 4 methods to use modals
+
+| | Method | Opens/closes by | `Esc` key can close it | Locks background interactions |
+|---|---|---|---|---|
+| 1 | [Dialog&nbsp;(Recommended)](#method-1-html-dialog-element-recommended) | JavaScript | ✅ Yes | ✅ Yes |
+| 2 | [Popover](#method-2-html-popover) | HTML attributes | ✅ Yes | ❌ No |
+| 3 | [Checkbox&nbsp;(Legacy)](#method-3-checkbox-legacy) | Hidden checkbox | ❌ No | ❌ No |
+| 4 | [Anchor Link&nbsp;(Legacy)](#method-4-using-anchor-links-legacy) | URL parameters | ❌ No | ❌ No |
 
 > :INFO:
 >
@@ -299,8 +300,68 @@ The ID must be unique for each modal.
 </dialog>
 ```
 
+## Method 2. HTML popover
+Popover is similar to dialog but it still allows focusing on the background elements. It is accessible and we can close the modal using `Esc` key.  
 
-## Method 2. checkbox `legacy`
+### ~Popover modal
+
+<button class="btn" popovertarget="my-modal-1">Open</button>
+
+<div class="modal" id="my-modal-1" popover>
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <button class="btn" popovertarget="my-modal-1" popovertargetaction="hide">close</button>
+    </div>
+  </div>
+</div>
+
+```html
+<!-- The button's popovertarget attribute points to the modal's ID. ID must be unique for each modal -->
+<button class="$$btn" popovertarget="my-modal-1">Open</button>
+
+<div class="$$modal" id="my-modal-1" popover>
+  <div class="$$modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="$$modal-action">
+      <button popovertarget="my-modal-1" popovertargetaction="hide">close</button>
+    </div>
+  </div>
+</div>
+```
+
+### ~Popover modal closes when clicked outside
+
+<button class="btn" popovertarget="my-modal-2">Open</button>
+
+<div class="modal" id="my-modal-2" popover>
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+  </div>
+  <div class="modal-backdrop">
+    <button popovertarget="my-modal-2" popovertargetaction="hide">close</button>
+  </div>
+</div>
+
+```html
+<!-- The button's popovertarget attribute points to the modal's ID. ID must be unique for each modal -->
+<button class="$$btn" popovertarget="my-modal-2">Open</button>
+
+<div class="$$modal" id="my-modal-2" popover>
+  <div class="$$modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+  </div>
+  <div class="$$modal-backdrop">
+    <button popovertarget="my-modal-2" popovertargetaction="hide">close</button>
+  </div>
+</div>
+```
+
+## Method 3. checkbox `legacy`
 A hidden checkbox can control the state of modal and labels can toggle the checkbox so we can open/close the modal.
 
 
@@ -346,7 +407,7 @@ A hidden checkbox can control the state of modal and labels can toggle the check
 ```
 
 
-### Method 3. using anchor links `legacy`
+### Method 4. using anchor links `legacy`
 A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 When modal is closed, the page will scroll to the top because of the anchor link.
 Anchor links might not work well on some SPA frameworks. If there are problems, use the other methods
