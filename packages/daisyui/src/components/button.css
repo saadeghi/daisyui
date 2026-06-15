@@ -44,7 +44,7 @@
     background-color: var(--btn-bg);
     color: var(--btn-fg);
     border-color: var(--btn-border);
-    border-style: solid;
+    border-style: var(--btn-border-style, solid);
     outline-color: var(--btn-color, var(--color-base-content));
     --tw-prose-links: var(--btn-fg);
 
@@ -77,6 +77,7 @@
         --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
         color: var(--btn-fg);
         --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
+        --btn-border-style: solid;
         --btn-inset: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
         --btn-shadow:
           0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
@@ -89,7 +90,6 @@
       --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
       color: var(--btn-fg, var(--color-base-content));
       --btn-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-      --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
       --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
     }
 
@@ -131,7 +131,7 @@
 
 .btn-dash {
   @layer daisyui.l1.l2.l3 {
-    border-style: dashed;
+    --btn-border-style: dashed;
   }
 }
 
