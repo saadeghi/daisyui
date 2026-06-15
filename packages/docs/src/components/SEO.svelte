@@ -5,7 +5,7 @@
 
   let siteData = {
     title: "daisyUI Tailwind CSS Component UI Library",
-    desc: "Free Tailwind Component examples",
+    desc: "Tailwind CSS Component",
     card: "https://img.daisyui.com/images/default.webp",
   }
 

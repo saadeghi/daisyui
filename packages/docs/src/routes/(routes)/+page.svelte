@@ -159,8 +159,8 @@
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}
       >
         <div>
-          <div class="flex animate-[reveal-top-slow_0.5s] flex-col items-center gap-6 xl:flex-row">
-            <div
+          <div class="flex animate-[reveal-top-slow_0.5s] flex-col items-center gap-2 xl:flex-row">
+            <!-- <div
               data-tip={isClipboardButtonPressed ? "copied" : "copy"}
               class="tooltip tooltip-accent"
             >
@@ -171,8 +171,79 @@
                   track("Homepage > Hero > Copy to clipboard")
                 }}
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="inline-block size-3 opacity-30"
+                >
+                  <g
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                  </g>
+                </svg>
                 <pre><code>npm i -D daisyui@latest</code></pre>
               </button>
+            </div> -->
+            <div class="group">
+              <div
+                data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+                class="tooltip tooltip-accent"
+              >
+                <button
+                  class="btn btn-sm cursor-copy rounded-full font-mono font-light"
+                  onclick={() => {
+                    copyText("npx -y skills add saadeghi/daisyui")
+                    track("Homepage > Hero > Copy to clipboard")
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="inline-block size-3 opacity-30"
+                  >
+                    <g
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </g>
+                  </svg>
+                  <pre><code>npx skills add saadeghi/daisyui</code></pre>
+                </button>
+              </div>
+              <a
+                href="/docs/skill"
+                class="btn btn-xs btn-circle relative -start-0.5 opacity-0 transition-all duration-600 group-hover:start-0 group-hover:opacity-100"
+                aria-label="Learn about daisyUI Skill.md file"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  class="inline-block size-4 opacity-30"
+                >
+                  <g fill="currentColor">
+                    <circle cx="10" cy="15.5" r="1.5" fill="currentColor" stroke-width="0"></circle>
+                    <path
+                      d="m7.358,6.107c.368-1.506,1.501-2.107,3.079-2.107,1.362,0,2.567.817,2.567,2.553,0,2.444-3.01,2.025-3.01,4.947"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
             </div>
 
             <!-- <a
@@ -254,13 +325,47 @@
               </a> -->
               <a
                 data-sveltekit-preload-data
+                href="/blueprint/"
+                class="btn md:btn-lg grow rounded-full"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-5 opacity-50"
+                  viewBox="0 0 195 195"
+                  fill="none"
+                  ><path
+                    d="M25 97.8528L92.8822 29.9706C102.255 20.598 117.451 20.598 126.823 29.9706V29.9706C136.196 39.3431 136.196 54.5391 126.823 63.9117L75.5581 115.177"
+                    stroke="currentColor"
+                    stroke-width="15"
+                  >
+                  </path>
+                  <path
+                    d="M76.2652 114.47L126.823 63.9117C136.196 54.5391 151.392 54.5391 160.765 63.9117L161.118 64.2652C170.491 73.6378 170.491 88.8338 161.118 98.2063L99.7248 159.6C96.6006 162.724 96.6006 167.789 99.7248 170.913L112.331 183.52"
+                    stroke="currentColor"
+                    stroke-width="15"
+                  >
+                  </path>
+                  <path
+                    d="M109.853 46.9411L59.6482 97.1457C50.2756 106.518 50.2756 121.714 59.6482 131.087V131.087C69.0208 140.459 84.2167 140.459 93.5893 131.087L143.794 80.8822"
+                    stroke="currentColor"
+                    stroke-width="15"
+                  >
+                  </path>
+                </svg>
+                <span class="hidden sm:inline">Official MCP Server</span>
+                <span class="inline sm:hidden">MCP Server</span>
+              </a>
+              <!-- <a
+                data-sveltekit-preload-data
                 href="/components/"
                 class="btn md:btn-lg grow rounded-full"
                 onclick={() => track("Homepage > Hero > Components")}
               >
                 <span class="hidden sm:inline">{$t("cta-1")}</span>
                 <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
-              </a>
+              </a> -->
               <!-- <a
                 href="/discord/"
                 target="_blank"

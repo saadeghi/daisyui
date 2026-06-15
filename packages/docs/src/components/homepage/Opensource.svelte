@@ -104,7 +104,7 @@
                   2)}px auto; background-position: {getBackgroundPosition(
                 index,
                 contributorSpriteMeta,
-              )};"
+              )}; will-change: filter, opacity, transform, transition, scale;"
             ></div>
           </div>
         {/each}
@@ -137,7 +137,7 @@
                     2)}px auto; background-position: {getBackgroundPosition(
                   index,
                   sponsorSpriteMeta,
-                )};"
+                )}; will-change: filter, opacity, transform, transition, scale;"
               ></div>
             </div>
           {:else}

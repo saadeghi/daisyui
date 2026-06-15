@@ -21,7 +21,6 @@
   }
 
   export const clipboard = (text) => {
-    console.log("clicked")
     navigator.clipboard.writeText(text)
     isClipboardButtonPressed = true
     setTimeout(() => {

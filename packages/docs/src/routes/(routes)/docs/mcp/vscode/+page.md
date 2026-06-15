@@ -1,3 +1,8 @@
+---
+layout: docs
+seo: false
+---
+
 <script>
   import SEO from "$components/SEO.svelte"
   import Translate from "$components/Translate.svelte"
@@ -17,7 +22,7 @@
 </div>
 
 
-<h1><img src="https://img.daisyui.com/images/logos/vscode.webp" alt="VSCode Copilot" width="40" height="40" class="inline-block me-2 -mt-2 not-prose">daisyUI MCP server for VSCode Copilot</h1>
+<h1><img src="https://img.daisyui.com/images/logos/copilot.svg" alt="VSCode Copilot" width="40" height="40" class="inline-block me-2 -mt-2 not-prose">daisyUI MCP server for VSCode Copilot</h1>
 <p>Setup VSCode Copilot to correctly generate daisyUI code based on your prompt.</p>
 
 MCP is a an API to communicate with AI models. You can add MCP servers and VSCode Copilot will communicate with them to get more accurate results.  

@@ -51,7 +51,9 @@
         direction: ltr;
       }
 
+      &::-webkit-datetime-edit,
       &::-webkit-date-and-time-value {
+        @apply grid min-h-full items-center;
         text-align: inherit;
       }
 

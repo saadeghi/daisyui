@@ -56,6 +56,10 @@
     :where(&:checked ~ .drawer-side) {
       scrollbar-color: color-mix(in oklch, currentColor 35%, #0000)
         oklch(0 0 0 / calc(var(--page-has-backdrop, 0) * 0.4));
+      > :not(.drawer-overlay) {
+        transform: none;
+        will-change: auto;
+      }
     }
 
     :where(:root:has(&:checked)) {

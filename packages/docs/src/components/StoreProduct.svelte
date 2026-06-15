@@ -1,5 +1,7 @@
 <script>
-  let { product, productKey, convertCurrency } = $props()
+  import DiscountCountdown from "$components/DiscountCountdown.svelte"
+
+  let { product, productKey, convertCurrency, productDiscount = null } = $props()
 </script>
 
 <a
@@ -8,8 +10,10 @@
   id={productKey}
   data-sveltekit-preload-data
 >
-  <div class="flex grow items-center">
-    <div class="rounded-box gallery-column-reveal w-full">
+  <div class="relative flex grow items-center">
+    <div
+      class={`rounded-box gallery-column-reveal w-full ${productDiscount ? "outline-error outline-4 outline-offset-4" : ""}`}
+    >
       <div class="gallery-column-reveal-images">
         {#each product.media.filter((media) => media.type === "image") as media}
           <img
@@ -17,7 +21,7 @@
             src={media.lg}
             alt={product.title}
             loading="lazy"
-            class="bg-base-300 h-full w-full bg-cover bg-center object-cover"
+            class="bg-base-300 h-auto w-full bg-cover bg-center object-cover"
           />
         {/each}
       </div>
@@ -49,6 +53,16 @@
         {/each}
       </div>
     </div>
+    {#if productDiscount?.expires_at}
+      <div class="absolute start-6 -top-5 z-2 flex gap-1.5">
+        <div
+          class="bg-error text-error-content rounded-field font-title p-2 text-center text-sm font-semibold text-shadow-2xs text-shadow-white/30 xl:px-4 xl:tracking-widest"
+        >
+          {productDiscount.amount}% DISCOUNT
+        </div>
+        <DiscountCountdown expiresAt={productDiscount.expires_at} />
+      </div>
+    {/if}
   </div>
 
   <div class="flex justify-between gap-4 pt-6">
@@ -102,16 +116,16 @@
         <span class="flex flex-col">
           <span class="flex items-center gap-2">
             {#if product.displayprice}
-              <span class="font-title">
+              <span class={`font-title ${productDiscount ? "line-through" : ""}`}>
                 {convertCurrency(product.displayprice)}
               </span>
             {:else if product.from_price && product.to_price && product.from_price !== product.to_price}
               <span class="text-[0.625rem] italic opacity-50">from</span>
-              <span class="font-title">
+              <span class={`font-title ${productDiscount ? "line-through" : ""}`}>
                 {convertCurrency(product.from_price)}
               </span>
             {:else}
-              <span class="font-title">
+              <span class={`font-title ${productDiscount ? "line-through" : ""}`}>
                 {convertCurrency(product.price)}
               </span>
             {/if}

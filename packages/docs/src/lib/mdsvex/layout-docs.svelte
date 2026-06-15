@@ -1,17 +1,37 @@
 <script>
+  import { onMount } from "svelte"
   import { page } from "$app/stores"
   import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
   import ComponentFooter from "$components/ComponentFooter.svelte"
   import SEO from "$components/SEO.svelte"
   import { t } from "$lib/i18n.svelte.js"
-  let { data, title, desc, alert, children } = $props()
+  let { data, title, desc, alert, seo = true, componentfooter = true, children } = $props()
+
+  onMount(() => {
+    const handleClick = async (event) => {
+      const button = event.target.closest("button[data-copy-code]")
+      if (!button) return
+
+      const tooltip = button.closest(".tooltip")
+      const code = decodeURIComponent(button.dataset.copyCode || "")
+
+      await navigator.clipboard.writeText(code)
+      tooltip?.setAttribute("data-tip", "copied")
+      setTimeout(() => tooltip?.setAttribute("data-tip", "copy"), 2000)
+    }
+
+    document.addEventListener("click", handleClick)
+    return () => document.removeEventListener("click", handleClick)
+  })
 </script>
 
-<SEO
-  {title}
-  {desc}
-  img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
-/>
+{#if seo}
+  <SEO
+    {title}
+    {desc}
+    img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
+  />
+{/if}
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div
@@ -29,7 +49,9 @@
       </div>
     {/if}
     {@render children?.()}
-    <ComponentFooter pages={data?.pages} />
+    {#if componentfooter}
+      <ComponentFooter pages={data?.pages} />
+    {/if}
   </div>
   <AlternativeSidebar />
 </div>

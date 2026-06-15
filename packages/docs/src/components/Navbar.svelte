@@ -1,13 +1,22 @@
 <script>
   import { goto } from "$app/navigation"
+  import { page } from "$app/stores"
+  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import LogoHorizontal from "$components/LogoHorizontal.svelte"
   import TopBanner from "$components/TopBanner.svelte"
   import ThemeChange from "$components/ThemeChange.svelte"
   import LangChange from "$components/LangChange.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
+  import DiscountCountdown from "$components/DiscountCountdown.svelte"
   import { track } from "$lib/analytics.svelte.js"
+  import { fetchActiveDiscount } from "$lib/storeDiscount.js"
 
   import { t } from "$lib/i18n.svelte.js"
+
+  let activeDiscount = $state(null)
+  fetchActiveDiscount(PUBLIC_DAISYUI_API_PATH).then((discount) => {
+    activeDiscount = discount
+  })
 
   $effect(() => {
     window.minimalAnalytics = {
@@ -249,9 +258,37 @@
               </g>
             </svg>
             {$t("Templates")}
+            {#if activeDiscount?.data?.attributes?.expires_at && !$page.url.pathname.startsWith("/store/")}
+              <span class="tooltip tooltip-bottom">
+                <DiscountCountdown expiresAt={activeDiscount.data.attributes.expires_at} compact />
+                <span class="tooltip-content text-[0.625rem]"> Discount available </span>
+              </span>
+            {/if}
           </a>
         </div>
         <div class="hidden flex-none items-center lg:inline-block">
+          <a
+            data-sveltekit-preload-data
+            href="/store/daisyui-charts/"
+            class="btn btn-sm btn-ghost drawer-button font-normal"
+            onclick={() => track("Navbar > Store")}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4 opacity-50">
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                <path d="M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7"></path>
+              </g>
+            </svg>
+            {$t("Charts")}
+          </a>
+        </div>
+        <!--<div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data
             href="/store/daisyui-figma-library/"
@@ -283,7 +320,7 @@
             </svg>
             {$t("Figma")}
           </a>
-        </div>
+        </div>-->
         <div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data

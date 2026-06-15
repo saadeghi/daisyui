@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte"
   import { browser } from "$app/environment"
   import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import { page } from "$app/stores"
@@ -13,6 +14,23 @@
     const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/stats.json`)
     return await response.json()
   }
+
+  onMount(() => {
+    const handleClick = async (event) => {
+      const button = event.target.closest("button[data-copy-code]")
+      if (!button) return
+
+      const tooltip = button.closest(".tooltip")
+      const code = decodeURIComponent(button.dataset.copyCode || "")
+
+      await navigator.clipboard.writeText(code)
+      tooltip?.setAttribute("data-tip", "copied")
+      setTimeout(() => tooltip?.setAttribute("data-tip", "copy"), 2000)
+    }
+
+    document.addEventListener("click", handleClick)
+    return () => document.removeEventListener("click", handleClick)
+  })
 </script>
 
 <SEO
