@@ -38,23 +38,13 @@ export const pages = [
         href: "/docs/use/",
       },
       {
-        name: "daisyUI Skill",
+        name: "SKILL.md",
         href: "/docs/skill/",
-        badge: "new",
       },
       {
         name: "MCP servers",
         href: "/docs/mcp/",
-        badge: "new",
       },
-      // {
-      //   name: "v5 upgrade guide",
-      //   href: "/docs/upgrade/",
-      // },
-      // {
-      //   name: "V5 release notes",
-      //   href: "/docs/v5/",
-      // },
       {},
       {
         name: "Customize",
@@ -64,6 +54,7 @@ export const pages = [
         name: "Config",
         href: "/docs/config/",
       },
+      {},
       {
         name: "Colors",
         href: "/docs/colors/",
@@ -414,17 +405,30 @@ export const pages = [
     name: "Theme Generator",
     href: "/theme-generator/",
     icon: '<svg class="size-5 text-fuchsia-400" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/></svg>',
-    // badge: "new",
   },
   {},
   {
-    name: "Template Store",
+    name: "Templates",
     href: "/store/",
-    icon: '<svg class="size-5" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.0391 22V42H8.03906V22" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/><path d="M5.84231 13.7766C4.31276 17.7377 7.26307 22 11.5092 22C14.8229 22 17.5276 19.3137 17.5276 16C17.5276 19.3137 20.2139 22 23.5276 22H24.546C27.8597 22 30.546 19.3137 30.546 16C30.546 19.3137 33.2518 22 36.5655 22C40.8139 22 43.767 17.7352 42.2362 13.7723L39.2337 6H8.84523L5.84231 13.7766Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="bevel"/></svg>',
-    badge: "updated",
-    // badgeclass: "bg-primary/10 text-[inherit] border-transparent uppercase font-sans font-bold",
-    // highlight: true,
+    icon: '<svg class="size-5" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g stroke="currentColor" fill="none" stroke-linejoin="miter" stroke-linecap="butt"><line x1="3" y1="11" x2="29" y2="11" fill="none" stroke-miterlimit="10" stroke-width="2.5"></line><line x1="12" y1="11" x2="12" y2="29" fill="none" stroke-miterlimit="10" stroke-width="2.5"></line><path d="m26,29H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h20c1.657,0,3,1.343,3,3v20c0,1.657-1.343,3-3,3Z" fill="none" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2.5"></path></g></svg>',
   },
+  {
+    name: "Charts",
+    href: "/store/daisyui-charts/",
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7"></path></g></svg>',
+  },
+  {
+    name: "Figma Library",
+    href: "/store/daisyui-figma-library/",
+    icon: '<svg class="size-5" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="1.75" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="3"></circle><path d="M9 21C10.6569 21 12 19.6569 12 18V15H9C7.34315 15 6 16.3431 6 18C6 19.6569 7.34315 21 9 21Z"></path><path d="M12 9V15H9C7.34315 15 6 13.6569 6 12C6 10.3431 7.34315 9 9 9H12Z"></path><path d="M12 3V9H9C7.34315 9 6 7.65685 6 6C6 4.34315 7.34315 3 9 3H12Z"></path><path d="M12 3V9H15C16.6569 9 18 7.65685 18 6C18 4.34315 16.6569 3 15 3H12Z"></path></g></svg>',
+  },
+  {
+    name: "<div class='-mt-0.5 inline-grid grid-cols-[.25rem_1fr_.25rem] grid-rows-[.25rem_1fr_.25rem] align-middle'><div class='border-s-1 border-t-1 border-blue-600 [grid-area:1/1/2/2]'></div> <div class='border-e-1 border-t-1 border-blue-600 [grid-area:1/3/2/4]'></div> <div class='border-s-1 border-b-1 border-blue-600 [grid-area:3/1/4/2]'></div> <div class='border-e-1 border-b-1 border-blue-600 [grid-area:3/3/4/4]'></div> <div class='font-title m-0.5 bg-blue-600 px-1 text-sm font-semibold tracking-wide text-white [grid-area:1/1/4/4]'>BLUEPRINT</div></div> Official MCP",
+    href: "/blueprint/",
+    icon: '<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 195 195" fill="none"><path d="M25 97.8528L92.8822 29.9706C102.255 20.598 117.451 20.598 126.823 29.9706V29.9706C136.196 39.3431 136.196 54.5391 126.823 63.9117L75.5581 115.177" stroke="currentColor" stroke-width="15"></path><path d="M76.2652 114.47L126.823 63.9117C136.196 54.5391 151.392 54.5391 160.765 63.9117L161.118 64.2652C170.491 73.6378 170.491 88.8338 161.118 98.2063L99.7248 159.6C96.6006 162.724 96.6006 167.789 99.7248 170.913L112.331 183.52" stroke="currentColor" stroke-width="15"></path><path d="M109.853 46.9411L59.6482 97.1457C50.2756 106.518 50.2756 121.714 59.6482 131.087V131.087C69.0208 140.459 84.2167 140.459 93.5893 131.087L143.794 80.8822" stroke="currentColor" stroke-width="15"></path></svg>',
+    badge: "new",
+  },
+  {},
   {
     name: "Blog",
     href: "/blog/",
@@ -447,13 +451,6 @@ export const pages = [
     href: "https://swag.daisyui.com/",
     icon: '<svg width="18" class="size-5" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"><path d="M6 9V16.6841C6 18.4952 6 19.4008 6.58579 19.9635C7.89989 21.2257 15.8558 21.4604 17.4142 19.9635C18 19.4008 18 18.4952 18 16.6841V9" stroke="currentColor"></path><path d="M5.74073 12L3.04321 9.38915C2.34774 8.71602 2 8.37946 2 7.96123C2 7.543 2.34774 7.20644 3.04321 6.53331L5.04418 4.59664C5.39088 4.26107 5.56423 4.09329 5.77088 3.96968C5.97753 3.84607 6.21011 3.77103 6.67526 3.62096L8.32112 3.08997C8.56177 3.01233 8.68209 2.97351 8.76391 3.02018C8.84573 3.06686 8.87157 3.2013 8.92324 3.47018C9.19358 4.87684 10.4683 5.94185 12 5.94185C13.5317 5.94185 14.8064 4.87684 15.0768 3.47018C15.1284 3.2013 15.1543 3.06686 15.2361 3.02018C15.3179 2.97351 15.4382 3.01233 15.6789 3.08997L17.3247 3.62096C17.7899 3.77103 18.0225 3.84607 18.2291 3.96968C18.4358 4.09329 18.6091 4.26107 18.9558 4.59664L20.9568 6.53331C21.6523 7.20644 22 7.543 22 7.96123C22 8.37946 21.6523 8.71602 20.9568 9.38915L18.2593 12" stroke="currentColor"></path></g></svg>',
     target: "blank",
-  },
-
-  {
-    name: "<div class='-mt-0.5 inline-grid grid-cols-[.25rem_1fr_.25rem] grid-rows-[.25rem_1fr_.25rem] align-middle'><div class='border-s-1 border-t-1 border-blue-600 [grid-area:1/1/2/2]'></div> <div class='border-e-1 border-t-1 border-blue-600 [grid-area:1/3/2/4]'></div> <div class='border-s-1 border-b-1 border-blue-600 [grid-area:3/1/4/2]'></div> <div class='border-e-1 border-b-1 border-blue-600 [grid-area:3/3/4/4]'></div> <div class='font-title m-0.5 bg-blue-600 px-1 text-sm font-semibold tracking-wide text-white [grid-area:1/1/4/4]'>BLUEPRINT</div></div> Official MCP",
-    href: "/blueprint/",
-    icon: '<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 195 195" fill="none"><path d="M25 97.8528L92.8822 29.9706C102.255 20.598 117.451 20.598 126.823 29.9706V29.9706C136.196 39.3431 136.196 54.5391 126.823 63.9117L75.5581 115.177" stroke="currentColor" stroke-width="15"></path><path d="M76.2652 114.47L126.823 63.9117C136.196 54.5391 151.392 54.5391 160.765 63.9117L161.118 64.2652C170.491 73.6378 170.491 88.8338 161.118 98.2063L99.7248 159.6C96.6006 162.724 96.6006 167.789 99.7248 170.913L112.331 183.52" stroke="currentColor" stroke-width="15"></path><path d="M109.853 46.9411L59.6482 97.1457C50.2756 106.518 50.2756 121.714 59.6482 131.087V131.087C69.0208 140.459 84.2167 140.459 93.5893 131.087L143.794 80.8822" stroke="currentColor" stroke-width="15"></path></svg>',
-    badge: "new",
   },
   {
     name: "llms.txt",

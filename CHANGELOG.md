@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.5.23 (2026-06-07)
+
+## 5.5.22 (2026-06-07)
+
+## 5.5.21 (2026-06-06)
+
+
+### Bug Fixes
+
+* Blurry text/rendering in Drawer on Chrome/Windows. closes: [#4545](https://github.com/saadeghi/daisyui/issues/4545) ([b045f55](https://github.com/saadeghi/daisyui/commit/b045f5578c56f0ae04f63f5e7b3db696f3254a18))
+
 ## 5.5.20 (2026-05-18)
 
 
