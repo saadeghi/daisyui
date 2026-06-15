@@ -8,10 +8,9 @@
     --range-fill: 1;
     --range-p: 0.25rem;
     --range-bg: color-mix(in oklab, currentColor 10%, #0000);
-    /* Horizontal fill direction: 1 for ltr, -1 for rtl (set in the [dir=rtl] block below). */
-    --range-dir: 1;
     /* Fill is painted by the thumb's last box-shadow layer, clipped by overflow:hidden.
-       These variables let .range-vertical swap the fill from the x axis to the y axis. */
+       These variables let .range-vertical swap the fill from the x axis to the y axis.
+       range-dir: 1 for ltr, -1 for rtl */
     --range-fill-x: calc(
       (var(--range-dir, 1) * -100cqw) - (var(--range-dir, 1) * var(--range-thumb-size) / 2)
     );
