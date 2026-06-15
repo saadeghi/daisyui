@@ -186,11 +186,8 @@ classnames:
 
 
 ### ~Vertical
-<div class="flex gap-6 h-48">
-  <input type="range" min="0" max="100" value="40" aria-orientation="vertical" class="range range-vertical" />
-  <input type="range" min="0" max="100" value="60" aria-orientation="vertical" class="range range-vertical range-primary" />
-</div>
+<input type="range" min="0" max="100" value="40" class="range range-vertical" />
 
 ```html
-<input type="range" min="0" max="100" value="40" aria-orientation="vertical" class="$$range $$range-vertical" />
+<input type="range" min="0" max="100" value="40" class="$$range $$range-vertical" />
 ```
