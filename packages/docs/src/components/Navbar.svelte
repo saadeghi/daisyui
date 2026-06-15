@@ -1,13 +1,22 @@
 <script>
   import { goto } from "$app/navigation"
+  import { page } from "$app/stores"
+  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import LogoHorizontal from "$components/LogoHorizontal.svelte"
   import TopBanner from "$components/TopBanner.svelte"
   import ThemeChange from "$components/ThemeChange.svelte"
   import LangChange from "$components/LangChange.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
+  import DiscountCountdown from "$components/DiscountCountdown.svelte"
   import { track } from "$lib/analytics.svelte.js"
+  import { fetchActiveDiscount } from "$lib/storeDiscount.js"
 
   import { t } from "$lib/i18n.svelte.js"
+
+  let activeDiscount = $state(null)
+  fetchActiveDiscount(PUBLIC_DAISYUI_API_PATH).then((discount) => {
+    activeDiscount = discount
+  })
 
   $effect(() => {
     window.minimalAnalytics = {
@@ -249,6 +258,12 @@
               </g>
             </svg>
             {$t("Templates")}
+            {#if activeDiscount?.data?.attributes?.expires_at && !$page.url.pathname.startsWith("/store/")}
+              <span class="tooltip tooltip-bottom">
+                <DiscountCountdown expiresAt={activeDiscount.data.attributes.expires_at} compact />
+                <span class="tooltip-content text-[0.625rem]"> Discount available </span>
+              </span>
+            {/if}
           </a>
         </div>
         <div class="hidden flex-none items-center lg:inline-block">
@@ -273,7 +288,7 @@
             {$t("Charts")}
           </a>
         </div>
-        <div class="hidden flex-none items-center lg:inline-block">
+        <!--<div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data
             href="/store/daisyui-figma-library/"
@@ -305,7 +320,7 @@
             </svg>
             {$t("Figma")}
           </a>
-        </div>
+        </div>-->
         <div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data

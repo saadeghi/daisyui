@@ -51,11 +51,11 @@ Custom line height in case you have a tall font or need more vertical spacing be
 <span class="text-rotate max-md:text-3xl text-7xl font-title leading-[2]">
   <span class="justify-items-center">
     <span>📐 DESIGN</span>
-    <span>⌨️ DEVELOP</span>
+    <span>💻 DEVELOP</span>
     <span>🌎 DEPLOY</span>
     <span>🌱 SCALE</span>
     <span>🔧 MAINTAIN</span>
-    <span>♻️ REPEAT</span>
+    <span>🔁 REPEAT</span>
   </span>
 </span>
 ```
