@@ -16,7 +16,16 @@
       outline-width: 4px;
     }
 
-    :where(figure:first-child) {
+    &:has(> :is([type="checkbox"], [type="radio"])) {
+      @apply cursor-pointer;
+      user-select: none;
+    }
+    > :is([type="checkbox"], [type="radio"]) {
+      @apply appearance-none;
+    }
+  }
+  @layer daisyui.l1.l2.l3.l4 {
+    figure:first-child {
       @apply overflow-hidden;
       border-start-start-radius: inherit;
       border-start-end-radius: inherit;
@@ -24,7 +33,7 @@
       border-end-end-radius: unset;
     }
 
-    :where(figure:last-child) {
+    figure:last-child {
       @apply overflow-hidden;
       border-start-start-radius: unset;
       border-start-end-radius: unset;
@@ -34,13 +43,6 @@
 
     figure {
       @apply flex items-center justify-center;
-    }
-    &:has(> :is([type="checkbox"], [type="radio"])) {
-      @apply cursor-pointer;
-      user-select: none;
-    }
-    > :is([type="checkbox"], [type="radio"]) {
-      @apply appearance-none;
     }
   }
 }
@@ -94,8 +96,9 @@
     @apply flex flex-auto flex-col gap-2;
     padding: var(--card-p, 1.5rem);
     font-size: var(--card-fs, 0.875rem);
-
-    :where(p) {
+  }
+  @layer daisyui.l1.l2.l3.l4 {
+    p {
       @apply grow;
     }
   }
@@ -176,7 +179,6 @@
   @layer daisyui.l1.l2 {
     align-items: stretch;
     flex-direction: row;
-
     :where(figure:first-child) {
       @apply overflow-hidden;
       border-start-start-radius: inherit;

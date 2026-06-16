@@ -1,6 +1,7 @@
 .diff {
-  @layer daisyui.l1.l2.l3 {
+  @layer daisyui.l1.l2 {
     @apply relative grid w-full overflow-hidden select-none;
+    align-items: normal;
     grid-template-rows: 1fr 1.8rem 1fr;
     direction: ltr;
     container-type: inline-size;
