@@ -26,7 +26,6 @@
       transition-duration: 0.2s;
       transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
       grid-auto-columns: minmax(auto, max-content) auto max-content;
-      text-wrap: balance;
       user-select: none;
     }
 
