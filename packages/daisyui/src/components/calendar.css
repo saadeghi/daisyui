@@ -298,6 +298,10 @@
       border: unset;
       border-radius: unset;
       color: inherit;
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+      }
     }
     .rdp-range_end {
       color: var(--color-base-content);
