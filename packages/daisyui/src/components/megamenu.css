@@ -150,6 +150,48 @@
       }
     }
   }
+
+  @layer daisyui.l1 {
+    &:popover-open {
+      @apply fixed w-full flex-col items-start overflow-y-scroll rounded-none pt-4 opacity-100;
+      background-color: var(--color-base-100);
+      margin-top: var(--mm-mt, 4rem);
+      [popovertarget],
+      > [popover]:not(:nth-of-type(1)) {
+        display: var(--mm-display, none);
+      }
+      &::backdrop {
+        background-color: var(--mm-backdrop, oklch(0% 0 0/ 0.4));
+      }
+      border-inline-width: 0;
+      position-area: block-end;
+      max-block-size: calc(100% - 0.25rem);
+      translate: 0 0;
+      scale: 1;
+      transition:
+        opacity 200ms ease-out,
+        translate 200ms ease-out,
+        scale 200ms ease-out,
+        display 200ms ease-out allow-discrete,
+        overlay 200ms ease-out allow-discrete;
+      @starting-style {
+        @apply opacity-0;
+      }
+      [popovertarget] {
+        @apply pointer-events-none;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+        &:after {
+          content: none;
+        }
+      }
+      [popover] {
+        @apply relative block max-h-none overflow-visible bg-transparent opacity-100;
+        border: none;
+      }
+    }
+  }
 }
 .megamenu-active {
   @layer daisyui.l1.l2.l3 {
@@ -187,11 +229,12 @@
 
 .megamenu-vertical {
   @layer daisyui.l1.l2 {
-    @apply relative w-full flex-col items-start overflow-auto rounded-none opacity-0;
+    @apply relative w-full flex-col items-start rounded-none opacity-0;
     background-color: var(--color-base-100);
     border-inline-width: 0;
     position-area: block-end;
     max-block-size: calc(100% - 0.25rem);
+    --mm-backdrop: transparent;
     translate: 0 -0.5rem;
     scale: 0.98;
     transition:
@@ -200,17 +243,13 @@
       scale 200ms ease-out,
       display 200ms ease-out allow-discrete,
       overlay 200ms ease-out allow-discrete;
-    &:popover-open {
-      @apply fixed pt-4 opacity-100;
-      @starting-style {
-        @apply opacity-0;
-      }
-      translate: 0 0;
-      scale: 1;
-    }
     &:not([popover]:popover-open) {
       position: revert;
       display: none;
+    }
+    &:popover-open {
+      --mm-mt: 0;
+      --mm-display: block;
     }
     [popovertarget] {
       @apply pointer-events-none;
