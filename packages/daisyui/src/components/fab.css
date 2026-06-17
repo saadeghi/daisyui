@@ -76,7 +76,11 @@
   @layer daisyui.l1.l2.l3 {
     @apply grid;
     --position: 0rem;
-    > *:nth-child(-n + 2) {
+    /* Center the trigger and an explicit main-action/close by identity (not by
+       position), so the first real action fans out when neither is present. */
+    > *:nth-child(1),
+    > .fab-main-action,
+    > .fab-close {
       --position: 0rem;
     }
     > * {
@@ -93,46 +97,115 @@
     > :nth-child(n + 7) {
       @apply hidden;
     }
-    &:has(:nth-child(3)) {
-      --position: 140%;
-      > :nth-child(3) {
-        --degree: 135deg;
+    /* Mode A: an explicit main-action/close occupies the center; the arc starts
+       at the 3rd child. (Unchanged from before.) */
+    &:has(.fab-main-action),
+    &:has(.fab-close) {
+      &:has(:nth-child(3)) {
+        --position: 140%;
+        > :nth-child(3) {
+          --degree: 135deg;
+        }
+      }
+      &:has(:nth-child(4)) {
+        --position: 140%;
+        > :nth-child(3) {
+          --degree: 165deg;
+        }
+        > :nth-child(4) {
+          --degree: 105deg;
+        }
+      }
+      &:has(:nth-child(5)) {
+        --position: 180%;
+        > :nth-child(3) {
+          --degree: 180deg;
+        }
+        > :nth-child(4) {
+          --degree: 135deg;
+        }
+        > :nth-child(5) {
+          --degree: 90deg;
+        }
+      }
+      &:has(:nth-child(6)) {
+        --position: 220%;
+        > :nth-child(3) {
+          --degree: 180deg;
+        }
+        > :nth-child(4) {
+          --degree: 150deg;
+        }
+        > :nth-child(5) {
+          --degree: 120deg;
+        }
+        > :nth-child(6) {
+          --degree: 90deg;
+        }
       }
     }
-    &:has(:nth-child(4)) {
-      --position: 140%;
-      > :nth-child(3) {
-        --degree: 165deg;
+    /* Mode B: no main-action/close — the first action (2nd child) fans out too;
+       the arc starts at the 2nd child. */
+    &:not(:has(.fab-main-action)):not(:has(.fab-close)) {
+      &:has(:nth-child(2)) {
+        --position: 140%;
+        > :nth-child(2) {
+          --degree: 135deg;
+        }
       }
-      > :nth-child(4) {
-        --degree: 105deg;
+      &:has(:nth-child(3)) {
+        --position: 140%;
+        > :nth-child(2) {
+          --degree: 165deg;
+        }
+        > :nth-child(3) {
+          --degree: 105deg;
+        }
       }
-    }
-    &:has(:nth-child(5)) {
-      --position: 180%;
-      > :nth-child(3) {
-        --degree: 180deg;
+      &:has(:nth-child(4)) {
+        --position: 180%;
+        > :nth-child(2) {
+          --degree: 180deg;
+        }
+        > :nth-child(3) {
+          --degree: 135deg;
+        }
+        > :nth-child(4) {
+          --degree: 90deg;
+        }
       }
-      > :nth-child(4) {
-        --degree: 135deg;
+      &:has(:nth-child(5)) {
+        --position: 220%;
+        > :nth-child(2) {
+          --degree: 180deg;
+        }
+        > :nth-child(3) {
+          --degree: 150deg;
+        }
+        > :nth-child(4) {
+          --degree: 120deg;
+        }
+        > :nth-child(5) {
+          --degree: 90deg;
+        }
       }
-      > :nth-child(5) {
-        --degree: 90deg;
-      }
-    }
-    &:has(:nth-child(6)) {
-      --position: 220%;
-      > :nth-child(3) {
-        --degree: 180deg;
-      }
-      > :nth-child(4) {
-        --degree: 150deg;
-      }
-      > :nth-child(5) {
-        --degree: 120deg;
-      }
-      > :nth-child(6) {
-        --degree: 90deg;
+      &:has(:nth-child(6)) {
+        --position: 260%;
+        > :nth-child(2) {
+          --degree: 180deg;
+        }
+        > :nth-child(3) {
+          --degree: 157.5deg;
+        }
+        > :nth-child(4) {
+          --degree: 135deg;
+        }
+        > :nth-child(5) {
+          --degree: 112.5deg;
+        }
+        > :nth-child(6) {
+          --degree: 90deg;
+        }
       }
     }
   }
