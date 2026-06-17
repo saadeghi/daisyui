@@ -486,14 +486,14 @@
 
       .has-event {
         .pika-button {
-          background: var(--color-base-primary);
+          background: var(--color-primary);
         }
       }
 
       .is-disabled,
       .is-inrange {
         .pika-button {
-          background: var(--color-base-primary);
+          background: var(--color-base-200);
         }
       }
 
