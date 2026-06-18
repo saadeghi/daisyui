@@ -24,8 +24,6 @@ classnames:
   - class: tooltip-open
     desc: Force open tooltip
   color:
-  - class: tooltip-neutral
-    desc: neutral color
   - class: tooltip-primary
     desc: primary color
   - class: tooltip-secondary
@@ -148,21 +146,6 @@ classnames:
   <button class="$$btn">Right</button>
 </div>
 ```
-
-
-### ~Neutral color
-<div class="my-6">
-  <div data-tip="neutral" class="tooltip tooltip-open tooltip-neutral">
-    <button class="btn btn-neutral">neutral</button>
-  </div>
-</div>
-
-```html
-<div class="$$tooltip $$tooltip-open $$tooltip-neutral" data-tip="neutral">
-  <button class="$$btn $$btn-neutral">neutral</button>
-</div>
-```
-
 
 ### ~Primary color
 <div class="my-6">
