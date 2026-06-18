@@ -448,6 +448,7 @@
                   />
                   <figure
                     class="diff absolute top-0"
+                    data-theme="dark"
                     tabindex="0"
                     style={`aspect-ratio: ${media.ratio};`}
                   >
