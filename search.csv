@@ -141,7 +141,7 @@ Range slider,/components/range/,range range-neutral range-primary range-secondar
 Stack,/components/stack/,stack stack-top stack-bottom stack-start stack-end
 Stat,/components/stat/,stats stat stat-title stat-value stat-desc stat-figure stat-actions stats-horizontal stats-vertical
 Hover Gallery,/components/hover-gallery/,hover-gallery
-Tooltip,/components/tooltip/,tooltip tooltip-content tooltip-top tooltip-bottom tooltip-left tooltip-right tooltip-open tooltip-neutral tooltip-primary tooltip-secondary tooltip-accent tooltip-info tooltip-success tooltip-warning tooltip-error
+Tooltip,/components/tooltip/,tooltip tooltip-content tooltip-top tooltip-bottom tooltip-left tooltip-right tooltip-open tooltip-primary tooltip-secondary tooltip-accent tooltip-info tooltip-success tooltip-warning tooltip-error
 File Input,/components/file-input/,file-input file-input-ghost file-input-neutral file-input-primary file-input-secondary file-input-accent file-input-info file-input-success file-input-warning file-input-error file-input-xs file-input-sm file-input-md file-input-lg file-input-xl
 Breadcrumbs,/components/breadcrumbs/,breadcrumbs
 Card,/components/card/,card card-title card-body card-actions card-border card-dash card-side image-full card-xs card-sm card-md card-lg card-xl
@@ -768,7 +768,6 @@ Top,/components/tooltip/#top,
 Bottom,/components/tooltip/#bottom,
 Left,/components/tooltip/#left,
 Right,/components/tooltip/#right,
-Neutral color,/components/tooltip/#neutral-color,
 Primary color,/components/tooltip/#primary-color,
 Secondary color,/components/tooltip/#secondary-color,
 Accent color,/components/tooltip/#accent-color,
