@@ -151,7 +151,7 @@
     }
   }
 
-  @layer daisyui.l1 {
+  @layer daisyui.l1.l2 {
     &:popover-open {
       @apply fixed w-full flex-col items-start overflow-y-scroll rounded-none pt-4 opacity-100;
       background-color: var(--color-base-100);
@@ -166,7 +166,7 @@
       border-inline-width: 0;
       position-area: block-end;
       top: 0;
-      inset-inline-start: 0;
+      inset-inline: 0;
       max-block-size: 80svh;
       translate: 0 0;
       scale: 1;
@@ -208,9 +208,6 @@
 .megamenu-wide {
   @layer daisyui.l1.l2 {
     anchor-name: --megamenu;
-    &:popover-open {
-      inset-inline: 0;
-    }
     [popover] {
       position-area: block-end;
       position-anchor: --megamenu;
@@ -222,9 +219,6 @@
 .megamenu-full {
   @layer daisyui.l1.l2 {
     anchor-name: --megamenu;
-    &:popover-open {
-      inset-inline: 0;
-    }
     [popover] {
       position-area: block-end;
       position-anchor: --megamenu;
