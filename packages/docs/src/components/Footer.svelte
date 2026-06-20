@@ -307,6 +307,8 @@
         <a class="link link-hover" href="/blog/">{$t("Blog")}</a>
         <a class="link link-hover" href="/store/">{$t("Store")}</a>
         <a class="link link-hover" href="/store/daisyui-figma-library/">daisyUI Figma Library</a>
+        <a class="link link-hover" href="/blueprint/">Blueprint: daisyUI MCP server</a>
+        <a class="link link-hover" href="/docs/skill/">SKILL.md</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Frameworks")}</span>
@@ -329,11 +331,11 @@
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Compare libraries")}</span>
+        <a class="link link-hover" href="/compare/radix-vs-daisyui/">Radix vs daisyUI</a>
         <a class="link link-hover" href="/compare/mui-vs-daisyui/">MUI vs daisyUI</a>
         <a class="link link-hover" href="/compare/shadcn-vs-daisyui/">shadcn/ui vs daisyUI</a>
         <a class="link link-hover" href="/compare/bootstrap-vs-daisyui/">Bootstrap vs daisyUI</a>
         <a class="link link-hover" href="/compare/flowbite-vs-daisyui/">Flowbite vs daisyUI</a>
-        <a class="link link-hover" href="/compare/radix-vs-daisyui/">Radix vs daisyUI</a>
         <a class="link link-hover" href="/compare/bulma-vs-daisyui/">Bulma vs daisyUI</a>
         <a class="link link-hover" href="/compare/nuxtui-vs-daisyui/">NuxtUI vs daisyUI</a>
         <a class="link link-hover" href="/compare/heroui-vs-daisyui/">HeroUI vs daisyUI</a>

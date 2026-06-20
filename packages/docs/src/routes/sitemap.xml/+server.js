@@ -24,6 +24,24 @@ const fetchProductIds = async () => {
   }
 }
 
+const fetchSkillIds = async () => {
+  try {
+    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/skills.yaml`)
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch skills data: ${response.status}`)
+    }
+
+    const yamlText = await response.text()
+    const yamlData = yaml.load(yamlText)
+
+    return yamlData?.skillOrder?.map((id) => String(id)) ?? []
+  } catch (err) {
+    console.error("Error fetching or processing skills data:", err)
+    return []
+  }
+}
+
 const fetchCompareData = async () => {
   try {
     const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/compare.yaml`)
@@ -74,6 +92,7 @@ const processPath = (entry) => {
 
 export const GET = async () => {
   let productIds = []
+  let skillIds = []
   let comparePages = []
   let alternativeLibraries = []
   let skillPages = []
@@ -85,6 +104,7 @@ export const GET = async () => {
     comparePages = generateCompareSlugs(frameworks)
     alternativeLibraries = generateAlternativeSlugs(frameworks)
     productIds = await fetchProductIds()
+    skillIds = await fetchSkillIds()
     const { skillEditors } = await loadSkillEditors()
     skillPages = skillEditors.map((editor) => editor.slug)
   } catch (err) {
@@ -109,6 +129,7 @@ export const GET = async () => {
       "/compare/[item]": comparePages,
       "/alternative/[library]": alternativeLibraries,
       "/docs/skill/[slug]": skillPages,
+      "/skills/[productId]": skillIds,
     },
     processPaths: (paths) =>
       paths.map(processPath).filter((entry) => !excludedPaths.includes(entry.path)),

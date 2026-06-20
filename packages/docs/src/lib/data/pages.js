@@ -5,6 +5,8 @@ export const pagesThatDontNeedSidebar = [
   "/blog/*/",
   "/store/",
   "/store/*/",
+  "/skills/",
+  "/skills/*/",
   "/compare/*/",
   "/alternative/*/",
   "/resources/*/",
@@ -38,8 +40,9 @@ export const pages = [
         href: "/docs/use/",
       },
       {
-        name: "SKILL.md",
-        href: "/docs/skill/",
+        name: "daisyUI agent skills",
+        href: "/skills/",
+        badge: "new",
       },
       {
         name: "MCP servers",
