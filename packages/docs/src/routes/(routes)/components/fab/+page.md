@@ -290,7 +290,7 @@ classnames:
 
 ### ~FAB Flower and Speed Dial
 
-#### fab-flower modifier class will open the button in a quarter circle instead of a vertical. The fab-main-action / fab-close button is optional in fab-flower; without it, the first action button also fans out into the arc. fab-flower fits 1 to 4 action buttons when a fab-main-action or fab-close button is used, or up to 5 action buttons without one, not including the original button.
+#### fab-flower modifier class will open the button in a quarter circle instead of a vertical. The fab-main-action / fab-close button is optional in fab-flower; without it, the first action button also fans out into the arc. fab-flower fits up to 4 action buttons (not including the original button), with or without a fab-main-action / fab-close button.
 
 <div class="h-54">
   <div class="fab fab-flower absolute z-1">
