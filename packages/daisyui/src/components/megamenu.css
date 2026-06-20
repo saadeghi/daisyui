@@ -165,7 +165,9 @@
       }
       border-inline-width: 0;
       position-area: block-end;
-      max-block-size: calc(100% - 0.25rem);
+      top: 0;
+      inset-inline-start: 0;
+      max-block-size: 80svh;
       translate: 0 0;
       scale: 1;
       transition:
@@ -206,6 +208,9 @@
 .megamenu-wide {
   @layer daisyui.l1.l2 {
     anchor-name: --megamenu;
+    &:popover-open {
+      inset-inline: 0;
+    }
     [popover] {
       position-area: block-end;
       position-anchor: --megamenu;
@@ -217,6 +222,9 @@
 .megamenu-full {
   @layer daisyui.l1.l2 {
     anchor-name: --megamenu;
+    &:popover-open {
+      inset-inline: 0;
+    }
     [popover] {
       position-area: block-end;
       position-anchor: --megamenu;
