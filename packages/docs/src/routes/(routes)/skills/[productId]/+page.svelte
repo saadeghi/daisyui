@@ -775,30 +775,31 @@
       <img src={image} alt={data.product.title} class="w-full object-cover" loading="lazy" />
     {/each}
   </div>
-  <div class="mx-auto my-40 grid gap-2 gap-y-16 lg:grid-cols-2" id="faq">
-    <div class="flex flex-col gap-6">
-      <h2 class="font-title lg:text-base-content/10 text-4xl font-semibold lg:text-[10rem]">
-        F.A.Q
-      </h2>
-      <p class="text-base-content/60 text-xs">
-        If you have any questions before purchase
-        <br />send me an email to help@daisyui.com
-        <br />I will do my best to help you.
-      </p>
-    </div>
-    <div class="">
-      <!-- data.product.faq might not exist, so we need to use the nullish coalescing operator to provide a default value -->
-      {#each [...(data.product.faq ?? []), ...data.faq] as item, index}
-        <div class="collapse-plus collapse">
-          <input type="radio" name="faq" class="min-h-0!" checked={index === 0} />
-          <div class="collapse-title min-h-0! text-sm font-semibold">{item.Q}</div>
-          <div
-            class="collapse-content text-base-content/70 border-base-content/10 ms-4 border-s-2 px-6 text-xs"
-          >
-            {@html item.A}
+  {#if data.product.faq || data.faq}
+    <div class="mx-auto my-40 grid gap-2 gap-y-16 lg:grid-cols-2" id="faq">
+      <div class="flex flex-col gap-6">
+        <h2 class="font-title lg:text-base-content/10 text-4xl font-semibold lg:text-[10rem]">
+          F.A.Q
+        </h2>
+        <p class="text-base-content/60 text-xs">
+          If you have any questions before purchase
+          <br />send me an email to help@daisyui.com
+          <br />I will do my best to help you.
+        </p>
+      </div>
+      <div class="">
+        {#each [...(data.product.faq ?? []), ...(data.faq ?? [])] as item, index}
+          <div class="collapse-plus collapse">
+            <input type="radio" name="faq" class="min-h-0!" checked={index === 0} />
+            <div class="collapse-title min-h-0! text-sm font-semibold">{item.Q}</div>
+            <div
+              class="collapse-content text-base-content/70 border-base-content/10 ms-4 border-s-2 px-6 text-xs"
+            >
+              {@html item.A}
+            </div>
           </div>
-        </div>
-      {/each}
+        {/each}
+      </div>
     </div>
-  </div>
+  {/if}
 </div>

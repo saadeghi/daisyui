@@ -40,8 +40,9 @@ export const pages = [
         href: "/docs/use/",
       },
       {
-        name: "SKILL.md",
-        href: "/docs/skill/",
+        name: "daisyUI agent skills",
+        href: "/skills/",
+        badge: "new",
       },
       {
         name: "MCP servers",
