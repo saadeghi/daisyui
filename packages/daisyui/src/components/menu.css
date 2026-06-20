@@ -155,7 +155,7 @@
 
 .menu-horizontal {
   @layer daisyui.l1.l2 {
-    @apply inline-flex flex-row items-center;
+    @apply inline-flex flex-row items-center; /* remove items-center*/
 
     & > li:not(.menu-title) > details {
       & > :is(ul, menu) {

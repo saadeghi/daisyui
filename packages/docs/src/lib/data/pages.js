@@ -212,6 +212,11 @@ export const pages = [
             href: "/components/link/",
           },
           {
+            name: "Megamenu",
+            href: "/components/megamenu/",
+            badge: "new",
+          },
+          {
             name: "Menu",
             href: "/components/menu/",
           },
