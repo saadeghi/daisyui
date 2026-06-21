@@ -4,7 +4,7 @@
   let { product, productKey, convertCurrency, productDiscount = true } = $props()
 </script>
 
-<div class={`relative ${productDiscount ? "outline-error outline-4 outline-offset-4" : ""}`}>
+<div class={`relative ${productDiscount ? "outline-error z-1 outline-4 outline-offset-4" : ""}`}>
   <a
     href={`/skills/${productKey}/`}
     id={productKey}
