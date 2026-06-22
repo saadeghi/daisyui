@@ -173,8 +173,7 @@
     grid-column-start: 1;
     grid-row-start: 2;
     min-height: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-inline: 1rem;
     cursor: unset;
     @supports not (content-visibility: hidden) {
       visibility: hidden;

@@ -85,7 +85,7 @@
       --flip-degree: calc(180deg - var(--degree));
       transform: translateX(calc(cos(var(--degree)) * var(--position)))
         translateY(calc(sin(var(--degree)) * -1 * var(--position)));
-      [dir="rtl"] & {
+      &:dir(rtl) {
         transform: translateX(calc(cos(var(--flip-degree)) * var(--position)))
           translateY(calc(sin(var(--flip-degree)) * -1 * var(--position)));
       }

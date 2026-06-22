@@ -108,7 +108,7 @@
     :where(.dropdown-content) {
       @apply end-auto;
       translate: 0 0;
-      [dir="rtl"] & {
+      &:dir(rtl) {
         translate: 0 0;
       }
     }
@@ -140,7 +140,7 @@
     :where(.dropdown-content) {
       @apply end-1/2;
       translate: 50% 0;
-      [dir="rtl"] & {
+      &:dir(rtl) {
         translate: -50% 0;
       }
     }
@@ -174,7 +174,7 @@
     :where(.dropdown-content) {
       @apply end-0;
       translate: 0 0;
-      [dir="rtl"] & {
+      &:dir(rtl) {
         translate: 0 0;
       }
     }
