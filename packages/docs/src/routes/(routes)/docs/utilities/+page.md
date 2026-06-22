@@ -180,6 +180,9 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--size`                      | size of the range slider                                 |
 | Select          | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the select                                       |
+| Sheet           | `--sheet-tr`                  | transition to be applied on show/hide                    |
+|                 | `--sheet-handle-size`         | size of the sheet handle (will ne visible)               |
+|                 | `--sheet-anchor-name`         | name of the anchor if you want to fit an element         |
 | Tab             | `--tabs-height`               | height of the tabs                                       |
 |                 | `--tabs-direction`            | direction of the tabs                                    |
 |                 | `--tab-p`                     | padding of the tab                                       |

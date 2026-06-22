@@ -132,6 +132,10 @@ pre.shiki[tabindex="0"]:focus-visible {
     );
     background-size: 40px 40px;
   }
+  .preview-full-container {
+    @apply -m-4 xl:-my-10 flex items-center justify-center;
+    width: calc(100% + 8 * var(--spacing));
+  }
 }
 
 /* changelog */
