@@ -1,6 +1,8 @@
 .fab {
   @layer daisyui.l1.l2.l3 {
-    @apply pointer-events-none fixed end-4 bottom-4 z-999 flex flex-col-reverse items-end gap-2 text-sm whitespace-nowrap;
+    /* select-none: stop Safari from selecting the trigger/labels on the click
+       that toggles :focus-within (also emits the -webkit- prefix Safari needs). */
+    @apply pointer-events-none fixed end-4 bottom-4 z-999 flex flex-col-reverse items-end gap-2 text-sm whitespace-nowrap select-none;
     > * {
       @apply pointer-events-auto flex items-center gap-2;
       &:hover,
