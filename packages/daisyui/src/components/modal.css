@@ -2,6 +2,7 @@
   @layer daisyui.l1.l2.l3 {
     @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
     transition:
+      overlay 0.3s allow-discrete,
       visibility 0.3s allow-discrete,
       background-color 0.3s ease-out,
       opacity 0.1s ease-out;
