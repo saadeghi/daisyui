@@ -579,7 +579,7 @@
   "For large sized components like card, modal, alert, etc.": "برای کامپوننت‌های بزرگ مانند کارت، مودال، هشدار و غیره.",
   "rounded-field": "rounded-field",
   "var(--radius-field)": "var(--radius-field)",
-  "For medium sized components like button, input, select, tab, etc.": "برای کامپوننت‌های متوسط ​​مانند دکمه، ورودی، انتخاب، تب و غیره.",
+  "For medium sized components like button, input, select, tab, etc.": "برای کامپوننت‌های متوسط مانند دکمه، اینپوت، سلکت، تب و غیره.",
   "rounded-selector": "rounded-selector",
   "var(--radius-selector)": "var(--radius-selector)",
   "For small sized components like checkbox, toggle, badge, etc.": "برای کامپوننت‌های کوچک مانند checkbox، toggle، بج و غیره.",
