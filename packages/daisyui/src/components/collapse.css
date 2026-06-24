@@ -90,9 +90,10 @@
       min-height: 1lh;
       transition: background-color 0.2s ease-out;
 
-      &:has(~ label) {
+      /* this breaks Collapse with checkbox and close on click outside */
+      /* &:has(~ label) {
         z-index: revert-layer;
-      }
+      } */
     }
 
     &:is(details) {
@@ -204,13 +205,6 @@
   }
 }
 
-.collapse-title {
-  @layer daisyui.l1.l2.l3 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-}
-
 .collapse-content {
   @layer daisyui.l1.l2.l3 {
     --overflow-delay: 0s;
@@ -287,8 +281,9 @@
 
 .collapse-title {
   @layer daisyui.l1.l2.l3 {
+    grid-column-start: 1;
+    grid-row-start: 1;
     position: relative;
-
     width: 100%;
     padding: 1rem;
     padding-inline-end: 3rem;
