@@ -173,6 +173,9 @@
       border-color: #0000;
       box-shadow: none;
     }
+    &::picker(select) {
+      @apply bg-base-100 text-base-content;
+    }
   }
 }
 
