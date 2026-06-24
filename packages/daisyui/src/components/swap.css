@@ -45,6 +45,28 @@
     .swap-on {
       @apply opacity-100;
     }
+
+    &.swap-rotate {
+      .swap-on {
+        @apply rotate-0;
+      }
+
+      .swap-off {
+        @apply -rotate-45;
+      }
+    }
+
+    &.swap-flip {
+      .swap-on {
+        transform: rotateY(0deg);
+      }
+
+      .swap-off {
+        transform: rotateY(-180deg);
+        backface-visibility: hidden;
+        @apply opacity-100;
+      }
+    }
   }
 }
 
