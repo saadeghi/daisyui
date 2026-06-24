@@ -304,7 +304,7 @@ classnames:
         </li>
       </ul>
       <div class="mt-6">
-        <button class="btn btn-primary btn-block">Subscribe</button>
+        <button class="$$btn $$btn-primary $$btn-block">Subscribe</button>
       </div>
     </div>
   </div>

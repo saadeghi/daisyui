@@ -783,7 +783,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
 
 ```html
 <div class="$$megamenu $$megamenu-xs p-2 border border-base-300">
-  <span class="megamenu-active"></span>
+  <span class="$$megamenu-active"></span>
 
   <button popovertarget="f1">One</button>
   <div id="f1" popover>
@@ -819,7 +819,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
   </div>
 </div>
 <div class="$$megamenu $$megamenu-md p-2 border border-base-300">
-  <span class="megamenu-active"></span>
+  <span class="$$megamenu-active"></span>
 
   <button popovertarget="h1">One</button>
   <div id="h1" popover>
