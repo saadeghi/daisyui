@@ -101,19 +101,25 @@ classnames:
 ### ~Top
 <div class="my-6 flex flex-wrap gap-6">
   <div class="tooltip tooltip-open tooltip-top tooltip-start" data-tip="hello">
-    <button class="btn">Top</button>
+    <button class="btn">Top start</button>
   </div>
   <div class="tooltip tooltip-open tooltip-top" data-tip="hello">
     <button class="btn">Top</button>
   </div>
   <div class="tooltip tooltip-open tooltip-top tooltip-end" data-tip="hello">
-    <button class="btn">Top</button>
+    <button class="btn">Top end</button>
   </div>
 </div>
 
 ```html
+<div class="$$tooltip $$tooltip-open $$tooltip-top $$tooltip-start" data-tip="hello">
+  <button class="$$btn">Top start</button>
+</div>
 <div class="$$tooltip $$tooltip-open $$tooltip-top" data-tip="hello">
   <button class="$$btn">Top</button>
+</div>
+<div class="$$tooltip $$tooltip-open $$tooltip-top $$tooltip-end" data-tip="hello">
+  <button class="$$btn">Top end</button>
 </div>
 ```
 
@@ -121,19 +127,25 @@ classnames:
 ### ~Bottom
 <div class="my-6 flex flex-wrap gap-6">
   <div class="tooltip tooltip-open tooltip-bottom tooltip-start" data-tip="hello">
-    <button class="btn">Bottom</button>
+    <button class="btn">Bottom start</button>
   </div>
   <div class="tooltip tooltip-open tooltip-bottom" data-tip="hello">
     <button class="btn">Bottom</button>
   </div>
   <div class="tooltip tooltip-open tooltip-bottom tooltip-end" data-tip="hello">
-    <button class="btn">Bottom</button>
+    <button class="btn">Bottom end</button>
   </div>
 </div>
 
 ```html
+<div class="$$tooltip $$tooltip-open $$tooltip-bottom $$tooltip-start" data-tip="hello">
+  <button class="$$btn">Bottom start</button>
+</div>
 <div class="$$tooltip $$tooltip-open $$tooltip-bottom" data-tip="hello">
   <button class="$$btn">Bottom</button>
+</div>
+<div class="$$tooltip $$tooltip-open $$tooltip-bottom $$tooltip-end" data-tip="hello">
+  <button class="$$btn">Bottom end</button>
 </div>
 ```
 
@@ -141,39 +153,51 @@ classnames:
 ### ~Left
 <div class="my-6 flex flex-col gap-6">
   <div class="tooltip tooltip-open tooltip-left tooltip-start" data-tip="hello">
-    <button class="btn">Left</button>
+    <button class="btn">Left start</button>
   </div>
   <div class="tooltip tooltip-open tooltip-left" data-tip="hello">
     <button class="btn">Left</button>
   </div>
   <div class="tooltip tooltip-open tooltip-left tooltip-end" data-tip="hello">
-    <button class="btn">Left</button>
+    <button class="btn">Left end</button>
   </div>
 </div>
 
 ```html
+<div class="$$tooltip $$tooltip-open $$tooltip-left $$tooltip-start" data-tip="hello">
+  <button class="$$btn">Left start</button>
+</div>
 <div class="$$tooltip $$tooltip-open $$tooltip-left" data-tip="hello">
   <button class="$$btn">Left</button>
+</div>
+<div class="$$tooltip $$tooltip-open $$tooltip-left $$tooltip-end" data-tip="hello">
+  <button class="$$btn">Left end</button>
 </div>
 ```
 
 
 ### ~Right
-<div class="my-6 flex flex-col gap-6">
+<div class="my-6 flex items-end flex-col gap-6">
   <div class="tooltip tooltip-open tooltip-right tooltip-start" data-tip="hello">
-    <button class="btn">Right</button>
+    <button class="btn">Right start</button>
   </div>
   <div class="tooltip tooltip-open tooltip-right" data-tip="hello">
     <button class="btn">Right</button>
   </div>
   <div class="tooltip tooltip-open tooltip-right tooltip-end" data-tip="hello">
-    <button class="btn">Right</button>
+    <button class="btn">Right end</button>
   </div>
 </div>
 
 ```html
+<div class="$$tooltip $$tooltip-open $$tooltip-right $$tooltip-start" data-tip="hello">
+  <button class="$$btn">Right start</button>
+</div>
 <div class="$$tooltip $$tooltip-open $$tooltip-right" data-tip="hello">
   <button class="$$btn">Right</button>
+</div>
+<div class="$$tooltip $$tooltip-open $$tooltip-right $$tooltip-end" data-tip="hello">
+  <button class="$$btn">Right end</button>
 </div>
 ```
 
