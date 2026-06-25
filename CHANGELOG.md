@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.6.0 (2026-06-25)
+
+
+### Features
+
+* daisyUI 5.6 ([e37aa03](https://github.com/saadeghi/daisyui/commit/e37aa0362ac8cdc10c1ad20af88a5a0db4da31b0)), closes [#4229](https://github.com/saadeghi/daisyui/issues/4229) [#4367](https://github.com/saadeghi/daisyui/issues/4367) [#4370](https://github.com/saadeghi/daisyui/issues/4370) [#4419](https://github.com/saadeghi/daisyui/issues/4419) [#4506](https://github.com/saadeghi/daisyui/issues/4506) [#4298](https://github.com/saadeghi/daisyui/issues/4298) [#4343](https://github.com/saadeghi/daisyui/issues/4343) [#4381](https://github.com/saadeghi/daisyui/issues/4381) [#4372](https://github.com/saadeghi/daisyui/issues/4372) [#4408](https://github.com/saadeghi/daisyui/issues/4408) [#4421](https://github.com/saadeghi/daisyui/issues/4421) [#4515](https://github.com/saadeghi/daisyui/issues/4515) [#4528](https://github.com/saadeghi/daisyui/issues/4528) [#4542](https://github.com/saadeghi/daisyui/issues/4542) [#4455](https://github.com/saadeghi/daisyui/issues/4455) [#4496](https://github.com/saadeghi/daisyui/issues/4496) [#4353](https://github.com/saadeghi/daisyui/issues/4353) [#4471](https://github.com/saadeghi/daisyui/issues/4471) [#4531](https://github.com/saadeghi/daisyui/issues/4531) [#4574](https://github.com/saadeghi/daisyui/issues/4574) [#4553](https://github.com/saadeghi/daisyui/issues/4553) [#4521](https://github.com/saadeghi/daisyui/issues/4521) [#4416](https://github.com/saadeghi/daisyui/issues/4416) [#4474](https://github.com/saadeghi/daisyui/issues/4474) [#4536](https://github.com/saadeghi/daisyui/issues/4536) [#4440](https://github.com/saadeghi/daisyui/issues/4440) [#4424](https://github.com/saadeghi/daisyui/issues/4424) [#4479](https://github.com/saadeghi/daisyui/issues/4479) [#4430](https://github.com/saadeghi/daisyui/issues/4430) [#4549](https://github.com/saadeghi/daisyui/issues/4549)
+
 ## 5.5.23 (2026-06-07)
 
 ## 5.5.22 (2026-06-07)
