@@ -53,7 +53,7 @@ classnames:
   <span></span>
   <span></span>
   <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
 </label>
 
 ```html
@@ -75,7 +75,7 @@ classnames:
   <span></span>
   <span></span>
   <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" required />
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="6" pattern="[0-9]&#123;6}" required />
 </label>
 
 ```html
@@ -97,7 +97,7 @@ classnames:
   <span></span>
   <span></span>
   <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" required />
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="5" pattern="[0-9]&#123;4}" required />
 </label>
 
 ```html
@@ -106,7 +106,7 @@ classnames:
   <span></span>
   <span></span>
   <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" required />
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="5" pattern="[0-9]{4}" required />
 </label>
 ```
 
@@ -118,35 +118,35 @@ classnames:
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-sm">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-md">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-lg">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-xl">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
 </div>
 
@@ -200,56 +200,56 @@ classnames:
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-primary">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-secondary">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-accent">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-info">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-success">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-warning">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
   <label class="otp otp-error">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+    <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
 </div>
 

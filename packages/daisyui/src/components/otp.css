@@ -43,9 +43,6 @@
     &:has(> span:nth-child(4)) {
       width: calc(var(--stride) * 4);
     }
-    &:has(> span:nth-child(4)) {
-      width: calc(var(--stride) * 4);
-    }
     &:has(> span:nth-child(5)) {
       width: calc(var(--stride) * 5);
     }
@@ -62,6 +59,7 @@
     > span {
       position: absolute;
       @apply flex transition-colors;
+      transition: border-color 0.2s;
       inline-size: var(--otp-w);
       block-size: var(--otp-size);
       background-color: var(--color-base-100);
@@ -80,24 +78,40 @@
       }
       &:nth-child(2) {
         left: calc(var(--stride) * 1);
+        transition-delay: 0.02s;
       }
       &:nth-child(3) {
         left: calc(var(--stride) * 2);
+        transition-delay: 0.04s;
       }
       &:nth-child(4) {
         left: calc(var(--stride) * 3);
+        transition-delay: 0.06s;
       }
       &:nth-child(5) {
         left: calc(var(--stride) * 4);
+        transition-delay: 0.08s;
       }
       &:nth-child(6) {
         left: calc(var(--stride) * 5);
+        transition-delay: 0.1s;
       }
       &:nth-child(7) {
         left: calc(var(--stride) * 6);
+        transition-delay: 0.12s;
       }
       &:nth-child(8) {
         left: calc(var(--stride) * 7);
+        transition-delay: 0.14s;
+      }
+    }
+    &:has(input:valid:focus) {
+      > span {
+        outline: 2px solid var(--input-color);
+        outline-offset: 1px;
+      }
+      &:after {
+        opacity: 0;
       }
     }
 
