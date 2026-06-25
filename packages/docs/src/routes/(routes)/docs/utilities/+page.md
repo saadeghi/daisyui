@@ -125,13 +125,20 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 | Component       | CSS Variable                  | Description                                              |
 | --------------- | ----------------------------- | -------------------------------------------------------- |
 | Alert           | `--alert-color`               | color of the alert                                       |
+| Aura            | `--aura-angle`                | angle of the aura gradient                               |
+|                 | `--aura-padding`              | padding of the aura effect                               |
+|                 | `--aura-radius`               | border radius of the aura effect                         |
 | Badge           | `--badge-color`               | color of the badge                                       |
 |                 | `--size`                      | size of the badge                                        |
-| Button          | `--btn-color`                 | background color of the button                           |
+| Button          | `--btn-bg`                    | background color of the button                           |
+|                 | `--btn-border`                | border color of the button                               |
+|                 | `--btn-border-style`          | border style of the button                               |
+|                 | `--btn-color`                 | background color of the button                           |
 |                 | `--btn-fg`                    | foreground color of the button                           |
+|                 | `--btn-inset`                 | inset shadow of the button                               |
 |                 | `--btn-rest-fg`               | foreground color of the button in default/rest state     |
 |                 | `--btn-shadow`                | shadow of the button                                     |
-|                 | `--btn-noise`                 | noise background of the button if enabled                |
+|                 | `--btn-soft-bg`               | background mix base of the soft button                   |
 |                 | `--btn-p`                     | padding of the button                                    |
 |                 | `--size`                      | size of the button                                       |
 | Card            | `--card-p`                    | padding of the card body                                 |
@@ -140,9 +147,12 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 | Checkbox        | `--size`                      | size of the checkbox                                     |
 | Countdown       | `--value`                     | value of the countdown                                   |
 |                 | `--digits`                    | minimum number of digits for countdown                   |
+| Collapse        | `--overflow-delay`            | overflow transition delay of the collapse content        |
 | Divider         | `--divider-m`                 | margin of the divider                                    |
 | Dropdown        | `--anchor-v`                  | vertical position of the anchor                          |
 |                 | `--anchor-h`                  | horizontal position of the anchor                        |
+| Fab             | `--degree`                    | angle of the floating action button item                 |
+|                 | `--position`                  | distance of the floating action button item              |
 | File input      | `--input-color`               | color of the file input                                  |
 |                 | `--size`                      | size of the file input                                   |
 | Hover 3D        | `--ease`                      | easing-animation                                         |
@@ -159,14 +169,31 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 | Input           | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the input                                        |
 |                 | `--font-size`                 | font-size of the input                                   |
+|                 | `--font-size-min`             | minimum font-size of the input                           |
+|                 | `--in-size-mul`               | size multiplier of the input                             |
+|                 | `--spin-my`                   | vertical margin of the number input spin button          |
+|                 | `--top-mul`                   | floating label top position multiplier                   |
 | Kbd             | `--size`                      | size of the kbd                                          |
 | List            | `--list-grid-cols`            | grid columns of the list                                 |
 | Menu            | `--menu-active-fg`            | foreground color of the active menu item                 |
 |                 | `--menu-active-bg`            | background color of the active menu item                 |
+| Megamenu        | `--fontsize`                  | font size of the megamenu item                           |
+|                 | `--mm-anchor`                 | active anchor of the megamenu item                       |
+|                 | `--mm-backdrop`               | backdrop color of the megamenu                           |
+|                 | `--mm-display`                | display value of the megamenu content                    |
+|                 | `--mm-mt`                     | margin top of the megamenu                               |
+|                 | `--mm-p`                      | padding of the megamenu item                             |
+|                 | `--size`                      | size of the megamenu item                                |
 | Modal           | `--modal-tl`                  | top left border radius of the modal                      |
 |                 | `--modal-tr`                  | top right border radius of the modal                     |
 |                 | `--modal-bl`                  | bottom left border radius of the modal                   |
 |                 | `--modal-br`                  | bottom right border radius of the modal                  |
+| OTP             | `--input-color`               | color of the OTP input                                   |
+|                 | `--otp-ch`                    | character width of the OTP input                         |
+|                 | `--otp-gap`                   | gap of the OTP input boxes                               |
+|                 | `--otp-size`                  | size of the OTP input boxes                              |
+|                 | `--otp-w`                     | width of the OTP input boxes                             |
+|                 | `--stride`                    | spacing stride of the OTP input boxes                    |
 | Radial progress | `--value`                     | value of the radial progress                             |
 |                 | `--size`                      | size of the radial progress                              |
 |                 | `--thickness`                 | thickness of the radial progress                         |
@@ -177,11 +204,19 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--range-thumb-size`          | size of the range slider thumb                           |
 |                 | `--range-progress`            | color of the range slider progress                       |
 |                 | `--range-fill`                | binary, whether to fill the range slider progress or not |
+|                 | `--range-fill-spread`         | spread of the range slider fill                          |
+|                 | `--range-fill-x`              | horizontal offset of the range slider fill               |
+|                 | `--range-fill-y`              | vertical offset of the range slider fill                 |
 |                 | `--range-p`                   | padding of the range slider thumb                        |
 |                 | `--size`                      | size of the range slider                                 |
 | Rating          | `--size`                      | size of the rating element                               |
 | Select          | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the select                                       |
+|                 | `--font-size`                 | font-size of the select                                  |
+|                 | `--font-size-min`             | minimum font-size of the select                          |
+|                 | `--option-px`                 | horizontal padding of the select option                  |
+|                 | `--sl-size-mul`               | size multiplier of the select                            |
+|                 | `--top-mul`                   | floating label top position multiplier                   |
 | Tab             | `--tabs-height`               | height of the tabs                                       |
 |                 | `--tabs-direction`            | direction of the tabs                                    |
 |                 | `--tab-p`                     | padding of the tab                                       |
@@ -214,6 +249,8 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 | Textarea        | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the textarea                                     |
 |                 | `--font-size`                 | font-size of the textarea                                |
+|                 | `--font-size-min`             | minimum font-size of the textarea                        |
+|                 | `--top-mul`                   | floating label top position multiplier                   |
 | Timeline        | `--timeline-row-start`        | start position of the timeline row                       |
 |                 | `--timeline-row-end`          | end position of the timeline row                         |
 |                 | `--timeline-col-start`        | start position of the timeline column                    |
@@ -224,15 +261,20 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--size`                      | size of the toggle                                       |
 | Tooltip         | `--tt-bg`                     | background color of the tooltip                          |
 |                 | `--tt-off`                    | offset of the tooltip                                    |
+|                 | `--tt-inset`                  | inset position of the tooltip                            |
 |                 | `--tt-tail`                   | position of the tooltip tail                             |
+|                 | `--tt-tail-inset`             | inset position of the tooltip tail                       |
 |                 | `--tt-tail-off`               | offset of the tooltip tail from start/end                |
+|                 | `--tt-trans`                  | transform offset of the tooltip                          |
 | Glass           | `--glass-blur`                | blur of the glass effect                                 |
 |                 | `--glass-opacity`             | opacity of the glass effect                              |
 |                 | `--glass-reflect-degree`      | degree of the glass reflection                           |
 |                 | `--glass-reflect-opacity`     | opacity of the glass reflection                          |
 |                 | `--glass-border-opacity`      | opacity of the glass border                              |
 |                 | `--glass-text-shadow-opacity` | opacity of the glass text shadow                         |
-| Join            | `--join-ss`                   | start start border radius of the join                    |
+| Join            | `--join-h`                    | horizontal join direction                                |
+|                 | `--join-v`                    | vertical join direction                                  |
+|                 | `--join-ss`                   | start start border radius of the join                    |
 |                 | `--join-se`                   | start end border radius of the join                      |
 |                 | `--join-es`                   | end start border radius of the join                      |
 |                 | `--join-ee`                   | end end border radius of the join                        |
