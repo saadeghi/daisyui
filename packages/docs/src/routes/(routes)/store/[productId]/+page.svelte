@@ -229,10 +229,7 @@
           </div>
 
           {#if discount.data.attributes.expires_at}
-            <DiscountCountdown
-              expiresAt={discount.data.attributes.expires_at}
-              variant="neutral"
-            />
+            <DiscountCountdown expiresAt={discount.data.attributes.expires_at} variant="neutral" />
           {/if}
         </div>
       </div>

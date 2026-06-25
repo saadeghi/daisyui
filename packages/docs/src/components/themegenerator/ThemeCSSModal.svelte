@@ -116,8 +116,7 @@
         spellcheck="false"
         class="textarea textarea-border textarea-xs block h-96 min-h-80 w-full max-w-none resize-none font-mono"
         value={themeCSS}
-        oninput={handleThemeCSSInput}
-      ></textarea>
+        oninput={handleThemeCSSInput}></textarea>
     </div>
   </div>
   <div class="modal-backdrop" onclick={() => dialog.close()}></div>

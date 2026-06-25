@@ -836,8 +836,7 @@
 
               <textarea
                 class="textarea textarea-border max-w-none resize-none"
-                placeholder="What's happening?"
-              ></textarea>
+                placeholder="What's happening?"></textarea>
 
               <p class="px-2 text-xs opacity-40">1200 characters remaining</p>
 
