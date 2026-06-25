@@ -14,7 +14,7 @@
     text-align: start;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    background-size: auto, calc(var(--noise) * 100%);
+    background-size: auto, calc(var(--noise) * 33%);
     background-image: none, var(--fx-noise);
     box-shadow:
       0 3px 0 -2px oklch(100% 0 0 / calc(var(--depth) * 0.08)) inset,
