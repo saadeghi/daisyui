@@ -1,6 +1,6 @@
 ---
-title: "daisyUI 5.6 Beta"
-desc: daisyUI 5.6 beta is here with 3 new components, new ways to use existing components, and many small improvements across the library.
+title: "daisyUI 5.6"
+desc: daisyUI 5.6 is here with 3 new components, new ways to use existing components, and many small improvements across the library.
 published: true
 date: 2026-06-25
 author: Pouya Saadeghi
@@ -13,10 +13,10 @@ tags:
   import Translate from "$components/Translate.svelte"
 </script>
 
-Try the beta version now:
+Try the new version now:
 
 ```bash
-npm i daisyui@5.6.0-beta.1
+npm i daisyui@5.6.0
 ```
 
 ## New components
@@ -147,11 +147,11 @@ Many small improvements are coming in 5.6. Here are some highlights:
 
 ## Try it and send feedback
 
-daisyUI 5.6 Beta is ready to use now, and you can install it with:
+daisyUI 5.6 is ready to use now, and you can install it with:
 
 ```bash
-npm i daisyui@5.6.0-beta.1
+npm i daisyui@5.6.0
 ```
 
-If you find a bug or if something feels confusing, please open an issue or discussion on [GitHub](https://github.com/saadeghi/daisyui) or [Discord](https://daisyui.com/discord). Feedback during beta helps because small fixes are much easier before the stable release.
+If you find a bug or if something feels confusing, please open an issue or discussion on [GitHub](https://github.com/saadeghi/daisyui) or [Discord](https://daisyui.com/discord).
 
