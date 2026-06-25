@@ -457,7 +457,7 @@
   <div>
     <div class="inline-block">
       <div class="me-6 -mb-2 self-end text-end font-mono text-[0.625rem] text-blue-600">
-        Version 1.3
+        Version 1.4
       </div>
       <div class="mb-4 inline-grid grid-cols-[1rem_1fr_1rem] grid-rows-[1rem_1fr_1rem]">
         <div class="border-s-2 border-t-2 border-blue-600 [grid-area:1/1/2/2]"></div>
@@ -3244,8 +3244,8 @@
             ></path></g
           ></svg
         >
-        Done. All the the parts that could be converted to daisyUI components have been updated. Now
-        the page is smaller and uses less class names.
+        Done. All the the parts that could be converted to daisyUI components have been updated. Now the
+        page is smaller and uses less class names.
       </div>
 
       <!-- AI input -->
@@ -3550,8 +3550,8 @@
             ></path></g
           ></svg
         >
-        Done. All the the parts that could be converted to daisyUI components have been updated. Now
-        the page is smaller and uses less class names.
+        Done. All the the parts that could be converted to daisyUI components have been updated. Now the
+        page is smaller and uses less class names.
       </div>
 
       <!-- AI input -->
@@ -4861,8 +4861,8 @@
               2. Select the <span class="font-bold">Configure</span> tab.
             </p>
             <p class="text-base-content/70 mb-2">
-              3. Click the <span class="font-bold">Configure MCP Servers</span> button at the bottom
-              of the pane.
+              3. Click the <span class="font-bold">Configure MCP Servers</span> button at the bottom of
+              the pane.
             </p>
             <p class="text-base-content/70 mb-2">
               4. Add this configuration to <code class="text-xs">cline_mcp_settings.json</code>:
@@ -5060,8 +5060,8 @@
               <pre><code class="text-[10px]">npm install -g opencode-ai</code></pre>
             </div>
             <p class="text-base-content/70 mb-2">
-              2. Create or edit your <code class="text-xs">opencode.json</code> in your project root
-              and add the Blueprint MCP configuration:
+              2. Create or edit your <code class="text-xs">opencode.json</code> in your project root and
+              add the Blueprint MCP configuration:
             </p>
             <div class="mockup-code w-full leading-none">
               <pre><code class="text-[10px]"

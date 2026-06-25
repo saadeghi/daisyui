@@ -5,7 +5,7 @@
 /* @plugin "@tailwindcss/typography"; */
 
 @plugin "daisyui" {
-  themes: all;
+  themes: light --default;
 }
 
 /* .btn {

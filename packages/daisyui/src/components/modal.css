@@ -2,6 +2,7 @@
   @layer daisyui.l1.l2.l3 {
     @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
     transition:
+      overlay 0.3s allow-discrete,
       visibility 0.3s allow-discrete,
       background-color 0.3s ease-out,
       opacity 0.1s ease-out;
@@ -13,11 +14,26 @@
     &::backdrop {
       @apply hidden;
     }
+    &[popover] {
+      inset: 0;
+      margin: 0;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: inherit;
+      max-width: none;
+      max-height: none;
+      &::backdrop {
+        background-color: oklch(0% 0 0/ 0.4);
+        transition: background-color 0.3s ease-out;
+      }
+    }
   }
 
   @layer daisyui.l1.l2 {
     &.modal-open,
     &[open],
+    &:popover-open,
     &:target,
     .modal-toggle:checked + & {
       @apply pointer-events-auto visible opacity-100;
@@ -34,19 +50,14 @@
       }
 
       :root:has(&) {
-        --page-has-backdrop: 1;
-        --page-overflow: hidden;
-        --page-scroll-bg: var(--page-scroll-bg-on);
-        --page-scroll-gutter: stable;
-        --page-scroll-transition: var(--page-scroll-transition-on);
-        animation: set-page-has-scroll forwards;
-        animation-timeline: scroll();
+        --page-scroll-lock: ;
       }
     }
 
     @starting-style {
       &.modal-open,
       &[open],
+      &:popover-open,
       &:target,
       .modal-toggle:checked + & {
         @apply opacity-0;

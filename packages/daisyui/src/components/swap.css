@@ -1,5 +1,5 @@
 .swap {
-  @layer daisyui.l1.l2.l3 {
+  @layer daisyui.l1.l2 {
     @apply relative inline-grid cursor-pointer place-content-center align-middle select-none;
 
     input {
@@ -37,7 +37,7 @@
 }
 
 .swap-active {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1 {
     .swap-off {
       @apply opacity-0;
     }
@@ -45,11 +45,33 @@
     .swap-on {
       @apply opacity-100;
     }
+
+    &.swap-rotate {
+      .swap-on {
+        @apply rotate-0;
+      }
+
+      .swap-off {
+        @apply -rotate-45;
+      }
+    }
+
+    &.swap-flip {
+      .swap-on {
+        transform: rotateY(0deg);
+      }
+
+      .swap-off {
+        transform: rotateY(-180deg);
+        backface-visibility: hidden;
+        @apply opacity-100;
+      }
+    }
   }
 }
 
 .swap-rotate {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1 {
     .swap-on,
     input:indeterminate ~ .swap-on {
       @apply rotate-45;
@@ -68,7 +90,7 @@
 }
 
 .swap-flip {
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1 {
     transform-style: preserve-3d;
     perspective: 20rem;
 

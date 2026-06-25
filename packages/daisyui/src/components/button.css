@@ -10,45 +10,105 @@
 
 .btn {
   @layer daisyui.l1.l2.l3 {
+    --size: calc(var(--size-field, 0.25rem) * 10);
+    --btn-p: 1rem;
+    --btn-fg: var(--color-base-content);
+
     @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle outline-offset-2 select-none;
-    padding-inline: var(--btn-p);
-    color: var(--btn-fg);
-    --tw-prose-links: var(--btn-fg);
-    height: var(--size);
-    font-size: var(--fontsize, 0.875rem);
     font-weight: 600;
-    outline-color: var(--btn-color, var(--color-base-content));
-    transition-property: color, background-color, border-color, box-shadow;
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    transition-duration: 0.2s;
     border-start-start-radius: var(--join-ss, var(--radius-field));
     border-start-end-radius: var(--join-se, var(--radius-field));
     border-end-start-radius: var(--join-es, var(--radius-field));
     border-end-end-radius: var(--join-ee, var(--radius-field));
-    background-color: var(--btn-bg);
-    background-size: auto, calc(var(--noise) * 100%);
-    background-image: none, var(--btn-noise);
     border-width: var(--border);
-    border-style: solid;
-    border-color: var(--btn-border);
-    text-shadow: 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 0.15));
     touch-action: manipulation;
-    box-shadow:
-      0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%)) inset,
-      var(--btn-shadow);
-    --size: calc(var(--size-field, 0.25rem) * 10);
+    transition-property: color, background-color, border-color, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 0.2s;
+
     --btn-bg: var(--btn-color, var(--color-base-200));
-    --btn-fg: var(--color-base-content);
-    --btn-p: 1rem;
-    --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
+    --btn-border: color-mix(
+      in oklab,
+      var(--btn-color, var(--color-base-200)),
+      #000 calc(var(--depth) * 5%)
+    );
+    --btn-soft-bg: initial;
     --btn-shadow:
       0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
       0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
-    --btn-noise: var(--fx-noise);
+    --btn-inset: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
+
+    height: var(--size);
+    padding-inline: var(--btn-p);
+    font-size: var(--fontsize, 0.875rem);
+    background-color: var(--btn-bg);
+    color: var(--btn-fg);
+    border-color: var(--btn-border);
+    border-style: var(--btn-border-style, solid);
+    outline-color: var(--btn-color, var(--color-base-content));
+    --tw-prose-links: var(--btn-fg);
+
+    background-image: none, var(--fx-noise);
+    background-size: auto, calc(var(--noise, 0) * 100%);
+    text-shadow: 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 0.15));
+    box-shadow:
+      var(--btn-inset) inset,
+      var(--btn-shadow);
+
+    &:is([type="checkbox"], [type="radio"]) {
+      @apply appearance-none;
+
+      &[aria-label]::after {
+        --tw-content: attr(aria-label);
+        content: var(--tw-content);
+      }
+    }
+  }
+
+  @layer daisyui.l1.l2 {
+    &:where(:checked:not(.filter [type="radio"].btn), .btn-active) {
+      --btn-color: var(--color-primary);
+      --btn-fg: var(--color-primary-content);
+      isolation: isolate;
+    }
+
     @media (hover: hover) {
       &:hover {
         --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+        color: var(--btn-fg);
+        --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
+        --btn-border-style: solid;
+        --btn-inset: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
+        --btn-shadow:
+          0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
+          0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
       }
+    }
+
+    &:active:not(.btn-active) {
+      translate: 0 0.5px;
+      --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
+      color: var(--btn-fg, var(--color-base-content));
+      --btn-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+      --btn-border-style: solid;
+      --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
+      --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
+    }
+
+    &:where(
+      :checked:not(.filter [type="radio"].btn),
+      .btn-active,
+      :not([type="radio"], [type="checkbox"]):focus-visible
+    ) {
+      --btn-bg: var(--btn-color, var(--color-base-200));
+      color: var(--btn-fg, var(--color-base-content));
+      --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
+      --btn-border-style: solid;
+      --btn-inset: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
+      --btn-shadow:
+        0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
+        0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
+      isolation: isolate;
     }
 
     &:focus-visible,
@@ -57,239 +117,133 @@
       outline-style: solid;
       isolation: isolate;
     }
-
-    &:active:not(.btn-active) {
-      translate: 0 0.5px;
-      --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
-      --btn-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-      --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
-    }
-
-    &:is(input[type="checkbox"], input[type="radio"]) {
-      @apply appearance-none;
-
-      /* &:not(.btn-square, .btn-circle) {
-        @apply w-auto;
-      } */
-
-      &[aria-label]::after {
-        --tw-content: attr(aria-label);
-        content: var(--tw-content);
-      }
-    }
-    &:where(input:checked:not(.filter .btn)) {
-      --btn-color: var(--color-primary);
-      --btn-fg: var(--color-primary-content);
-      isolation: isolate;
-    }
-  }
-}
-
-.btn-disabled,
-.btn:disabled,
-.btn[disabled] {
-  @layer daisyui.l1.l2 {
-    &:not(.btn-link, .btn-ghost) {
-      @apply bg-base-content/10;
-      box-shadow: none;
-    }
-
-    @apply pointer-events-none;
-    --btn-border: #0000;
-    --btn-noise: none;
-    --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
-  }
-}
-
-.btn-active {
-  @layer daisyui.l1.l2 {
-    --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
-    isolation: isolate;
-  }
-}
-
-.btn-primary {
-  @layer daisyui.l1.l2.l3 {
-    --btn-color: var(--color-primary);
-    --btn-fg: var(--color-primary-content);
-  }
-}
-
-.btn-secondary {
-  @layer daisyui.l1.l2.l3 {
-    --btn-color: var(--color-secondary);
-    --btn-fg: var(--color-secondary-content);
-  }
-}
-
-.btn-accent {
-  @layer daisyui.l1.l2.l3 {
-    --btn-color: var(--color-accent);
-    --btn-fg: var(--color-accent-content);
-  }
-}
-
-.btn-neutral {
-  @layer daisyui.l1.l2.l3 {
-    --btn-color: var(--color-neutral);
-    --btn-fg: var(--color-neutral-content);
-  }
-}
-
-.btn-info {
-  @layer daisyui.l1.l2.l3 {
-    --btn-color: var(--color-info);
-    --btn-fg: var(--color-info-content);
-  }
-}
-
-.btn-success {
-  @layer daisyui.l1.l2.l3 {
-    --btn-color: var(--color-success);
-    --btn-fg: var(--color-success-content);
-  }
-}
-
-.btn-warning {
-  @layer daisyui.l1.l2.l3 {
-    --btn-color: var(--color-warning);
-    --btn-fg: var(--color-warning-content);
-  }
-}
-
-.btn-error {
-  @layer daisyui.l1.l2.l3 {
-    --btn-color: var(--color-error);
-    --btn-fg: var(--color-error-content);
-  }
-}
-
-.btn-ghost {
-  @layer daisyui.l1 {
-    &:not(.btn-active, :hover, :active:focus, :focus-visible, input:checked:not(.filter .btn)) {
-      --btn-shadow: "";
-      --btn-bg: #0000;
-      --btn-border: #0000;
-      --btn-noise: none;
-      &:not(:disabled, [disabled], .btn-disabled) {
-        @apply outline-current;
-        --btn-fg: var(--btn-color, currentColor);
-      }
-    }
-
-    @media (hover: none) {
-      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
-        @apply outline-current;
-        --btn-shadow: "";
-        --btn-bg: #0000;
-        --btn-fg: var(--btn-color, currentColor);
-        --btn-border: #0000;
-        --btn-noise: none;
-      }
-    }
-  }
-}
-
-.btn-link {
-  @layer daisyui.l1 {
-    @apply underline outline-current;
-    --btn-border: #0000;
-    --btn-bg: #0000;
-    --btn-noise: none;
-    --btn-shadow: "";
-
-    &:not(.btn-disabled, .btn:disabled, .btn[disabled]) {
-      --btn-fg: var(--btn-color, var(--color-primary));
-    }
-
-    &:is(.btn-active, :hover, :active:focus, :focus-visible) {
-      --btn-border: #0000;
-      --btn-bg: #0000;
-    }
   }
 }
 
 .btn-outline,
 .btn-dash {
-  @layer daisyui.l1 {
-    &:not(
-      .btn-active,
-      :hover,
-      :active:focus,
-      :focus-visible,
-      input:checked:not(.filter .btn),
-      :disabled,
-      [disabled],
-      .btn-disabled
-    ) {
-      --btn-shadow: "";
-      --btn-bg: #0000;
-      --btn-fg: var(--btn-color);
-      --btn-border: var(--btn-color);
-      --btn-noise: none;
-    }
-
-    @media (hover: none) {
-      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
-        --btn-shadow: "";
-        --btn-bg: #0000;
-        --btn-fg: var(--btn-color);
-        --btn-border: var(--btn-color);
-        --btn-noise: none;
-      }
-    }
+  @layer daisyui.l1.l2.l3 {
+    --btn-bg: #0000;
+    color: var(--btn-rest-fg, var(--btn-color, var(--color-base-content)));
+    --btn-border: var(--btn-color, var(--color-base-content));
+    --btn-border-style: solid;
+    background-image: none;
+    --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
   }
 }
 
 .btn-dash {
-  border-style: dashed;
+  @layer daisyui.l1.l2.l3 {
+    --btn-border-style: dashed;
+  }
+}
+
+.btn-ghost {
+  @layer daisyui.l1.l2.l3 {
+    --btn-bg: #0000;
+    color: var(--btn-rest-fg, var(--btn-color, var(--color-base-content, currentColor)));
+    --btn-border: #0000;
+    background-image: none;
+    --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
+  }
 }
 
 .btn-soft {
-  @layer daisyui.l1 {
-    &:not(
-      .btn-active,
-      :hover,
-      :active:focus,
-      :focus-visible,
-      input:checked:not(.filter .btn),
-      :disabled,
-      [disabled],
-      .btn-disabled
-    ) {
-      --btn-shadow: "";
-      --btn-fg: var(--btn-color, var(--color-base-content));
-      --btn-bg: color-mix(
-        in oklab,
-        var(--btn-color, var(--color-base-content)) 8%,
-        var(--color-base-100)
-      );
-      --btn-border: color-mix(
-        in oklab,
-        var(--btn-color, var(--color-base-content)) 10%,
-        var(--color-base-100)
-      );
-      --btn-noise: none;
-    }
+  @layer daisyui.l1.l2.l3 {
+    --btn-bg: color-mix(
+      in oklab,
+      var(--btn-color, var(--color-base-content)) 8%,
+      var(--btn-soft-bg, var(--color-base-100))
+    );
+    color: var(--btn-rest-fg, var(--btn-color, var(--color-base-content)));
+    --btn-border: color-mix(
+      in oklab,
+      var(--btn-color, var(--color-base-content)) 10%,
+      var(--btn-soft-bg, var(--color-base-100))
+    );
+    --btn-border-style: solid;
+    background-image: none;
+    --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
+  }
+}
 
-    @media (hover: none) {
-      &:not(.btn-active, :active, :focus-visible, input:checked:not(.filter .btn)):hover {
-        --btn-shadow: "";
-        --btn-fg: var(--btn-color, var(--color-base-content));
-        --btn-bg: color-mix(
-          in oklab,
-          var(--btn-color, var(--color-base-content)) 8%,
-          var(--color-base-100)
-        );
-        --btn-border: color-mix(
-          in oklab,
-          var(--btn-color, var(--color-base-content)) 10%,
-          var(--color-base-100)
-        );
-        --btn-noise: none;
-      }
-    }
+.btn-link {
+  @layer daisyui.l1 {
+    @apply underline;
+    --btn-bg: #0000;
+    color: var(--btn-color, var(--color-primary));
+    --btn-border: #0000;
+    background-image: none;
+    --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
+  }
+}
+
+.btn-primary {
+  @layer daisyui.l1.l2 {
+    --btn-color: var(--color-primary);
+    --btn-fg: var(--color-primary-content);
+    --btn-soft-bg: initial;
+  }
+}
+
+.btn-secondary {
+  @layer daisyui.l1.l2 {
+    --btn-color: var(--color-secondary);
+    --btn-fg: var(--color-secondary-content);
+    --btn-soft-bg: initial;
+  }
+}
+
+.btn-accent {
+  @layer daisyui.l1.l2 {
+    --btn-color: var(--color-accent);
+    --btn-fg: var(--color-accent-content);
+    --btn-soft-bg: initial;
+  }
+}
+
+.btn-neutral {
+  @layer daisyui.l1.l2 {
+    --btn-color: var(--color-neutral);
+    --btn-fg: var(--color-neutral-content);
+    --btn-soft-bg: var(--color-neutral-content) 80%;
+    --btn-rest-fg: initial;
+  }
+}
+
+.btn-info {
+  @layer daisyui.l1.l2 {
+    --btn-color: var(--color-info);
+    --btn-fg: var(--color-info-content);
+    --btn-soft-bg: initial;
+  }
+}
+
+.btn-success {
+  @layer daisyui.l1.l2 {
+    --btn-color: var(--color-success);
+    --btn-fg: var(--color-success-content);
+    --btn-soft-bg: initial;
+  }
+}
+
+.btn-warning {
+  @layer daisyui.l1.l2 {
+    --btn-color: var(--color-warning);
+    --btn-fg: var(--color-warning-content);
+    --btn-soft-bg: initial;
+  }
+}
+
+.btn-error {
+  @layer daisyui.l1.l2 {
+    --btn-color: var(--color-error);
+    --btn-fg: var(--color-error-content);
+    --btn-soft-bg: initial;
   }
 }
 
@@ -333,6 +287,18 @@
   }
 }
 
+.btn-wide {
+  @layer daisyui.l1.l2 {
+    @apply w-full max-w-64;
+  }
+}
+
+.btn-block {
+  @layer daisyui.l1.l2 {
+    @apply w-full;
+  }
+}
+
 .btn-square {
   @layer daisyui.l1.l2 {
     @apply px-0;
@@ -349,14 +315,19 @@
   }
 }
 
-.btn-wide {
-  @layer daisyui.l1.l2 {
-    @apply w-full max-w-64;
-  }
-}
+.btn-disabled,
+.btn:is(:disabled, [disabled], [aria-disabled="true"]) {
+  @layer daisyui {
+    @apply pointer-events-none;
+    color: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+    --btn-bg: #0000;
+    --btn-border: #0000;
+    background-image: none;
+    --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
 
-.btn-block {
-  @layer daisyui.l1.l2 {
-    @apply w-full;
+    &:not(.btn-link, .btn-ghost) {
+      @apply bg-base-content/10;
+    }
   }
 }

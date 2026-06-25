@@ -5,12 +5,12 @@ source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/pac
 layout: components
 classnames:
   component:
-  - class: 'cally'
-    desc: for Cally web component
-  - class: 'pika-single'
-    desc: for the input field that opens Pikaday calendar
-  - class: 'react-day-picker'
-    desc: for the DayPicker component
+    - class: "cally"
+      desc: for Cally web component
+    - class: "react-day-picker"
+      desc: for the DayPicker component
+    - class: "vc"
+      desc: for Vanilla Calendar Pro
 ---
 
 <script>
@@ -35,8 +35,8 @@ Use any of them, based on your needs.
 You don't need to import the CSS files for these libraries. daisyUI will style them automatically.
 
 - [Cally web component](https://github.com/WickyNilliams/cally) - Works everywhere
-- [Pikaday](https://github.com/Pikaday/Pikaday) - Works everywhere
 - [React Day picker](https://github.com/gpbl/react-day-picker) - React only
+- [Vanilla Calendar Pro](https://github.com/uvarov-frontend/vanilla-calendar-pro) - Works everywhere
 
 ## 1. Cally Calendar
 
@@ -108,86 +108,7 @@ import "cally";
 ```
 <div use:prefixClassNames>
 
-## 2. Pikaday Calendar
-
-Pikaday is a JS datepicker library and you can use it from CDN or as a JS dependency [Read the docs](https://github.com/Pikaday/Pikaday)
-
-### Pikaday CDN Example
-
-```html:html
-<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-<input type="text" class="$$input $$pika-single" id="myDatepicker">
-<script>
-  var picker = new Pikaday({ field: document.getElementById('myDatepicker') });
-</script>
-```
-
-### Pikaday Svelte Example
-
-```:Install
-npm i pikaday
-```
-```svelte:file.svelte
-<script>
-  import Pikaday from "pikaday";
-  let myDatepicker;
-  $effect(() => {
-    if (myDatepicker) {
-      const picker = new Pikaday({
-        field: myDatepicker
-      });
-      return () => picker.destroy();
-    }
-  });
-</script>
-
-<input type="text" class="$$input $$pika-single"  bind:this={myDatepicker} value="Pick a day" />
-```
-
-### Pikaday Vue Example
-
-```:Install
-npm i pikaday
-```
-```vue:file.vue
-<script>
-import Pikaday from "pikaday";
-export default {
-  mounted: function() {
-    const picker = new Pikaday({
-      field: this.$refs.myDatepicker
-    });
-  }
-};
-</script>
-<template>
-  <input type="text" class="$$input $$pika-single" ref="myDatepicker" value="Pick a day"/>
-</template>
-```
-
-### Pikaday React Example
-
-```:Install
-npm i pikaday
-```
-```jsx:file.tsx
-import { useEffect, useRef } from "react";
-import Pikaday from "pikaday";
-
-export default function App() {
-  const myDatepicker = useRef(null);
-  useEffect(() => {
-    const picker = new Pikaday({
-      field: myDatepicker.current
-    });
-    return () => picker.destroy();
-  }, []);
-  return (
-    <input type="text" className="$$input $$pika-single" defaultValue="Pick a date" ref={myDatepicker} />
-  );
-}
-```
-## 3. React Day Picker calendar
+## 2. React Day Picker calendar
 
 React Day Picker is a flexible date picker component for React. [Read the docs](https://github.com/gpbl/react-day-picker)
 
@@ -213,6 +134,43 @@ export default function App() {
     </>
   );
 }
+```
+
+## 3. Vanilla Calendar Pro
+
+Vanilla Calendar Pro is a JavaScript calendar library. [Read the docs](https://github.com/uvarov-frontend/vanilla-calendar-pro)
+
+### Vanilla Calendar Pro Example
+
+```:Install
+npm i vanilla-calendar-pro
+```
+
+```html
+<div id="calendar" class="$$vc"></div>
+```
+
+```js
+import { Calendar } from "vanilla-calendar-pro"
+
+const calendar = new Calendar("#calendar")
+calendar.init()
+```
+
+### Vanilla Calendar Pro CDN Example
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/index.js" defer></script>
+
+<div id="calendar" class="$$vc"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const { Calendar } = window.VanillaCalendarPro
+    const calendar = new Calendar("#calendar")
+    calendar.init()
+  })
+</script>
 ```
 
 </div>

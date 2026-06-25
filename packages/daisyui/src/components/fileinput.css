@@ -33,7 +33,7 @@
       font-weight: 600;
       background-color: var(--btn-bg);
       background-size: calc(var(--noise) * 100%);
-      background-image: var(--btn-noise);
+      background-image: var(--fx-noise);
       text-shadow: 0 0.5px oklch(1 0 0 / calc(var(--depth) * 0.15));
       box-shadow:
         0 0.5px 0 0.5px
@@ -51,7 +51,6 @@
       --btn-shadow:
         0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000),
         0 4px 3px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000);
-      --btn-noise: var(--fx-noise);
     }
 
     &:focus {
@@ -70,7 +69,7 @@
       &::file-selector-button {
         @apply border-base-200 bg-base-200 cursor-not-allowed;
         --btn-border: #0000;
-        --btn-noise: none;
+        background-image: none;
         --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
       }
     }

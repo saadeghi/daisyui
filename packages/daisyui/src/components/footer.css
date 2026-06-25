@@ -4,14 +4,14 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
 
-    & > * {
+    & > *:not(script, style, template) {
       @apply grid place-items-start gap-2;
     }
 
     &.footer-center {
       @apply grid-flow-col-dense place-items-center text-center;
 
-      & > * {
+      & > *:not(script, style, template) {
         @apply place-items-center;
       }
     }

@@ -48,6 +48,10 @@
   "main": "./index.js",
   "module": "./index.js",
   "browser": "./daisyui.css",
+  "exports": {
+    ".": "./index.js",
+    "./*": "./*"
+  },
   "files": [
     "base",
     "colors",

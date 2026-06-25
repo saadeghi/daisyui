@@ -1,6 +1,8 @@
 .fab {
   @layer daisyui.l1.l2.l3 {
-    @apply pointer-events-none fixed end-4 bottom-4 z-999 flex flex-col-reverse items-end gap-2 text-sm whitespace-nowrap;
+    /* select-none: stop Safari from selecting the trigger/labels on the click
+       that toggles :focus-within (also emits the -webkit- prefix Safari needs). */
+    @apply pointer-events-none fixed end-4 bottom-4 z-999 flex flex-col-reverse items-end gap-2 text-sm whitespace-nowrap select-none;
     > * {
       @apply pointer-events-auto flex items-center gap-2;
       &:hover,
@@ -76,7 +78,11 @@
   @layer daisyui.l1.l2.l3 {
     @apply grid;
     --position: 0rem;
-    > *:nth-child(-n + 2) {
+    /* Center the trigger and an explicit main-action/close by identity (not by
+       position), so the first real action fans out when neither is present. */
+    > *:nth-child(1),
+    > .fab-main-action,
+    > .fab-close {
       --position: 0rem;
     }
     > * {
@@ -133,6 +139,55 @@
       }
       > :nth-child(6) {
         --degree: 90deg;
+      }
+    }
+    /* No main-action/close: the first action (2nd child) fans out too, so the arc
+       starts at the 2nd child — same degrees as above, shifted by one child. */
+    &:not(:has(.fab-main-action, .fab-close)) {
+      > :nth-child(n + 6) {
+        @apply hidden;
+      }
+      &:has(:nth-child(2)) {
+        --position: 140%;
+        > :nth-child(2) {
+          --degree: 135deg;
+        }
+      }
+      &:has(:nth-child(3)) {
+        --position: 140%;
+        > :nth-child(2) {
+          --degree: 165deg;
+        }
+        > :nth-child(3) {
+          --degree: 105deg;
+        }
+      }
+      &:has(:nth-child(4)) {
+        --position: 180%;
+        > :nth-child(2) {
+          --degree: 180deg;
+        }
+        > :nth-child(3) {
+          --degree: 135deg;
+        }
+        > :nth-child(4) {
+          --degree: 90deg;
+        }
+      }
+      &:has(:nth-child(5)) {
+        --position: 220%;
+        > :nth-child(2) {
+          --degree: 180deg;
+        }
+        > :nth-child(3) {
+          --degree: 150deg;
+        }
+        > :nth-child(4) {
+          --degree: 120deg;
+        }
+        > :nth-child(5) {
+          --degree: 90deg;
+        }
       }
     }
   }

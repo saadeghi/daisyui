@@ -500,3 +500,21 @@ classnames:
   <option>Velvet</option>
 </select>
 ```
+
+### ~Select with custom dropdown height
+
+<select class="select [&::picker(select)]:max-h-26">
+  <option disabled selected>Pick a color</option>
+  <option>Crimson</option>
+  <option>Amber</option>
+  <option>Velvet</option>
+</select>
+
+```html
+<select class="$$select [&::picker(select)]:max-h-26">
+  <option disabled selected>Pick a color</option>
+  <option>Crimson</option>
+  <option>Amber</option>
+  <option>Velvet</option>
+</select>
+```

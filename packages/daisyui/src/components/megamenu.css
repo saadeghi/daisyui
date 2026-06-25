@@ -1,0 +1,316 @@
+.megamenu {
+  @layer daisyui.l1.l2.l3 {
+    @apply relative flex items-center overflow-visible;
+    width: unset;
+    background-color: transparent;
+    border-radius: calc(var(--radius-field) + var(--border));
+    --mm-anchor: --mm1;
+    --size: calc(var(--size-field, 0.25rem) * 10);
+    [popovertarget] {
+      @apply relative isolate flex cursor-pointer items-center gap-3;
+      padding-inline: var(--mm-p, 1rem);
+      height: var(--size);
+      font-size: var(--fontsize, 0.875rem);
+      border: var(--border) solid transparent;
+      anchor-name: var(--mm-anchor);
+      transition:
+        background-color 200ms ease-out,
+        color 200ms ease-out;
+      &:focus-visible {
+        outline: 2px solid var(--color-base-content);
+        outline-offset: 2px;
+      }
+      &:after {
+        --tw-content: "";
+        content: var(--tw-content);
+        pointer-events: none;
+        inset-inline-end: 1.4rem;
+        box-shadow: inset 2px 2px;
+        transition:
+          opacity 200ms ease-out,
+          rotate 200ms ease-out;
+        width: 0.375rem;
+        height: 0.375rem;
+        display: block;
+        opacity: 0.25;
+        rotate: -135deg;
+      }
+      &:nth-of-type(1) {
+        --mm-anchor: --mm1;
+      }
+      &:nth-of-type(2) {
+        --mm-anchor: --mm2;
+      }
+      &:nth-of-type(3) {
+        --mm-anchor: --mm3;
+      }
+      &:nth-of-type(4) {
+        --mm-anchor: --mm4;
+      }
+      &:nth-of-type(5) {
+        --mm-anchor: --mm5;
+      }
+      &:nth-of-type(6) {
+        --mm-anchor: --mm6;
+      }
+      &:nth-of-type(7) {
+        --mm-anchor: --mm7;
+      }
+      &:nth-of-type(8) {
+        --mm-anchor: --mm8;
+      }
+      &:nth-of-type(9) {
+        --mm-anchor: --mm9;
+      }
+      &:nth-of-type(10) {
+        --mm-anchor: --mm10;
+      }
+    }
+
+    &:not(:has([popovertarget]:hover, [popover]:popover-open)) .megamenu-active {
+      background-color: transparent;
+    }
+    &:has([popovertarget]:hover):not(:has([popover]:popover-open)) .megamenu-active,
+    &:has([popover]:popover-open) .megamenu-active {
+      inset: anchor(var(--mm-anchor) top) anchor(var(--mm-anchor) end)
+        anchor(var(--mm-anchor) bottom) anchor(var(--mm-anchor) start);
+    }
+    &:has([popovertarget]:nth-of-type(1):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(1):popover-open) {
+      --mm-anchor: --mm1;
+    }
+    &:has([popovertarget]:nth-of-type(2):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(2):popover-open) {
+      --mm-anchor: --mm2;
+    }
+    &:has([popovertarget]:nth-of-type(3):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(3):popover-open) {
+      --mm-anchor: --mm3;
+    }
+    &:has([popovertarget]:nth-of-type(4):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(4):popover-open) {
+      --mm-anchor: --mm4;
+    }
+    &:has([popovertarget]:nth-of-type(5):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(5):popover-open) {
+      --mm-anchor: --mm5;
+    }
+    &:has([popovertarget]:nth-of-type(6):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(6):popover-open) {
+      --mm-anchor: --mm6;
+    }
+    &:has([popovertarget]:nth-of-type(7):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(7):popover-open) {
+      --mm-anchor: --mm7;
+    }
+    &:has([popovertarget]:nth-of-type(8):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(8):popover-open) {
+      --mm-anchor: --mm8;
+    }
+    &:has([popovertarget]:nth-of-type(9):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(9):popover-open) {
+      --mm-anchor: --mm9;
+    }
+    &:has([popovertarget]:nth-of-type(10):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-of-type(10):popover-open) {
+      --mm-anchor: --mm10;
+    }
+
+    [popovertarget]:has(+ [popover]:popover-open):after {
+      opacity: 1;
+      rotate: 45deg;
+    }
+
+    [popover] {
+      @apply border-base-300 mt-1 max-h-dvh border opacity-0;
+      border-radius: var(--radius-box);
+      background-color: var(--color-base-100);
+      position-area: block-end span-inline-end;
+      max-block-size: calc(100% - 0.25rem);
+      translate: 0 -0.5rem;
+      scale: 0.98;
+      transition:
+        opacity 200ms ease-out,
+        translate 200ms ease-out,
+        scale 200ms ease-out,
+        display 200ms ease-out allow-discrete,
+        overlay 200ms ease-out allow-discrete;
+      &:popover-open {
+        @apply opacity-100;
+        @starting-style {
+          @apply opacity-0;
+        }
+      }
+    }
+
+    &:has([popover]:popover-open) {
+      [popover] {
+        translate: 0 0;
+        scale: 1;
+      }
+    }
+  }
+
+  @layer daisyui.l1 {
+    &:popover-open {
+      @apply fixed w-full flex-col items-start overflow-y-scroll rounded-none pt-4 opacity-100;
+      background-color: var(--color-base-100);
+      margin-top: var(--mm-mt, 4rem);
+      [popovertarget],
+      > [popover]:not(:nth-of-type(1)) {
+        display: var(--mm-display, none);
+      }
+      &::backdrop {
+        background-color: var(--mm-backdrop, oklch(0% 0 0/ 0.4));
+      }
+      border-inline-width: 0;
+      position-area: block-end;
+      top: 0;
+      inset-inline-start: 0;
+      max-block-size: 80svh;
+      translate: 0 0;
+      scale: 1;
+      transition:
+        opacity 200ms ease-out,
+        translate 200ms ease-out,
+        scale 200ms ease-out,
+        display 200ms ease-out allow-discrete,
+        overlay 200ms ease-out allow-discrete;
+      @starting-style {
+        @apply opacity-0;
+      }
+      [popovertarget] {
+        @apply pointer-events-none;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+        &:after {
+          content: none;
+        }
+      }
+      [popover] {
+        @apply relative block max-h-none overflow-visible bg-transparent opacity-100;
+        border: none;
+      }
+    }
+  }
+}
+.megamenu-active {
+  @layer daisyui.l1.l2.l3 {
+    @apply bg-base-content/10 pointer-events-none absolute;
+    border-radius: var(--radius-field);
+    transition:
+      inset 300ms linear(0, 0.5 10%, 0.9 30%, 1.05 50%, 1.1 75%, 1),
+      background-color 200ms ease-out;
+  }
+}
+
+.megamenu-wide {
+  @layer daisyui.l1.l2 {
+    anchor-name: --megamenu;
+    &:popover-open {
+      inset-inline: 0;
+    }
+    [popover] {
+      position-area: block-end;
+      position-anchor: --megamenu;
+      width: anchor-size(inline);
+    }
+  }
+}
+
+.megamenu-full {
+  @layer daisyui.l1.l2 {
+    anchor-name: --megamenu;
+    &:popover-open {
+      inset-inline: 0;
+    }
+    [popover] {
+      position-area: block-end;
+      position-anchor: --megamenu;
+      width: 100%;
+      border-radius: 0;
+      border-inline-width: 0;
+    }
+  }
+}
+
+.megamenu-vertical {
+  @layer daisyui.l1.l2 {
+    @apply relative w-full flex-col items-start rounded-none opacity-0;
+    background-color: var(--color-base-100);
+    border-inline-width: 0;
+    position-area: block-end;
+    max-block-size: calc(100% - 0.25rem);
+    --mm-backdrop: transparent;
+    translate: 0 -0.5rem;
+    scale: 0.98;
+    transition:
+      opacity 200ms ease-out,
+      translate 200ms ease-out,
+      scale 200ms ease-out,
+      display 200ms ease-out allow-discrete,
+      overlay 200ms ease-out allow-discrete;
+    &:not([popover]:popover-open) {
+      position: revert;
+      display: none;
+    }
+    &:popover-open {
+      --mm-mt: 0;
+      --mm-display: block;
+    }
+    [popovertarget] {
+      @apply pointer-events-none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+      &:after {
+        content: none;
+      }
+    }
+    [popover] {
+      @apply relative block overflow-visible bg-transparent opacity-100;
+      border: none;
+    }
+  }
+}
+
+.megamenu-xs {
+  @layer daisyui.l1.l2 {
+    --fontsize: 0.6875rem;
+    --mm-p: 0.5rem;
+    --size: calc(var(--size-field, 0.25rem) * 6);
+  }
+}
+
+.megamenu-sm {
+  @layer daisyui.l1.l2 {
+    --fontsize: 0.75rem;
+    --mm-p: 0.75rem;
+    --size: calc(var(--size-field, 0.25rem) * 8);
+  }
+}
+
+.megamenu-md {
+  @layer daisyui.l1.l2 {
+    --fontsize: 0.875rem;
+    --mm-p: 1rem;
+    --size: calc(var(--size-field, 0.25rem) * 10);
+  }
+}
+
+.megamenu-lg {
+  @layer daisyui.l1.l2 {
+    --fontsize: 1.125rem;
+    --mm-p: 1.25rem;
+    --size: calc(var(--size-field, 0.25rem) * 12);
+  }
+}
+
+.megamenu-xl {
+  @layer daisyui.l1.l2 {
+    --fontsize: 1.375rem;
+    --mm-p: 1.5rem;
+    --size: calc(var(--size-field, 0.25rem) * 14);
+  }
+}

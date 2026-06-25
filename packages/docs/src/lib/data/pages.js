@@ -128,6 +128,11 @@ export const pages = [
             href: "/components/avatar/",
           },
           {
+            name: "Aura",
+            href: "/components/aura/",
+            badge: "new",
+          },
+          {
             name: "Badge",
             href: "/components/badge/",
           },
@@ -208,6 +213,11 @@ export const pages = [
           {
             name: "Link",
             href: "/components/link/",
+          },
+          {
+            name: "Megamenu",
+            href: "/components/megamenu/",
+            badge: "new",
           },
           {
             name: "Menu",
@@ -324,6 +334,11 @@ export const pages = [
           {
             name: "Validator",
             href: "/components/validator/",
+          },
+          {
+            name: "OTP",
+            href: "/components/otp/",
+            badge: "new",
           },
         ],
       },

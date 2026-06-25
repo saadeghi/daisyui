@@ -1,10 +1,13 @@
 .select {
   @layer daisyui.l1.l2.l3 {
-    border: var(--border) solid #0000;
     @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
+
+    --size: calc(var(--size-field, 0.25rem) * var(--sl-size-mul));
+    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+
     width: clamp(3rem, 20rem, 100%);
     height: var(--size);
-    font-size: 0.875rem;
+    font-size: max(var(--font-size, 0rem), var(--font-size-min));
     touch-action: manipulation;
     border-start-start-radius: var(--join-ss, var(--radius-field));
     border-start-end-radius: var(--join-se, var(--radius-field));
@@ -23,12 +26,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border: var(--border) solid var(--input-color, #0000);
     box-shadow:
       0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
       0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-    border-color: var(--input-color);
-    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-    --size: calc(var(--size-field, 0.25rem) * 10);
+
     [dir="rtl"] & {
       background-position:
         calc(0% + 12px) calc(1px + 50%),
@@ -38,6 +40,7 @@
       @apply h-auto overflow-auto py-3 pe-3;
       background-image: none;
     }
+
     select {
       @apply -ms-3 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-3 pe-7;
       height: calc(100% - calc(var(--border) * 2));
@@ -45,10 +48,17 @@
       background: inherit;
       border-radius: inherit;
       border-style: none;
+
+      &::placeholder {
+        /* color and opacity to work with safari */
+        @apply text-base-content opacity-50;
+      }
+
       &:focus,
       &:focus-within {
         @apply outline-hidden;
       }
+
       &:not(:last-child) {
         @apply -me-5.5;
         background-image: none;
@@ -56,18 +66,28 @@
     }
 
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-base-content);
       box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
       outline: 2px solid var(--input-color);
       outline-offset: 2px;
       isolation: isolate;
+      background-image:
+        linear-gradient(135deg, #0000 50%, currentColor 50%),
+        linear-gradient(45deg, currentColor 50%, #0000 50%);
     }
 
     &:has(> select[disabled]),
     &:is(:disabled, [disabled]),
     fieldset:disabled & {
-      @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+      @apply border-base-200 bg-base-200 text-base-content/40 cursor-not-allowed;
+
+      &::placeholder,
+      ::placeholder {
+        /* color and opacity to work with safari */
+        @apply text-base-content opacity-20;
+      }
     }
 
     &:has(> select[disabled]) > select[disabled] {
@@ -76,7 +96,10 @@
     &,
     & select {
       @supports (appearance: base-select) {
-        appearance: base-select;
+        &,
+        &::picker(select) {
+          appearance: base-select;
+        }
       }
       &::picker(select) {
         color: inherit;
@@ -91,17 +114,15 @@
           0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
           0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));
       }
-      @supports (appearance: base-select) {
-        &::picker(select) {
-          appearance: base-select;
-        }
-      }
       &::picker-icon {
         @apply hidden;
       }
+      selectedcontent {
+        @apply w-full overflow-hidden text-ellipsis whitespace-nowrap;
+      }
       /* option::checkmark {
-      @apply hidden;
-    } */
+        @apply hidden;
+      } */
       optgroup {
         @apply pt-[0.5em];
         option {
@@ -111,7 +132,8 @@
         }
       }
       option {
-        @apply rounded-field px-3 py-1.5;
+        @apply rounded-field py-1.5;
+        padding-inline: calc(var(--spacing) * var(--option-px));
         transition-property: color, background-color;
         transition-duration: 0.2s;
         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -145,10 +167,14 @@
     border-color: #0000;
 
     &:focus,
-    &:focus-within {
-      @apply text-base-content bg-base-100;
+    &:focus-within,
+    &:open {
+      @apply bg-base-100 text-base-content;
       border-color: #0000;
       box-shadow: none;
+    }
+    &::picker(select) {
+      @apply bg-base-100 text-base-content;
     }
   }
 }
@@ -157,7 +183,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-neutral);
     }
   }
@@ -167,7 +194,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-primary);
     }
   }
@@ -177,7 +205,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-secondary);
     }
   }
@@ -187,7 +216,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-accent);
     }
   }
@@ -197,7 +227,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-info);
     }
   }
@@ -207,7 +238,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-success);
     }
   }
@@ -217,7 +249,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-warning);
     }
   }
@@ -227,7 +260,8 @@
   @layer daisyui.l1.l2 {
     &,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:open {
       --input-color: var(--color-error);
     }
   }
@@ -235,50 +269,66 @@
 
 .select-xs {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 6);
-    font-size: 0.6875rem;
-    option {
-      @apply px-2 py-1;
+    --sl-size-mul: 6;
+    --font-size-min: 0.6875rem;
+    --option-px: 2;
+
+    .floating-label:has(&) {
+      --top-mul: 3;
+      --font-size: 0.6875rem;
     }
   }
 }
 
 .select-sm {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 8);
-    font-size: 0.75rem;
-    option {
-      @apply px-2.5 py-1;
+    --sl-size-mul: 8;
+    --font-size-min: 0.75rem;
+    --option-px: 2.5;
+
+    .floating-label:has(&) {
+      --top-mul: 4;
+      --font-size: 0.75rem;
     }
   }
 }
 
+.select,
 .select-md {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 10);
-    font-size: 0.875rem;
-    option {
-      @apply px-3 py-1.5;
+    --sl-size-mul: 10;
+    --font-size-min: 0.875rem;
+    --option-px: 3;
+
+    .floating-label:has(&) {
+      --top-mul: 5;
+      --font-size: 0.875rem;
     }
   }
 }
 
 .select-lg {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 12);
-    font-size: 1.125rem;
-    option {
-      @apply px-4 py-1.5;
+    --sl-size-mul: 12;
+    --font-size-min: 1.125rem;
+    --option-px: 4;
+
+    .floating-label:has(&) {
+      --top-mul: 6;
+      --font-size: 1.125rem;
     }
   }
 }
 
 .select-xl {
   @layer daisyui.l1.l2 {
-    --size: calc(var(--size-field, 0.25rem) * 14);
-    font-size: 1.375rem;
-    option {
-      @apply px-5 py-1.5;
+    --sl-size-mul: 14;
+    --font-size-min: 1.375rem;
+    --option-px: 5;
+
+    .floating-label:has(&) {
+      --top-mul: 7;
+      --font-size: 1.375rem;
     }
   }
 }

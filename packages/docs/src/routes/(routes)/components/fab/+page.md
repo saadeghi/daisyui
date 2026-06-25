@@ -290,7 +290,7 @@ classnames:
 
 ### ~FAB Flower and Speed Dial
 
-#### fab-flower modifier class will open the button in a quarter circle instead of a vertical. fab-flower can fit 1 to 4 buttons, not including the original button, the fab-close button or the fab-main-action button.
+#### fab-flower modifier class will open the button in a quarter circle instead of a vertical. The fab-main-action / fab-close button is optional in fab-flower; without it, the first action button also fans out into the arc. fab-flower fits up to 4 action buttons (not including the original button), with or without a fab-main-action / fab-close button.
 
 <div class="h-54">
   <div class="fab fab-flower absolute z-1">
@@ -310,6 +310,33 @@ classnames:
 
   <!-- Main Action button replaces the original button when FAB is open -->
   <button class="$$fab-main-action $$btn $$btn-circle $$btn-lg">M</button>
+
+  <!-- buttons that show up when FAB is open -->
+  <button class="$$btn $$btn-lg $$btn-circle">A</button>
+  <button class="$$btn $$btn-lg $$btn-circle">B</button>
+  <button class="$$btn $$btn-lg $$btn-circle">C</button>
+  <button class="$$btn $$btn-lg $$btn-circle">D</button>
+</div>
+```
+
+### ~FAB Flower without a main action button
+
+#### The fab-main-action button is optional. Without it, the first action button also fans out into the arc instead of replacing the trigger.
+
+<div class="h-54">
+  <div class="fab fab-flower absolute z-1">
+    <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">F</div>
+    <button class="btn btn-lg btn-circle">A</button>
+    <button class="btn btn-lg btn-circle">B</button>
+    <button class="btn btn-lg btn-circle">C</button>
+    <button class="btn btn-lg btn-circle">D</button>
+  </div>
+</div>
+
+```html
+<div class="$$fab $$fab-flower">
+  <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-primary">F</div>
 
   <!-- buttons that show up when FAB is open -->
   <button class="$$btn $$btn-lg $$btn-circle">A</button>

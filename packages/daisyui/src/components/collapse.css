@@ -6,7 +6,6 @@
   @layer daisyui.l1.l2.l3 {
     display: grid;
     position: relative;
-    overflow: hidden;
     border-radius: var(--radius-box, 1rem);
     width: 100%;
     grid-template-rows: max-content 0fr;
@@ -40,6 +39,8 @@
       > .collapse-content,
     &:not(.collapse-close)
       > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
+      --overflow-delay: 0.2s;
+      overflow: revert-layer;
       content-visibility: visible;
       min-height: fit-content;
       @supports not (content-visibility: visible) {
@@ -88,6 +89,51 @@
       padding-inline-end: 3rem;
       min-height: 1lh;
       transition: background-color 0.2s ease-out;
+
+      /* this breaks Collapse with checkbox and close on click outside */
+      /* &:has(~ label) {
+        z-index: revert-layer;
+      } */
+    }
+
+    &:is(details) {
+      width: 100%;
+
+      &::details-content {
+        --overflow-delay: 0s;
+        overflow: clip;
+        height: 0;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        &::details-content {
+          transition:
+            overflow 0.2s allow-discrete var(--overflow-delay),
+            content-visibility 0.2s allow-discrete,
+            visibility 0.2s allow-discrete,
+            min-height 0.2s ease-out allow-discrete,
+            padding 0.1s ease-out 20ms,
+            background-color 0.2s ease-out,
+            height 0.2s;
+          interpolate-size: allow-keywords;
+        }
+
+        &:where([open])::details-content {
+          --overflow-delay: 0.2s;
+          height: auto;
+          overflow: revert-layer;
+        }
+      }
+
+      > summary {
+        position: relative;
+        display: block;
+        outline: none;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+      }
     }
   }
 
@@ -159,17 +205,11 @@
   }
 }
 
-.collapse-title,
 .collapse-content {
   @layer daisyui.l1.l2.l3 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-}
-
-.collapse-content {
-  @layer daisyui.l1.l2.l3 {
+    --overflow-delay: 0s;
     content-visibility: hidden;
+    overflow: clip;
     grid-column-start: 1;
     grid-row-start: 2;
     min-height: 0;
@@ -181,53 +221,17 @@
     }
     @media (prefers-reduced-motion: no-preference) {
       transition:
+        overflow 0.2s allow-discrete var(--overflow-delay),
         content-visibility 0.2s allow-discrete,
         visibility 0.2s allow-discrete,
         min-height 0.2s ease-out allow-discrete,
         padding 0.1s ease-out 20ms,
         background-color 0.2s ease-out;
     }
-  }
-}
 
-.collapse:is(details) {
-  @layer daisyui.l1.l2.l3 {
-    width: 100%;
-    @media (prefers-reduced-motion: no-preference) {
-      &::details-content {
-        transition:
-          content-visibility 0.2s allow-discrete,
-          visibility 0.2s allow-discrete,
-          min-height 0.2s ease-out allow-discrete,
-          padding 0.1s ease-out 20ms,
-          background-color 0.2s ease-out,
-          height 0.2s;
-        height: 0;
-        interpolate-size: allow-keywords;
-      }
-
-      &:where([open])::details-content {
-        height: auto;
-      }
-    }
-    & summary {
-      position: relative;
-      display: block;
-
-      &::-webkit-details-marker {
-        display: none;
-      }
-    }
-
-    & > .collapse-content {
+    details > & {
       content-visibility: visible;
     }
-  }
-}
-
-.collapse:is(details) summary {
-  @layer daisyui.l1.l2.l3 {
-    outline: none;
   }
 }
 
@@ -277,8 +281,9 @@
 
 .collapse-title {
   @layer daisyui.l1.l2.l3 {
+    grid-column-start: 1;
+    grid-row-start: 1;
     position: relative;
-
     width: 100%;
     padding: 1rem;
     padding-inline-end: 3rem;
@@ -291,6 +296,8 @@
   @layer daisyui.l1.l2 {
     grid-template-rows: max-content 1fr;
     > .collapse-content {
+      --overflow-delay: 0.2s;
+      overflow: revert-layer;
       content-visibility: visible;
       min-height: fit-content;
       padding-bottom: 1rem;

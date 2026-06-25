@@ -1,6 +1,7 @@
 .diff {
-  @layer daisyui.l1.l2.l3 {
+  @layer daisyui.l1.l2 {
     @apply relative grid w-full overflow-hidden select-none;
+    align-items: normal;
     grid-template-rows: 1fr 1.8rem 1fr;
     direction: ltr;
     container-type: inline-size;
@@ -21,6 +22,13 @@
       .diff-resizer {
         min-width: 5cqi;
         max-width: 5cqi;
+      }
+    }
+    &:hover {
+      .diff-item-2 {
+        &::after {
+          height: 2.4rem;
+        }
       }
     }
     @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
@@ -60,13 +68,12 @@
       height: 1.8rem;
       border: 2px solid var(--color-base-100);
       content: "";
-      border: 0.5px solid #0000001f;
-      outline: 1px solid color-mix(in oklab, var(--color-base-content) 10%, #0000);
+      box-shadow: 0 0 0 2px #0000002a;
+      outline: 2px solid color-mix(in oklab, var(--color-base-content) 10%, #0000);
       outline-offset: -3px;
-      /* disable blur and shadow becuse of performance */
-      /* backdrop-filter: blur(8px); */
-      /* box-shadow: 0 1px 2px 0 oklch(0% 0 0 / 0.1); */
       translate: 50% -50%;
+      transition: height 0.3s
+        linear(0, 0.931 13.8%, 1.196 21.4%, 1.343 29.8%, 1.378 36%, 1.365 43.2%, 1.059 78%, 1);
     }
     > * {
       @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
@@ -83,6 +90,7 @@
   @layer daisyui.l1.l2.l3 {
     @apply relative z-1 col-start-1 row-span-3 row-start-1 overflow-hidden;
     border-right: 2px solid var(--color-base-100);
+    box-shadow: 0 0 0 2px #0000002a;
     &:focus-visible {
       @apply outline-none;
     }

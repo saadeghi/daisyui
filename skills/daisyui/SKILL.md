@@ -31,6 +31,7 @@ daisyUI components | [./components/](./components/) | MANDATORY. Read the releva
 ## List of components
 
 - [accordion](./components/accordion.md)
+- [aura](./components/aura.md)
 - [alert](./components/alert.md)
 - [avatar](./components/avatar.md)
 - [badge](./components/badge.md)
@@ -72,6 +73,7 @@ daisyUI components | [./components/](./components/) | MANDATORY. Read the releva
 - [mockup-window](./components/mockup-window.md)
 - [modal](./components/modal.md)
 - [navbar](./components/navbar.md)
+- [otp](./components/otp.md)
 - [pagination](./components/pagination.md)
 - [progress](./components/progress.md)
 - [radial-progress](./components/radial-progress.md)

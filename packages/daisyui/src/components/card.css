@@ -1,19 +1,31 @@
 .card {
   @layer daisyui.l1.l2.l3 {
     @apply rounded-box relative flex flex-col;
-    outline-width: 2px;
     transition: outline 0.2s ease-in-out;
-    outline: 0 solid #0000;
+    outline: 2px solid #0000;
     outline-offset: 2px;
-    &:focus {
-      @apply outline-hidden;
-    }
 
-    &:focus-visible {
+    &:focus-visible,
+    &[aria-checked="true"],
+    &:has(> :checked, > :is([type="checkbox"], [type="radio"]):focus-visible) {
       outline-color: currentColor;
     }
+    &:has(> :checked:focus-visible),
+    &[aria-checked="true"]:focus-visible,
+    &[aria-checked="true"]:has(> :is([type="checkbox"], [type="radio"]):focus-visible) {
+      outline-width: 4px;
+    }
 
-    :where(figure:first-child) {
+    &:has(> :is([type="checkbox"], [type="radio"])) {
+      @apply cursor-pointer;
+      user-select: none;
+    }
+    > :is([type="checkbox"], [type="radio"]) {
+      @apply appearance-none;
+    }
+  }
+  @layer daisyui.l1.l2.l3.l4 {
+    figure:first-child {
       @apply overflow-hidden;
       border-start-start-radius: inherit;
       border-start-end-radius: inherit;
@@ -21,7 +33,7 @@
       border-end-end-radius: unset;
     }
 
-    :where(figure:last-child) {
+    figure:last-child {
       @apply overflow-hidden;
       border-start-start-radius: unset;
       border-start-end-radius: unset;
@@ -31,13 +43,6 @@
 
     figure {
       @apply flex items-center justify-center;
-    }
-    &:has(> input:is(input[type="checkbox"], input[type="radio"])) {
-      @apply cursor-pointer;
-      user-select: none;
-    }
-    &:has(> :checked) {
-      outline: 2px solid currentColor;
     }
   }
 }
@@ -91,8 +96,9 @@
     @apply flex flex-auto flex-col gap-2;
     padding: var(--card-p, 1.5rem);
     font-size: var(--card-fs, 0.875rem);
-
-    :where(p) {
+  }
+  @layer daisyui.l1.l2.l3.l4 {
+    p {
       @apply grow;
     }
   }
@@ -173,7 +179,6 @@
   @layer daisyui.l1.l2 {
     align-items: stretch;
     flex-direction: row;
-
     :where(figure:first-child) {
       @apply overflow-hidden;
       border-start-start-radius: inherit;
