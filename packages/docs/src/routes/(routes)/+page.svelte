@@ -412,7 +412,7 @@
                   ></path></svg
                 >
               </a> -->
-              <div class="[display:contents]">
+              <div class="contents">
                 <a
                   data-sveltekit-preload-data
                   href="/docs/install/"
@@ -644,7 +644,7 @@
         <div class="grid">
           <div
             style={`opacity:${animateValue(section["hero"], [15, 17], [1, 0])}`}
-            class="z-1 col-start-1 row-start-1 grid overflow-x-scroll overflow-y-hidden [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
+            class="z-1 col-start-1 row-start-1 grid [scrollbar-width:none] overflow-x-scroll overflow-y-hidden xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
             class:invisible={section["hero"] && scrollY < section["hero"].clientHeight}
           >
             <!-- flying components -->
