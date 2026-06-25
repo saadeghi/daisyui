@@ -5,10 +5,12 @@ source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/pac
 layout: components
 classnames:
   component:
-  - class: 'cally'
-    desc: for Cally web component
-  - class: 'react-day-picker'
-    desc: for the DayPicker component
+    - class: "cally"
+      desc: for Cally web component
+    - class: "react-day-picker"
+      desc: for the DayPicker component
+    - class: "vc"
+      desc: for Vanilla Calendar Pro
 ---
 
 <script>
@@ -26,14 +28,15 @@ classnames:
 >
 > You can also use the native HTML `<input type="date">` for a date picker. [Read more](/components/input/#date-input)
 
-## daisyUI supports 2 calendar libraries
+## daisyUI supports 3 calendar libraries
 
-daisyUI includes styles for 2 popular calendar libraries.  
+daisyUI includes styles for 3 popular calendar libraries.  
 Use any of them, based on your needs.  
 You don't need to import the CSS files for these libraries. daisyUI will style them automatically.
 
 - [Cally web component](https://github.com/WickyNilliams/cally) - Works everywhere
 - [React Day picker](https://github.com/gpbl/react-day-picker) - React only
+- [Vanilla Calendar Pro](https://github.com/uvarov-frontend/vanilla-calendar-pro) - Works everywhere
 
 ## 1. Cally Calendar
 
@@ -131,6 +134,43 @@ export default function App() {
     </>
   );
 }
+```
+
+## 3. Vanilla Calendar Pro
+
+Vanilla Calendar Pro is a JavaScript calendar library. [Read the docs](https://github.com/uvarov-frontend/vanilla-calendar-pro)
+
+### Vanilla Calendar Pro Example
+
+```:Install
+npm i vanilla-calendar-pro
+```
+
+```html
+<div id="calendar" class="$$vc"></div>
+```
+
+```js
+import { Calendar } from "vanilla-calendar-pro"
+
+const calendar = new Calendar("#calendar")
+calendar.init()
+```
+
+### Vanilla Calendar Pro CDN Example
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/index.js" defer></script>
+
+<div id="calendar" class="$$vc"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const { Calendar } = window.VanillaCalendarPro
+    const calendar = new Calendar("#calendar")
+    calendar.init()
+  })
+</script>
 ```
 
 </div>
