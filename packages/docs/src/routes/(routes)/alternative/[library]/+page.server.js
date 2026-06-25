@@ -1,5 +1,5 @@
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
-import yaml from "js-yaml"
+import { load as loadYaml } from "js-yaml"
 import { error } from "@sveltejs/kit"
 
 const fetchYamlData = async (url) => {
@@ -11,7 +11,7 @@ const fetchYamlData = async (url) => {
     }
 
     const yamlText = await response.text()
-    return yaml.load(yamlText)
+    return loadYaml(yamlText)
   } catch (e) {
     console.error(`Error loading or parsing YAML from ${url}`, e)
     throw error(500, "Server configuration error: Could not load data")

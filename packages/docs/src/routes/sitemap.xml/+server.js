@@ -1,7 +1,7 @@
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import { error } from "@sveltejs/kit"
 import * as sitemap from "super-sitemap"
-import yaml from "js-yaml"
+import { load as loadYaml } from "js-yaml"
 import { load as loadSkillEditors } from "../(routes)/docs/skill/+layout.server.js"
 
 export const prerender = true
@@ -15,7 +15,7 @@ const fetchProductIds = async () => {
     }
 
     const yamlText = await response.text()
-    const yamlData = yaml.load(yamlText)
+    const yamlData = loadYaml(yamlText)
 
     return yamlData?.productOrder?.map((id) => String(id)) ?? []
   } catch (err) {
@@ -33,7 +33,7 @@ const fetchSkillIds = async () => {
     }
 
     const yamlText = await response.text()
-    const yamlData = yaml.load(yamlText)
+    const yamlData = loadYaml(yamlText)
 
     return yamlData?.skillOrder?.map((id) => String(id)) ?? []
   } catch (err) {
@@ -51,7 +51,7 @@ const fetchCompareData = async () => {
     }
 
     const yamlFile = await response.text()
-    const yamlData = yaml.load(yamlFile)
+    const yamlData = loadYaml(yamlFile)
     return yamlData?.data ?? {}
   } catch (err) {
     console.error("Error fetching or parsing compare data:", err)

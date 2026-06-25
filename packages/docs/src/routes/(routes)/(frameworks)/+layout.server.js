@@ -1,5 +1,5 @@
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
-import yaml from "js-yaml"
+import { load as loadYaml } from "js-yaml"
 
 async function fetchFrameworksData() {
   try {
@@ -10,7 +10,7 @@ async function fetchFrameworksData() {
     }
 
     const yamlFile = await response.text()
-    return yaml.load(yamlFile)
+    return loadYaml(yamlFile)
   } catch (err) {
     console.error("Error fetching data:", err)
     return null

@@ -42,7 +42,7 @@ import { readFileSync, readdirSync, statSync } from "node:fs"
 import { join, dirname } from "node:path"
 import { fileURLToPath } from "url"
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
-import yaml from "js-yaml"
+import { load as loadYaml } from "js-yaml"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -209,7 +209,7 @@ function parseFrontmatter(content) {
   const frontmatterText = match[1]
   // Use js-yaml to parse frontmatter for nested arrays/objects
   try {
-    return yaml.load(frontmatterText) || {}
+    return loadYaml(frontmatterText) || {}
   } catch (e) {
     console.error("YAML parse error in frontmatter", e)
     return {}
@@ -353,7 +353,7 @@ async function fetchStoreData() {
       throw new Error(`Failed to fetch store data: ${response.status}`)
     }
     const yamlText = await response.text()
-    return yaml.load(yamlText)
+    return loadYaml(yamlText)
   } catch (e) {
     console.error(`Error loading store data`, e)
     return null
@@ -368,7 +368,7 @@ async function fetchProduct(id) {
       throw new Error(`Failed to fetch product ${id}: ${response.status}`)
     }
     const yamlText = await response.text()
-    return yaml.load(yamlText)
+    return loadYaml(yamlText)
   } catch (e) {
     console.error(`Error loading product ${id}`, e)
     return null

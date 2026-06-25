@@ -1,5 +1,5 @@
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
-import yaml from "js-yaml"
+import { load as loadYaml } from "js-yaml"
 import { error } from "@sveltejs/kit"
 
 async function fetchCompareData() {
@@ -11,7 +11,7 @@ async function fetchCompareData() {
     }
 
     const yamlFile = await response.text()
-    return yaml.load(yamlFile)
+    return loadYaml(yamlFile)
   } catch (err) {
     console.error("Error fetching compare data:", err)
     return null

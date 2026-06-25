@@ -1,6 +1,6 @@
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import { compile } from "mdsvex"
-import yaml from "js-yaml"
+import { load as loadYaml } from "js-yaml"
 import { error } from "@sveltejs/kit"
 
 const fetchStoreData = async () => {
@@ -12,7 +12,7 @@ const fetchStoreData = async () => {
     }
 
     const yamlText = await response.text()
-    return yaml.load(yamlText)
+    return loadYaml(yamlText)
   } catch (e) {
     console.error(`Error loading or parsing YAML`, e)
     throw error(500, "Server configuration error: Could not load data")
@@ -26,7 +26,7 @@ const fetchProduct = async (id) => {
       throw new Error(`Failed to fetch product ${id}: ${response.status}`)
     }
     const yamlText = await response.text()
-    return yaml.load(yamlText)
+    return loadYaml(yamlText)
   } catch (e) {
     console.error(`Error loading product ${id}`, e)
     return null

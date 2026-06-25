@@ -1,5 +1,5 @@
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
-import yaml from "js-yaml"
+import { load as loadYaml } from "js-yaml"
 
 export async function load() {
   try {
@@ -10,7 +10,7 @@ export async function load() {
     }
 
     const yamlFile = await response.text()
-    const frameworks = yaml.load(yamlFile)
+    const frameworks = loadYaml(yamlFile)
 
     return {
       frameworks,
