@@ -104,6 +104,7 @@ export const pages = [
           {
             name: "Modal",
             href: "/components/modal/",
+            badge: "updated",
           },
           {
             name: "Swap",
@@ -272,6 +273,7 @@ export const pages = [
           {
             name: "Tooltip",
             href: "/components/tooltip/",
+            badge: "updated",
           },
         ],
       },
@@ -310,10 +312,12 @@ export const pages = [
           {
             name: "Range",
             href: "/components/range/",
+            badge: "updated",
           },
           {
             name: "Rating",
             href: "/components/rating/",
+            badge: "updated",
           },
           {
             name: "Select",
