@@ -7,7 +7,78 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Features
 
-* daisyUI 5.6 ([e37aa03](https://github.com/saadeghi/daisyui/commit/e37aa0362ac8cdc10c1ad20af88a5a0db4da31b0)), closes [#4229](https://github.com/saadeghi/daisyui/issues/4229) [#4367](https://github.com/saadeghi/daisyui/issues/4367) [#4370](https://github.com/saadeghi/daisyui/issues/4370) [#4419](https://github.com/saadeghi/daisyui/issues/4419) [#4506](https://github.com/saadeghi/daisyui/issues/4506) [#4298](https://github.com/saadeghi/daisyui/issues/4298) [#4343](https://github.com/saadeghi/daisyui/issues/4343) [#4381](https://github.com/saadeghi/daisyui/issues/4381) [#4372](https://github.com/saadeghi/daisyui/issues/4372) [#4408](https://github.com/saadeghi/daisyui/issues/4408) [#4421](https://github.com/saadeghi/daisyui/issues/4421) [#4515](https://github.com/saadeghi/daisyui/issues/4515) [#4528](https://github.com/saadeghi/daisyui/issues/4528) [#4542](https://github.com/saadeghi/daisyui/issues/4542) [#4455](https://github.com/saadeghi/daisyui/issues/4455) [#4496](https://github.com/saadeghi/daisyui/issues/4496) [#4353](https://github.com/saadeghi/daisyui/issues/4353) [#4471](https://github.com/saadeghi/daisyui/issues/4471) [#4531](https://github.com/saadeghi/daisyui/issues/4531) [#4574](https://github.com/saadeghi/daisyui/issues/4574) [#4553](https://github.com/saadeghi/daisyui/issues/4553) [#4521](https://github.com/saadeghi/daisyui/issues/4521) [#4416](https://github.com/saadeghi/daisyui/issues/4416) [#4474](https://github.com/saadeghi/daisyui/issues/4474) [#4536](https://github.com/saadeghi/daisyui/issues/4536) [#4440](https://github.com/saadeghi/daisyui/issues/4440) [#4424](https://github.com/saadeghi/daisyui/issues/4424) [#4479](https://github.com/saadeghi/daisyui/issues/4479) [#4430](https://github.com/saadeghi/daisyui/issues/4430) [#4549](https://github.com/saadeghi/daisyui/issues/4549)
+* add new Aura component
+* add new OTP component
+* add new Megamenu component
+* add vertical range slider with `range-vertical`
+* add HTML popover support for modal
+* add tooltip alignment utilities with `tooltip-start`, `tooltip-center`, and `tooltip-end`, closes [#4229](https://github.com/saadeghi/daisyui/discussions/4229)
+* make rating size modifiers responsive, closes [#4367](https://github.com/saadeghi/daisyui/issues/4367)
+* improve input, textarea, select, and floating label sizing, closes [#4370](https://github.com/saadeghi/daisyui/issues/4370)
+* improve collapse overflow behavior when closed, closes [#4419](https://github.com/saadeghi/daisyui/issues/4419)
+* improve filter keyboard navigation and reset behavior, refs [#4424](https://github.com/saadeghi/daisyui/issues/4424)
+* simplify join styles and prevent nested join leakage, closes [#4506](https://github.com/saadeghi/daisyui/issues/4506)
+* rewrite button styles and improve checked, disabled, soft, ghost, link, and focus states, see [#4430](https://github.com/saadeghi/daisyui/issues/4430)
+* add default styling for customizable select `selectedcontent`, refs [#4549](https://github.com/saadeghi/daisyui/issues/4549)
+* allow `menu` elements as `.menu` containers
+* add selected/selectable card focus and checked styling
+
+
+### Bug Fixes
+
+* respect `prefers-reduced-motion` for loading indicators, closes [#4298](https://github.com/saadeghi/daisyui/issues/4298)
+* revert dropdown overflow clipping for `details` inside `.menu`, closes [#4343](https://github.com/saadeghi/daisyui/issues/4343)
+* align horizontal and vertical menu items correctly, closes [#4381](https://github.com/saadeghi/daisyui/issues/4381)
+* prefix CSS variables inside `var()` without replacing fallback content, closes [#4372](https://github.com/saadeghi/daisyui/issues/4372), closes [#4408](https://github.com/saadeghi/daisyui/issues/4408)
+* only apply root scroll background image to `:root`
+* improve root color, scroll gutter, and scroll lock separation
+* keep card outline visible on `focus-visible`, closes [#4421](https://github.com/saadeghi/daisyui/issues/4421)
+* improve collapse details/summary transitions and styling, closes [#4515](https://github.com/saadeghi/daisyui/issues/4515)
+* highlight select trigger while native picker is open, closes [#4528](https://github.com/saadeghi/daisyui/issues/4528)
+* dropdown animation inside modal
+* Safari quirks for datetime inputs
+* remove `text-wrap: balance` from menu items
+* make highlighted mockup-code lines span full scroll width, closes [#4542](https://github.com/saadeghi/daisyui/issues/4542)
+* clear React Day Picker range middle cell background, closes [#4455](https://github.com/saadeghi/daisyui/issues/4455)
+* use defined Pikaday theme colors for events and ranges, closes [#4496](https://github.com/saadeghi/daisyui/issues/4496)
+* keep `.kbd` legible inside colored buttons, closes [#4353](https://github.com/saadeghi/daisyui/issues/4353)
+* prevent footer grid styles from displaying script/style/template children, closes [#4471](https://github.com/saadeghi/daisyui/issues/4471)
+* prevent FAB trigger and labels from being text-selected in Safari
+* fan out first `fab-flower` action when no main action exists, closes [#4531](https://github.com/saadeghi/daisyui/issues/4531)
+* add modal overlay transition for stacked dialogs
+* adjust swap layers, closes [#4574](https://github.com/saadeghi/daisyui/issues/4574)
+* make `swap-active` work with rotate and flip, closes [#4553](https://github.com/saadeghi/daisyui/issues/4553)
+* give `select-ghost` picker a non-transparent background, closes [#4521](https://github.com/saadeghi/daisyui/issues/4521)
+* improve button border style for keyboard and mouse navigation
+* make diff work inside card and fix CDN hover gallery layering, closes [#4416](https://github.com/saadeghi/daisyui/issues/4416), closes [#4474](https://github.com/saadeghi/daisyui/issues/4474)
+* improve disabled input label color contrast
+* clean up file input styling
+* improve alert noise size
+* improve diff thumb styling
+* fix menu typo from previous changes
+
+
+### Docs
+
+* add daisyUI 5.6 blog post
+* add docs for Aura, OTP, Megamenu, vertical range, tooltip alignment, popover modal, selectable cards, responsive floating labels, and select dropdown max height
+* add clipboard button to markdown code blocks, closes [#4536](https://github.com/saadeghi/daisyui/issues/4536)
+* add select dropdown max-height example, closes [#4440](https://github.com/saadeghi/daisyui/issues/4440)
+* add collapse usage examples inspired by outside-click patterns, refs [#4479](https://github.com/saadeghi/daisyui/discussions/4479)
+* allow hyphens and spaces in theme generator theme names
+* fix mockup-browser background color snippet
+* improve focus indicators for code blocks and headings
+* add Angular install note for modern CSS / `color-mix()` rendering
+* use CDN-safe alert icon classes
+* add tooltip component to `llms.txt`
+* document read-only rating pattern in daisyUI skill files
+
+
+### Chores
+
+* update Bun, Tailwind CSS, Lightning CSS, PostCSS, Prettier, and related dependencies
+* add package exports for `daisyui`
+* update daisyUI skill files for new and changed components
 
 ## 5.5.23 (2026-06-07)
 
