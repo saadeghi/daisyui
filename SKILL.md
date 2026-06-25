@@ -262,6 +262,30 @@ Alert informs users about important events
 - Add `sm:alert-horizontal` for responsive layouts
 
 
+### aura
+Aura is a border light effect that can wrap around any component. It is a great way to add a cool, eye-catching visual effect to your components. Aura is useful for the most important button, card, or div that you want to highlight.
+[aura docs](https://daisyui.com/components/aura/)
+
+#### Class names
+- component: `aura`
+- style: `aura-dual`, `aura-rainbow`, `aura-holo`, `aura-gold`, `aura-silver`, `aura-glow`
+- size: `aura-xs`, `aura-sm`, `aura-md`, `aura-lg`, `aura-xl`
+
+#### Syntax
+```html
+<div class="aura {MODIFIER}">{CONTENT}</div>
+```
+
+#### Rules
+- {MODIFIER} is optional and can have one of each style/size class names
+- you can set custom colors using `text-*` color classes. For example, `text-primary` will use the primary color for the aura
+- you can set custom background color using `bg-*` color classes. For example, `bg-secondary` will use the secondary color for the background of the aura
+- you can set custom animation duration using `duration-*` classes. For example, `duration-1000` will set the animation duration to 1 second
+- aura must have one direct child element
+- aura is good for a button, or a card or a div that you want to highlight
+- do not use aura for multiple elements on the same page because it can be visually overwhelming
+
+
 ### avatar
 Avatars are used to show a thumbnail
 
@@ -355,32 +379,62 @@ Buttons allow the user to take actions
 
 
 ### calendar
+
 Calendar includes styles for different calendar libraries
 
 [calendar docs](https://daisyui.com/components/calendar/)
 
 #### Class names
+
 - component
   - `cally (for Cally web component)`
-  - `pika-single (for the input field that opens Pikaday calendar)`
   - `react-day-picker (for the DayPicker component)`
+  - `vc (for Vanilla Calendar Pro)`
 
 #### Syntax
+
 For Cally:
+
 ```html
 <calendar-date class="cally">{CONTENT}</calendar-date>
 ```
-For Pikaday:
-```html
-<input type="text" class="input pika-single">
-```
+
 For React Day Picker:
+
 ```html
-<DayPicker className="react-day-picker">
+<DayPicker className="react-day-picker"></DayPicker>
+```
+
+For Vanilla Calendar Pro:
+
+```html
+<div id="calendar" class="vc"></div>
+```
+
+```js
+import { Calendar } from "vanilla-calendar-pro"
+
+const calendar = new Calendar("#calendar")
+calendar.init()
+```
+
+Or using CDN:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/index.js" defer></script>
+<div id="calendar" class="vc"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const { Calendar } = window.VanillaCalendarPro
+    const calendar = new Calendar("#calendar")
+    calendar.init()
+  })
+</script>
 ```
 
 #### Rules
-- daisyUI supports Cally, Pikaday, React Day Picker
+
+- daisyUI supports Cally, React Day Picker and Vanilla Calendar Pro
 
 
 ### card
@@ -1215,6 +1269,77 @@ Mask crops the content of the element to common shapes
 - You can set custom sizes using `w-*` and `h-*`
 
 
+### megamenu
+A megamenu is a large, horizontal menu where each item opens a popover to show a large block of navigation links. Megamenu must be used once, on top of the page. Inside each popover, you can use a daisyUI menu, or any custom content. Megamenu fits better on large screens only, and for small screens, you can hide the megamenu and show the content in a dropdown or a drawer.
+
+[megamenu docs](https://daisyui.com/components/megamenu/)
+
+#### Class names
+- component: `megamenu`
+- part: `megamenu-active`
+- modifier: `megamenu-wide`, `megamenu-full`
+- direction: `megamenu-vertical`
+- size: `megamenu-xs`, `megamenu-sm`, `megamenu-md`, `megamenu-lg`, `megamenu-xl`
+
+#### Syntax
+```html
+<button class="btn sm:hidden" popovertarget="my-megamenu-1">Menu</button>
+<div class="megamenu max-sm:megamenu-vertical {MODIFIER} p-2 border border-base-300" id="my-megamenu-1" popover>
+  <span class="megamenu-active"></span>
+
+  <button popovertarget="item-1">button 1</button>
+  <div id="item-1" popover>
+    {CONTENT}
+  </div>
+
+  <button popovertarget="item-2">button 2</button>
+  <div id="item-2" popover>
+    {CONTENT}
+  </div>
+
+</div>
+```
+Example of megamenu-wide with lots of menu items
+```html
+<button class="btn sm:hidden" popovertarget="my-megamenu-2">Menu</button>
+<div class="megamenu max-sm:megamenu-vertical megamenu-wide w-full p-2 border border-base-300" id="my-megamenu-2" popover>
+  <span class="megamenu-active"></span>
+  <button popovertarget="c1">One</button>
+  <div id="c1" popover>
+    <div class="flex max-sm:flex-col items-start">
+      <ul class="menu w-full md:menu-horizontal">
+        <li>
+          <a>first column menu item</a>
+          <ul><li><a>sub menu item</a></li></ul>
+        </li>
+        <li>
+          <a>second column menu item</a>
+          <ul><li><a>sub menu item</a></li></ul>
+        </li>
+        <li>
+          <a>third column menu item</a>
+          <ul><li><a>sub menu item</a></li></ul>
+        </li>
+      </ul>
+      <img src="{image-url}" class="md:max-w-sm max-md:w-auto" alt="sample image at the end of the megamenu">
+    </div>
+  </div>
+</div>
+```
+
+
+#### Rules
+- {MODIFIER} is optional and can have one of the modifier class names and one of the size class names
+- `megamenu-active` span is mandatory. it's the indicator that moves under the active item
+- Each button must have a corresponding popover with the same id as the popovertarget value. HTML IDs must be unique.
+- {CONTENT} can include a daisyUI menu (`<ul class="menu"><li><a>List item 1</a></li></ul>`), or any custom content
+- you can put horizontal menu inside the popover like `<ul class="menu menu-horizontal"><li><a>List item 1</a></li></ul>`, or any other variation of daisyUI `menu` component
+- On small screens the whole megamenu is hidden using `max-sm:megamenu-vertical` class and it will be vertical when visible. The button with `popovertarget="my-megamenu-1"` opens the megamenu with `id="my-megamenu-1" popover`
+- On large screens, we hide the button using `sm:hidden` and the megamenu will be a horizontal menu, and each button inside the megamenu will open its corresponding popover.
+- megamenu can have max 10 popovers inside it
+- to hide the arrow from the buttons, use `after:content-none` class on the buttons
+
+
 ### menu
 Menu is used to display a list of links vertically or horizontally
 
@@ -1397,6 +1522,36 @@ Navbar is used to show a navigation bar on the top of the page
 - suggestion - use `base-200` for background color
 
 
+### OTP
+OTP (One-Time Password) component for inputting verification codes. It's usually 4 to 6 digits long and is used for two-factor authentication (2FA) or passwordless login.
+
+[OTP docs](https://daisyui.com/components/otp/)
+
+#### Class names
+- component: `otp`
+- size: `otp-xs`, `otp-sm`, `otp-md`, `otp-lg`, `otp-xl`
+- modifier: `otp-joined`
+- color: `otp-neutral`, `otp-primary`, `otp-secondary`, `otp-accent`, `otp-info`, `otp-success`, `otp-warning`, `otp-error`
+
+#### Syntax
+```html
+<label class="otp {MODIFIER}">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
+</label>
+```
+
+#### Rules
+- {MODIFIER} is optional and can have one of the size/color class names
+- `otp-joined` modifier connects the character boxes together
+- the `otp` class is for a label. The label should have 4 to 6 empty `<span>` elements for the visual representation of each digit and an input field for entering the code
+- The number of `<span>` elements must match the `maxlength` attribute and the pattern in the input field. For example, if you have 6 `<span>` elements, the input should have `maxlength="6"` and `pattern="\d{6}"`
+- `autocomplete="one-time-code"` and `inputmode="numeric"` are important for mobile devices to show the appropriate keyboard and to allow autofill of the OTP code
+
+
 ### pagination
 Pagination is a group of buttons
 
@@ -1486,6 +1641,7 @@ Range slider is used to select a value by sliding a handle
 - component: `range`
 - color: `range-neutral`, `range-primary`, `range-secondary`, `range-accent`, `range-success`, `range-warning`, `range-info`, `range-error`
 - size: `range-xs`, `range-sm`, `range-md`, `range-lg`, `range-xl`
+- direction: `range-vertical` (vertical slider)
 
 #### Syntax
 ```html
@@ -1494,6 +1650,7 @@ Range slider is used to select a value by sliding a handle
 
 #### Rules
 - {MODIFIER} is optional and can have one of each color/size class names
+- For a vertical slider use `range-vertical`
 - You must specify `min` and `max` attributes
 
 
@@ -1514,10 +1671,20 @@ Rating is a set of radio buttons that allow the user to rate something
 </div>
 ```
 
+For a read-only (non-interactive) rating, use `<div>` elements instead of radio inputs and mark the selected one with `aria-current="true"`:
+```html
+<div class="rating">
+  <div class="mask mask-star" aria-label="1 star"></div>
+  <div class="mask mask-star" aria-label="2 star" aria-current="true"></div>
+  <div class="mask mask-star" aria-label="3 star"></div>
+</div>
+```
+
 #### Rules
 - {MODIFIER} is optional and can have one of the modifier/size class names
 - Each set of rating inputs should have unique `name` attributes to avoid conflicts with other ratings on the same page
 - Add `rating-hidden` for the first radio to make it hidden so user can clear the rating
+- For a read-only/non-interactive rating, use `<div>` elements instead of the radio inputs and mark the selected one with `aria-current="true"`
 
 
 ### select

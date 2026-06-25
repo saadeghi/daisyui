@@ -100,6 +100,9 @@
     <loc>https://daisyui.com/blog/npm-init-daisyui/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/blog/v5.6/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/blog/what-is-daisyui/</loc>
   </url>
   <url>
@@ -116,6 +119,9 @@
   </url>
   <url>
     <loc>https://daisyui.com/components/alert/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/components/aura/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/components/avatar/</loc>
@@ -217,6 +223,9 @@
     <loc>https://daisyui.com/components/mask/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/components/megamenu/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/components/menu/</loc>
   </url>
   <url>
@@ -236,6 +245,9 @@
   </url>
   <url>
     <loc>https://daisyui.com/components/navbar/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/components/otp/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/components/pagination/</loc>

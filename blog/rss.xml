@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Tue, 23 Jun 2026 22:01:16 GMT</lastBuildDate>
-    <pubDate>Tue, 23 Jun 2026 22:01:16 GMT</pubDate>
+    <lastBuildDate>Thu, 25 Jun 2026 22:54:24 GMT</lastBuildDate>
+    <pubDate>Thu, 25 Jun 2026 22:54:24 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ daisyUI 5.6 ]]>
+          </title>
+          <description>
+            <![CDATA[ daisyUI 5.6 is here with 3 new components, new ways to use existing components, and many small improvements across the library. ]]>
+          </description>
+          <link>https://daisyui.com/blog/v5.6/</link>
+          <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/v5.6.webp</image>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/v5.6.webp</image>
+          <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/v5.6.webp" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.comhttps://img.daisyui.com/images/blog/v5.6.webp" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/v5.6/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Using daisyUI means less LLM cost and faster UI generation ]]>

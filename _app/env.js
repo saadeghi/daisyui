@@ -1,1 +1,0 @@
-export const env={"PUBLIC_DAISYUI_API_PATH":"https://api.daisyui.com"}
