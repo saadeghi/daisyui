@@ -1,8 +1,7 @@
 .rating {
   @layer daisyui.l1.l2.l3 {
     @apply relative inline-flex align-middle;
-
-    --size: var(--size-selector, 0.25rem) * var(--rt-size-mul);
+    --size: var(--size-selector, 0.25rem) * 6;
 
     input {
       @apply cursor-pointer appearance-none;
@@ -11,7 +10,7 @@
     * {
       @apply bg-base-content rounded-none opacity-20;
 
-      width: calc(var(--size) * var(--rt-size-w-mul));
+      width: calc(var(--size) * 1);
       height: calc(var(--size));
 
       @media (prefers-reduced-motion: no-preference) {
@@ -46,45 +45,40 @@
 
 .rating-half {
   @layer daisyui.l1.l2 {
-    --rt-size-w-mul: 0.5;
-  }
-}
-
-.rating,
-.rating-full {
-  @layer daisyui.l1.l2 {
-    --rt-size-w-mul: 1;
+    * {
+      width: calc(var(--size) * 0.5);
+    }
   }
 }
 
 .rating-xs {
   @layer daisyui.l1.l2 {
-    --rt-size-mul: 4;
+    --size: var(--size-selector, 0.25rem) * 4;
   }
 }
 
 .rating-sm {
   @layer daisyui.l1.l2 {
-    --rt-size-mul: 5;
+    --size: var(--size-selector, 0.25rem) * 5;
   }
 }
 
 .rating,
 .rating-md {
   @layer daisyui.l1.l2 {
-    --rt-size-mul: 6;
+    --size: var(--size-selector, 0.25rem) * 6;
   }
 }
 
 .rating-lg {
   @layer daisyui.l1.l2 {
-    --rt-size-mul: 7;
+    --size: var(--size-selector, 0.25rem) * 7;
   }
 }
 
 .rating-xl {
   @layer daisyui.l1.l2 {
-    --rt-size-mul: 8;
+    --size: var(--size-selector, 0.25rem) * 8;
   }
 }
 

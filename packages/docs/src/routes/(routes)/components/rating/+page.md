@@ -10,8 +10,6 @@ classnames:
   modifier:
   - class: rating-half
     desc: To shows half of the shapes. Useful for half star ratings
-  - class: rating-full
-    desc: To shows full shapes. Useful to override half star ratings
   - class: rating-hidden
     desc: For the first radio to make it hidden so user can clear the rating
   size:
