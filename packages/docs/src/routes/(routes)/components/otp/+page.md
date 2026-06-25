@@ -97,7 +97,7 @@ classnames:
   <span></span>
   <span></span>
   <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="5" pattern="[0-9]&#123;4}" required />
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
 </label>
 
 ```html
@@ -106,7 +106,7 @@ classnames:
   <span></span>
   <span></span>
   <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="5" pattern="[0-9]{4}" required />
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
 </label>
 ```
 
