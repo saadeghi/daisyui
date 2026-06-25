@@ -42,7 +42,7 @@
 </script>
 
 <dialog class="modal max-md:modal-bottom" bind:this={dialog} onclose={() => (showCssModal = false)}>
-  <div class="modal-box border-base-300 max-sm:modal-bottom border md:max-w-[40rem]">
+  <div class="modal-box border-base-300 border md:max-w-[40rem]">
     <div class="mb-4 flex items-center justify-between">
       <h3 class="flex items-center gap-2">
         <svg
