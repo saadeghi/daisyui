@@ -126,11 +126,13 @@ It uses a native input with visual slots. You get the familiar OTP look while ke
 
 Many small improvements are coming in 5.6. Here are some highlights:
 
-- Buttons got cleaner internal variables for variants like `ghost`, `outline`, `dash`, `soft`, and `link`. Disabled buttons now also support `[aria-disabled="true"]`, which is useful when the element can't use the native `disabled` attribute.
+- [Calendar](/components/calendar/) now has a new style integration for [Vanilla Calendar Pro](https://github.com/uvarov-frontend/vanilla-calendar-pro).
 
-- Collapse got smoother native `details` animation support and better overflow handling. Loading animations now respect `prefers-reduced-motion`, showing a static fallback for users who prefer reduced motion.
+- [Buttons](/components/button/) got cleaner internal variables for variants like `ghost`, `outline`, `dash`, `soft`, and `link`. Disabled buttons now also support `[aria-disabled="true"]`, which is useful when the element can't use the native `disabled` attribute.
 
-- Inputs, selects, textareas, floating labels, ratings, and range sliders got cleaner size variables and selector improvements. That means size variants are easier to maintain and more consistent.
+- [Collapse](/components/collapse/) got smoother native `details` animation support and better overflow handling. Loading animations now respect `prefers-reduced-motion`, showing a static fallback for users who prefer reduced motion.
+
+- [Inputs](/components/input/), [selects](/components/select/), [textareas](/components/textarea/), [floating labels](/components/label/#floating-label), [ratings](/components/rating/), and [range sliders](/components/range/) got cleaner size variables and selector improvements. That means size variants are easier to maintain and more consistent.
 
 - There are also smaller fixes for menu, dropdown, footer, mockup code, FAB, filter, calendar, and more. These are not the loud features. They make the whole system feel more solid.
 
