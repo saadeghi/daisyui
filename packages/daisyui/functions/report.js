@@ -58,6 +58,11 @@ const processDirectory = async (dir) => {
   return Promise.all(cssFiles.map((file) => processFile(path.join(dir, file))))
 }
 
+const sortByFolderAndFile = (a, b) => {
+  const folderComparison = path.dirname(a.file).localeCompare(path.dirname(b.file))
+  return folderComparison || path.basename(a.file).localeCompare(path.basename(b.file))
+}
+
 const normalizeData = (data) => {
   return data.map((item) => ({
     ...item,
@@ -92,7 +97,10 @@ export const report = async (directories) => {
       }),
     )
 
-    const flatReport = results.flat().filter(Boolean)
+    const flatReport = results
+      .flat()
+      .filter(Boolean)
+      .sort(sortByFolderAndFile)
     if (flatReport.length === 0) throw new Error("No files were successfully processed.")
 
     console.table(flatReport, ["file", "selector", "var", "raw", "brotli", "%"])
