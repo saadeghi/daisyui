@@ -16,7 +16,7 @@ tags:
 Try the new version now:
 
 ```bash
-npm i daisyui@5.6.0
+npm i daisyui@5.6
 ```
 
 ## New components
@@ -150,7 +150,7 @@ Many small improvements are coming in 5.6. Here are some highlights:
 daisyUI 5.6 is ready to use now, and you can install it with:
 
 ```bash
-npm i daisyui@5.6.0
+npm i daisyui@5.6
 ```
 
 If you find a bug or if something feels confusing, please open an issue or discussion on [GitHub](https://github.com/saadeghi/daisyui) or [Discord](https://daisyui.com/discord).
