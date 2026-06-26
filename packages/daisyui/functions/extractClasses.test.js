@@ -45,6 +45,44 @@ test("extractClasses processes CSS files and extracts class names", async () => 
   ])
 })
 
+test("extractClasses does not list layer names as class names", async () => {
+  const srcDir = uniqueName("layered-styles")
+  const outputDir = track(join(packageDir, srcDir))
+  const stylesDir = track(join(srcRoot, srcDir))
+  await mkdir(stylesDir, { recursive: true })
+  await writeFile(
+    join(stylesDir, "alert.css"),
+    `
+      .alert {
+        @layer daisyui.l1.l2.l3 {
+          color: red;
+        }
+      }
+
+      .alert-info {
+        @layer daisyui.l1.l2 {
+          color: blue;
+        }
+      }
+
+      .alert-soft {
+        @layer daisyui.l1 {
+          color: green;
+        }
+      }
+    `,
+  )
+
+  const totalClassNames = await extractClasses({ srcDir })
+  const classNames = JSON.parse(await readFile(join(outputDir, "alert", "class.json"), "utf-8"))
+
+  expect(totalClassNames).toBe(3)
+  expect(classNames).toEqual(["alert", "alert-info", "alert-soft"])
+  expect(classNames).not.toContain("l1")
+  expect(classNames).not.toContain("l2")
+  expect(classNames).not.toContain("l3")
+})
+
 test("extractClasses throws error if no CSS files are found", async () => {
   const srcDir = uniqueName("empty-styles")
   track(join(packageDir, srcDir))
