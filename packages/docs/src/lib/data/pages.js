@@ -284,6 +284,7 @@ export const pages = [
           {
             name: "Calendar",
             href: "/components/calendar/",
+            badge: "updated",
           },
           {
             name: "Checkbox",
