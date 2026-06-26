@@ -75,6 +75,9 @@
         @supports (font: -apple-system-body) {
           left: 2px;
         }
+        @supports (-moz-appearance: none) {
+          left: 0px;
+        }
       }
       &:nth-child(2) {
         left: calc(var(--stride) * 1);
@@ -159,7 +162,14 @@
   }
   &:after {
     outline-offset: calc((-1 * var(--border)) - 3px);
-    translate: -2 0;
+    @supports (font: -apple-system-body) {
+      --otp-w: calc(var(--otp-ch) * 2 - 1px);
+    }
+  }
+  &:has(input:valid:focus) {
+    > span {
+      outline-offset: calc((-1 * var(--border)) - 3px);
+    }
   }
 }
 
