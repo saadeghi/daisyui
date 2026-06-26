@@ -42,7 +42,8 @@
 }
 
 .join-item {
-  @apply border;
+  border-style: solid;
+  border-width: var(--border, 1px);
   border-radius: var(--join-ss) var(--join-se) var(--join-ee) var(--join-es);
 
   &:not(:first-child, :disabled, [disabled], .btn-disabled) {
