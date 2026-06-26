@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.6.2 (2026-06-26)
+
+
+### Bug Fixes
+
+* Missing outline and separators for joined buttons. closes: [#4586](https://github.com/saadeghi/daisyui/issues/4586) ([3f94950](https://github.com/saadeghi/daisyui/commit/3f949508e7f828a7e472f3c0d90b1ec2891ad4eb))
+
 ## 5.6.1 (2026-06-26)
 
 
