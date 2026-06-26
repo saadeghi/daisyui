@@ -140,7 +140,7 @@ Many small improvements are coming in 5.6. Here are some highlights:
 
 - [Card](/components/card/) docs now include selectable card examples with checkbox and radio inputs.
 
-- [Blueprint MCP](/blueprint/), [daisyUI Skill](/skills/daisyui/) and [llms.txt](/llms.txt/) are all updated to include the new components and new improvements.
+- [Blueprint MCP](/blueprint/), [daisyUI Skill](/skills/daisyui/) and [llms.txt](/llms.txt) are all updated to include the new components and new improvements.
 
   - Use the latest version of Blueprint with `daisyui-blueprint@latest`
   - Update your daisyUI Skill using `npx skills update`
