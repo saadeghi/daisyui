@@ -1,64 +1,46 @@
-import { expect, test, mock } from "bun:test"
-import path from "node:path"
-import { createDirectoryBasedOnFileNames } from "./createDirectoryBasedOnFileNames"
-import { promises as fs } from "node:fs"
+import { afterEach, expect, test } from "bun:test"
+import { existsSync } from "node:fs"
+import { writeFile } from "node:fs/promises"
+import { join } from "node:path"
+import { createDirectoryBasedOnFileNames } from "./createDirectoryBasedOnFileNames.js"
+import { createTempDirTracker } from "./testUtils.js"
 
-// Mock the fs.mkdir function
-const mockMkdir = mock(async () => {})
+const tempDirs = createTempDirTracker("daisyui-create-dir-")
 
-fs.mkdir = mockMkdir
+afterEach(tempDirs.cleanup)
 
-test("createDirectoryBasedOnFileNames creates directory based on file name", async () => {
-  const fileName = "/path/to/source/component.js"
-  const fileExtension = ".js"
-  const distDir = "/path/to/destination"
+for (const { name, fileName, extension } of [
+  {
+    name: "regular file name",
+    fileName: "/path/to/source/component.js",
+    extension: ".js",
+  },
+  {
+    name: "different extension",
+    fileName: "/path/to/source/component.tsx",
+    extension: ".tsx",
+  },
+  {
+    name: "nested source path",
+    fileName: "/path/to/source/nested/component.js",
+    extension: ".js",
+  },
+]) {
+  test(`createDirectoryBasedOnFileNames creates a directory for ${name}`, async () => {
+    const dir = await tempDirs.make()
+    const result = await createDirectoryBasedOnFileNames(fileName, extension, dir)
 
-  const expectedComponentName = "component"
-  const expectedComponentDir = path.join(distDir, expectedComponentName)
+    expect(result).toBe(join(dir, "component"))
+    expect(existsSync(result)).toBe(true)
+  })
+}
 
-  const result = await createDirectoryBasedOnFileNames(fileName, fileExtension, distDir)
+test("createDirectoryBasedOnFileNames throws when mkdir fails", async () => {
+  const dir = await tempDirs.make()
+  const blockedDistDir = join(dir, "file-as-parent")
+  await writeFile(blockedDistDir, "")
 
-  expect(mockMkdir).toHaveBeenCalledWith(expectedComponentDir, { recursive: true })
-  expect(result).toBe(expectedComponentDir)
-})
-
-test("createDirectoryBasedOnFileNames creates directory with different extension", async () => {
-  const fileName = "/path/to/source/component.tsx"
-  const fileExtension = ".tsx"
-  const distDir = "/path/to/destination"
-
-  const expectedComponentName = "component"
-  const expectedComponentDir = path.join(distDir, expectedComponentName)
-
-  const result = await createDirectoryBasedOnFileNames(fileName, fileExtension, distDir)
-
-  expect(mockMkdir).toHaveBeenCalledWith(expectedComponentDir, { recursive: true })
-  expect(result).toBe(expectedComponentDir)
-})
-
-test("createDirectoryBasedOnFileNames handles nested directories", async () => {
-  const fileName = "/path/to/source/nested/component.js"
-  const fileExtension = ".js"
-  const distDir = "/path/to/destination"
-
-  const expectedComponentName = "component"
-  const expectedComponentDir = path.join(distDir, expectedComponentName)
-
-  const result = await createDirectoryBasedOnFileNames(fileName, fileExtension, distDir)
-
-  expect(mockMkdir).toHaveBeenCalledWith(expectedComponentDir, { recursive: true })
-  expect(result).toBe(expectedComponentDir)
-})
-
-test("createDirectoryBasedOnFileNames throws error if mkdir fails", async () => {
-  const fileName = "/path/to/source/component.js"
-  const fileExtension = ".js"
-  const distDir = "/path/to/destination"
-
-  const mockError = new Error("Mock mkdir error")
-  mockMkdir.mockRejectedValueOnce(mockError)
-
-  await expect(createDirectoryBasedOnFileNames(fileName, fileExtension, distDir)).rejects.toThrow(
-    mockError,
-  )
+  await expect(
+    createDirectoryBasedOnFileNames("component.js", ".js", blockedDistDir),
+  ).rejects.toThrow()
 })

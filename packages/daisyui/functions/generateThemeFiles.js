@@ -15,7 +15,7 @@ ${content}}
 }
 
 export const generateThemeFiles = async ({ srcDir, distDir }) => {
-  const themeNames = await getFileNames(srcDir, ".css")
+  const themeNames = await getFileNames(srcDir, ".css", false)
 
   const tasks = themeNames.map(async (themeName) => {
     const srcPath = path.join(srcDir, `${themeName}.css`)

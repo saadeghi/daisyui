@@ -64,7 +64,7 @@ export async function generateResponsiveVariants(css) {
     responsiveStyles += generateMediaQuery(breakpoint, minWidth, escapedCss)
   }
 
-  return css + responsiveStyles + keyframesStyles
+  return root.toString() + responsiveStyles + keyframesStyles
 }
 
 async function processFile(
