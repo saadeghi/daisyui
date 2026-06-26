@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.6.3 (2026-06-26)
+
+
+### Bug Fixes
+
+* OTP alignment. closes: [#4587](https://github.com/saadeghi/daisyui/issues/4587) ([cc9bcf8](https://github.com/saadeghi/daisyui/commit/cc9bcf8a291d81e26fe8549a89f5d87c7d49c8b4))
+
 ## 5.6.2 (2026-06-26)
 
 
