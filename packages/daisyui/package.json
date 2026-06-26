@@ -72,7 +72,7 @@
   ],
   "commit-and-tag-version": {
     "scripts": {
-      "postbump": "cd ../.. && bun run --bun bundle && git add --all packages/bundle/"
+      "postbump": "cd ../.. && bun run --bun build && bun run --bun bundle && git add --all packages/bundle/"
     }
   },
   "scripts": {
