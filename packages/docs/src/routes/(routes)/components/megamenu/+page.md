@@ -66,29 +66,29 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
   <button popovertarget="a1">Services</button>
   <div id="a1" popover>
     <ul class="menu">
-      <li><a>Enterprise</a></li>
-      <li><a>CRM software</a></li>
-      <li><a>Security</a></li>
-      <li><a>Consulting</a></li>
+      <li><button>Enterprise</button></li>
+      <li><button>CRM software</button></li>
+      <li><button>Security</button></li>
+      <li><button>Consulting</button></li>
     </ul>
   </div>
 
   <button popovertarget="a2">AI</button>
   <div id="a2" popover>
     <ul class="menu">
-      <li><a>AI infrastructure</a></li>
-      <li><a>Image generation</a></li>
-      <li><a>MCP servers</a></li>
+      <li><button>AI infrastructure</button></li>
+      <li><button>Image generation</button></li>
+      <li><button>MCP servers</button></li>
     </ul>
   </div>
 
   <button popovertarget="a3">Cloud Solutions</button>
   <div id="a3" popover>
     <ul class="menu">
-      <li><a>Cloud computing</a></li>
-      <li><a>Storage solutions</a></li>
-      <li><a>Database services</a></li>
-      <li><a>CDN performance</a></li>
+      <li><button>Cloud computing</button></li>
+      <li><button>Storage solutions</button></li>
+      <li><button>Database services</button></li>
+      <li><button>CDN performance</button></li>
     </ul>
   </div>
 </div>
@@ -140,29 +140,29 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
   <button popovertarget="b1">One</button>
   <div id="b1" popover>
     <ul class="menu menu-horizontal">
-      <li><a>Enterprise</a></li>
-      <li><a>CRM software</a></li>
-      <li><a>Security</a></li>
-      <li><a>Consulting</a></li>
+      <li><button>Enterprise</button></li>
+      <li><button>CRM software</button></li>
+      <li><button>Security</button></li>
+      <li><button>Consulting</button></li>
     </ul>
   </div>
 
   <button popovertarget="b2">Two</button>
   <div id="b2" popover>
     <ul class="menu menu-horizontal">
-      <li><a>AI infrastructure</a></li>
-      <li><a>Image generation</a></li>
-      <li><a>MCP servers</a></li>
+      <li><button>AI infrastructure</button></li>
+      <li><button>Image generation</button></li>
+      <li><button>MCP servers</button></li>
     </ul>
   </div>
 
   <button popovertarget="b3">Three</button>
   <div id="b3" popover>
     <ul class="menu menu-horizontal">
-      <li><a>Cloud computing</a></li>
-      <li><a>Storage solutions</a></li>
-      <li><a>Database services</a></li>
-      <li><a>CDN performance</a></li>
+      <li><button>Cloud computing</button></li>
+      <li><button>Storage solutions</button></li>
+      <li><button>Database services</button></li>
+      <li><button>CDN performance</button></li>
     </ul>
   </div>
 </div>
@@ -214,21 +214,21 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
     <div class="flex max-sm:flex-col items-start">
       <ul class="menu w-full md:menu-horizontal">
         <li>
-          <a>Enterprise</a>
+          <button>Enterprise</button>
           <ul>
-            <li><a>CRM software</a></li>
-            <li><a>Marketing management</a></li>
-            <li><a>Security</a></li>
-            <li><a>Consulting</a></li>
+            <li><button>CRM software</button></li>
+            <li><button>Marketing management</button></li>
+            <li><button>Security</button></li>
+            <li><button>Consulting</button></li>
           </ul>
         </li>
         <li>
-          <a>Company</a>
+          <button>Company</button>
           <ul>
-            <li><a>About us</a></li>
-            <li><a>Contact us</a></li>
-            <li><a>Privacy policy</a></li>
-            <li><a>Press kit</a></li>
+            <li><button>About us</button></li>
+            <li><button>Contact us</button></li>
+            <li><button>Privacy policy</button></li>
+            <li><button>Press kit</button></li>
           </ul>
         </li>
       </ul>
@@ -241,25 +241,25 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
     <div class="flex max-sm:flex-col items-start">
       <ul class="menu w-full md:menu-horizontal">
         <li>
-          <a>Enterprise</a>
+          <button>Enterprise</button>
           <ul>
-            <li><a>CRM software</a></li>
-            <li><a>Marketing management</a></li>
-            <li><a>Security</a></li>
-            <li><a>Consulting</a></li>
-            <li><a>Privacy policy</a></li>
-            <li><a>Press kit</a></li>
+            <li><button>CRM software</button></li>
+            <li><button>Marketing management</button></li>
+            <li><button>Security</button></li>
+            <li><button>Consulting</button></li>
+            <li><button>Privacy policy</button></li>
+            <li><button>Press kit</button></li>
           </ul>
         </li>
         <li>
-          <a>Products</a>
+          <button>Products</button>
           <ul>
-            <li><a>UI Kit</a></li>
-            <li><a>WordPress themes</a></li>
-            <li><a>WordPress plugins</a></li>
-            <li><a>Color picker app</a></li>
-            <li><a>About us</a></li>
-            <li><a>Contact us</a></li>
+            <li><button>UI Kit</button></li>
+            <li><button>WordPress themes</button></li>
+            <li><button>WordPress plugins</button></li>
+            <li><button>Color picker app</button></li>
+            <li><button>About us</button></li>
+            <li><button>Contact us</button></li>
           </ul>
         </li>
       </ul>
@@ -274,23 +274,23 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
         <li>
           <ul>
             <li class="menu-title">Solutions</li>
-            <li><a>Design</a></li>
-            <li><a>Development</a></li>
-            <li><a>Hosting</a></li>
-            <li><a>Domain register</a></li>
+            <li><button>Design</button></li>
+            <li><button>Development</button></li>
+            <li><button>Hosting</button></li>
+            <li><button>Domain register</button></li>
           </ul>
         </li>
         <li>
           <ul>
             <li class="menu-title">Products</li>
-            <li><a>UI Kit</a></li>
-            <li><a>Cloud Platform</a></li>
-            <li><a>Open source</a></li>
+            <li><button>UI Kit</button></li>
+            <li><button>Cloud Platform</button></li>
+            <li><button>Open source</button></li>
             <li>
               <ul>
-                <li><a>Auth management system</a></li>
-                <li><a>VScode theme</a></li>
-                <li><a>Color picker app</a></li>
+                <li><button>Auth management system</button></li>
+                <li><button>VScode theme</button></li>
+                <li><button>Color picker app</button></li>
               </ul>
             </li>
           </ul>
@@ -298,19 +298,19 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
         <li>
           <ul>
             <li class="menu-title">Enterprise</li>
-            <li><a>CRM software</a></li>
-            <li><a>Marketing management</a></li>
-            <li><a>Security</a></li>
-            <li><a>Consulting</a></li>
+            <li><button>CRM software</button></li>
+            <li><button>Marketing management</button></li>
+            <li><button>Security</button></li>
+            <li><button>Consulting</button></li>
           </ul>
         </li>
         <li>
           <ul>
             <li class="menu-title">Company</li>
-            <li><a>About us</a></li>
-            <li><a>Contact us</a></li>
-            <li><a>Privacy policy</a></li>
-            <li><a>Press kit</a></li>
+            <li><button>About us</button></li>
+            <li><button>Contact us</button></li>
+            <li><button>Privacy policy</button></li>
+            <li><button>Press kit</button></li>
           </ul>
         </li>
       </ul>
@@ -446,21 +446,21 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
         <div class="flex max-sm:flex-col items-start">
           <ul class="menu w-full md:menu-horizontal">
             <li>
-              <a>Enterprise</a>
+              <button>Enterprise</button>
               <ul>
-                <li><a>CRM software</a></li>
-                <li><a>Marketing management</a></li>
-                <li><a>Security</a></li>
-                <li><a>Consulting</a></li>
+                <li><button>CRM software</button></li>
+                <li><button>Marketing management</button></li>
+                <li><button>Security</button></li>
+                <li><button>Consulting</button></li>
               </ul>
             </li>
             <li>
-              <a>Company</a>
+              <button>Company</button>
               <ul>
-                <li><a>About us</a></li>
-                <li><a>Contact us</a></li>
-                <li><a>Privacy policy</a></li>
-                <li><a>Press kit</a></li>
+                <li><button>About us</button></li>
+                <li><button>Contact us</button></li>
+                <li><button>Privacy policy</button></li>
+                <li><button>Press kit</button></li>
               </ul>
             </li>
           </ul>
@@ -472,25 +472,25 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
         <div class="flex max-sm:flex-col items-start">
           <ul class="menu w-full md:menu-horizontal">
             <li>
-              <a>Enterprise</a>
+              <button>Enterprise</button>
               <ul>
-                <li><a>CRM software</a></li>
-                <li><a>Marketing management</a></li>
-                <li><a>Security</a></li>
-                <li><a>Consulting</a></li>
-                <li><a>Privacy policy</a></li>
-                <li><a>Press kit</a></li>
+                <li><button>CRM software</button></li>
+                <li><button>Marketing management</button></li>
+                <li><button>Security</button></li>
+                <li><button>Consulting</button></li>
+                <li><button>Privacy policy</button></li>
+                <li><button>Press kit</button></li>
               </ul>
             </li>
             <li>
-              <a>Products</a>
+              <button>Products</button>
               <ul>
-                <li><a>UI Kit</a></li>
-                <li><a>WordPress themes</a></li>
-                <li><a>WordPress plugins</a></li>
-                <li><a>Color picker app</a></li>
-                <li><a>About us</a></li>
-                <li><a>Contact us</a></li>
+                <li><button>UI Kit</button></li>
+                <li><button>WordPress themes</button></li>
+                <li><button>WordPress plugins</button></li>
+                <li><button>Color picker app</button></li>
+                <li><button>About us</button></li>
+                <li><button>Contact us</button></li>
               </ul>
             </li>
           </ul>
@@ -502,35 +502,35 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
         <div class="flex max-sm:flex-col items-start">
           <ul class="menu w-full md:menu-horizontal">
             <li>
-              <a>Solutions</a>
+              <button>Solutions</button>
               <ul>
-                <li><a>Design</a></li>
-                <li><a>Development</a></li>
-                <li><a>Hosting</a></li>
-                <li><a>Domain register</a></li>
+                <li><button>Design</button></li>
+                <li><button>Development</button></li>
+                <li><button>Hosting</button></li>
+                <li><button>Domain register</button></li>
               </ul>
             </li>
             <li>
-              <a>Products</a>
+              <button>Products</button>
               <ul>
-                <li><a>UI Kit</a></li>
+                <li><button>UI Kit</button></li>
                 <li>
-                  <a>Open source</a>
+                  <button>Open source</button>
                   <ul>
-                    <li><a>Auth management system</a></li>
-                    <li><a>VScode theme</a></li>
-                    <li><a>Color picker app</a></li>
+                    <li><button>Auth management system</button></li>
+                    <li><button>VScode theme</button></li>
+                    <li><button>Color picker app</button></li>
                   </ul>
                 </li>
               </ul>
             </li>
             <li>
-              <a>Company</a>
+              <button>Company</button>
               <ul>
-                <li><a>About us</a></li>
-                <li><a>Contact us</a></li>
-                <li><a>Privacy policy</a></li>
-                <li><a>Press kit</a></li>
+                <li><button>About us</button></li>
+                <li><button>Contact us</button></li>
+                <li><button>Privacy policy</button></li>
+                <li><button>Press kit</button></li>
               </ul>
             </li>
           </ul>
@@ -539,7 +539,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
     </div>
   </div>
   <div class="navbar-end">
-    <a class="btn">Login</a>
+    <button class="btn">Login</button>
     <button class="btn sm:hidden" popovertarget="my-megamenu-4">Menu</button>
   </div>
 </div>

@@ -58,27 +58,27 @@ It supports 5 sizes from `xs` to `xl`. If one element in your page needs extra a
     <button popovertarget="megamenu-blog-demo-1">Services</button>
     <div id="megamenu-blog-demo-1" popover>
       <ul class="menu">
-        <li><a>Enterprise</a></li>
-        <li><a>CRM software</a></li>
-        <li><a>Security</a></li>
-        <li><a>Consulting</a></li>
+        <li><button>Enterprise</button></li>
+        <li><button>CRM software</button></li>
+        <li><button>Security</button></li>
+        <li><button>Consulting</button></li>
       </ul>
     </div>
     <button popovertarget="megamenu-blog-demo-2">AI</button>
     <div id="megamenu-blog-demo-2" popover>
       <ul class="menu">
-        <li><a>AI infrastructure</a></li>
-        <li><a>Image generation</a></li>
-        <li><a>MCP servers</a></li>
+        <li><button>AI infrastructure</button></li>
+        <li><button>Image generation</button></li>
+        <li><button>MCP servers</button></li>
       </ul>
     </div>
     <button popovertarget="megamenu-blog-demo-3">Cloud Solutions</button>
     <div id="megamenu-blog-demo-3" popover>
       <ul class="menu">
-        <li><a>Cloud computing</a></li>
-        <li><a>Storage solutions</a></li>
-        <li><a>Database services</a></li>
-        <li><a>CDN performance</a></li>
+        <li><button>Cloud computing</button></li>
+        <li><button>Storage solutions</button></li>
+        <li><button>Database services</button></li>
+        <li><button>CDN performance</button></li>
       </ul>
     </div>
   </div>
