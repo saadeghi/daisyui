@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.6.1 (2026-06-26)
+
+
+### Bug Fixes
+
+* expose `btn-active` as a utility class. closes: [#4584](https://github.com/saadeghi/daisyui/issues/4584) ([99316ff](https://github.com/saadeghi/daisyui/commit/99316ff10dd5d7b6bb96935306cb754f8b871564))
+
 ## 5.6.0 (2026-06-25)
 
 
