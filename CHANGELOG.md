@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file. See [commit
 * add vertical range slider with `range-vertical`
 * add HTML popover support for modal
 * add tooltip alignment utilities with `tooltip-start`, `tooltip-center`, and `tooltip-end`, closes [#4229](https://github.com/saadeghi/daisyui/discussions/4229)
+* add new calendar style integration for Vanilla Calendar Pro
 * make rating size modifiers responsive, closes [#4367](https://github.com/saadeghi/daisyui/issues/4367)
 * improve input, textarea, select, and floating label sizing, closes [#4370](https://github.com/saadeghi/daisyui/issues/4370)
 * improve collapse overflow behavior when closed, closes [#4419](https://github.com/saadeghi/daisyui/issues/4419)
