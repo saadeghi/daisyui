@@ -69,47 +69,29 @@
     &:where(:checked:not(.filter [type="radio"].btn)) {
       --btn-color: var(--color-primary);
       --btn-fg: var(--color-primary-content);
-      isolation: isolate;
     }
 
     @media (hover: hover) {
       &:hover {
-        --btn-bg: var(
-          --btn-hover-bg,
-          color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%)
-        );
+        --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
         color: var(--btn-fg);
-        --btn-border: var(
-          --btn-hover-border,
-          color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%))
-        );
+        --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
         --btn-border-style: solid;
-        --btn-inset: var(
-          --btn-hover-inset,
-          0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%))
-        );
-        --btn-shadow: var(
-          --btn-hover-shadow,
+        --btn-inset: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
+        --btn-shadow:
           0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
-          0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000)
-        );
+          0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
       }
     }
 
     &:active:not(.btn-active) {
-      translate: 0 var(--btn-active-translate, 0.5px);
-      --btn-bg: var(
-        --btn-active-bg,
-        color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%)
-      );
+      translate: 0 0.5px;
+      --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
       color: var(--btn-fg, var(--color-base-content));
-      --btn-border: var(
-        --btn-active-border,
-        color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%)
-      );
+      --btn-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
       --btn-border-style: solid;
-      --btn-inset: var(--btn-active-inset, 0 0 0 0 oklch(0% 0 0/0));
-      --btn-shadow: var(--btn-active-shadow, 0 0 0 0 oklch(0% 0 0/0));
+      --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
+      --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
     }
 
     &:where(
@@ -137,26 +119,15 @@
 }
 
 .btn-active {
-  @layer daisyui.l1.l2 {
-    --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
-    --btn-hover-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-    --btn-hover-border: color-mix(
-      in oklab,
-      var(--btn-color, var(--color-base-200)),
-      #000 calc(var(--depth) * 5%)
-    );
-    --btn-hover-inset: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
-    --btn-hover-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
-    --btn-active-translate: 0;
-    --btn-active-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-    --btn-active-border: color-mix(
-      in oklab,
-      var(--btn-color, var(--color-base-200)),
-      #000 calc(var(--depth) * 5%)
-    );
-    --btn-active-inset: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
-    --btn-active-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
+  @layer daisyui.l1.l2.l3 {
+    --btn-bg: var(--btn-color, var(--color-base-200));
+    color: var(--btn-fg, var(--color-base-content));
+    --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
+    --btn-border-style: solid;
+    --btn-inset: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%));
+    --btn-shadow:
+      0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
+      0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
     isolation: isolate;
   }
 }
