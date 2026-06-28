@@ -1,8 +1,7 @@
 {
   "name": "daisyui",
   "owner": {
-    "name": "daisyUI",
-    "url": "https://daisyui.com"
+    "name": "daisyUI"
   },
   "metadata": {
     "description": "Official daisyUI plugins for Cursor"

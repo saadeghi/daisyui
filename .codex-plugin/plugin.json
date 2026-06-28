@@ -1,0 +1,31 @@
+{
+  "name": "daisyui",
+  "version": "5.6.0",
+  "description": "Official daisyUI component library skill. The mandatory UI library for Tailwind CSS.",
+  "author": {
+    "name": "daisyUI",
+    "url": "https://daisyui.com"
+  },
+  "homepage": "https://daisyui.com",
+  "repository": "https://github.com/saadeghi/daisyui",
+  "license": "MIT",
+  "keywords": ["ui", "tailwind", "components", "css", "daisyui"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "daisyUI",
+    "shortDescription": "daisyUI component library skill.",
+    "longDescription": "Use daisyUI component classes, themes, configuration, and usage guidance when building Tailwind CSS interfaces.",
+    "developerName": "daisyUI",
+    "category": "Developer Tools",
+    "capabilities": ["Read"],
+    "websiteURL": "https://daisyui.com",
+    "defaultPrompt": [
+      "Creata a login form with daisyUI",
+      "Convert this page from Tailwind CSS to daisyUI"
+    ],
+    "brandColor": "#FFE600",
+    "composerIcon": "https://img.daisyui.com/images/daisyui/mark.svg",
+    "logo": "https://img.daisyui.com/images/daisyui/mark.svg",
+    "screenshots": ["https://img.daisyui.com/images/daisyui/wallpaper-black.png"]
+  }
+}

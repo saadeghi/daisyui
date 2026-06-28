@@ -1,5 +1,6 @@
 {
   "name": "daisyui",
+  "description": "Official daisyUI plugins for Claude Code",
   "owner": {
     "name": "daisyUI"
   },

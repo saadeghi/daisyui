@@ -1,7 +1,7 @@
 {
   "name": "daisyui-blueprint",
   "displayName": "daisyUI Blueprint MCP",
-  "version": "1.4",
+  "version": "1.4.0",
   "description": "Official daisyUI MCP server. Requires a paid license from https://daisyui.com/blueprint",
   "author": {
     "name": "daisyUI",
@@ -33,15 +33,5 @@
       "required": false
     }
   },
-  "mcpServers": {
-    "daisyui-blueprint": {
-      "command": "npx",
-      "args": ["-y", "daisyui-blueprint@latest"],
-      "env": {
-        "LICENSE": "${user_config.license}",
-        "EMAIL": "${user_config.email}",
-        "FIGMA": "${user_config.figma_api_key}"
-      }
-    }
-  }
+  "mcpServers": "./mcp.json"
 }
