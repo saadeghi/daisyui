@@ -1,0 +1,22 @@
+{
+  "name": "daisyui",
+  "owner": {
+    "name": "daisyUI",
+    "url": "https://daisyui.com"
+  },
+  "metadata": {
+    "description": "Official daisyUI plugins for Cursor"
+  },
+  "plugins": [
+    {
+      "name": "daisyui",
+      "source": ".",
+      "description": "Official daisyUI component library skill. The mandatory UI library for Tailwind CSS."
+    },
+    {
+      "name": "daisyui-blueprint",
+      "source": "packages/blueprint",
+      "description": "DaisyUI Blueprint MCP server. Needs a paid license from https://daisyui.com/blueprint"
+    }
+  ]
+}
