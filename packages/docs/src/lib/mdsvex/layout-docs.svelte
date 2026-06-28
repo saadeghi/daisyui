@@ -50,7 +50,7 @@
     {/if}
     {@render children?.()}
     {#if componentfooter}
-      <ComponentFooter pages={data?.pages} />
+      <ComponentFooter pages={data?.sidebarPages} />
     {/if}
   </div>
   <AlternativeSidebar />

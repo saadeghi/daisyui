@@ -61,66 +61,96 @@
     checked = ""
   }
 
+  const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+
+  const matchesPathPattern = (pathname, pattern) => {
+    if (!pattern) return false
+    if (pattern.includes("*")) {
+      const regex = new RegExp(`^${pattern.split("*").map(escapeRegExp).join(".*")}$`)
+      return regex.test(pathname)
+    }
+
+    return pathname === pattern
+  }
+
+  const matchesHref = (pathname, href) => {
+    if (!href) return false
+    if (pathname === href) return true
+    if (!href.endsWith("/")) return false
+
+    return pathname.startsWith(href) && href !== "/"
+  }
+
+  const getSidebarSectionLinks = (items = []) =>
+    items.flatMap((item) => [
+      ...(item?.href ? [item.href] : []),
+      ...(item?.items ? getSidebarSectionLinks(item.items) : []),
+    ])
+
+  const getSidebarSectionItems = (section) => section?.[0]?.items ?? section ?? []
+
+  const isNoSidebarPath = (pathname) =>
+    data.pagesThatDontNeedSidebar.some((pattern) => matchesPathPattern(pathname, pattern))
+
+  const getSidebarPages = (pathname) => {
+    if (isNoSidebarPath(pathname)) return []
+
+    for (const [name, section] of Object.entries(data.sidebar)) {
+      if (name === "noSidebar") continue
+
+      const items = getSidebarSectionItems(section)
+      const links = getSidebarSectionLinks(section)
+
+      if (links.some((href) => matchesHref(pathname, href))) {
+        return items
+      }
+    }
+
+    return []
+  }
+
+  let activeSidebarPages = $derived(getSidebarPages($page.url.pathname))
+  let hasDesktopSidebar = $derived(activeSidebarPages.length > 0)
+
   // Calculate if drawer-content should be inert
   let innerWidth = $state(0)
   let shouldBeInert = $derived.by(() => {
     if (!checked) return false
 
     const isLargeScreen = innerWidth >= 1024
-    const needsSidebar = !data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
 
-    if (isLargeScreen && needsSidebar) return false
+    if (isLargeScreen && hasDesktopSidebar) return false
 
     return true
   })
 
-  Array.prototype.matchPattern = function (inputString) {
-    for (const pattern of this) {
-      const regexPattern = pattern.replace(/\*/g, ".*")
-      const regex = new RegExp(`^${regexPattern}$`)
-
-      if (regex.test(inputString)) {
-        return true
-      }
+  $effect(() => {
+    if (innerWidth >= 1024 && !hasDesktopSidebar && checked) {
+      closeDrawer()
     }
-
-    return false
-  }
+  })
 </script>
 
 <svelte:window bind:innerWidth />
-
+<Navbar
+  version={data.daisyuiVersion}
+  navbar={data.navbar}
+  activeDiscount={data.activeDiscount}
+  themes={data.themes}
+  hideLogoOnLargeScreen={hasDesktopSidebar}
+  hideSidebarButtonOnLargeScreen={true}
+  showSearch="true"
+  showVersion="true"
+  showLanguage="true"
+  onOpenSearch={handleOpenSearch}
+  onPreFetchSearch={handlePreFetchSearch}
+/>
 <div
-  class={`bg-base-100 drawer mx-auto max-w-[100rem] ${
-    data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname) ? "" : "lg:drawer-open"
-  }`}
+  class={`bg-base-100 drawer mx-auto max-w-[100rem] ${hasDesktopSidebar ? "lg:drawer-open" : ""}`}
 >
   <input id="drawer" type="checkbox" autocomplete="off" class="drawer-toggle" bind:checked />
   <div class={`drawer-content`} inert={shouldBeInert || undefined}>
-    <Navbar
-      version={data.daisyuiVersion}
-      pages={data.pages}
-      themes={data.themes}
-      showComponentsBtn="true"
-      hideLogoOnLargeScreen={data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
-        ? false
-        : true}
-      hideSidebarButtonOnLargeScreen={data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
-        ? false
-        : true}
-      showSearch="true"
-      showVersion="true"
-      showLanguage="true"
-      onOpenSearch={handleOpenSearch}
-      onPreFetchSearch={handlePreFetchSearch}
-    />
-    <div
-      class={`${
-        data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
-          ? ""
-          : "relative max-w-[100vw] px-6 pb-16 xl:pe-2"
-      }`}
-    >
+    <div class={`${hasDesktopSidebar ? "relative max-w-[100vw] px-6 pb-16 xl:pe-2" : ""}`}>
       {@render children?.()}
     </div>
     <div class="toast toast-center z-10 [@supports(color:oklch(0%_0_0))]:hidden">
@@ -139,15 +169,25 @@
     </div>
   </div>
   <div
-    class="drawer-side z-40"
+    class={`drawer-side z-40 ${
+      hasDesktopSidebar
+        ? "lg:sticky lg:top-16 border-transparent lg:h-[calc(100vh-5rem)]"
+        : "lg:h-screen"
+    }`}
     style="scroll-behavior: smooth; scroll-padding-top: 5rem;"
     bind:this={drawersidebar}
     onscroll={parseSidebarScroll}
   >
     <label for="drawer" class="drawer-overlay" aria-label="Close menu"></label>
-    <aside class="bg-base-100 min-h-screen w-80">
+    <aside
+      class={`bg-base-100 min-h-screen w-80 ${
+        hasDesktopSidebar ? "lg:min-h-[calc(100vh-5rem)]" : "lg:min-h-screen"
+      }`}
+    >
       <Sidebar
-        pages={data.pages}
+        pages={activeSidebarPages}
+        navbar={data.navbar}
+        sidebar={data.sidebar}
         version={data.daisyuiVersion}
         {closeDrawer}
         {drawerSidebarScrollY}

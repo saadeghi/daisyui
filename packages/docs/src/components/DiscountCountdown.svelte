@@ -3,7 +3,7 @@
   import { fade } from "svelte/transition"
   import { discountDateFormat } from "$lib/storeDiscount.js"
 
-  let { expiresAt, compact = false, variant = "error", class: className = "" } = $props()
+  let { expiresAt, tooltip = false, variant = "error", class: className = "" } = $props()
 
   const from = $derived(new Date(expiresAt).toLocaleString("en-GB", discountDateFormat))
   const datetime = $derived(from)
@@ -12,19 +12,26 @@
 <Countdown {from} dateFormat="DD/MM/YYYY, HH:mm:ss">
   {#snippet children({ remaining })}
     {#if remaining.done === false}
-      {#if compact}
-        <span
-          class={`badge badge-error badge-soft badge-xs font-mono tabular-nums ${className}`}
-          transition:fade={{ duration: 400 }}
-        >
-          <date {datetime} class="countdown text-[0.625rem]">
-            {#if remaining.days > 0}
-              <span style={`--digits: 1;--value:${remaining.days};`}></span>:
-            {/if}
-            <span style={`--digits: 1;--value:${remaining.hours};`}></span>:
-            <span style={`--digits: 2;--value:${remaining.minutes};`}></span>:
-            <span style={`--digits: 2;--value:${remaining.seconds};`}></span>
-          </date>
+      {#if tooltip}
+        <span class="tooltip-content text-[0.625rem] pt-2">
+          <span
+            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-out group-hover:grid-rows-[1fr]"
+          >
+            <span class="overflow-hidden">Discount</span>
+          </span>
+          <span
+            class={`font-mono tabular-nums ${className}`}
+            transition:fade={{ duration: 400 }}
+          >
+            <date {datetime} class="countdown text-[0.625rem]">
+              {#if remaining.days > 0}
+                <span style={`--digits: 1;--value:${remaining.days};`}></span>:
+              {/if}
+              <span style={`--digits: 1;--value:${remaining.hours};`}></span>:
+              <span style={`--digits: 2;--value:${remaining.minutes};`}></span>:
+              <span style={`--digits: 2;--value:${remaining.seconds};`}></span>
+            </date>
+          </span>
         </span>
       {:else}
         {@const gridClass =

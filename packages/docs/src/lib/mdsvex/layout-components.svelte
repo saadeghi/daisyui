@@ -455,7 +455,7 @@
       </div>
     {/if}
     {@render children?.()}
-    <ComponentFooter pages={data.pages} />
+    <ComponentFooter pages={data.sidebarPages} />
   </div>
   <AlternativeSidebar />
 </div>

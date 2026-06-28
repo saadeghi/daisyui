@@ -2,207 +2,462 @@
   import LogoHorizontal from "$components/LogoHorizontal.svelte"
   import { goto } from "$app/navigation"
   import { page } from "$app/stores"
-  import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
+  import { t } from "$lib/i18n.svelte.js"
+  import { track } from "$lib/analytics.svelte.js"
 
-  let { closeDrawer, pages, drawerSidebarScrollY, version, onOpenSearch, onPreFetchSearch } =
-    $props()
+  let {
+    closeDrawer,
+    pages = [],
+    navbar = [],
+    sidebar = {},
+    drawerSidebarScrollY,
+    version,
+    onOpenSearch,
+    onPreFetchSearch,
+  } = $props()
   let switchNavbarStyle = $derived(drawerSidebarScrollY > 40)
 
-  let innerWidth = $state(undefined)
+  const getHrefPathPrefix = (href) => {
+    if (!href?.startsWith("/")) return null
+    const segment = href.split("/").filter(Boolean)[0]
+
+    return segment ? `/${segment}/` : null
+  }
+
+  const matchesActivePath = (item) => {
+    if (!item) return false
+
+    const pathname = $page.url.pathname
+
+    if (item.href) {
+      if (pathname === item.highlightAnotherItem) return true
+      if (item.exact) return pathname === item.href
+      if (pathname === item.href || pathname.startsWith(item.href)) return true
+
+      return false
+    }
+
+    if (item.items) return item.items.some((child) => matchesActivePath(child))
+
+    return false
+  }
+
+  const getActiveItems = (items) =>
+    items.flatMap((item) => [
+      ...(item?.href && matchesActivePath(item) ? [item] : []),
+      ...(item?.items ? getActiveItems(item.items) : []),
+    ])
+
+  let activeNavbarItem = $derived(getActiveItems(navbar)[0])
+  let activeSidebarItem = $derived(getActiveItems(pages)[0])
+
+  const containsItem = (items, activeItem) => {
+    if (!activeItem) return false
+
+    return (
+      items?.some((item) => item === activeItem || containsItem(item.items, activeItem)) ?? false
+    )
+  }
+
+  const isActive = (item) => {
+    if (!item) return false
+    if (item === activeNavbarItem || item === activeSidebarItem) return true
+    if (!navbar.includes(item)) return false
+
+    return containsItem(item.items, activeNavbarItem)
+  }
+
+  const hasText = (value) => typeof value === "string" && value.length > 0
+  const shouldFlattenMobileNav = (item) => ["Tools", "More"].includes(item.name)
+
+  const getSidebarSectionItems = (section) => section?.[0]?.items ?? section ?? []
+  const getSidebarSectionRoot = (section) =>
+    section?.[0]?.items ? section[0] : { name: section?.[0]?.name }
+  const getSidebarSectionLinks = (items = []) =>
+    items.flatMap((item) => [
+      ...(item?.href ? [item.href] : []),
+      ...(item?.items ? getSidebarSectionLinks(item.items) : []),
+    ])
+
+  const getSidebarMenuRoot = (items) => {
+    for (const [name, section] of Object.entries(sidebar)) {
+      if (name === "noSidebar") continue
+      if (getSidebarSectionItems(section) === items) return getSidebarSectionRoot(section)
+    }
+
+    return null
+  }
+
+  const getSidebarPagesForNavItem = (navItem) => {
+    const navPrefix = getHrefPathPrefix(navItem?.href)
+    if (!navPrefix) return []
+
+    for (const [name, section] of Object.entries(sidebar)) {
+      if (name === "noSidebar") continue
+
+      const items = getSidebarSectionItems(section)
+      const links = getSidebarSectionLinks(section)
+
+      if (links.some((href) => getHrefPathPrefix(href) === navPrefix)) {
+        return items
+      }
+    }
+
+    return []
+  }
+
+  const openMobileSidebarPages = (item) => {
+    const navItemSidebarPages = getSidebarPagesForNavItem(item)
+
+    if (navItemSidebarPages.length) {
+      selectedMobilePages = navItemSidebarPages
+      showMobileMainMenu = false
+      return true
+    }
+
+    return false
+  }
+
+  let selectedMobilePages = $state(null)
+  let mobileSidebarPages = $derived(selectedMobilePages ?? pages)
+  let hasMobileSidebarMenuItems = $derived(mobileSidebarPages.some(Boolean))
+  let showMobileMainMenu = $state(false)
+  let desktopSidebarMenuRoot = $derived(getSidebarMenuRoot(pages))
+
+  $effect(() => {
+    $page.url.pathname
+    selectedMobilePages = null
+    showMobileMainMenu = false
+  })
 </script>
 
-<svelte:window bind:innerWidth />
-
 <div
-  data-sveltekit-preload-data
-  class={`bg-base-100/90 navbar sticky top-0 z-20 hidden items-center gap-2 px-4 py-0 backdrop-blur ${
-    $page.url.pathname == "/" ? "" : "lg:flex"
-  } ${switchNavbarStyle ? "shadow-xs" : ""}`}
+  class={`bg-base-100/90 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 px-2 py-3 backdrop-blur lg:hidden ${
+    switchNavbarStyle ? "shadow-sm" : ""
+  }`}
 >
-  <a
-    data-sveltekit-preload-data
-    href="/"
-    aria-current="page"
-    aria-label="daisyUI"
-    class="-ms-2 me-2 flex w-35 shrink-0 items-center gap-2"
-    oncontextmenu={(e) => {
-      e.preventDefault()
-      goto("/brand")
-    }}
-  >
-    <LogoHorizontal />
-  </a>
-  <ChangelogMenu {version} />
-</div>
-
-{#if innerWidth < 1024}
-  <div
-    class={`bg-base-100/90 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 px-2 py-3 backdrop-blur ${
-      switchNavbarStyle ? "shadow-sm" : ""
-    }`}
-  >
-    <div class="flex w-full">
-      <button
-        class="input input-ghost hover:bg-base-200 focus-visible:bg-base-200 cursor-pointer transition-colors focus:outline-none"
-        onclick={() => {
-          onOpenSearch?.()
-          closeDrawer()
-        }}
-        onmouseenter={() => {
-          // Pre-fetch search data on hover
-          onPreFetchSearch?.()
-        }}
-        onfocus={() => {
-          onPreFetchSearch?.()
-        }}
-        ontouchstart={() => {
-          onPreFetchSearch?.()
-        }}
+  <div class="flex w-full">
+    <button
+      class="input input-ghost hover:bg-base-200 focus-visible:bg-base-200 cursor-pointer transition-colors focus:outline-none"
+      onclick={() => {
+        onOpenSearch?.()
+        closeDrawer()
+      }}
+      onmouseenter={() => {
+        // Pre-fetch search data on hover
+        onPreFetchSearch?.()
+      }}
+      onfocus={() => {
+        onPreFetchSearch?.()
+      }}
+      ontouchstart={() => {
+        onPreFetchSearch?.()
+      }}
+    >
+      <svg
+        class="hidden size-4 shrink-0 opacity-60"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 16 16"
       >
-        <svg
-          class="hidden size-4 shrink-0 opacity-60"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 16"
-        >
-          <g fill="none">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11.5 7a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-.82 4.74a6 6 0 1 1 1.06-1.06l2.79 2.79a.75.75 0 1 1-1.06 1.06l-2.79-2.79Z"
-              fill="currentColor"
-            ></path>
-          </g>
-        </svg>
-        <span class="grow text-left">Search…</span>
-        <kbd class="kbd kbd-sm font-mono opacity-50"><span class="me-1 text-sm">⌘</span>K</kbd>
-      </button>
-    </div>
+        <g fill="none">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11.5 7a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-.82 4.74a6 6 0 1 1 1.06-1.06l2.79 2.79a.75.75 0 1 1-1.06 1.06l-2.79-2.79Z"
+            fill="currentColor"
+          ></path>
+        </g>
+      </svg>
+      <span class="grow text-left">Search…</span>
+      <kbd class="kbd kbd-sm font-mono opacity-50"><span class="me-1 text-sm">⌘</span>K</kbd>
+    </button>
   </div>
-{/if}
+</div>
 
 <div class="h-4"></div>
 
-<ul class="menu w-full px-4 py-0">
-  {#each pages as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items, collapsible, target, highlight }}
-    <SidebarMenuItem
-      {closeDrawer}
-      {name}
-      {href}
-      {icon}
-      {badge}
-      {badgeclass}
-      {highlightAnotherItem}
-      {deprecated}
-      {items}
-      {collapsible}
-      {highlight}
-      {target}
-    />
-  {/each}
-  <li></li>
-</ul>
+<div class="lg:hidden">
+  {#if hasMobileSidebarMenuItems && !showMobileMainMenu}
+    <ul class="menu w-full px-4 py-0" data-sveltekit-preload-data>
+      <li>
+        <button
+          onclick={() => {
+            showMobileMainMenu = true
+          }}
+        >
+          <svg
+            class="size-4 shrink-0 fill-current opacity-60 rtl:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+          </svg>
+          {$t("Back")}
+        </button>
+      </li>
+      <li></li>
+      {@render sidebarMenuItems(mobileSidebarPages)}
+    </ul>
+  {:else}
+    <ul class="menu w-full px-4 py-0">
+      {#each navbar as item}
+        {#if shouldFlattenMobileNav(item) && item.items}
+          {#each item.items as child}
+            {#if hasText(child.name) && child.href}
+              {@const navItemSidebarPages = getSidebarPagesForNavItem(child)}
+              <li>
+                {#if navItemSidebarPages.length}
+                  <button
+                    class={isActive(child) ? "menu-active" : ""}
+                    onclick={() => {
+                      track(`Mobile Menu > ${item.name} > ${child.name}`)
+                      selectedMobilePages = navItemSidebarPages
+                      showMobileMainMenu = false
+                    }}
+                  >
+                    {#if child.icon}
+                      <span>{@html child.icon}</span>
+                    {/if}
+                    <span class="grow text-start">{$t(child.name)}</span>
+                    {@render mobileSubmenuArrow()}
+                  </button>
+                {:else}
+                  <a
+                    data-sveltekit-preload-data
+                    href={child.href}
+                    target={child.target === "blank" ? "_blank" : undefined}
+                    rel={child.target === "blank" ? "noopener noreferrer" : undefined}
+                    class={isActive(child) ? "menu-active" : ""}
+                    onclick={() => {
+                      track(`Mobile Menu > ${item.name} > ${child.name}`)
+                      closeDrawer()
+                    }}
+                  >
+                    {#if child.icon}
+                      <span>{@html child.icon}</span>
+                    {/if}
+                    {$t(child.name)}
+                  </a>
+                {/if}
+              </li>
+            {:else}
+              <li></li>
+            {/if}
+          {/each}
+        {:else}
+          {#if !hasText(item.name) && !item.items}
+            <li></li>
+          {:else}
+            <li>
+              {#if item.items}
+                <span class={isActive(item) ? "menu-active" : ""}>
+                  {#if item.icon}
+                    <span>{@html item.icon}</span>
+                  {/if}
+                  {#if hasText(item.name)}
+                    {$t(item.name)}
+                  {/if}
+                </span>
+                <ul>
+                  {#each item.items as child}
+                    {#if hasText(child.name) && child.href}
+                      {@const navItemSidebarPages = getSidebarPagesForNavItem(child)}
+                      <li>
+                        {#if navItemSidebarPages.length}
+                          <button
+                            class={isActive(child) ? "menu-active" : ""}
+                            onclick={() => {
+                              track(`Mobile Menu > ${item.name} > ${child.name}`)
+                              selectedMobilePages = navItemSidebarPages
+                              showMobileMainMenu = false
+                            }}
+                          >
+                            {#if child.icon}
+                              <span>{@html child.icon}</span>
+                            {/if}
+                            <span class="grow text-start">{$t(child.name)}</span>
+                            {@render mobileSubmenuArrow()}
+                          </button>
+                        {:else}
+                          <a
+                            data-sveltekit-preload-data
+                            href={child.href}
+                            target={child.target === "blank" ? "_blank" : undefined}
+                            rel={child.target === "blank" ? "noopener noreferrer" : undefined}
+                            class={isActive(child) ? "menu-active" : ""}
+                            onclick={() => {
+                              track(`Mobile Menu > ${item.name} > ${child.name}`)
+                              closeDrawer()
+                            }}
+                          >
+                            {#if child.icon}
+                              <span>{@html child.icon}</span>
+                            {/if}
+                            {$t(child.name)}
+                          </a>
+                        {/if}
+                      </li>
+                    {:else}
+                      <li></li>
+                    {/if}
+                  {/each}
+                </ul>
+              {:else if hasText(item.name) && item.href}
+                {#if getSidebarPagesForNavItem(item).length}
+                  <button
+                    class={isActive(item) ? "menu-active" : ""}
+                    onclick={() => {
+                      track(`Mobile Menu > ${item.name}`)
+                      openMobileSidebarPages(item)
+                    }}
+                  >
+                    {#if item.icon}
+                      <span>{@html item.icon}</span>
+                    {/if}
+                    <span class="grow text-start">{$t(item.name)}</span>
+                    {@render mobileSubmenuArrow()}
+                  </button>
+                {:else}
+                  <a
+                    data-sveltekit-preload-data
+                    href={item.href}
+                    class={isActive(item) ? "menu-active" : ""}
+                    onclick={() => {
+                      track(`Mobile Menu > ${item.name}`)
+                      closeDrawer()
+                    }}
+                  >
+                    {#if item.icon}
+                      <span>{@html item.icon}</span>
+                    {/if}
+                    {$t(item.name)}
+                  </a>
+                {/if}
+              {/if}
+            </li>
+          {/if}
+        {/if}
+      {/each}
+    </ul>
+  {/if}
+</div>
 
-<ul
-  class="menu menu-xs menu-horizontal -mt-2 w-full gap-1 px-8 *:grow *:text-center **:justify-center"
->
-  <li>
-    <a
-      href="https://github.com/saadeghi/daisyui"
-      aria-label="GitHub"
-      data-tip="GitHub"
-      rel="noopener noreferrer"
-      target="_blank"
-      class="tooltip px-1"
-    >
-      <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <g
-          stroke-linejoin="round"
-          stroke-linecap="round"
-          stroke-width="2"
-          fill="none"
-          stroke="currentColor"
+{#snippet mobileSubmenuArrow()}
+  <svg
+    class="ms-auto size-4 shrink-0 fill-current opacity-60 rtl:rotate-180"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+  </svg>
+{/snippet}
+
+{#snippet sidebarMenuItems(items)}
+  {#each items as item}
+    {#if item}
+      {@render sidebarMenuItem(item)}
+    {/if}
+  {/each}
+{/snippet}
+
+{#snippet sidebarMenuItem(item)}
+  {#if !hasText(item.name) && !item.items}
+    <li></li>
+  {:else if hasText(item.name)}
+    <li>
+      {#if item.items || !item.href}
+        {#if !item.href}
+          <h2 class="menu-title flex items-center gap-2 px-1.5">
+            {#if item.icon}
+              <span class="ms-1 text-base-content opacity-40">{@html item.icon}</span>
+            {/if}
+            {#if hasText(item.name)}
+              {$t(item.name)}
+            {/if}
+          </h2>
+        {/if}
+        {#if item.items}
+          {@render sidebarMenuItems(item.items)}
+        {/if}
+      {/if}
+      {#if !item.items && item.href && hasText(item.name)}
+        <a
+          href={item.href}
+          target={item.target === "blank" ? "_blank" : undefined}
+          rel={item.target === "blank" ? "noopener noreferrer" : undefined}
+          onclick={closeDrawer}
+          class={`group ${isActive(item) ? "menu-active" : ""} ${
+            item.highlight
+              ? "from-primary to-primary/0 hover:to-primary/10 outline-primary/5 bg-linear-50 from-[-300%] to-60% outline-1 -outline-offset-1"
+              : ""
+          }`}
         >
-          <path
-            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-          >
-          </path>
-        </g>
-      </svg>
-    </a>
-  </li>
-  <li>
-    <a
-      href="https://x.com/daisyui_"
-      aria-label="X.com"
-      data-tip="X.com"
-      rel="noopener noreferrer"
-      target="_blank"
-      class="tooltip px-1"
-    >
-      <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-        <path
-          fill="currentColor"
-          d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"
-        >
-        </path>
-      </svg>
-    </a>
-  </li>
-  <li>
-    <a
-      href="/discord/"
-      aria-label="Discord"
-      data-tip="Discord"
-      rel="noopener noreferrer"
-      target="_blank"
-      class="tooltip px-1"
-    >
-      <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <g
-          stroke-linejoin="round"
-          stroke-linecap="round"
-          stroke-width="2"
-          fill="none"
-          stroke="currentColor"
-        >
-          <path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"> </path>
-          <path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"> </path>
-          <path
-            d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3"
-          >
-          </path>
-          <path d="M7 16.5c3.5 1 6.5 1 10 0"> </path>
-        </g>
-      </svg>
-    </a>
-  </li>
-  <li>
-    <a
-      href="https://github.com/saadeghi/daisyui?sponsor=1"
-      aria-label="Donate"
-      data-tip="Donate"
-      rel="noopener noreferrer"
-      target="_blank"
-      class="tooltip px-1"
-    >
-      <svg
-        width="18"
-        class="size-5"
-        height="18"
-        viewBox="0 0 48 48"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M15 8C8.92487 8 4 12.9249 4 19C4 30 17 40 24 42.3262C31 40 44 30 44 19C44 12.9249 39.0751 8 33 8C29.2797 8 25.9907 9.8469 24 12.6738C22.0093 9.8469 18.7203 8 15 8Z"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="4"
-          stroke-linecap="butt"
-          stroke-linejoin="bevel"
-        />
-      </svg>
-    </a>
-  </li>
-</ul>
+          {#if item.icon}
+            <span class={item.highlight ? " group-hover:text-primary transition-colors" : ""}>
+              {@html item.icon}
+            </span>
+          {/if}
+          <span class={item.deprecated ? "line-through" : undefined}>
+            {#if hasText(item.name)}
+              {@html $t(item.name)}
+            {/if}
+          </span>
+          {#if hasText(item.badge)}
+            <span
+              class={`badge badge-xs text-opacity-70 font-mono ${item.badgeclass && item.badgeclass}`}
+            >
+              {#if hasText(item.badge)}
+                {$t(item.badge)}
+              {/if}
+            </span>
+          {/if}
+          {#if item.target === "blank"}
+            <svg
+              width="12"
+              height="12"
+              class="opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 11H37V29"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="butt"
+                stroke-linejoin="bevel"
+              >
+              </path>
+              <path
+                d="M11.5439 36.4559L36.9997 11"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="butt"
+                stroke-linejoin="bevel"
+              >
+              </path>
+            </svg>
+          {/if}
+        </a>
+      {/if}
+    </li>
+  {/if}
+{/snippet}
+
+{#if pages.length}
+  <ul class="menu hidden w-full px-4 py-0 lg:flex" data-sveltekit-preload-data>
+    {#if hasText(desktopSidebarMenuRoot?.name)}
+      <li>
+        <h2 class="menu-title flex items-center gap-2 px-3.5">
+          <!-- {#if desktopSidebarMenuRoot.icon}
+            <span class="ms-1 text-base-content">{@html desktopSidebarMenuRoot.icon}</span>
+          {/if} -->
+          {$t(desktopSidebarMenuRoot.name)}
+        </h2>
+      </li>
+      <li></li>
+    {/if}
+    {@render sidebarMenuItems(pages)}
+  </ul>
+{/if}
