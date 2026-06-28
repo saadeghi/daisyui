@@ -11,9 +11,8 @@
     },
     {
       "name": "daisyui-blueprint",
-      "source": "./packages/blueprint",
-      "description": "daisyUI Blueprint MCP server - Requires a paid license from https://daisyui.com/blueprint",
-      "defaultEnabled": false
+      "source": "./packages/.claude-plugin/blueprint",
+      "description": "daisyUI Blueprint MCP server - (Needs paid license)"
     }
   ]
 }
