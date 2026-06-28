@@ -10,14 +10,16 @@ const tempDirs = createTempDirTracker("daisyui-theme-files-")
 afterEach(tempDirs.cleanup)
 
 test("wrapContent includes :root for the light theme", () => {
-  expect(wrapContent("light", "--color-primary: red;\n")).toBe(`:root,:root:has(input.theme-controller[value=light]:checked),[data-theme="light"] {
+  expect(wrapContent("light", "--color-primary: red;\n"))
+    .toBe(`:root,:root:has(input.theme-controller[value=light]:checked),[data-theme="light"] {
 --color-primary: red;
 }
 `)
 })
 
 test("wrapContent omits :root for non-light themes", () => {
-  expect(wrapContent("dark", "--color-primary: black;\n")).toBe(`:root:has(input.theme-controller[value=dark]:checked),[data-theme="dark"] {
+  expect(wrapContent("dark", "--color-primary: black;\n"))
+    .toBe(`:root:has(input.theme-controller[value=dark]:checked),[data-theme="dark"] {
 --color-primary: black;
 }
 `)

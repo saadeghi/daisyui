@@ -2,9 +2,9 @@
   let version = $props()
 </script>
 
-
 <button
-  popovertarget="changelog" style="anchor-name:--changelog"
+  popovertarget="changelog"
+  style="anchor-name:--changelog"
   dir="ltr"
   role="button"
   class="link link-hover text-base-content/60 relative -top-1 inline-block font-mono text-[0.625rem] whitespace-nowrap"
@@ -19,7 +19,9 @@
   </svg>
 </button>
 <ul
-  popover id="changelog" style="position-anchor:--changelog"
+  popover
+  id="changelog"
+  style="position-anchor:--changelog"
   data-sveltekit-preload-data
   class="dropdown menu menu-sm bg-base-200 rounded-box mt-10 w-36 border-(length:--border) border-white/5 p-2 shadow-2xl outline-(length:--border) outline-black/5"
 >
@@ -136,4 +138,3 @@
     </a>
   </li>
 </ul>
-

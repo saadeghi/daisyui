@@ -19,10 +19,7 @@
           >
             <span class="overflow-hidden">Discount</span>
           </span>
-          <span
-            class={`font-mono tabular-nums ${className}`}
-            transition:fade={{ duration: 400 }}
-          >
+          <span class={`font-mono tabular-nums ${className}`} transition:fade={{ duration: 400 }}>
             <date {datetime} class="countdown text-[0.625rem]">
               {#if remaining.days > 0}
                 <span style={`--digits: 1;--value:${remaining.days};`}></span>:

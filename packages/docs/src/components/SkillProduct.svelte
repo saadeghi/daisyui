@@ -4,15 +4,15 @@
   let { product, productKey, convertCurrency, productDiscount = true } = $props()
 </script>
 
-<div class={`relative ${productDiscount ? "outline-error z-1 outline-4 outline-offset-4" : ""}`}>
+<div class="relative">
   <a
     href={`/skills/${productKey}/`}
     id={productKey}
-    class="bg-base-100 group border-base-content/5 relative flex h-full flex-col items-start gap-4 overflow-hidden border-[length:var(--border)] p-8 font-mono transition-all hover:-translate-y-1 hover:shadow-md focus:-translate-y-0.5 focus:shadow-sm lg:p-16"
+    class={`bg-base-100 group border-base-content/5 relative flex h-full flex-col items-start gap-4 overflow-hidden border-(length:--border) p-8 font-mono transition-all hover:-translate-y-1 hover:shadow-md focus:-translate-y-0.5 focus:shadow-sm lg:p-16 ${productDiscount ? "outline-error z-1 outline-4" : ""}`}
   >
     <div class="grid *:[grid-area:1/1] [&_img]:size-16 [&_svg]:size-16">
       <div
-        class="translate-y-26 scale-800 [transform:scaleY(.3)] opacity-5 blur-lg saturate-200 transition-all duration-300 group-hover:[transform:scaleY(.4)] group-hover:opacity-30"
+        class="translate-y-26 scale-800 transform-[scaleY(.3)] opacity-5 blur-lg saturate-200 transition-all duration-300 group-hover:transform-[scaleY(.4)] group-hover:opacity-30"
       >
         {@html product.logo}
       </div>
@@ -30,16 +30,16 @@
       </div>
     </div>
     <div
-      class="group-hover:text-base-content text-base-content/60 z-3 text-left text-xs font-medium [text-wrap:balance] transition-colors sm:text-base"
+      class="group-hover:text-base-content text-base-content/60 z-3 text-left text-xs font-medium text-balance transition-colors sm:text-base"
     >
       {product.short_title}
     </div>
     <div
-      class="group-hover:text-base-content/70 text-base-content/50 z-3 mb-12 text-left text-[0.75rem] leading-relaxed [text-wrap:balance] transition-colors"
+      class="group-hover:text-base-content/70 text-base-content/50 z-3 mb-12 text-left text-[0.75rem] leading-relaxed text-balance transition-colors"
     >
       {product.usecase}
     </div>
-    <div class="btn absolute end-8 bottom-8 flex gap-2 font-sans font-medium">
+    <div class="btn absolute instet-e-8 bottom-8 flex gap-2 font-sans font-medium">
       {#if product.originalprice}
         <span class="line-through opacity-40">
           &nbsp;{convertCurrency(product.originalprice)}&nbsp;

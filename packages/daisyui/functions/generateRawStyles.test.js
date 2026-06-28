@@ -42,9 +42,7 @@ test("extractKeyframes removes keyframes from root and returns their styles", ()
 })
 
 test("generateResponsiveVariants adds breakpoint variants and keeps keyframes once", async () => {
-  const result = await generateResponsiveVariants(
-    ".btn{color:red}@keyframes pulse{to{opacity:1}}",
-  )
+  const result = await generateResponsiveVariants(".btn{color:red}@keyframes pulse{to{opacity:1}}")
 
   expect(result).toContain(".btn{color:red}")
   expect(result).toContain("@media (min-width: 768px)")

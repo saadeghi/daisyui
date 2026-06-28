@@ -42,6 +42,7 @@ export async function getBlogSidebarPages() {
           href: "/blog/",
           exact: true,
         },
+        {},
         ...tags.map((tag) => ({
           name: tag,
           href: `/blog/tag/${getBlogTagSlug(tag)}/`,

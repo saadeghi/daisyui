@@ -100,8 +100,9 @@
 
       const items = getSidebarSectionItems(section)
       const links = getSidebarSectionLinks(section)
+      const sectionHref = `/${name}/`
 
-      if (links.some((href) => matchesHref(pathname, href))) {
+      if (matchesHref(pathname, sectionHref) || links.some((href) => matchesHref(pathname, href))) {
         return items
       }
     }
@@ -135,7 +136,6 @@
 <Navbar
   version={data.daisyuiVersion}
   navbar={data.navbar}
-  activeDiscount={data.activeDiscount}
   themes={data.themes}
   hideLogoOnLargeScreen={hasDesktopSidebar}
   hideSidebarButtonOnLargeScreen={true}

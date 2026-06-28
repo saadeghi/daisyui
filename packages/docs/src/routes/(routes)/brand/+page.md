@@ -1,7 +1,7 @@
 ---
 title: daisyUI Logo
 desc: Branding and logo usage guidelines for daisyUI
-layout: docs
+layout: content
 ---
 
 <script>

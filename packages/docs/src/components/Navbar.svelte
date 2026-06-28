@@ -1,6 +1,8 @@
 <script>
   import { goto } from "$app/navigation"
   import { page } from "$app/stores"
+  import { onMount } from "svelte"
+  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import LogoHorizontal from "$components/LogoHorizontal.svelte"
   import TopBanner from "$components/TopBanner.svelte"
   import ThemeChange from "$components/ThemeChange.svelte"
@@ -8,6 +10,7 @@
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
   import DiscountCountdown from "$components/DiscountCountdown.svelte"
   import { track } from "$lib/analytics.svelte.js"
+  import { fetchActiveDiscount } from "$lib/storeDiscount.js"
 
   import { t } from "$lib/i18n.svelte.js"
 
@@ -19,7 +22,6 @@
 
   let {
     navbar = [],
-    activeDiscount = null,
     themes,
     hideLogoOnLargeScreen = false,
     hideSidebarButton = false,
@@ -33,7 +35,16 @@
     onPreFetchSearch,
     children,
   } = $props()
+  let activeDiscount = $state(null)
   let switchNavbarStyle = $derived(scrollY > 40)
+
+  onMount(async () => {
+    try {
+      activeDiscount = await fetchActiveDiscount(PUBLIC_DAISYUI_API_PATH)
+    } catch (error) {
+      console.error("Error loading active discount", error)
+    }
+  })
 
   const matchesActivePath = (item) => {
     if (!item) return false
@@ -90,7 +101,7 @@
   ${switchNavbarStyle ? "shadow-xs" : ""}
   `}
 >
-  <nav class="navbar w-full py-0">
+  <nav class="navbar w-full py-0" data-sveltekit-preload-data>
     <div class="navbar-start">
       <span
         class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]"
@@ -124,7 +135,6 @@
 
       <div class={`flex items-center gap-2`}>
         <a
-          data-sveltekit-preload-data
           href="/"
           aria-current="page"
           aria-label="daisyUI"
@@ -154,19 +164,11 @@
               style="anchor-name:--navbar-item-${index}"
               class={`tab gap-1 px-3 font-normal ${isActive(item) ? "tab-active" : ""}`}
             >
-              <span
-                class={`px-1 xl:px-2 flex items-center gap-1 ${shouldShowCountdownTooltip(item) ? "tooltip tooltip-bottom tooltip-open group" : ""}`}
-              >
+              <span class="px-1 xl:px-2 flex items-center gap-1">
                 {#if item.icon}
                   <span>{@html item.icon}</span>
                 {/if}
                 {$t(item.name)}
-                {#if shouldShowCountdownTooltip(item)}
-                  <DiscountCountdown
-                    expiresAt={activeDiscount.data.attributes.expires_at}
-                    tooltip
-                  />
-                {/if}
                 <svg
                   class="mt-px size-2 fill-current opacity-60"
                   xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +189,6 @@
                   <li>
                     {#if child.href && hasText(child.name)}
                       <a
-                        data-sveltekit-preload-data
                         href={child.href}
                         target={child.target === "blank" ? "_blank" : undefined}
                         rel={child.target === "blank" ? "noopener noreferrer" : undefined}
@@ -229,14 +230,10 @@
             </div>
           {:else if item.href && hasText(item.name)}
             <a
-              data-sveltekit-preload-data
               href={item.href}
               class={`tab font-normal ${isActive(item) ? "tab-active before:[--radius-start:revert]" : ""}`}
               onclick={() => track(`Navbar > ${item.name}`)}
             >
-              <!-- {#if item.icon}
-                <span>{@html item.icon}</span>
-              {/if} -->
               <span
                 class={`px-1 xl:px-2 flex items-center gap-1 ${shouldShowCountdownTooltip(item) ? "tooltip tooltip-bottom tooltip-open group" : ""}`}
               >

@@ -19,7 +19,10 @@ test("packCss combines themes and CSS directories with layer wrapping and exclus
   await writeFile(join(dir, "base", "reset.css"), "*,::before{box-sizing:border-box}")
   await writeFile(join(dir, "components", "button.css"), ".btn{color:red}")
   await writeFile(join(dir, "utilities", "glass.css"), ".glass{opacity:.5}")
-  await writeFile(join(dir, "colors", "properties.css"), ".text-primary{color:var(--color-primary)}")
+  await writeFile(
+    join(dir, "colors", "properties.css"),
+    ".text-primary{color:var(--color-primary)}",
+  )
   await writeFile(join(dir, "colors", "skip.css"), ".skip{color:red}")
 
   await runInCwd(

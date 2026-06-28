@@ -97,10 +97,7 @@ export const report = async (directories) => {
       }),
     )
 
-    const flatReport = results
-      .flat()
-      .filter(Boolean)
-      .sort(sortByFolderAndFile)
+    const flatReport = results.flat().filter(Boolean).sort(sortByFolderAndFile)
     if (flatReport.length === 0) throw new Error("No files were successfully processed.")
 
     console.table(flatReport, ["file", "selector", "var", "raw", "brotli", "%"])

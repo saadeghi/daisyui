@@ -18,7 +18,8 @@ const expectPluginFiles = async (type, helperName) => {
   expect(await readFile(join(componentDir, "object.js"), "utf-8")).toBe(
     "export default { color: 'red' };",
   )
-  expect(await readFile(join(componentDir, "index.js"), "utf-8")).toBe(`import component from './object.js';
+  expect(await readFile(join(componentDir, "index.js"), "utf-8"))
+    .toBe(`import component from './object.js';
 import { addPrefix } from '../../functions/addPrefix.js';
 
 export default ({ ${helperName}, prefix = '' }) => {

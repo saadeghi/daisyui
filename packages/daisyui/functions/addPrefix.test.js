@@ -156,7 +156,9 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
   },
   {
     name: "nested combinators and :not(:has()) selector",
-    input: { ".steps": { ".step": { "> .step-icon, &:not(:has(.step-icon)):after": { color: "red" } } } },
+    input: {
+      ".steps": { ".step": { "> .step-icon, &:not(:has(.step-icon)):after": { color: "red" } } },
+    },
     expected: {
       ".prefix-steps": {
         ".prefix-step": {

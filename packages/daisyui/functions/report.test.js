@@ -13,7 +13,10 @@ test("report writes a new compressed-size report and index", async () => {
   const dir = await tempDirs.make()
   const projectDir = join(dir, "project")
   await mkdir(projectDir)
-  await writeFile(join(projectDir, "button.css"), ".btn{--color-primary:red;color:var(--color-primary)}")
+  await writeFile(
+    join(projectDir, "button.css"),
+    ".btn{--color-primary:red;color:var(--color-primary)}",
+  )
 
   await runInCwd(
     projectDir,
