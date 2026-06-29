@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.6.4 (2026-06-29)
+
+
+### Bug Fixes
+
+* tooltip position in RTL ([e7f8a4f](https://github.com/saadeghi/daisyui/commit/e7f8a4fea1cb50a149625008bcc7ad39241bbe80))
+
 ## 5.6.3 (2026-06-26)
 
 
