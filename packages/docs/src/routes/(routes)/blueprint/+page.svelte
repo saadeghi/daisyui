@@ -214,7 +214,7 @@
           <!-- Password Input -->
           <div class="mb-4">
             <label class="mb-2 block text-sm font-medium">Password</label>
-            <input type="password" class="validator input input-md w-full" 
+            <input type="password" class="validator input input-md w-full"
               placeholder="Enter your password" required minlength="8" />
             <div class="validator-hint hidden text-sm">Password must be at least 8 characters</div>
           </div>
@@ -4643,7 +4643,8 @@
               <a
                 class="btn btn-sm btn-neutral"
                 target="_blank"
-                href={`https://cursor.com/en/install-mcp?name=daisyui-blueprint&config=${btoa(
+                referrerpolicy="no-referrer"
+                href={`https://cursor.com/en-US/install-mcp?name=daisyui-blueprint&config=${btoa(
                   JSON.stringify({
                     command: "npx",
                     args: ["-y", "daisyui-blueprint@latest"],
