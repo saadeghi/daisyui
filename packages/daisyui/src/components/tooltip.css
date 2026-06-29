@@ -71,14 +71,12 @@
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, 0.25rem));
-      inset-inline: var(--tt-inset, 50% auto);
-      inset-block: auto var(--tt-off);
+      inset: auto auto var(--tt-off) 50%;
     }
 
     &:after {
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, 0.25rem));
-      inset-inline: var(--tt-tail-inset, 50% auto);
-      inset-block: auto var(--tt-tail);
+      inset: auto auto var(--tt-tail) 50%;
     }
   }
 }
@@ -88,15 +86,76 @@
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, -0.25rem));
-      inset-inline: var(--tt-inset, 50% auto);
-      inset-block: var(--tt-off) auto;
+      inset: var(--tt-off) auto auto 50%;
     }
 
     &:after {
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, -0.25rem))
         rotate(180deg);
-      inset-inline: var(--tt-tail-inset, 50% auto);
-      inset-block: var(--tt-tail) auto;
+      inset: var(--tt-tail) auto auto 50%;
+    }
+  }
+}
+
+.tooltip-start {
+  @layer daisyui.l1.l2 {
+    --tt-trans: 0;
+    --tt-inset: 0 auto;
+    --tt-tail-inset: var(--tt-tail-off) auto;
+
+    > .tooltip-content,
+    &[data-tip]:before {
+      left: auto;
+      right: auto;
+      inset-inline: 0 auto;
+    }
+
+    &:after {
+      left: auto;
+      right: auto;
+      inset-inline: var(--tt-tail-off) auto;
+    }
+  }
+}
+
+.tooltip-center {
+  @layer daisyui.l1.l2 {
+    --tt-trans: -50%;
+    --tt-inset: 50% auto;
+    --tt-tail-inset: 50% auto;
+
+    > .tooltip-content,
+    &[data-tip]:before {
+      inset-inline: auto;
+      left: 50%;
+      right: auto;
+    }
+
+    &:after {
+      inset-inline: auto;
+      left: 50%;
+      right: auto;
+    }
+  }
+}
+
+.tooltip-end {
+  @layer daisyui.l1.l2 {
+    --tt-trans: 0;
+    --tt-inset: auto 0;
+    --tt-tail-inset: auto var(--tt-tail-off);
+
+    > .tooltip-content,
+    &[data-tip]:before {
+      left: auto;
+      right: auto;
+      inset-inline: auto 0;
+    }
+
+    &:after {
+      left: auto;
+      right: auto;
+      inset-inline: auto var(--tt-tail-off);
     }
   }
 }
@@ -107,13 +166,15 @@
     &[data-tip]:before {
       transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem))
         translateY(var(--tt-trans, -50%));
-      inset-inline: auto var(--tt-off);
+      left: auto;
+      right: var(--tt-off);
       inset-block: var(--tt-inset, 50% auto);
     }
 
     &:after {
       transform: translateX(var(--tt-pos, 0.25rem)) translateY(var(--tt-trans, -50%)) rotate(-90deg);
-      inset-inline: auto calc(var(--tt-tail) + 1px);
+      left: auto;
+      right: calc(var(--tt-tail) + 1px);
       inset-block: var(--tt-tail-inset, 50% auto);
     }
   }
@@ -125,39 +186,17 @@
     &[data-tip]:before {
       transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem))
         translateY(var(--tt-trans, -50%));
-      inset-inline: var(--tt-off) auto;
+      left: var(--tt-off);
+      right: auto;
       inset-block: var(--tt-inset, 50% auto);
     }
 
     &:after {
       transform: translateX(var(--tt-pos, -0.25rem)) translateY(var(--tt-trans, -50%)) rotate(90deg);
-      inset-inline: calc(var(--tt-tail) + 1px) auto;
+      left: calc(var(--tt-tail) + 1px);
+      right: auto;
       inset-block: var(--tt-tail-inset, 50% auto);
     }
-  }
-}
-
-.tooltip-start {
-  @layer daisyui.l1.l2 {
-    --tt-trans: 0;
-    --tt-inset: 0 auto;
-    --tt-tail-inset: var(--tt-tail-off) auto;
-  }
-}
-
-.tooltip-center {
-  @layer daisyui.l1.l2 {
-    --tt-trans: -50%;
-    --tt-inset: 50% auto;
-    --tt-tail-inset: 50% auto;
-  }
-}
-
-.tooltip-end {
-  @layer daisyui.l1.l2 {
-    --tt-trans: 0;
-    --tt-inset: auto 0;
-    --tt-tail-inset: auto var(--tt-tail-off);
   }
 }
 
