@@ -1,0 +1,1 @@
+import{Ct as e,M as t,R as n,_t as r,a as i,st as a,vt as o,wt as s,z as c}from"./aULtX_Ia.js";import"./xihTtKlq.js";import{a as l}from"./BYFcsNL7.js";function u(u,d){s(d,!0);let f=()=>o(l,`$t`,p),[p,m]=r(),h=i(d,`variables`,19,()=>({}));var g=c();t(a(g),()=>f()(d.text,h())),n(u,g),e(),m()}export{u as t};

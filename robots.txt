@@ -3,10 +3,12 @@ User-agent: AhrefsSiteAudit
 Disallow: /resources/
 # Disallow: /blog/
 # Disallow: /store/
-# Disallow: /compare/
-# Disallow: /alternative/
+Disallow: /compare/
+Disallow: /alternative/
 # Disallow: /docs/install/
 Disallow: /*-component-library/
+Disallow: /*-ui-library/
+Disallow: /*-tailwind-css/
 Disallow: /cdn-cgi/
 Disallow: /?lang=*
 Disallow: /*?lang=

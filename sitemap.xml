@@ -10,7 +10,19 @@
     <loc>https://daisyui.com/angular-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/angular-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/angular-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/astro-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/astro-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/astro-ui-library/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/blog/</loc>
@@ -322,6 +334,12 @@
     <loc>https://daisyui.com/django-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/django-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/django-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/docs/base/</loc>
   </url>
   <url>
@@ -553,19 +571,55 @@
     <loc>https://daisyui.com/electron-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/electron-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/electron-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/htmx-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/htmx-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/htmx-ui-library/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/laravel-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/laravel-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/laravel-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/lit-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/lit-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/lit-ui-library/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/nextjs-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/nextjs-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/nextjs-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/nuxt-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/nuxt-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/nuxt-ui-library/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/pages/ai-frontend-code-generation/</loc>
@@ -649,10 +703,28 @@
     <loc>https://daisyui.com/qwik-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/qwik-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/qwik-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/rails-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/rails-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/rails-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/react-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/react-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/react-ui-library/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/resources/articles/</loc>
@@ -670,6 +742,12 @@
     <loc>https://daisyui.com/solid-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/solid-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/solid-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/store/</loc>
   </url>
   <url>
@@ -685,13 +763,31 @@
     <loc>https://daisyui.com/svelte-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/svelte-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/svelte-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/theme-generator/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/unocss-component-library/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/unocss-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/unocss-ui-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/vue-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/vue-tailwind-css/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/vue-ui-library/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/store/nexus/</loc>
