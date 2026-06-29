@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.6.6 (2026-06-29)
+
+
+### Bug Fixes
+
+* allow wrapper elements for options in filter ([#4592](https://github.com/saadeghi/daisyui/issues/4592)). closes: [#4589](https://github.com/saadeghi/daisyui/issues/4589) ([e678dcb](https://github.com/saadeghi/daisyui/commit/e678dcbf79805af67f630978588bb05e0fa46616))
+
 ## 5.6.5 (2026-06-29)
 
 
