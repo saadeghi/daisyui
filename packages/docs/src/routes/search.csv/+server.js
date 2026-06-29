@@ -69,7 +69,7 @@ daisyUI llms.txt,/llms.txt`
 
 // List of paths to ignore (relative to routes directory)
 const IGNORED_PATHS = [
-  "(frameworks)/",
+  "(marketing)/",
   "blog/(posts)/",
   "docs/v5/",
   "pages/",

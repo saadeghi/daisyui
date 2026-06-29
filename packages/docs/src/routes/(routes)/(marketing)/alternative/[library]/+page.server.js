@@ -1,6 +1,6 @@
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import { load as loadYaml } from "js-yaml"
-import { error } from "@sveltejs/kit"
+import { error, isHttpError } from "@sveltejs/kit"
 
 const fetchYamlData = async (url) => {
   try {
@@ -46,6 +46,73 @@ const getValue = (item) => {
 
 const isPositiveAttribute = (value) => {
   return typeof value === "object" && value !== null && "positive" in value
+}
+
+const getAttributeDef = (data, attribute) => data?.attributes?.[attribute]
+
+const getAttributeValue = (data, attribute, fallback = "N/A") => {
+  const attr = getAttributeDef(data, attribute)
+  if (attr === undefined) return fallback
+  return getValue(attr)
+}
+
+const formatAttributeValue = (value) => {
+  if (value === undefined || value === null || value === "") return "N/A"
+  if (typeof value === "boolean") return value ? "Yes" : "No"
+  if (typeof value === "number") return value.toLocaleString("en-US")
+  return String(value)
+}
+
+const formatAttribute = (data, attribute, fallback = "N/A") => {
+  return formatAttributeValue(getAttributeValue(data, attribute, fallback))
+}
+
+const hasKnownAttribute = (data, attribute) => {
+  const value = getAttributeValue(data, attribute, undefined)
+  return value !== undefined && value !== "?"
+}
+
+const sentenceJoin = (items) => {
+  const filteredItems = items.filter(Boolean)
+  if (filteredItems.length <= 1) return filteredItems[0] || ""
+  if (filteredItems.length === 2) return `${filteredItems[0]} and ${filteredItems[1]}`
+  return `${filteredItems.slice(0, -1).join(", ")}, and ${filteredItems.at(-1)}`
+}
+
+const paragraphJoin = (items) => {
+  const paragraph = items
+    .filter(Boolean)
+    .map((item) =>
+      String(item)
+        .trim()
+        .replace(/[.。]+$/, ""),
+    )
+    .filter(Boolean)
+    .join(". ")
+
+  return paragraph ? `${paragraph}.` : ""
+}
+
+const getReplacementMap = (daisyUIData, libraryData) => {
+  return {
+    "{libraryName}": libraryData.name,
+    "{depsCount}": formatAttribute(libraryData, "Dependencies"),
+    "{otherJSSize}": formatAttribute(libraryData, "JavaScript size"),
+    "{otherFrameworks}": formatAttribute(libraryData, "Frameworks", "specific frameworks"),
+    "{daisyThemes}": formatAttribute(daisyUIData, "Built-in Themes", "many"),
+    "{otherThemes}": formatAttribute(libraryData, "Built-in Themes", "few"),
+  }
+}
+
+const replacePlaceholders = (text, replacements) => {
+  let replacedText = text
+  for (const [placeholder, value] of Object.entries(replacements)) {
+    replacedText = replacedText.replace(
+      new RegExp(placeholder.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
+      String(value),
+    )
+  }
+  return replacedText
 }
 
 const checkIsDaisyUIBetter = (attribute, attributeRules, daisyValueDef, otherValueDef) => {
@@ -122,23 +189,7 @@ const generateComparisonText = (type, isBetter, daisyUIData, libraryData, string
   let text = getItemByIndex(textArray, index)
   if (!text) return `[Missing text variant: ${type}]`
 
-  const replacements = {
-    "{libraryName}": libraryData.name,
-    "{depsCount}": libraryData.attributes?.Dependencies?.value ?? "N/A",
-    "{otherJSSize}": libraryData.attributes?.["JavaScript size"]?.value ?? "N/A",
-    "{otherFrameworks}": libraryData.attributes?.Frameworks?.value ?? "specific frameworks",
-    "{daisyThemes}": daisyUIData.attributes?.["Built-in Themes"]?.value ?? "many",
-    "{otherThemes}": libraryData.attributes?.["Built-in Themes"]?.value ?? "few",
-  }
-
-  for (const [key, value] of Object.entries(replacements)) {
-    text = text.replace(
-      new RegExp(key.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
-      String(value),
-    )
-  }
-
-  return text
+  return replacePlaceholders(text, getReplacementMap(daisyUIData, libraryData))
 }
 
 const generateAllComparisons = (daisyUIData, libraryData, stringsData, index, attributeRules) => {
@@ -268,50 +319,91 @@ const defineSections = (
     variantIndex,
     attributeRules,
   )
+  const daisyComponents = formatAttribute(daisyUIData, "Unique components")
+  const libraryComponents = formatAttribute(libraryData, "Unique components")
+  const daisyDeps = formatAttribute(daisyUIData, "Dependencies")
+  const libraryDeps = formatAttribute(libraryData, "Dependencies")
+  const daisyThemes = formatAttribute(daisyUIData, "Built-in Themes")
+  const libraryThemes = formatAttribute(libraryData, "Built-in Themes")
+  const daisyJsSize = formatAttribute(daisyUIData, "JavaScript size")
+  const libraryJsSize = formatAttribute(libraryData, "JavaScript size")
+  const daisyFrameworks = formatAttribute(daisyUIData, "Frameworks")
+  const libraryFrameworks = formatAttribute(libraryData, "Frameworks")
+
+  const comparisonSummary = sentenceJoin([
+    hasKnownAttribute(daisyUIData, "Unique components") &&
+      hasKnownAttribute(libraryData, "Unique components") &&
+      `${daisyComponents} daisyUI components versus ${libraryComponents} in ${libraryData.name}`,
+    hasKnownAttribute(daisyUIData, "Built-in Themes") &&
+      hasKnownAttribute(libraryData, "Built-in Themes") &&
+      `${daisyThemes} built-in daisyUI themes versus ${libraryThemes}`,
+    hasKnownAttribute(daisyUIData, "Dependencies") &&
+      hasKnownAttribute(libraryData, "Dependencies") &&
+      `${daisyDeps} daisyUI dependencies versus ${libraryDeps} for ${libraryData.name}`,
+  ])
+
+  const overviewDescription =
+    paragraphJoin([
+      `Choosing a ${libraryData.name} alternative is less about chasing one metric and more about how the library fits your project over time.`,
+      comparisonSummary ? `The data gives a useful starting point: ${comparisonSummary}.` : "",
+      `daisyUI is built around Tailwind CSS classes, CSS variables, and framework-agnostic HTML, so the UI layer stays portable while your app keeps its own JavaScript behavior.`,
+    ]) ||
+    `${comparisons.stars || ""}. ${comparisons.components || ""}. ${comparisons.dependencies || ""}`
+      .replace(/^\.\s*|\.\s*$/g, "")
+      .replace(/\.\s*\./g, ".")
+      .trim() ||
+    getReplacedTextFunc("intro", (variantIndex + 1) % maxVariants)
 
   return [
     {
       id: "overview",
       title: overviewText,
-      description:
-        `${comparisons.stars || ""}. ${comparisons.components || ""}. ${comparisons.dependencies || ""}`
-          .replace(/^\.\s*|\.\s*$/g, "")
-          .replace(/\.\s*\./g, ".")
-          .trim() || getReplacedTextFunc("intro", (variantIndex + 1) % maxVariants), // Fallback description
-      attributes: ["Unique components", "Dependencies", "GitHub stars", "NPM downloads"],
+      description: overviewDescription,
+      attributes: [],
     },
     {
       id: "components",
       title: "Components",
       description:
-        comparisons.components ||
-        getReplacedTextFunc("components", (variantIndex + 2) % maxVariants), // Use components text as fallback
+        hasKnownAttribute(daisyUIData, "Unique components") &&
+        hasKnownAttribute(libraryData, "Unique components")
+          ? `${libraryData.name} gives you ${libraryComponents} unique components. daisyUI gives you ${daisyComponents}, but the larger difference is how those components are used: they are class names you can apply to normal HTML instead of a separate component API you have to wrap, import, or adapt.`
+          : getReplacedTextFunc("components", (variantIndex + 2) % maxVariants),
       attributes: ["Unique components"],
     },
     {
       id: "themes",
       title: "Themes",
-      description: getReplacedTextFunc("themes", (variantIndex + 3) % maxVariants),
+      description:
+        hasKnownAttribute(daisyUIData, "Built-in Themes") &&
+        hasKnownAttribute(libraryData, "Built-in Themes")
+          ? `${libraryData.name} lists ${libraryThemes} built-in themes. daisyUI includes ${daisyThemes}, and the theme system is based on CSS variables, so you can switch themes at runtime, keep dark mode simple, and customize colors without rewriting every component.`
+          : getReplacedTextFunc("themes", (variantIndex + 3) % maxVariants),
       attributes: ["Built-in Themes", "Supports more than two themes", "Runtime CSS customization"],
     },
     {
       id: "performance",
       title: "Performance",
       description:
-        comparisons.dependencies ||
-        getReplacedTextFunc("performance", (variantIndex + 4) % maxVariants),
+        hasKnownAttribute(daisyUIData, "JavaScript size") &&
+        hasKnownAttribute(libraryData, "JavaScript size")
+          ? `${libraryData.name} has a JavaScript size of ${libraryJsSize}, while daisyUI is ${daisyJsSize}. That matters when a page only needs styling. daisyUI lets your framework handle state and interaction while the component styles stay in CSS.`
+          : `A UI library should not add JavaScript for components that only need styling. daisyUI keeps the component layer in CSS, so your app framework remains responsible for state, events, rendering, and data flow.`,
       attributes: ["JavaScript size", "Dependencies", "Dependency size"],
     },
     {
       id: "compatibility",
       title: "Compatibility",
-      description: getReplacedTextFunc("compatibility", (variantIndex + 5) % maxVariants),
+      description:
+        hasKnownAttribute(daisyUIData, "Frameworks") && hasKnownAttribute(libraryData, "Frameworks")
+          ? `${libraryData.name} is built for ${libraryFrameworks}. daisyUI works across ${daisyFrameworks} because it styles HTML with Tailwind CSS classes. That makes it easier to use the same design language in React, Vue, Svelte, server-rendered templates, static HTML, or a mixed stack.`
+          : getReplacedTextFunc("compatibility", (variantIndex + 5) % maxVariants),
       attributes: ["Frameworks", "works without Node.js", "No-build version", "CDN"],
     },
     {
       id: "customization",
       title: "Customization",
-      description: getReplacedTextFunc("customization", (variantIndex + 6) % maxVariants),
+      description: `${libraryData.name} can be the right choice when you want its exact component model. daisyUI is stronger when you want Tailwind CSS control, semantic component classes, runtime CSS variables, P3 colors, RTL support, and native CSS features without locking the markup to one framework.`,
       attributes: [
         "Global customizations",
         "P3 colors",
@@ -324,10 +416,8 @@ const defineSections = (
       id: "community",
       title: "Community & Support",
       description:
-        `${comparisons.stars || ""}. ${comparisons.downloads || ""}`
-          .replace(/^\.\s*|\.\s*$/g, "")
-          .replace(/\.\s*\./g, ".")
-          .trim() || getReplacedTextFunc("intro", (variantIndex + 7) % maxVariants), // Fallback
+        paragraphJoin([comparisons.stars, comparisons.downloads]) ||
+        `Community numbers are only one signal, but they help show whether a UI library is active enough to trust. Check stars, downloads, open issues, license, and real project usage before choosing between ${libraryData.name} and daisyUI.`,
       attributes: [
         "GitHub stars",
         "Used by open source projects",
@@ -354,16 +444,22 @@ const filterSections = (sections, daisyUIData, libraryData, attributeRules, isBe
         )
       })
 
-      // Keep section if it's overview OR if daisyUI is better in at least one attribute
-      return attributesWhereDaisyIsBetter.length > 0 || section.id === "overview"
+      const hasComparableData = sectionAttributes.some((attr) => {
+        return (
+          daisyUIData.attributes?.[attr] !== undefined &&
+          libraryData.attributes?.[attr] !== undefined
+        )
+      })
+
+      return section.id === "overview" || hasComparableData
         ? {
             ...section,
-            // Show only attributes where daisyUI is better
+            // Show only attributes where daisyUI is better. The section text still gives context.
             attributes: attributesWhereDaisyIsBetter,
           }
-        : null // Return null if section should be filtered out
+        : null
     })
-    .filter((section) => section !== null) // Remove null entries
+    .filter((section) => section !== null)
 }
 
 export const load = async ({ params }) => {
@@ -429,24 +525,7 @@ export const load = async ({ params }) => {
         return `[Missing text: ${key}]`
       }
 
-      // Perform replacements
-      const replacements = {
-        "{libraryName}": libraryData.name,
-        "{depsCount}": libraryData.attributes?.Dependencies?.value ?? "N/A",
-        "{otherJSSize}": libraryData.attributes?.["JavaScript size"]?.value ?? "N/A",
-        "{otherFrameworks}": libraryData.attributes?.Frameworks?.value ?? "specific frameworks",
-        "{daisyThemes}": daisyUIData.attributes?.["Built-in Themes"]?.value ?? "many",
-        "{otherThemes}": libraryData.attributes?.["Built-in Themes"]?.value ?? "few",
-      }
-
-      let replacedText = text
-      for (const [placeholder, value] of Object.entries(replacements)) {
-        replacedText = replacedText.replace(
-          new RegExp(placeholder.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
-          String(value),
-        )
-      }
-      return replacedText
+      return replacePlaceholders(text, getReplacementMap(daisyUIData, libraryData))
     }
 
     const intro = getReplacedText("intro", variantIndex)
@@ -495,6 +574,9 @@ export const load = async ({ params }) => {
       introText: intro,
     }
   } catch (err) {
+    if (isHttpError(err)) {
+      throw err
+    }
     console.error("Error in load function:", err)
     throw error(500, "Failed to load comparison data")
   }
