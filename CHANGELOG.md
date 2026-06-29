@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.6.5 (2026-06-29)
+
+
+### Bug Fixes
+
+* prevent tab conflict with Tailwind's new optional `tab` class ([1b6f11a](https://github.com/saadeghi/daisyui/commit/1b6f11a1c7e21f2294128d278ea19b53da35580a)), closes [#4595](https://github.com/saadeghi/daisyui/issues/4595)
+
 ## 5.6.4 (2026-06-29)
 
 
