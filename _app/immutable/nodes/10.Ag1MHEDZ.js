@@ -1,1 +1,0 @@
-import{A as e,At as t,B as n,Ot as r,R as i,ct as a,et as o,ot as s,st as c}from"../chunks/aULtX_Ia.js";import"../chunks/xihTtKlq.js";import{t as l}from"../chunks/C4_jgrgi.js";var u=n(`<div class="w-full px-4 pt-20 md:px-20" dir="ltr"><!></div> <!>`,1);function d(n,d){var f=u(),p=c(f);e(s(p),()=>d.children??t),r(p),l(a(p,2),{}),o(()=>p.dir=p.dir),i(n,f)}export{d as component};
