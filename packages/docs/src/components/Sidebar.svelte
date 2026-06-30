@@ -218,6 +218,8 @@
                   >
                     {#if child.icon}
                       <span>{@html child.icon}</span>
+                    {:else if child.iconUrl}
+                      <img class="size-4 shrink-0 object-contain" src={child.iconUrl} alt="" />
                     {/if}
                     <span class="grow text-start">{$t(child.name)}</span>
                     {@render mobileSubmenuArrow()}
@@ -236,6 +238,8 @@
                   >
                     {#if child.icon}
                       <span>{@html child.icon}</span>
+                    {:else if child.iconUrl}
+                      <img class="size-4 shrink-0 object-contain" src={child.iconUrl} alt="" />
                     {/if}
                     {$t(child.name)}
                   </a>
@@ -275,6 +279,12 @@
                           >
                             {#if child.icon}
                               <span>{@html child.icon}</span>
+                            {:else if child.iconUrl}
+                              <img
+                                class="size-4 shrink-0 object-contain"
+                                src={child.iconUrl}
+                                alt=""
+                              />
                             {/if}
                             <span class="grow text-start">{$t(child.name)}</span>
                             {@render mobileSubmenuArrow()}
@@ -293,6 +303,12 @@
                           >
                             {#if child.icon}
                               <span>{@html child.icon}</span>
+                            {:else if child.iconUrl}
+                              <img
+                                class="size-4 shrink-0 object-contain"
+                                src={child.iconUrl}
+                                alt=""
+                              />
                             {/if}
                             {$t(child.name)}
                           </a>
@@ -314,6 +330,8 @@
                   >
                     {#if item.icon}
                       <span>{@html item.icon}</span>
+                    {:else if item.iconUrl}
+                      <img class="size-4 shrink-0 object-contain" src={item.iconUrl} alt="" />
                     {/if}
                     <span class="grow text-start">{$t(item.name)}</span>
                     {@render mobileSubmenuArrow()}
@@ -330,6 +348,8 @@
                   >
                     {#if item.icon}
                       <span>{@html item.icon}</span>
+                    {:else if item.iconUrl}
+                      <img class="size-4 shrink-0 object-contain" src={item.iconUrl} alt="" />
                     {/if}
                     {$t(item.name)}
                   </a>
@@ -371,6 +391,12 @@
           <h2 class="menu-title flex items-center gap-2 px-1.5">
             {#if item.icon}
               <span class="ms-1 text-base-content opacity-40">{@html item.icon}</span>
+            {:else if item.iconUrl}
+              <img
+                class="ms-1 size-4 shrink-0 object-contain opacity-60"
+                src={item.iconUrl}
+                alt=""
+              />
             {/if}
             {#if hasText(item.name)}
               {$t(item.name)}
@@ -397,6 +423,8 @@
             <span class={item.highlight ? " group-hover:text-primary transition-colors" : ""}>
               {@html item.icon}
             </span>
+          {:else if item.iconUrl}
+            <img class="size-4 shrink-0 object-contain" src={item.iconUrl} alt="" />
           {/if}
           <span class={item.deprecated ? "line-through" : undefined}>
             {#if hasText(item.name)}

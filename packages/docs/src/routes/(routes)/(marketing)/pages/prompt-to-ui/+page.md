@@ -1,6 +1,6 @@
 ---
 title: Prompt to UI
-desc: Turn prompt to UI with component-based output. Use daisyUI to translate prompts into cleaner frontend code with less revision.
+desc: Turn prompts into UI with component-based output, clearer instructions, and fewer utility-heavy rewrites.
 layout: contentLanding
 keywords: prompt to ui, text to ui, ui from prompt, prompt based ui generation, ai prompt ui
 ---
@@ -9,227 +9,73 @@ keywords: prompt to ui, text to ui, ui from prompt, prompt based ui generation, 
   import Translate from "$components/Translate.svelte"
 </script>
 
-## The problem: Text prompts are lossy
+## Prompt-to-UI works when prompts name components
 
-Natural language drops details. A prompt like "Create a sidebar with navigation items" leaves layout, behavior, and state to the model.
+Prompt-to-UI tools fail when the prompt describes outcomes but not building blocks. "Make it professional" gives the model taste work. "Use cards, stats, tabs, and primary buttons" gives it structure.
 
-## Why prompts alone aren't enough
+The best prompts do not micromanage every pixel. They name the parts the UI should use and leave the model to assemble them.
 
-Natural language is ambiguous. UI decisions have many right answers:
+## The hidden cost is not the first screen
 
-For a "button that saves data":
+The first version often looks acceptable. The maintenance cost shows up in the second, fifth, and tenth edit.
 
-```html
-<!-- Option 1: Small, ghost style -->
-<button class="btn btn-ghost btn-sm">Save</button>
+- One button becomes five different button class strings.
+- A card uses different padding on each page.
+- Dark mode colors get copied by hand.
+- The model changes nearby styles while fixing one small detail.
+- Reviewing the diff takes longer than the prompt.
 
-<!-- Option 2: Large, prominent primary -->
-<button class="btn btn-primary btn-lg">Save</button>
+This is a prompt design problem. The model needs constraints that are specific enough to guide output but broad enough to keep the workflow fast.
 
-<!-- Option 3: Outline with loading state -->
-<button class="btn btn-outline">Save <span class="loading"></span></button>
-```
+## Give the model component names before it writes code
 
-Without constraints, the model guesses. With constraints, it reuses known patterns.
-
-Give the model a small standard library of components:
-
-```
-Navigation:
-  - navbar (with navbar-start, navbar-center, navbar-end)
-  - menu (vertical or horizontal)
-  - breadcrumbs
-
-Cards & Containers:
-  - card (with card-body, card-title, card-actions)
-  - hero (for full-height sections)
-  - section
-
-Buttons & Controls:
-  - btn (primary, secondary, outline, ghost, link)
-  - checkbox, radio, toggle, input, textarea
-
-Feedback:
-  - alert (success, info, warning, error)
-  - badge
-  - modal (for confirmation, forms, etc.)
-
-etc.
-```
-
-Now your prompt becomes:
-
-"Create a navigation with three menu items using the navbar component. Add a primary CTA button on the right."
-
-The model knows:
-- Use `.navbar` wrapper
-- Use `.navbar-start` and `.navbar-end`
-- Use `.btn btn-primary` for the CTA
-- The component handles responsive behavior and dark mode
-
-The result is predictable because the model has a concrete target.
-
-## The solution: Prompt to UI with daisyUI semantics
-
-Structure prompts around daisyUI components and the output stays easier to edit.
-
-**1. Less ambiguity in prompts**
-
-Instead of: "Create a box with some form fields"
-
-Write: "Create a card with a form inside. Use input and textarea for text fields, checkbox for agreement."
-
-The model knows exactly which components to use.
-
-**2. Predictable component composition**
-
-The model learns:
+Semantic classes narrow the search space. Instead of asking AI to invent a button from utilities, give it a known target:
 
 ```html
-<!-- A standard card pattern -->
-<div class="card">
-  <div class="card-body">
-    <h2 class="card-title">Title</h2>
-    <p>Content</p>
-    <div class="card-actions">
-      <button class="btn btn-primary">Action</button>
-    </div>
-  </div>
-</div>
+<button class="btn btn-primary">Save changes</button>
 ```
 
-Every card it generates follows the same structure.
-
-**3. Edits require less context**
-
-You ask for a change: "Add a secondary button next to the primary one."
-
-The model modifies only the part that changed.
-
-**4. Multi-step refinement becomes cheap**
-
-First prompt: "Create a pricing page with three pricing cards."
-- Output: 150 lines of structured HTML
-
-Second prompt: "Change the highlighted card to use the secondary color."
-- Output: 1-2 line diff, model only modifies the class
-
-Third prompt: "Add a checkmark list of features to each card."
-- Output: Adds a list pattern the model already knows
-
-**Step 1: Define your design system (one-time)**
-
-Tell the model:
-
-```
-We use daisyUI components:
-- Primary color is blue-600
-- Secondary color is purple-600
-- Cards use the .card component with .card-body inside
-- Buttons are .btn with .btn-primary or .btn-secondary
-- Forms use .input, .textarea, .checkbox components
-
-All generated UI should use these and only these.
-```
-
-**Step 2: Request UI with semantic language**
-
-```
-Create a product listing page:
-- Hero section at the top with tagline
-- Grid of 6 product cards below
-- Each card should show: image, title, description, price, and add-to-cart button
-- Use the .card component for each product
-```
-
-The model outputs:
+The same idea works across a page:
 
 ```html
-<section class="hero bg-base-200 py-16">
-  <div class="hero-content text-center">
-    <div>
-      <h1 class="text-4xl font-bold">Our Products</h1>
-      <p>Discover amazing items</p>
-    </div>
-  </div>
-</section>
-
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
-  <div class="card bg-base-100 shadow">
-    <figure><img src="..." /></figure>
+<section class="grid gap-6 md:grid-cols-3">
+  <div class="card bg-base-100 shadow-sm">
     <div class="card-body">
-      <h2 class="card-title">Product 1</h2>
-      <p>Description</p>
-      <p class="text-xl font-bold">$99.99</p>
+      <h2 class="card-title">Team usage</h2>
+      <p>See seats, invites, and plan limits in one place.</p>
       <div class="card-actions justify-end">
-        <button class="btn">Add to Cart</button>
+        <button class="btn btn-primary">Manage</button>
       </div>
     </div>
   </div>
-</div>
+</section>
 ```
 
-**Step 3: Refine with targeted edits**
+Now the prompt and the code share the same vocabulary. You can ask for "primary", "outline", "warning", "compact", or "ghost" instead of asking the model to rebuild color, border, spacing, hover, active, disabled, and focus styles.
 
-You ask: "Add a badge showing 'New' to the first card."
+## Why daisyUI fits prompt-to-UI workflows
 
-Model modifies only that card:
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
-```diff
-  <div class="card-body">
-+   <div class="badge badge-primary">New</div>
-    <h2 class="card-title">Product 1</h2>
+That combination matters for generated UI. Tailwind CSS remains available for layout and one-off styling, while daisyUI handles repeated interface parts with names a model can reuse: `btn`, `card`, `input`, `select`, `modal`, `navbar`, `menu`, `table`, `badge`, `alert`, `stat`, and `toast`.
+
+The model still has freedom. It can choose the layout, data, copy, and interaction wiring. The repetitive visual layer has a stable vocabulary.
+
+## A better prompt pattern
+
+Use prompts that name the components before the style:
+
+```text
+Build a settings page with daisyUI.
+Use cards for sections, fieldsets for form groups, inputs for text fields,
+selects for option lists, and btn-primary for the main action.
+Use Tailwind utilities only for layout and spacing.
 ```
 
-Not the whole page.
+That prompt gives the model pieces it can assemble. It also gives you code that is easier to review because the important UI decisions are visible in class names.
 
-**Without semantic constraints:**
+## When this approach pays off
 
-1. Prompt: "Build a checkout form"
-2. Model reads entire specification, invents structure
-3. You get: 200 lines of Tailwind markup
-4. You ask: "Add a security message below the payment input"
-5. Model reads all 200 lines, finds the payment section, adds message
-6. You get: 220 lines, contains original + new section
+Use semantic components when prompts will drive repeated edits. The clearer the vocabulary, the less the model has to guess.
 
-Each iteration re-reads and re-writes the whole thing.
-
-**With semantic components:**
-
-1. Prompt: "Build a checkout form using .card, .input, .btn components"
-2. Model outputs: 80 lines using standard patterns
-3. You ask: "Add a security message below the payment input"
-4. Model modifies: 2-3 lines, adds alert component
-5. You get: 85 lines, focused diff
-
-Iterations are smaller and faster.
-
-## Real example: Landing page in 3 prompts
-
-**Prompt 1:** "Create a landing page header with logo area and navigation menu. Use navbar component."
-
-Output: 25 lines using `.navbar`
-
-**Prompt 2:** "Add a hero section below the navbar with a large headline and CTA button."
-
-Output: 15 lines using `.hero` and `.btn btn-primary`
-
-**Prompt 3:** "Add a features section with 4 feature cards below the hero. Each card should have an icon, title, and description."
-
-Output: 35 lines using `.card` component repeated 4 times
-
-Total: 75 lines of clean, semantic HTML. Human would need ~2 hours to code this. Model delivered it in 3 well-structured prompts.
-
-## When prompt→UI with semantics wins
-
-This approach shines when:
-
-- You're building mockups quickly
-- You want to iterate on design without writing CSS
-- You don't have a design system yet and want consistency automatically
-- You're learning UI development
-- You need to generate multiple similar pages
-
-## Getting started
-
-Learn the [component library](/components/), reference those components directly in prompts, and use the [theme generator](/theme-generator/) to set your colors once.
+Start with the [daisyUI components](/components/), then keep the [install guide](/docs/install/) and [theme generator](/theme-generator/) close while you prompt. The less the model has to invent, the more attention it can spend on the screen you asked for.

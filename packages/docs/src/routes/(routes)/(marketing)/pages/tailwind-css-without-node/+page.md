@@ -1,120 +1,39 @@
 ---
 title: Tailwind CSS without Node
-desc: How to use Tailwind CSS without Node.js and NPM
+desc: Use Tailwind CSS and daisyUI without a local Node build step through the browser CDN for prototypes and simple HTML pages.
 layout: contentLanding
-keywords: standalone tailwindcss, tailwindcss without node, tailwindcss executable, daisyui without node.js
+keywords: tailwind css without node, tailwindcss without npm, standalone tailwindcss, daisyui without node.js, Tailwind CDN
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-Tailwind CSS runs in many setups. Most guides assume a Node toolchain. That works well for Vite and PostCSS projects. But adding Node just to build CSS can be heavy when your app runs on Rails, Go, Rust, PHP, or another server side environment.
+## Tailwind CSS without Node is useful for quick HTML work
 
-### Common ways to use Tailwind CSS
+Most production Tailwind CSS projects use a build step. That is the right choice when you need bundling, minification, source control around dependencies, and a repeatable deployment.
 
-- Vite plugin — a fast dev server experience. It needs Node and Vite config.
-- PostCSS plugin — integrates into many build pipelines; still requires Node tooling.
-- CDN file — great for quick prototypes; it loads prebuilt styles and has limitations for production.
+Sometimes you only need a quick HTML prototype, a demo page, a school project, or a server-rendered page where adding a Node pipeline would slow the work down.
 
-Each method has tradeoffs. Vite and PostCSS give full feature parity. They need Node. The CDN needs no build step; it limits customization and content scanning for unused classes.
+## The CDN path
 
-### Why adding Node for Tailwind can be inefficient
+Tailwind CSS provides a browser build for quick use in HTML. daisyUI also publishes CDN files. Together, they let you test Tailwind utilities and daisyUI components without installing packages locally.
 
-If your project already runs on Rails, Go, Rust, or PHP, adding Node just to run Tailwind creates extra complexity. You must install Node on developer machines and CI. You must keep Node deps up to date. That adds maintenance and build steps that are unrelated to your primary stack.
-
-For simple sites or server side apps, you want a small, dependable way to produce CSS without introducing a separate toolchain.
-
-### Tailwind CSS standalone executable
-
-Tailwind provides a single-file standalone CLI. It runs without Node. You download the executable for your OS and run it to process CSS. It does the same content scanning and plugin support as the Node version.
-
-1. Get the executable. Follow Tailwind's guide or run one of these commands for your OS.
-
-```sh:Terminal
-# Run the corresponding command for your OS
-
-# Linux
-curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-arm64
-curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-arm64-musl
-curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
-curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64-musl
-
-# MacOS
-curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
-curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-x64
-
-# Windows
-curl -sLo tailwindcss.exe https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-windows-x64.exe
+```html
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 ```
 
-Make it executable on Linux and macOS:
+Then write normal markup:
 
-```sh:Terminal
-chmod +x tailwindcss
+```html
+<main class="min-h-screen grid place-items-center bg-base-200 p-6">
+  <button class="btn btn-primary">Hello</button>
+</main>
 ```
 
-2. Create an input CSS file with Tailwind directives. Address your HTML and templates in the `--content` or `--scan` option when building.
+## Know the tradeoff
 
-```postcss:input.css
-@import "tailwindcss";
-```
+The browser setup is excellent for prototypes and learning. For production apps, a build setup gives you stronger control over performance, dependency versions, and generated CSS.
 
-3. Build the CSS. Use `--watch` during development and omit it for CI.
-
-```sh:Terminal
-./tailwindcss -i input.css -o output.css --watch
-# Windows
-tailwindcss.exe -i input.css -o output.css --watch
-```
-
-### Use daisyUI with the standalone CLI
-
-daisyUI ships a small ESM bundle you can use with the standalone CLI. Download the bundle and add it as a plugin in your `input.css` file.
-
-1. Download daisyUI bundle files next to the Tailwind executable:
-
-```sh:Terminal
-curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.mjs
-curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.mjs
-```
-
-2. Update `input.css` to load Tailwind and daisyUI as plugins.
-
-```postcss:input.css
-@import "tailwindcss";
-
-@source not "./tailwindcss";
-@source not "./daisyui{,*}.mjs";
-
-@plugin "./daisyui.mjs";
-
-/* Optional: load custom theme bundle */
-@plugin "./daisyui-theme.mjs" {
-  /* custom theme settings */
-}
-```
-
-3. Build as shown earlier. The output CSS will include daisyUI utilities and components.
-
-### Update:  
-
-daisyUI now has a fast way to automate the setup of Tailwind CSS standalone with daisyUI for various environments. It's a shell script that installs everything you need in one step.
-
-The command below,
-- Downloads latest version of Tailwind CSS Standalone executable file for your OS, [from GitHub](https://github.com/tailwindlabs/tailwindcss/releases/latest)
-- Downloads latest version of daisyUI bundle file [from GitHub](https://github.com/saadeghi/daisyui/releases/latest)
-- Creates `input.css` file with Tailwind CSS and daisyUI
-- Generates `output.css` file for the first time
-
-**Linux** or **MacOS**: (see the [install script](https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/docs/static/fast))
-
-```sh:Terminal
-cd myapp/static/css && curl -sL daisyui.com/fast | bash
-```
-
-**Windows**: (see the [install script](https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/docs/static/fast.ps1))
-
-```sh:PowerShell
-cd myapp/static/css && powershell -c "irm daisyui.com/fast.ps1 | iex"
-```
+If you want no local Node setup today, read the [daisyUI CDN guide](/docs/cdn/). If the project grows, move to the [install guide](/docs/install/) for your framework.

@@ -461,219 +461,220 @@
     </a>
   </div>
 </div> -->
-
-<div
-  class="card not-prose outline-base-content/5 relative overflow-hidden bg-blue-600 font-sans text-white shadow-lg outline-[length:var(--border)] -outline-offset-[var(--border)] [direction:ltr] md:flex-row-reverse"
-  style="background-image: linear-gradient(#3B72FE 1px, transparent 1px), linear-gradient(90deg, #3B72FE 1px, transparent 1px), linear-gradient(#3B72FE 0.5px, transparent 0.5px), linear-gradient(90deg, #3B72FE 0.5px, #155dfc 0.5px); background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px; background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;"
->
-  <figure class="max-md:bg-primary/10 isolate md:w-2/3">
-    <!-- <img
-      class="pointer-events-none"
-      alt="daisyUI store"
-      src="https://img.daisyui.com/images/store/nexus.webp"
-    /> -->
-    <div
-      class="my-6 ms-1 inline-grid grid-cols-[.75rem_1fr_.75rem] grid-rows-[.75rem_1fr_.75rem] align-middle"
-    >
-      <div class="border-s-2 border-t-2 border-white [grid-area:1/1/2/2]"></div>
-      <div class="border-e-2 border-t-2 border-white [grid-area:1/3/2/4]"></div>
-      <div class="border-s-2 border-b-2 border-white [grid-area:3/1/4/2]"></div>
-      <div class="border-e-2 border-b-2 border-white [grid-area:3/3/4/4]"></div>
+{#if !$page.url.pathname.startsWith("/blueprint/")}
+  <div
+    class="card not-prose outline-base-content/5 relative overflow-hidden bg-blue-600 font-sans text-white shadow-lg outline-[length:var(--border)] -outline-offset-[var(--border)] [direction:ltr] md:flex-row-reverse"
+    style="background-image: linear-gradient(#3B72FE 1px, transparent 1px), linear-gradient(90deg, #3B72FE 1px, transparent 1px), linear-gradient(#3B72FE 0.5px, transparent 0.5px), linear-gradient(90deg, #3B72FE 0.5px, #155dfc 0.5px); background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px; background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;"
+  >
+    <figure class="max-md:bg-primary/10 isolate md:w-2/3">
+      <!-- <img
+        class="pointer-events-none"
+        alt="daisyUI store"
+        src="https://img.daisyui.com/images/store/nexus.webp"
+        /> -->
       <div
-        class="font-title m-2 border-2 border-white px-1 text-3xl font-semibold text-white [grid-area:1/1/4/4] sm:text-4xl md:text-5xl lg:text-5xl xl:text-7xl"
+        class="my-6 ms-1 inline-grid grid-cols-[.75rem_1fr_.75rem] grid-rows-[.75rem_1fr_.75rem] align-middle"
       >
-        BLUEPRINT
+        <div class="border-s-2 border-t-2 border-white [grid-area:1/1/2/2]"></div>
+        <div class="border-e-2 border-t-2 border-white [grid-area:1/3/2/4]"></div>
+        <div class="border-s-2 border-b-2 border-white [grid-area:3/1/4/2]"></div>
+        <div class="border-e-2 border-b-2 border-white [grid-area:3/3/4/4]"></div>
+        <div
+          class="font-title m-2 border-2 border-white px-1 text-3xl font-semibold text-white [grid-area:1/1/4/4] sm:text-4xl md:text-5xl lg:text-5xl xl:text-7xl"
+        >
+          BLUEPRINT
+        </div>
       </div>
-    </div>
-  </figure>
-  <!-- <div class="card-body relative isolate z-3">
-    <h2
-      class="card-title text-base-content text-xl [text-wrap:balance] contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
-    >
-      <span>
-        <svg
-          class="relative -mt-2 inline-block h-[0.75em]"
-          xmlns="http://www.w3.org/2000/svg"
-          width="34"
-          height="43"
-          viewBox="0 0 34 43"
-          fill="none"
+    </figure>
+    <!-- <div class="card-body relative isolate z-3">
+        <h2
+        class="card-title text-base-content text-xl [text-wrap:balance] contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
         >
-          <g clip-path="url(#clip0_123_2)">
-            <g clip-path="url(#clip1_123_2)">
-              <path
-                d="M1.92057 23.9917L12.5271 13.385"
-                stroke="#636EFF"
-                stroke-width="3.25"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12.6968 3.31591C10.1584 5.85432 10.1584 9.9699 12.6968 12.5083C15.2352 15.0467 19.3507 15.0467 21.8892 12.5083C24.4276 9.9699 24.4276 5.85432 21.8892 3.31591C19.3507 0.777507 15.2352 0.777507 12.6968 3.31591Z"
-                fill="#636EFF"
-                fill-opacity="0.25"
-                stroke="#636EFF"
-                stroke-width="2.75"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M29.6067 19.6903L19 30.2969"
-                stroke="#7257FF"
-                stroke-width="3.25"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M8.93091 30.4665C11.4693 27.9281 15.5849 27.9281 18.1233 30.4665C20.6617 33.005 20.6617 37.1205 18.1233 39.6589C15.5849 42.1973 11.4693 42.1973 8.93091 39.6589C6.3925 37.1205 6.3925 33.005 8.93091 30.4665Z"
-                fill="#7257FF"
-                fill-opacity="0.25"
-                stroke="#7257FF"
-                stroke-width="2.75"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </g>
-          <defs>
-            <linearGradient
-              id="paint0_linear_123_2"
-              x1="47"
-              y1="-0.243764"
-              x2="225.267"
-              y2="43.145"
-              gradientUnits="userSpaceOnUse"
+        <span>
+            <svg
+            class="relative -mt-2 inline-block h-[0.75em]"
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="43"
+            viewBox="0 0 34 43"
+            fill="none"
             >
-              <stop stop-color="#4B7EFF" />
-              <stop offset="0.995417" stop-color="#7C4CFE" />
-            </linearGradient>
-            <clipPath id="clip0_123_2">
-              <rect width="222" height="43" fill="white" />
-            </clipPath>
-            <clipPath id="clip1_123_2">
-              <rect
-                width="41.2048"
-                height="51.925"
-                fill="white"
-                transform="translate(9.13647 60.4919) rotate(-135)"
-              />
-            </clipPath>
-          </defs>
-        </svg>
-        <span class="font-black lg:tracking-[1.5rem]">NEXUS</span>
-        <br />
-        <span class="text-2xl font-light"> Official daisyUI Dashboard Template </span>
-      </span>
-    </h2>
-    <div class="mb-4 grow">
-      <h2
-        class="card-title text-sm font-light opacity-50 sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
-      >
-        Available on daisyUI store
-      </h2>
-    </div>
-    <a class="btn btn-block btn-primary group" href="/store/">
-      More details
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            <g clip-path="url(#clip0_123_2)">
+                <g clip-path="url(#clip1_123_2)">
+                <path
+                    d="M1.92057 23.9917L12.5271 13.385"
+                    stroke="#636EFF"
+                    stroke-width="3.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M12.6968 3.31591C10.1584 5.85432 10.1584 9.9699 12.6968 12.5083C15.2352 15.0467 19.3507 15.0467 21.8892 12.5083C24.4276 9.9699 24.4276 5.85432 21.8892 3.31591C19.3507 0.777507 15.2352 0.777507 12.6968 3.31591Z"
+                    fill="#636EFF"
+                    fill-opacity="0.25"
+                    stroke="#636EFF"
+                    stroke-width="2.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M29.6067 19.6903L19 30.2969"
+                    stroke="#7257FF"
+                    stroke-width="3.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M8.93091 30.4665C11.4693 27.9281 15.5849 27.9281 18.1233 30.4665C20.6617 33.005 20.6617 37.1205 18.1233 39.6589C15.5849 42.1973 11.4693 42.1973 8.93091 39.6589C6.3925 37.1205 6.3925 33.005 8.93091 30.4665Z"
+                    fill="#7257FF"
+                    fill-opacity="0.25"
+                    stroke="#7257FF"
+                    stroke-width="2.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                </g>
+            </g>
+            <defs>
+                <linearGradient
+                id="paint0_linear_123_2"
+                x1="47"
+                y1="-0.243764"
+                x2="225.267"
+                y2="43.145"
+                gradientUnits="userSpaceOnUse"
+                >
+                <stop stop-color="#4B7EFF" />
+                <stop offset="0.995417" stop-color="#7C4CFE" />
+                </linearGradient>
+                <clipPath id="clip0_123_2">
+                <rect width="222" height="43" fill="white" />
+                </clipPath>
+                <clipPath id="clip1_123_2">
+                <rect
+                    width="41.2048"
+                    height="51.925"
+                    fill="white"
+                    transform="translate(9.13647 60.4919) rotate(-135)"
+                />
+                </clipPath>
+            </defs>
+            </svg>
+            <span class="font-black lg:tracking-[1.5rem]">NEXUS</span>
+            <br />
+            <span class="text-2xl font-light"> Official daisyUI Dashboard Template </span>
+        </span>
+        </h2>
+        <div class="mb-4 grow">
+        <h2
+            class="card-title text-sm font-light opacity-50 sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
         >
-        </path>
-      </svg>
-    </a>
-  </div> -->
-  <!-- <div class="card-body relative isolate z-3">
-    <h2
-      class="card-title text-base-content text-xl [text-wrap:balance] contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
-    >
-      <span>
-        <span class="font-black">Official daisyUI</span>
-        <br />
-        <span class="font-black"> Figma Library </span>
-      </span>
-    </h2>
-    <div class="grow">
-      <h2
-        class="card-title text-sm font-light sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
-      >
+            Available on daisyUI store
+        </h2>
+        </div>
+        <a class="btn btn-block btn-primary group" href="/store/">
+        More details
         <svg
-          class="inline size-4 md:h-6 md:w-6"
-          width="32"
-          height="32"
-          viewBox="0 0 415 415"
-          xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
         >
-          <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5"></rect>
-          <circle cx="207.5" cy="135" r="125" fill="white"></circle>
-          <circle cx="207.5" cy="135" r="56" fill="#FF9903"></circle>
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            >
+            </path>
         </svg>
-        Available on daisyUI store
-      </h2>
-    </div>
-    <a class="btn btn-block btn-primary group" href="/store/">
-      More details
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+        </a>
+    </div> -->
+    <!-- <div class="card-body relative isolate z-3">
+        <h2
+        class="card-title text-base-content text-xl [text-wrap:balance] contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
         >
-        </path>
-      </svg>
-    </a>
-  </div> -->
-  <div class="card-body relative isolate z-3">
-    <h2
-      class="card-title text-xl [text-wrap:balance] text-white contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
-    >
-      <span>
-        <span class="font-black">Official daisyUI</span>
-        <br />
-        <span class="font-black">Code Generator</span>
-        <br />
-        <span class="font-black"> MCP server </span>
-      </span>
-    </h2>
-    <div class="grow">
+        <span>
+            <span class="font-black">Official daisyUI</span>
+            <br />
+            <span class="font-black"> Figma Library </span>
+        </span>
+        </h2>
+        <div class="grow">
+        <h2
+            class="card-title text-sm font-light sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
+        >
+            <svg
+            class="inline size-4 md:h-6 md:w-6"
+            width="32"
+            height="32"
+            viewBox="0 0 415 415"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5"></rect>
+            <circle cx="207.5" cy="135" r="125" fill="white"></circle>
+            <circle cx="207.5" cy="135" r="56" fill="#FF9903"></circle>
+            </svg>
+            Available on daisyUI store
+        </h2>
+        </div>
+        <a class="btn btn-block btn-primary group" href="/store/">
+        More details
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
+        >
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            >
+            </path>
+        </svg>
+        </a>
+    </div> -->
+    <div class="card-body relative isolate z-3">
       <h2
-        class="card-title text-sm font-light sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
+        class="card-title text-xl text-balance text-white contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
       >
-        Generate daisyUI code with any LLM
+        <span>
+          <span class="font-black">Official daisyUI</span>
+          <br />
+          <span class="font-black">Code Generator</span>
+          <br />
+          <span class="font-black"> MCP server </span>
+        </span>
       </h2>
-    </div>
-    <a class="btn btn-block group btn-outline mt-6 shadow-none" href="/blueprint/">
-      More details
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+      <div class="grow">
+        <h2
+          class="card-title text-sm font-light sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
         >
-        </path>
-      </svg>
-    </a>
+          Generate daisyUI code with any LLM
+        </h2>
+      </div>
+      <a class="btn btn-block group btn-outline mt-6 shadow-none" href="/blueprint/">
+        More details
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+          >
+          </path>
+        </svg>
+      </a>
+    </div>
   </div>
-</div>
+{/if}

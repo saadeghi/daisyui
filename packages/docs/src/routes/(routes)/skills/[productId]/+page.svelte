@@ -108,9 +108,10 @@
 </script>
 
 <SEO
-  title={`${data.product.title} – daisyUI and Tailwind CSS templates`}
+  title={`${data.product.title} – daisyUI and Tailwind CSS skills`}
   formatTitle={false}
   desc={data.product.desc}
+  img={data.product.thumbnail}
 />
 
 {#snippet tree(nodes)}

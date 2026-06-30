@@ -1,6 +1,6 @@
 ---
 title: Generate UI with LLM
-desc: Generate UI with LLM tools faster by using daisyUI component classes that cut token use and keep generated UI maintainable.
+desc: Generate UI with an LLM by using semantic component classes that reduce repeated Tailwind markup.
 layout: contentLanding
 keywords: generate ui with llm, llm ui generation, llm frontend workflow, ai ui from llm, llm generated frontend code
 ---
@@ -9,94 +9,73 @@ keywords: generate ui with llm, llm ui generation, llm frontend workflow, ai ui 
   import Translate from "$components/Translate.svelte"
 </script>
 
-## The problem: LLM UI generation slows down over time
+## LLM UI generation needs reusable primitives
 
-LLM-generated UI starts fast, then slows as the codebase fills with verbose markup. The model has to read too much just to make small changes.
+An LLM can turn a prompt into a working interface, but it does not automatically preserve a design system across prompts. It follows the context you give it.
 
-More markup means more tokens, slower prompts, and less room for useful output.
+If the context contains long utility chains, the model has to reason through them. If the context contains component names, it can operate at the level of the UI you meant.
 
-What if instead of 3,000 lines of styling, you gave it 500 lines of semantic markup?
+## The hidden cost is not the first screen
+
+The first version often looks acceptable. The maintenance cost shows up in the second, fifth, and tenth edit.
+
+- One button becomes five different button class strings.
+- A card uses different padding on each page.
+- Dark mode colors get copied by hand.
+- The model changes nearby styles while fixing one small detail.
+- Reviewing the diff takes longer than the prompt.
+
+This is a representation problem. The code should represent common UI as common parts, not as fresh styling every time.
+
+## Give the model component names before it writes code
+
+Semantic classes narrow the search space. Instead of asking An LLM to invent a button from utilities, give it a known target:
 
 ```html
-Before: Component with 25 Tailwind classes
-<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md border border-gray-200 dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200">
-  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Title</h3>
-  <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Description</p>
-  <div class="flex gap-2">
-    <button class="px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm">Action</button>
-  </div>
-</div>
-
-After: Component with semantic classes
-<div class="card">
-  <div class="card-body">
-    <h3 class="card-title">Title</h3>
-    <p>Description</p>
-    <div class="card-actions">
-      <button class="btn btn-primary">Action</button>
-    </div>
-  </div>
-</div>
+<button class="btn btn-primary">Save changes</button>
 ```
 
-Same component. Far fewer tokens. Same visual output.
+The same idea works across a page:
 
-## The solution: daisyUI + LLM for steady generation
+```html
+<section class="grid gap-6 md:grid-cols-3">
+  <div class="card bg-base-100 shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Team usage</h2>
+      <p>See seats, invites, and plan limits in one place.</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Manage</button>
+      </div>
+    </div>
+  </div>
+</section>
+```
 
-Semantic components reduce repeated token use from verbose markup.
+Now the prompt and the code share the same vocabulary. You can ask for "primary", "outline", "warning", "compact", or "ghost" instead of asking the model to rebuild color, border, spacing, hover, active, disabled, and focus styles.
 
-**1. Token savings add up**
+## Why daisyUI fits LLM UI generation
 
-The savings repeat on every page and every edit.
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
-**2. Context window breathing room**
+That combination matters for generated UI. Tailwind CSS remains available for layout and one-off styling, while daisyUI handles repeated interface parts with names a model can reuse: `btn`, `card`, `input`, `select`, `modal`, `navbar`, `menu`, `table`, `badge`, `alert`, `stat`, and `toast`.
 
-Smaller components leave more room for new requests and larger outputs.
+The model still has freedom. It can choose the layout, data, copy, and interaction wiring. The repetitive visual layer has a stable vocabulary.
 
-**3. Better understanding through semantics**
+## A better prompt pattern
 
-When the LLM reads `.card` instead of 25 utility classes, it understands faster.
+Use prompts that define reusable primitives before layout details:
 
-With daisyUI, a 20-page dashboard keeps the same structure but uses far fewer tokens and less time.
+```text
+Build a settings page with daisyUI.
+Use cards for sections, fieldsets for form groups, inputs for text fields,
+selects for option lists, and btn-primary for the main action.
+Use Tailwind utilities only for layout and spacing.
+```
 
-## How to structure LLM UI generation
+That prompt gives the model pieces it can assemble. It also gives you code that is easier to review because the important UI decisions are visible in class names.
 
-**Step 1: Give the model official daisyUI context**
+## When this approach pays off
 
-Use one of the official sources:
+Use semantic components when LLM output has to survive future prompts. The markup stays closer to product language and farther from repeated CSS bookkeeping.
 
-- Add `https://daisyui.com/llms.txt` to your prompt context.
-- Or use the official Blueprint MCP server.
-
-This keeps generated code aligned with current daisyUI class names and patterns.
-
-**Step 2: Generate with semantic prompts**
-
-Instead of: "Build a dashboard"
-
-Write: "Build a dashboard using daisyUI components. Use hero for the header, card for stat boxes, and table for the data grid."
-
-**Step 3: Iterate on structure, not styling**
-
-Ask the LLM to modify layout, sections, text, or component placement. Keep styling changes in the theme or CSS.
-
-## Real example: E-commerce site with LLM
-
-The numbers below are illustrative examples. Actual costs depend on the model and current pricing.
-
-Across multiple product pages, daisyUI keeps the pattern stable and the token use much lower.
-
-## When LLM + daisyUI generates value
-
-This approach shines when:
-
-- You generate many pages from the same codebase
-- You iterate heavily on features
-- Token cost is a constraint
-- You need consistent UI across the product
-- Processing speed matters
-- You're building with agent workflows
-
-## Getting started
-
-Install [daisyUI components](/components/), include the reference in your prompt, and keep styling changes in the theme.
+Start with the [daisyUI components](/components/), then keep the [install guide](/docs/install/) and [theme generator](/theme-generator/) close while you prompt. The less the model has to invent, the more attention it can spend on the screen you asked for.

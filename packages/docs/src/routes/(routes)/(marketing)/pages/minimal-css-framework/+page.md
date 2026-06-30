@@ -1,61 +1,62 @@
 ---
-title: daisyUI is a minimal CSS framework
-desc: Why daisyUI is the simple, minimal alternative to heavy component libraries and complex CSS frameworks
+title: Minimal CSS framework
+desc: A minimal CSS framework should provide reusable components without a framework runtime or extra JavaScript behavior.
 layout: contentLanding
-keywords: minimal css framework, lightweight css framework, no dependencies, small bundle size, performance focused, bloat-free
+keywords: minimal css framework, lightweight css framework, no JavaScript CSS framework, CSS component library, Tailwind CSS components
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-Building modern UIs often means dealing with a lot of bloat. Many component libraries are tied to a specific framework, come with a pile of dependencies, and add a lot of weight to your project. You end up with:
+## A minimal CSS framework should make HTML easier to read
 
-- Huge bundle sizes that slow down your site
-- Dozens of dependencies to keep updated (and hope they don't break)
-- Locked-in markup that's hard to reuse outside that framework
-- Complex build steps and configuration
+HTML is already the structure of your page. When styling turns that structure into long, repeated class strings, the file becomes harder to scan and harder to change.
 
-All of this makes your project harder to manage and slows down your workflow.
+Minimal does not mean empty. It means the library solves repeated styling problems without taking ownership of routing, state, forms, or client-side behavior.
 
-## Why daisyUI is different
+## The problem with starting from zero
 
-daisyUI is a minimal CSS framework built on top of Tailwind CSS. It gives you the building blocks you need, like buttons, cards, and alerts, without the baggage:
+Writing every component from scratch gives you full control, but it also makes every small pattern a new design task.
 
-- No JavaScript required
-- No framework lock-in (works with any frontend stack)
-- Tiny footprint compared to big libraries
-- Simple class names that are easy to remember
-- No extra dependencies to manage
+- Buttons need colors, sizes, hover states, focus styles, disabled styles, and loading states.
+- Forms need inputs, labels, validation states, selects, textareas, checkboxes, and radio buttons.
+- Navigation needs menus, dropdowns, breadcrumbs, tabs, and responsive behavior.
+- Product screens need cards, tables, stats, badges, alerts, and modals.
 
+You can build all of that by hand. The question is whether that work is the best use of the project.
 
-## See the difference: before and after daisyUI
+## The useful middle path
 
-
-Here's what a real-world button with dark mode support looks like with plain Tailwind CSS:
+Tailwind CSS gives you utility classes for custom work. A CSS component library gives names to repeated patterns.
 
 ```html
-<button
-  class="bg-zinc-100 border font-semibold text-zinc-900 
-  text-sm px-4 duration-200 py-2.5 transition-all hover:border-zinc-300 
-  hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-2 
-  focus-visible:outline-zinc-900 active:translate-y-[0.5px] inline-flex gap-2 
-  rounded-sm active:border-zinc-300 active:bg-zinc-200 active:shadow-none 
-  text-center align-middle cursor-pointer border-zinc-200 dark:border-zinc-700 
-  dark:bg-neutral-700 dark:text-zinc-300 dark:hover:border-zinc-950 
-  dark:hover:bg-zinc-950 dark:focus-visible:outline-zinc-200 
-  dark:active:border-zinc-950 dark:active:bg-zinc-900"
->
-  Click Me
-</button>
+<button class="btn btn-primary">Create account</button>
+<div class="badge badge-success">Active</div>
+<input class="input" placeholder="Email address" />
 ```
 
-And here's the same button with daisyUI:
+Those class names make the markup easier to understand. They also keep future edits smaller because the repeated component logic lives behind the class name.
+
+## Where daisyUI fits
+
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
+
+Use daisyUI for the interface parts you repeat. Use Tailwind utilities for layout, spacing, responsive grids, and special cases. That keeps the HTML readable without taking away control.
+
+## What changes in practice
+
+A utility-only button can carry a long class list. A daisyUI button usually needs the component and variant:
 
 ```html
-<button class="btn">Click Me</button>
+<button class="btn btn-primary">Continue</button>
+<button class="btn btn-outline">Cancel</button>
 ```
 
-With daisyUI, you get the same features, hover, focus, disabled states, and more, without the wall of class names. Your code is easier to read and maintain. daisyUI is so easy to use, even a beginner can use it for a school project.
+A theme can change the meaning of `primary`, `secondary`, `base-100`, and other tokens. The markup keeps its intent while the visual design changes from one place.
 
-If you want a minimal, practical way to build UIs, without the headaches, daisyUI is a great choice.
+## Use it when speed and clarity matter
+
+This approach works well for school projects, dashboards, admin panels, prototypes, hackathons, AI-generated screens, and product teams that want consistent UI without adopting a JavaScript component library.
+
+Explore the [component list](/components/), read the [CDN guide](/docs/cdn/) for plain HTML, or follow the [Vite install guide](/docs/install/vite/) for a build setup.

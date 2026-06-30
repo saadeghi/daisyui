@@ -1,6 +1,6 @@
 ---
 title: Generate UI with Claude
-desc: Generate UI with Claude using daisyUI component classes instead of long utility strings, so edits stay smaller and easier to review.
+desc: Generate UI with Claude using daisyUI component classes so Tailwind markup stays shorter and easier to edit.
 layout: contentLanding
 keywords: generate ui with claude, claude ui generation, claude frontend code, ai ui with claude, claude tailwind ui
 ---
@@ -9,155 +9,73 @@ keywords: generate ui with claude, claude ui generation, claude frontend code, a
   import Translate from "$components/Translate.svelte"
 </script>
 
-## The problem: Claude workflows become expensive at scale
+## Claude UI generation improves with constraints
 
-Claude handles UI well, but long utility-heavy markup makes every edit costly.
+Claude is strong at explaining and revising UI code, but long utility strings make the revision loop heavier than it needs to be. A small visual change can come back as a large markup rewrite.
 
-Claude does not keep project state between messages. If each component carries 20-30 classes, every prompt has to read and rewrite far more than the actual change.
+Claude works better when the codebase has names for repeated UI parts. Without those names, it has to infer which utility chains represent buttons, cards, form controls, and alerts.
 
-What if your design system used semantic component classes instead of utility lists?
+## The hidden cost is not the first screen
 
-Same workflow, but with semantic components, each pass reads less and changes less.
+The first version often looks acceptable. The maintenance cost shows up in the second, fifth, and tenth edit.
 
-## The solution: Claude + daisyUI for efficient workflows
+- One button becomes five different button class strings.
+- A card uses different padding on each page.
+- Dark mode colors get copied by hand.
+- The model changes nearby styles while fixing one small detail.
+- Reviewing the diff takes longer than the prompt.
 
-daisyUI gives Claude a semantic vocabulary that dramatically reduces token consumption while maintaining code quality.
+This is a context problem. The more low-level styling Claude has to read, the less attention remains for the behavior and content you want changed.
 
-**1. Shorter context window pressure**
+## Give the model component names before it writes code
 
-Instead of Claude reading:
-
-```html
-<div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:shadow-lg">
-```
-
-Claude reads:
+Semantic classes narrow the search space. Instead of asking Claude to invent a button from utilities, give it a known target:
 
 ```html
-<div class="card">
+<button class="btn btn-primary">Save changes</button>
 ```
 
-The model sees the page structure in fewer tokens. A 50-60 token difference per component adds up across large pages.
-
-**2. Smaller diffs, cheaper edits**
-
-Edit example:
-
-```diff
-- <button class="px-4 py-2 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors dark:bg-blue-700 dark:hover:bg-blue-800 dark:focus:ring-blue-400 disabled:opacity-50 disabled:cursor-not-allowed">
-+ <button class="px-4 py-2 bg-purple-600 text-white rounded font-semibold hover:bg-purple-700 active:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-colors dark:bg-purple-700 dark:hover:bg-purple-800 dark:focus:ring-purple-400 disabled:opacity-50 disabled:cursor-not-allowed">
-```
-
-vs.
-
-```diff
-- <button class="btn btn-primary">
-+ <button class="btn btn-secondary">
-```
-
-The second requires changing 1 class. The first requires changing 8 color references.
-
-**3. Consistent component composition**
-
-Claude learns and repeats patterns:
+The same idea works across a page:
 
 ```html
-<!-- Every button follows this -->
-<button class="btn btn-primary">Action</button>
-
-<!-- Every card follows this -->
-<div class="card">
-  <div class="card-body">
-    <h2 class="card-title">Title</h2>
-    <p>Content</p>
+<section class="grid gap-6 md:grid-cols-3">
+  <div class="card bg-base-100 shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Team usage</h2>
+      <p>See seats, invites, and plan limits in one place.</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Manage</button>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 ```
 
-Once Claude sees the pattern, consistency improves.
+Now the prompt and the code share the same vocabulary. You can ask for "primary", "outline", "warning", "compact", or "ghost" instead of asking the model to rebuild color, border, spacing, hover, active, disabled, and focus styles.
 
-On larger dashboards, semantic components cut repeated token use and make edits much cheaper.
+## Why daisyUI fits Claude UI generation
 
-## How to use Claude with daisyUI
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
-**Step 1: Train Claude on your component API**
+That combination matters for generated UI. Tailwind CSS remains available for layout and one-off styling, while daisyUI handles repeated interface parts with names a model can reuse: `btn`, `card`, `input`, `select`, `modal`, `navbar`, `menu`, `table`, `badge`, `alert`, `stat`, and `toast`.
 
-Include this in your system prompt:
+The model still has freedom. It can choose the layout, data, copy, and interaction wiring. The repetitive visual layer has a stable vocabulary.
 
-```
-You have access to daisyUI components:
+## A better prompt pattern
 
-Buttons:
-- btn btn-primary
-- btn btn-secondary
-- btn btn-outline
-- btn btn-ghost
+Use prompts that define Claude's component rules before the screen:
 
-Cards:
-- card (use .card-body inside)
-- card-title, card-actions (internals)
-
-Forms:
-- input (use input-bordered variant)
-- textarea textarea-bordered
-- checkbox, radio, toggle
-- select
-
-Feedback:
-- alert alert-info/warning/error/success
-- badge
-- loading
-
-Always prefer these components over building custom utility chains.
+```text
+Build a settings page with daisyUI.
+Use cards for sections, fieldsets for form groups, inputs for text fields,
+selects for option lists, and btn-primary for the main action.
+Use Tailwind utilities only for layout and spacing.
 ```
 
-**Step 2: Ask Claude for semantic output**
+That prompt gives the model pieces it can assemble. It also gives you code that is easier to review because the important UI decisions are visible in class names.
 
-Instead of: "Build a form"
+## When this approach pays off
 
-Write: "Build a form using daisyUI components. Use card for the container, form-control for each field, input/textarea for text fields, and btn btn-primary for submit."
+Use semantic components when you expect Claude to revise the same UI several times. Smaller markup gives the model fewer chances to alter unrelated styles.
 
-**Step 3: Make edits with component names**
-
-Instead of: "Make the button green"
-
-Write: "Change the button from btn-primary to btn-success."
-
-Claude modifies one class instead of rewriting button styles.
-
-## Real example: E-commerce product page
-
-The numbers below are illustrative examples. Actual costs depend on the model and current pricing.
-
-**Without daisyUI:**
-
-Prompt: "Build a product page with image, title, price, description, and add-to-cart button."
-
-Claude outputs 250+ lines. One change (add a review section) costs:
-- Read 250 lines (~62K tokens)
-- Output modified 300+ lines (~75K tokens)
-- Total: $0.68
-
-**With daisyUI:**
-
-Same prompt. Claude outputs 100 lines using semantic components. One change (add a review section) costs:
-- Read 100 lines (~25K tokens)
-- Output modified 130 lines (~32K tokens)
-- Total: $0.28
-
-**Savings: fewer tokens per edit and lower repeated spend.**
-
-## When Claude + daisyUI wins
-
-This approach shines when:
-
-- You iterate multiple times on generated UI
-- You maintain complex dashboards or admin panels
-- You use Claude's retrieval or agentic workflows
-- Token cost is a budget concern
-- You need consistent UI across many pages
-- You want to hand off code to human developers
-
-## Getting started
-
-Read the [component library](/components/), add the component reference to your Claude prompt, and make edits by changing component classes instead of individual utilities.
+Start with the [daisyUI components](/components/), then keep the [install guide](/docs/install/) and [theme generator](/theme-generator/) close while you prompt. The less the model has to invent, the more attention it can spend on the screen you asked for.

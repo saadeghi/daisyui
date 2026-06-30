@@ -80,6 +80,53 @@ sidebar:
         - {}
         - name: "FAQ"
           href: "/docs/faq/"
+  blueprint:
+    - name: "Blueprint"
+      icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="size-4 text-blue-600" viewBox="0 0 195 195" fill="none"><path d="M25 97.8528L92.8822 29.9706C102.255 20.598 117.451 20.598 126.823 29.9706V29.9706C136.196 39.3431 136.196 54.5391 126.823 63.9117L75.5581 115.177" stroke="currentColor" stroke-width="15"></path><path d="M76.2652 114.47L126.823 63.9117C136.196 54.5391 151.392 54.5391 160.765 63.9117L161.118 64.2652C170.491 73.6378 170.491 88.8338 161.118 98.2063L99.7248 159.6C96.6006 162.724 96.6006 167.789 99.7248 170.913L112.331 183.52" stroke="currentColor" stroke-width="15"></path><path d="M109.853 46.9411L59.6482 97.1457C50.2756 106.518 50.2756 121.714 59.6482 131.087V131.087C69.0208 140.459 84.2167 140.459 93.5893 131.087L143.794 80.8822" stroke="currentColor" stroke-width="15"></path></svg>'
+      items:
+        - name: "Blueprint Introduction"
+          href: "/blueprint/"
+          exact: true
+        - {}
+        - name: "Coding Agents"
+        - name: "Cursor"
+          href: "/blueprint/cursor/"
+          iconUrl: "https://img.daisyui.com/images/logos/cursor.svg"
+        - name: "Claude Code"
+          href: "/blueprint/claudecode/"
+          iconUrl: "https://img.daisyui.com/images/logos/claude-code.svg"
+        - name: "Codex"
+          href: "/blueprint/codex/"
+          iconUrl: "https://img.daisyui.com/images/logos/codex.svg"
+        - name: "VSCode Copilot"
+          href: "/blueprint/vscode/"
+          iconUrl: "https://img.daisyui.com/images/logos/copilot.svg"
+        - name: "OpenCode"
+          href: "/blueprint/opencode/"
+          iconUrl: "https://img.daisyui.com/images/logos/opencode.svg"
+        - name: "Antigravity"
+          href: "/blueprint/antigravity/"
+          iconUrl: "https://img.daisyui.com/images/logos/antigravity.svg"
+        - name: "Cline"
+          href: "/blueprint/cline/"
+          iconUrl: "https://img.daisyui.com/images/logos/cline.webp"
+        - name: "Windsurf"
+          href: "/blueprint/windsurf/"
+          iconUrl: "https://img.daisyui.com/images/logos/windsurf.webp"
+        - name: "OpenClaw"
+          href: "/blueprint/openclaw/"
+          iconUrl: "https://img.daisyui.com/images/logos/openclaw.svg"
+        - name: "Claude Desktop"
+          href: "/blueprint/claude/"
+          iconUrl: "https://img.daisyui.com/images/logos/claude.webp"
+        - name: "Zed"
+          href: "/blueprint/zed/"
+          iconUrl: "https://img.daisyui.com/images/logos/zed.webp"
+        - {}
+        - name: "Figma"
+        - name: "Figma API guide"
+          href: "/blueprint/figma/"
+          iconUrl: "https://img.daisyui.com/images/logos/figma.svg"
   components:
     - name: "Components"
       icon: '<svg class="siz-5 text-green-600" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 29H6V43H20V29Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/><path d="M24 4L34 21H14L24 4Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/><path d="M36 44C40.4183 44 44 40.4183 44 36C44 31.5817 40.4183 28 36 28C31.5817 28 28 31.5817 28 36C28 40.4183 31.5817 44 36 44Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/></svg>'

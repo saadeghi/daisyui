@@ -1,54 +1,60 @@
 ---
 title: Tailwind CSS
-desc: Why Tailwind CSS is the most practical way to build scalable UIs, and how daisyUI makes it even better
+desc: What Tailwind CSS is, why utility-first styling works, and where daisyUI adds a component layer.
 layout: contentLanding
-keywords: CSS framework, utility-first
+keywords: Tailwind CSS, utility-first CSS, CSS framework, Tailwind component library, daisyUI
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-Building user interfaces for the web can get messy fast. You start with a few styles, but as your project grows, things get complicated:
+## Tailwind CSS is about control
 
-## The usual headaches
+Tailwind CSS is used to style interfaces with utility classes in markup. Instead of creating a custom CSS selector for every element, you compose spacing, color, typography, layout, and state classes where the HTML lives.
 
-- Writing custom CSS for every component takes too much time and leads to inconsistent designs.
-- Using big frameworks like Bootstrap makes your site look generic, and customizing is a hassle.
-- Copy-pasting styles between files creates a maintenance nightmare.
-- CSS files get bloated, and you never know which classes are safe to delete.
+That model works because it keeps styling close to the element. It also makes design tokens easier to reuse across a project.
 
-All of this slows you down and makes scaling your UI harder than it should be.
+## Where teams get stuck
 
-## Why Tailwind CSS is different
+Utility-first CSS solves naming and scoping problems, but it does not remove repeated UI work.
 
-Tailwind CSS is a utility-first CSS framework. Instead of writing custom CSS, you use small, reusable utility classes right in your HTML. This approach solves a lot of problems:
+The same flexibility can also fill your markup with long class strings. That is fine for custom sections. It becomes repetitive for standard UI pieces users already recognize.
 
-- **No more naming things**: You don't have to invent class names for every style.
-- **Consistent design**: Utility classes are based on your design system, so everything matches.
-- **Less custom CSS**: Most of your styling happens in your markup, so your CSS files stay tiny.
-- **Easy to refactor**: Want to change a color or spacing? Just update the class in your HTML.
-- **Scales with your project**: Works for small sites and huge apps alike.
+A button still needs a button pattern. A form still needs form patterns. A dashboard still needs cards, stats, tables, tabs, and alerts. If every one of those patterns is built from utilities each time, the code grows noisy.
 
-Here's what a really simple button looks like with Tailwind CSS:
+## The missing layer is components
+
+Tailwind gives the low-level language. Component classes give repeated interface parts a name.
 
 ```html
-<button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Click Me</button>
+<button class="btn btn-primary">Save</button>
+<div class="card bg-base-100 shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">Billing</h2>
+    <p>Update payment details and invoices.</p>
+  </div>
+</div>
 ```
 
-You get full control, and your styles are always in sync with your design system.
+This is still Tailwind CSS. daisyUI adds a component layer on top, so common UI does not need to be rebuilt from utilities on every page.
 
+## What daisyUI adds to Tailwind CSS
 
-## Make Tailwind CSS even easier with daisyUI
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
-Tailwind CSS is powerful, but writing out lots of utility classes can get repetitive. daisyUI helps with that.
+The practical split is simple:
 
-daisyUI is a plugin for Tailwind CSS that gives you ready-made component classes like `btn`, `card`, and `alert`. It makes your HTML cleaner and your workflow faster:
+- Use daisyUI for common components.
+- Use Tailwind utilities for layout and one-off design details.
+- Use daisyUI themes for color tokens across light mode, dark mode, and brand themes.
 
-```html
-<button class="btn">Click Me</button>
-```
+## When this is the better workflow
 
-You still get all the flexibility of Tailwind, but with less typing and more readable code. Plus, daisyUI comes with themes, so you can change your site's look with a single attribute.
+Use Tailwind alone when you are crafting a one-off visual section. Add daisyUI when you are building repeated product UI: forms, settings pages, dashboards, navigation, marketing sections, data tables, and admin screens.
 
-If you want to build scalable UIs quickly, and enjoy the process, Tailwind CSS and daisyUI are a great combo.
+That balance keeps Tailwind's control while reducing the repetition that slows real projects.
+
+## Next steps
+
+Start with the [daisyUI intro](/docs/intro/), then browse [components](/components/) and [themes](/docs/themes/). For a new Vite project, follow [Install daisyUI for Vite](/docs/install/vite/).

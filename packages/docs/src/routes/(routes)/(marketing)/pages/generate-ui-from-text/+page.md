@@ -1,6 +1,6 @@
 ---
 title: Generate UI from text
-desc: Generate UI from text prompts with semantic components so the model maps plain language to cleaner frontend code.
+desc: Generate UI from text prompts by giving the model clear component names for layouts, forms, cards, and actions.
 layout: contentLanding
 keywords: generate ui from text, text to ui generator, ai ui from text, generate frontend from prompt, text to frontend code
 ---
@@ -9,32 +9,73 @@ keywords: generate ui from text, text to ui generator, ai ui from text, generate
   import Translate from "$components/Translate.svelte"
 </script>
 
-## The problem: Text descriptions are fuzzy
+## Text-to-UI needs shared names
 
-When you describe a UI in plain language, the model has to guess the layout, the component choice, the hierarchy, and the interaction model. A prompt like "Create a dashboard with user stats and activity log" sounds specific, but it still leaves almost everything open. The model fills those gaps with its own defaults. Sometimes that works. Often it means another round of clarification and another token-heavy rewrite.
+Plain text is fuzzy. "Create a dashboard with stats and recent activity" sounds specific, but it still leaves the model to choose the components, layout, hierarchy, and interaction states.
 
-## Why text→UI struggles at scale
+The more abstract the prompt, the more the model has to invent. Shared UI names turn a vague request into a set of concrete pieces.
 
-Text loses information when it becomes code. "Put buttons below the form" could mean inline, stacked, justified, or distributed. "Show metrics" could mean cards, stat boxes, progress bars, or badges. Without a shared reference point, the model keeps re-reading the entire prompt and rebuilding more markup than the change really needs.
+## The hidden cost is not the first screen
 
-## The solution: give the model a UI grammar
+The first version often looks acceptable. The maintenance cost shows up in the second, fifth, and tenth edit.
 
-The fix is to give the model a small vocabulary of semantic primitives. Instead of asking it to invent a dashboard from scratch, ask it to build one with `hero` for the title area, `stat` for the metrics, `table` for the activity log, `select` for filtering, and `btn` for actions. The model now has a grammar to follow. It can reference a pattern instead of inventing one.
+- One button becomes five different button class strings.
+- A card uses different padding on each page.
+- Dark mode colors get copied by hand.
+- The model changes nearby styles while fixing one small detail.
+- Reviewing the diff takes longer than the prompt.
 
-That same idea makes the output easier to change. A `card` grid stays a `card` grid. A `badge` stays a `badge`. A form stays a form. When the component names are explicit, the prompt gets shorter, the diffs get smaller, and the first pass gets closer to what you wanted.
+This is a translation problem. Text loses detail, so the model needs component names that carry meaning into the code.
 
-Take this prompt: "Create a blog post page with a large title, author info, the article content, and a comment section at the bottom." Without semantic components, the model often responds with a long block of utility-heavy HTML. With daisyUI, it can map the request to a few reusable parts: `avatar` for the author image, `divider` for separation, `prose` for the article body, and a card-based comment section that uses the same pattern the rest of the site already follows.
+## Give the model component names before it writes code
 
-Semantic components reduce clarification cycles because the model is no longer guessing the structure from scratch. They also make the output more predictable for humans. If you see `card`, `card-body`, `card-title`, and `btn btn-primary`, you know the shape of the UI immediately. That is much easier to review than a wall of arbitrary classes.
+Semantic classes narrow the search space. Instead of asking AI to invent a button from utilities, give it a known target:
 
-The same advantage shows up when you iterate. If you ask for a user profile page with an avatar, name, bio, and follow button, the model can build it once and then add social links or a new badge without changing the whole structure. That is what makes text-to-UI practical instead of frustrating.
+```html
+<button class="btn btn-primary">Save changes</button>
+```
 
-Be specific about the component you want. Say "use the table component with columns for name, status, and action buttons" instead of "create a list of items." Reference existing daisyUI components in the prompt, and describe layout semantically when you can. Show one example early, then ask the model to repeat the pattern across the rest of the page.
+The same idea works across a page:
 
-## When text→UI with semantics wins
+```html
+<section class="grid gap-6 md:grid-cols-3">
+  <div class="card bg-base-100 shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Team usage</h2>
+      <p>See seats, invites, and plan limits in one place.</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Manage</button>
+      </div>
+    </div>
+  </div>
+</section>
+```
 
-This approach is strongest when you are prototyping from descriptions, translating mockups into code, or working with non-technical stakeholders who describe screens in plain language. It also helps when you need functional UI fast and do not want every edit to trigger a rewrite of the whole page.
+Now the prompt and the code share the same vocabulary. You can ask for "primary", "outline", "warning", "compact", or "ghost" instead of asking the model to rebuild color, border, spacing, hover, active, disabled, and focus styles.
 
-## Getting started
+## Why daisyUI fits text-to-UI generation
 
-Explore the [daisyUI component library](/components/) to learn what primitives are available. When writing text descriptions, reference component names explicitly. Then define your brand colors once in the [theme generator](/theme-generator/), so all semantically-described UIs stay aligned.
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
+
+That combination matters for generated UI. Tailwind CSS remains available for layout and one-off styling, while daisyUI handles repeated interface parts with names a model can reuse: `btn`, `card`, `input`, `select`, `modal`, `navbar`, `menu`, `table`, `badge`, `alert`, `stat`, and `toast`.
+
+The model still has freedom. It can choose the layout, data, copy, and interaction wiring. The repetitive visual layer has a stable vocabulary.
+
+## A better prompt pattern
+
+Use prompts that translate the text into component choices:
+
+```text
+Build a settings page with daisyUI.
+Use cards for sections, fieldsets for form groups, inputs for text fields,
+selects for option lists, and btn-primary for the main action.
+Use Tailwind utilities only for layout and spacing.
+```
+
+That prompt gives the model pieces it can assemble. It also gives you code that is easier to review because the important UI decisions are visible in class names.
+
+## When this approach pays off
+
+Use semantic components when non-technical prompts need to become maintainable code. The prompt can stay plain English, but the output should use a stable UI vocabulary.
+
+Start with the [daisyUI components](/components/), then keep the [install guide](/docs/install/) and [theme generator](/theme-generator/) close while you prompt. The less the model has to invent, the more attention it can spend on the screen you asked for.

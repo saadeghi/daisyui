@@ -1,6 +1,6 @@
 ---
 title: AI UI code generation
-desc: Generate UI with AI without long utility chains. Use daisyUI to keep AI output shorter, easier to edit, and cheaper to repeat.
+desc: Generate UI with AI using semantic component classes, readable markup, and a workflow that keeps revisions smaller.
 layout: contentLanding
 keywords: ai ui code generation, generate ui with ai, ai ui generator, llm ui code, ai frontend code generation, tailwind ai ui
 ---
@@ -9,79 +9,73 @@ keywords: ai ui code generation, generate ui with ai, ai ui generator, llm ui co
   import Translate from "$components/Translate.svelte"
 </script>
 
-## The problem: AI-generated UI gets expensive fast
+## AI UI code generation works better with a UI grammar
 
-LLMs usually rebuild the full visual tree on each edit. That means long HTML, long diffs, and repeated token spend for small changes. If you've ever asked for a tiny fix and got back a wall of markup, this is the pattern behind it.
+AI can produce frontend code quickly. The hard part starts after the first answer, when you ask for a smaller change and the model rewrites a wall of utility classes.
 
-## The solution: semantic components change the workflow
+That happens because a text prompt leaves too many UI decisions open. A "nice dashboard" can mean cards, stats, tables, badges, filters, empty states, and several spacing systems. Without a shared component vocabulary, the model invents those details every time.
 
-AI models do not naturally think in reusable UI primitives. They usually generate low-level CSS classes for the full shape of a component instead of treating the component as a single semantic unit:
+## The hidden cost is not the first screen
+
+The first version often looks acceptable. The maintenance cost shows up in the second, fifth, and tenth edit.
+
+- One button becomes five different button class strings.
+- A card uses different padding on each page.
+- Dark mode colors get copied by hand.
+- The model changes nearby styles while fixing one small detail.
+- Reviewing the diff takes longer than the prompt.
+
+This is a structure problem. The model has no stable word for "button", "card", "alert", or "navbar", so it keeps describing those shapes with low-level CSS.
+
+## Give the model component names before it writes code
+
+Semantic classes narrow the search space. Instead of asking AI to invent a button from utilities, give it a known target:
 
 ```html
-<!-- What Claude generates (33 classes) -->
-<button class="bg-zinc-100 border font-semibold text-zinc-900 text-sm px-4 duration-200 py-2.5 transition-all hover:border-zinc-300 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 active:translate-y-[0.5px] inline-flex gap-2 rounded-sm active:border-zinc-300 active:bg-zinc-200 active:shadow-none text-center align-middle cursor-pointer border-zinc-200 dark:border-zinc-700 dark:bg-neutral-700 dark:text-zinc-300 dark:hover:border-zinc-950 dark:hover:bg-zinc-950 dark:focus-visible:outline-zinc-200 dark:active:border-zinc-950 dark:active:bg-zinc-900">
-  Click me
-</button>
+<button class="btn btn-primary">Save changes</button>
 ```
 
-The model must read all 33 classes every time you ask for an edit. It must rewrite all 33 classes on every change. Token costs grow because the same styling gets repeated over and over.
-
-If the model can target a high-level component primitive instead of a long utility chain, the whole editing loop gets smaller. The model reads less, rewrites less, and leaves more room in context for the parts of the page you actually care about.
+The same idea works across a page:
 
 ```html
-<!-- With semantic components (1 class) -->
-<button class="btn btn-primary">
-  Click me
-</button>
+<section class="grid gap-6 md:grid-cols-3">
+  <div class="card bg-base-100 shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Team usage</h2>
+      <p>See seats, invites, and plan limits in one place.</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Manage</button>
+      </div>
+    </div>
+  </div>
+</section>
 ```
 
-This is where daisyUI helps. It gives the model component names it can reuse, such as `btn`, `card`, `modal`, `navbar`, `table`, `badge`, `dropdown`, and `alert`. It also gives you semantic variants like `btn btn-primary` and `card card-compact`, which are shorter to read and easier to edit than a long utility chain. The model stops reconstructing every visual detail and starts composing known parts.
+Now the prompt and the code share the same vocabulary. You can ask for "primary", "outline", "warning", "compact", or "ghost" instead of asking the model to rebuild color, border, spacing, hover, active, disabled, and focus styles.
 
-The practical win is not just shorter markup. It is a different editing loop. You can say "change this button to secondary" instead of asking the model to rewrite a long class string. You can also tell it to use `bg-primary` or `text-secondary` instead of hard-coding a color into every element. That keeps the prompt language close to the component language, which is exactly what LLMs handle best.
+## Why daisyUI fits AI UI code generation
 
-Because the model has fewer classes to read and rewrite, repeated edits become cheaper and less brittle. The same page can go through multiple prompt cycles without ballooning into a wall of markup. That is the difference between a codebase that feels human-readable and one that feels like a token sink.
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
-For a realistic project:
+That combination matters for generated UI. Tailwind CSS remains available for layout and one-off styling, while daisyUI handles repeated interface parts with names a model can reuse: `btn`, `card`, `input`, `select`, `modal`, `navbar`, `menu`, `table`, `badge`, `alert`, `stat`, and `toast`.
 
-| Scenario | Tailwind only | Tailwind + daisyUI | Savings |
-|---|---|---|---|
-| 100-file project, full code read | ~1.0 MB, ~250K tokens | ~210 KB, ~52.5K tokens | **79% reduction** |
-| Single page edit loop (5 iterations) | ~12.5K tokens | ~2.6K tokens | **79% per loop** |
-| Monthly cost for 100 edits | illustrative example | illustrative example | illustrative example |
+The model still has freedom. It can choose the layout, data, copy, and interaction wiring. The repetitive visual layer has a stable vocabulary.
 
-These are rough estimates, not benchmarks. The exact numbers will change from project to project, but the direction stays the same: semantic components reduce repeated work.
+## A better prompt pattern
 
-## Real-world example
+Use prompts that define the component system before the screen:
 
-**Task:** Build a landing page with hero, features, pricing, and contact form.
+```text
+Build a settings page with daisyUI.
+Use cards for sections, fieldsets for form groups, inputs for text fields,
+selects for option lists, and btn-primary for the main action.
+Use Tailwind utilities only for layout and spacing.
+```
 
-**With Tailwind only:**
+That prompt gives the model pieces it can assemble. It also gives you code that is easier to review because the important UI decisions are visible in class names.
 
-- Hero section: 200+ lines of utility-heavy markup
-- Features grid: 150+ lines
-- Pricing cards: 250+ lines
-- Contact form: 180+ lines
-- Total: 780+ lines
-- First pass: ~195K tokens
-- One color or spacing tweak: re-read and re-write 780+ lines
-- 5 iterations: ~975K tokens
+## When this approach pays off
 
-**With daisyUI:**
+Use semantic components when you expect revisions, multiple pages, team handoff, or theme changes. For one experimental snippet, utility-only output can be fine. For a product surface, repeated utility chains turn into noise.
 
-- Hero section: 45 lines of semantic markup
-- Features grid: 30 lines
-- Pricing cards: 55 lines (using `card` component)
-- Contact form: 35 lines
-- Total: 165 lines
-- First pass: ~41K tokens
-- One color or spacing tweak: modify semantic classes
-- 5 iterations: ~205K tokens
-- **Savings: large reductions in repeated tokens and edit work**
-
-## When this matters most
-
-Use this approach when you iterate often, build many pages, or need code that stays readable after AI edits. It is the difference between "AI helped me ship" and "AI made this harder to maintain."
-
-## Getting started
-
-Start with the [component library](/components/) and [theme generator](/theme-generator/). Then prompt against components instead of utility chains.
+Start with the [daisyUI components](/components/), then keep the [install guide](/docs/install/) and [theme generator](/theme-generator/) close while you prompt. The less the model has to invent, the more attention it can spend on the screen you asked for.

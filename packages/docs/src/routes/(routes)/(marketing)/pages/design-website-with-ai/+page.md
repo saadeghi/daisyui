@@ -1,6 +1,6 @@
 ---
 title: Design website with AI
-desc: Design website with AI using one theme and one component system so the whole site stays coherent and easy to edit.
+desc: Design a website with AI by giving the model one component system, one theme layer, and clear UI primitives.
 layout: contentLanding
 keywords: design website with ai, ai website design, ai web design workflow, build website with ai, ai generated website ui
 ---
@@ -9,197 +9,75 @@ keywords: design website with ai, ai website design, ai web design workflow, bui
   import Translate from "$components/Translate.svelte"
 </script>
 
-## The problem: AI-designed websites lack coherence
+## AI website design needs one visual system
 
-AI can draft a full site quickly, but the sections often drift into different styles. One color change can turn into a search-and-replace job. That is where the site stops feeling designed and starts feeling assembled.
+AI can draft a website quickly, but each section often feels like it came from a different template. The hero has one style, pricing has another, and the form introduces a third color system.
 
-## The solution: give the AI one system to follow
+That happens because "design a website" is too open. The model chooses layout, hierarchy, components, colors, spacing, and interaction states at the same time. A shared component and theme layer keeps those choices connected.
 
-AI models usually optimize each section independently, which is why the hero can look polished while the features and pricing sections drift into a different style. One section uses a gradient, another uses a flat gray surface, and a third introduces a new accent color. Each section can be fine on its own and still feel inconsistent as a whole.
+## The hidden cost is not the first screen
 
-If you give the AI a constrained palette and a small set of components, the output becomes much more coherent. For a landing page, that means using the same `hero`, `card`, `btn`, `badge`, and `table` patterns across all sections instead of letting every section invent its own style.
+The first version often looks acceptable. The maintenance cost shows up in the second, fifth, and tenth edit.
 
-daisyUI gives the AI a shared design system. The theme controls the colors, the components control the structure, and the page starts to feel intentional instead of stitched together. That is the difference between a site that looks drafted by a model and a site that looks like a product.
+- One button becomes five different button class strings.
+- A card uses different padding on each page.
+- Dark mode colors get copied by hand.
+- The model changes nearby styles while fixing one small detail.
+- Reviewing the diff takes longer than the prompt.
 
-The practical win is that changes stop spreading everywhere. Update a theme color once, and the whole site follows. Adjust a card pattern once, and every section that uses it stays aligned. That makes the site easier to grow instead of easier to break.
+This is a system problem. The model needs stable names for repeated sections and controls before it can keep a full website coherent.
 
-Without daisyUI:
+## Give the model component names before it writes code
 
-```html
-<!-- Hero: Custom gradient and button styling -->
-<section class="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-24 px-6 rounded-lg">
-  <h1 class="text-5xl font-bold mb-4 leading-tight">Your Product</h1>
-  <p class="text-xl mb-8 opacity-90 max-w-2xl">Description</p>
-  <button class="px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold transition-all duration-200 hover:bg-gray-50 active:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:opacity-50 dark:bg-gray-900 dark:text-blue-400 dark:hover:bg-gray-800 dark:active:bg-gray-700 inline-flex items-center justify-center cursor-pointer">Get Started</button>
-</section>
-
-<!-- Features: Unique card styling per section -->
-<section class="grid grid-cols-3 gap-8 py-16">
-  <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm transition-shadow duration-200 hover:shadow-md dark:bg-gray-800 dark:border-gray-700">
-    <h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Feature 1</h3>
-    <p class="text-gray-600 dark:text-gray-400">Description</p>
-  </div>
-  <!-- 2 more cards with slightly different styling -->
-</section>
-
-<!-- Testimonials: Another unique card pattern -->
-<section class="bg-gray-50 py-16 dark:bg-gray-900">
-  <div class="max-w-4xl mx-auto">
-    <div class="bg-white p-8 rounded-lg border border-gray-200 mb-8 shadow-sm transition-shadow hover:shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <p class="italic mb-4 text-gray-700 dark:text-gray-300">Quote</p>
-      <p class="font-semibold text-gray-900 dark:text-white">Author</p>
-    </div>
-    <!-- 2 more testimonials -->
-  </div>
-</section>
-```
-
-Three sections. Three different card patterns. Three different button styles. Changing the brand color requires finding and editing utilities across all sections.
-
-With daisyUI:
+Semantic classes narrow the search space. Instead of asking AI to invent each website section from utilities, give it known targets:
 
 ```html
-<!-- Hero: All styling encapsulated -->
-<section class="hero bg-primary text-primary-content py-24">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <h1 class="text-5xl font-bold mb-4">Your Product</h1>
-      <p class="text-xl mb-8">Description</p>
-      <button class="btn btn-ghost btn-lg">Get Started</button>
-    </div>
-  </div>
-</section>
-
-<!-- Features: Same card pattern everywhere -->
-<section class="py-16">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-    <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow">
-      <div class="card-body">
-        <h3 class="card-title">Feature 1</h3>
-        <p>Description</p>
-      </div>
-    </div>
-    <!-- 2 more cards: Same pattern -->
-  </div>
-</section>
-
-<!-- Testimonials: Also uses same card component -->
-<section class="py-16 bg-base-200">
-  <div class="max-w-4xl mx-auto">
-    <div class="card bg-base-100 shadow-md mb-6">
-      <div class="card-body">
-        <p class="italic mb-4">Quote</p>
-        <p class="font-semibold">Author</p>
-      </div>
-    </div>
-    <!-- 2 more testimonials: Same pattern -->
-  </div>
-</section>
+<button class="btn btn-primary">Save changes</button>
 ```
 
-One component library. One theme. Update the theme once and the whole site follows.
+The same idea works across a page:
 
 ```html
-<!-- Testimonials -->
-<section class="bg-base-200 py-16">
-  <div class="max-w-4xl mx-auto">
-    <div class="card bg-base-100 mb-8">
-      <div class="card-body">
-        <p class="italic mb-4">Quote</p>
-        <p class="font-semibold">Author</p>
+<section class="grid gap-6 md:grid-cols-3">
+  <div class="card bg-base-100 shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Team usage</h2>
+      <p>See seats, invites, and plan limits in one place.</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Manage</button>
       </div>
     </div>
-    <!-- 2 more testimonials -->
   </div>
 </section>
 ```
 
-Short, semantic, consistent.
+Now the prompt and the code share the same vocabulary. You can ask for "primary", "outline", "warning", "compact", or "ghost" instead of asking the model to rebuild color, border, spacing, hover, active, disabled, and focus styles.
 
-## How to design websites with AI + daisyUI
+## Why daisyUI fits AI website design
 
-Choose the palette once, tell the AI to use semantic components, and generate the page section by section. That keeps the same visual language from the hero through the footer while still letting you change layout or copy later without a redesign.
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
-Select colors:
+That combination matters for generated UI. Tailwind CSS remains available for layout and one-off styling, while daisyUI handles repeated interface parts with names a model can reuse: `btn`, `card`, `input`, `select`, `modal`, `navbar`, `menu`, `table`, `badge`, `alert`, `stat`, and `toast`.
 
-```
-Primary: Your brand color
-Secondary: Accent color
-Neutral: Text and borders
-Success, warning, error: Status colors
-```
+The model still has freedom. It can choose the layout, data, copy, and interaction wiring. The repetitive visual layer has a stable vocabulary.
 
-Define typography and spacing once.
+## A better prompt pattern
 
-Tell the AI to use semantic components instead of raw styling. For example: "Design a landing page using daisyUI components. Use .hero for the header, .card for feature boxes, .btn for CTAs, and .table for comparison. Follow the primary and secondary colors defined in the theme." That keeps the model working inside a defined system instead of improvising a new one for every section.
+Use prompts that define the theme and component system before the page:
 
-Generate the hero, features, pricing, and testimonials with the same component set. After generation, update the theme or component CSS instead of rewriting HTML. That is the part that makes the workflow maintainable.
-
-## Real example: Personal website with AI
-
-**Goal:** Generate a personal portfolio website with hero, about, projects, and contact sections.
-
-**Step 1: Define theme (5 minutes)**
-
-```
-Color palette:
-- Primary: indigo-600
-- Secondary: pink-500
-- Base: white
-
-Define once in the theme generator
+```text
+Build a settings page with daisyUI.
+Use cards for sections, fieldsets for form groups, inputs for text fields,
+selects for option lists, and btn-primary for the main action.
+Use Tailwind utilities only for layout and spacing.
 ```
 
-**Step 2: Generate sections (15 minutes total)**
+That prompt gives the model pieces it can assemble. It also gives you code that is easier to review because the important UI decisions are visible in class names.
 
-Hero section prompt: "Create a hero section with name, title, and a CTA button using .btn btn-primary"
+## When this approach pays off
 
-→ AI generates 30 lines using semantic components
+Use semantic components when the site has more than one section, more than one page, or more than one round of edits. A website needs a visual system before it needs decorative variety.
 
-About section prompt: "Create an about section with paragraphs and an avatar. Use .avatar for the image."
+Start with the [daisyUI components](/components/), then keep the [install guide](/docs/install/) and [theme generator](/theme-generator/) close while you prompt. The less the model has to invent, the more attention it can spend on the screen you asked for.
 
-→ AI generates 20 lines, automatically uses the theme colors
-
-Projects section prompt: "Create a grid of project cards. Use .card for each project."
-
-→ AI generates 40 lines, all cards look consistent
-
-Contact section prompt: "Create a contact form using .input, .textarea, and .btn components."
-
-→ AI generates 30 lines, inputs and buttons match the theme
-
-**Step 3: Iterate on content (10 minutes)**
-
-You don't like the colors? Change the theme, entire site updates.
-You don't like card layouts? Edit card CSS, all projects update.
-You want to rearrange sections? Ask AI to move them, it generates new output using the same patterns.
-
-**Total time: 30 minutes. Result: Cohesive, professional portfolio site.**
-
-Without daisyUI:
-
-- 3+ hours of manual CSS writing
-- Inconsistent styling across sections
-- Hard to change anything globally
-- Each section styled independently
-
-## When AI + daisyUI website design works best
-
-- Rapid prototyping
-- Portfolio and personal sites
-- Marketing websites
-- MVP products
-- Design system definition
-- Agential AI workflows that need visual coherence
-
-If you want a site that feels coherent on the first pass, this is the path that gets you there fastest.
-
-## Getting started
-
-1. Explore daisyUI's [component library](/components/)
-2. Choose a color palette and define it in the [theme generator](/theme-generator/)
-3. Ask an AI (Claude, GPT, etc.) to generate sections using daisyUI components
-4. Iterate on design by modifying the theme, not asking AI to restyle HTML
-5. Use semantic language in prompts: "Use .card for containers, .btn for actions"
-
-Within a few sections, the AI learns the pattern and generates consistent, beautiful, maintainable websites.
+For full-page site generation, define the theme first. Tell the model which daisyUI theme or custom theme tokens to use, then ask for sections built from components such as `hero`, `card`, `navbar`, `footer`, and `btn`.

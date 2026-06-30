@@ -1,86 +1,74 @@
 ---
-title: daisyUI is an easy component library
-desc: Why daisyUI is the easiest Tailwind CSS component library for real-world projects
+title: Easy component library
+desc: Find an easy component library that keeps markup readable, works with Tailwind CSS, and does not lock you into a framework.
 layout: contentLanding
-keywords: easy component library, simple component library, easy to use, user-friendly components, hassle-free styling
+keywords: easy component library, simple component library, easy to use component library, Tailwind component library
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
+## An easy component library removes small styling chores should reduce decisions, not create them
 
-Making a website look good is harder than it sounds, especially when you're new to web development. There are a bunch of ways to style your site, but each one comes with its own headaches.
+Most people do not search for a component library because they want another dependency to manage. They search because the same interface work keeps coming back: buttons, cards, forms, navigation, alerts, tables, dialogs, empty states, and themes.
 
-## The usual problems
+Students, solo builders, backend developers, and product teams all run into the same problem: the UI needs to look coherent before the feature can be judged. need those pieces to feel consistent without spending the project budget on small styling decisions.
 
-- **Writing CSS from scratch** takes forever and your designs end up looking different on every page.
-- **Bootstrap and similar frameworks** make your site look like everyone else's, and changing things is a pain.
-- **Tailwind CSS** is powerful, but your HTML turns into a wall of class names that's hard to read.
-- **Component libraries tied to a framework** add extra dependencies and lock you in, so you can't easily reuse your code elsewhere.
+## The common trap
 
-All of this makes building websites feel more complicated than it should be.
+Low-level CSS gives you control. It also gives you endless choices.
 
+- Which button padding should this page use?
+- Which border radius matches the cards?
+- Which colors work in dark mode?
+- Which form states need focus, error, disabled, and loading styles?
+- Which classes should a teammate copy for the next screen?
 
-## Why daisyUI is actually easy
+When every component starts from scratch, the UI drifts. Each page can look reasonable alone and still feel unrelated to the rest of the product.
 
-daisyUI is a Tailwind CSS plugin that skips the usual pain. Here's what makes it different:
+## What to look for instead
 
-### 1. Class names that make sense
+A useful component library gives you stable primitives while staying flexible where the app needs it.
 
-You get simple names like `btn`, `card`, and `alert`. Your HTML is short and easy to read:
+- It should work with plain HTML and framework templates.
+- It should leave JavaScript behavior to your app.
+- It should have readable class names.
+- It should support themes through tokens, not copied color values.
+- It should let Tailwind utilities handle custom layout.
+
+Easy should not mean shallow. It should mean the common path is short, while custom work remains possible when the design needs it.
+
+## Why daisyUI belongs on the shortlist
+
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
+
+That means you can write `btn btn-primary`, `card bg-base-100`, `input`, `select`, `modal`, `navbar`, `menu`, and `alert` in markup without adopting a framework-specific component API.
 
 ```html
-<button class="btn">Click Me</button>
-```
-
-### 2. No JavaScript needed
-
-Everything is just CSS. You don't have to mess with JavaScript to get things like dropdowns working:
-
-```html
-<div class="dropdown">
-  <label tabindex="0" class="btn m-1">Menu</label>
-  <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
-    <li><a>Item 1</a></li>
-    <li><a>Item 2</a></li>
-  </ul>
+<div class="card bg-base-100 shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">Project status</h2>
+    <p>Track progress, owners, and the next review date.</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Open project</button>
+    </div>
+  </div>
 </div>
 ```
 
-### 3. Use it anywhere
+The code says what the interface is. Tailwind utilities still handle layout, spacing, and edge cases.
 
-It works with plain HTML, React, Vue, Svelte, whatever you want. You're not locked in.
+## The quiet advantage
 
-### 4. Themes are easy
+Design consistency rarely fails because a team does not care. It fails because every small decision is repeated too often.
 
-Switch your site's look by changing a single attribute. There are 35+ built-in themes:
+Component classes remove repeated decisions from everyday markup. Themes move color decisions into one layer. Framework independence keeps the same visual system usable in React, Vue, Svelte, Astro, Rails, Laravel, plain HTML, and other stacks.
 
-```html
-<html data-theme="dark">
-  <!-- your content -->
-</html>
-```
+That is the part readers usually discover after the first page. The first page is faster. The tenth page is calmer.
 
-### 5. Fits your skill level
+## Start with the pieces you repeat
 
-If you're new, just use the components as they are. If you want to customize, add Tailwind classes. It grows with you. If you want something even more lightweight, check out daisyUI is a minimal CSS framework.
+Open the [component library](/components/) and choose the elements your project uses every day. For most apps, that means [button](/components/button/), [card](/components/card/), [input](/components/input/), [select](/components/select/), [modal](/components/modal/), [navbar](/components/navbar/), and [table](/components/table/).
 
-## How to start
-
-1. Install daisyUI in your Tailwind CSS project:
-
-```bash
-npm i -D daisyui
-```
-
-2. Add daisyUI to your CSS:
-
-```css
-@import "tailwindcss";
-@plugin "daisyui";
-```
-
-For more details, check the [daisyUI installation guide](/docs/install/).
-
-With daisyUI, you can focus on building your site instead of fighting with your tools.
+Then install daisyUI from the [Tailwind CSS install guide](/docs/install/) or use the [CDN setup](/docs/cdn/) for an HTML prototype.

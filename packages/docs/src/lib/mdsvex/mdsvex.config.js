@@ -141,7 +141,7 @@ const rehypePlugins = [
 const remarkPlugins = [
   replacePlaceholders,
   remarkRenderComponent,
-  remarkKeywordLinks,
+  // remarkKeywordLinks,
   remarkTranslate,
   [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
   [
