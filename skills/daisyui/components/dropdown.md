@@ -21,7 +21,7 @@ Using details and summary
 Using popover API
 ```html
 <button popovertarget="{id}" style="anchor-name:--{anchor}">{button}</button>
-<ul class="dropdown-content" popover id="{id}" style="position-anchor:--{anchor}">{CONTENT}</ul>
+<ul class="dropdown" popover id="{id}" style="position-anchor:--{anchor}">{CONTENT}</ul>
 ```
 
 Using CSS focus
@@ -37,3 +37,4 @@ Using CSS focus
 - replace `{id}` and `{anchor}` with a unique name
 - For CSS focus dropdowns, use `tabindex="0"` and `role="button"` on the button
 - The content can be any HTML element (not just `<ul>`)
+- For popover API method, we dont use `dropdown-content`. Only button and a `dropdown`
