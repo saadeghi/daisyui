@@ -14,11 +14,6 @@
     {#if remaining.done === false}
       {#if tooltip}
         <span class="tooltip-content text-[0.625rem] pt-2">
-          <span
-            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-out group-hover:grid-rows-[1fr]"
-          >
-            <span class="overflow-hidden">Discount</span>
-          </span>
           <span class={`font-mono tabular-nums ${className}`} transition:fade={{ duration: 400 }}>
             <date {datetime} class="countdown text-[0.625rem]">
               {#if remaining.days > 0}
@@ -28,6 +23,11 @@
               <span style={`--digits: 2;--value:${remaining.minutes};`}></span>:
               <span style={`--digits: 2;--value:${remaining.seconds};`}></span>
             </date>
+          </span>
+          <span
+            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-out group-hover:grid-rows-[1fr]"
+          >
+            <span class="overflow-hidden font-mono">Discount</span>
           </span>
         </span>
       {:else}

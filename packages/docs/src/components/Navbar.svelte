@@ -231,14 +231,16 @@
           {:else if item.href && hasText(item.name)}
             <a
               href={item.href}
-              class={`tab font-normal ${isActive(item) ? "tab-active before:[--radius-start:revert]" : ""}`}
+              class={`tab group font-normal ${isActive(item) ? "tab-active before:[--radius-start:revert]" : ""}`}
               onclick={() => track(`Navbar > ${item.name}`)}
             >
               <span
                 class={`px-1 xl:px-2 flex items-center gap-1 ${shouldShowCountdownTooltip(item) ? "tooltip tooltip-bottom tooltip-open group" : ""}`}
               >
                 {#if item.icon}
-                  <span>{@html item.icon}</span>
+                  <span class="text-base-content group-hover:opacity-100 opacity-50"
+                    >{@html item.icon}</span
+                  >
                 {/if}
                 {$t(item.name)}
                 {#if shouldShowCountdownTooltip(item)}
