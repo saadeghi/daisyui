@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.6.7 (2026-07-01)
+
+
+### Bug Fixes
+
+* loading in prefers-reduced-motion now has slow animation instead of no animation. closes: [#4599](https://github.com/saadeghi/daisyui/issues/4599) ([f25acfd](https://github.com/saadeghi/daisyui/commit/f25acfdcbfad15a9a3908247641602d1b2ef2c08))
+
 ## 5.6.6 (2026-06-29)
 
 
