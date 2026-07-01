@@ -9,10 +9,11 @@ export default plugin.withOptions((options = {}) => {
       prefersdark = false,
       "color-scheme": colorScheme = "normal",
       root = ":root",
+      prefix = "",
       ...customThemeTokens
     } = options
 
-    let selector = `${root}:has(input.theme-controller[value=${name}]:checked),[data-theme="${name}"]`
+    let selector = `${root}:has(input.${prefix}theme-controller[value="${name}"]:checked),[data-theme="${name}"]`
     if (isDefault) {
       selector = `:where(${root}),${selector}`
     }
@@ -37,11 +38,9 @@ export default plugin.withOptions((options = {}) => {
 
     if (prefersdark) {
       // Use :root:not([data-theme]) for dark mode specificity
-      const darkSelector =
-        root === ":root" ? ":root:not([data-theme])" : `${root}:not([data-theme])`
       addBase({
         "@media (prefers-color-scheme: dark)": {
-          [darkSelector]: baseStyles[selector],
+          [`${root}:not([data-theme])`]: baseStyles[selector],
         },
       })
     }
