@@ -33,6 +33,7 @@
     --indicator-e: auto;
     --indicator-x: -50%;
     [dir="rtl"] & {
+      --indicator-e: 50%;
       --indicator-x: 50%;
     }
   }
