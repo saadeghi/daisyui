@@ -140,6 +140,20 @@ classnames:
 </fieldset>
 ```
 
+### ~With fieldset and label
+
+<fieldset class="fieldset w-xs">
+  <label class="label" for="name">Name</label>
+  <input type="text" id="name" class="input" placeholder="Name" />
+</fieldset>
+
+```html
+<fieldset class="$$fieldset">
+  <label class="$$label" for="name">Name</label>
+  <input type="text" id="name" class="$$input" placeholder="Name" />
+</fieldset>
+```
+
 ### ~Input colors
 
 <div class="grid gap-4 w-xs">
