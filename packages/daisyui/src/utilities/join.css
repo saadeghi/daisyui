@@ -42,6 +42,15 @@
 }
 
 .join-item {
+  @layer daisyui.l1.l2.l3.l4 {
+    > * {
+      --join-ss: initial;
+      --join-se: initial;
+      --join-es: initial;
+      --join-ee: initial;
+    }
+  }
+
   border-style: solid;
   border-width: var(--border, 1px);
   border-start-start-radius: var(--join-ss);
