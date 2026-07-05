@@ -81,7 +81,12 @@
     &:has(> select[disabled]),
     &:is(:disabled, [disabled]),
     fieldset:disabled & {
-      @apply border-base-200 bg-base-200 text-base-content/40 cursor-not-allowed;
+      @apply border-base-200 bg-base-200 cursor-not-allowed;
+      &:is(select),
+      :is(select) {
+        @apply text-base-content/40;
+      }
+      box-shadow: none;
 
       &::placeholder,
       ::placeholder {
