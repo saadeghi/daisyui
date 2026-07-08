@@ -65,7 +65,7 @@
     }
   }
 
-  @layer daisyui.l1.l2 {
+  @layer daisyui.l1 {
     &:where(:checked:not(.filter [type="radio"].btn)) {
       --btn-color: var(--color-primary);
       --btn-fg: var(--color-primary-content);
@@ -119,7 +119,7 @@
 }
 
 .btn-active {
-  @layer daisyui.l1.l2.l3 {
+  @layer daisyui.l1.l2 {
     --btn-bg: var(--btn-color, var(--color-base-200));
     color: var(--btn-fg, var(--color-base-content));
     --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
@@ -183,7 +183,7 @@
 }
 
 .btn-link {
-  @layer daisyui.l1 {
+  @layer daisyui {
     @apply underline;
     --btn-bg: #0000;
     color: var(--btn-color, var(--color-primary));
