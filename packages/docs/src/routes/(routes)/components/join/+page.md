@@ -114,7 +114,7 @@ classnames:
 ### ~Custom border radius
 <div class="join">
   <input class="input join-item w-36 lg:w-52" placeholder="Email"/>
-  <button class="btn join-item rounded-r-full">Subscribe</button>
+  <button class="btn join-item rounded-e-full">Subscribe</button>
 </div>
 
 ```html

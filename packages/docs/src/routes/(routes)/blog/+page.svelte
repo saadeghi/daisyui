@@ -16,6 +16,11 @@
     <h1 class="text-base-content/30">Coming soon</h1>
   </div>
 {/if}
+<div class="breadcrumbs text-xs m-6">
+  <ul>
+    <li><h1 class="no-underline cursor-text opacity-60">daisyUI Blog</h1></li>
+  </ul>
+</div>
 <div class="grid justify-items-stretch gap-6">
   {#each posts as post}
     <a
@@ -23,7 +28,7 @@
       href={`/blog/${post.slug}/`}
     >
       {#if post.thumbnail}
-        <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pe-0">
+        <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-48 sm:pe-0">
           <img
             loading="lazy"
             src={post.thumbnail}

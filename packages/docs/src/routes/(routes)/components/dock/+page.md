@@ -39,7 +39,7 @@ classnames:
 
 > :INFO:
 >
-> `<meta name="viewport" content="viewport-fit=cover">` is required for responsivness of the dock in iOS.
+> `<meta name="viewport" content="viewport-fit=cover">` is required for responsiveness of the dock in iOS.
 
 ### ~Dock
 <div class="bg-base-300 rounded-box w-full max-w-sm pt-32">

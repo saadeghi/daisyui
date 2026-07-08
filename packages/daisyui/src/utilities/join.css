@@ -42,9 +42,21 @@
 }
 
 .join-item {
+  @layer daisyui.l1.l2.l3.l4 {
+    > * {
+      --join-ss: initial;
+      --join-se: initial;
+      --join-es: initial;
+      --join-ee: initial;
+    }
+  }
+
   border-style: solid;
   border-width: var(--border, 1px);
-  border-radius: var(--join-ss) var(--join-se) var(--join-ee) var(--join-es);
+  border-start-start-radius: var(--join-ss);
+  border-start-end-radius: var(--join-se);
+  border-end-start-radius: var(--join-es);
+  border-end-end-radius: var(--join-ee);
 
   &:not(:first-child, :disabled, [disabled], .btn-disabled) {
     margin-inline-start: calc(var(--border, 1px) * -1 * var(--join-h));

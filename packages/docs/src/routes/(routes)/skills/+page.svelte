@@ -3,6 +3,7 @@
   import { onMount } from "svelte"
   import SEO from "$components/SEO.svelte"
   import SkillProduct from "$components/SkillProduct.svelte"
+  import { t } from "$lib/i18n.svelte.js"
   import { fade, slide } from "svelte/transition"
   import {
     discountDateFormat,
@@ -93,13 +94,13 @@
 
 <div class="flex flex-col gap-2">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl">
-    Official daisyUI Skills
+    {$t("Official daisyUI Skills")}
   </h1>
   <p class="text-base-content/60 mb-2 text-sm">
-    Enough with AI slop <span class="text-base-content">🙅‍♂️</span>
-    Setup your coding agent to generate better UI.
+    {$t("Enough with AI slop")} <span class="text-base-content">🙅</span>
+    {$t("Setup your coding agent to generate better UI.")}
   </p>
-  <div class="text-base-content/60 mt-6 text-sm">Compatible with all coding agents</div>
+  <div class="text-base-content/60 mt-6 text-sm">{$t("Compatible with all coding agents")}</div>
   <div class="mt-2 mb-6 flex flex-wrap gap-2">
     {#each data.codingTools as tool, index}
       <div class="bg-base-200 border-base-300 rounded-field tooltip p-3" data-tip={tool.name}>
@@ -124,7 +125,7 @@
         productDiscount={getProductDiscount(product)}
       />
     {:else}
-      <div class="list-row">Coming soon…</div>
+      <div class="list-row">{$t("Coming soon…")}</div>
     {/each}
   </div>
 </div>

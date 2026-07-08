@@ -285,6 +285,9 @@
           {$t("contributing")}
           {@html newtabicon}
         </a>
+      </div>
+      <div>
+        <span class="footer-title opacity-70">AI</span>
         <a
           target="_blank"
           rel="noopener, noreferrer"
@@ -294,40 +297,98 @@
           llms.txt
           {@html newtabicon}
         </a>
-      </div>
-      <div>
-        <span class="footer-title opacity-70">{$t("pages")}</span>
-        <a class="link link-hover" href="/docs/install/">{$t("how-to-install")}</a>
-        <a class="link link-hover" href="/docs/use/">{$t("how-to-use-components")}</a>
-        <a class="link link-hover" href="/docs/customize/">{$t("how-to-customize")}</a>
-        <a class="link link-hover" href="/docs/themes/">{$t("how-to-use-themes")}</a>
-        <a class="link link-hover" href="/docs/colors/">{$t("color-system")}</a>
-        <a class="link link-hover" href="/docs/config/">{$t("config")}</a>
-        <a class="link link-hover" href="/resources/">{$t("Resources")}</a>
-        <a class="link link-hover" href="/blog/">{$t("Blog")}</a>
-        <a class="link link-hover" href="/store/">{$t("Store")}</a>
-        <a class="link link-hover" href="/store/daisyui-figma-library/">daisyUI Figma Library</a>
-        <a class="link link-hover" href="/blueprint/">Blueprint: daisyUI MCP server</a>
-        <a class="link link-hover" href="/docs/skill/">SKILL.md</a>
+        <a class="link link-hover" href="/blueprint/">UI design MCP server</a>
+        <a class="link link-hover" href="/docs/skill/">UI design agent Skill</a>
+        <a class="link link-hover" href="/skills/daisyui-dashboard/"
+          >Dashboard design skill for Claude</a
+        >
+        <a class="link link-hover" href="/skills/daisyui-charts/">Chart skill for Claude</a>
+        <a class="link link-hover" href="/docs/plugin/codex/">UI design Codex plugin</a>
+        <a class="link link-hover" href="/docs/plugin/cursor/">UI design Cursor plugin</a>
+        <a class="link link-hover" href="/docs/plugin/claude-code/">UI design Claude Code plugin</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Frameworks")}</span>
-        <a class="link link-hover" href="/angular-component-library/">Angular Component Library</a>
-        <a class="link link-hover" href="/astro-component-library/">Astro Component Library</a>
-        <a class="link link-hover" href="/django-component-library/">Django Component Library</a>
-        <!-- <a class="link link-hover" href="/electron-component-library/">Electron Component Library</a> -->
-        <a class="link link-hover" href="/htmx-component-library/">HTMX Component Library</a>
-        <a class="link link-hover" href="/laravel-component-library/">Laravel Component Library</a>
-        <!-- <a class="link link-hover" href="/lit-component-library/">Lit Component Library</a> -->
-        <a class="link link-hover" href="/nextjs-component-library/">Nextjs Component Library</a>
-        <a class="link link-hover" href="/nuxt-component-library/">Nuxt Component Library</a>
-        <!-- <a class="link link-hover" href="/qwik-component-library/">Qwik Component Library</a> -->
-        <a class="link link-hover" href="/rails-component-library/">Rails Component Library</a>
-        <a class="link link-hover" href="/react-component-library/">React Component Library</a>
-        <!-- <a class="link link-hover" href="/solid-component-library/">Solid Component Library</a> -->
-        <a class="link link-hover" href="/svelte-component-library/">Svelte Component Library</a>
-        <!-- <a class="link link-hover" href="/unocss-component-library/">UnoCSS Component Library</a> -->
-        <a class="link link-hover" href="/vue-component-library/">Vue Component Library</a>
+        <a
+          class="link link-hover"
+          href={`/angular-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Angular Component Library</a
+        >
+        <a
+          class="link link-hover"
+          href={`/astro-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Astro Component Library</a
+        >
+        <a
+          class="link link-hover"
+          href={`/django-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Django Component Library</a
+        >
+        <!-- <a
+            class="link link-hover"
+            href={`/electron-${["component-library","ui-library","tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+            >Electron Component Library</a
+        > -->
+        <a
+          class="link link-hover"
+          href={`/htmx-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >HTMX Component Library</a
+        >
+        <a
+          class="link link-hover"
+          href={`/laravel-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Laravel Component Library</a
+        >
+        <!-- <a
+            class="link link-hover"
+            href={`/lit-${["component-library","ui-library","tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+            >Lit Component Library</a
+        > -->
+        <a
+          class="link link-hover"
+          href={`/nextjs-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Nextjs Component Library</a
+        >
+        <a
+          class="link link-hover"
+          href={`/nuxt-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Nuxt Component Library</a
+        >
+        <!-- <a
+            class="link link-hover"
+            href={`/qwik-${["component-library","ui-library","tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+            >Qwik Component Library</a
+        > -->
+        <a
+          class="link link-hover"
+          href={`/rails-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Rails Component Library</a
+        >
+        <a
+          class="link link-hover"
+          href={`/react-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >React Component Library</a
+        >
+        <!-- <a
+            class="link link-hover"
+            href={`/solid-${["component-library","ui-library","tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+            >Solid Component Library</a
+        > -->
+        <a
+          class="link link-hover"
+          href={`/svelte-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Svelte Component Library</a
+        >
+        <!-- <a
+            class="link link-hover"
+            href={`/unocss-${["component-library","ui-library","tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+            >UnoCSS Component Library</a
+        > -->
+        <a
+          class="link link-hover"
+          href={`/vue-${["component-library", "ui-library", "tailwind-css"][Math.floor(Math.random() * 3)]}/`}
+          >Vue Component Library</a
+        >
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Compare libraries")}</span>
@@ -361,24 +422,6 @@
           class="link link-hover group"
         >
           MaryUI (Laravel)
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://github.com/Dzoukr/Feliz.DaisyUI"
-          class="link link-hover group"
-        >
-          Feliz.DaisyUI (F#)
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://github.com/phcurado/daisy_ui_components"
-          class="link link-hover group"
-        >
-          Phcurado (Phoenix)
           {@html newtabicon}
         </a>
         <a

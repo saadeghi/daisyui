@@ -62,11 +62,7 @@
   {/if}
   {#if desc}
     <div class="pb-4 text-xs opacity-70">
-      {#if desc.includes("<")}
-        {@html desc}
-      {:else}
-        {$t(desc)}
-      {/if}
+      {@html $t(desc)}
     </div>
   {/if}
   <div class="tabs tabs-lift">
@@ -124,6 +120,3 @@
     {/if}
   </div>
 </div>
-
-<style>
-</style>

@@ -1,5 +1,10 @@
 import { visit } from "unist-util-visit"
 import path from "path"
+import {
+  doNotTranslateAfterMarker,
+  isExcludedFile,
+  shouldSkipAfterMarker,
+} from "../scripts/translationConfig.js"
 
 // Helper function to escape quotes in the text
 const escapeQuotes = (text) => text.replace(/"/g, "&quot;")
@@ -22,6 +27,11 @@ const createTranslateNode = (text) => ({
   type: "html",
   value: `<Translate text="${escapeQuotes(text)}" />`,
 })
+
+const simpleHtmlWrapperPattern = /^<([a-z][\w-]*)([^>]*)>([^<]+)<\/\1>$/i
+const ignoredHtmlWrapperTags = new Set(["script", "style"])
+const isAfterSkipMarker = (node, markerOffset) =>
+  markerOffset >= 0 && node.position?.start?.offset > markerOffset
 
 // Helper function to split combined text into potential translation units
 const splitTextIntoSentences = (text) => {
@@ -70,9 +80,18 @@ const handleCombinedText = (combinedText) => {
 
 // Helper function to handle text with code blocks
 const handleTextWithCode = (text) => {
-  // If the text is already wrapped in HTML tags, return as is
-  if (text.startsWith("<") && text.endsWith(">")) {
-    return { type: "html", value: text }
+  const simpleHtmlWrapper = text.match(simpleHtmlWrapperPattern)
+
+  if (simpleHtmlWrapper) {
+    const [, tag, attributes, content] = simpleHtmlWrapper
+    if (ignoredHtmlWrapperTags.has(tag.toLowerCase())) {
+      return { type: "html", value: text }
+    }
+
+    return {
+      type: "html",
+      value: `<${tag}${attributes}>${createTranslateNode(content).value}</${tag}>`,
+    }
   }
 
   // For translation keys, preserve backticks as they appear in the original markdown
@@ -86,26 +105,14 @@ export function remarkTranslate() {
     const filename = file.filename || file.history?.[0] || ""
     const basename = path.basename(filename)
 
-    if (basename === "CHANGELOG.md") {
+    if (basename === "CHANGELOG.md" || isExcludedFile(filename)) {
       return
     }
 
-    // Skip processing files that contain CSS code blocks to prevent build issues
-    // This is necessary because the translation plugin can interfere with how
-    // the build system processes CSS content within fenced code blocks
-    let hasCssCodeBlock = false
-    visit(tree, "code", (node) => {
-      if (
-        node.lang &&
-        (node.lang.includes("css") || node.lang.includes("scss") || node.lang.includes("sass"))
-      ) {
-        hasCssCodeBlock = true
-      }
-    })
-
-    if (hasCssCodeBlock) {
-      return // Skip translation for files with CSS/SCSS/Sass code blocks
-    }
+    const fileContent = String(file.value || "")
+    const markerOffset = shouldSkipAfterMarker(filename)
+      ? fileContent.indexOf(doNotTranslateAfterMarker)
+      : -1
 
     // Mark fenced code blocks (```code```) to skip translation
     // but continue processing inline code (`inlineCode`) and all other content
@@ -118,6 +125,8 @@ export function remarkTranslate() {
 
     // For headings, preserve original text in a property and add a wrapper with id
     visit(tree, "heading", (node) => {
+      if (isAfterSkipMarker(node, markerOffset)) return
+
       if (node.children && node.children.length) {
         const textNodes = node.children.filter((child) => child.type === "text")
 
@@ -150,8 +159,23 @@ export function remarkTranslate() {
       }
     })
 
+    // Process simple raw HTML paragraphs such as <p>Text</p>
+    visit(tree, "html", (node) => {
+      if (isAfterSkipMarker(node, markerOffset)) return
+      if (typeof node.value !== "string") return
+      const simpleHtmlWrapper = node.value.match(simpleHtmlWrapperPattern)
+      if (!simpleHtmlWrapper) return
+
+      const [, tag, attributes, content] = simpleHtmlWrapper
+      if (ignoredHtmlWrapperTags.has(tag.toLowerCase())) return
+
+      node.value = `<${tag}${attributes}>${createTranslateNode(content).value}</${tag}>`
+    })
+
     // Process table cells individually
     visit(tree, ["table"], (tableNode) => {
+      if (isAfterSkipMarker(tableNode, markerOffset)) return
+
       if (tableNode.children) {
         // For each row
         tableNode.children.forEach((row) => {
@@ -188,6 +212,8 @@ export function remarkTranslate() {
 
     // Process paragraphs (but skip those inside table cells as they're already processed)
     visit(tree, "paragraph", (node, index, parent) => {
+      if (isAfterSkipMarker(node, markerOffset)) return
+
       // Skip paragraphs inside table cells - they are already processed by table processing above
       if (parent && parent.type === "tableCell") {
         return
@@ -287,6 +313,8 @@ export function remarkTranslate() {
 
     // Process list items
     visit(tree, "listItem", (node) => {
+      if (isAfterSkipMarker(node, markerOffset)) return
+
       if (node.children && node.children.length) {
         node.children.forEach((child) => {
           if (child.type === "paragraph" && child.children) {
@@ -308,6 +336,8 @@ export function remarkTranslate() {
 
     // Process emphasis and strong
     visit(tree, ["emphasis", "strong"], (node) => {
+      if (isAfterSkipMarker(node, markerOffset)) return
+
       if (node.children && node.children.length) {
         let i = 0
         while (i < node.children.length) {
@@ -325,6 +355,8 @@ export function remarkTranslate() {
 
     // Process blockquotes
     visit(tree, "blockquote", (node) => {
+      if (isAfterSkipMarker(node, markerOffset)) return
+
       if (node.children && node.children.length) {
         node.children.forEach((child) => {
           if (child.type === "paragraph" && child.children) {

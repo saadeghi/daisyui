@@ -113,6 +113,7 @@
 
   let screenshotDialog = $state()
   let licenseDialog = $state()
+  let changelogDialog = $state()
   let screenshotUrl = $state("")
   let licenseContent = $state("")
   const openModal = async (url) => {
@@ -285,13 +286,13 @@
               >
                 <button
                   class="btn btn-xs btn-success btn-soft rounded-full"
-                  onclick={() => changelog.showModal()}
+                  onclick={() => changelogDialog.showModal()}
                 >
                   <span class="status status-success"></span>
                   Version {data.product.changelog?.[0]?.version || "0"}
                 </button>
               </span>
-              <dialog id="changelog" class="modal max-md:modal-bottom">
+              <dialog class="modal max-md:modal-bottom" bind:this={changelogDialog}>
                 <div
                   class="modal-box max-h-[80vh] w-full max-w-[50rem] max-md:max-h-[80vh] lg:p-20"
                 >

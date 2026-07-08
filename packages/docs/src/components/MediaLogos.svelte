@@ -6,7 +6,7 @@
 
       <div class="tooltip flex flex-col gap-4 text-center" data-tip="YouTube channel and courses">
         <svg
-          class="mx-auto h-10 w-auto max-w-none"
+          class="mx-auto h-8 w-auto max-w-none"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1024 1025"
         >
@@ -36,7 +36,7 @@
         data-tip="Episode 751 and YouTube channel"
       >
         <svg
-          class="mx-auto h-10 w-auto max-w-none"
+          class="mx-auto h-8 w-auto max-w-none"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 2664 777"
         >
@@ -49,7 +49,7 @@
       </div>
 
       <div class="tooltip flex flex-col gap-4 text-center" data-tip="YouTube channel">
-        <svg class="mx-auto h-10 w-auto max-w-none" viewBox="0 0 16 16">
+        <svg class="mx-auto h-8 w-auto max-w-none" viewBox="0 0 16 16">
           <path
             fill-rule="evenodd"
             stroke-linejoin="round"
@@ -63,7 +63,7 @@
 
       <div class="tooltip flex flex-col gap-4 text-center" data-tip="Episode 247">
         <svg
-          class="mx-auto h-10 w-auto max-w-none"
+          class="mx-auto h-8 w-auto max-w-none"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 754 250"
         >
@@ -115,7 +115,7 @@
 
       <div class="tooltip flex flex-col gap-4 text-center" data-tip="Podcast and YouTube channel">
         <svg
-          class="mx-auto h-10 w-auto max-w-none"
+          class="mx-auto h-8 w-auto max-w-none"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
           fill="none"

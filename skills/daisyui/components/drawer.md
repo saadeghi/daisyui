@@ -51,7 +51,7 @@ Example: This sidebar is always visible on large screen, can be toggled on small
 </div>
 ```
 
-Example: This sidebar is always visible. When it's close we only see iocns, when it's open we see icons and text
+Example: This sidebar is always visible. When it's close we only see icons, when it's open we see icons and text
 ```html
 <div class="drawer lg:drawer-open">
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
@@ -66,14 +66,14 @@ Example: This sidebar is always visible. When it's close we only see iocns, when
         <!-- list item -->
         <li>
           <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Homepage">
-            🏠
+            {ICON_HERE}
             <span class="is-drawer-close:hidden">Homepage</span>
           </button>
         </li>
         <!-- list item -->
         <li>
           <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
-            🔧
+            {ICON_HERE}
             <span class="is-drawer-close:hidden">Settings</span>
           </button>
         </li>
@@ -81,7 +81,7 @@ Example: This sidebar is always visible. When it's close we only see iocns, when
       <!-- button to open/close drawer -->
       <div class="m-2 is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Open">
         <label for="my-drawer-4" class="btn btn-ghost btn-circle drawer-button is-drawer-open:rotate-y-180">
-          🔄
+          {ICON_HERE}
         </label>
       </div>
     </div>

@@ -12,7 +12,7 @@ desc: daisyUI provides a few useful utility classes and CSS variables to help yo
 All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color.  
 For example you can use `primary` color with any of Tailwind CSS color utilities.
 
-Read more about [color names](/docs/colors).
+Read more about [color names](/docs/colors/).
 
 | Class Name            | Description                                                 |
 | --------------------- | ----------------------------------------------------------- |
@@ -79,7 +79,7 @@ Change the theme to see the border radius changes:
 
 ## Theme CSS variables
 
-These CSS variables can be customized for each themes. Read more about [color names](/docs/colors).
+These CSS variables can be customized for each themes. Read more about [color names](/docs/colors/).
 
 | CSS Variable                | Description                                                     |
 | --------------------------- | --------------------------------------------------------------- |

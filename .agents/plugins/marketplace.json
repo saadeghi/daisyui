@@ -1,0 +1,20 @@
+{
+  "name": "daisyui",
+  "interface": {
+    "displayName": "daisyUI"
+  },
+  "plugins": [
+    {
+      "name": "daisyui",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

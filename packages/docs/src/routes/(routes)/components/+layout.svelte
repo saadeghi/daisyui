@@ -1,4 +1,5 @@
 <script>
+  import "../../../global.css"
   import { page } from "$app/stores"
   let { data, children } = $props()
 </script>

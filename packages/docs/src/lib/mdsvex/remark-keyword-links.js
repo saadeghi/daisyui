@@ -26,7 +26,7 @@ async function scanPagesForKeywords() {
   const mappings = new Map()
 
   // Path to the pages directory
-  const pagesDir = path.join(__dirname, "../../routes/(routes)/pages")
+  const pagesDir = path.join(__dirname, "../../routes/(routes)/(marketing)/pages")
 
   try {
     const entries = await fs.readdir(pagesDir, { withFileTypes: true })

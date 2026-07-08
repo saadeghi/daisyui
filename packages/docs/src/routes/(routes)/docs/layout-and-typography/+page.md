@@ -23,6 +23,8 @@ All parts are compatible with daisyUI themes.
 
 Here's a demo text to demonstrate the Tailwind CSS Typography plugin in combination with daisyUI colors:
 
+<!-- DO NOT TRANSLATE ANYTHING BELOW THIS LINE -->
+
 <div class="max-w-3xl my-20">
 
 <div class="font-title text-2xl md:text-3xl lg:text-4xl font-bold">Tailwind CSS Typography plugin demo</div>

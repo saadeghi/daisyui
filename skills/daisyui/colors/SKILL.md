@@ -38,6 +38,7 @@ description: MANDATORY color usage rules for daisyUI 5
 8. Using Tailwind CSS color names for text colors should be avoided because Tailwind CSS color `text-gray-800` on `bg-base-100` would be unreadable on a dark theme - because on dark theme, `bg-base-100` is a dark color
 9. `*-content` colors should have a good contrast compared to their associated colors
 10. Use `base-*` colors for majority of the page. Use the default variant for all elements. Use `primary` color once only, for the most important element on the page.
+11. Rare use case when using Tailwind CSS color names (for example `text-red-500`) is allowed instead of using a daisyUI color name (for example `text-error`): when a specific content must be indepecent from the theme. For example if a svg icon or a chart graph must use a specific color, no matter what are our brand colors or theme colors.
 
 ### daisyUI custom theme with custom colors
 A CSS file with Tailwind CSS, daisyUI and a custom daisyUI theme looks like this:
@@ -81,7 +82,7 @@ A CSS file with Tailwind CSS, daisyUI and a custom daisyUI theme looks like this
 
   --border: 1px; /* border size. Value must be 1px unless we intentionally want thicker borders. In so it can be 1.5px or 2px. If we intentionally want thinner borders, it can be 0.5px */
 
-  --depth: 1; /* only 0 or 1 – Adds a shadow and subtle 3D depth effect to components */
+  --depth: 1; /* only 0 or 1 - Adds a shadow and subtle 3D depth effect to components */
   --noise: 0; /* only 0 or 1 - Adds a subtle noise (grain) effect to components */
 }
 ```

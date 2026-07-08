@@ -15,4 +15,4 @@ Status is a really small icon to visually show the current status of an element,
 
 #### Rules
 - {MODIFIER} is optional and can have one of the color/size class names
-- This component does not render anything visible
+- This compnent renders a small visual indicator to draw attention

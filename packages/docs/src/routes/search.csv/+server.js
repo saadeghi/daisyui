@@ -69,7 +69,7 @@ daisyUI llms.txt,/llms.txt`
 
 // List of paths to ignore (relative to routes directory)
 const IGNORED_PATHS = [
-  "(frameworks)/",
+  "(marketing)/",
   "blog/(posts)/",
   "docs/v5/",
   "pages/",
@@ -80,6 +80,10 @@ const IGNORED_PATHS = [
 
 // Function to check if a file path should be ignored
 function shouldIgnoreFile(filePath) {
+  if (filePath.split("/").some((segment) => /^\[[^\]]+\]$/.test(segment))) {
+    return true
+  }
+
   return IGNORED_PATHS.some((ignoredPath) => {
     // Check if the file is in an ignored directory or subdirectory
     return filePath.includes(ignoredPath)
@@ -216,6 +220,28 @@ function parseFrontmatter(content) {
   }
 }
 
+function cleanTitleCandidate(title) {
+  return removeHtmlTags(title).replace(/\s+/g, " ").trim()
+}
+
+function extractSeoTitle(content) {
+  const seoMatch = content.match(/<SEO\b[\s\S]*?\btitle=(["'])(.*?)\1/i)
+  if (!seoMatch) return ""
+
+  return cleanTitleCandidate(seoMatch[2])
+}
+
+function extractH1Title(content) {
+  const h1Match = content.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)
+  if (!h1Match) return ""
+
+  return cleanTitleCandidate(h1Match[1])
+}
+
+function getPageTitle(content, frontmatter) {
+  return frontmatter.title || frontmatter.desc || extractSeoTitle(content) || extractH1Title(content) || "Untitled"
+}
+
 // Filter function to remove tilde (~) prefix
 function removeTildePrefix(text) {
   return text.replace(/^~\s*/, "")
@@ -265,6 +291,10 @@ function cleanHeadingText(text) {
   return final
 }
 
+function shouldIndexHeading(title) {
+  return !/^Step \d+:/i.test(title)
+}
+
 // Function to extract headings from markdown content
 function extractHeadings(content) {
   // Remove frontmatter
@@ -285,6 +315,10 @@ function extractHeadings(content) {
     // Skip if cleaned title is empty
     if (!cleanedTitle) {
       console.warn(`Warning: Empty title after cleaning: "${originalTitle}"`)
+      continue
+    }
+
+    if (!shouldIndexHeading(cleanedTitle)) {
       continue
     }
 
@@ -431,8 +465,8 @@ export async function GET() {
         const content = file.content
         const frontmatter = parseFrontmatter(content)
 
-        // Get page title from frontmatter or filename
-        const title = frontmatter.title || frontmatter.desc || "Untitled"
+        // Get page title from frontmatter, SEO component, or visible h1
+        const title = getPageTitle(content, frontmatter)
 
         // Convert file path to URL
         const url = filePathToUrl(file.path)

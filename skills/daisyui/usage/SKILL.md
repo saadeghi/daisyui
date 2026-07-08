@@ -15,7 +15,7 @@ description: MANDATORY usage rules for daisyUI 5
 9. Suggested - when designing, don't add a custom font unless it's necessary
 10. Don't add `bg-base-100 text-base-content` to body unless it's necessary
 11. For design decisions, use Refactoring UI book best practices
-12. Always use the default variant of daisyUI components unless the user asked for a specific variant or color
+12. Always use the default variant of daisyUI components unless the user asked for a specific variant or color. For example when you need a button, do not use `btn btn-primary`, prefer `btn`, unless the user asked for a specific variant.
 
 daisyUI 5 class names are one of the following categories. These type names are only for reference and are not used in the actual code
 - `component`: the required component class

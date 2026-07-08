@@ -18,15 +18,13 @@
       <h1><Translate text="All daisyUI components" /></h1>
       <p>{Object.keys(components).length} <Translate text="components" /></p>
     </div>
-    <div
-      class="not-prose grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4"
-    >
+    <div class="not-prose grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3! lg:grid-cols-4">
       {#each components as { slug, title, desc }}
         <a
-          class="card card-compact hover:bg-base-200 transition-all duration-200 hover:-translate-y-1"
+          class="card card-sm hover:bg-base-200 transition-all duration-200 hover:-translate-y-1"
           href={`${$page.url.pathname.replace(/\/$/, "")}/${slug}/`}
         >
-          <figure class="px-4 pt-4">
+          <figure class="px-3 pt-3">
             <img
               loading="lazy"
               src={`https://img.daisyui.com/images/components/${slug}.webp`}
@@ -34,9 +32,11 @@
               alt={`Tailwind CSS ${title} component`}
             />
           </figure>
-          <div class="card-body">
-            <h2 class="card-title"><Translate text={title} /></h2>
-            <p class="text-xs opacity-60"><Translate text={desc || ""} /></p>
+          <div class="card-body relative">
+            <h2 class="card-title font-normal text-sm">
+              <Translate text={title} />
+            </h2>
+            <p class="sr-only opacity-50"><Translate text={desc || ""} /></p>
           </div>
         </a>
       {/each}

@@ -1,0 +1,19 @@
+{
+  "name": "daisyui",
+  "description": "Official daisyUI plugins for Claude Code",
+  "owner": {
+    "name": "daisyUI"
+  },
+  "plugins": [
+    {
+      "name": "daisyui",
+      "source": "./",
+      "description": "daisyUI component library skill"
+    },
+    {
+      "name": "daisyui-blueprint",
+      "source": "./packages/blueprint",
+      "description": "daisyUI Blueprint MCP server - (Needs paid license)"
+    }
+  ]
+}

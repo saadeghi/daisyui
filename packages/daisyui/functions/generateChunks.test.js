@@ -1,38 +1,52 @@
-import { expect, test, mock } from "bun:test"
-import fs from "fs/promises"
-import { generateChunks } from "./generateChunks"
+import { afterEach, expect, test } from "bun:test"
+import { mkdir, readFile, writeFile } from "node:fs/promises"
+import { join } from "node:path"
+import { pathToFileURL } from "node:url"
+import { createTempDirTracker, runInCwd } from "./testUtils.js"
 
-// Mock the fs functions
-const mockWriteFile = mock(async () => {})
+const tempDirs = createTempDirTracker("daisyui-generate-chunks-")
+const moduleUrl = pathToFileURL(join(import.meta.dirname, "generateChunks.js")).href
 
-fs.writeFile = mockWriteFile
-
-// Mock the getFileNames function
-const mockGetFileNames = mock(async (dir) => {
-  if (dir === "./theme") {
-    return ["light", "dark", "custom"]
-  } else if (dir === "./base") {
-    return ["base1", "base2"]
-  } else if (dir === "./components") {
-    return ["component1", "component2"]
-  } else if (dir === "./utilities") {
-    return ["utility1", "utility2"]
-  } else if (dir === "./colors") {
-    return ["color1", "color2"]
+const createSourceTree = async (dir) => {
+  for (const directory of ["theme", "base", "components", "utilities", "colors"]) {
+    await mkdir(join(dir, directory), { recursive: true })
   }
-  return []
-})
 
-mock.module("./getFileNames", () => ({
-  getFileNames: mockGetFileNames,
-}))
+  await writeFile(join(dir, "theme", "custom.css"), "")
+  await writeFile(join(dir, "theme", "dark.css"), "")
+  await writeFile(join(dir, "theme", "light.css"), "")
+  await writeFile(join(dir, "base", "base1.css"), "")
+  await writeFile(join(dir, "base", "base2.css"), "")
+  await writeFile(join(dir, "components", "component1.css"), "")
+  await writeFile(join(dir, "components", "component2.css"), "")
+  await writeFile(join(dir, "utilities", "utility1.css"), "")
+  await writeFile(join(dir, "utilities", "utility2.css"), "")
+  await writeFile(join(dir, "colors", "color1.css"), "")
+  await writeFile(join(dir, "colors", "color2.css"), "")
+}
+
+afterEach(tempDirs.cleanup)
 
 test("generateChunks generates correct CSS imports", async () => {
-  const filename = "output.css"
-  await generateChunks(filename)
+  const dir = await tempDirs.make()
+  await createSourceTree(dir)
 
-  const expectedContent =
-    [
+  await runInCwd(
+    dir,
+    `const { generateChunks } = await import(${JSON.stringify(moduleUrl)});
+await generateChunks("output.css");`,
+  )
+
+  const result = await readFile(join(dir, "output.css"), "utf-8")
+  const lines = result.trim().split("\n")
+
+  expect(lines.slice(0, 2)).toEqual([
+    "@import url(theme/light.css);",
+    "@import url(theme/dark.css);",
+  ])
+  expect(lines).not.toContain("@import url(theme/custom.css);")
+  expect(new Set(lines)).toEqual(
+    new Set([
       "@import url(theme/light.css);",
       "@import url(theme/dark.css);",
       "@import url(base/base1.css);",
@@ -43,20 +57,24 @@ test("generateChunks generates correct CSS imports", async () => {
       "@import url(utilities/utility2.css);",
       "@import url(colors/color1.css);",
       "@import url(colors/color2.css);",
-    ].join("\n") + "\n"
-
-  expect(mockGetFileNames).toHaveBeenCalledWith("./theme", ".css", false)
-  expect(mockGetFileNames).toHaveBeenCalledWith("./base", ".css", false)
-  expect(mockGetFileNames).toHaveBeenCalledWith("./components", ".css", false)
-  expect(mockGetFileNames).toHaveBeenCalledWith("./utilities", ".css", false)
-  expect(mockGetFileNames).toHaveBeenCalledWith("./colors", ".css", false)
-  expect(mockWriteFile).toHaveBeenCalledWith(`./${filename}`, expectedContent, "utf8")
+    ]),
+  )
 })
 
 test("generateChunks throws error if writing to file fails", async () => {
-  const filename = "output.css"
+  const dir = await tempDirs.make()
+  await createSourceTree(dir)
 
-  mockWriteFile.mockRejectedValueOnce(new Error("Write error"))
-
-  await expect(generateChunks(filename)).rejects.toThrow("Failed to generate full CSS: Write error")
+  await runInCwd(
+    dir,
+    `const { generateChunks } = await import(${JSON.stringify(moduleUrl)});
+try {
+  await generateChunks("missing/output.css");
+  process.exit(1);
+} catch (error) {
+  if (!error.message.includes("Failed to generate full CSS:")) {
+    throw error;
+  }
+}`,
+  )
 })

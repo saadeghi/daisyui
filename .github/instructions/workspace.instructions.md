@@ -17,11 +17,11 @@ applyTo: "**"
 
 ## Packages
 
-- `packages/daisyui`: The main DaisyUI package
-- `packages/docs`: The DaisyUI website built with SvelteKit and Svelte 5
+- `packages/daisyui`: The main daisyUI package
+- `packages/docs`: The daisyUI website built with SvelteKit and Svelte 5
 - `packages/bundle`: This directory contains generated bundle files. Do not read nor write code here.
 - `packages/logs`: This directory contains generated log files for performance analysis. Do not read nor write code here.
-- `packages/playground`: This directory is an Astro project used for testing and experimenting with DaisyUI components. It is not part of the main application.
+- `packages/playground`: This directory is an Astro project used for testing and experimenting with daisyUI components. It is not part of the main application.
 
 ## Commands
 

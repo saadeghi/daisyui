@@ -1,5 +1,6 @@
 <script>
   import Carbon from "$components/Carbon.svelte"
+  import { t } from "$lib/i18n.svelte.js"
   const componentGrid = {
     button: {
       element: "button",

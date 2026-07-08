@@ -10,10 +10,10 @@
   const sortedLangs = Object.keys(languageMetadata).filter((lang) => langs.includes(lang))
 </script>
 
-<div class="dropdown dropdown-end">
-  <div
-    tabindex="0"
-    role="button"
+<div>
+  <button
+    popovertarget="language-change"
+    style="anchor-name:--language-change"
     class="btn btn-sm btn-ghost gap-1 px-1.5 text-[.5625rem] font-bold"
     aria-label="Language"
     title="Change Language"
@@ -36,10 +36,12 @@
     >
       <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
     </svg>
-  </div>
+  </button>
   <div
-    tabindex="0"
-    class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 h-[30.5rem] max-h-[calc(100vh-8.6rem)] w-56 overflow-y-auto border-[length:var(--border)] border-white/5 shadow-2xl outline-[length:var(--border)] outline-black/5"
+    popover
+    id="language-change"
+    style="position-anchor:--language-change"
+    class="dropdown dropdown-end bg-base-200 text-base-content rounded-box top-px mt-6 h-122 max-h-[calc(100vh-8.6rem)] w-56 overflow-y-auto border-(length:--border) border-white/5 shadow-2xl outline-(length:--border) outline-black/5"
   >
     <ul class="menu menu-sm w-full">
       {#each sortedLangs as langItem}

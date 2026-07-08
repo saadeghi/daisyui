@@ -72,9 +72,9 @@ desc: How to use daisyUI from a CDN?
       </div>
     </div>
     
-    <h3 class="block text-xl mt-6 mb-4 font-bold">Adding all themes</h3>
+    <h3 class="block text-xl mt-6 mb-4 font-bold"><Translate text="Adding all themes" /></h3>
     
-    <p class="mt-6 mb-4">daisyui.css includes light and dark themes. For other themes, add themes.css file as well:</p>
+    <p class="mt-6 mb-4"><Translate text="daisyui.css includes light and dark themes. For other themes, add themes.css file as well:" /></p>
     <div class="grid *:[grid-area:1/1]">
       <div class="overflow-x-auto [direction:ltr] pt-12 pb-8 px-6 bg-neutral text-neutral-content rounded-box">
         <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@5/themes.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span></code></pre>
@@ -105,7 +105,7 @@ desc: How to use daisyUI from a CDN?
 <span class="line"></span></code></pre>
 
         {:else}
-          <div class="h-[3.5rem] opacity-50">Select the parts you want to use 👇</div>
+          <div class="h-[3.5rem] opacity-50"><Translate text="Select the parts you want to use 👇" /></div>
         {/if}
 
       </div>
@@ -115,9 +115,9 @@ desc: How to use daisyUI from a CDN?
         <span class="text-neutral-content">{$totalSize}kB</span>
         <span class="opacity-40">•</span>
         {#if $totalSize < data.daisyuiCssSize}
-          <span class="text-[color-mix(in_oklab,color-mix(in_oklab,white_40%,var(--color-neutral-content))_20%,oklch(75%_0.3_173.24))]" title="{Math.abs(($totalSize - data.daisyuiCssSize).toFixed(1))}kB smaller than daisyui.css">{((data.daisyuiCssSize - $totalSize) / data.daisyuiCssSize * 100).toFixed(1)}% smaller than daisyui.css</span>
+          <span class="text-[color-mix(in_oklab,color-mix(in_oklab,white_40%,var(--color-neutral-content))_20%,oklch(75%_0.3_173.24))]" title="{Math.abs(($totalSize - data.daisyuiCssSize).toFixed(1))}kB smaller than daisyui.css">{((data.daisyuiCssSize - $totalSize) / data.daisyuiCssSize * 100).toFixed(1)}% <Translate text="smaller than daisyui.css" /></span>
         {:else}
-          <span class="text-warning">daisyui.css is {Math.abs((($totalSize - data.daisyuiCssSize) / data.daisyuiCssSize * 100).toFixed(1))}% smaller</span>
+          <span class="text-warning"><Translate text="daisyui.css is" /> {Math.abs((($totalSize - data.daisyuiCssSize) / data.daisyuiCssSize * 100).toFixed(1))}% <Translate text="smaller" /></span>
         {/if}
       </div>
       {#if onMount}
@@ -134,8 +134,8 @@ desc: How to use daisyUI from a CDN?
          </use>
         </g>
       </svg>
-      <h3 class="block text-xl mt-4 mx-1 font-bold">Choose parts</h3>
-      <p class="block text-xs mx-1 mb-1 tracking-wider">Combined and compress into one CSS file, hosted on the fastest CDN</p>
+      <h3 class="block text-xl mt-4 mx-1 font-bold"><Translate text="Choose parts" /></h3>
+      <p class="block text-xs mx-1 mb-1 tracking-wider"><Translate text="Combined and compress into one CSS file, hosted on the fastest CDN" /></p>
       {#each data.groupedFiles as group}
         <h4 class="block text-xs mt-4 mx-1 mb-1 font-semibold tracking-wider opacity-40">{group.name}</h4>
         <div class="flex gap-y-2 gap-x-1 flex-wrap">

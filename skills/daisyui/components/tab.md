@@ -7,6 +7,7 @@ Tabs can be used to show a list of links in a tabbed format
 - Component: `tabs`
 - Part: `tab`, `tab-content`
 - Style: `tabs-box`, `tabs-border`, `tabs-lift`
+- Size: `tabs-xs`, `tabs-sm`, `tabs-md`, `tabs-lg`, `tabs-xl`
 - Modifier: `tab-active`, `tab-disabled`
 - Placement: `tabs-top`, `tabs-bottom`
 

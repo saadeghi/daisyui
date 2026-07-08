@@ -29,7 +29,7 @@ You can also have multiple themes at the same time without adding a single class
 
 These are the daisyUI color names:
 ![Mary UI form](https://img.daisyui.com/images/blog/daisyui-colors.webp)
-Read more about [daisyUI color system](https://daisyui.com/docs/colors) and [daisyUI themes](https://daisyui.com/docs/themes/)
+Read more about [daisyUI color system](https://daisyui.com/docs/colors/) and [daisyUI themes](https://daisyui.com/docs/themes/)
 
 ## How using a color palette can help
 

@@ -61,7 +61,7 @@
     <div class="mb-2 flex flex-wrap gap-2 text-xs opacity-60">
       <span>Tags:</span>
       {#each tags as tag}
-        <a class="link" href={`/blog/tag/${tag.replace(/ /g, "-").toLowerCase()}`}>
+        <a class="link" href={`/blog/tag/${tag.replace(/ /g, "-").toLowerCase()}/`}>
           {tag}
         </a>
       {/each}

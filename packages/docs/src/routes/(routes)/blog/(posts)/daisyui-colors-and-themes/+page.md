@@ -24,4 +24,4 @@ Using this color system your website can have a different look and feel by simpl
 
 Semantic color names make more sense because when we design interfaces, we don't just use any random color. We define a specific color palette with names like primary, secondary, etc. and we only use those specific colors in our interfaces. Also, using semantic color names makes theming easier. You wouldn't have to define dark-mode colors for every single element and you wouldn't be limited to only light/dark themes. you can have multiple themes available and each theme is just a few lines of CSS variables.
 
-Read more about [daisyUI color system](https://daisyui.com/docs/colors).
+Read more about [daisyUI color system](https://daisyui.com/docs/colors/).

@@ -10,7 +10,11 @@
     "build": "NODE_ENV=production vite build --logLevel error",
     "preview": "bun run --bun build && vite preview --port 3000 --open",
     "stats": "open build/stats.html",
-    "langdiff": "bun src/lib/scripts/compare-translate-files.js"
+    "lang:add": "bun src/lib/scripts/addTranslations.js --write",
+    "lang:prune": "bun src/lib/scripts/pruneTranslations.js",
+    "lang:prune:write": "bun src/lib/scripts/pruneTranslations.js --write",
+    "lang:report": "bun src/lib/scripts/reportTranslations.js",
+    "lang:validate": "bun src/lib/scripts/validateTranslations.js"
   },
   "devDependencies": {
     "@jsdevtools/rehype-toc": "3.0.2",

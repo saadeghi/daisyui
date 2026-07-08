@@ -141,7 +141,7 @@ const rehypePlugins = [
 const remarkPlugins = [
   replacePlaceholders,
   remarkRenderComponent,
-  remarkKeywordLinks,
+  // remarkKeywordLinks,
   remarkTranslate,
   [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
   [
@@ -172,6 +172,7 @@ const config = {
     blog: join(__dirname, "layout-blog.svelte"),
     docs: join(__dirname, "layout-docs.svelte"),
     contentLanding: join(__dirname, "layout-contentLanding.svelte"),
+    content: join(__dirname, "layout-content.svelte"),
   },
   highlight: {
     highlighter: async (code, lang = "text") => {

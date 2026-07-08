@@ -1,12 +1,12 @@
 // Please add new items to the end of the list
 export const courses = [
   {
-    title: "Tailwind + DaisyUI",
+    title: "Tailwind + daisyUI",
     site: "Fireship.io",
     link: "https://fireship.io/courses/sveltekit/setup-tailwind/",
   },
   {
-    title: "Building with SvelteKit and GraphCMS - Styling with Tailwind and DaisyUI",
+    title: "Building with SvelteKit and GraphCMS - Styling with Tailwind and daisyUI",
     site: "Netlify",
     link: "https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms/styling-with-tailwind-and-daisyui",
   },

@@ -1,4 +1,5 @@
 <script>
+  import "../../../global.css"
   import { page } from "$app/stores"
   import Footer from "$components/Footer.svelte"
   import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
@@ -11,7 +12,7 @@
   dir="ltr"
   data-sveltekit-preload-data
 >
-  <div class="w-full px-4 md:px-20" dir="ltr">
+  <div class="w-full px-4 md:px-20!" dir="ltr">
     <nav class="tabs tabs-lift tabs-lg my-14 flex-nowrap whitespace-nowrap">
       <a
         href="/resources/videos/"

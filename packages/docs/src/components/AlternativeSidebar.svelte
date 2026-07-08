@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte"
   import Carbon from "$components/Carbon.svelte"
+  import { t } from "$lib/i18n.svelte.js"
 
   const bannerItems = [
     {
@@ -101,7 +102,7 @@
       <div
         class="carbonads-responsive bg-base-200 rounded-box mx-auto flex min-h-[121px] items-center justify-center max-xl:w-[22rem] xl:h-[13rem] xl:min-h-[230px]"
       >
-        <div class="text-base-content/30 text-xs">Ads</div>
+        <div class="text-base-content/30 text-xs">{$t("Ads")}</div>
       </div>
     {:else}
       <div class="carbonads-responsive mx-auto flex min-h-[121px] items-center justify-center">
@@ -121,8 +122,8 @@
           <div
             class="text-base-content/50 bg-base-200 border-base-300 group-hover:text-base-content relative z-1 border-t px-2 py-3 text-center transition-colors duration-500"
           >
-            <div class="text-[0.6875rem] font-semibold">{@html randomBanner.title}</div>
-            <div class="mt-1 text-[0.625rem] tracking-wide">{@html randomBanner.desc}</div>
+            <div class="text-[0.6875rem] font-semibold">{@html $t(randomBanner.title)}</div>
+            <div class="mt-1 text-[0.625rem] tracking-wide">{@html $t(randomBanner.desc)}</div>
           </div>
         </a>
       </div>

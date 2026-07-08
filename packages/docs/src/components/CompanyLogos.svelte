@@ -10,7 +10,7 @@
       >
         <div>
           <svg
-            class="mx-auto h-10 w-auto max-w-none"
+            class="mx-auto h-8 w-auto max-w-none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 300 194"
             fill="none"
@@ -37,7 +37,7 @@
       >
         <div>
           <svg
-            class="mx-auto h-10 w-auto max-w-none"
+            class="mx-auto h-8 w-auto max-w-none"
             viewBox="0 0 145 73"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@
       >
         <div>
           <svg
-            class="mx-auto h-10 w-auto max-w-none"
+            class="mx-auto h-8 w-auto max-w-none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 304 182"
           >
@@ -81,7 +81,7 @@
       >
         <div>
           <svg
-            class="mx-auto h-10 w-auto max-w-none"
+            class="mx-auto h-8 w-auto max-w-none"
             viewBox="0 0 73 65"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@
       >
         <div>
           <svg
-            class="mx-auto h-10 w-auto max-w-none"
+            class="mx-auto h-8 w-auto max-w-none"
             viewBox="0 0 278 328"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -137,7 +137,7 @@
       <div class="tooltip group flex flex-col gap-4 text-center" data-tip="Using for RAD Lab">
         <div>
           <svg
-            class="mx-auto h-10 w-auto max-w-none"
+            class="mx-auto h-8 w-auto max-w-none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 272 92"
           >

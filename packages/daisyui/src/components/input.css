@@ -36,10 +36,14 @@
       &::-webkit-calendar-picker-indicator {
         inset-inline-end: -0.15em;
       }
+    }
 
-      &::-webkit-inner-spin-button {
-        margin-inline-end: -0.15em;
-      }
+    &::-webkit-inner-spin-button {
+      margin-inline-end: -10px;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      inset-inline-end: 0.75em;
     }
 
     input&,
@@ -48,7 +52,9 @@
 
       &[type="url"],
       &[type="email"] {
-        direction: ltr;
+        /* don't use direction. it breaks join */
+        /*direction: ltr;*/
+        text-align: left;
       }
 
       &::-webkit-datetime-edit,
@@ -58,13 +64,11 @@
       }
 
       &::-webkit-inner-spin-button {
-        @apply -me-3;
         margin-block: calc(var(--spacing) * var(--spin-my));
       }
 
       &::-webkit-calendar-picker-indicator {
         position: absolute;
-        inset-inline-end: 0.75em;
         width: 1em;
         height: 1em;
         cursor: pointer;

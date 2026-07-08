@@ -66,6 +66,7 @@ daisyUI components | [./components/](./components/) | MANDATORY. Read the releva
 - [list](./components/list.md)
 - [loading](./components/loading.md)
 - [mask](./components/mask.md)
+- [megamenu](./components/megamenu.md)
 - [menu](./components/menu.md)
 - [mockup-browser](./components/mockup-browser.md)
 - [mockup-code](./components/mockup-code.md)
@@ -112,4 +113,3 @@ Before writing any daisyUI code, do this in order:
 Semantic matching is required even when wording differs from component names. A component name might be different from the request but still be the best match. Always consider intent and meaning, not only literal words.
 
 If a user explicitly requests a named component and a same-named doc exists, read that component doc first.
-

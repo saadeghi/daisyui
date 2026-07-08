@@ -5,18 +5,13 @@
   onMount(() => {
     themeChange(false)
   })
-  let {
-    themes,
-    dropdownClasses = "",
-    btnClasses = "btn-ghost",
-    contentClasses = "mt-16",
-  } = $props()
+  let { themes, dropdownClasses = "", btnClasses = "btn-ghost", contentClasses = "mt-6" } = $props()
 </script>
 
-<div title="Change Theme" class={`dropdown dropdown-end block ${dropdownClasses}`}>
-  <div
-    tabindex="0"
-    role="button"
+<div title="Change Theme" class={`block ${dropdownClasses}`}>
+  <button
+    popovertarget="theme-change"
+    style="anchor-name:--theme-change"
     class={`btn group btn-sm gap-1.5 px-1.5 ${btnClasses}`}
     aria-label="Change Theme"
   >
@@ -37,10 +32,12 @@
     >
       <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
     </svg>
-  </div>
+  </button>
   <div
-    tabindex="0"
-    class={`dropdown-content bg-base-200 text-base-content rounded-box top-px h-[30.5rem] max-h-[calc(100vh-8.6rem)] overflow-y-auto border-[length:var(--border)] border-white/5 shadow-2xl outline-[length:var(--border)] outline-black/5 ${contentClasses}`}
+    popover
+    id="theme-change"
+    style="position-anchor:--theme-change"
+    class={`dropdown dropdown-end bg-base-200 text-base-content rounded-box top-px h-122 max-h-[calc(100vh-8.6rem)] overflow-y-auto border-(length:--border) border-white/5 shadow-2xl outline-(length:--border) outline-black/5 ${contentClasses}`}
   >
     <ul class="menu w-56">
       <li class="menu-title text-xs">{$t("change-theme-btn")}</li>

@@ -1,43 +1,40 @@
-import { expect, test, mock } from "bun:test"
-import path from "node:path"
-import { copyFile } from "./copyFile"
-import fs from "fs/promises"
+import { afterEach, expect, test } from "bun:test"
+import { readFile, writeFile } from "node:fs/promises"
+import { join } from "node:path"
+import { copyFile } from "./copyFile.js"
+import { createTempDirTracker } from "./testUtils.js"
 
-// Mock the fs functions
-const mockMkdir = mock(async () => {})
-const mockCopyFile = mock(async () => {})
+const tempDirs = createTempDirTracker("daisyui-copy-file-")
 
-fs.mkdir = mockMkdir
-fs.copyFile = mockCopyFile
+afterEach(tempDirs.cleanup)
 
 test("copyFile copies file to destination", async () => {
-  const from = "/path/to/source/file.txt"
-  const to = "/path/to/destination/file.txt"
+  const dir = await tempDirs.make()
+  const from = join(dir, "source.txt")
+  const to = join(dir, "nested", "destination.txt")
+  await writeFile(from, "content")
 
   await copyFile(from, to)
 
-  expect(mockMkdir).toHaveBeenCalledWith(path.dirname(to), { recursive: true })
-  expect(mockCopyFile).toHaveBeenCalledWith(from, to)
+  expect(await readFile(to, "utf-8")).toBe("content")
 })
 
 test("copyFile copies file to destination with new name", async () => {
-  const from = "/path/to/source/file.txt"
-  const to = "/path/to/destination/file.txt"
-  const newName = "newFileName.txt"
+  const dir = await tempDirs.make()
+  const from = join(dir, "source.txt")
+  const to = join(dir, "nested", "destination.txt")
+  const renamed = join(dir, "nested", "renamed.txt")
+  await writeFile(from, "content")
 
-  await copyFile(from, to, newName)
+  await copyFile(from, to, "renamed.txt")
 
-  const expectedDestPath = path.join(path.dirname(to), newName)
-  expect(mockMkdir).toHaveBeenCalledWith(path.dirname(to), { recursive: true })
-  expect(mockCopyFile).toHaveBeenCalledWith(from, expectedDestPath)
+  expect(await readFile(renamed, "utf-8")).toBe("content")
 })
 
 test("copyFile throws error if copying fails", async () => {
-  const from = "/path/to/source/file.txt"
-  const to = "/path/to/destination/file.txt"
-
-  const mockError = new Error("Mock copy error")
-  mockCopyFile.mockRejectedValueOnce(mockError)
+  const dir = await tempDirs.make()
+  const from = join(dir, "missing.txt")
+  const to = join(dir, "nested", "destination.txt")
 
   await expect(copyFile(from, to)).rejects.toThrow(`Error copying file from ${from} to ${to}:`)
 })

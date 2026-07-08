@@ -1,18 +1,22 @@
 import fs from "fs/promises"
 import path from "path"
+import postcss from "postcss"
+import selectorParser from "postcss-selector-parser"
 
 // Function to extract class names from CSS content
 const extractClassNames = async (cssContent) => {
-  const classRegex =
-    /\.([a-zA-Z_-][a-zA-Z0-9_-]*)(?=\s*[{,:(])|:where\(\.([a-zA-Z_-][a-zA-Z0-9_-]*)\)/g
-  const matches = cssContent.match(classRegex)
-  const classNames = matches
-    ? matches.map((match) => {
-        const cleanedMatch = match.replace(/:where\(\.|[{,:()]/g, "").trim()
-        return cleanedMatch.startsWith(".") ? cleanedMatch.slice(1) : cleanedMatch
+  const classNames = new Set()
+  const root = postcss.parse(cssContent)
+
+  root.walkRules((rule) => {
+    selectorParser((selectors) => {
+      selectors.walkClasses((classNode) => {
+        classNames.add(classNode.value)
       })
-    : []
-  return [...new Set(classNames)] // Remove duplicates
+    }).processSync(rule.selector)
+  })
+
+  return [...classNames] // Remove duplicates
 }
 
 // Function to process a single CSS file

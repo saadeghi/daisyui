@@ -1,7 +1,7 @@
 ### text-rotate
 Text Rotate can show up to 6 lines of text, one at a time, with a an infinite loop animation. Duration is 10 seconds by default. The animation will pause on hover.
 
-[textarea docs](https://daisyui.com/components/text-rotate/)
+[text-rotate docs](https://daisyui.com/components/text-rotate/)
 
 #### Class Names:
 - Component: `text-rotate`
@@ -50,12 +50,12 @@ Custom line height in case you have a tall font or need more vertical spacing be
 ```html
 <span class="text-rotate max-md:text-3xl text-7xl font-title leading-[2]">
   <span class="justify-items-center">
-    <span>📐 DESIGN</span>
-    <span>💻 DEVELOP</span>
-    <span>🌎 DEPLOY</span>
-    <span>🌱 SCALE</span>
-    <span>🔧 MAINTAIN</span>
-    <span>🔁 REPEAT</span>
+    <span>DESIGN</span>
+    <span>DEVELOP</span>
+    <span>DEPLOY</span>
+    <span>SCALE</span>
+    <span>MAINTAIN</span>
+    <span>REPEAT</span>
   </span>
 </span>
 ```

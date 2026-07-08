@@ -69,7 +69,7 @@ To change the logo, replace the following images with your own.
 
 ### Customizing daisyUI themes
 
-`/styles/daisyui.css` contains the DaisyUI plugin and themes. You can add or modify themes and their options, including layout colors (background, sidebar, and topbar).
+`/styles/daisyui.css` contains the daisyUI plugin and themes. You can add or modify themes and their options, including layout colors (background, sidebar, and topbar).
 
 ```css
 @plugin "daisyui" {
@@ -93,7 +93,7 @@ To change the logo, replace the following images with your own.
 /* add: new theme here */
 ```
 
-We've customized some DaisyUI styles. To match Nexus exactly, copy styles/custom/components.css into your project.
+We've customized some daisyUI styles. To match Nexus exactly, copy styles/custom/components.css into your project.
 
 ### Change the font
 
@@ -134,15 +134,15 @@ Inside `/styles/custom/**` folder:
 
 - `layout.css` contains the styles for the topbar, sidebar, rightbar.
 - `animation.css` includes all animation keyframes and utilities.
-  `components.css` contains minor overrides to DaisyUI components. If you don't need any overrides, you can remove this file.
-- `plugins.css` handles plugin overrides, ensuring compatibility with other plugins' themes, matching Nexus and DaisyUI styles.
+  `components.css` contains minor overrides to daisyUI components. If you don't need any overrides, you can remove this file.
+- `plugins.css` handles plugin overrides, ensuring compatibility with other plugins' themes, matching Nexus and daisyUI styles.
 - `iconify.js` is the plugin for Iconify, allowing you to add additional [icon sets](https://icon-sets.iconify.design/).
 
 ## How to use style into your project
 
 _**Note:** All styles (CSS) are defined in the `styles/**` folder, so you can refer to that for styling and use them directly in your project._
 
-Ensure that Tailwind CSS 4 and DaisyUI 5 are properly installed and functioning correctly.
+Ensure that Tailwind CSS 4 and daisyUI 5 are properly installed and functioning correctly.
 
 ### Include a specific theme
 
@@ -165,7 +165,7 @@ For detailed information on specific topics such as dependencies, framework inte
 
 ## Every project needs a dashboard
 
-Nexus, built with DaisyUI, makes dashboard creation simple and efficient. It’s easy to customize, integrates smoothly, and saves you valuable time. Try it today!
+Nexus, built with daisyUI, makes dashboard creation simple and efficient. It’s easy to customize, integrates smoothly, and saves you valuable time. Try it today!
 
 We value your feedback! Share your thoughts by filling out the [feedback form](https://forms.gle/byxiWEUw6SM84AXA9)
 

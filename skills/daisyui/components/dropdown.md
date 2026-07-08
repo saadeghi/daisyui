@@ -10,7 +10,14 @@ Dropdown can open a menu or any other element when the button is clicked
 - modifier: `dropdown-hover`, `dropdown-open`, `dropdown-close`
 
 #### Syntax
-Using details and summary
+
+Using popover API (recommended)
+```html
+<button popovertarget="{id}" style="anchor-name:--{anchor}">{button}</button>
+<ul class="dropdown" popover id="{id}" style="position-anchor:--{anchor}">{CONTENT}</ul>
+```
+
+Using details and summary (only opens/closes on click)
 ```html
 <details class="dropdown">
   <summary>Button</summary>
@@ -18,13 +25,7 @@ Using details and summary
 </details>
 ```
 
-Using popover API
-```html
-<button popovertarget="{id}" style="anchor-name:--{anchor}">{button}</button>
-<ul class="dropdown-content" popover id="{id}" style="position-anchor:--{anchor}">{CONTENT}</ul>
-```
-
-Using CSS focus
+Using CSS focus (not recommended)
 ```html
 <div class="dropdown">
   <div tabindex="0" role="button">Button</div>
@@ -37,3 +38,4 @@ Using CSS focus
 - replace `{id}` and `{anchor}` with a unique name
 - For CSS focus dropdowns, use `tabindex="0"` and `role="button"` on the button
 - The content can be any HTML element (not just `<ul>`)
+- For popover API method, we don't use `dropdown-content`. Only button and a `dropdown`

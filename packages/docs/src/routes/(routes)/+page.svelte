@@ -1,4 +1,5 @@
 <script>
+  import "../../homepage.css"
   import { browser } from "$app/environment"
 
   import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
@@ -222,7 +223,7 @@
                 </button>
               </div>
               <a
-                href="/docs/skill"
+                href="/docs/skill/"
                 class="btn btn-xs btn-circle relative -start-0.5 opacity-0 transition-all duration-600 group-hover:start-0 group-hover:opacity-100"
                 aria-label="Learn about daisyUI Skill.md file"
               >
@@ -306,7 +307,7 @@
           <div class="h-10"></div>
           <div>
             <div
-              class="inline-grid w-full animate-[reveal-slow_0.5s] flex-col items-stretch justify-center gap-2 px-4 md:flex-row lg:grid-cols-2 xl:justify-start xl:px-0"
+              class="inline-grid w-full animate-[reveal-slow_0.5s] flex-col items-stretch justify-stretch lg:justify-center gap-2 px-4 md:flex-row lg:grid-cols-2 xl:justify-start xl:px-0"
             >
               <!-- <a
                 class="btn md:btn-lg rounded-full"
@@ -416,7 +417,7 @@
                 <a
                   data-sveltekit-preload-data
                   href="/docs/install/"
-                  class="btn btn-neutral md:btn-lg group max-w-86 grow rounded-full"
+                  class="btn btn-neutral md:btn-lg group lg:max-w-86 grow rounded-full"
                   onclick={() => track("Homepage > Hero > HowToUse")}
                 >
                   {$t("cta-2")}

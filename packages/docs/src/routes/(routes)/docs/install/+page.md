@@ -19,7 +19,7 @@ desc: How to install daisyUI as a Tailwind CSS plugin?
 
 <Translate text="See example setup of daisyUI and Tailwind CSS on different frameworks and build tools."/>
 
-<div class="not-prose grid grid-cols-2 md:grid-cols-3 py-6 *:-ms-px *:-mt-px">
+<div class="not-prose grid grid-cols-2 md:grid-cols-3! py-6 *:-ms-px *:-mt-px">
 
 {#each data.frameworks as framework}
 <a href="{framework.path}" class="bg-base-100 relative overflow-hidden group flex items-center gap-4 flex-col px-4 py-8 border-[length:var(--border)] border-base-content/5 hover:shadow-md hover:-translate-y-1 focus:shadow-sm focus:-translate-y-0.5 transition-all">

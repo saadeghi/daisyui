@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte"
+  import { t } from "$lib/i18n.svelte.js"
 
   // Search functionality
   let searchData = $state([])
@@ -935,7 +936,7 @@ Card,/components/card/`
           id="search-input"
           type="text"
           autocomplete="off"
-          placeholder="Type to search..."
+          placeholder={$t("Type to search...")}
           value={searchQuery}
           oninput={handleSearchInput}
         />
@@ -944,7 +945,8 @@ Card,/components/card/`
           <span class="loading loading-dots loading-xs"></span>
         {:else if filteredResults.length > 0}
           <span class="badge badge-xs">
-            {filteredResults.length} result{filteredResults.length === 1 ? "" : "s"}
+            {filteredResults.length}
+            {$t(filteredResults.length === 1 ? "result" : "results")}
           </span>
         {/if}
       </label>
@@ -1032,8 +1034,8 @@ Card,/components/card/`
                 </g>
               </svg>
             </div>
-            <div class="mt-1 text-sm">We couldn't find anything captain!</div>
-            <div class="mt-1 text-sm">Try a different word.</div>
+            <div class="mt-1 text-sm">{$t("We couldn't find anything captain!")}</div>
+            <div class="mt-1 text-sm">{$t("Try a different word.")}</div>
           </button>
         {/if}
 
@@ -1077,7 +1079,7 @@ Card,/components/card/`
                     ></path>
                   </g>
                 </svg>
-                Recent Searches
+                {$t("Recent Searches")}
               </div>
               {#each recentSearches as result, index}
                 {@render searchResultItem(result, index, "recent")}
@@ -1106,7 +1108,7 @@ Card,/components/card/`
                     ></path>
                   </g>
                 </svg>
-                Bookmarks
+                {$t("Bookmarks")}
               </div>
               {#each bookmarkedSearches as result, index}
                 {@const displayIndex = recentSearches.length + index}
@@ -1135,7 +1137,7 @@ Card,/components/card/`
                     ></path>
                   </g>
                 </svg>
-                Popular Pages
+                {$t("Popular Pages")}
               </div>
               {#each displayedResults as result, index}
                 {@render searchResultItem(result, index, "popular")}
@@ -1161,6 +1163,6 @@ Card,/components/card/`
     </div>
   </div>
   <form method="dialog" class="modal-backdrop">
-    <button>close</button>
+    <button>{$t("close")}</button>
   </form>
 </dialog>

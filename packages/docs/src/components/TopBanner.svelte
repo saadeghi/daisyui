@@ -104,7 +104,7 @@
 {#if false && new Date() < new Date("2026-05-28T00:00:00.000000Z")}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
-      data-sveltekit-preload-data
+      data-sveltekit-preload-code="viewport"
       href="/store/nexus/"
       class="alert border-base-300 hover:bg-base-200 bg-base-100 flex w-full justify-center rounded-none border-x-0 border-t-0 p-2 text-center text-[0.6875rem] shadow-none transition-colors"
     >

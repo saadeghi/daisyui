@@ -24,4 +24,4 @@ where content is a list of buttons:
 #### Rules
 - {MODIFIER} is optional and can have one of the size class names
 - To make a button active, add `dock-active` class to the button
-- add `<meta name="viewport" content="viewport-fit=cover">` is required for responsivness of the dock in iOS
+- add `<meta name="viewport" content="viewport-fit=cover">` is required for responsiveness of the dock in iOS

@@ -105,6 +105,11 @@
         height: 0;
       }
 
+      &:where([open])::details-content {
+        overflow: revert-layer;
+        height: auto;
+      }
+
       @media (prefers-reduced-motion: no-preference) {
         &::details-content {
           transition:
@@ -120,8 +125,6 @@
 
         &:where([open])::details-content {
           --overflow-delay: 0.2s;
-          height: auto;
-          overflow: revert-layer;
         }
       }
 

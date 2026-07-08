@@ -31,7 +31,7 @@ export const articles = [
     link: "https://wweb.dev/weekly/85/",
   },
   {
-    title: "DaisyUI - Tailwind components",
+    title: "daisyUI - Tailwind components",
     site: "flaming.codes",
     link: "https://flaming.codes/posts/boostrap-tailwind-alternative-with-daisy-ui",
   },
@@ -41,7 +41,7 @@ export const articles = [
     link: "https://www.rockyourcode.com/how-to-setup-react-typescript-with-snowpack-and-daisyui/",
   },
   {
-    title: "DaisyUI : un plugin gratuit avec de nombreux composants pour Tailwind CSS",
+    title: "daisyUI : un plugin gratuit avec de nombreux composants pour Tailwind CSS",
     site: "Siecle Digital",
     link: "https://siecledigital.fr/2021/05/29/daisyui-plugin-gratuit-avec-composants-tailwind-css-a/",
   },
@@ -51,7 +51,7 @@ export const articles = [
     link: "https://speckyboy.com/weekly-news-for-designers-594/",
   },
   {
-    title: "DaisyUI — Free UI components plugin for Tailwind CSS",
+    title: "daisyUI — Free UI components plugin for Tailwind CSS",
     site: "dailydev",
     link: "https://app.daily.dev/posts/-4OPGw0te",
   },
@@ -66,17 +66,17 @@ export const articles = [
     link: "https://dev.to/brewhousedigital/adding-tailwind-and-daisy-ui-to-sveltekit-2hk5",
   },
   {
-    title: "Building React Components With DaisyUI",
+    title: "Building React Components With daisyUI",
     site: "Open Replay",
     link: "https://blog.openreplay.com/building-react-components-with-daisyui/",
   },
   {
-    title: "DaisyUI - Make Tailwind components with ease!",
+    title: "daisyUI - Make Tailwind components with ease!",
     site: "James Perkins",
     link: "https://www.jamesperkins.dev/post/daisyui-make-tailwind-components-with-ease/",
   },
   {
-    title: "DaisyUI - Free Vue UI Components for Tailwind CSS",
+    title: "daisyUI - Free Vue UI Components for Tailwind CSS",
     site: "Morioh",
     link: "https://morioh.com/a/350ca835203f/daisyui-free-vue-ui-components-for-tailwind-css",
   },
@@ -111,12 +111,12 @@ export const articles = [
     link: "https://prismic.io/blog/tailwind-component-library",
   },
   {
-    title: "Template design directly in CMS admin panel ( with DaisyUI and TailwindCSS )",
+    title: "Template design directly in CMS admin panel ( with daisyUI and TailwindCSS )",
     site: "LinkedIn",
     link: "https://www.linkedin.com/pulse/cms-template-redesign-mobile-device-ide21-nebojsa-tomic-edsvf",
   },
   {
-    title: "Howto Build a Theme Switcher with DaisyUI and TanStack Router",
+    title: "Howto Build a Theme Switcher with daisyUI and TanStack Router",
     site: "JSDev Space",
     link: "https://jsdev.space/howto/daisyui-theme-switcher/",
   },
