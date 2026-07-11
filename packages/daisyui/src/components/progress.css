@@ -37,6 +37,9 @@
     @supports (-moz-appearance: none) {
       &::-moz-progress-bar {
         @apply rounded-box bg-current;
+        @media (prefers-reduced-motion: no-preference) {
+          transition: inline-size 0.3s ease;
+        }
       }
     }
 
@@ -48,6 +51,9 @@
       &::-webkit-progress-value {
         @apply rounded-box;
         background-color: currentColor;
+        @media (prefers-reduced-motion: no-preference) {
+          transition: inline-size 0.3s ease;
+        }
       }
     }
   }
