@@ -7,13 +7,14 @@
     & > *:not(script, style, template) {
       @apply grid place-items-start gap-2;
     }
+  }
+}
+.footer-center {
+  @layer daisyui.l1.l2 {
+    @apply grid-flow-col-dense place-items-center text-center;
 
-    &.footer-center {
-      @apply grid-flow-col-dense place-items-center text-center;
-
-      & > *:not(script, style, template) {
-        @apply place-items-center;
-      }
+    & > *:not(script, style, template) {
+      @apply place-items-center;
     }
   }
 }
