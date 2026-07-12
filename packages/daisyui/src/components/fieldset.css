@@ -10,6 +10,7 @@
   @layer daisyui.l1.l2.l3 {
     @apply text-base-content -mb-1 flex items-center justify-between gap-2 py-2;
     font-weight: 600;
+    margin-inline-end: auto;
   }
 }
 /* deprecated in favor of label - but stays in source code to avoid breaking change */
