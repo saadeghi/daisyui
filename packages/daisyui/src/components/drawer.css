@@ -130,6 +130,8 @@
     }
 
     > .drawer-toggle {
+      @apply hidden;
+
       ~ .drawer-side {
         @apply pointer-events-auto visible sticky block w-auto overscroll-auto opacity-100;
 

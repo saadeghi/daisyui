@@ -162,7 +162,7 @@
     id="drawer"
     type="checkbox"
     autocomplete="off"
-    class={`drawer-toggle ${hasDesktopSidebar ? "lg:hidden" : ""}`}
+    class="drawer-toggle"
     aria-label="Toggle drawer"
     bind:checked
   />

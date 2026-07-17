@@ -102,7 +102,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 #### Change screen size to show/hide menu
 
 <div class="drawer h-56 rounded overflow-hidden">
-  <input id="my-drawer-2" type="checkbox" autocomplete="off" class="drawer-toggle" />
+  <input id="my-drawer-2" type="checkbox" autocomplete="off" class="drawer-toggle lg:hidden" />
   <div class="flex flex-col drawer-content">
     <div class="w-full navbar bg-base-300">
       <div class="flex-none lg:hidden">
@@ -131,7 +131,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 ```html
 <div class="$$drawer">
-  <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle" />
+  <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle lg:hidden" />
   <div class="$$drawer-content flex flex-col">
     <!-- Navbar -->
     <div class="$$navbar bg-base-300 w-full">
@@ -180,7 +180,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 #### Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class
 
 <div class="drawer lg:drawer-open h-56 rounded overflow-hidden">
-  <input id="my-drawer-3" type="checkbox" autocomplete="off" class="drawer-toggle lg:hidden" />
+  <input id="my-drawer-3" type="checkbox" autocomplete="off" class="drawer-toggle" />
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-3" class="btn drawer-button lg:hidden">Open drawer</label>
   </div>
@@ -195,7 +195,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 ```html
 <div class="$$drawer lg:$$drawer-open">
-  <input id="my-drawer-3" type="checkbox" class="$$drawer-toggle lg:hidden" />
+  <input id="my-drawer-3" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content flex flex-col items-center justify-center">
     <!-- Page content here -->
     <label for="my-drawer-3" class="$$btn $$drawer-button lg:hidden">
@@ -219,7 +219,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 #### In this example instead of completely hiding the drawer sidebar, we only show the icons when the drawer is closed. To add styles based on the state of the drawer, we use the `is-drawer-open` and `is-drawer-close` variants. For example `is-drawer-close:hidden` or `is-drawer-open:w-80`. Also we have tooltips when the drawer is closed and a switch button to open/close the drawer and rotates the button icon based on the state of the drawer.
 
 <div class="drawer lg:drawer-open h-80">
-  <input id="my-drawer-4" type="checkbox" autocomplete="off" class="drawer-toggle" />
+  <input id="my-drawer-4" type="checkbox" autocomplete="off" class="drawer-toggle inline" />
   <div class="drawer-content">
     <!-- Navbar -->
     <nav class="navbar w-full bg-base-300">
@@ -260,7 +260,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 ```html
 <div class="$$drawer lg:$$drawer-open">
-  <input id="my-drawer-4" type="checkbox" class="$$drawer-toggle" />
+  <input id="my-drawer-4" type="checkbox" class="$$drawer-toggle inline" />
   <div class="$$drawer-content">
     <!-- Navbar -->
     <nav class="$$navbar w-full bg-base-300">
