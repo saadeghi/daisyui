@@ -9,7 +9,7 @@ classnames:
     desc: For <ul> tag
   part:
   - class: menu-title
-    desc: Styles a <li> as title. Do not use it for interactive menu items
+    desc: Styles a <li> as title. Title is not interactive
   - class: menu-dropdown
     desc: For the collapsible <ul> if you want to show it using JS
   - class: menu-dropdown-toggle
