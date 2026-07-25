@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.1](https://github.com/saadeghi/daisyui/compare/v5.7.0...v5.7.1) (2026-07-25)
+
+### Bug Fixes
+
+* calendar day hover style (Cally) closes: [#4630](https://github.com/saadeghi/daisyui/issues/4630) ([6d64755](https://github.com/saadeghi/daisyui/commit/6d6475504d05a49e1f442717a613aa32a9bcd427)), references [#4085](https://github.com/saadeghi/daisyui/issues/4085) [#4085](https://github.com/saadeghi/daisyui/issues/4085) [#4085](https://github.com/saadeghi/daisyui/issues/4085)
 ## [5.7.0](https://github.com/saadeghi/daisyui/compare/v5.6.22...v5.7.0) (2026-07-20)
 
 ### Features
