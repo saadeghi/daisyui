@@ -43,7 +43,7 @@
         opacity 0.1s ease-out;
       background-color: oklch(0% 0 0/ 0.4);
 
-      .modal-box {
+      > .modal-box {
         translate: 0 0;
         scale: 1;
         opacity: 1;
@@ -113,7 +113,7 @@
   @layer daisyui.l1.l2 {
     @apply place-items-start;
 
-    .modal-box {
+    > .modal-box {
       @apply h-auto w-full max-w-none;
       max-height: calc(100vh - 5em);
       translate: 0 -100%;
@@ -130,7 +130,7 @@
   @layer daisyui.l1.l2 {
     @apply place-items-center;
 
-    .modal-box {
+    > .modal-box {
       @apply h-auto w-11/12 max-w-[32rem];
       max-height: calc(100vh - 5em);
       translate: 0 2%;
@@ -147,7 +147,7 @@
   @layer daisyui.l1.l2 {
     @apply place-items-end;
 
-    .modal-box {
+    > .modal-box {
       @apply h-auto w-full max-w-none;
       max-height: calc(100vh - 5em);
       translate: 0 100%;
@@ -164,7 +164,7 @@
   @layer daisyui.l1.l2 {
     @apply place-items-start;
 
-    .modal-box {
+    > .modal-box {
       @apply h-screen max-h-none w-auto max-w-none;
       translate: -100% 0;
       scale: 1;
@@ -183,7 +183,7 @@
   @layer daisyui.l1.l2 {
     @apply place-items-end;
 
-    .modal-box {
+    > .modal-box {
       @apply h-screen max-h-none w-auto max-w-none;
       translate: 100% 0;
       scale: 1;
