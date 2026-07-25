@@ -1,6 +1,6 @@
 .radial-progress {
   @layer daisyui.l1.l2.l3 {
-    @apply relative inline-grid h-[var(--size)] w-[var(--size)] place-content-center rounded-full bg-transparent;
+    @apply relative inline-grid h-[var(--size)] w-[var(--size)] place-content-center rounded-full bg-transparent shrink-0;
     vertical-align: middle;
     box-sizing: content-box;
     --value: 0;
