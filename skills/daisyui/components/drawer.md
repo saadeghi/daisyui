@@ -5,7 +5,7 @@ Drawer is a grid layout that can show/hide a sidebar on the left or right side o
 
 #### Class names
 - component: `drawer`
-- part: `drawer-toggle`, `drawer-content`, `drawer-side`, `drawer-overlay`
+- part: `drawer-toggle`, `drawer-content`, `drawer-side`, `drawer-overlay`, `drawer-button`
 - placement: `drawer-end`
 - modifier: `drawer-open`
 - variant: `is-drawer-open:`, `is-drawer-close:`

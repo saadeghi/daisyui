@@ -14,9 +14,9 @@ description: MANDATORY color usage rules for daisyUI 5
 - `accent-content`: Foreground content color to use on accent color
 - `neutral`: Neutral dark color, For not-saturated parts of UI
 - `neutral-content`: Foreground content color to use on neutral color
-- `base-100`:-100 Base surface color of page, used for blank backgrounds
-- `base-200`:-200 Base color, darker shade, to create elevations
-- `base-300`:-300 Base color, even more darker shade, to create elevations
+- `base-100`: Base surface color of the page, used for blank backgrounds
+- `base-200`: A darker base shade, used to create elevation
+- `base-300`: An even darker base shade, used to create more elevation
 - `base-content`: Foreground content color to use on base color
 - `info`: Info color, For informative/helpful messages
 - `info-content`: Foreground content color to use on info color
@@ -39,6 +39,28 @@ description: MANDATORY color usage rules for daisyUI 5
 9. `*-content` colors should have a good contrast compared to their associated colors
 10. Use `base-*` colors for majority of the page. Use the default variant for all elements. Use `primary` color once only, for the most important element on the page.
 11. Rare use case when using Tailwind CSS color names (for example `text-red-500`) is allowed instead of using a daisyUI color name (for example `text-error`): when a specific content must be indepecent from the theme. For example if a svg icon or a chart graph must use a specific color, no matter what are our brand colors or theme colors.
+
+### Enabling and applying themes
+
+The default configuration enables `light` and `dark`. Choose specific themes, every theme, or no built-in themes in the daisyUI plugin:
+
+```css
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cupcake;
+}
+```
+
+- Use `themes: all;` to enable every built-in theme.
+- Use `themes: false;` to disable all built-in themes, usually before defining only custom themes.
+- Add `data-theme="THEME_NAME"` to `<html>` or any nested element. Themes can be nested without a fixed depth limit.
+
+```html
+<html data-theme="dark">
+  <section data-theme="light">
+    <div data-theme="retro">Nested theme</div>
+  </section>
+</html>
+```
 
 ### daisyUI custom theme with custom colors
 A CSS file with Tailwind CSS, daisyUI and a custom daisyUI theme looks like this:
@@ -77,10 +99,10 @@ A CSS file with Tailwind CSS, daisyUI and a custom daisyUI theme looks like this
   --radius-box: 0.5rem; /* border radius of boxes (card, modal, alert) */
   /* preferred values for --radius-* : 0rem, 0.25rem, 0.5rem, 1rem, 2rem */
 
-  --size-selector: 0.25rem; /* base size of selectors (checkbox, toggle, badge). Value must be 0.25rem unless we intentionally want bigger selectors. In so it can be 0.28125 or 0.3125. If we intentionally want smaller selectors, it can be 0.21875 or 0.1875 */
-  --size-field: 0.25rem; /* base size of fields (button, input, select, tab). Value must be 0.25rem unless we intentionally want bigger fields. In so it can be 0.28125 or 0.3125. If we intentionally want smaller fields, it can be 0.21875 or 0.1875 */
+  --size-selector: 0.25rem; /* base size of selectors (checkbox, toggle, badge). Value must be 0.25rem unless we intentionally want bigger selectors. If so it can be 0.28125 or 0.3125. If we intentionally want smaller selectors, it can be 0.21875 or 0.1875 */
+  --size-field: 0.25rem; /* base size of fields (button, input, select, tab). Value must be 0.25rem unless we intentionally want bigger fields. If so it can be 0.28125 or 0.3125. If we intentionally want smaller fields, it can be 0.21875 or 0.1875 */
 
-  --border: 1px; /* border size. Value must be 1px unless we intentionally want thicker borders. In so it can be 1.5px or 2px. If we intentionally want thinner borders, it can be 0.5px */
+  --border: 1px; /* border size. Value must be 1px unless we intentionally want thicker borders. If so it can be 1.5px or 2px. If we intentionally want thinner borders, it can be 0.5px */
 
   --depth: 1; /* only 0 or 1 - Adds a shadow and subtle 3D depth effect to components */
   --noise: 0; /* only 0 or 1 - Adds a subtle noise (grain) effect to components */
@@ -92,3 +114,33 @@ A CSS file with Tailwind CSS, daisyUI and a custom daisyUI theme looks like this
 - If you're generating a custom theme, do not include the comments from the example above. Just provide the code.
 
 People can use https://daisyui.com/theme-generator/ visual tool to create their own theme.
+
+### Customize an existing theme
+
+Use the built-in theme's name and override only the values that need to change. Other values are inherited:
+
+```css
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: blue;
+  --color-secondary: teal;
+}
+```
+
+For a custom CDN theme, define the same variables under a selector that matches the chosen `data-theme` and checked theme controller:
+
+```css
+:root:has(input.theme-controller[value=mytheme]:checked),
+[data-theme="mytheme"] {
+  color-scheme: light;
+  --color-primary: oklch(55% 0.3 240);
+  /* define the remaining custom-theme variables */
+}
+```
+
+To make Tailwind's `dark:` variant follow one or more daisyUI themes, define a custom variant:
+
+```css
+@custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
+```

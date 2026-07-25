@@ -8,6 +8,7 @@ Tooltip can be used to show a message when hovering over an element
 - part: `tooltip-content`
 - modifier: `tooltip-open`
 - placement: `tooltip-top`, `tooltip-bottom`, `tooltip-left`, `tooltip-right`
+- alignment: `tooltip-start`, `tooltip-center`, `tooltip-end`
 - color: `tooltip-primary`, `tooltip-secondary`, `tooltip-accent`, `tooltip-info`, `tooltip-success`, `tooltip-warning`, `tooltip-error`
 
 #### Syntax

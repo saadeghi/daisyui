@@ -28,3 +28,32 @@ daisyUI 5 class names are one of the following categories. These type names are 
 - `direction`: sets a specific direction to component or part
 - `modifier`: modifies the component or part in a specific way
 - `variant`: prefixes for utility classes that conditionally apply styles. syntax is `variant:utility-class`
+
+## Customizing a component in CSS
+
+Use Tailwind's `@utility` directive to customize a daisyUI component globally:
+
+```css
+@utility btn {
+  @apply rounded-full;
+}
+```
+
+## daisyUI utilities and variables
+
+- Semantic colors work with Tailwind color utilities and opacity modifiers, for example `bg-primary`, `border-base-300`, and `text-base-content/60`.
+- `rounded-box`, `rounded-field`, and `rounded-selector` use the active theme's radius tokens.
+- `glass` applies the daisyUI glass effect.
+- Components can expose CSS variables for component-specific customization. Examples include `--value` and `--digits` on countdown, and `--size` and `--thickness` on radial progress.
+
+## Base modules
+
+daisyUI includes the `properties`, `rootcolor`, `scrollbar`, `rootscrolllock`, `rootscrollgutter`, and `svg` base modules. Exclude an unwanted module from the plugin config by its module name:
+
+```css
+@plugin "daisyui" {
+  exclude: rootscrollgutter;
+}
+```
+
+Use `include` or `exclude` for library modules; use Tailwind utilities or `@utility` for visual customization.

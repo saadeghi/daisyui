@@ -7,6 +7,9 @@ classnames:
   component:
   - class: megamenu
     desc: For the container div
+  part:
+  - class: megamenu-active
+    desc: Indicator
   modifier:
   - class: megamenu-wide
     desc: megamenu dropdown will be as wide as the megamenu container

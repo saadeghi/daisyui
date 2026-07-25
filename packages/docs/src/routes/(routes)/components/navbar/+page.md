@@ -147,7 +147,7 @@ classnames:
     <button class="btn btn-ghost text-xl">daisyUI</button>
   </div>
   <div class="flex gap-2">
-    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+    <input type="text" placeholder="Search" class="input w-24 md:w-auto" />
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
@@ -174,7 +174,7 @@ classnames:
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
   </div>
   <div class="flex gap-2">
-    <input type="text" placeholder="Search" class="$$input $$input-bordered w-24 md:w-auto" />
+    <input type="text" placeholder="Search" class="$$input w-24 md:w-auto" />
     <div class="$$dropdown $$dropdown-end">
       <div tabindex="0" role="button" class="$$btn $$btn-ghost $$btn-circle $$avatar">
         <div class="w-10 rounded-full">
@@ -214,7 +214,7 @@ classnames:
           <span class="badge badge-sm indicator-item">8</span>
         </div>
       </div>
-      <div tabindex="0" class="mt-3 z-1 card card-compact w-52 dropdown-content bg-base-100 shadow">
+      <div tabindex="0" class="mt-3 z-1 card card-sm w-52 dropdown-content bg-base-100 shadow">
         <div class="card-body">
           <span class="font-bold text-lg">8 Items</span>
           <span class="text-info">Subtotal: $999</span>
@@ -259,7 +259,7 @@ classnames:
       </div>
       <div
         tabindex="0"
-        class="$$card $$card-compact $$dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
+        class="$$card $$card-sm $$dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
         <div class="$$card-body">
           <span class="text-lg font-bold">8 Items</span>
           <span class="text-info">Subtotal: $999</span>
@@ -476,7 +476,7 @@ classnames:
       </ul>
     </div>
     <div class="navbar-end">
-      <input type="text" placeholder="Search" class="input input-bordered w-64 lg:w-auto" />
+      <input type="text" placeholder="Search" class="input w-64 lg:w-auto" />
     </div>
   </div>
 
@@ -522,7 +522,7 @@ classnames:
       </ul>
     </div>
     <div class="$$navbar-end">
-      <input type="text" placeholder="Search" class="$$input $$input-bordered w-64 lg:w-auto" />
+      <input type="text" placeholder="Search" class="$$input w-64 lg:w-auto" />
     </div>
   </div>
 

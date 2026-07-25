@@ -72,7 +72,7 @@ import "cally";
 ### ~Cally date picker example
 #### Example using daisyUI styles and daisyUI dropdown
 
-<button popovertarget="cally-popover1" class="input input-border" id="cally1" style="anchor-name:--cally1">
+<button popovertarget="cally-popover1" class="input" id="cally1" style="anchor-name:--cally1">
   Pick a date
 </button>
 <div popover id="cally-popover1" class="dropdown bg-base-100 rounded-box shadow-lg" style="position-anchor:--cally1">
@@ -95,7 +95,7 @@ npm i cally
 import "cally";
 -->
 
-<button popovertarget="cally-popover1" class="$$input $$input-border" id="cally1" style="anchor-name:--cally1">
+<button popovertarget="cally-popover1" class="$$input" id="cally1" style="anchor-name:--cally1">
   Pick a date
 </button>
 <div popover id="cally-popover1" class="$$dropdown bg-base-100 rounded-box shadow-lg" style="position-anchor:--cally1">
@@ -125,7 +125,7 @@ export default function App() {
   const [date, setDate] = useState<Date | undefined>();
   return (
     <>
-      <button popoverTarget="rdp-popover" className="$$input $$input-border" style={{ anchorName: "--rdp" } as React.CSSProperties}>
+      <button popoverTarget="rdp-popover" className="$$input" style={{ anchorName: "--rdp" } as React.CSSProperties}>
         {date ? date.toLocaleDateString() : "Pick a date"}
       </button>
       <div popover="auto" id="rdp-popover" className="$$dropdown" style={{ positionAnchor: "--rdp" } as React.CSSProperties}>

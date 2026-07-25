@@ -11,13 +11,15 @@ Steps can be used to show a list of steps in a process
 
 #### Syntax
 ```html
-<ul class="steps {MODIFIER}">
-  <li class="step">{step content}</li>
+<ul class="steps {DIRECTION}">
+  <li class="step step-primary">{completed step}</li>
+  <li class="step">{upcoming step}</li>
 </ul>
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of each direction/color class names
-- To make a step active, add the `step-primary` class
+- Steps are horizontal by default; add `steps-vertical` to the `ul` for a vertical layout
+- Direction classes go on `steps`; `step-*` color classes go on individual `step` items
+- To mark a step with the primary color, add `step-primary` to that `li`
 - You can add an icon in each step using `step-icon` class
-- To display data in `data-content` ,use `data-content="{value}"` at the `<li>`
+- To display custom data, add `data-content="{value}"` to the `<li>`

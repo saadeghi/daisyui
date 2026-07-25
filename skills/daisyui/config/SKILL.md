@@ -4,18 +4,25 @@ description: Configuration options for daisyUI 5
 ---
 
 ## Config
+
 daisyUI 5 config docs: https://daisyui.com/docs/config/
+
 daisyUI without config:
+
 ```css
 @plugin "daisyui";
 ```
+
 daisyUI config with `light` theme only:
+
 ```css
 @plugin "daisyui" {
   themes: light --default;
 }
 ```
+
 daisyUI with all the default configs:
+
 ```css
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark;

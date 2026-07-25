@@ -16,6 +16,8 @@ classnames:
       desc: Sidebar part
     - class: drawer-overlay
       desc: Label that covers the page when drawer is open
+    - class: drawer-button
+      desc: Toggle
   placement:
     - class: drawer-end
       desc: puts drawer to the other side

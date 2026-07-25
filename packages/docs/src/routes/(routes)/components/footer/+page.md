@@ -175,7 +175,7 @@ classnames:
     <fieldset class="w-80">
       <label for="input1">Enter your email address</label>
       <div class="join">
-        <input type="text" placeholder="username@site.com" class="input input-bordered join-item" id="input1" />
+        <input type="text" placeholder="username@site.com" class="input join-item" id="input1" />
         <button class="join-item btn btn-primary">Subscribe</button>
       </div>
     </fieldset>
@@ -212,7 +212,7 @@ classnames:
         <input
           type="text"
           placeholder="username@site.com"
-          class="$$input $$input-bordered $$join-item" />
+          class="$$input $$join-item" />
         <button class="$$btn $$btn-primary $$join-item">Subscribe</button>
       </div>
     </fieldset>

@@ -121,13 +121,13 @@ classnames:
 
 <div class="indicator">
   <span class="indicator-item badge">Required</span>
-  <input type="text" placeholder="Your email address" class="input input-bordered" />
+  <input type="text" placeholder="Your email address" class="input" />
 </div>
 
 ```html
 <div class="$$indicator">
   <span class="$$indicator-item $$badge">Required</span>
-  <input type="text" placeholder="Your email address" class="$$input $$input-bordered" />
+  <input type="text" placeholder="Your email address" class="$$input" />
 </div>
 ```
 

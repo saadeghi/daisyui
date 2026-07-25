@@ -1,5 +1,5 @@
 ### file-input
-File Input is a an input field for uploading files
+File Input is an input field for uploading files
 
 [file-input docs](https://daisyui.com/components/file-input/)
 

@@ -90,16 +90,16 @@ If you're using [daisyUI prefix](/docs/config/#prefix), it will add prefix to `t
 
 ### ~Theme Controller using a toggle with text
 <label class="flex cursor-pointer gap-2">
-  <span class="label-text">Default</span>
+  <span>Default</span>
   <input type="checkbox" autocomplete="off" value="synthwave" bind:checked={checkbox} class="toggle theme-controller"/>
-  <span class="label-text">Synthwave</span>
+  <span>Synthwave</span>
 </label>
 
 ```html
 <label class="flex cursor-pointer gap-2">
-  <span class="$$label-text">Current</span>
+  <span>Current</span>
   <input type="checkbox" value="synthwave" class="$$toggle $$theme-controller" />
-  <span class="$$label-text">Synthwave</span>
+  <span>Synthwave</span>
 </label>
 ```
 

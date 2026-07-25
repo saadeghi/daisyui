@@ -31,9 +31,10 @@ classnames:
     desc: error color
   direction:
   - class: steps-vertical
-    desc: Makes steps vertical (default)
+    desc: Vertical layout
   - class: steps-horizontal
     desc: Makes steps horizontal
+    default: true
 ---
 
 <script>
