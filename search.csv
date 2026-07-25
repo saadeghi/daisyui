@@ -57,7 +57,7 @@ Countdown,/components/countdown/,countdown
 Diff,/components/diff/,diff diff-item-1 diff-item-2 diff-resizer
 Divider,/components/divider/,divider divider-neutral divider-primary divider-secondary divider-accent divider-success divider-warning divider-info divider-error divider-vertical divider-horizontal divider-start divider-end
 Dock,/components/dock/,dock dock-label dock-active dock-xs dock-sm dock-md dock-lg dock-xl
-Drawer sidebar,/components/drawer/,drawer drawer-toggle drawer-content drawer-side drawer-overlay drawer-end drawer-open is-drawer-open: is-drawer-close:
+Drawer sidebar,/components/drawer/,drawer drawer-toggle drawer-content drawer-side drawer-overlay drawer-button drawer-end drawer-open is-drawer-open: is-drawer-close:
 Dropdown,/components/dropdown/,dropdown dropdown-content dropdown-start dropdown-center dropdown-end dropdown-top dropdown-bottom dropdown-left dropdown-right dropdown-hover dropdown-open dropdown-close
 FAB / Speed Dial,/components/fab/,fab fab-close fab-main-action fab-flower
 Fieldset,/components/fieldset/,fieldset label fieldset-legend
@@ -76,7 +76,7 @@ Link,/components/link/,link link-hover link-neutral link-primary link-secondary 
 List,/components/list/,list list-row list-col-wrap list-col-grow
 Loading,/components/loading/,loading loading-spinner loading-dots loading-ring loading-ball loading-bars loading-infinity loading-xs loading-sm loading-md loading-lg loading-xl
 Mask,/components/mask/,mask mask-squircle mask-heart mask-hexagon mask-hexagon-2 mask-decagon mask-pentagon mask-diamond mask-square mask-circle mask-star mask-star-2 mask-triangle mask-triangle-2 mask-triangle-3 mask-triangle-4 mask-half-1 mask-half-2
-Megamenu,/components/megamenu/,megamenu megamenu-wide megamenu-full megamenu-vertical megamenu-xs megamenu-sm megamenu-md megamenu-lg megamenu-xl
+Megamenu,/components/megamenu/,megamenu megamenu-active megamenu-wide megamenu-full megamenu-vertical megamenu-xs megamenu-sm megamenu-md megamenu-lg megamenu-xl
 Menu,/components/menu/,menu menu-title menu-dropdown menu-dropdown-toggle menu-disabled menu-active menu-focus menu-dropdown-show menu-paged menu-xs menu-sm menu-md menu-lg menu-xl menu-vertical menu-horizontal
 Browser mockup,/components/mockup-browser/,mockup-browser mockup-browser-toolbar
 Code mockup,/components/mockup-code/,mockup-code
