@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.3](https://github.com/saadeghi/daisyui/compare/v5.7.2...v5.7.3) (2026-07-25)
+
+### Bug Fixes
+
+* nested modal-box style leak. closes: [#4637](https://github.com/saadeghi/daisyui/issues/4637) ([1e81bdd](https://github.com/saadeghi/daisyui/commit/1e81bddc34655b690dcc8d8e6b47c617caddb39a))
 ## [5.7.2](https://github.com/saadeghi/daisyui/compare/v5.7.1...v5.7.2) (2026-07-25)
 
 ### Bug Fixes
