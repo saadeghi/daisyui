@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.4](https://github.com/saadeghi/daisyui/compare/v5.7.3...v5.7.4) (2026-07-25)
+
+### Bug Fixes
+
+* prevent avatar stretch in flex ([2d52299](https://github.com/saadeghi/daisyui/commit/2d522997cb8867c2e715ff27a007311c695415d1))
+* prevent kbd shrink ([59fee43](https://github.com/saadeghi/daisyui/commit/59fee43489f05001a18e3d048b542e695b2cec3a))
+* prevent radial-progress shrink in a flex. ([9efb4ed](https://github.com/saadeghi/daisyui/commit/9efb4ed316d6155627da9ad3ed0e49b3fa24b5a0))
 ## [5.7.3](https://github.com/saadeghi/daisyui/compare/v5.7.2...v5.7.3) (2026-07-25)
 
 ### Bug Fixes
