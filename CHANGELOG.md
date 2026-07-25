@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.2](https://github.com/saadeghi/daisyui/compare/v5.7.1...v5.7.2) (2026-07-25)
+
+### Bug Fixes
+
+* select, input, textarea, rating size modifiers in the CDN file. closes: [#4631](https://github.com/saadeghi/daisyui/issues/4631) ([f8443be](https://github.com/saadeghi/daisyui/commit/f8443be1cbc51a79ee93ef18a7650b24947a4da8))
 ## [5.7.1](https://github.com/saadeghi/daisyui/compare/v5.7.0...v5.7.1) (2026-07-25)
 
 ### Bug Fixes
