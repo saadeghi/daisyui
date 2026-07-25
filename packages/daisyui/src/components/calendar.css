@@ -31,18 +31,27 @@
       font-size: 0.7rem;
     }
     ::part(day):hover {
-      &:not(selected, today) {
-        background: var(--color-base-200);
-      }
+      background: var(--color-base-200);
     }
+    /* `:not()` can't follow `::part()` and part names can't be negated, so
+       today/selected re-assert their background on hover instead.
+       These can't be nested as `&:hover` either: `&` is equivalent to
+       `:is(...)`, which can't contain a pseudo-element, so the nested form
+       never matches. */
     ::part(button day today) {
       background: var(--color-primary);
       color: var(--color-primary-content);
+    }
+    ::part(button day today):hover {
+      background: var(--color-primary);
     }
     ::part(selected) {
       color: var(--color-base-100);
       background: var(--color-base-content);
       border-radius: var(--radius-field);
+    }
+    ::part(selected):hover {
+      background: var(--color-base-content);
     }
     ::part(range-inner) {
       border-radius: 0;
