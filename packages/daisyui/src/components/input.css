@@ -2,13 +2,13 @@
   @layer daisyui.l1.l2.l3 {
     @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-2 px-3 align-middle whitespace-nowrap;
 
-    --size: calc(var(--size-field, 0.25rem) * var(--in-size-mul));
+    --size: calc(var(--size-field, 0.25rem) * var(--in-size-mul, 10));
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
 
     cursor: text;
     width: clamp(3rem, 20rem, 100%);
     height: var(--size);
-    font-size: max(var(--font-size, 0rem), var(--font-size-min));
+    font-size: max(var(--font-size, 0rem), var(--font-size-min, 0.875rem));
     touch-action: manipulation;
     border-start-start-radius: var(--join-ss, var(--radius-field));
     border-start-end-radius: var(--join-se, var(--radius-field));
@@ -64,7 +64,7 @@
       }
 
       &::-webkit-inner-spin-button {
-        margin-block: calc(var(--spacing) * var(--spin-my));
+        margin-block: calc(var(--spacing) * var(--spin-my, -3));
       }
 
       &::-webkit-calendar-picker-indicator {
@@ -242,7 +242,6 @@
   }
 }
 
-.input,
 .input-md {
   @layer daisyui.l1.l2 {
     --in-size-mul: 10;

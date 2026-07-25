@@ -2,12 +2,12 @@
   @layer daisyui.l1.l2.l3 {
     @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
 
-    --size: calc(var(--size-field, 0.25rem) * var(--sl-size-mul));
+    --size: calc(var(--size-field, 0.25rem) * var(--sl-size-mul, 10));
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
 
     width: clamp(3rem, 20rem, 100%);
     height: var(--size);
-    font-size: max(var(--font-size, 0rem), var(--font-size-min));
+    font-size: max(var(--font-size, 0rem), var(--font-size-min, 0.875rem));
     touch-action: manipulation;
     border-start-start-radius: var(--join-ss, var(--radius-field));
     border-start-end-radius: var(--join-se, var(--radius-field));
@@ -138,7 +138,7 @@
       }
       option {
         @apply rounded-field py-1.5;
-        padding-inline: calc(var(--spacing) * var(--option-px));
+        padding-inline: calc(var(--spacing) * var(--option-px, 3));
         transition-property: color, background-color;
         transition-duration: 0.2s;
         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -298,7 +298,6 @@
   }
 }
 
-.select,
 .select-md {
   @layer daisyui.l1.l2 {
     --sl-size-mul: 10;

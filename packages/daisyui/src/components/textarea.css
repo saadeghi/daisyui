@@ -5,7 +5,7 @@
     --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
 
     width: clamp(3rem, 20rem, 100%);
-    font-size: max(var(--font-size, 0rem), var(--font-size-min));
+    font-size: max(var(--font-size, 0rem), var(--font-size-min, 0.875rem));
     touch-action: manipulation;
     border: var(--border) solid var(--input-color, #0000);
     box-shadow:
@@ -181,7 +181,6 @@
   }
 }
 
-.textarea,
 .textarea-md {
   @layer daisyui.l1.l2 {
     --font-size-min: 0.875rem;
