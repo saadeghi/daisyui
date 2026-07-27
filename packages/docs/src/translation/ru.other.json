@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "Получить Blueprint MCP",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "Новые и обновленные инструменты, подсказки и ресурсы в daisyUI Blueprint v1.5.",
   "Install daisyUI Blueprint MCP server for Grok Build.": "Установите сервер daisyUI Blueprint MCP для Grok Build.",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Посмотрите, как шесть инструментов Blueprint MCP предоставляют вашему LLM ресурсы, необходимые для создания более совершенных интерфейсов daisyUI."
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Посмотрите, как шесть инструментов Blueprint MCP предоставляют вашему LLM ресурсы, необходимые для создания более совершенных интерфейсов daisyUI.",
+  "simultaneous coding agent or apps": "одновременно работающие агенты для написания кода или приложения"
 }

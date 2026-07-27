@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "Αποκτήστε το Blueprint MCP",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "Νέα και ενημερωμένα εργαλεία, προτροπές και πόροι στο daisyUI Blueprint v1.5.",
   "Install daisyUI Blueprint MCP server for Grok Build.": "Εγκαταστήστε τον διακομιστή daisyUI Blueprint MCP για Grok Build.",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Δείτε πώς έξι εργαλεία Blueprint MCP παρέχουν στο LLM σας τους πόρους που χρειάζεται για τη δημιουργία καλύτερων διεπαφών daisyUI."
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Δείτε πώς έξι εργαλεία Blueprint MCP παρέχουν στο LLM σας τους πόρους που χρειάζεται για τη δημιουργία καλύτερων διεπαφών daisyUI.",
+  "simultaneous coding agent or apps": "ταυτόχρονοι coding agents ή εφαρμογές"
 }

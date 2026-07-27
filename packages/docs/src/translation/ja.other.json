@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "Blueprint MCP を入手する",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "daisyUI Blueprint v1.5 の新規および更新されたツール、プロンプト、およびリソース。",
   "Install daisyUI Blueprint MCP server for Grok Build.": "Grok Build 用の daisyUI Blueprint MCP サーバーをインストールします。",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "6 つの Blueprint MCP ツールが、より優れた daisyUI インターフェイスを構築するために必要なリソースを LLM にどのように提供するかをご覧ください。"
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "6 つの Blueprint MCP ツールが、より優れた daisyUI インターフェイスを構築するために必要なリソースを LLM にどのように提供するかをご覧ください。",
+  "simultaneous coding agent or apps": "同時に使用するコーディングエージェントまたはアプリ"
 }

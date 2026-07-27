@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "Blueprint MCP 받기",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "daisyUI Blueprint v1.5의 신규 및 업데이트된 도구, 프롬프트 및 리소스.",
   "Install daisyUI Blueprint MCP server for Grok Build.": "Grok Build용 daisyUI Blueprint MCP 서버를 설치합니다.",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "6개의 Blueprint MCP 도구가 LLM에 더 나은 daisyUI 인터페이스를 구축하는 데 필요한 리소스를 제공하는 방법을 확인하세요."
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "6개의 Blueprint MCP 도구가 LLM에 더 나은 daisyUI 인터페이스를 구축하는 데 필요한 리소스를 제공하는 방법을 확인하세요.",
+  "simultaneous coding agent or apps": "동시에 사용하는 코딩 에이전트 또는 앱"
 }

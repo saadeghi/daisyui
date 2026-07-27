@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "Nhận Blueprint MCP",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "Các công cụ, lời nhắc và tài nguyên mới và cập nhật trong daisyUI Blueprint v1.5.",
   "Install daisyUI Blueprint MCP server for Grok Build.": "Cài đặt máy chủ daisyUI Blueprint MCP cho Grok Build.",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Xem cách sáu công cụ Blueprint MCP cung cấp cho LLM của bạn các tài nguyên cần thiết để xây dựng giao diện daisyUI tốt hơn."
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Xem cách sáu công cụ Blueprint MCP cung cấp cho LLM của bạn các tài nguyên cần thiết để xây dựng giao diện daisyUI tốt hơn.",
+  "simultaneous coding agent or apps": "coding agent hoặc ứng dụng chạy đồng thời"
 }

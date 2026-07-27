@@ -1146,7 +1146,18 @@
       {#each plan.features as feature}
         <li class="flex items-start gap-2.5">
           <span class="mt-0.5 shrink-0">{@render checkIcon("Included")}</span>
-          <span>{feature}</span>
+          {#if feature.endsWith(" clients")}
+            <span>
+              {feature.slice(0, -" clients".length)}{" "}
+              <span class="tooltip" data-tip={$t("simultaneous coding agent or apps")}>
+                <button type="button" class="cursor-help border-b border-dashed border-current">
+                  clients
+                </button>
+              </span>
+            </span>
+          {:else}
+            <span>{feature}</span>
+          {/if}
         </li>
       {/each}
     </ul>

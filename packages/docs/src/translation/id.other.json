@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "Dapatkan Blueprint MCP",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "Alat, petunjuk, dan sumber daya baru dan diperbarui di daisyUI Blueprint v1.5.",
   "Install daisyUI Blueprint MCP server for Grok Build.": "Instal server daisyUI Blueprint MCP untuk Grok Build.",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Lihat bagaimana enam alat Blueprint MCP memberi LLM sumber daya yang dibutuhkan untuk membangun antarmuka daisyUI yang lebih baik."
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Lihat bagaimana enam alat Blueprint MCP memberi LLM sumber daya yang dibutuhkan untuk membangun antarmuka daisyUI yang lebih baik.",
+  "simultaneous coding agent or apps": "agen coding atau aplikasi yang berjalan bersamaan"
 }

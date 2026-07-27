@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "取得 Blueprint MCP",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "daisyUI Blueprint v1.5 中新增和更新的工具、提示和資源。",
   "Install daisyUI Blueprint MCP server for Grok Build.": "為 Grok Build 安裝 daisyUI Blueprint MCP 伺服器。",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "了解六種 Blueprint MCP 工具如何為您的 LLM 提供建立更好的 daisyUI 介面所需的資源。"
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "了解六種 Blueprint MCP 工具如何為您的 LLM 提供建立更好的 daisyUI 介面所需的資源。",
+  "simultaneous coding agent or apps": "同時執行的編碼代理或應用程式"
 }

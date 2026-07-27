@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "Blueprint MCP را دریافت کنید",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "ابزارها، درخواست ها و منابع جدید و به روز شده در daisyUI Blueprint v1.5.",
   "Install daisyUI Blueprint MCP server for Grok Build.": "سرور daisyUI Blueprint MCP را برای Grok Build نصب کنید.",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "ببینید چگونه شش ابزار Blueprint MCP منابع مورد نیاز LLM شما را برای ساخت رابط های daisyUI بهتر می دهد."
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "ببینید چگونه شش ابزار Blueprint MCP منابع مورد نیاز LLM شما را برای ساخت رابط های daisyUI بهتر می دهد.",
+  "simultaneous coding agent or apps": "عامل‌های کدنویسی یا اپ‌های هم‌زمان"
 }

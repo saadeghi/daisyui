@@ -564,5 +564,6 @@
   "Get Blueprint MCP": "Szerezze be az Blueprint MCP-et",
   "New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.": "Új és frissített eszközök, utasítások és erőforrások az daisyUI Blueprint v1.5-ben.",
   "Install daisyUI Blueprint MCP server for Grok Build.": "Telepítse az daisyUI Blueprint MCP kiszolgálót az Grok Build számára.",
-  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Tekintse meg, hogy hat Blueprint MCP eszköz hogyan biztosítja az LLM számára a jobb daisyUI interfészek létrehozásához szükséges erőforrásokat."
+  "See how six Blueprint MCP tools give your LLM the resources it needs to build better daisyUI interfaces.": "Tekintse meg, hogy hat Blueprint MCP eszköz hogyan biztosítja az LLM számára a jobb daisyUI interfészek létrehozásához szükséges erőforrásokat.",
+  "simultaneous coding agent or apps": "egyidejű kódoló ügynökök vagy appok"
 }
