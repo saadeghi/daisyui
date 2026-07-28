@@ -3,7 +3,7 @@
   import Sidebar from "$components/Sidebar.svelte"
   import Search from "$components/Search.svelte"
   import { page } from "$app/stores"
-  import { loadRouteTranslations, setLang } from "$lib/i18n.svelte.js"
+  import { defaultLang, langs, loadRouteTranslations, setLang } from "$lib/i18n.svelte.js"
   import { onNavigate } from "$app/navigation"
   import minimalAnalytics from "@minimal-analytics/ga4"
   const { track } = minimalAnalytics
@@ -23,6 +23,13 @@
     if (searchComponent) {
       searchComponent.preFetchData()
     }
+  }
+
+  async function initializeLanguage() {
+    const queryLang = new URL(document.location).searchParams.get("lang")
+    const storedLang = localStorage.getItem("lang")
+    const lang = [queryLang, storedLang].find((lang) => langs.includes(lang)) ?? defaultLang
+    await setLang(lang, false)
   }
 
   onNavigate((navigation) => {
@@ -48,11 +55,7 @@
   })
 
   $effect(() => {
-    let lang = new URL(document.location).searchParams.get("lang")
-    setLang(lang, false)
-    if (localStorage.getItem("lang")) {
-      setLang(localStorage.getItem("lang"), false)
-    }
+    initializeLanguage()
 
     parseSidebarScroll()
     document.documentElement.style.scrollPaddingTop = "5rem"
