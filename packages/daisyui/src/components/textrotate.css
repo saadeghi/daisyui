@@ -11,8 +11,11 @@
       &:has(*:nth-child(2)) {
         --items: 2;
         @media (prefers-reduced-motion: no-preference) {
-          animation: rotator var(--duration, 10s)
-            linear(0 0% 49%, 0.5 50% 99%, 1 100% 100%) infinite;
+          animation: rotator var(--duration, 10s) linear(0 0% 49%, 0.5 50% 99%, 1 100% 100%)
+            infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          animation: rotator var(--duration, 10s) steps(var(--items), jump-end) infinite;
         }
       }
       &:has(*:nth-child(3)) {

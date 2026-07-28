@@ -4,8 +4,9 @@
     --aura-padding: 0.125rem;
     padding: var(--aura-padding);
     border-radius: calc(var(--aura-padding) + var(--aura-radius, var(--radius-box)));
-    @media (prefers-reduced-motion: no-preference) {
-      animation: aura var(--tw-duration, 6s) linear infinite;
+    animation: aura var(--tw-duration, 6s) linear infinite;
+    @media (prefers-reduced-motion: reduce) {
+      animation-duration: calc(var(--tw-duration, 6s) * 4);
     }
     background-image: conic-gradient(from var(--aura-angle), transparent 225deg, currentColor);
 
@@ -64,8 +65,9 @@
       oklch(0.88 0.08 68),
       oklch(0.82 0.17 327) 10%
     );
-    @media (prefers-reduced-motion: no-preference) {
-      animation: aura var(--tw-duration, 20s) linear infinite;
+    animation: aura var(--tw-duration, 20s) linear infinite;
+    @media (prefers-reduced-motion: reduce) {
+      animation-duration: calc(var(--tw-duration, 20s) * 4);
     }
   }
 }
@@ -114,13 +116,15 @@
     background-image: radial-gradient(closest-corner at center, currentColor 0%, transparent 90%);
 
     &:before {
-      @media (prefers-reduced-motion: no-preference) {
-        animation: aura-glow var(--tw-duration, 6s) ease-out infinite;
+      animation: aura-glow var(--tw-duration, 6s) ease-out infinite;
+      @media (prefers-reduced-motion: reduce) {
+        animation-duration: calc(var(--tw-duration, 6s) * 4);
       }
     }
     &:after {
-      @media (prefers-reduced-motion: no-preference) {
-        animation: aura-glow-after var(--tw-duration, 6s) ease-out infinite;
+      animation: aura-glow-after var(--tw-duration, 6s) ease-out infinite;
+      @media (prefers-reduced-motion: reduce) {
+        animation-duration: calc(var(--tw-duration, 6s) * 4);
       }
     }
   }
