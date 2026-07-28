@@ -24,7 +24,8 @@ const createValidBuildFixture = () => {
   for (const filePath of requiredBuildFiles) {
     let content = "fixture"
     if (filePath === "search.csv") {
-      content = "title,url,classnames\nHome,/,\nStore fixture,/store/fixture/,\n"
+      content =
+        "title,url,classnames\nHome,/,\nStore fixture,/store/fixture/,\nSection,/docs/example/#section,\n"
     }
     if (filePath === "sitemap.xml")
       content = [
@@ -37,6 +38,7 @@ const createValidBuildFixture = () => {
       ].join("")
     writeFixtureFile(buildDir, filePath, content)
   }
+  writeFixtureFile(buildDir, "docs/example/index.html", '<h2 id="section">Section</h2>')
 
   for (const family of dynamicRouteFamilies) {
     writeFixtureFile(buildDir, join(family.directory, "fixture", "index.html"))
@@ -63,7 +65,7 @@ describe("build verification", () => {
 
     expect(metrics.routes).toBeGreaterThan(0)
     expect(metrics.dataFiles).toBeGreaterThan(0)
-    expect(metrics.searchRows).toBe(2)
+    expect(metrics.searchRows).toBe(3)
     expect(metrics.sitemapUrls).toBe(4)
     expect(Object.values(metrics.dynamicRoutes).every((count) => count > 0)).toBe(true)
   })
@@ -124,6 +126,23 @@ describe("build verification", () => {
         routeFamilies: dynamicRouteFamilies.map((family) => ({ ...family, minimum: 1 })),
       }),
     ).toThrow("search index is missing dynamic route: /store/fixture/")
+  })
+
+  test("requires every internal search fragment to match a rendered heading", () => {
+    const buildDir = createValidBuildFixture()
+    writeFixtureFile(
+      buildDir,
+      "search.csv",
+      "title,url,classnames\nHome,/,\nStore fixture,/store/fixture/,\nMissing,/docs/example/#missing,\n",
+    )
+
+    expect(() =>
+      verifyBuild({
+        buildDir,
+        minimums: { routes: 1, dataFiles: 1, searchRows: 1, sitemapUrls: 1 },
+        routeFamilies: dynamicRouteFamilies.map((family) => ({ ...family, minimum: 1 })),
+      }),
+    ).toThrow("search URL points to a missing heading: /docs/example/#missing")
   })
 
   test("requires a complete ordered comparison matrix", () => {

@@ -154,7 +154,7 @@ export function remarkTranslate() {
           // Ensure the heading has the correct ID
           if (!node.data) node.data = {}
           if (!node.data.hProperties) node.data.hProperties = {}
-          node.data.hProperties.id = headingId
+          node.data.hProperties.id ??= headingId
         }
       }
     })

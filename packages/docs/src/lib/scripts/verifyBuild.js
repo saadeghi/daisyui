@@ -164,11 +164,12 @@ export const verifyBuild = ({
 
   const searchPath = join(resolvedBuildDir, "search.csv")
   let searchRows = 0
+  let searchEntries = []
   let searchUrls = new Set()
   if (existsSync(searchPath)) {
     const searchContent = readFileSync(searchPath, "utf8")
     try {
-      const searchEntries = parseSearchCsv(searchContent)
+      searchEntries = parseSearchCsv(searchContent)
       searchRows = searchEntries.length
       searchUrls = new Set(searchEntries.map((entry) => entry.url))
     } catch (error) {
@@ -176,6 +177,21 @@ export const verifyBuild = ({
     }
     if (searchRows < minimums.searchRows) {
       errors.push(`search row count ${searchRows} is below minimum ${minimums.searchRows}`)
+    }
+  }
+
+  for (const entry of searchEntries) {
+    if (!entry.url.startsWith("/") || !entry.url.includes("#")) continue
+
+    const target = new URL(entry.url, "https://daisyui.com")
+    const id = decodeURIComponent(target.hash.slice(1))
+    if (!id) continue
+
+    const routePath = target.pathname.replace(/^\/+|\/+$/g, "")
+    const htmlPath = join(resolvedBuildDir, routePath, "index.html")
+    const html = existsSync(htmlPath) ? readFileSync(htmlPath, "utf8") : ""
+    if (!html.includes(`id="${id}"`) && !html.includes(`id='${id}'`)) {
+      errors.push(`search URL points to a missing heading: ${entry.url}`)
     }
   }
 

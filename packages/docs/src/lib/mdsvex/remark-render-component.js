@@ -1,44 +1,9 @@
 import { visit } from "unist-util-visit"
+import { getHeadingText } from "./headingIds.js"
 
 // Helper to escape quotes for HTML attributes
 function escapeQuotes(text) {
   return text.replace(/"/g, "&quot;").replace(/'/g, "&#39;")
-}
-
-// Helper to get text from a heading node
-function getHeadingText(node) {
-  if (!node.children || !node.children.length) return ""
-
-  // For ID generation, we want plain text without formatting
-  let plainText = ""
-
-  node.children.forEach((child) => {
-    if (child.type === "text") {
-      plainText += child.value
-    } else if (child.type === "inlineCode") {
-      plainText += child.value // Just the code content, no backticks for ID
-    } else if (child.type === "emphasis") {
-      const content =
-        child.children
-          ?.map((c) => (c.type === "text" ? c.value : c.type === "inlineCode" ? c.value : ""))
-          .join("") || ""
-      plainText += content
-    } else if (child.type === "strong") {
-      const content =
-        child.children
-          ?.map((c) => (c.type === "text" ? c.value : c.type === "inlineCode" ? c.value : ""))
-          .join("") || ""
-      plainText += content
-    } else if (child.type === "link") {
-      const linkText =
-        child.children
-          ?.map((c) => (c.type === "text" ? c.value : c.type === "inlineCode" ? c.value : ""))
-          .join("") || ""
-      plainText += linkText
-    }
-  })
-
-  return plainText
 }
 
 // Check if a node is a component heading
@@ -50,6 +15,7 @@ function isComponentHeading(node) {
 function createComponent(headingNode) {
   return {
     type: "component",
+    id: headingNode.data?.hProperties?.id,
     title: getHeadingText(headingNode).slice(1), // Remove the ~ prefix
     description: "",
     descriptionNodes: [], // Store the actual nodes for proper rendering
@@ -153,7 +119,7 @@ function componentToNodes(comp) {
   const nodes = [
     {
       type: "html",
-      value: `<Component title="${escapedTitle}" desc="${escapedDescription}">\n`,
+      value: `<Component anchor="${comp.id}" title="${escapedTitle}" desc="${escapedDescription}">\n`,
     },
     ...comp.demo,
     {

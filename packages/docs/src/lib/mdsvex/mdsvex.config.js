@@ -14,6 +14,7 @@ import { visit } from "unist-util-visit"
 import { remarkRenderComponent } from "./remark-render-component.js"
 import { remarkTranslate } from "./remark-translate.js"
 import { remarkKeywordLinks } from "./remark-keyword-links.js"
+import { remarkHeadingIds } from "./headingIds.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -140,6 +141,7 @@ const rehypePlugins = [
 
 const remarkPlugins = [
   replacePlaceholders,
+  remarkHeadingIds,
   remarkRenderComponent,
   // remarkKeywordLinks,
   remarkTranslate,

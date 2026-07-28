@@ -5,6 +5,7 @@
 
   let {
     title = undefined,
+    anchor = undefined,
     desc = undefined,
     bg = undefined,
     classes = undefined,
@@ -16,13 +17,14 @@
   } = $props()
 
   let titleStr = $derived(
-    title
-      ? title
-          .replace(/[ ]/g, "-") // replace spaces with -
-          .replace(/[^A-Za-z0-9-]/g, "") // replace all non-alphanumeric chars
-          .toLowerCase()
-          .trim()
-      : "",
+    anchor ||
+      (title
+        ? title
+            .replace(/[ ]/g, "-") // replace spaces with -
+            .replace(/[^A-Za-z0-9-]/g, "") // replace all non-alphanumeric chars
+            .toLowerCase()
+            .trim()
+        : ""),
   )
 
   onMount(() => {

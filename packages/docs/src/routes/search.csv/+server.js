@@ -43,10 +43,15 @@ import { join, dirname } from "node:path"
 import { fileURLToPath } from "url"
 import { serializeSearchCsv } from "$lib/searchCsv.js"
 import { getStoreProducts } from "$lib/server/content/store.js"
+import { createHeadingSlugger, getHeadingText } from "$lib/mdsvex/headingIds.js"
 import { load as loadYaml } from "js-yaml"
+import remarkParse from "remark-parse"
+import { unified } from "unified"
+import { visit } from "unist-util-visit"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
+const markdownParser = unified().use(remarkParse)
 
 // Use import.meta.glob for build time (production) - this gets resolved at build time
 const markdownModules = import.meta.glob("../(routes)/**/*.md", {
@@ -316,15 +321,16 @@ function shouldIndexHeading(title) {
 function extractHeadings(content) {
   // Remove frontmatter
   const contentWithoutFrontmatter = content.replace(/^---\s*\n[\s\S]*?\n---\n/, "")
-
-  // Find all headings (## and ###)
-  const headingRegex = /^(#{2,3})\s+(.+)$/gm
+  const tree = markdownParser.parse(contentWithoutFrontmatter)
   const headings = []
-  let match
+  const slugHeading = createHeadingSlugger()
 
-  while ((match = headingRegex.exec(contentWithoutFrontmatter)) !== null) {
-    const level = match[1].length
-    const originalTitle = match[2].trim()
+  visit(tree, "heading", (node) => {
+    if (node.depth < 2) return
+
+    const originalTitle = getHeadingText(node)
+    const anchor = slugHeading(originalTitle)
+    if (node.depth > 3) return
 
     // Clean the title first
     const cleanedTitle = cleanHeadingText(originalTitle)
@@ -332,33 +338,25 @@ function extractHeadings(content) {
     // Skip if cleaned title is empty
     if (!cleanedTitle) {
       console.warn(`Warning: Empty title after cleaning: "${originalTitle}"`)
-      continue
+      return
     }
 
     if (!shouldIndexHeading(cleanedTitle)) {
-      continue
+      return
     }
-
-    // Create URL anchor from cleaned title
-    const anchor = cleanedTitle
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, "") // Remove special characters except spaces and hyphens
-      .replace(/\s+/g, "-") // Replace spaces with hyphens
-      .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
-      .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
 
     // Skip if anchor is empty
     if (!anchor) {
       console.warn(`Warning: Empty anchor after processing: "${cleanedTitle}"`)
-      continue
+      return
     }
 
     headings.push({
       title: cleanedTitle,
-      level,
+      level: node.depth,
       anchor,
     })
-  }
+  })
 
   return headings
 }

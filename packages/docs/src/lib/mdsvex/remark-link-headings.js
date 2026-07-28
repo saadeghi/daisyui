@@ -4,28 +4,7 @@ export function remarkLinkHeadings() {
   return (tree) => {
     visit(tree, "heading", (node) => {
       if (node.depth >= 2) {
-        // Collect text from text nodes for the ID
-        let headingText = ""
-        node.children.forEach((child) => {
-          if (child.type === "text") {
-            headingText += child.value
-          } else if (child.type === "inlineCode") {
-            // Include inline code content
-            headingText += child.value
-          } else if (child.type === "html" && child.value.includes('<Translate text="')) {
-            // Extract text from Translate component
-            const match = child.value.match(/<Translate text="([^"]+)"/)
-            if (match && match[1]) {
-              headingText += match[1].replace(/&quot;/g, '"')
-            }
-          }
-        })
-
-        // Create id from heading text - replace spaces with hyphens and remove special chars but keep alphanumeric
-        const id = headingText
-          .toLowerCase()
-          .replace(/\s+/g, "-")
-          .replace(/[^a-z0-9-]/g, "")
+        const id = node.data?.hProperties?.id
 
         // Create the link icon element wrapped in an anchor tag
         const linkIconWithAnchor = {
