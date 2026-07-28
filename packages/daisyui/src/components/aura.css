@@ -4,7 +4,9 @@
     --aura-padding: 0.125rem;
     padding: var(--aura-padding);
     border-radius: calc(var(--aura-padding) + var(--aura-radius, var(--radius-box)));
-    animation: aura var(--tw-duration, 6s) linear infinite;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: aura var(--tw-duration, 6s) linear infinite;
+    }
     background-image: conic-gradient(from var(--aura-angle), transparent 225deg, currentColor);
 
     &:has(> .card, > .alert) {
@@ -62,7 +64,9 @@
       oklch(0.88 0.08 68),
       oklch(0.82 0.17 327) 10%
     );
-    animation: aura var(--tw-duration, 20s) linear infinite;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: aura var(--tw-duration, 20s) linear infinite;
+    }
   }
 }
 
@@ -110,10 +114,14 @@
     background-image: radial-gradient(closest-corner at center, currentColor 0%, transparent 90%);
 
     &:before {
-      animation: aura-glow var(--tw-duration, 6s) ease-out infinite;
+      @media (prefers-reduced-motion: no-preference) {
+        animation: aura-glow var(--tw-duration, 6s) ease-out infinite;
+      }
     }
     &:after {
-      animation: aura-glow-after var(--tw-duration, 6s) ease-out infinite;
+      @media (prefers-reduced-motion: no-preference) {
+        animation: aura-glow-after var(--tw-duration, 6s) ease-out infinite;
+      }
     }
   }
 }
