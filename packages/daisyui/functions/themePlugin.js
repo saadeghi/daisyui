@@ -1,6 +1,12 @@
 import { plugin } from "../functions/plugin.js"
 import allThemes from "./object.js"
 
+const escapeCssString = (value) =>
+  String(value).replace(
+    /[^a-zA-Z0-9_-]/gu,
+    (character) => `\\${character.codePointAt(0).toString(16)} `,
+  )
+
 export default plugin.withOptions((options = {}) => {
   return ({ addBase }) => {
     const {
@@ -12,7 +18,8 @@ export default plugin.withOptions((options = {}) => {
       ...customThemeTokens
     } = options
 
-    let selector = `${root}:has(input.theme-controller[value=${name}]:checked),[data-theme="${name}"]`
+    const escapedName = escapeCssString(name)
+    let selector = `${root}:has(input.theme-controller[value="${escapedName}"]:checked),[data-theme="${escapedName}"]`
     if (isDefault) {
       selector = `:where(${root}),${selector}`
     }
