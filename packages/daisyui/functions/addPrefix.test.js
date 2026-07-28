@@ -71,6 +71,11 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
     expected: { ".prefix-btn.prefix-icon": "color: red;" },
   },
   {
+    name: "type selectors with classes",
+    input: { "tr.row-hover": "color: red;" },
+    expected: { "tr.prefix-row-hover": "color: red;" },
+  },
+  {
     name: "multiple pseudo-classes",
     input: { ".btn:hover:focus": "color: red;" },
     expected: { ".prefix-btn:hover:focus": "color: red;" },
@@ -119,6 +124,21 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
     expected: {
       ".prefix-btn, .prefix-icon": "color: red;",
       ".prefix-text, .prefix-label": { color: "blue" },
+    },
+  },
+  {
+    name: "comma-separated nested selectors starting with an ampersand",
+    input: {
+      ".modal": {
+        "&.modal-open, &[open], &:popover-open, &:target, .modal-toggle:checked + &":
+          "visibility: visible;",
+      },
+    },
+    expected: {
+      ".prefix-modal": {
+        "&.prefix-modal-open, &[open], &:popover-open, &:target, .prefix-modal-toggle:checked + &":
+          "visibility: visible;",
+      },
     },
   },
   {

@@ -40,8 +40,6 @@ const getPrefixedSelector = (selector, prefix) => {
 }
 
 const getPrefixedKey = (key, prefix, excludedPrefixes) => {
-  const prefixAmpDot = prefix ? `&.${prefix}` : ""
-
   if (!prefix) return key
 
   if (key.startsWith(".") && shouldExcludeSelector(key.slice(1))) return key
@@ -60,18 +58,6 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
   }
 
   if (key.startsWith("&")) {
-    // If it's a complex selector with :not(), :has(), etc.
-    if (key.match(/:[a-z-]+\(/)) {
-      return key.replace(/\.([\w-]+)/g, (m, cls) =>
-        shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
-      )
-    }
-    // For simple &. cases
-    if (key.startsWith("&.")) {
-      if (shouldExcludeSelector(key.slice(2))) return key
-      return `${prefixAmpDot}${key.slice(2)}`
-    }
-    // For other & cases (like &:hover or &:not(...))
     return key.replace(/\.([\w-]+)/g, (m, cls) =>
       shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
     )
@@ -90,12 +76,9 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
     !key.includes("+") &&
     !key.includes("~")
   ) {
-    return key
-      .split(".")
-      .filter(Boolean)
-      .map((part) => (shouldExcludeSelector(part) ? part : prefix + part))
-      .join(".")
-      .replace(/^/, ".")
+    return key.replace(/\.([\w-]+)/g, (m, cls) =>
+      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
+    )
   }
 
   if (key.includes(">") || key.includes("+") || key.includes("~")) {
@@ -134,9 +117,7 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
       .split(/\s+/)
       .map((part) => {
         if (part.startsWith(".")) {
-          return shouldExcludeSelector(part.slice(1))
-            ? part
-            : getPrefixedSelector(part, prefix)
+          return shouldExcludeSelector(part.slice(1)) ? part : getPrefixedSelector(part, prefix)
         }
         return part
       })
