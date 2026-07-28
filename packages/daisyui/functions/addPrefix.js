@@ -51,6 +51,10 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
     return `--${prefixVariable(variableName, prefix, excludedPrefixes)}`
   }
 
+  if (key.startsWith("@property --")) {
+    return processStringValue(key, prefix, excludedPrefixes)
+  }
+
   if (key.startsWith("@") || key.startsWith("[")) {
     return key
   }
@@ -172,14 +176,14 @@ const processArrayValue = (value, prefix, excludedPrefixes) => {
   })
 }
 
-const reVariableName = /var\s*\(\s*--([a-zA-Z0-9_-]+)/g
+const reVariableName = /--([a-zA-Z0-9_-]+)/g
 const processStringValue = (value, prefix, excludedPrefixes) => {
   if (prefix === 0) return value
   return value.replace(reVariableName, (match, variableName) => {
     if (shouldExcludeVariable(variableName, excludedPrefixes)) {
       return match
     }
-    return `var(--${prefix}${variableName}`
+    return `--${prefix}${variableName}`
   })
 }
 

@@ -255,6 +255,21 @@ for (const { name, input, expected, customExcludedPrefixes } of [
     expected: { "--custom-excluded-": "red", "--prefix-normal-var": "blue" },
     customExcludedPrefixes: ["custom-excluded-"],
   },
+  {
+    name: "@property and direct custom-property references",
+    input: {
+      "@property --custom-var": { syntax: '"<length>"' },
+      "@property --color-primary": { syntax: '"<color>"' },
+      ".btn": { transition: "--custom-var 0.3s linear, --color-primary 0.2s" },
+    },
+    expected: {
+      "@property --prefix-custom-var": { syntax: '"<length>"' },
+      "@property --color-primary": { syntax: '"<color>"' },
+      ".prefix-btn": {
+        transition: "--prefix-custom-var 0.3s linear, --color-primary 0.2s",
+      },
+    },
+  },
 ]) {
   test(`addPrefix handles ${name}`, () => {
     expect(addPrefix(input, prefix, customExcludedPrefixes)).toEqual(expected)
