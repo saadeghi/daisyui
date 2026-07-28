@@ -172,6 +172,25 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
     input: { ".prose": "color: red;" },
     expected: { ".prose": "color: red;" },
   },
+  {
+    name: "third-party calendar selectors",
+    input: {
+      ".react-day-picker": { ".rdp-day": "color: red;" },
+      ".pika-single": {
+        "&.is-hidden": "display: none;",
+        ".is-selected, .has-event": "color: red;",
+      },
+      ".vc": { ".vc-date": "color: blue;" },
+    },
+    expected: {
+      ".prefix-react-day-picker": { ".rdp-day": "color: red;" },
+      ".pika-single": {
+        "&.is-hidden": "display: none;",
+        ".is-selected, .has-event": "color: red;",
+      },
+      ".prefix-vc": { ".vc-date": "color: blue;" },
+    },
+  },
 ]) {
   test(`addPrefix handles ${name}`, () => {
     expect(addPrefix(input, casePrefix)).toEqual(expected)

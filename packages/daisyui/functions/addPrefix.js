@@ -1,5 +1,23 @@
 const defaultExcludedPrefixes = ["color-", "size-", "radius-", "border", "depth", "noise"]
-const excludedSelectors = ["prose"]
+const excludedSelectors = [
+  "prose",
+  "is-hidden",
+  "is-bound",
+  "is-disabled",
+  "is-today",
+  "is-selected",
+  "has-event",
+  "is-inrange",
+  "is-startrange",
+  "is-endrange",
+  "is-outside-current-month",
+  "is-selection-disabled",
+  "pick-whole-week",
+]
+const shouldExcludeSelector = (selector) => {
+  const selectorName = selector.match(/^[\w-]+/)?.[0] || selector
+  return excludedSelectors.includes(selectorName) || /^(rdp|pika|vc)-/.test(selectorName)
+}
 
 const shouldExcludeVariable = (variableName, excludedPrefixes) => {
   if (variableName.startsWith("tw")) {
@@ -17,7 +35,7 @@ const prefixVariable = (variableName, prefix, excludedPrefixes) => {
 
 const getPrefixedSelector = (selector, prefix) => {
   if (!selector.startsWith(".")) return selector
-  if (excludedSelectors.includes(selector.slice(1))) return selector
+  if (shouldExcludeSelector(selector.slice(1))) return selector
   return `.${prefix}${selector.slice(1)}`
 }
 
@@ -26,7 +44,7 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
 
   if (!prefix) return key
 
-  if (key.startsWith(".") && excludedSelectors.includes(key.slice(1))) return key
+  if (key.startsWith(".") && shouldExcludeSelector(key.slice(1))) return key
 
   if (key.startsWith("--")) {
     const variableName = key.slice(2)
@@ -41,23 +59,23 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
     // If it's a complex selector with :not(), :has(), etc.
     if (key.match(/:[a-z-]+\(/)) {
       return key.replace(/\.([\w-]+)/g, (m, cls) =>
-        excludedSelectors.includes(cls) ? `.${cls}` : `.${prefix}${cls}`,
+        shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
       )
     }
     // For simple &. cases
     if (key.startsWith("&.")) {
-      if (excludedSelectors.includes(key.slice(2))) return key
+      if (shouldExcludeSelector(key.slice(2))) return key
       return `${prefixAmpDot}${key.slice(2)}`
     }
     // For other & cases (like &:hover or &:not(...))
     return key.replace(/\.([\w-]+)/g, (m, cls) =>
-      excludedSelectors.includes(cls) ? `.${cls}` : `.${prefix}${cls}`,
+      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
     )
   }
 
   if (key.startsWith(":")) {
     return key.replace(/\.([\w-]+)/g, (m, cls) =>
-      excludedSelectors.includes(cls) ? `.${cls}` : `.${prefix}${cls}`,
+      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
     )
   }
 
@@ -71,7 +89,7 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
     return key
       .split(".")
       .filter(Boolean)
-      .map((part) => (excludedSelectors.includes(part) ? part : prefix + part))
+      .map((part) => (shouldExcludeSelector(part) ? part : prefix + part))
       .join(".")
       .replace(/^/, ".")
   }
@@ -84,7 +102,7 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
         .map((part) => {
           // Replace class names with prefixed versions for each part
           return part.replace(/\.([\w-]+)/g, (m, cls) =>
-            excludedSelectors.includes(cls) ? `.${cls}` : `.${prefix}${cls}`,
+            shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
           )
         })
         .join(", ")
@@ -92,7 +110,7 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
 
     // For simple combinators (not comma-separated)
     let processedKey = key.replace(/\.([\w-]+)/g, (m, cls) =>
-      excludedSelectors.includes(cls) ? `.${cls}` : `.${prefix}${cls}`,
+      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
     )
 
     // Add a space before combinators at the beginning
@@ -112,7 +130,7 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
       .split(/\s+/)
       .map((part) => {
         if (part.startsWith(".")) {
-          return excludedSelectors.includes(part.slice(1))
+          return shouldExcludeSelector(part.slice(1))
             ? part
             : getPrefixedSelector(part, prefix)
         }
@@ -124,15 +142,15 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
   if (key.includes(":")) {
     const [selector, ...pseudo] = key.split(":")
     if (selector.startsWith(".")) {
-      return `${excludedSelectors.includes(selector.slice(1)) ? selector : getPrefixedSelector(selector, prefix)}:${pseudo.join(":")}`
+      return `${shouldExcludeSelector(selector.slice(1)) ? selector : getPrefixedSelector(selector, prefix)}:${pseudo.join(":")}`
     }
     return key.replace(/\.([\w-]+)/g, (m, cls) =>
-      excludedSelectors.includes(cls) ? `.${cls}` : `.${prefix}${cls}`,
+      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
     )
   }
 
   if (key.startsWith(".")) {
-    return excludedSelectors.includes(key.slice(1)) ? key : getPrefixedSelector(key, prefix)
+    return shouldExcludeSelector(key.slice(1)) ? key : getPrefixedSelector(key, prefix)
   }
 
   return key
@@ -142,7 +160,7 @@ const processArrayValue = (value, prefix, excludedPrefixes) => {
   return value.map((item) => {
     if (typeof item === "string") {
       if (item.startsWith(".")) {
-        return excludedSelectors.includes(item.slice(1))
+        return shouldExcludeSelector(item.slice(1))
           ? item
           : prefix
             ? `.${prefix}${item.slice(1)}`
