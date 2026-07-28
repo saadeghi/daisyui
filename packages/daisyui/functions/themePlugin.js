@@ -13,7 +13,7 @@ export default plugin.withOptions((options = {}) => {
       name = "custom-theme",
       default: isDefault = false,
       prefersdark = false,
-      "color-scheme": colorScheme = "normal",
+      "color-scheme": colorScheme,
       root = ":root",
       ...customThemeTokens
     } = options
@@ -31,13 +31,13 @@ export default plugin.withOptions((options = {}) => {
       themeTokens = {
         ...builtinTheme,
         ...customThemeTokens,
-        "color-scheme": colorScheme || builtinTheme.colorScheme,
+        "color-scheme": colorScheme ?? builtinTheme["color-scheme"],
       }
     }
 
     const baseStyles = {
       [selector]: {
-        "color-scheme": themeTokens["color-scheme"] || colorScheme,
+        "color-scheme": themeTokens["color-scheme"] ?? colorScheme ?? "normal",
         ...themeTokens,
       },
     }

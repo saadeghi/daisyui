@@ -40,3 +40,21 @@ test("themePlugin adds prefers-color-scheme styles with custom root", () => {
     },
   })
 })
+
+test.each([
+  ["dark", undefined, "dark"],
+  ["light", undefined, "light"],
+  ["dark", "light", "light"],
+])("themePlugin preserves the %s color scheme unless overridden", (name, colorScheme, expected) => {
+  const { handler } = themePlugin({
+    name,
+    "color-scheme": colorScheme,
+    "--color-primary": "red",
+  })
+  const addBase = mock(() => {})
+
+  handler({ addBase })
+
+  const styles = addBase.mock.calls[0][0]
+  expect(Object.values(styles)[0]["color-scheme"]).toBe(expected)
+})
