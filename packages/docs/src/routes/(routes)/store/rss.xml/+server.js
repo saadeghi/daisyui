@@ -4,7 +4,7 @@ import { getStoreProducts } from "$lib/server/content/store.js"
 
 const siteTitle = "daisyUI Store"
 const siteDesc = "Professional templates made by daisyUI"
-const storeUrl = "https://daisyui.com/store/"
+const storeUrl = "https://daisyui.com/store"
 
 export const GET = async () => {
   const products = await getStoreProducts()
