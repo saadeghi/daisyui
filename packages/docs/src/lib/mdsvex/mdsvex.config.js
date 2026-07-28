@@ -4,17 +4,14 @@ import { fileURLToPath } from "url"
 import { mdsvex, escapeSvelte } from "mdsvex"
 import { createHighlighter } from "shiki"
 // import { transformerNotationHighlight } from "@shikijs/transformers"
-import remarkGithub from "remark-github"
-import remarkCodeTitles from "remark-flexible-code-titles"
-// import toc from "@jsdevtools/rehype-toc"
-import rehypeSlug from "rehype-slug"
-import { remarkLinkHeadings } from "./remark-link-headings.js"
-import rehypeExternalLinks from "rehype-external-links"
-import { visit } from "unist-util-visit"
-import { remarkRenderComponent } from "./remark-render-component.js"
-import { remarkTranslate } from "./remark-translate.js"
-import { remarkKeywordLinks } from "./remark-keyword-links.js"
-import { remarkHeadingIds } from "./headingIds.js"
+import { githubLinks } from "./github-links.js"
+import { codeTitles } from "./code-titles.js"
+import { linkHeadings } from "./heading-links.js"
+import { decorateExternalLinks } from "./external-links.js"
+import { visit } from "./visit.js"
+import { renderComponent } from "./render-component.js"
+import { translate } from "./translate.js"
+import { assignFallbackHeadingIds, assignHeadingIds } from "./headingIds.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -99,76 +96,38 @@ function renderHighlightedBlock(html, code, extraPreClass = "", showCopyButton =
   return `<div class="relative">\n  <div class="tooltip tooltip-left tooltip-accent self-start [justify-self:right] absolute right-2 top-1 z-10" data-tip="copy">\n    <button\n      class="btn btn-square btn-xs btn-neutral"\n      data-copy-code="${clipboardText}"\n      aria-label="Copy to clipboard"\n    >\n      <svg class="size-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">\n        <path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 5.445313 15.445313 5 16 5 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"></path>\n      </svg>\n    </button>\n  </div>\n{@html \`${renderedHtml}\` }\n</div>`
 }
 
-const rehypePlugins = [
-  rehypeSlug,
-  // [
-  //   toc,
-  //   {
-  //     position: "beforeend",
-  //     headings: ["h2", "h3", "h4"],
-  //     cssClasses: {
-  //       toc: "fixed top-[23rem] end-0 w-[9rem] text-[0.6875rem] pe-4",
-  //       link: "opacity-50 hover:opacity-80",
-  //       listItem: "",
-  //       list: "flex flex-col gap-1",
-  //     },
-  //   },
-  // ],
-  // [
-  //   linkHeadings,
-  //   {
-  //     behavior: "prepend",
-  //     content: {
-  //       type: "element",
-  //       tagName: "span",
-  //       properties: {
-  //         className: [
-  //           "heading-anchorlink-icon bg-base-content/5 hover:bg-primary/10 size-[1em] text-base-content/30 hover:text-primary/50 rounded-field border border-base-content/5 hover:border-primary/20 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200 align-text-bottom me-3 lg:absolute lg:ms-[-1.5em] lg:mt-1 transition-all group",
-  //         ],
-  //       },
-  //       children: [
-  //         {
-  //           type: "text",
-  //           value:
-  //             '<svg class="group-hover:scale-100 scale-90 transition-transform" fill="currentColor" width=".5em" height=".5em" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg" ><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>',
-  //         },
-  //       ],
-  //     },
-  //   },
-  // ],
-  [rehypeExternalLinks, { rel: ["nofollow"], target: "_blank" }],
-]
-
-const remarkPlugins = [
-  replacePlaceholders,
-  remarkHeadingIds,
-  remarkRenderComponent,
-  // remarkKeywordLinks,
-  remarkTranslate,
-  [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
-  [
-    remarkCodeTitles,
-    {
+const transformMarkdown = () => {
+  const transforms = [
+    replacePlaceholders(),
+    assignHeadingIds(),
+    renderComponent(),
+    translate(),
+    githubLinks({ repository: "https://github.com/saadeghi/daisyui" }),
+    codeTitles({
       containerClassName: "has-[.code-tab]:my-4 overflow-x-auto [direction:ltr]",
       titleClassName: "p-1 -mb-6 italic opacity-60 text-xs code-tab",
-    },
-  ],
-  [
-    customClasses,
-    {
+    }),
+    customClasses({
       blockquote: "alert not-italic items-start text-xs leading-loose *:m-0!",
-    },
-  ],
-  remarkLinkHeadings,
-]
+    }),
+    linkHeadings(),
+    assignFallbackHeadingIds(),
+    decorateExternalLinks(),
+  ]
+
+  return async (tree, file) => {
+    for (const transform of transforms) {
+      await transform(tree, file)
+    }
+  }
+}
 
 export const mdsvexExtensions = [".svx", ".md"]
 
 const config = {
   smartypants: false,
   extensions: mdsvexExtensions,
-  remarkPlugins: remarkPlugins,
-  rehypePlugins: rehypePlugins, // Keep rehypePlugins after remarkPlugins
+  remarkPlugins: [transformMarkdown],
   layout: {
     components: join(__dirname, "layout-components.svelte"),
     blog: join(__dirname, "layout-blog.svelte"),

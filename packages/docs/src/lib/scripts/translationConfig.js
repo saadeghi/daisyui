@@ -1,9 +1,7 @@
 import fs from "node:fs"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
-import { unified } from "unified"
-import remarkParse from "remark-parse"
-import { visit } from "unist-util-visit"
+import { parseMarkdownLine } from "../mdsvex/markdown-text.js"
 
 export const defaultLang = "en"
 export const chunkNames = ["common", "home", "docs", "components", "other"]
@@ -135,44 +133,13 @@ export const readAllTranslations = () => {
   return translations
 }
 
-const escapeQuotes = (text) => text.replace(/"/g, "&quot;")
 const decodeQuotes = (text) => text.replace(/&quot;/g, '"')
-const isExternalUrl = (url) => /^https?:\/\//i.test(url) || url.startsWith("//")
-
-const createLinkHtml = (url, text) => {
-  const attributes = [`href="${escapeQuotes(url)}"`]
-
-  if (isExternalUrl(url)) {
-    attributes.push('rel="nofollow"')
-    attributes.push('target="_blank"')
-  }
-
-  return `<a ${attributes.join(" ")}>${text}</a>`
-}
 
 const removeMetadata = (content) =>
   content.startsWith("---") ? content.slice(content.indexOf("---", 3) + 3) : content
 
 const cleanContent = (content) =>
   content.replace(/<script[\s\S]*?<\/script>/g, "").replace(/{#each[\s\S]*?\/each}/g, "")
-
-const extractTextFromNode = (node) => {
-  if (node.type === "text") return node.value
-  if (node.type === "inlineCode") return `\`${node.value}\``
-  if (node.type === "break") return "\n"
-  if (node.type === "link") {
-    const text =
-      node.children
-        ?.map((child) => {
-          if (child.type === "inlineCode") return `<code>${escapeQuotes(child.value)}</code>`
-          return extractTextFromNode(child)
-        })
-        .join("") || ""
-    return createLinkHtml(node.url, text)
-  }
-  if (node.children?.length) return node.children.map(extractTextFromNode).join("")
-  return ""
-}
 
 const shouldSkipText = (text) => {
   const trimmedText = text.trim()
@@ -265,21 +232,12 @@ export const extractMarkdownTranslations = (content, filePath = "", options = {}
     if (inCodeBlock || !line.trim()) continue
     if (line.includes("<Translate")) continue
 
-    const lineAst = unified().use(remarkParse).parse(line)
-
-    visit(lineAst, ["heading", "paragraph", "tableCell"], (node) => {
-      const text = extractTextFromNode(node)
-      if (skipComponentBlockHeadings && node.type === "heading" && text.trim().startsWith("~")) {
-        return
-      }
-
-      addTranslationText(translations, text)
-    })
-
-    visit(lineAst, "html", (node) => {
-      const match = node.value?.match(/^<([a-z][\w-]*)([^>]*)>([^<]+)<\/\1>$/i)
-      if (match) addTranslationText(translations, match[3])
-    })
+    const node = parseMarkdownLine(line, { renderLinks: true })
+    if (!node) continue
+    if (skipComponentBlockHeadings && node.type === "heading" && node.text.trim().startsWith("~")) {
+      continue
+    }
+    addTranslationText(translations, node.text)
   }
 
   return [...translations]

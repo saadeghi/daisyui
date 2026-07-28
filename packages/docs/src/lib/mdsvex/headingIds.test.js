@@ -1,18 +1,25 @@
 import { describe, expect, test } from "bun:test"
-import remarkParse from "remark-parse"
-import { unified } from "unified"
 import {
   createHeadingSlugger,
   getHeadingText,
-  remarkHeadingIds,
+  assignHeadingIds,
   slugHeadingText,
 } from "./headingIds.js"
 
-const parseHeading = (markdown) => unified().use(remarkParse).parse(markdown).children[0]
-
 describe("heading text extraction", () => {
   test("collects text from nested markdown and inline code", () => {
-    const heading = parseHeading("## 1. Use `code`, *emphasis*, and [links](/)")
+    const heading = {
+      type: "heading",
+      depth: 2,
+      children: [
+        { type: "text", value: "1. Use " },
+        { type: "inlineCode", value: "code" },
+        { type: "text", value: ", " },
+        { type: "emphasis", children: [{ type: "text", value: "emphasis" }] },
+        { type: "text", value: ", and " },
+        { type: "link", url: "/", children: [{ type: "text", value: "links" }] },
+      ],
+    }
     expect(getHeadingText(heading)).toBe("1. Use code, emphasis, and links")
   })
 
@@ -28,9 +35,13 @@ describe("heading text extraction", () => {
         ],
       }),
     ).toBe(' Cursor "LLM"')
-    expect(getHeadingText(parseHeading('## <Translate text="List of themes" />'))).toBe(
-      "List of themes",
-    )
+    expect(
+      getHeadingText({
+        type: "heading",
+        depth: 2,
+        children: [{ type: "html", value: '<Translate text="List of themes" />' }],
+      }),
+    ).toBe("List of themes")
   })
 })
 
@@ -49,10 +60,15 @@ describe("heading IDs", () => {
   })
 
   test("assigns unique IDs to every rendered heading in document order", () => {
-    const tree = unified()
-      .use(remarkParse)
-      .use(remarkHeadingIds)
-      .runSync(unified().use(remarkParse).parse("## Usage\n### ~Usage\n#### Usage"))
+    const tree = {
+      type: "root",
+      children: [
+        { type: "heading", depth: 2, children: [{ type: "text", value: "Usage" }] },
+        { type: "heading", depth: 3, children: [{ type: "text", value: "~Usage" }] },
+        { type: "heading", depth: 4, children: [{ type: "text", value: "Usage" }] },
+      ],
+    }
+    assignHeadingIds()(tree)
 
     expect(tree.children.map((node) => node.data.hProperties.id)).toEqual([
       "usage",

@@ -1,4 +1,4 @@
-import { visit } from "unist-util-visit"
+import { visit } from "./visit.js"
 import { getHeadingText } from "./headingIds.js"
 
 // Helper to escape quotes for HTML attributes
@@ -156,7 +156,7 @@ function componentToNodes(comp) {
 }
 
 // Main transform function
-export function remarkRenderComponent() {
+export function renderComponent() {
   return (tree) => {
     const components = []
     let currentComponent = null

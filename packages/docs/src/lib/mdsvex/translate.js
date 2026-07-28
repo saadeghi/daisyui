@@ -1,4 +1,4 @@
-import { visit } from "unist-util-visit"
+import { visit } from "./visit.js"
 import path from "path"
 import {
   doNotTranslateAfterMarker,
@@ -99,7 +99,7 @@ const handleTextWithCode = (text) => {
   return createTranslateNode(text)
 }
 
-export function remarkTranslate() {
+export function translate() {
   return (tree, file) => {
     // Skip processing if file is CHANGELOG.md
     const filename = file.filename || file.history?.[0] || ""

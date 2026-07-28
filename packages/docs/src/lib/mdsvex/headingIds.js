@@ -1,4 +1,4 @@
-import { visit } from "unist-util-visit"
+import { visit } from "./visit.js"
 
 const decodeHeadingText = (text) => text.replace(/&quot;/g, '"')
 
@@ -44,7 +44,7 @@ export const createHeadingSlugger = () => {
   }
 }
 
-export const remarkHeadingIds = () => (tree) => {
+export const assignHeadingIds = () => (tree) => {
   const slugHeading = createHeadingSlugger()
 
   visit(tree, "heading", (node) => {
@@ -53,5 +53,45 @@ export const remarkHeadingIds = () => (tree) => {
     node.data ??= {}
     node.data.hProperties ??= {}
     node.data.hProperties.id = slugHeading(getHeadingText(node))
+  })
+}
+
+const getRenderedHeadingText = (node) => {
+  if (node.type === "text" || node.type === "inlineCode") return node.value
+  if (!Array.isArray(node.children)) return ""
+  return node.children.map(getRenderedHeadingText).join("")
+}
+
+const createGithubSlugger = () => {
+  const occurrences = Object.create(null)
+
+  return (value) => {
+    const base = value
+      .toLowerCase()
+      .replace(/[^\p{L}\p{M}\p{N}\-_ ]/gu, "")
+      .replace(/ /g, "-")
+    let slug = base
+
+    while (Object.hasOwn(occurrences, slug)) {
+      occurrences[base] += 1
+      slug = `${base}-${occurrences[base]}`
+    }
+    occurrences[slug] = 0
+    return slug
+  }
+}
+
+/**
+ * Replaces rehype-slug for headings that do not already have the custom docs
+ * IDs. This currently applies to legacy level-one blog headings.
+ */
+export const assignFallbackHeadingIds = () => (tree) => {
+  const slug = createGithubSlugger()
+
+  visit(tree, "heading", (node) => {
+    if (node.data?.hProperties?.id) return
+    node.data ??= {}
+    node.data.hProperties ??= {}
+    node.data.hProperties.id = slug(getRenderedHeadingText(node))
   })
 }

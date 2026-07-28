@@ -1,6 +1,6 @@
-import { visit } from "unist-util-visit"
+import { visit } from "./visit.js"
 
-export function remarkLinkHeadings() {
+export function linkHeadings() {
   return (tree) => {
     visit(tree, "heading", (node) => {
       if (node.depth >= 2) {

@@ -43,16 +43,12 @@ import { join, dirname } from "node:path"
 import { fileURLToPath } from "url"
 import { serializeSearchCsv } from "$lib/searchCsv.js"
 import { getStoreProducts } from "$lib/server/content/store.js"
-import { createHeadingSlugger, getHeadingText } from "$lib/mdsvex/headingIds.js"
+import { createHeadingSlugger } from "$lib/mdsvex/headingIds.js"
+import { extractMarkdownHeadings } from "$lib/mdsvex/markdown-text.js"
 import { load as loadYaml } from "js-yaml"
-import remarkParse from "remark-parse"
-import { unified } from "unified"
-import { visit } from "unist-util-visit"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
-const markdownParser = unified().use(remarkParse)
-
 // Use import.meta.glob for build time (production) - this gets resolved at build time
 const markdownModules = import.meta.glob("../(routes)/**/*.md", {
   eager: true,
@@ -321,16 +317,15 @@ function shouldIndexHeading(title) {
 function extractHeadings(content) {
   // Remove frontmatter
   const contentWithoutFrontmatter = content.replace(/^---\s*\n[\s\S]*?\n---\n/, "")
-  const tree = markdownParser.parse(contentWithoutFrontmatter)
   const headings = []
   const slugHeading = createHeadingSlugger()
 
-  visit(tree, "heading", (node) => {
-    if (node.depth < 2) return
+  for (const node of extractMarkdownHeadings(contentWithoutFrontmatter)) {
+    if (node.depth < 2) continue
 
-    const originalTitle = getHeadingText(node)
+    const originalTitle = node.text
     const anchor = slugHeading(originalTitle)
-    if (node.depth > 3) return
+    if (node.depth > 3) continue
 
     // Clean the title first
     const cleanedTitle = cleanHeadingText(originalTitle)
@@ -338,17 +333,17 @@ function extractHeadings(content) {
     // Skip if cleaned title is empty
     if (!cleanedTitle) {
       console.warn(`Warning: Empty title after cleaning: "${originalTitle}"`)
-      return
+      continue
     }
 
     if (!shouldIndexHeading(cleanedTitle)) {
-      return
+      continue
     }
 
     // Skip if anchor is empty
     if (!anchor) {
       console.warn(`Warning: Empty anchor after processing: "${cleanedTitle}"`)
-      return
+      continue
     }
 
     headings.push({
@@ -356,7 +351,7 @@ function extractHeadings(content) {
       level: node.depth,
       anchor,
     })
-  })
+  }
 
   return headings
 }
