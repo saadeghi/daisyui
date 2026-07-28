@@ -23,15 +23,11 @@
     // Update attempts
     let attempts = (errorObj.attempts || 1) + 1
     const age = now - errorObj.timestamp
-    if (age > 10 * 1000) {
-      // More than 10s ago, update timestamp and refresh
-      const newObj = { timestamp: now, url, message: errorMessage, attempts }
-      localStorage.setItem(key, JSON.stringify(newObj))
-      window.location.reload()
+    if (age >= 60 * 1000) {
+      localStorage.removeItem(key)
       return
     }
-    // Less than 10s ago, set timer to refresh at 10s
-    const remaining = 10 * 1000 - age
+    const remaining = Math.min(10 * 1000, 60 * 1000 - age)
     const newObj = { ...errorObj, attempts }
     localStorage.setItem(key, JSON.stringify(newObj))
     console.log(`Attempt ${attempts}: Refreshing in ${Math.ceil(remaining / 1000)} seconds`)
