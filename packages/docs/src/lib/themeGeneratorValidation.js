@@ -6,6 +6,45 @@ const borderWidthPattern = /^(0\.5px|1px|1\.5px|2px)$/
 const depthPattern = /^(0|1)$/
 const noisePattern = /^(0|1)$/
 
+const colorProperties = new Set([
+  "--color-base-100",
+  "--color-base-200",
+  "--color-base-300",
+  "--color-base-content",
+  "--color-primary",
+  "--color-primary-content",
+  "--color-secondary",
+  "--color-secondary-content",
+  "--color-accent",
+  "--color-accent-content",
+  "--color-neutral",
+  "--color-neutral-content",
+  "--color-info",
+  "--color-info-content",
+  "--color-success",
+  "--color-success-content",
+  "--color-warning",
+  "--color-warning-content",
+  "--color-error",
+  "--color-error-content",
+])
+const radiusProperties = new Set(["--radius-selector", "--radius-field", "--radius-box"])
+const sizeProperties = new Set(["--size-selector", "--size-field"])
+const effectProperties = new Set(["--border", "--depth", "--noise"])
+const metadataProperties = new Set(["name", "default", "prefersdark", "id", "type"])
+const styleProperties = new Set([
+  "color-scheme",
+  ...colorProperties,
+  ...radiusProperties,
+  ...sizeProperties,
+  ...effectProperties,
+])
+const allowedProperties = new Set([...metadataProperties, ...styleProperties])
+
+export function isThemeStyleProperty(key) {
+  return styleProperties.has(key)
+}
+
 export function validateColor(color) {
   if (typeof color !== "string") {
     console.error("Color must be a string")
@@ -67,7 +106,8 @@ export function validateNoise(size) {
 
 export function validateThemeStructure(data) {
   try {
-    if (!data || typeof data !== "object") throw new Error("Invalid data structure")
+    if (!data || typeof data !== "object" || Array.isArray(data))
+      throw new Error("Invalid data structure")
 
     if (!validateThemeName(data.name)) throw new Error("Invalid theme name")
     if (!["light", "dark"].includes(data["color-scheme"])) {
@@ -77,14 +117,25 @@ export function validateThemeStructure(data) {
 
     // Validate all values
     for (const [key, value] of Object.entries(data)) {
-      if (key.startsWith("--color-") && !validateColor(value))
+      if (!allowedProperties.has(key)) throw new Error(`Unknown theme property: ${key}`)
+      if (colorProperties.has(key) && !validateColor(value))
         throw new Error(`Invalid color value for ${key}`)
-      if (key.startsWith("--radius-") && !validateRadius(value))
+      if (radiusProperties.has(key) && !validateRadius(value))
         throw new Error(`Invalid radius value for ${key}:${value}`)
-      if (key.startsWith("--size-") && !validateSize(value))
+      if (sizeProperties.has(key) && !validateSize(value))
         throw new Error(`Invalid size for ${key}`)
-      if (key.startsWith("--border") && !validateBorderWidth(value))
+      if (key === "--border" && !validateBorderWidth(value))
         throw new Error(`Invalid border width value for ${key}`)
+      if (key === "--depth" && !validateDepth(value))
+        throw new Error(`Invalid depth value for ${key}`)
+      if (key === "--noise" && !validateNoise(value))
+        throw new Error(`Invalid noise value for ${key}`)
+      if (["default", "prefersdark"].includes(key) && typeof value !== "boolean")
+        throw new Error(`Invalid boolean value for ${key}`)
+      if (key === "id" && (typeof value !== "string" || !value.trim()))
+        throw new Error("Invalid theme id")
+      if (key === "type" && !["builtin", "custom"].includes(value))
+        throw new Error("Invalid theme type")
     }
 
     return data

@@ -8,7 +8,11 @@
   import ThemeListItem from "$components/themegenerator/ThemeListItem.svelte"
   import { nameGenerator } from "$lib/nameGenerator"
   import { randomizeThemeColors } from "$lib/themeGeneratorRandomizer"
-  import { validateThemeName, validateThemeStructure } from "$lib/themeGeneratorValidation"
+  import {
+    isThemeStyleProperty,
+    validateThemeName,
+    validateThemeStructure,
+  } from "$lib/themeGeneratorValidation"
   import { browser } from "$app/environment"
   // import { pushState, replaceState } from "$app/navigation"
   import { onMount, tick } from "svelte"
@@ -91,7 +95,7 @@
 
   let currentThemeStyle = $derived.by(() => {
     let styleString = Object.entries(currentTheme)
-      .filter(([key]) => !["prefersdark", "default", "name", "type", "id"].includes(key))
+      .filter(([key]) => isThemeStyleProperty(key))
       .map(([key, value]) => `${key}:${value}`)
       .join(";")
     return styleString
