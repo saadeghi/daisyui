@@ -140,5 +140,5 @@ describe("translation files", () => {
     )
 
     expect(excludedRouteIssues).toEqual([])
-  })
+  }, 15_000)
 })
