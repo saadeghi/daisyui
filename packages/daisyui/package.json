@@ -50,6 +50,21 @@
   "browser": "./daisyui.css",
   "exports": {
     ".": "./index.js",
+    "./theme": {
+      "default": "./theme/index.js"
+    },
+    "./theme/object": {
+      "types": "./theme/object.d.ts",
+      "default": "./theme/object.js"
+    },
+    "./functions/themeOrder": {
+      "types": "./functions/themeOrder.d.ts",
+      "default": "./functions/themeOrder.js"
+    },
+    "./functions/variables": {
+      "types": "./functions/variables.d.ts",
+      "default": "./functions/variables.js"
+    },
     "./*": "./*"
   },
   "files": [
