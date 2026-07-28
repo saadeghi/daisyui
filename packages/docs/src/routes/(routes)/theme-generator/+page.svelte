@@ -13,6 +13,7 @@
     validateThemeName,
     validateThemeStructure,
   } from "$lib/themeGeneratorValidation"
+  import { parseStoredThemes, selectInitialTheme } from "$lib/themeGeneratorStorage"
   import { browser } from "$app/environment"
   // import { pushState, replaceState } from "$app/navigation"
   import { onMount, tick } from "svelte"
@@ -66,6 +67,9 @@
   }
   const LS_KEY = "gen-themes-0.2"
   const { data } = $props()
+  const storedThemesValue = browser ? localStorage.getItem(LS_KEY) : null
+  const storedThemes = parseStoredThemes(storedThemesValue)
+  const getInitialThemes = () => storedThemes ?? data.builtinThemes
   let showCssModal = $state(false)
   let dice = $state({ rotate: 0 })
   let dockActiveItem = $state("editor")
@@ -73,23 +77,8 @@
   let highlightedThemeId = $state(null)
   let colorModalsOpen = $state(0) // Track number of open color modals
 
-  const getStoredThemesByType = (type) => {
-    if (!browser) return []
-    const themes = JSON.parse(localStorage.getItem(LS_KEY) || "[]")
-    return themes
-      .map((theme) => ({
-        ...theme,
-        ...Object.fromEntries(
-          Object.entries(theme)
-            .filter(([key]) => key.startsWith("--color-"))
-            .map(([key, value]) => [key, value.trim()]),
-        ),
-      }))
-      .filter((item) => item.type === type)
-  }
-
-  let builtinThemes = $state(getStoredThemesByType("builtin"))
-  let customThemes = $state(getStoredThemesByType("custom"))
+  let builtinThemes = $state(getInitialThemes().filter((theme) => theme.type === "builtin"))
+  let customThemes = $state(getInitialThemes().filter((theme) => theme.type === "custom"))
   let currentTheme = $state({})
   let themes = $derived([...builtinThemes, ...customThemes])
 
@@ -223,17 +212,15 @@
   }
 
   onMount(() => {
+    const initialThemes = getInitialThemes()
+
     // First, try to get theme from URL
     const urlTheme = getThemeFromUrl()
 
     // Then, load themes from localStorage
-    builtinThemes = data.builtinThemes
-    const LSthemes = localStorage.getItem(LS_KEY)
-    if (LSthemes) {
-      const parsedThemes = JSON.parse(LSthemes)
-      builtinThemes = parsedThemes?.filter((item) => item.type === "builtin")
-      customThemes = parsedThemes?.filter((item) => item.type === "custom")
-    }
+    if (storedThemesValue !== null && !storedThemes) localStorage.removeItem(LS_KEY)
+    builtinThemes = initialThemes.filter((theme) => theme.type === "builtin")
+    customThemes = initialThemes.filter((theme) => theme.type === "custom")
 
     // If we have a URL theme, check if it matches an existing custom theme
     if (urlTheme) {
@@ -261,12 +248,7 @@
 
     // If no URL theme or invalid URL theme, proceed with regular theme selection
     const LSthemeId = localStorage.getItem("gen-theme-id")
-    if (LSthemeId && JSON.parse(LSthemes)?.some((item) => item.id === LSthemeId)) {
-      currentTheme = JSON.parse(LSthemes)?.find((item) => item.id === LSthemeId)
-    } else {
-      const lightTheme = themes.find((item) => item.name === "light")
-      currentTheme = lightTheme
-    }
+    currentTheme = selectInitialTheme(initialThemes, LSthemeId)
   })
 
   function setThemeInUrl(theme) {
