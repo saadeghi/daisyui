@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "vite dev --port 3000 --open",
     "build": "NODE_ENV=production vite build",
-    "analyze": "DOCS_ANALYZE=true bun run --bun build",
     "build:verify": "bun run --bun build && bun run verify:build",
     "preview": "vite preview --port 3000 --open",
     "build:preview": "bun run --bun build && bun run preview",
@@ -30,7 +29,6 @@
     "daisyui": "workspace:*",
     "json-diff": "1.0.6",
     "mdsvex": "0.12.7",
-    "rollup-plugin-visualizer": "7.0.1",
     "super-sitemap": "1.0.12",
     "svelte": "5.56.4",
     "theme-change": "3.0.4",

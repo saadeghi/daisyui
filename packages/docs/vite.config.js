@@ -2,24 +2,11 @@ import path from "node:path"
 import { defineConfig } from "vite"
 import { sveltekit } from "@sveltejs/kit/vite"
 import tailwindcss from "@tailwindcss/vite"
-import { visualizer } from "rollup-plugin-visualizer"
-
-const analyzeBundle = process.env.DOCS_ANALYZE === "true"
 
 export default defineConfig({
   plugins: [
     tailwindcss(),
     sveltekit(),
-    ...(analyzeBundle
-      ? [
-          visualizer({
-            emitFile: true,
-            filename: "stats.html",
-            template: "treemap",
-            brotliSize: true,
-          }),
-        ]
-      : []),
   ],
   resolve: {
     alias: {
