@@ -76,6 +76,21 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
     expected: { "tr.prefix-row-hover": "color: red;" },
   },
   {
+    name: "type and descendant selectors with classes",
+    input: { "div.btn .icon": "color: red;" },
+    expected: { "div.prefix-btn .prefix-icon": "color: red;" },
+  },
+  {
+    name: "descendant type selectors with classes",
+    input: { ".parent input.checkbox": "color: red;" },
+    expected: { ".prefix-parent input.prefix-checkbox": "color: red;" },
+  },
+  {
+    name: "comma-separated type selectors with classes",
+    input: { ".foo, div.bar": "color: red;" },
+    expected: { ".prefix-foo, div.prefix-bar": "color: red;" },
+  },
+  {
     name: "multiple pseudo-classes",
     input: { ".btn:hover:focus": "color: red;" },
     expected: { ".prefix-btn:hover:focus": "color: red;" },
@@ -175,6 +190,37 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
     expected: { ".prefix-parent": { " > .prefix-child:where(:last-child)": { color: "red" } } },
   },
   {
+    name: "classes in nested pseudo-functions",
+    input: {
+      ".btn:where(:checked:not(.filter [type='radio'].btn))": "color: red;",
+      ".timeline:has(.timeline-middle hr):first-child": "color: blue;",
+    },
+    expected: {
+      ".prefix-btn:where(:checked:not(.prefix-filter [type='radio'].prefix-btn))": "color: red;",
+      ".prefix-timeline:has(.prefix-timeline-middle hr):first-child": "color: blue;",
+    },
+  },
+  {
+    name: "attribute selector followed by a class selector",
+    input: { "[dir='rtl'] .indicator-start": "color: red;" },
+    expected: { "[dir='rtl'] .prefix-indicator-start": "color: red;" },
+  },
+  {
+    name: "class-like text in attributes, strings, comments, and escapes",
+    input: {
+      "[data-selector='.btn'] .btn": "color: red;",
+      ":is('.btn', .btn)": "color: blue;",
+      ".btn/* .icon */ .icon": "color: green;",
+      [String.raw`.btn \.external`]: "color: black;",
+    },
+    expected: {
+      "[data-selector='.btn'] .prefix-btn": "color: red;",
+      ":is('.btn', .prefix-btn)": "color: blue;",
+      ".prefix-btn/* .icon */ .prefix-icon": "color: green;",
+      [String.raw`.prefix-btn \.external`]: "color: black;",
+    },
+  },
+  {
     name: "nested combinators and :not(:has()) selector",
     input: {
       ".steps": { ".step": { "> .step-icon, &:not(:has(.step-icon)):after": { color: "red" } } },
@@ -189,8 +235,8 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
   },
   {
     name: ".prose selector",
-    input: { ".prose": "color: red;" },
-    expected: { ".prose": "color: red;" },
+    input: { ".prose": "color: red;", ".prose .btn": "color: blue;" },
+    expected: { ".prose": "color: red;", ".prose .prefix-btn": "color: blue;" },
   },
   {
     name: "third-party calendar selectors",

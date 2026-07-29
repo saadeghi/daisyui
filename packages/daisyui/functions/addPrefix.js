@@ -33,16 +33,110 @@ const prefixVariable = (variableName, prefix, excludedPrefixes) => {
   return `${prefix}${variableName}`
 }
 
-const getPrefixedSelector = (selector, prefix) => {
-  if (!selector.startsWith(".")) return selector
-  if (shouldExcludeSelector(selector.slice(1))) return selector
-  return `.${prefix}${selector.slice(1)}`
+const isHexDigit = (character) => character !== undefined && /^[0-9a-fA-F]$/.test(character)
+const isIdentifierCharacter = (character) => {
+  if (character === undefined) return false
+  const characterCode = character.charCodeAt(0)
+  return (
+    character === "-" ||
+    character === "_" ||
+    character === "\\" ||
+    (characterCode >= 48 && characterCode <= 57) ||
+    (characterCode >= 65 && characterCode <= 90) ||
+    (characterCode >= 97 && characterCode <= 122) ||
+    characterCode >= 128
+  )
+}
+
+const getEscapeEnd = (selector, start) => {
+  if (!isHexDigit(selector[start + 1])) return Math.min(start + 2, selector.length)
+
+  let end = start + 1
+  while (end < selector.length && end < start + 7 && isHexDigit(selector[end])) {
+    end++
+  }
+  if (/\s/.test(selector[end])) end++
+  return end
+}
+
+const getIdentifierEnd = (selector, start) => {
+  let end = start
+  while (end < selector.length && isIdentifierCharacter(selector[end])) {
+    if (selector[end] === "\\") {
+      end = getEscapeEnd(selector, end)
+    } else {
+      end++
+    }
+  }
+  return end
+}
+
+const prefixSelectorClasses = (selector, prefix) => {
+  let result = ""
+  let attributeDepth = 0
+  let quote = ""
+
+  for (let index = 0; index < selector.length;) {
+    const character = selector[index]
+
+    if (quote) {
+      if (character === "\\") {
+        const escapeEnd = getEscapeEnd(selector, index)
+        result += selector.slice(index, escapeEnd)
+        index = escapeEnd
+        continue
+      }
+      result += character
+      index++
+      if (character === quote) quote = ""
+      continue
+    }
+
+    if (character === '"' || character === "'") {
+      quote = character
+      result += character
+      index++
+      continue
+    }
+
+    if (character === "/" && selector[index + 1] === "*") {
+      const commentEnd = selector.indexOf("*/", index + 2)
+      const end = commentEnd === -1 ? selector.length : commentEnd + 2
+      result += selector.slice(index, end)
+      index = end
+      continue
+    }
+
+    if (character === "\\") {
+      const escapeEnd = getEscapeEnd(selector, index)
+      result += selector.slice(index, escapeEnd)
+      index = escapeEnd
+      continue
+    }
+
+    if (character === "[") {
+      attributeDepth++
+    } else if (character === "]" && attributeDepth > 0) {
+      attributeDepth--
+    }
+
+    if (character === "." && attributeDepth === 0 && isIdentifierCharacter(selector[index + 1])) {
+      const identifierEnd = getIdentifierEnd(selector, index + 1)
+      const identifier = selector.slice(index + 1, identifierEnd)
+      result += shouldExcludeSelector(identifier) ? `.${identifier}` : `.${prefix}${identifier}`
+      index = identifierEnd
+      continue
+    }
+
+    result += character
+    index++
+  }
+
+  return result
 }
 
 const getPrefixedKey = (key, prefix, excludedPrefixes) => {
   if (!prefix) return key
-
-  if (key.startsWith(".") && shouldExcludeSelector(key.slice(1))) return key
 
   if (key.startsWith("--")) {
     const variableName = key.slice(2)
@@ -53,103 +147,19 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
     return processStringValue(key, prefix, excludedPrefixes)
   }
 
-  if (key.startsWith("@") || key.startsWith("[")) {
+  if (key.startsWith("@")) {
     return key
   }
 
-  if (key.startsWith("&")) {
-    return key.replace(/\.([\w-]+)/g, (m, cls) =>
-      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
-    )
-  }
-
-  if (key.startsWith(":")) {
-    return key.replace(/\.([\w-]+)/g, (m, cls) =>
-      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
-    )
-  }
-
-  if (
-    key.includes(".") &&
-    !key.includes(" ") &&
-    !key.includes(">") &&
-    !key.includes("+") &&
-    !key.includes("~")
-  ) {
-    return key.replace(/\.([\w-]+)/g, (m, cls) =>
-      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
-    )
-  }
-
-  if (key.includes(">") || key.includes("+") || key.includes("~")) {
-    // For comma-separated selectors
-    if (key.includes(",")) {
-      return key
-        .split(/\s*,\s*/)
-        .map((part) => {
-          // Replace class names with prefixed versions for each part
-          return part.replace(/\.([\w-]+)/g, (m, cls) =>
-            shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
-          )
-        })
-        .join(", ")
-    }
-
-    // For simple combinators (not comma-separated)
-    let processedKey = key.replace(/\.([\w-]+)/g, (m, cls) =>
-      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
-    )
-
-    // Add a space before combinators at the beginning
-    if (
-      processedKey.startsWith(">") ||
-      processedKey.startsWith("+") ||
-      processedKey.startsWith("~")
-    ) {
-      processedKey = ` ${processedKey}`
-    }
-
-    return processedKey
-  }
-
-  if (key.includes(" ")) {
-    return key
-      .split(/\s+/)
-      .map((part) => {
-        if (part.startsWith(".")) {
-          return shouldExcludeSelector(part.slice(1)) ? part : getPrefixedSelector(part, prefix)
-        }
-        return part
-      })
-      .join(" ")
-  }
-
-  if (key.includes(":")) {
-    const [selector, ...pseudo] = key.split(":")
-    if (selector.startsWith(".")) {
-      return `${shouldExcludeSelector(selector.slice(1)) ? selector : getPrefixedSelector(selector, prefix)}:${pseudo.join(":")}`
-    }
-    return key.replace(/\.([\w-]+)/g, (m, cls) =>
-      shouldExcludeSelector(cls) ? `.${cls}` : `.${prefix}${cls}`,
-    )
-  }
-
-  if (key.startsWith(".")) {
-    return shouldExcludeSelector(key.slice(1)) ? key : getPrefixedSelector(key, prefix)
-  }
-
-  return key
+  const prefixedKey = prefixSelectorClasses(key, prefix)
+  return /^[>+~]/.test(prefixedKey) && !prefixedKey.includes(",") ? ` ${prefixedKey}` : prefixedKey
 }
 
 const processArrayValue = (value, prefix, excludedPrefixes) => {
   return value.map((item) => {
     if (typeof item === "string") {
       if (item.startsWith(".")) {
-        return shouldExcludeSelector(item.slice(1))
-          ? item
-          : prefix
-            ? `.${prefix}${item.slice(1)}`
-            : item
+        return getPrefixedKey(item, prefix, excludedPrefixes)
       }
       return processStringValue(item, prefix, excludedPrefixes)
     }
