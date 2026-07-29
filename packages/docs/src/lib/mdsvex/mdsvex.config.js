@@ -2,8 +2,7 @@ import fs from "fs/promises"
 import path, { join } from "path"
 import { fileURLToPath } from "url"
 import { mdsvex, escapeSvelte } from "mdsvex"
-import { createHighlighter } from "shiki"
-// import { transformerNotationHighlight } from "@shikijs/transformers"
+import { createHighlighter } from "./syntax-highlighter.js"
 import { githubLinks } from "./github-links.js"
 import { codeTitles } from "./code-titles.js"
 import { linkHeadings } from "./heading-links.js"
@@ -15,7 +14,7 @@ import { assignFallbackHeadingIds, assignHeadingIds } from "./headingIds.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const theme = JSON.parse(await fs.readFile(path.join(__dirname, "shiki.theme.json"), "utf-8"))
+const theme = JSON.parse(await fs.readFile(path.join(__dirname, "syntax-theme.json"), "utf-8"))
 
 const highlighter = await createHighlighter({
   langs: [
@@ -42,7 +41,6 @@ const highlighter = await createHighlighter({
     "vue",
   ],
   themes: [theme],
-  // transformers: [transformerNotationHighlight()],
 })
 
 const placeholders = {
@@ -140,14 +138,14 @@ const config = {
       let html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }))
       if (lang === "diff") {
         html = html.replace(
-          /<span style="color:var\(--shiki-([^)]+)\)">/g,
-          '<span class="shiki-$1" style="color:var(--shiki-$1)">',
+          /<span style="color:var\(--syntax-([^)]+)\)">/g,
+          '<span class="syntax-$1" style="color:var(--syntax-$1)">',
         )
         html = html.replace(
-          /<span class="shiki-punctuation" style="color:var\(--shiki-punctuation\)">([+-])<\/span>/g,
-          '<span class="select-none" style="color:var(--shiki-punctuation)">$1</span>',
+          /<span class="syntax-punctuation" style="color:var\(--syntax-punctuation\)">([+-])<\/span>/g,
+          '<span class="select-none" style="color:var(--syntax-punctuation)">$1</span>',
         )
-        return renderHighlightedBlock(html, code, "shiki-diff", false)
+        return renderHighlightedBlock(html, code, "syntax-diff", false)
       }
       return renderHighlightedBlock(escapeSvelte(html), code)
     },

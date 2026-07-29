@@ -37,7 +37,7 @@ Run this command
 
 <div class="has-[.code-tab]:my-4 overflow-x-auto [direction:ltr]">
 <div class="p-1 -mb-6 italic opacity-60 text-xs code-tab">prompt</div>
-<pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-token)">{data.installCommand}</span></span></code></pre>
+<pre class="syntax tokyo-night" style="background-color:var(--syntax-bg);color:var(--syntax-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--syntax-token)">{data.installCommand}</span></span></code></pre>
 </div>
 
 ### Usage

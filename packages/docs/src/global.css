@@ -67,14 +67,14 @@
   } */
 }
 
-pre.shiki[tabindex="0"]:focus-visible {
+pre.syntax[tabindex="0"]:focus-visible {
   @apply outline-base-300 outline-2 -outline-offset-4;
 }
 
 .code-wrapper {
   background-color: var(--color-neutral);
   border-radius: var(--radius-box);
-  pre.shiki {
+  pre.syntax {
     direction: ltr;
     padding: 0.75rem 1rem;
     border-radius: var(--radius-box);
@@ -198,32 +198,32 @@ pre.shiki[tabindex="0"]:focus-visible {
     }
   }
 }
-.shiki {
+.syntax {
   text-align: left;
-  --shiki-bg: var(--color-neutral);
-  --shiki-token: color-mix(
+  --syntax-bg: var(--color-neutral);
+  --syntax-token: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
     oklch(75% 0.3 242.69)
   );
-  --shiki-comment: color-mix(in oklab, transparent, var(--color-neutral-content) 30%);
-  --shiki-attr-name: color-mix(
+  --syntax-comment: color-mix(in oklab, transparent, var(--color-neutral-content) 30%);
+  --syntax-attr-name: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
     oklch(75% 0.3 337.94)
   );
-  --shiki-attr-value: color-mix(
+  --syntax-attr-value: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
     oklch(75% 0.3 173.24)
   );
-  --shiki-punctuation: color-mix(in oklab, white 40%, var(--color-neutral-content));
-  --shiki-added: color-mix(
+  --syntax-punctuation: color-mix(in oklab, white 40%, var(--color-neutral-content));
+  --syntax-added: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
     oklch(75% 0.3 173.24)
   );
-  --shiki-deleted: color-mix(
+  --syntax-deleted: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
     oklch(70% 0.2061 20.84)
@@ -233,16 +233,16 @@ pre.shiki[tabindex="0"]:focus-visible {
     padding-block: 0.3em;
     border-radius: 2px;
   }
-  .line:has(.shiki-added) {
-    background-color: color-mix(in oklab, var(--shiki-added) 20%, transparent);
+  .line:has(.syntax-added) {
+    background-color: color-mix(in oklab, var(--syntax-added) 20%, transparent);
   }
-  .line:has(.shiki-deleted) {
-    background-color: color-mix(in oklab, var(--shiki-deleted) 20%, transparent);
+  .line:has(.syntax-deleted) {
+    background-color: color-mix(in oklab, var(--syntax-deleted) 20%, transparent);
   }
 }
 .changelog-body {
   max-width: 80ch;
-  .shiki {
+  .syntax {
     .line {
       padding-block: 0.161em;
     }

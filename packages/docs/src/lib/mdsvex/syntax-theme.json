@@ -24,8 +24,8 @@
     "charts.green": "#41a6b5",
     "charts.lines": "#16161e",
     "charts.orange": "#ff9e64",
-    "charts.purple": "var(--shiki-attr-name)",
-    "charts.red": "var(--shiki-punctuation)",
+    "charts.purple": "var(--syntax-attr-name)",
+    "charts.red": "var(--syntax-punctuation)",
     "charts.yellow": "#e0af68",
     "debugConsole.errorForeground": "#bb616b",
     "debugConsole.infoForeground": "#787c99",
@@ -41,8 +41,8 @@
     "debugTokenExpression.error": "#bb616b",
     "debugTokenExpression.name": "#7dcfff",
     "debugTokenExpression.number": "#ff9e64",
-    "debugTokenExpression.string": "var(--shiki-attr-value)",
-    "debugTokenExpression.value": "var(--shiki-token)",
+    "debugTokenExpression.string": "var(--syntax-attr-value)",
+    "debugTokenExpression.value": "var(--syntax-token)",
     "debugToolBar.background": "#101014",
     "debugView.stateLabelBackground": "#14141b",
     "debugView.stateLabelForeground": "#787c99",
@@ -61,14 +61,14 @@
     "dropdown.background": "#14141b",
     "dropdown.foreground": "#787c99",
     "dropdown.listBackground": "#14141b",
-    "editor.background": "var(--shiki-bg)",
+    "editor.background": "var(--syntax-bg)",
     "editor.findMatchBackground": "#3d59a166",
     "editor.findMatchBorder": "#e0af68",
     "editor.findMatchHighlightBackground": "#3d59a166",
     "editor.findRangeHighlightBackground": "#515c7e33",
     "editor.focusedStackFrameHighlightBackground": "#73daca20",
     "editor.foldBackground": "#1111174a",
-    "editor.foreground": "var(--shiki-punctuation)",
+    "editor.foreground": "var(--syntax-punctuation)",
     "editor.inactiveSelectionBackground": "#515c7e25",
     "editor.lineHighlightBackground": "#1e202e",
     "editor.rangeHighlightBackground": "#515c7e20",
@@ -92,7 +92,7 @@
     "editorBracketPairGuide.activeBackground4": "#25aac2",
     "editorBracketPairGuide.activeBackground5": "#80a856",
     "editorBracketPairGuide.activeBackground6": "#c49a5a",
-    "editorCodeLens.foreground": "var(--shiki-comment)",
+    "editorCodeLens.foreground": "var(--syntax-comment)",
     "editorCursor.foreground": "#c0caf5",
     "editorError.foreground": "#db4b4b",
     "editorGhostText.foreground": "#646e9c",
@@ -149,15 +149,15 @@
     "extensionButton.prominentHoverBackground": "#3d59a1AA",
     "focusBorder": "#545c7e33",
     "foreground": "#787c99",
-    "gitDecoration.addedResourceForeground": "var(--shiki-added)",
+    "gitDecoration.addedResourceForeground": "var(--syntax-added)",
     "gitDecoration.conflictingResourceForeground": "#e0af68cc",
-    "gitDecoration.deletedResourceForeground": "var(--shiki-deleted)",
+    "gitDecoration.deletedResourceForeground": "var(--syntax-deleted)",
     "gitDecoration.ignoredResourceForeground": "#515670",
     "gitDecoration.modifiedResourceForeground": "#6183bb",
-    "gitDecoration.renamedResourceForeground": "var(--shiki-added)",
-    "gitDecoration.stageDeletedResourceForeground": "var(--shiki-deleted)",
+    "gitDecoration.renamedResourceForeground": "var(--syntax-added)",
+    "gitDecoration.stageDeletedResourceForeground": "var(--syntax-deleted)",
     "gitDecoration.stageModifiedResourceForeground": "#6183bb",
-    "gitDecoration.untrackedResourceForeground": "var(--shiki-added)",
+    "gitDecoration.untrackedResourceForeground": "var(--syntax-added)",
     "gitlens.gutterBackgroundColor": "#16161e",
     "gitlens.gutterForegroundColor": "#787c99",
     "gitlens.gutterUncommittedForegroundColor": "#7aa2f7",
@@ -210,7 +210,7 @@
     "merge.incomingHeaderBackground": "#3d59a1aa",
     "mergeEditor.change.background": "#41a6b525",
     "mergeEditor.change.word.background": "#41a6b540",
-    "mergeEditor.conflict.handled.minimapOverViewRuler": "var(--shiki-added)",
+    "mergeEditor.conflict.handled.minimapOverViewRuler": "var(--syntax-added)",
     "mergeEditor.conflict.handledFocused.border": "#41a6b565",
     "mergeEditor.conflict.handledUnfocused.border": "#41a6b525",
     "mergeEditor.conflict.unhandled.minimapOverViewRuler": "#e0af68",
@@ -298,14 +298,14 @@
     "terminal.ansiBrightBlue": "#7aa2f7",
     "terminal.ansiBrightCyan": "#7dcfff",
     "terminal.ansiBrightGreen": "#41a6b5",
-    "terminal.ansiBrightMagenta": "var(--shiki-attr-name)",
-    "terminal.ansiBrightRed": "var(--shiki-punctuation)",
+    "terminal.ansiBrightMagenta": "var(--syntax-attr-name)",
+    "terminal.ansiBrightRed": "var(--syntax-punctuation)",
     "terminal.ansiBrightWhite": "#acb0d0",
     "terminal.ansiBrightYellow": "#e0af68",
     "terminal.ansiCyan": "#7dcfff",
     "terminal.ansiGreen": "#73daca",
-    "terminal.ansiMagenta": "var(--shiki-attr-name)",
-    "terminal.ansiRed": "var(--shiki-punctuation)",
+    "terminal.ansiMagenta": "var(--syntax-attr-name)",
+    "terminal.ansiRed": "var(--syntax-punctuation)",
     "terminal.ansiWhite": "#787c99",
     "terminal.ansiYellow": "#e0af68",
     "terminal.background": "#16161e",
@@ -352,7 +352,7 @@
       "foreground": "#c0caf5"
     },
     "variable.declaration": {
-      "foreground": "var(--shiki-attr-name)"
+      "foreground": "var(--syntax-attr-name)"
     },
     "variable.defaultLibrary": {
       "foreground": "#2ac3de"
@@ -397,7 +397,7 @@
         "string.quoted.docstring.multi.python constant.character.escape"
       ],
       "settings": {
-        "foreground": "var(--shiki-comment)"
+        "foreground": "var(--syntax-comment)"
       }
     },
     {
@@ -454,7 +454,7 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "var(--shiki-attr-value)"
+        "foreground": "var(--syntax-attr-value)"
       }
     },
     {
@@ -463,7 +463,7 @@
         "constant.other.color.rgb-value.hex punctuation.definition.constant"
       ],
       "settings": {
-        "foreground": "var(--shiki-token)"
+        "foreground": "var(--syntax-token)"
       }
     },
     {
@@ -475,19 +475,19 @@
     {
       "scope": "invalid.deprecated",
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
       "scope": "storage.type",
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
       "scope": ["meta.var.expr storage.type", "storage.modifier"],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -519,7 +519,7 @@
       "scope": ["keyword.operator.spread", "keyword.operator.rest"],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -550,7 +550,7 @@
         "meta.at-rule.function variable.parameter.url"
       ],
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -569,7 +569,7 @@
     {
       "scope": ["keyword", "keyword.control", "keyword.other.important"],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -589,13 +589,13 @@
         "keyword.operator.or.regexp"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -612,7 +612,7 @@
     {
       "scope": "punctuation.definition.tag",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -689,13 +689,13 @@
     {
       "scope": "source.cpp meta.block variable.other",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
       "scope": "support.other.variable",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -744,7 +744,7 @@
         "keyword.other.unit"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -756,14 +756,14 @@
         "variable.other.declaration"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
       "scope": "entity.other.inherited-class",
       "settings": {
         "fontStyle": "",
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -818,7 +818,7 @@
     {
       "scope": ["support.constant.font-name", "meta.definition.variable"],
       "settings": {
-        "foreground": "var(--shiki-attr-value)"
+        "foreground": "var(--syntax-attr-value)"
       }
     },
     {
@@ -827,7 +827,7 @@
         "meta.at-rule.mixin.scss entity.name.function.scss"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-value)"
+        "foreground": "var(--syntax-attr-value)"
       }
     },
     {
@@ -890,7 +890,7 @@
         "meta.at-rule.include keyword.control.at-rule.include"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -907,7 +907,7 @@
         "keyword.control punctuation.definition.keyword"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -931,7 +931,7 @@
     {
       "scope": "variable.language",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -947,7 +947,7 @@
         "keyword.other.this"
       ],
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -957,7 +957,7 @@
         "text.html.basic entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -972,7 +972,7 @@
         "meta.directive.vue entity.other.attribute-name.html"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -989,19 +989,19 @@
         "meta.property-list meta.property-value"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
       "scope": "markup.inserted",
       "settings": {
-        "foreground": "var(--shiki-added)"
+        "foreground": "var(--syntax-added)"
       }
     },
     {
       "scope": "markup.deleted",
       "settings": {
-        "foreground": "var(--shiki-deleted)"
+        "foreground": "var(--syntax-deleted)"
       }
     },
     {
@@ -1019,13 +1019,13 @@
     {
       "scope": "punctuation.definition.group",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
       "scope": ["constant.other.character-class.regexp"],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -1040,7 +1040,7 @@
     {
       "scope": "keyword.operator.quantifier.regexp",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -1052,7 +1052,7 @@
     {
       "scope": "constant.character.escape",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -1067,7 +1067,7 @@
     {
       "scope": "keyword.other.unit",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -1097,7 +1097,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -1129,7 +1129,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -1137,7 +1137,7 @@
         "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
       ],
       "settings": {
-        "foreground": "var(--shiki-attr-value)"
+        "foreground": "var(--syntax-attr-value)"
       }
     },
     {
@@ -1179,13 +1179,13 @@
     {
       "scope": ["meta.tag JSXNested", "meta.jsx.children", "text.html", "text.log"],
       "settings": {
-        "foreground": "var(--shiki-token)"
+        "foreground": "var(--syntax-token)"
       }
     },
     {
       "scope": "text.html.markdown markup.inline.raw.markdown",
       "settings": {
-        "foreground": "var(--shiki-attr-name)"
+        "foreground": "var(--syntax-attr-name)"
       }
     },
     {
@@ -1201,7 +1201,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
@@ -1241,7 +1241,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "var(--shiki-token)"
+        "foreground": "var(--syntax-token)"
       }
     },
     {
@@ -1311,14 +1311,14 @@
         "variable.language.fenced.markdown"
       ],
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {
       "scope": "meta.separator",
       "settings": {
         "fontStyle": "bold",
-        "foreground": "var(--shiki-comment)"
+        "foreground": "var(--syntax-comment)"
       }
     },
     {
@@ -1354,7 +1354,7 @@
     {
       "scope": "entity.tag.apacheconf",
       "settings": {
-        "foreground": "var(--shiki-punctuation)"
+        "foreground": "var(--syntax-punctuation)"
       }
     },
     {

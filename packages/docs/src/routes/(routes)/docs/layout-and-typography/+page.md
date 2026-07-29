@@ -107,7 +107,7 @@ Here is an example of inline code: `console.log('Hello, world!');`
 
 ### Code Blocks
 
-Code blocks are ideal for displaying larger pieces of code. You can use Shiki, Prism or other libraries for code highlighting.
+Code blocks are ideal for displaying larger pieces of code. You can use Prism or other libraries for code highlighting.
 
 ```javascript
 function greet() {

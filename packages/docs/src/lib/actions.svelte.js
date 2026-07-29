@@ -40,45 +40,45 @@ export const htmlToJsx = (node) => {
     '"0"': "{0}",
     "&lt;!--": "{/*",
     "--&gt;": "*/}",
-    '<span style="color:var(--shiki-attr-name)">minlength</span>':
-      '<span style="color:var(--shiki-attr-name)">minLength</span>',
-    '<span style="color:var(--shiki-attr-name)"> minlength</span>':
-      '<span style="color:var(--shiki-attr-name)"> minLength</span>',
-    '<span style="color:var(--shiki-attr-name)">    minlength</span>':
-      '<span style="color:var(--shiki-attr-name)">    minLength</span>',
-    '<span style="color:var(--shiki-attr-name)">maxlength</span>':
-      '<span style="color:var(--shiki-attr-name)">maxLength</span>',
-    '<span style="color:var(--shiki-attr-name)"> maxlength</span>':
-      '<span style="color:var(--shiki-attr-name)"> maxLength</span>',
-    '<span style="color:var(--shiki-attr-name)">    maxlength</span>':
-      '<span style="color:var(--shiki-attr-name)">    maxLength</span>',
+    '<span style="color:var(--syntax-attr-name)">minlength</span>':
+      '<span style="color:var(--syntax-attr-name)">minLength</span>',
+    '<span style="color:var(--syntax-attr-name)"> minlength</span>':
+      '<span style="color:var(--syntax-attr-name)"> minLength</span>',
+    '<span style="color:var(--syntax-attr-name)">    minlength</span>':
+      '<span style="color:var(--syntax-attr-name)">    minLength</span>',
+    '<span style="color:var(--syntax-attr-name)">maxlength</span>':
+      '<span style="color:var(--syntax-attr-name)">maxLength</span>',
+    '<span style="color:var(--syntax-attr-name)"> maxlength</span>':
+      '<span style="color:var(--syntax-attr-name)"> maxLength</span>',
+    '<span style="color:var(--syntax-attr-name)">    maxlength</span>':
+      '<span style="color:var(--syntax-attr-name)">    maxLength</span>',
 
-    '<span style="color:var(--shiki-attr-name)">class</span>':
-      '<span style="color:var(--shiki-attr-name)">className</span>',
-    '<span style="color:var(--shiki-attr-name)"> class</span>':
-      '<span style="color:var(--shiki-attr-name)"> className</span>',
-    '<span style="color:var(--shiki-attr-name)">  class</span>':
-      '<span style="color:var(--shiki-attr-name)">  className</span>',
-    '<span style="color:var(--shiki-attr-name)">    class</span>':
-      '<span style="color:var(--shiki-attr-name)">    className</span>',
-    '<span style="color:var(--shiki-attr-name)">      class</span>':
-      '<span style="color:var(--shiki-attr-name)">      className</span>',
-    '<span style="color:var(--shiki-attr-name)">        class</span>':
-      '<span style="color:var(--shiki-attr-name)">        className</span>',
-    '<span style="color:var(--shiki-attr-name)">          class</span>':
-      '<span style="color:var(--shiki-attr-name)">          className</span>',
-    '<span style="color:var(--shiki-attr-name)">            class</span>':
-      '<span style="color:var(--shiki-attr-name)">            className</span>',
-    '<span style="color:var(--shiki-attr-name)">              class</span>':
-      '<span style="color:var(--shiki-attr-name)">              className</span>',
-    '<span style="color:var(--shiki-attr-name)"> for</span>':
-      '<span style="color:var(--shiki-attr-name)"> htmlFor</span>',
-    '<span style="color:var(--shiki-attr-name)"> checked</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">checked</span><span style="color:var(--shiki-punctuation)">"</span>':
-      '<span style="color:var(--shiki-attr-name)"> defaultChecked</span>',
-    '<span style="color:var(--shiki-token)"><span style="color:var(--shiki-token)"><span style="color:var(--shiki-punctuation)"&lt;</span>br</span><span style="color:var(--shiki-punctuation)"&gt;</span></span>':
-      '<span style="color:var(--shiki-token)"><span style="color:var(--shiki-token)"><span style="color:var(--shiki-punctuation)"&lt;</span>br /</span><span style="color:var(--shiki-punctuation)"&gt;</span></span>',
-    '<span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">0</span><span style="color:var(--shiki-punctuation)">"</span>':
-      '<span style="color:var(--shiki-punctuation)">{</span><span style="color:var(--shiki-attr-value)">0</span><span style="color:var(--shiki-punctuation)">}</span>',
+    '<span style="color:var(--syntax-attr-name)">class</span>':
+      '<span style="color:var(--syntax-attr-name)">className</span>',
+    '<span style="color:var(--syntax-attr-name)"> class</span>':
+      '<span style="color:var(--syntax-attr-name)"> className</span>',
+    '<span style="color:var(--syntax-attr-name)">  class</span>':
+      '<span style="color:var(--syntax-attr-name)">  className</span>',
+    '<span style="color:var(--syntax-attr-name)">    class</span>':
+      '<span style="color:var(--syntax-attr-name)">    className</span>',
+    '<span style="color:var(--syntax-attr-name)">      class</span>':
+      '<span style="color:var(--syntax-attr-name)">      className</span>',
+    '<span style="color:var(--syntax-attr-name)">        class</span>':
+      '<span style="color:var(--syntax-attr-name)">        className</span>',
+    '<span style="color:var(--syntax-attr-name)">          class</span>':
+      '<span style="color:var(--syntax-attr-name)">          className</span>',
+    '<span style="color:var(--syntax-attr-name)">            class</span>':
+      '<span style="color:var(--syntax-attr-name)">            className</span>',
+    '<span style="color:var(--syntax-attr-name)">              class</span>':
+      '<span style="color:var(--syntax-attr-name)">              className</span>',
+    '<span style="color:var(--syntax-attr-name)"> for</span>':
+      '<span style="color:var(--syntax-attr-name)"> htmlFor</span>',
+    '<span style="color:var(--syntax-attr-name)"> checked</span><span style="color:var(--syntax-punctuation)">=</span><span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">checked</span><span style="color:var(--syntax-punctuation)">"</span>':
+      '<span style="color:var(--syntax-attr-name)"> defaultChecked</span>',
+    '<span style="color:var(--syntax-token)"><span style="color:var(--syntax-token)"><span style="color:var(--syntax-punctuation)"&lt;</span>br</span><span style="color:var(--syntax-punctuation)"&gt;</span></span>':
+      '<span style="color:var(--syntax-token)"><span style="color:var(--syntax-token)"><span style="color:var(--syntax-punctuation)"&lt;</span>br /</span><span style="color:var(--syntax-punctuation)"&gt;</span></span>',
+    '<span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">0</span><span style="color:var(--syntax-punctuation)">"</span>':
+      '<span style="color:var(--syntax-punctuation)">{</span><span style="color:var(--syntax-attr-value)">0</span><span style="color:var(--syntax-punctuation)">}</span>',
     tabindex: "tabIndex",
     "clip-rule": "clipRule",
     "fill-opacity": "fillOpacity",
@@ -98,8 +98,8 @@ export const htmlToJsx = (node) => {
     node.innerHTML = replaceStrings(originalContent, stringsToReplace)
       // fix the broken tabIndex={0} in JSX tab
       .replaceAll(
-        'var(--shiki-punctuation)" tabIndex={0}>',
-        'var(--shiki-punctuation)" tabindex="0">',
+        'var(--syntax-punctuation)" tabIndex={0}>',
+        'var(--syntax-punctuation)" tabindex="0">',
       )
   }
 
