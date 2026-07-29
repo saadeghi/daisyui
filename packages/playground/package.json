@@ -3,21 +3,13 @@
   "private": true,
   "name": "daisyui-playground",
   "scripts": {
-    "predev": "if ! [ -f src/components/Component.astro ]; then echo '<button class=btn>Hello</button>' > src/components/Component.astro; fi",
-    "dev": "astro dev --open",
-    "build": "astro build",
-    "preview": "astro preview"
+    "predev": "if ! [ -f src/components/Component.html ]; then echo '<button class=btn>Hello</button>' > src/components/Component.html; fi",
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "astro": "7.0.2",
-    "daisyui": "workspace:*"
-  },
-  "dependencies": {
-    "@astrojs/react": "6.0.0",
-    "@astrojs/vue": "7.0.0",
-    "pikaday": "1.8.2",
-    "react": "19.2.7",
-    "react-day-picker": "10.0.1",
-    "react-dom": "19.2.7"
+    "daisyui": "workspace:*",
+    "vite": "8.1.0"
   }
 }

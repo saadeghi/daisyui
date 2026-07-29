@@ -1,8 +1,13 @@
----
-import Main from "../layouts/Main.astro"
----
-
-<Main>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>daisyUI playground — prefix</title>
+    <link rel="stylesheet" href="/main.css" />
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
   <div class="rounded-box bg-base-100 border-base-content/5 text-base-content not-prose grid gap-3 border p-6 max-w-2xl mx-auto my-6">
     <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
       <button class="x-btn">Default</button>
@@ -163,4 +168,5 @@ import Main from "../layouts/Main.astro"
       </div>
     </div>
   </div>
-</Main>
+  </body>
+</html>

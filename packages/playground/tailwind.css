@@ -1,13 +1,4 @@
 @import "tailwindcss";
 @source "./src";
-@source "./src/components/Component.astro";
-
-/* @plugin "@tailwindcss/typography"; */
-
-@plugin "daisyui" {
-  themes: light --default;
-}
-
-/* .btn {
-  @apply m-2;
-} */
+@source "./src/components/Component.html";
+@plugin "daisyui";
