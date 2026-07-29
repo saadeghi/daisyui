@@ -4,7 +4,7 @@
   "name": "daisyui-playground",
   "scripts": {
     "predev": "if ! [ -f src/components/Component.html ]; then echo '<button class=btn>Hello</button>' > src/components/Component.html; fi",
-    "dev": "vite --open",
+    "dev": "bun dev.js",
     "build": "vite build",
     "preview": "vite preview"
   },
