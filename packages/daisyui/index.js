@@ -1,6 +1,7 @@
 const version = ""
 import { pluginOptionsHandler } from "./functions/pluginOptionsHandler.js"
 import { plugin } from "./functions/plugin.js"
+import { nestCssLayers } from "./functions/nestCssLayers.js"
 import variables from "./functions/variables.js"
 import themesObject from "./theme/object.js"
 import { base, components, utilities } from "./imports.js"
@@ -34,12 +35,18 @@ export default plugin.withOptions(
 
       Object.entries(components).forEach(([name, item]) => {
         if (!shouldIncludeItem(name)) return
-        item({ addComponents, prefix })
+        item({
+          addComponents: (styles) => addComponents(nestCssLayers(styles)),
+          prefix,
+        })
       })
 
       Object.entries(utilities).forEach(([name, item]) => {
         if (!shouldIncludeItem(name)) return
-        item({ addUtilities, prefix })
+        item({
+          addUtilities: (styles) => addUtilities(nestCssLayers(styles)),
+          prefix,
+        })
       })
 
       // drawer variants. Can not be nested in layers so defined here
