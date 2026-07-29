@@ -153,6 +153,11 @@ const processArrayValue = (value, prefix, excludedPrefixes) => {
       }
       return processStringValue(item, prefix, excludedPrefixes)
     }
+    if (typeof item === "object" && item !== null) {
+      return Array.isArray(item)
+        ? processArrayValue(item, prefix, excludedPrefixes)
+        : addPrefix(item, prefix, excludedPrefixes)
+    }
     return item
   })
 }

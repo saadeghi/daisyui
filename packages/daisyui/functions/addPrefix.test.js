@@ -239,6 +239,17 @@ for (const { name, input, expected, customExcludedPrefixes } of [
     expected: { ".prefix-btn": ["color: red;", "var(--prefix-custom-var)"] },
   },
   {
+    name: "objects in arrays",
+    input: {
+      "@layer components": [{ ".btn": { "--custom-var": "var(--another-var)" } }],
+    },
+    expected: {
+      "@layer components": [
+        { ".prefix-btn": { "--prefix-custom-var": "var(--prefix-another-var)" } },
+      ],
+    },
+  },
+  {
     name: "multiple CSS variables in one value",
     input: { ".btn": "background: var(--custom-var1) var(--custom-var2);" },
     expected: { ".prefix-btn": "background: var(--prefix-custom-var1) var(--prefix-custom-var2);" },
