@@ -1,1 +1,0 @@
-import{A as e,At as t,Nt as n,V as r,ct as i,nt as a,z as o}from"../chunks/DooIEoVZ.js";import"../chunks/xihTtKlq.js";/* empty css                */var s=r(`<div dir="ltr"><!></div>`);function c(r,c){var l=s();e(i(l),()=>c.children??n),t(l),a(()=>l.dir=l.dir),o(r,l)}export{c as component};
