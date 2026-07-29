@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.7.5 (2026-07-29)
+
+### Bug Fixes
+
+* handle prefixed nested and type selectors ([51fd870](https://github.com/saadeghi/daisyui/commit/51fd870bede3f1fa1e267848e6b9a843efe08876))
 ## [5.7.4](https://github.com/saadeghi/daisyui/compare/v5.7.3...v5.7.4) (2026-07-25)
 
 ### Bug Fixes
