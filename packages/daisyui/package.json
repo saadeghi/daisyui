@@ -73,6 +73,7 @@
     "components",
     "!components/*/class.json",
     "functions/addPrefix.js",
+    "functions/nestCssLayers.js",
     "functions/plugin.js",
     "functions/pluginOptionsHandler.js",
     "functions/themeOrder.js",
