@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.6](https://github.com/saadeghi/daisyui/compare/v5.7.5...v5.7.6) (2026-07-29)
+
+### Bug Fixes
+
+* missing import for nested layers ([a804cf7](https://github.com/saadeghi/daisyui/commit/a804cf70cbf4691d0534371089b7b30a7b64e98e))
 ## 5.7.5 (2026-07-29)
 
 ### Bug Fixes
