@@ -19,7 +19,7 @@
   import { onMount, tick } from "svelte"
 
   import { confetti } from "@neoconfetti/svelte"
-  import pako from "pako"
+  import { deflate, inflate } from "pako"
 
   // Add state to control confetti visibility
   let showConfetti = $state(false)
@@ -55,14 +55,14 @@
 
   const pack = (obj) => {
     const jsonString = JSON.stringify(obj)
-    const compressed = pako.deflate(jsonString)
+    const compressed = deflate(jsonString)
     // return btoa(String.fromCharCode.apply(null, new Uint8Array(compressed)))
     return toBase64Url(compressed)
   }
   const unpack = (str) => {
     // const compressed = Uint8Array.from(atob(str), (c) => c.charCodeAt(0))
     const compressed = fromBase64Url(str)
-    const jsonString = pako.inflate(compressed, { to: "string" })
+    const jsonString = inflate(compressed, { toText: true })
     return JSON.parse(jsonString)
   }
   const LS_KEY = "gen-themes-0.2"

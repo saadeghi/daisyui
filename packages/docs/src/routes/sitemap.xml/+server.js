@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit"
-import * as sitemap from "super-sitemap"
+import * as sitemap from "super-sitemap/sveltekit"
 import { codingTools } from "$lib/data/codingTools.js"
 import { getComparisonSitemapData } from "$lib/server/content/comparisons.js"
 import { getSkillProductIds } from "$lib/server/content/skills.js"
@@ -45,12 +45,12 @@ export const GET = async () => {
     origin: "https://daisyui.com",
     additionalPaths: ["/llms.txt"],
     excludeRoutePatterns: [
-      ".*\\/design$",
-      ".*\\/accessibility$",
-      ".*\\/checkout$",
-      "/blog/tag/",
-      "/resources/videos/",
-      "^/pages",
+      /\/design$/,
+      /\/accessibility$/,
+      /\/checkout$/,
+      /\/blog\/tag\//,
+      /\/resources\/videos\//,
+      /^\/pages/,
     ],
     paramValues: {
       "/store/[productId]": productIds,
