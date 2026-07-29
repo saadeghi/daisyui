@@ -242,7 +242,7 @@
               onclick={() => track(`Navbar > ${item.name}`)}
             >
               <span
-                class={`px-1 xl:px-2 flex items-center gap-1 ${shouldShowCountdownTooltip(item) ? "tooltip tooltip-bottom tooltip-open group" : ""}`}
+                class={`px-1 xl:px-2 flex items-center gap-1 ${shouldShowCountdownTooltip(item) ? "tooltip tooltip-bottom! tooltip-open group" : ""}`}
               >
                 {#if item.icon}
                   <span class="max-xl:hidden text-base-content group-hover:opacity-100 opacity-50"

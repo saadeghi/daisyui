@@ -458,30 +458,26 @@
         >
           {#each Object.entries(data.product.links) as [link, value]}
             {#if link === "license"}
-              <div>
-                <a
-                  href={value}
-                  class="flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 *:transition-opacity hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
-                  onclick={(e) => (e.preventDefault(), openModal(value))}
-                >
-                  {@html getLinksIcon(link)}
-                  <span>{link}</span>
-                </a>
-              </div>
+              <a
+                href={value}
+                class="flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 *:transition-opacity hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
+                onclick={(e) => (e.preventDefault(), openModal(value))}
+              >
+                {@html getLinksIcon(link)}
+                <span>{link}</span>
+              </a>
             {:else if link === "screenshot"}
-              <div>
-                <a
-                  href={value}
-                  class="flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 *:transition-opacity hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
-                  onclick={(e) => {
-                    ;(e.preventDefault(), screenshotDialog.showModal())
-                    screenshotUrl = value
-                  }}
-                >
-                  {@html getLinksIcon(link)}
-                  <span>{link}</span>
-                </a>
-              </div>
+              <a
+                href={value}
+                class="flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 *:transition-opacity hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
+                onclick={(e) => {
+                  ;(e.preventDefault(), screenshotDialog.showModal())
+                  screenshotUrl = value
+                }}
+              >
+                {@html getLinksIcon(link)}
+                <span>{link}</span>
+              </a>
             {:else}
               <a
                 target="_blank"
