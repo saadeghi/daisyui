@@ -242,6 +242,7 @@ pre.syntax[tabindex="0"]:focus-visible {
 }
 .changelog-body {
   max-width: 80ch;
+  word-break: break-word;
   .syntax {
     .line {
       padding-block: 0.161em;
