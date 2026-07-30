@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.9](https://github.com/saadeghi/daisyui/compare/v5.7.8...v5.7.9) (2026-07-30)
+
+### Bug Fixes
+
+* missing CDN responsive class names ([46040b1](https://github.com/saadeghi/daisyui/commit/46040b14403a2d367b234f8d21e66fce70066390))
 ## [5.7.8](https://github.com/saadeghi/daisyui/compare/v5.7.7...v5.7.8) (2026-07-30)
 
 ### Bug Fixes
