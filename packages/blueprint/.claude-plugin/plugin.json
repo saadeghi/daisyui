@@ -1,7 +1,7 @@
 {
   "name": "daisyui-blueprint",
   "displayName": "daisyUI Blueprint MCP",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Official daisyUI MCP server. Requires a paid license from https://daisyui.com/blueprint",
   "author": {
     "name": "daisyUI",
