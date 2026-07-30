@@ -49,3 +49,30 @@ test("generateResponsiveVariants adds breakpoint variants and keeps keyframes on
   expect(result).toContain(".md\\:btn{color:red}")
   expect(result.match(/@keyframes pulse/g)).toHaveLength(1)
 })
+
+test("generateResponsiveVariants prefixes entry rules through structural at-rules", async () => {
+  const result = await generateResponsiveVariants(`
+    @layer daisyui.l1.l2 {
+      .footer-horizontal { grid-auto-flow: column }
+      .footer-horizontal.footer-center { grid-auto-flow: row dense }
+      .footer {
+        color: red;
+        & > .title { color: blue }
+      }
+    }
+    @media (hover: hover) {
+      .btn:hover { color: red }
+    }
+    @supports (display: grid) {
+      .card { display: grid }
+    }
+  `)
+
+  expect(result).toContain(".md\\:footer-horizontal { grid-auto-flow: column }")
+  expect(result).toContain(".md\\:footer-horizontal.footer-center { grid-auto-flow: row dense }")
+  expect(result).toContain(".md\\:footer {")
+  expect(result).toContain("& > .title { color: blue }")
+  expect(result).not.toContain(".md\\:&")
+  expect(result).toContain(".md\\:btn:hover { color: red }")
+  expect(result).toContain(".md\\:card { display: grid }")
+})

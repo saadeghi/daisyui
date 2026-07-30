@@ -43,6 +43,19 @@ export function extractKeyframes(root) {
   return keyframesStyles
 }
 
+function hasRuleAncestor(rule) {
+  let parent = rule.parent
+
+  while (parent) {
+    if (parent.type === "rule") {
+      return true
+    }
+    parent = parent.parent
+  }
+
+  return false
+}
+
 export async function generateResponsiveVariants(css) {
   let responsiveStyles = ""
   const root = postcss.parse(css)
@@ -53,7 +66,7 @@ export async function generateResponsiveVariants(css) {
     const prefixedCss = await postcss([
       (root) => {
         root.walkRules((rule) => {
-          if (rule.parent.type === "root") {
+          if (!hasRuleAncestor(rule)) {
             rule.selector = transformSelector(rule.selector, breakpoint)
           }
         })
