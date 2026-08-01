@@ -5,7 +5,17 @@
   import ComponentFooter from "$components/ComponentFooter.svelte"
   import SEO from "$components/SEO.svelte"
   import { t } from "$lib/i18n.svelte.js"
-  let { data, title, desc, alert, dir, seo = true, componentfooter = true, children } = $props()
+  let {
+    data,
+    title,
+    desc,
+    alert,
+    dir,
+    seo = true,
+    componentfooter = true,
+    sourcePageFile = "+page.md",
+    children,
+  } = $props()
 
   onMount(() => {
     const handleClick = async (event) => {
@@ -51,7 +61,7 @@
     {/if}
     {@render children?.()}
     {#if componentfooter}
-      <ComponentFooter pages={data?.sidebarPages} />
+      <ComponentFooter pages={data?.sidebarPages} {sourcePageFile} />
     {/if}
   </div>
   <AlternativeSidebar />

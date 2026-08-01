@@ -48,6 +48,12 @@ const createValidBuildFixture = () => {
   return buildDir
 }
 
+const createRepoFixture = () => {
+  const repoDir = mkdtempSync(join(tmpdir(), "daisyui-repo-"))
+  temporaryDirectories.push(repoDir)
+  return repoDir
+}
+
 afterEach(() => {
   for (const directory of temporaryDirectories.splice(0)) {
     rmSync(directory, { recursive: true, force: true })
@@ -143,6 +149,66 @@ describe("build verification", () => {
         routeFamilies: dynamicRouteFamilies.map((family) => ({ ...family, minimum: 1 })),
       }),
     ).toThrow("search URL points to a missing heading: /docs/example/#missing")
+  })
+
+  test("accepts page source links for standard and layout-reset Markdown files", () => {
+    const buildDir = createValidBuildFixture()
+    const repoDir = createRepoFixture()
+    writeFixtureFile(
+      repoDir,
+      "packages/docs/src/routes/(routes)/docs/example/+page.md",
+      "# Example",
+    )
+    writeFixtureFile(
+      repoDir,
+      "packages/docs/src/routes/(routes)/docs/reset/+page@(routes).md",
+      "# Reset",
+    )
+    writeFixtureFile(
+      buildDir,
+      "docs/example/index.html",
+      '<h2 id="section">Section</h2><a href="https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/routes/(routes)/docs/example/+page.md?plain=1">Edit</a>',
+    )
+    writeFixtureFile(
+      buildDir,
+      "docs/reset/index.html",
+      '<a href="https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/docs/src/routes/(routes)/docs/reset/+page@(routes).md?plain=1">Text</a>',
+    )
+
+    expect(() =>
+      verifyBuild({
+        buildDir,
+        repoDir,
+        minimums: { routes: 1, dataFiles: 1, searchRows: 1, sitemapUrls: 1 },
+        routeFamilies: dynamicRouteFamilies.map((family) => ({ ...family, minimum: 1 })),
+      }),
+    ).not.toThrow()
+  })
+
+  test("rejects a page source link whose repository file is missing", () => {
+    const buildDir = createValidBuildFixture()
+    const repoDir = createRepoFixture()
+    writeFixtureFile(
+      repoDir,
+      "packages/docs/src/routes/(routes)/docs/v5/+page@(routes).md",
+      "# daisyUI 5",
+    )
+    writeFixtureFile(
+      buildDir,
+      "docs/example/index.html",
+      '<h2 id="section">Section</h2><a href="https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/routes/(routes)/docs/v5/+page.md?plain=1">Edit</a>',
+    )
+
+    expect(() =>
+      verifyBuild({
+        buildDir,
+        repoDir,
+        minimums: { routes: 1, dataFiles: 1, searchRows: 1, sitemapUrls: 1 },
+        routeFamilies: dynamicRouteFamilies.map((family) => ({ ...family, minimum: 1 })),
+      }),
+    ).toThrow(
+      "page source link points to a missing repository file: docs/example/index.html -> packages/docs/src/routes/(routes)/docs/v5/+page.md",
+    )
   })
 
   test("requires a complete ordered comparison matrix", () => {

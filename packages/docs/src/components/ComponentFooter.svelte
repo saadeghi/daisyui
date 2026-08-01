@@ -3,7 +3,7 @@
   import { currentLang, defaultLang, t } from "$lib/i18n.svelte.js"
   import { onMount } from "svelte"
 
-  let { pages = [] } = $props()
+  let { pages = [], sourcePageFile = "+page.md" } = $props()
 
   function extractPages(obj) {
     const items = []
@@ -330,7 +330,7 @@
             href={`https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
               /\/$/,
               "",
-            )}/+page.md?plain=1`}
+            )}/${sourcePageFile}?plain=1`}
           >
             {$t("Edit this page on GitHub")}
           </a>
@@ -362,7 +362,7 @@
             href={`https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
               /\/$/,
               "",
-            )}/+page.md?plain=1`}
+            )}/${sourcePageFile}?plain=1`}
           >
             Text version for AI prompts
           </a>

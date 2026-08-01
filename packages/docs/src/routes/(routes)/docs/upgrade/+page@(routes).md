@@ -2,6 +2,7 @@
 title: daisyUI 5 upgrade guide
 desc: This guide helps you how to update your project to Tailwind CSS 4 and daisyUI 5. 
 dir: ltr
+sourcePageFile: "+page@(routes).md"
 ---
 
 <script>

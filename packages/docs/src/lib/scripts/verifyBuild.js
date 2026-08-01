@@ -5,6 +5,7 @@ import { parseSearchCsv } from "../searchCsv.js"
 
 const scriptDir = dirname(fileURLToPath(import.meta.url))
 export const defaultBuildDir = resolve(scriptDir, "../../../build")
+export const defaultRepoDir = resolve(scriptDir, "../../../../..")
 
 export const requiredBuildFiles = [
   "index.html",
@@ -122,13 +123,41 @@ const formatBytes = (bytes) => {
   return `${(bytes / 1024 ** 2).toFixed(1)} MiB`
 }
 
+const pageSourceUrlPrefixes = new Map([
+  ["github.com", "/saadeghi/daisyui/blob/master/"],
+  ["raw.githubusercontent.com", "/saadeghi/daisyui/refs/heads/master/"],
+])
+
+export const extractPageSourcePaths = (html) => {
+  const sourcePaths = new Set()
+
+  for (const match of html.matchAll(/<a\b[^>]*\bhref=(["'])(.*?)\1/g)) {
+    try {
+      const url = new URL(match[2].replaceAll("&amp;", "&"))
+      const pathPrefix = pageSourceUrlPrefixes.get(url.hostname)
+      if (!pathPrefix || !url.pathname.startsWith(pathPrefix)) continue
+
+      const sourcePath = decodeURIComponent(url.pathname.slice(pathPrefix.length))
+      if (sourcePath.startsWith("packages/docs/src/routes/(routes)/")) {
+        sourcePaths.add(sourcePath)
+      }
+    } catch {
+      // Ignore relative and malformed hrefs; this check only owns recognized source links.
+    }
+  }
+
+  return [...sourcePaths]
+}
+
 export const verifyBuild = ({
   buildDir = defaultBuildDir,
+  repoDir = defaultRepoDir,
   minimums = defaultMinimums,
   requiredFiles = requiredBuildFiles,
   routeFamilies = dynamicRouteFamilies,
 } = {}) => {
   const resolvedBuildDir = resolve(buildDir)
+  const resolvedRepoDir = resolve(repoDir)
   const errors = []
 
   if (!existsSync(resolvedBuildDir) || !statSync(resolvedBuildDir).isDirectory()) {
@@ -154,6 +183,19 @@ export const verifyBuild = ({
   const dataFileCount = relativeFiles.filter(
     (filePath) => filePath === "__data.json" || filePath.endsWith("/__data.json"),
   ).length
+
+  for (const [index, filePath] of files.entries()) {
+    if (!relativeFiles[index].endsWith(".html")) continue
+
+    const html = readFileSync(filePath, "utf8")
+    for (const sourcePath of extractPageSourcePaths(html)) {
+      if (!existsSync(join(resolvedRepoDir, sourcePath))) {
+        errors.push(
+          `page source link points to a missing repository file: ${relativeFiles[index]} -> ${sourcePath}`,
+        )
+      }
+    }
+  }
 
   if (routeCount < minimums.routes) {
     errors.push(`route count ${routeCount} is below minimum ${minimums.routes}`)
