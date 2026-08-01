@@ -73,6 +73,9 @@
       outline: 2px solid var(--input-color);
       outline-offset: 2px;
       isolation: isolate;
+    }
+
+    &:open {
       background-image:
         linear-gradient(135deg, #0000 50%, currentColor 50%),
         linear-gradient(45deg, currentColor 50%, #0000 50%);
