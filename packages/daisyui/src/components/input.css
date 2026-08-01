@@ -48,13 +48,17 @@
 
     input&,
     input {
-      @apply relative inline-flex;
+      @apply relative inline-flex text-start;
+
+      &[type="number"] {
+        @apply text-end;
+      }
 
       &[type="url"],
-      &[type="email"] {
-        /* don't use direction. it breaks join */
-        /*direction: ltr;*/
-        text-align: left;
+      &[type="tel"],
+      &[type="email"],
+      &[type="number"] {
+        direction: ltr;
       }
 
       &::-webkit-datetime-edit,
@@ -117,6 +121,18 @@
 
     &:has(> input[disabled]) > input[disabled] {
       @apply cursor-not-allowed;
+    }
+  }
+
+  &[type="url"],
+  &[type="tel"],
+  &[type="email"],
+  &[type="number"] {
+    &:dir(rtl) {
+      border-start-start-radius: var(--join-se, var(--radius-field));
+      border-start-end-radius: var(--join-ss, var(--radius-field));
+      border-end-start-radius: var(--join-ee, var(--radius-field));
+      border-end-end-radius: var(--join-es, var(--radius-field));
     }
   }
 }
