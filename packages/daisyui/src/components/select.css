@@ -169,7 +169,9 @@
 .select-ghost {
   @layer daisyui.l1.l2 {
     @apply bg-transparent;
-    transition: background-color 0.2s;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: background-color 0.2s;
+    }
     box-shadow: none;
     border-color: #0000;
 

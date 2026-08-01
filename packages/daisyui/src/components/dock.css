@@ -7,7 +7,9 @@
     padding-bottom: env(safe-area-inset-bottom);
     > * {
       @apply rounded-box relative mb-2 flex h-full max-w-32 shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px bg-transparent;
-      transition: opacity 0.2s ease-out;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: opacity 0.2s ease-out;
+      }
       @media (hover: hover) {
         &:hover {
           @apply opacity-80;
@@ -28,10 +30,12 @@
         @apply absolute h-1 w-6 rounded-full bg-transparent;
         bottom: 0.2rem;
         border-top: 3px solid transparent;
-        transition:
-          background-color 0.1s ease-out,
-          text-color 0.1s ease-out,
-          width 0.1s ease-out;
+        @media (prefers-reduced-motion: no-preference) {
+          transition:
+            background-color 0.1s ease-out,
+            text-color 0.1s ease-out,
+            width 0.1s ease-out;
+        }
       }
     }
   }

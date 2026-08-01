@@ -9,12 +9,14 @@
     input {
       @apply overflow-hidden opacity-100;
       scale: 1;
-      transition:
-        visibility 0.1s allow-discrete,
-        margin 0.1s,
-        opacity 0.3s,
-        padding 0.3s,
-        border-width 0.1s;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          visibility 0.1s allow-discrete,
+          margin 0.1s,
+          opacity 0.3s,
+          padding 0.3s,
+          border-width 0.1s;
+      }
 
       &.filter-reset {
         @apply aspect-square;
