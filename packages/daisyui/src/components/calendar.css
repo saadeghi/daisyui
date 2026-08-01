@@ -1420,7 +1420,8 @@
       width: 1.75rem;
 
       &::after {
-        content: ":";
+        --tw-content: ":";
+        content: var(--tw-content);
         position: absolute;
         inset-inline-end: -5px;
         inset-block-start: 50%;

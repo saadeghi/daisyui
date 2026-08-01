@@ -235,7 +235,8 @@
         font-size: 0.875rem;
       }
       &[aria-label]:before {
-        content: attr(aria-label);
+        --tw-content: attr(aria-label);
+        content: var(--tw-content);
       }
     }
 
