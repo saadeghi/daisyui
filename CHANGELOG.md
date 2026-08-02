@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.11](https://github.com/saadeghi/daisyui/compare/v5.7.10...v5.7.11) (2026-08-02)
+
+### Bug Fixes
+
+* improve RTL of input and join ([#4654](https://github.com/saadeghi/daisyui/issues/4654)). closes: [#4644](https://github.com/saadeghi/daisyui/issues/4644) ([93aa945](https://github.com/saadeghi/daisyui/commit/93aa9451e55324ee6a716d478da88e2148281e9d))
 ## [5.7.10](https://github.com/saadeghi/daisyui/compare/v5.7.9...v5.7.10) (2026-08-02)
 
 ### Bug Fixes
