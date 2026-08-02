@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.14](https://github.com/saadeghi/daisyui/compare/v5.7.13...v5.7.14) (2026-08-02)
+
+### Bug Fixes
+
+* **table:** pin thead/tfoot as a group so multi-row headers stack ([#4643](https://github.com/saadeghi/daisyui/issues/4643)). Closes: [#4350](https://github.com/saadeghi/daisyui/issues/4350) ([38ac3d3](https://github.com/saadeghi/daisyui/commit/38ac3d304153a9fa29a9c51065120add1f682f1c))
 ## [5.7.13](https://github.com/saadeghi/daisyui/compare/v5.7.12...v5.7.13) (2026-08-02)
 
 ### Bug Fixes
