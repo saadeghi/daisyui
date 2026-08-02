@@ -7,6 +7,13 @@ export const discountDateFormat = {
   second: "2-digit",
 }
 
+const blueprintProductIds = [
+  "prod_5E7U1fS3URoEtdjqJr3R9d",
+  "prod_7bSjj3UImBhfsYHclXQHt4",
+  "prod_4GWzcIFPubIXjTBvzo9pKA",
+  "prod_4EC2CMwyCoPAeJ6GhKabZd",
+]
+
 export function isDiscountValid(discount) {
   if (discount?.data?.attributes?.expires_at) {
     const expiresAt = new Date(discount.data.attributes.expires_at).toISOString()
@@ -60,4 +67,13 @@ export function isDiscountApplicableToProduct(discount, productIds) {
   const appliesTo = discount?.data?.attributes?.applies_to_products
   if (!appliesTo?.length) return true
   return appliesTo.some((id) => productIds.includes(id))
+}
+
+export function isDiscountApplicableToBlueprint(discount) {
+  return isDiscountApplicableToProduct(discount, blueprintProductIds)
+}
+
+export function getDiscountNavbarTarget(discount) {
+  if (!discount) return null
+  return isDiscountApplicableToBlueprint(discount) ? "blueprint" : "templates"
 }

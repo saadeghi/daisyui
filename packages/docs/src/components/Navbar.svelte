@@ -10,7 +10,7 @@
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
   import DiscountCountdown from "$components/DiscountCountdown.svelte"
   import { track } from "$lib/analytics.svelte.js"
-  import { fetchActiveDiscount } from "$lib/storeDiscount.js"
+  import { fetchActiveDiscount, getDiscountNavbarTarget } from "$lib/storeDiscount.js"
 
   import { t } from "$lib/i18n.svelte.js"
 
@@ -90,8 +90,11 @@
 
   const hasText = (value) => typeof value === "string" && value.length > 0
   const activeDiscountExpiresAt = $derived(activeDiscount?.data?.attributes?.expires_at)
+  const activeDiscountNavbarTarget = $derived(getDiscountNavbarTarget(activeDiscount))
   const shouldShowCountdownTooltip = (item) =>
-    item.countdown && activeDiscountExpiresAt && !$page.url.pathname.startsWith("/store/")
+    item.countdown === activeDiscountNavbarTarget &&
+    activeDiscountExpiresAt &&
+    !matchesActivePath(item)
   const githubStarsLabel = $derived.by(() => {
     if (!Number.isFinite(stargazersCount)) return null
 

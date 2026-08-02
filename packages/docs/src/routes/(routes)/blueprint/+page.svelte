@@ -6,18 +6,12 @@
   import { onMount, tick } from "svelte"
   import { fade, fly } from "svelte/transition"
   import { t } from "$lib/i18n.svelte.js"
+  import { isDiscountApplicableToBlueprint } from "$lib/storeDiscount.js"
 
   // Dynamic card copy also appears in an excluded blog route; keep it registered here.
   // $t("Installing daisyUI")
 
   const checkoutUrl = "/blueprint/checkout/"
-
-  const blueprintProductIds = [
-    "prod_5E7U1fS3URoEtdjqJr3R9d",
-    "prod_7bSjj3UImBhfsYHclXQHt4",
-    "prod_4GWzcIFPubIXjTBvzo9pKA",
-    "prod_4EC2CMwyCoPAeJ6GhKabZd",
-  ]
 
   const pricingPlans = [
     {
@@ -993,12 +987,6 @@
   const isDiscountValid = (discount) => {
     const expiresAt = discount?.data?.attributes?.expires_at
     return Boolean(expiresAt && new Date(expiresAt).toISOString() > currentDate)
-  }
-
-  const isDiscountApplicableToBlueprint = (discount) => {
-    const appliesTo = discount?.data?.attributes?.applies_to_products
-    if (!appliesTo?.length) return true
-    return appliesTo.some((id) => blueprintProductIds.includes(id))
   }
 
   const fetchDiscount = (async () => {
