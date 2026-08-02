@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.13](https://github.com/saadeghi/daisyui/compare/v5.7.12...v5.7.13) (2026-08-02)
+
+### Bug Fixes
+
+* improve tooltip in join ([#4642](https://github.com/saadeghi/daisyui/issues/4642)). closes: [#4618](https://github.com/saadeghi/daisyui/issues/4618) ([319f6d9](https://github.com/saadeghi/daisyui/commit/319f6d9a2f9c08d55b65c46fd574b1a841ff800a)), references [#4320](https://github.com/saadeghi/daisyui/issues/4320)
 ## [5.7.12](https://github.com/saadeghi/daisyui/compare/v5.7.11...v5.7.12) (2026-08-02)
 
 ### Bug Fixes
