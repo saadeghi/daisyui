@@ -24,12 +24,16 @@
       border-top: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
     }
 
-    :where(.table-pin-rows thead tr) {
-      @apply bg-base-100 sticky top-0 z-1;
+    :where(.table-pin-rows thead) {
+      @apply sticky top-0 z-1;
     }
 
-    :where(.table-pin-rows tfoot tr) {
-      @apply bg-base-100 sticky bottom-0 z-1;
+    :where(.table-pin-rows tfoot) {
+      @apply sticky bottom-0 z-1;
+    }
+
+    :where(.table-pin-rows :is(thead, tfoot) tr) {
+      @apply bg-base-100;
     }
 
     :where(.table-pin-cols tr th) {
