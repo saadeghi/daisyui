@@ -1,5 +1,6 @@
 <script>
   import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+  import DiscountCountdown from "$components/DiscountCountdown.svelte"
   import SEO from "$components/SEO.svelte"
   import StoreFooter from "$components/StoreFooter.svelte"
   import Countdown from "svelte-countdown"
@@ -1357,9 +1358,16 @@
           >
         {:then discount}
           {#if discount && isDiscountValid(discount) && isDiscountApplicableToBlueprint(discount)}
-            <button class="link link-hover" onclick={() => discountDialog?.showModal()}>
-              {discount.data.attributes.amount}% {$t("Discount code")}
-            </button>
+            <div class="flex items-center gap-2">
+              <button class="link link-hover" onclick={() => discountDialog?.showModal()}>
+                {discount.data.attributes.amount}% {$t("Discount code")}
+              </button>
+              <DiscountCountdown
+                expiresAt={discount.data.attributes.expires_at}
+                variant="compact"
+                class="max-lg:hidden"
+              />
+            </div>
           {:else}
             <span
               >{$t("3-day free trial")}<span class="max-sm:hidden">{$t(", cancel anytime.")}</span

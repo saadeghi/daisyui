@@ -22,25 +22,31 @@
   })
 </script>
 
+{#snippet compactCountdown()}
+  <span class={`font-mono tabular-nums ${className}`} transition:fade={{ duration: 400 }}>
+    <date {datetime} class="countdown text-[0.625rem]">
+      {#if remaining.days > 0}
+        <span style={`--digits: 1;--value:${remaining.days};`}></span>:
+      {/if}
+      <span style={`--digits: 1;--value:${remaining.hours};`}></span>:
+      <span style={`--digits: 2;--value:${remaining.minutes};`}></span>:
+      <span style={`--digits: 2;--value:${remaining.seconds};`}></span>
+    </date>
+  </span>
+{/snippet}
+
 {#if remaining.done === false}
   {#if tooltip}
     <span class="tooltip-content text-[0.625rem] pt-2">
-      <span class={`font-mono tabular-nums ${className}`} transition:fade={{ duration: 400 }}>
-        <date {datetime} class="countdown text-[0.625rem]">
-          {#if remaining.days > 0}
-            <span style={`--digits: 1;--value:${remaining.days};`}></span>:
-          {/if}
-          <span style={`--digits: 1;--value:${remaining.hours};`}></span>:
-          <span style={`--digits: 2;--value:${remaining.minutes};`}></span>:
-          <span style={`--digits: 2;--value:${remaining.seconds};`}></span>
-        </date>
-      </span>
+      {@render compactCountdown()}
       <span
         class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-out group-hover:grid-rows-[1fr]"
       >
         <span class="overflow-hidden font-mono">Discount</span>
       </span>
     </span>
+  {:else if variant === "compact"}
+    {@render compactCountdown()}
   {:else}
     {@const gridClass =
       variant === "neutral"
