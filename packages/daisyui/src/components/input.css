@@ -50,10 +50,6 @@
     input {
       @apply relative inline-flex text-start;
 
-      &[type="number"] {
-        @apply text-end;
-      }
-
       &[type="url"],
       &[type="tel"],
       &[type="email"],
