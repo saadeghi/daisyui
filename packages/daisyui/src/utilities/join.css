@@ -9,12 +9,12 @@
 
   @scope (&) {
     > :where(:focus, :has(:focus)) {
-      @apply z-1;
+      @apply z-2;
     }
 
     @media (hover: hover) {
       > :where(.btn:hover, :has(.btn:hover)) {
-        @apply isolate;
+        @apply z-1;
       }
     }
 
