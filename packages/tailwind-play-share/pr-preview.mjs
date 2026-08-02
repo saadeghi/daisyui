@@ -11,6 +11,7 @@ const repositoryRoot = resolve(packageDirectory, "../..")
 const componentPathPattern = /^packages\/daisyui\/src\/components\/([a-z0-9-]+)\.css$/
 const docsRoot = "packages/docs/src/routes/(routes)/components"
 const defaultTimeoutMs = 45_000
+const forbiddenPrCssAtRules = new Set(["config", "plugin", "source"])
 
 const usage = `Usage:
   bun packages/tailwind-play-share/pr-preview.mjs \\
@@ -103,6 +104,231 @@ function git(args) {
 
 function componentNameFromPath(filePath) {
   return filePath.match(componentPathPattern)?.[1]
+}
+
+function isCssWhitespace(character) {
+  return (
+    character === " " ||
+    character === "\n" ||
+    character === "\r" ||
+    character === "\t" ||
+    character === "\f"
+  )
+}
+
+function isCssHexDigit(character) {
+  return character !== undefined && /^[0-9a-f]$/i.test(character)
+}
+
+function consumeCssComment(source, index) {
+  const end = source.indexOf("*/", index + 2)
+  return end === -1 ? source.length : end + 2
+}
+
+function consumeCssEscape(source, index) {
+  let cursor = index + 1
+  if (cursor >= source.length) return { end: cursor, value: "\uFFFD" }
+
+  if (isCssHexDigit(source[cursor])) {
+    let hexadecimal = ""
+    while (hexadecimal.length < 6 && isCssHexDigit(source[cursor])) {
+      hexadecimal += source[cursor]
+      cursor += 1
+    }
+    if (isCssWhitespace(source[cursor])) {
+      if (source[cursor] === "\r" && source[cursor + 1] === "\n") cursor += 1
+      cursor += 1
+    }
+    const codePoint = Number.parseInt(hexadecimal, 16)
+    const value =
+      codePoint === 0 || codePoint > 0x10ffff || (codePoint >= 0xd800 && codePoint <= 0xdfff)
+        ? "\uFFFD"
+        : String.fromCodePoint(codePoint)
+    return { end: cursor, value }
+  }
+
+  if (source[cursor] === "\r" && source[cursor + 1] === "\n") {
+    return { end: cursor + 2, value: "" }
+  }
+  if (source[cursor] === "\n" || source[cursor] === "\r" || source[cursor] === "\f") {
+    return { end: cursor + 1, value: "" }
+  }
+  return { end: cursor + 1, value: source[cursor] }
+}
+
+function consumeCssIdentifier(source, index) {
+  let cursor = index
+  let value = ""
+
+  while (cursor < source.length) {
+    const character = source[cursor]
+    if (source.startsWith("/*", cursor)) {
+      cursor = consumeCssComment(source, cursor)
+      continue
+    }
+    if (/^[a-z0-9_-]$/i.test(character) || character.codePointAt(0) >= 0x80) {
+      value += character
+      cursor += 1
+      continue
+    }
+    if (character === "\\") {
+      const escape = consumeCssEscape(source, cursor)
+      value += escape.value
+      cursor = escape.end
+      continue
+    }
+    break
+  }
+
+  return { end: cursor, value }
+}
+
+function consumeCssString(source, index) {
+  const quote = source[index]
+  let cursor = index + 1
+  let value = ""
+
+  while (cursor < source.length) {
+    const character = source[cursor]
+    if (character === quote) return { end: cursor + 1, value }
+    if (character === "\\") {
+      const escape = consumeCssEscape(source, cursor)
+      value += escape.value
+      cursor = escape.end
+      continue
+    }
+    value += character
+    cursor += 1
+  }
+
+  return { end: cursor, value }
+}
+
+function skipCssWhitespaceAndComments(source, index) {
+  let cursor = index
+  while (cursor < source.length) {
+    if (isCssWhitespace(source[cursor])) {
+      cursor += 1
+      continue
+    }
+    if (source.startsWith("/*", cursor)) {
+      cursor = consumeCssComment(source, cursor)
+      continue
+    }
+    break
+  }
+  return cursor
+}
+
+function consumeCssUrl(source, index) {
+  let cursor = skipCssWhitespaceAndComments(source, index)
+  if (source[cursor] === '"' || source[cursor] === "'") {
+    const string = consumeCssString(source, cursor)
+    cursor = skipCssWhitespaceAndComments(source, string.end)
+    if (source[cursor] === ")") cursor += 1
+    return { end: cursor, value: string.value }
+  }
+
+  let value = ""
+  while (cursor < source.length && source[cursor] !== ")") {
+    if (source.startsWith("/*", cursor)) {
+      cursor = consumeCssComment(source, cursor)
+      continue
+    }
+    if (source[cursor] === "\\") {
+      const escape = consumeCssEscape(source, cursor)
+      value += escape.value
+      cursor = escape.end
+      continue
+    }
+    value += source[cursor]
+    cursor += 1
+  }
+  if (source[cursor] === ")") cursor += 1
+  return { end: cursor, value: value.trim() }
+}
+
+function readCssImportTarget(source, index) {
+  const cursor = skipCssWhitespaceAndComments(source, index)
+  if (source[cursor] === '"' || source[cursor] === "'") {
+    return consumeCssString(source, cursor).value
+  }
+
+  const identifier = consumeCssIdentifier(source, cursor)
+  const openingParenthesis = skipCssWhitespaceAndComments(source, identifier.end)
+  if (identifier.value.toLowerCase() === "url" && source[openingParenthesis] === "(") {
+    return consumeCssUrl(source, openingParenthesis + 1).value
+  }
+  return undefined
+}
+
+function isExternalCssUrl(value) {
+  if (!value) return false
+  const normalized = normalizeCssUrl(value)
+  if (normalized.startsWith("//")) return true
+  const scheme = normalized.match(/^([a-z][a-z0-9+.-]*):/i)?.[1]?.toLowerCase()
+  return scheme !== undefined && scheme !== "data"
+}
+
+function isNonLocalCssUrl(value) {
+  if (!value) return false
+  const normalized = normalizeCssUrl(value)
+  return normalized.startsWith("//") || /^[a-z][a-z0-9+.-]*:/i.test(normalized)
+}
+
+function normalizeCssUrl(value) {
+  return [...value.trim()]
+    .filter((character) => {
+      const codePoint = character.codePointAt(0)
+      return codePoint > 0x20 && codePoint !== 0x7f
+    })
+    .join("")
+}
+
+function unsafePrCss(filePath, reason) {
+  throw new Error(`Unsafe PR CSS in ${filePath}: ${reason}`)
+}
+
+export function assertSafePrCss(css, filePath = "component stylesheet") {
+  let index = 0
+
+  while (index < css.length) {
+    if (css.startsWith("/*", index)) {
+      index = consumeCssComment(css, index)
+      continue
+    }
+    if (css[index] === '"' || css[index] === "'") {
+      index = consumeCssString(css, index).end
+      continue
+    }
+    if (css[index] === "@") {
+      const atRule = consumeCssIdentifier(css, index + 1)
+      const name = atRule.value.toLowerCase()
+      if (forbiddenPrCssAtRules.has(name)) {
+        unsafePrCss(filePath, `@${name} is not allowed`)
+      }
+      if (name === "import" && isNonLocalCssUrl(readCssImportTarget(css, atRule.end))) {
+        unsafePrCss(filePath, "external @import URLs are not allowed")
+      }
+      index = atRule.end
+      continue
+    }
+    if (/^[a-z_-]$/i.test(css[index]) || css[index] === "\\") {
+      const identifier = consumeCssIdentifier(css, index)
+      const openingParenthesis = skipCssWhitespaceAndComments(css, identifier.end)
+      if (identifier.value.toLowerCase() === "url" && css[openingParenthesis] === "(") {
+        const url = consumeCssUrl(css, openingParenthesis + 1)
+        if (isExternalCssUrl(url.value)) {
+          unsafePrCss(filePath, "external URLs are not allowed")
+        }
+        index = url.end
+        continue
+      }
+      index = identifier.end
+      continue
+    }
+    index += 1
+  }
 }
 
 export function parseNameStatus(output) {
@@ -276,6 +502,12 @@ export function buildPreviewInputs(baseSha, headSha) {
     throw new Error("No changed component CSS files were found between the supplied commits")
   }
 
+  const cssFiles = plan.headCssPaths.map((filePath) => {
+    const css = readFileAtRevision(headSha, filePath)
+    assertSafePrCss(css, filePath)
+    return { componentName: componentNameFromPath(filePath), css }
+  })
+
   const headDocs = buildDocsIndex(headSha)
   const baseDocs = buildDocsIndex(baseSha)
   const pagesByPath = new Map()
@@ -294,11 +526,6 @@ export function buildPreviewInputs(baseSha, headSha) {
   const pages = [...pagesByPath.values()].sort((left, right) =>
     left.filePath.localeCompare(right.filePath),
   )
-  const cssFiles = plan.headCssPaths.map((filePath) => ({
-    componentName: componentNameFromPath(filePath),
-    css: readFileAtRevision(headSha, filePath),
-  }))
-
   return {
     afterCss: buildAfterCss(plan.excludeNames, cssFiles),
     beforeCss: buildBeforeCss(),

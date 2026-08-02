@@ -1,8 +1,8 @@
-name: "🎨 Tailwind Play PR preview"
+name: "🆚 PR basic preview"
 
 on:
   pull_request_target:
-    types: [opened, reopened, synchronize]
+    types: [opened, synchronize]
     paths:
       - "packages/daisyui/src/components/*.css"
 
@@ -55,16 +55,9 @@ jobs:
           script: |
             const fs = require("node:fs")
             const preview = JSON.parse(fs.readFileSync(process.env.PREVIEW_OUTPUT, "utf8"))
-            const components = preview.components.map((name) => `\`${name}\``).join(", ")
-            const body = [
-              "## Tailwind Play comparison",
-              "",
-              `Commit: \`${preview.headSha.slice(0, 7)}\``,
-              `Changed components: ${components}`,
-              "",
-              `- [Before changes](${preview.beforeUrl})`,
-              `- [After changes](${preview.afterUrl})`,
-            ].join("\n")
+            const count = preview.components.length
+            const componentLabel = count === 1 ? "component" : "components"
+            const body = `${count} ${componentLabel} changed. Basic playground: [Before](${preview.beforeUrl}) vs. [After](${preview.afterUrl}).`
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,

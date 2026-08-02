@@ -3,6 +3,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs"
 import { dirname, join, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
 import {
+  assertSafePrCss,
   buildAfterCss,
   buildBeforeCss,
   combineHtmlExamples,
@@ -179,6 +180,61 @@ source: https://example.test/components/button.css
 })
 
 describe("Tailwind Play inputs", () => {
+  test("rejects executable Tailwind directives in PR CSS", () => {
+    for (const [css, directive] of [
+      ['@plugin "attacker-package";', "@plugin"],
+      ['@CONFIG "tailwind.config.js";', "@config"],
+      ['@source "../secrets";', "@source"],
+      [String.raw`@pl\75 gin "attacker-package";`, "@plugin"],
+      ['@pl/**/ugin "attacker-package";', "@plugin"],
+    ]) {
+      expect(() => assertSafePrCss(css, componentPath("button"))).toThrow(
+        `Unsafe PR CSS in ${componentPath("button")}: ${directive} is not allowed`,
+      )
+    }
+  })
+
+  test("rejects external imports and external URLs in PR CSS", () => {
+    for (const css of [
+      '@import "https://attacker.example/styles.css";',
+      '@im/**/port "https://attacker.example/styles.css";',
+      "@import URL(//attacker.example/styles.css);",
+      '@import "data:text/css,.attacker%7Bdisplay:block%7D";',
+      '.btn { background: url("https://attacker.example/image.png"); }',
+      ".btn { background: u/**/rl(https://attacker.example/image.png); }",
+      String.raw`.btn { background: u\72l(h\74tps\3a//attacker.example/image.png); }`,
+      ".btn { cursor: url(ftp://attacker.example/cursor.cur), auto; }",
+    ]) {
+      expect(() => assertSafePrCss(css, componentPath("button"))).toThrow(
+        `Unsafe PR CSS in ${componentPath("button")}`,
+      )
+    }
+  })
+
+  test("allows inert text, local resources, and data URLs in PR CSS", () => {
+    const css = `/* @plugin "not-a-directive"; */
+@import "./local.css";
+.btn {
+  content: "@config https://example.test";
+  background: url("./image.svg"), url(#mask);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
+}`
+
+    expect(() => assertSafePrCss(css, componentPath("button"))).not.toThrow()
+  })
+
+  test("accepts every current component stylesheet", () => {
+    const componentsDirectory = join(repositoryRoot, "packages/daisyui/src/components")
+    for (const filename of readdirSync(componentsDirectory).filter((name) =>
+      name.endsWith(".css"),
+    )) {
+      const filePath = componentPath(filename.slice(0, -4))
+      expect(() =>
+        assertSafePrCss(readFileSync(join(componentsDirectory, filename), "utf8"), filePath),
+      ).not.toThrow()
+    }
+  })
+
   test("builds the exact before CSS", () => {
     expect(buildBeforeCss()).toBe('@import "tailwindcss";\n@plugin "daisyui";\n')
   })
