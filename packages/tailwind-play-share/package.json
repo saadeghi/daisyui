@@ -1,0 +1,8 @@
+{
+  "name": "daisyui-tailwind-play-share",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test"
+  }
+}
