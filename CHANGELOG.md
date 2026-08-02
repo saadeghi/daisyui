@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.10](https://github.com/saadeghi/daisyui/compare/v5.7.9...v5.7.10) (2026-08-02)
+
+### Bug Fixes
+
+* move tooltip default position in l3 in main definition ([#4653](https://github.com/saadeghi/daisyui/issues/4653)). closes: [#4647](https://github.com/saadeghi/daisyui/issues/4647) ([7923f53](https://github.com/saadeghi/daisyui/commit/7923f5342c84a15010772380bed0cd962af94201))
 ## [5.7.9](https://github.com/saadeghi/daisyui/compare/v5.7.8...v5.7.9) (2026-07-30)
 
 ### Bug Fixes
