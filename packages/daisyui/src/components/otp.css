@@ -134,7 +134,6 @@
     }
 
     &:focus-within {
-      isolation: isolate;
       --input-color: var(--color-base-content);
       > span {
         box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
