@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.12](https://github.com/saadeghi/daisyui/compare/v5.7.11...v5.7.12) (2026-08-02)
+
+### Bug Fixes
+
+* prevent select arrow to rotate when select is focused but not open ([#4655](https://github.com/saadeghi/daisyui/issues/4655)) ([3362dc2](https://github.com/saadeghi/daisyui/commit/3362dc270c57dbf56f7db1427318486173b9af7a))
 ## [5.7.11](https://github.com/saadeghi/daisyui/compare/v5.7.10...v5.7.11) (2026-08-02)
 
 ### Bug Fixes
