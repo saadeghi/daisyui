@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.15](https://github.com/saadeghi/daisyui/compare/v5.7.14...v5.7.15) (2026-08-03)
+
+### Bug Fixes
+
+* allow override of content in calendar and menu ([#4652](https://github.com/saadeghi/daisyui/issues/4652)) ([17eccda](https://github.com/saadeghi/daisyui/commit/17eccdad32bed2ac1054a524f11015beb1eb7369))
+* input, select isolation ([d9bd200](https://github.com/saadeghi/daisyui/commit/d9bd20037c7f3726abdf6926f5598aae6b891cb9)), references [#3722](https://github.com/saadeghi/daisyui/issues/3722) [#4320](https://github.com/saadeghi/daisyui/issues/4320) [#4618](https://github.com/saadeghi/daisyui/issues/4618)
+* OTP isolation ([b5196b8](https://github.com/saadeghi/daisyui/commit/b5196b84ece8b90659a951a73de1acaeeb3a5b45)), references [#4642](https://github.com/saadeghi/daisyui/issues/4642)
 ## [5.7.14](https://github.com/saadeghi/daisyui/compare/v5.7.13...v5.7.14) (2026-08-02)
 
 ### Bug Fixes
