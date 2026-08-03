@@ -67,7 +67,7 @@
               rel="noopener, noreferrer"
             >
               <div
-                style={`background-image: url('https://img.daisyui.com/generated/x.webp?${items.generated_at}'); 
+                style={`background-image: url('https://img.daisyui.com/generated/x.avif?${items.generated_at}');
                        background-size: ${spriteMetadata.imagesPerRow * 48}px auto;
                        background-position: ${getBackgroundPosition(testimonial.originalIndex)};`}
               ></div>
