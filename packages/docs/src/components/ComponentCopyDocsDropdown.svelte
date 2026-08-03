@@ -88,7 +88,7 @@
       <li>
         <a
           class="group"
-          href={`https://chat.openai.com/?hints=search&q=I%20am%20using%20daisyUI%205.%0ARead%20this%20doc%20so%20I%20can%20ask%20questions%20about%20it.%0A%0A${encodeURIComponent(markdownUrl)}%0A`}
+          href={`https://chatgpt.com/g/g-6a545ef188bc8191835821ce0410c0d9-daisyui?prompt=I%20am%20using%20daisyUI%205.%0ARead%20this%20doc%20so%20I%20can%20ask%20questions%20about%20it.%0A%0A${encodeURIComponent(markdownUrl)}%0A`}
           target="_blank"
           rel="noopener noreferrer"
         >
