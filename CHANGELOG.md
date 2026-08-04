@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.16](https://github.com/saadeghi/daisyui/compare/v5.7.15...v5.7.16) (2026-08-04)
+
+### Bug Fixes
+
+* horizontal menu alignment ([1125e2a](https://github.com/saadeghi/daisyui/commit/1125e2a58c4c362bccb754fae17e2f7d38c9d96a))
 ## [5.7.15](https://github.com/saadeghi/daisyui/compare/v5.7.14...v5.7.15) (2026-08-03)
 
 ### Bug Fixes
