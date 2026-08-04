@@ -99,7 +99,7 @@
           <div class="avatar tooltip group p-1" data-tip={contributor}>
             <div
               class="mask mask-squircle"
-              style="background-image: url('https://img.daisyui.com/generated/contributors.avif'); background-size: {contributorSpriteMeta.imagesPerRow *
+              style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size: {contributorSpriteMeta.imagesPerRow *
                 (contributorSpriteMeta.avatarSize /
                   2)}px auto; background-position: {getBackgroundPosition(
                 index,
@@ -132,7 +132,7 @@
             <div class="avatar tooltip group p-1" data-tip={sponsor.name}>
               <div
                 class="mask mask-squircle"
-                style="background-image: url('https://img.daisyui.com/generated/sponsors.avif'); background-size: {sponsorSpriteMeta.imagesPerRow *
+                style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size: {sponsorSpriteMeta.imagesPerRow *
                   (sponsorSpriteMeta.avatarSize /
                     2)}px auto; background-position: {getBackgroundPosition(
                   index,
