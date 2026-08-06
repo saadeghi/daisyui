@@ -29,12 +29,15 @@ test("pluginOptionsHandler should apply default themes", () => {
       color: "black",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledWith({
+  // the default theme must not be emitted a second time without the `:where(:root)` prefix.
+  // duplicate rules get folded into `:is(...)` by lightningcss, which raises their specificity
+  // and makes the built-in theme win over a user theme. see #4488
+  expect(mockAddBase).not.toHaveBeenCalledWith({
     ":root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
       color: "white",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledTimes(4)
+  expect(mockAddBase).toHaveBeenCalledTimes(3)
 })
 
 test("pluginOptionsHandler should apply all themes when 'all' is specified", () => {
@@ -57,7 +60,13 @@ test("pluginOptionsHandler should apply all themes when 'all' is specified", () 
       color: "black",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledTimes(4)
+  // `light` is emitted by the `--default` branch, so `themeOrder` must not re-emit it. see #4488
+  expect(mockAddBase).not.toHaveBeenCalledWith({
+    ":root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
+      color: "white",
+    },
+  })
+  expect(mockAddBase).toHaveBeenCalledTimes(3)
 })
 
 test("pluginOptionsHandler should handle custom themes", () => {
@@ -130,4 +139,43 @@ test("pluginOptionsHandler should prefix theme-controller class when prefix is s
         color: "white",
       },
   })
+})
+
+test("pluginOptionsHandler should not emit a theme twice when it is listed twice", () => {
+  mockAddBase.mockReset()
+
+  const options = { themes: ["light --default", "light"] }
+
+  pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+  expect(mockAddBase).toHaveBeenCalledTimes(1)
+  expect(mockAddBase).toHaveBeenCalledWith({
+    ":where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
+      color: "white",
+    },
+  })
+})
+
+test("pluginOptionsHandler should still emit the regular rule for a --prefersdark theme", () => {
+  mockAddBase.mockReset()
+
+  const options = { themes: ["light --default", "dark --prefersdark"] }
+
+  pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+  const selectors = mockAddBase.mock.calls.map(([rule]) => Object.keys(rule)[0])
+  expect(selectors).toEqual([
+    ":where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light]",
+    "@media (prefers-color-scheme: dark)",
+    ":root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]",
+  ])
+})
+
+test("pluginOptionsHandler should emit every selector only once", () => {
+  mockAddBase.mockReset()
+
+  pluginOptionsHandler({ themes: "all" }, mockAddBase, mockThemesObject, "1.0.0")
+
+  const selectors = mockAddBase.mock.calls.map(([rule]) => Object.keys(rule)[0])
+  expect(new Set(selectors).size).toBe(selectors.length)
 })
