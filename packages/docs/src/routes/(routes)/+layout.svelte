@@ -4,7 +4,7 @@
   import Search from "$components/Search.svelte"
   import { page } from "$app/stores"
   import { defaultLang, langs, loadRouteTranslations, setLang } from "$lib/i18n.svelte.js"
-  import { onNavigate } from "$app/navigation"
+  import { afterNavigate, onNavigate } from "$app/navigation"
   import minimalAnalytics from "@minimal-analytics/ga4"
   const { track } = minimalAnalytics
 
@@ -33,6 +33,11 @@
   }
 
   onNavigate((navigation) => {
+    // SvelteKit resets the scroll with `scrollTo(0, 0)`, which follows the CSS
+    // `scroll-behavior`. Firefox drops an in-flight smooth scroll when the DOM is
+    // swapped, so the new page keeps the old offset. Reset instantly instead.
+    document.documentElement.style.scrollBehavior = "auto"
+
     track("G-10F40JCSMZ")
 
     const routeTranslations = navigation.to?.url
@@ -48,6 +53,12 @@
         await navigation.complete
       })
     })
+  })
+
+  afterNavigate(() => {
+    // The scroll reset already ran, so smooth scrolling is safe again for
+    // in-page anchors.
+    document.documentElement.style.scrollBehavior = "smooth"
   })
 
   $effect(() => {
