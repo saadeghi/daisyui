@@ -19,9 +19,25 @@ export const pluginOptionsHandler = (() => {
       firstRun = false
     }
 
+    // Themes that already have a rule in this run. Must be per-invocation, not module scope,
+    // otherwise later builds (dev server rebuilds, multiple CSS entries) emit no themes at all.
+    //
+    // A theme must never be emitted twice. Two rules with identical declarations where one
+    // selector list is a subset of the other survive lightningcss' dead-compound elimination,
+    // and when `targets` includes a browser without `:has()` support (Vite derives `targets`
+    // from `build.target`; its default `baseline-widely-available` includes Firefox 104) the
+    // list is rewritten to `:is(...)`. `:is()` takes the highest specificity of its arguments,
+    // so `[data-theme=x]` jumps from (0,1,0) to (0,4,1) and the built-in theme starts winning
+    // over a user theme defined with `@plugin "daisyui/theme"`. See #4488.
+    //
+    // The `--default` variant is always applied first, so keeping the first emission keeps the
+    // `:where(:root)` prefix.
+    const appliedThemes = new Set()
+
     const applyTheme = (themeName, flags) => {
       const theme = themesObject[themeName]
-      if (theme) {
+      if (theme && !appliedThemes.has(themeName)) {
+        appliedThemes.add(themeName)
         // Use prefix for theme-controller class name
         const themeControllerClass = `${prefix}theme-controller`
         let selector = `${root}:has(input.${themeControllerClass}[value=${themeName}]:checked),[data-theme=${themeName}]`
