@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "daisyui",
+  "version": "5.7.0",
+  "description": "Official daisyUI component library skill for building Tailwind CSS interfaces.",
+  "author": {
+    "name": "daisyUI",
+    "url": "https://daisyui.com"
+  },
+  "homepage": "https://daisyui.com",
+  "repository": "https://github.com/saadeghi/daisyui",
+  "license": "MIT",
+  "keywords": ["ui", "tailwind", "components", "css", "daisyui"]
+}
