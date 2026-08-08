@@ -40,39 +40,6 @@ export const htmlToJsx = (node) => {
     '"0"': "{0}",
     "&lt;!--": "{/*",
     "--&gt;": "*/}",
-    '<span style="color:var(--syntax-attr-name)">minlength</span>':
-      '<span style="color:var(--syntax-attr-name)">minLength</span>',
-    '<span style="color:var(--syntax-attr-name)"> minlength</span>':
-      '<span style="color:var(--syntax-attr-name)"> minLength</span>',
-    '<span style="color:var(--syntax-attr-name)">    minlength</span>':
-      '<span style="color:var(--syntax-attr-name)">    minLength</span>',
-    '<span style="color:var(--syntax-attr-name)">maxlength</span>':
-      '<span style="color:var(--syntax-attr-name)">maxLength</span>',
-    '<span style="color:var(--syntax-attr-name)"> maxlength</span>':
-      '<span style="color:var(--syntax-attr-name)"> maxLength</span>',
-    '<span style="color:var(--syntax-attr-name)">    maxlength</span>':
-      '<span style="color:var(--syntax-attr-name)">    maxLength</span>',
-
-    '<span style="color:var(--syntax-attr-name)">class</span>':
-      '<span style="color:var(--syntax-attr-name)">className</span>',
-    '<span style="color:var(--syntax-attr-name)"> class</span>':
-      '<span style="color:var(--syntax-attr-name)"> className</span>',
-    '<span style="color:var(--syntax-attr-name)">  class</span>':
-      '<span style="color:var(--syntax-attr-name)">  className</span>',
-    '<span style="color:var(--syntax-attr-name)">    class</span>':
-      '<span style="color:var(--syntax-attr-name)">    className</span>',
-    '<span style="color:var(--syntax-attr-name)">      class</span>':
-      '<span style="color:var(--syntax-attr-name)">      className</span>',
-    '<span style="color:var(--syntax-attr-name)">        class</span>':
-      '<span style="color:var(--syntax-attr-name)">        className</span>',
-    '<span style="color:var(--syntax-attr-name)">          class</span>':
-      '<span style="color:var(--syntax-attr-name)">          className</span>',
-    '<span style="color:var(--syntax-attr-name)">            class</span>':
-      '<span style="color:var(--syntax-attr-name)">            className</span>',
-    '<span style="color:var(--syntax-attr-name)">              class</span>':
-      '<span style="color:var(--syntax-attr-name)">              className</span>',
-    '<span style="color:var(--syntax-attr-name)"> for</span>':
-      '<span style="color:var(--syntax-attr-name)"> htmlFor</span>',
     '<span style="color:var(--syntax-attr-name)"> checked</span><span style="color:var(--syntax-punctuation)">=</span><span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">checked</span><span style="color:var(--syntax-punctuation)">"</span>':
       '<span style="color:var(--syntax-attr-name)"> defaultChecked</span>',
     '<span style="color:var(--syntax-token)"><span style="color:var(--syntax-token)"><span style="color:var(--syntax-punctuation)"&lt;</span>br</span><span style="color:var(--syntax-punctuation)"&gt;</span></span>':
@@ -94,8 +61,28 @@ export const htmlToJsx = (node) => {
     "position-anchor": "positionAnchor",
   }
 
+  // Attribute names that must be renamed only when they are an attribute, not when the same
+  // text appears in a value. Matched on the highlighted span so any indentation works.
+  const attrNamesToReplace = {
+    class: "className",
+    for: "htmlFor",
+    minlength: "minLength",
+    maxlength: "maxLength",
+  }
+
+  const attrNameSpan = new RegExp(
+    `(<span style="color:var\\(--syntax-attr-name\\)">\\s*)(${Object.keys(attrNamesToReplace).join(
+      "|",
+    )})(</span>)`,
+    "gi",
+  )
+
   const update = () => {
     node.innerHTML = replaceStrings(originalContent, stringsToReplace)
+      .replace(
+        attrNameSpan,
+        (_match, before, name, after) => before + attrNamesToReplace[name.toLowerCase()] + after,
+      )
       // fix the broken tabIndex={0} in JSX tab
       .replaceAll(
         'var(--syntax-punctuation)" tabIndex={0}>',
