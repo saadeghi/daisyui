@@ -41,7 +41,7 @@ A beginner-friendly library should let you build something presentable first, th
 
 ## Why daisyUI belongs on the shortlist
 
-daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 37 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
 That means you can write `btn btn-primary`, `card bg-base-100`, `input`, `select`, `modal`, `navbar`, `menu`, and `alert` in markup without adopting a framework-specific component API.
 

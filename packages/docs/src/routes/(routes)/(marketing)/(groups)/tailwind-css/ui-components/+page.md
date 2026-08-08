@@ -41,7 +41,7 @@ This is still Tailwind CSS. daisyUI adds a component layer on top, so common UI 
 
 ## What daisyUI adds to Tailwind CSS
 
-daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 37 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
 The practical split is simple:
 

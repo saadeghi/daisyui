@@ -17,6 +17,8 @@ test("themeOrder starts with automatic defaults and contains each theme once", (
   expect(themeOrder.slice(0, 2)).toEqual(["light", "dark"])
   expect(new Set(themeOrder).size).toBe(themeOrder.length)
   expect(themeOrder).toContain("silk")
+  expect(themeOrder).toContain("neobrutalism-light")
+  expect(themeOrder).toContain("neobrutalism-dark")
 })
 
 test("variables exposes the public token groups used by generated plugins", () => {

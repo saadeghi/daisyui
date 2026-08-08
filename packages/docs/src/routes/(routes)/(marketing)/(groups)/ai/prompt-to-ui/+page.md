@@ -55,7 +55,7 @@ Now the prompt and the code share the same vocabulary. You can ask for "primary"
 
 ## Why daisyUI fits prompt-to-UI workflows
 
-daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 35 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
+daisyUI is a Tailwind CSS component library. Version 5 installs with `@plugin "daisyui"`, includes 61 component families in this repo, ships 37 built-in themes, and can also be used from CDN with `@tailwindcss/browser@4` for quick HTML prototypes. It adds CSS class names. It does not ship React, Vue, or Svelte components, so your framework keeps control of state and behavior.
 
 That combination matters for [generated UI](/ai/generate-ui-from-text/). Tailwind CSS remains available for layout and one-off styling, while daisyUI handles repeated interface parts with names a model can reuse: `btn`, `card`, `input`, `select`, `modal`, `navbar`, `menu`, `table`, `badge`, `alert`, `stat`, and `toast`.
 

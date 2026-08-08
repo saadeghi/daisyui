@@ -34,4 +34,6 @@ export default [
   "caramellatte",
   "abyss",
   "silk",
+  "neobrutalism-light",
+  "neobrutalism-dark",
 ]
