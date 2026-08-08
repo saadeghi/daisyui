@@ -307,7 +307,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$lg:tooltip" data-tip="hello">
+<div class="lg:$$tooltip" data-tip="hello">
   <button class="$$btn">Hover me</button>
 </div>
 ```
@@ -320,7 +320,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$tooltip $$tooltip-start $$md:tooltip-right $$md:tooltip-center" data-tip="hello">
+<div class="$$tooltip $$tooltip-start md:$$tooltip-right md:$$tooltip-center" data-tip="hello">
   <button class="$$btn">Hover me</button>
 </div>
 ```
