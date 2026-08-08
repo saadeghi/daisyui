@@ -63,6 +63,7 @@ classnames:
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row">
     <img
+      alt="Tailwind CSS hero component"
       src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
       class="max-w-sm rounded-lg shadow-2xl"
     />
@@ -95,6 +96,7 @@ classnames:
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row-reverse">
     <img
+      alt="Tailwind CSS hero component"
       src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
       class="max-w-sm rounded-lg shadow-2xl"
     />

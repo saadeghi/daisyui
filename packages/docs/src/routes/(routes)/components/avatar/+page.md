@@ -34,7 +34,7 @@ classnames:
 ```html
 <div class="$$avatar">
   <div class="w-24 rounded">
-    <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
   </div>
 </div>
 ```
@@ -65,7 +65,7 @@ classnames:
 ```html
 <div class="$$avatar">
   <div class="w-32 rounded">
-    <img src="https://img.daisyui.com/images/profile/demo/superperson@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/superperson@192.webp" />
   </div>
 </div>
 <div class="$$avatar">
@@ -110,12 +110,12 @@ classnames:
 ```html
 <div class="$$avatar">
   <div class="w-24 rounded-xl">
-    <img src="https://img.daisyui.com/images/profile/demo/yellingwoman@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/yellingwoman@192.webp" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-24 rounded-full">
-    <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
   </div>
 </div>
 ```
@@ -141,17 +141,17 @@ classnames:
 ```html
 <div class="$$avatar">
   <div class="$$mask $$mask-heart w-24">
-    <img src="https://img.daisyui.com/images/profile/demo/distracted3@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/distracted3@192.webp" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="$$mask $$mask-squircle w-24">
-    <img src="https://img.daisyui.com/images/profile/demo/distracted1@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/distracted1@192.webp" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="$$mask $$mask-hexagon-2 w-24">
-    <img src="https://img.daisyui.com/images/profile/demo/distracted2@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/distracted2@192.webp" />
   </div>
 </div>
 ```
@@ -185,22 +185,22 @@ classnames:
 <div class="$$avatar-group -space-x-6">
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+      <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+      <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
+      <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.daisyui.com/images/profile/demo/wonderperson@192.webp" />
+      <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/wonderperson@192.webp" />
     </div>
   </div>
 </div>
@@ -235,17 +235,17 @@ classnames:
 <div class="$$avatar-group -space-x-6">
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+      <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+      <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
+      <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
     </div>
   </div>
   <div class="$$avatar $$avatar-placeholder">
@@ -267,7 +267,7 @@ classnames:
 ```html
 <div class="$$avatar">
   <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring-2 ring-offset-2">
-    <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
   </div>
 </div>
 ```
@@ -288,12 +288,12 @@ classnames:
 ```html
 <div class="$$avatar $$avatar-online">
   <div class="w-24 rounded-full">
-    <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
   </div>
 </div>
 <div class="$$avatar $$avatar-offline">
   <div class="w-24 rounded-full">
-    <img src="https://img.daisyui.com/images/profile/demo/idiotsandwich@192.webp" />
+    <img alt="Tailwind-CSS-Avatar-component" src="https://img.daisyui.com/images/profile/demo/idiotsandwich@192.webp" />
   </div>
 </div>
 ```

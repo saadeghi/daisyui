@@ -133,7 +133,7 @@ classnames:
     <div class="$$stat-figure text-secondary">
       <div class="$$avatar $$avatar-online">
         <div class="w-16 rounded-full">
-          <img src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp" />
+          <img alt="Tailwind CSS stat example component" src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp" />
         </div>
       </div>
     </div>

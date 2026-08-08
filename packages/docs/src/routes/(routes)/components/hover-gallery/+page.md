@@ -48,10 +48,10 @@ The first image is visible by default, the other image will create invisible col
 
 ```html
 <figure class="$$hover-gallery max-w-60">
-  <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
-  <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
-  <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
-  <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
+  <img alt="Tailwind CSS image hover gallery" src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
+  <img alt="Tailwind CSS image hover gallery" src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
+  <img alt="Tailwind CSS image hover gallery" src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
+  <img alt="Tailwind CSS image hover gallery" src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
 </figure>
 ```
 
@@ -76,10 +76,10 @@ The first image is visible by default, the other image will create invisible col
 ```html
 <div class="$$card $$card-sm bg-base-200 max-w-60 shadow">
   <figure class="$$hover-gallery">
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
-    <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
+    <img alt="Tailwind CSS image hover gallery" src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
+    <img alt="Tailwind CSS image hover gallery" src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
+    <img alt="Tailwind CSS image hover gallery" src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
+    <img alt="Tailwind CSS image hover gallery" src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
   </figure>
   <div class="$$card-body">
     <h2 class="$$card-title flex justify-between">
