@@ -18,7 +18,7 @@ classnames:
 </script>
 
 ### ~Filter using HTML form, radio buttons and reset button
-#### A HTML from for filtering items
+#### A HTML form for filtering items
 
 <form class="filter">
   <input class="btn btn-square" type="reset" value="×"/>

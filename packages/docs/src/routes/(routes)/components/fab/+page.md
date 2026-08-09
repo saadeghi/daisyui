@@ -6,7 +6,7 @@ layout: components
 classnames:
   component:
     - class: fab
-      desc: Container element. It includes a focusable div like <div tabindex="0" role="button" class="btn btn-circle">A</div> and when it gets clicked of focused, it shows more floating buttons
+      desc: Container element. It includes a focusable div like <div tabindex="0" role="button" class="btn btn-circle">A</div> and when it gets clicked or focused, it shows more floating buttons
   part:
     - class: fab-close
       desc: Optional class for a close button (or a wrapper of a close button)
