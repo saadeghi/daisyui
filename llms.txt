@@ -237,7 +237,7 @@ root scrollbar gutter is excluded. `daisy-` prefix is used for all daisyUI class
 8. Using Tailwind CSS color names for text colors should be avoided because Tailwind CSS color `text-gray-800` on `bg-base-100` would be unreadable on a dark theme - because on dark theme, `bg-base-100` is a dark color
 9. `*-content` colors should have a good contrast compared to their associated colors
 10. Use `base-*` colors for majority of the page. Use the default variant for all elements. Use `primary` color once only, for the most important element on the page.
-11. Rare use case when using Tailwind CSS color names (for example `text-red-500`) is allowed instead of using a daisyUI color name (for example `text-error`): when a specific content must be indepecent from the theme. For example if a svg icon or a chart graph must use a specific color, no matter what are our brand colors or theme colors.
+11. Rare use case when using Tailwind CSS color names (for example `text-red-500`) is allowed instead of using a daisyUI color name (for example `text-error`): when a specific content must be independent from the theme. For example if a svg icon or a chart graph must use a specific color, no matter what are our brand colors or theme colors.
 
 ### Enabling and applying themes
 
