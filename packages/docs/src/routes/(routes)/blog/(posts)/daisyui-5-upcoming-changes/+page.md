@@ -1,6 +1,6 @@
 ---
 title: What to expect from daisyUI 5?
-desc: An overview of of daisyUI 5 upcoming changes and features
+desc: An overview of daisyUI 5 upcoming changes and features
 published: true
 date: 2024-07-02
 author: Pouya Saadeghi

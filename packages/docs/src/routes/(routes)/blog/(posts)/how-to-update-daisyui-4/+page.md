@@ -85,7 +85,7 @@ color: oklch(var(--p));
 ## 3. All `*-focus` colors are removed
 
 All `*-focus` colors like `primary-focus` color in daisyUI 3 did was using the same `bg-primary` color with a darker shade.
-Now thanks to the new `color-mix()` CSS function we do the same dynamically and it gives us more control on the the colors. For example take a look at this amazing class name. It mixes primary color with black to make it 7% darker:
+Now thanks to the new `color-mix()` CSS function we do the same dynamically and it gives us more control on the colors. For example take a look at this amazing class name. It mixes primary color with black to make it 7% darker:
 
 ```css
 bg-[color-mix(in_oklab,oklch(var(--p)),black_7%)]

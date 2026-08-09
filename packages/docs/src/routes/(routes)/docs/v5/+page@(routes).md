@@ -478,7 +478,7 @@ daisyUI 5 introduces new components to help you build websites faster.
 
 ### List
 
-List is is useful for vertical layout to display information in rows. Imagine a list of products, list of people, list of articles, etc.
+List is useful for vertical layout to display information in rows. Imagine a list of products, list of people, list of articles, etc.
 
 See [List component docs](/components/list/)
 

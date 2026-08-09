@@ -25,7 +25,7 @@ seo: false
 <h1><img src="https://img.daisyui.com/images/logos/antigravity.svg" alt="Antigravity" width="40" height="40" class="inline-block me-2 -mt-2 not-prose">daisyUI MCP server for Antigravity</h1>
 <p>Setup Antigravity to correctly generate daisyUI code based on your prompt.</p>
 
-MCP is a an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.  
+MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.  
 
 There are 3 options:
 
