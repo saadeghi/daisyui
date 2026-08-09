@@ -5,7 +5,7 @@ Table can be used to show a list of data in a table format
 
 #### Class Names:
 - Component: `table`
-- Modifier: `table-zebra`, `table-pin-rows`, `table-pin-cols`
+- Modifier: `table-zebra`, `table-pin-rows`, `table-pin-cols`, `row-hover`
 - Size: `table-xs`, `table-sm`, `table-md`, `table-lg`, `table-xl`
 
 #### Syntax
