@@ -14,6 +14,8 @@ classnames:
     desc: For <table> to make all the rows inside <thead> and <tfoot> sticky
   - class: table-pin-cols
     desc: For <table> to make all the <th> columns sticky
+  - class: row-hover
+    desc: For <tr> to highlight the row on hover
   size:
   - class: table-xs
     desc: Extra small size
