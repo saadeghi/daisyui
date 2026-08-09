@@ -56,6 +56,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-squircle"
+  alt="Squircle CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -66,6 +67,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-heart"
+  alt="Heart CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -76,6 +78,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-hexagon"
+  alt="Hexagon CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -86,6 +89,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-hexagon-2"
+  alt="Hexagon-2 CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -96,6 +100,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-decagon"
+  alt="Decagon CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -106,6 +111,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-pentagon"
+  alt="Pentagon CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -116,6 +122,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-diamond"
+  alt="Diamond CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -126,6 +133,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-square"
+  alt="Square CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -136,6 +144,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-circle"
+  alt="Circle CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -145,6 +154,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-star"
+  alt="Star CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -155,6 +165,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-star-2"
+  alt="Star-2 CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -165,6 +176,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-triangle"
+  alt="Triangle CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -175,6 +187,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-triangle-2"
+  alt="Triangle-2 CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -185,6 +198,7 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-triangle-3"
+  alt="Triangle-3 CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
@@ -195,5 +209,6 @@ classnames:
 ```html
 <img
   class="$$mask $$mask-triangle-4"
+  alt="Triangle-4 CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
