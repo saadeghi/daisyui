@@ -1028,7 +1028,7 @@
   "For CI/CD, run the command without `--watch` to generate the output.css file once.": "For CI/CD, run the command without `--watch` to generate the output.css file once.",
   "title: Install Tailwind CSS and daisyUI for Zola\ndesc: How to install Tailwind CSS and daisyUI in a Zola project, without Node.js": "title: Install Tailwind CSS and daisyUI for Zola\ndesc: How to install Tailwind CSS and daisyUI in a Zola project, without Node.js",
   "1. Create a new Zola project": "1. Create a new Zola project",
-  "Install Zole according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "Install Zole according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.",
+  "Install Zola according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "Install Zola according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.",
   "Create a new Zola project in called `myblog` and navigate to it:": "Create a new Zola project in called `myblog` and navigate to it:",
   "2. Get Tailwind CSS executable": "2. Get Tailwind CSS executable",
   "3. Get daisyUI bundled JS file": "3. Get daisyUI bundled JS file",

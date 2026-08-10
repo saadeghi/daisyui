@@ -9,7 +9,7 @@ desc: How to install Tailwind CSS and daisyUI in a Zola project, without Node.js
 
 ### 1. Create a new Zola project
 
-Install Zole according to the [Zola docs](https://www.getzola.org/documentation/getting-started/installation/).
+Install Zola according to the [Zola docs](https://www.getzola.org/documentation/getting-started/installation/).
 
 Create a new Zola project in called `myblog` and navigate to it:
 

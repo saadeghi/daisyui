@@ -1028,7 +1028,7 @@
   "For CI/CD, run the command without `--watch` to generate the output.css file once.": "Για το CI /CD, εκτελέστε την εντολή χωρίς `--watch` για να δημιουργήσετε το αρχείο output.css μία φορά.",
   "title: Install Tailwind CSS and daisyUI for Zola\ndesc: How to install Tailwind CSS and daisyUI in a Zola project, without Node.js": "τίτλος: Εγκαταστήστε τα Tailwind CSS και daisyUI για Zola desc: Πώς να εγκαταστήσετε τα Tailwind CSS και daisyUI σε ένα έργο Zola, χωρίς Node.js",
   "1. Create a new Zola project": "1. Δημιουργήστε ένα νέο έργο Zola",
-  "Install Zole according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "Εγκαταστήστε το Zole σύμφωνα με τα έγγραφα <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola</a>.",
+  "Install Zola according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "Εγκαταστήστε το Zole σύμφωνα με τα έγγραφα <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola</a>.",
   "Create a new Zola project in called `myblog` and navigate to it:": "Δημιουργήστε ένα νέο έργο Zola με το όνομα `myblog` και πλοηγηθείτε σε αυτό:",
   "2. Get Tailwind CSS executable": "2. Αποκτήστε το εκτελέσιμο αρχείο Tailwind CSS",
   "3. Get daisyUI bundled JS file": "3. Αποκτήστε το πακέτο daisyUI αρχείο JS",
