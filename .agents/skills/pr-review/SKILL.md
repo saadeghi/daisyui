@@ -1,6 +1,8 @@
 ---
 name: pr-review
 description: Review one or all open pull requests in saadeghi/daisyui using the GitHub MCP server and isolated base-versus-PR verification. Use when Codex must fact-check a daisyUI PR, verify that it solves its stated problem or linked issue, test concrete regression risks, explain developer experience before and after, decide whether it is safe to merge, and write a concise report under tmp/pr/. Base every report statement on linked sources, inspected code, or observed command output; never invent claims, risks, results, or confidence deductions.
+metadata:
+  internal: true
 ---
 
 # Review daisyUI pull requests
