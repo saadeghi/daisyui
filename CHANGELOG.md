@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.17](https://github.com/saadeghi/daisyui/compare/v5.7.16...v5.7.17) (2026-08-14)
+
+### Bug Fixes
+
+* checkbox/radio .btn color when checked ([#4677](https://github.com/saadeghi/daisyui/issues/4677)) ([53f81f3](https://github.com/saadeghi/daisyui/commit/53f81f31b90570724d412b202668d4a78d6d988a))
 ## [5.7.16](https://github.com/saadeghi/daisyui/compare/v5.7.15...v5.7.16) (2026-08-04)
 
 ### Bug Fixes
