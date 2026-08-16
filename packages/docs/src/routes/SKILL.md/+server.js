@@ -30,7 +30,7 @@ const componentFiles = orderedSkillFiles.filter((path) =>
 )
 
 const rootSkillContent = skillModules["../../../../../skills/daisyui/SKILL.md"]
-const rootReferencesStart = rootSkillContent.indexOf("## Mandatory reference")
+const rootReferencesStart = rootSkillContent.indexOf("## References that you must read")
 const rootProtocolStart = rootSkillContent.indexOf("### Component discovery protocol")
 const rootIntro =
   rootReferencesStart === -1
