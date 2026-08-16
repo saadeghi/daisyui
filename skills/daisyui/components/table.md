@@ -1,12 +1,12 @@
-### table
-Table can be used to show a list of data in a table format
+### Table
+Use a table to show data in rows and columns.
 
-[table docs](https://daisyui.com/components/table/)
+[Table documentation](https://daisyui.com/components/table/)
 
-#### Class Names:
-- Component: `table`
-- Modifier: `table-zebra`, `table-pin-rows`, `table-pin-cols`
-- Size: `table-xs`, `table-sm`, `table-md`, `table-lg`, `table-xl`
+#### Class names
+- component: `table`
+- modifier: `table-zebra`, `table-pin-rows`, `table-pin-cols`
+- size: `table-xs`, `table-sm`, `table-md`, `table-lg`, `table-xl`
 
 #### Syntax
 ```html
@@ -27,5 +27,5 @@ Table can be used to show a list of data in a table format
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of each modifier/size class names
-- The `overflow-x-auto` class is added to the wrapper div to make the table horizontally scrollable on smaller screens
+- `{MODIFIER}` is optional. It can include one modifier class name and one size class name.
+- To make the table scroll horizontally on small screens, add `overflow-x-auto` to the wrapper `<div>`.

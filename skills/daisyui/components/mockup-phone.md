@@ -1,7 +1,7 @@
-### mockup-phone
-Phone mockup shows a mockup of an iPhone
+### Phone mockup
+A phone mockup shows an iPhone mockup.
 
-[mockup-phone docs](https://daisyui.com/components/mockup-phone/)
+[Phone mockup documentation](https://daisyui.com/components/mockup-phone/)
 
 #### Class names
 - component: `mockup-phone`
@@ -16,4 +16,4 @@ Phone mockup shows a mockup of an iPhone
 ```
 
 #### Rules
-- Inside `mockup-phone-display` you can add anything
+- You can put content in `mockup-phone-display`.

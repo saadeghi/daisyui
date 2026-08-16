@@ -1,7 +1,7 @@
-### input
-Text Input is a simple input field
+### Input
+Use a text input as a simple input field.
 
-[input docs](https://daisyui.com/components/input/)
+[Input documentation](https://daisyui.com/components/input/)
 
 #### Class names
 - component: `input`
@@ -15,6 +15,6 @@ Text Input is a simple input field
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of each style/color/size class names
-- Can be used with any input field type (text, password, email, etc.)
-- Use `input` class for the parent when you have more than one element inside input
+- `{MODIFIER}` is optional. It can include one class name from each style, color, and size category.
+- You can use it with all input field types, such as text, password, or email.
+- If the input contains more than one element, use the `input` class on the parent element.

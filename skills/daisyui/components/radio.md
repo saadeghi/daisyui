@@ -1,7 +1,7 @@
-### radio
-Radio buttons allow the user to select one option
+### Radio
+Use radio buttons to let the user select one option.
 
-[radio docs](https://daisyui.com/components/radio/)
+[Radio documentation](https://daisyui.com/components/radio/)
 
 #### Class names
 - component: `radio`
@@ -14,6 +14,6 @@ Radio buttons allow the user to select one option
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the size/color class names
-- Replace {name} with a unique name for the radio group
-- Each set of radio inputs should have unique `name` attributes to avoid conflicts with other sets of radio inputs on the same page
+- `{MODIFIER}` is optional. It can include one size class name and one color class name.
+- Replace `{name}` with a name for the radio group.
+- Recommendation: Use a unique `name` attribute for each radio-input group. This prevents conflicts with other groups on the same page.

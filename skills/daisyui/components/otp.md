@@ -1,7 +1,7 @@
 ### OTP
-OTP (One-Time Password) component for inputting verification codes. It's usually 4 to 6 digits long and is used for two-factor authentication (2FA) or passwordless login.
+An OTP is a one-time password component that lets a user enter a verification code. The code usually contains four to six digits. Use it for two-factor authentication (2FA) or passwordless login.
 
-[OTP docs](https://daisyui.com/components/otp/)
+[OTP documentation](https://daisyui.com/components/otp/)
 
 #### Class names
 - component: `otp`
@@ -21,8 +21,8 @@ OTP (One-Time Password) component for inputting verification codes. It's usually
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the size/color class names
-- `otp-joined` modifier connects the character boxes together
-- the `otp` class is for a label. The label should have 4 to 6 empty `<span>` elements for the visual representation of each digit and an input field for entering the code
-- The number of `<span>` elements must match the `maxlength` attribute and the pattern in the input field. For example, if you have 6 `<span>` elements, the input should have `maxlength="6"` and `pattern="\d{6}"`
-- `autocomplete="one-time-code"` and `inputmode="numeric"` are important for mobile devices to show the appropriate keyboard and to allow autofill of the OTP code
+- `{MODIFIER}` is optional. It can include one size class name and one color class name.
+- The `otp-joined` modifier connects the character boxes.
+- The `otp` class is for a label. The label must have four to six empty `<span>` elements that show the digits. It must also have an input field for the code.
+- The number of `<span>` elements must agree with the `maxlength` attribute and the input pattern. For six `<span>` elements, use `maxlength="6"` and `pattern="\d{6}"`.
+- On mobile devices, add `autocomplete="one-time-code"` and `inputmode="numeric"`. These attributes show the applicable keyboard and permit OTP autofill.

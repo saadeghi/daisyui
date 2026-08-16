@@ -1,7 +1,7 @@
-### theme-controller
-If a checked checkbox input or a checked radio input with theme-controller class exists in the page, The page will have the same theme as that input's value
+### Theme controller
+If a checked checkbox or radio input has the `theme-controller` class, the page uses the theme in the input value.
 
-[theme-controller docs](https://daisyui.com/components/theme-controller/)
+[Theme controller documentation](https://daisyui.com/components/theme-controller/)
 
 #### Class names
 - component: `theme-controller`
@@ -12,4 +12,4 @@ If a checked checkbox input or a checked radio input with theme-controller class
 ```
 
 #### Rules
-- The value attribute of the input element should be a valid daisyUI theme name
+- The `value` attribute of the input element must contain a valid daisyUI theme name.

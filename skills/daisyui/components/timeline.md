@@ -1,13 +1,13 @@
-### timeline
-Timeline component shows a list of events in chronological order
+### Timeline
+Use a timeline to show a list of events in chronological order.
 
-[timeline docs](https://daisyui.com/components/timeline/)
+[Timeline documentation](https://daisyui.com/components/timeline/)
 
-#### Class Names:
-- Component: `timeline`
-- Part: `timeline-start`, `timeline-middle`, `timeline-end`
-- Modifier: `timeline-snap-icon`, `timeline-box`, `timeline-compact`
-- Direction: `timeline-vertical`, `timeline-horizontal`
+#### Class names
+- component: `timeline`
+- part: `timeline-start`, `timeline-middle`, `timeline-end`
+- modifier: `timeline-snap-icon`, `timeline-box`, `timeline-compact`
+- direction: `timeline-vertical`, `timeline-horizontal`
 
 #### Syntax
 ```html
@@ -21,7 +21,7 @@ Timeline component shows a list of events in chronological order
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the modifier/direction class names
-- To make a vertical timeline, add the `timeline-vertical` class to the `ul` element or just do nothing (because its the default style.)
-- Add `timeline-snap-icon` to snap the icon to the start instead of middle
-- Add the `timeline-compact` class to force all items on one side
+- `{MODIFIER}` is optional. It can include one modifier class name and one direction class name.
+- The default timeline is vertical. You can also add the `timeline-vertical` class to the `ul` element.
+- Add `timeline-snap-icon` to put the icon at the start instead of the middle.
+- Add the `timeline-compact` class to put all items on one side.

@@ -1,7 +1,7 @@
-### tooltip
-Tooltip can be used to show a message when hovering over an element
+### Tooltip
+A tooltip shows a message when the pointer is on an element.
 
-[tooltip docs](https://daisyui.com/components/tooltip/)
+[Tooltip documentation](https://daisyui.com/components/tooltip/)
 
 #### Class names
 - component: `tooltip`
@@ -19,4 +19,4 @@ Tooltip can be used to show a message when hovering over an element
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of each modifier/placement/color class names
+- `{MODIFIER}` is optional. It can include one class name from each modifier, placement, and color category.

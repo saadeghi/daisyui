@@ -1,7 +1,7 @@
-### menu
-Menu is used to display a list of links vertically or horizontally
+### Menu
+Use a menu to show a list of links vertically or horizontally.
 
-[menu docs](https://daisyui.com/components/menu/)
+[Menu documentation](https://daisyui.com/components/menu/)
 
 #### Class names
 - component: `menu`
@@ -25,9 +25,9 @@ Horizontal menu:
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the modifier/size/direction class names
-- Use `lg:menu-horizontal` for responsive layouts
-- Use `menu-title` for list item title
-- Use `<details>` tag to make submenus collapsible
-- Use `menu-paged` to show one submenu level at a time; the open `<summary>` becomes the back button
-- Use `menu-dropdown` and `menu-dropdown-toggle` to toggle the dropdown using JS
+- `{MODIFIER}` is optional. It can include one modifier class name, one size class name, and one direction class name.
+- For responsive layouts, use `lg:menu-horizontal`.
+- Use `menu-title` for the list-item title.
+- Use the `<details>` tag to make submenus collapsible.
+- Use `menu-paged` to show one submenu level at a time. The open `<summary>` becomes the back button.
+- Use `menu-dropdown` and `menu-dropdown-toggle` to control the dropdown with JavaScript.
