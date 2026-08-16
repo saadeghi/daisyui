@@ -1,7 +1,7 @@
-### mask
-Mask crops the content of the element to common shapes
+### Mask
+A mask crops the content of an element to a common shape.
 
-[mask docs](https://daisyui.com/components/mask/)
+[Mask documentation](https://daisyui.com/components/mask/)
 
 #### Class names
 - component: `mask`
@@ -14,6 +14,6 @@ Mask crops the content of the element to common shapes
 ```
 
 #### Rules
-- {MODIFIER} is required and can have one of the style/modifier class names
-- You can change the shape of any element using `mask` class names
-- You can set custom sizes using `w-*` and `h-*`
+- You must specify `{MODIFIER}`. It can be one of the style or modifier class names.
+- To change the shape of an element, use the `mask` class names.
+- To set a custom size, use `w-*` and `h-*`.

@@ -1,7 +1,7 @@
-### mockup-code
-Code mockup is used to show a block of code in a box that looks like a code editor
+### Code mockup
+Use a code mockup to show code in a box with the style of a code editor.
 
-[mockup-code docs](https://daisyui.com/components/mockup-code/)
+[Code mockup documentation](https://daisyui.com/components/mockup-code/)
 
 #### Class names
 - component: `mockup-code`
@@ -14,6 +14,6 @@ Code mockup is used to show a block of code in a box that looks like a code edit
 ```
 
 #### Rules
-- Use `<pre data-prefix="{prefix}">` to show a prefix before each line
-- Use `<code>` tag to add code syntax highlighting (requires additional library)
-- To highlight a line, add background/text color
+- Use `<pre data-prefix="{prefix}">` to show a prefix before each line.
+- Use the `<code>` tag to add code syntax highlighting. Another library is necessary for this feature.
+- To make a line easy to see, add a background color or text color.

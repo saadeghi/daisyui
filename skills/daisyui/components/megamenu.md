@@ -1,7 +1,7 @@
-### megamenu
-A megamenu is a large, horizontal menu where each item opens a popover to show a large block of navigation links. Megamenu must be used once, on top of the page. Inside each popover, you can use a daisyUI menu, or any custom content. Megamenu fits better on large screens only, and for small screens, you can hide the megamenu and show the content in a dropdown or a drawer.
+### Megamenu
+A megamenu is a large horizontal menu. Each item opens a popover that shows a large group of navigation links. Use one megamenu at the top of the page. Each popover can contain a daisyUI menu or custom content. Use a megamenu on large screens. On small screens, hide it and show its content in a dropdown or drawer.
 
-[megamenu docs](https://daisyui.com/components/megamenu/)
+[Megamenu documentation](https://daisyui.com/components/megamenu/)
 
 #### Class names
 - component: `megamenu`
@@ -28,7 +28,7 @@ A megamenu is a large, horizontal menu where each item opens a popover to show a
 
 </div>
 ```
-Example of megamenu-wide with lots of menu items
+Example of `megamenu-wide` with many menu items:
 ```html
 <button class="btn sm:hidden" popovertarget="my-megamenu-2">Menu</button>
 <div class="megamenu max-sm:megamenu-vertical megamenu-wide w-full p-2 border border-base-300" id="my-megamenu-2" popover>
@@ -58,12 +58,12 @@ Example of megamenu-wide with lots of menu items
 
 
 #### Rules
-- {MODIFIER} is optional and can have one of the modifier class names and one of the size class names
-- `megamenu-active` span is mandatory. it's the indicator that moves under the active item
-- Each button must have a corresponding popover with the same id as the popovertarget value. HTML IDs must be unique.
-- {CONTENT} can include a daisyUI menu (`<ul class="menu"><li><a>List item 1</a></li></ul>`), or any custom content
-- you can put horizontal menu inside the popover like `<ul class="menu menu-horizontal"><li><a>List item 1</a></li></ul>`, or any other variation of daisyUI `menu` component
-- On small screens the whole megamenu is hidden using `max-sm:megamenu-vertical` class and it will be vertical when visible. The button with `popovertarget="my-megamenu-1"` opens the megamenu with `id="my-megamenu-1" popover`
-- On large screens, we hide the button using `sm:hidden` and the megamenu will be a horizontal menu, and each button inside the megamenu will open its corresponding popover.
-- megamenu can have max 10 popovers inside it
-- to hide the arrow from the buttons, use `after:content-none` class on the buttons
+- `{MODIFIER}` is optional. It can include one modifier class name and one size class name.
+- You must include the `megamenu-active` span. It is the indicator that moves below the active item.
+- Each button must have a related popover. Its ID must be the same as the `popovertarget` value. Do not use an HTML ID more than once.
+- `{CONTENT}` can include a daisyUI menu, such as `<ul class="menu"><li><a>List item 1</a></li></ul>`. It can also include custom content.
+- You can put a horizontal menu in the popover. For example, use `<ul class="menu menu-horizontal"><li><a>List item 1</a></li></ul>`. You can also use a different daisyUI `menu` variation.
+- On small screens, use `max-sm:megamenu-vertical` to hide the megamenu. When it is visible, it has a vertical layout. The button with `popovertarget="my-megamenu-1"` opens the megamenu with `id="my-megamenu-1" popover`.
+- On large screens, use `sm:hidden` to hide the button. The megamenu has a horizontal layout. Each button in the megamenu opens its related popover.
+- A megamenu can contain a maximum of 10 popovers.
+- To hide the arrow on each button, add `after:content-none` to the buttons.

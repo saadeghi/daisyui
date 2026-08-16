@@ -1,14 +1,14 @@
-### filter
-Filter is a group of radio buttons. Choosing one of the options will hide the others and shows a reset button next to the chosen option
+### Filter
+A filter is a group of radio buttons. When the user selects an option, the filter hides the other options. It also shows a reset button next to the selected option.
 
-[filter docs](https://daisyui.com/components/filter/)
+[Filter documentation](https://daisyui.com/components/filter/)
 
 #### Class names
 - component: `filter`
 - part: `filter-reset`
 
 #### Syntax
-Using HTML form
+HTML form:
 ```html
 <form class="filter">
   <input class="btn btn-square" type="reset" value="×"/>
@@ -16,7 +16,7 @@ Using HTML form
   <input class="btn" type="radio" name="{NAME}" aria-label="Tab 2 title"/>
 </form>
 ```
-Without HTML form
+No HTML form:
 ```html
 <div class="filter">
   <input class="btn filter-reset" type="radio" name="{NAME}" aria-label="×"/>
@@ -26,8 +26,8 @@ Without HTML form
 ```
 
 #### Rules
-- replace `{NAME}` with proper value, according to the context of the filter
-- Each set of radio inputs must have unique `name` attributes to avoid conflicts
-- Use `<form>` tag when possible and only use `<div>` if you can't use a HTML form for some reason
-- Use `filter-reset` class for the reset button
-- Do not check any of the radio inputs by default
+- Replace `{NAME}` with a value that identifies the filter.
+- Use a different `name` attribute for each set of radio inputs. This prevents conflicts.
+- If the context permits, use the `<form>` tag. If you cannot use an HTML form, use `<div>`.
+- Use the `filter-reset` class for the reset button.
+- Do not select a radio input by default.

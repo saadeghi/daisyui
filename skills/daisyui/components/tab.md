@@ -1,25 +1,25 @@
-### tab
-Tabs can be used to show a list of links in a tabbed format
+### Tab
+Use tabs to show a list of links in a tabbed format.
 
-[tab docs](https://daisyui.com/components/tab/)
+[Tab documentation](https://daisyui.com/components/tab/)
 
-#### Class Names:
-- Component: `tabs`
-- Part: `tab`, `tab-content`
-- Style: `tabs-box`, `tabs-border`, `tabs-lift`
-- Size: `tabs-xs`, `tabs-sm`, `tabs-md`, `tabs-lg`, `tabs-xl`
-- Modifier: `tab-active`, `tab-disabled`
-- Placement: `tabs-top`, `tabs-bottom`
+#### Class names
+- component: `tabs`
+- part: `tab`, `tab-content`
+- style: `tabs-box`, `tabs-border`, `tabs-lift`
+- size: `tabs-xs`, `tabs-sm`, `tabs-md`, `tabs-lg`, `tabs-xl`
+- modifier: `tab-active`, `tab-disabled`
+- placement: `tabs-top`, `tabs-bottom`
 
 #### Syntax
-Using buttons:
+Buttons:
 ```html
 <div role="tablist" class="tabs {MODIFIER}">
   <button role="tab" class="tab">Tab</button>
 </div>
 ```
 
-Using radio inputs:
+Radio inputs:
 ```html
 <div role="tablist" class="tabs tabs-box">
   <input type="radio" name="my_tabs" class="tab" aria-label="Tab" />
@@ -27,6 +27,6 @@ Using radio inputs:
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the style/size class names
-- Radio inputs are needed for tab content to work with tab click
-- If tabs gets a background then every tab inside it becomes rounded from both top corners
+- `{MODIFIER}` is optional. It can include one style class name and one size class name.
+- To change the tab content after the user clicks a tab, use radio inputs.
+- If you add a background to `tabs`, the two top corners of each tab become rounded.

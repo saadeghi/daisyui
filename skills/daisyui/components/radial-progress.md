@@ -1,7 +1,7 @@
-### radial-progress
-Radial progress can be used to show the progress of a task or to show the passing of time
+### Radial progress
+Use the radial progress component to show task progress or the passage of time.
 
-[radial-progress docs](https://daisyui.com/components/radial-progress/)
+[Radial progress documentation](https://daisyui.com/components/radial-progress/)
 
 #### Class names
 - component: `radial-progress`
@@ -12,7 +12,7 @@ Radial progress can be used to show the progress of a task or to show the passin
 ```
 
 #### Rules
-- The `--value` CSS variable and text must be a number between 0 and 100
-- you need to add `aria-valuenow={value}` and `role="progressbar"` so screen readers can properly read value and also show that its a progress element to them
-- Use `div` instead of progress because browsers can't show text inside progress tag
-- Use `--size` for setting size (default 5rem) and `--thickness` to set how thick the indicator is
+- The `--value` CSS variable and the text must contain a number from 0 through 100.
+- Add `aria-valuenow={value}` and `role="progressbar"`. These attributes let screen readers identify the progress element and read its value.
+- Use a `div` instead of a progress tag. Browsers cannot show text in a progress tag.
+- Use `--size` to set the size. The default is 5rem. Use `--thickness` to set the indicator thickness.

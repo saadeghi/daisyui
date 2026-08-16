@@ -1,7 +1,7 @@
-### modal
-Modal is used to show a dialog or a box when you click a button
+### Modal
+A modal shows a dialog or box when the user clicks a button.
 
-[modal docs](https://daisyui.com/components/modal/)
+[Modal documentation](https://daisyui.com/components/modal/)
 
 #### Class names
 - component: `modal`
@@ -10,7 +10,7 @@ Modal is used to show a dialog or a box when you click a button
 - placement: `modal-top`, `modal-middle`, `modal-bottom`, `modal-start`, `modal-end`
 
 #### Syntax
-Using HTML dialog element (recommended)
+If possible, use the HTML `dialog` element:
 ```html
 <button onclick="my_modal.showModal()">Open modal</button>
 <dialog id="my_modal" class="modal">
@@ -18,7 +18,7 @@ Using HTML dialog element (recommended)
   <form method="dialog" class="modal-backdrop"><button>close</button></form>
 </dialog>
 ```
-If we want it to close when clicking outside:
+To close the modal when the user clicks outside it:
 ```html
 <button class="btn" onclick="my_modal.showModal()">open modal</button>
 <dialog id="my_modal" class="modal">
@@ -33,7 +33,7 @@ If we want it to close when clicking outside:
 ```
 
 
-Using popover API (recommended only if we DON'T want to trap the keyboard navigation in the modal)
+If the modal must not keep keyboard navigation inside it, use the popover API:
 ```html
 <button popovertarget="my_modal" class="btn">Open modal</button>
 <div class="modal" popover id="my_modal">
@@ -45,7 +45,7 @@ Using popover API (recommended only if we DON'T want to trap the keyboard naviga
   </div>
 </div>
 ```
-If we want it to close when clicking outside:
+To close the modal when the user clicks outside it:
 ```html
 <button class="btn" popovertarget="my_modal">Open</button>
 
@@ -60,7 +60,7 @@ If we want it to close when clicking outside:
 </div>
 ```
 
-Using checkbox (legacy)
+Checkbox. This method is legacy:
 ```html
 <label for="my-modal" class="btn">Open modal</label>
 <input type="checkbox" id="my-modal" class="modal-toggle" />
@@ -70,7 +70,7 @@ Using checkbox (legacy)
 </div>
 ```
 
-Using anchor links (legacy)
+Anchor links. This method is legacy:
 ```html
 <a href="#my-modal" class="btn">Open modal</a>
 <div class="modal" id="my-modal">
@@ -79,6 +79,6 @@ Using anchor links (legacy)
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the modifier/placement class names
-- Use unique IDs for each modal
-- For HTML dialog element modals, add `<form method="dialog">` for closing the modal with submit
+- `{MODIFIER}` is optional. It can include one modifier class name and one placement class name.
+- Use a unique HTML ID for each modal.
+- For an HTML `dialog` element, add `<form method="dialog">`. This lets the submit action close the modal.

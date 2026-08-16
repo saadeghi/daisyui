@@ -1,11 +1,11 @@
-### list
-List is a vertical layout to display information in rows
+### List
+Use a list to show information in rows in a vertical layout.
 
-[list docs](https://daisyui.com/components/list/)
+[List documentation](https://daisyui.com/components/list/)
 
-#### Class Names:
-- Component: `list`, `list-row`
-- Modifier: `list-col-wrap`, `list-col-grow`
+#### Class names
+- component: `list`, `list-row`
+- modifier: `list-col-wrap`, `list-col-grow`
 
 #### Syntax
 ```html
@@ -15,6 +15,6 @@ List is a vertical layout to display information in rows
 ```
 
 #### Rules
-- Use `list-row` for each item inside the list
-- By default, the second child of the `list-row` will fill the remaining space. You can use `list-col-grow` on another child to make it fill the remaining space instead
-- Use `list-col-wrap` to force an item to wrap to the next line
+- Use `list-row` for each item in the list.
+- By default, the second child of `list-row` fills the space that remains. To use a different child, add `list-col-grow` to that child.
+- Use `list-col-wrap` to move an item to the next line.

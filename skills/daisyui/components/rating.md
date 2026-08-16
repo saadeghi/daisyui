@@ -1,7 +1,7 @@
-### rating
-Rating is a set of radio buttons that allow the user to rate something
+### Rating
+A rating is a set of radio buttons that lets the user give a rating.
 
-[rating docs](https://daisyui.com/components/rating/)
+[Rating documentation](https://daisyui.com/components/rating/)
 
 #### Class names
 - component: `rating`
@@ -15,7 +15,7 @@ Rating is a set of radio buttons that allow the user to rate something
 </div>
 ```
 
-For a read-only (non-interactive) rating, use `<div>` elements instead of radio inputs and mark the selected one with `aria-current="true"`:
+For a read-only, noninteractive rating, use `<div>` elements instead of radio inputs. Add `aria-current="true"` to the selected element:
 ```html
 <div class="rating">
   <div class="mask mask-star" aria-label="1 star"></div>
@@ -25,7 +25,7 @@ For a read-only (non-interactive) rating, use `<div>` elements instead of radio 
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the modifier/size class names
-- Each set of rating inputs should have unique `name` attributes to avoid conflicts with other ratings on the same page
-- Add `rating-hidden` for the first radio to make it hidden so user can clear the rating
-- For a read-only/non-interactive rating, use `<div>` elements instead of the radio inputs and mark the selected one with `aria-current="true"`
+- `{MODIFIER}` is optional. It can include one modifier class name and one size class name.
+- Recommendation: Use a unique `name` attribute for each rating-input group. This prevents conflicts with other ratings on the same page.
+- Add `rating-hidden` to the first radio input to hide it. This lets the user clear the rating.
+- For a read-only, noninteractive rating, use `<div>` elements instead of radio inputs. Add `aria-current="true"` to the selected element.

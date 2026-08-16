@@ -1,7 +1,7 @@
-### kbd
-Kbd is used to display keyboard shortcuts
+### Kbd
+Use the kbd component to show keyboard shortcuts.
 
-[kbd docs](https://daisyui.com/components/kbd/)
+[Kbd documentation](https://daisyui.com/components/kbd/)
 
 #### Class names
 - component: `kbd`
@@ -13,4 +13,4 @@ Kbd is used to display keyboard shortcuts
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the size class names
+- `{MODIFIER}` is optional. It can be one of the size class names.

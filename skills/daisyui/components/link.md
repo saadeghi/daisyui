@@ -1,7 +1,7 @@
-### link
-Link adds the missing underline style to links
+### Link
+The link component adds an underline to links.
 
-[link docs](https://daisyui.com/components/link/)
+[Link documentation](https://daisyui.com/components/link/)
 
 #### Class names
 - component: `link`
@@ -14,4 +14,4 @@ Link adds the missing underline style to links
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the modifier class names
+- `{MODIFIER}` is optional. It can be one of the listed class names.

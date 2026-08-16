@@ -1,20 +1,20 @@
-### label
-Label is used to provide a name or title for an input field. Label can be placed before or after the field
+### Label
+Use a label to give a name or title to an input field. Put the label before or after the field.
 
-[label docs](https://daisyui.com/components/label/)
+[Label documentation](https://daisyui.com/components/label/)
 
 #### Class names
 - component: `label`, `floating-label`
 
 #### Syntax
-For regular label:
+Regular label:
 ```html
 <label class="input">
   <span class="label">{label text}</span>
   <input type="text" placeholder="Type here" />
 </label>
 ```
-For floating label:
+Floating label:
 ```html
 <label class="floating-label">
   <input type="text" placeholder="Type here" class="input" />
@@ -23,5 +23,5 @@ For floating label:
 ```
 
 #### Rules
-- The `input` class is for styling the parent element which contains the input field and label, so the label does not have the 'input' class
-- Use `floating-label` for the parent of an input field and a span that floats above the input field when the field is focused
+- The `input` class styles the parent element that contains the input field and label. Do not add the `input` class to the label.
+- Add `floating-label` to the parent element. This parent must contain an input field and a span. When the field has focus, the span moves above it.

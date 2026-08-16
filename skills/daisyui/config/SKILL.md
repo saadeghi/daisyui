@@ -3,17 +3,17 @@ name: daisyui-config
 description: Configuration options for daisyUI 5
 ---
 
-## Config
+## Configuration
 
-daisyUI 5 config docs: https://daisyui.com/docs/config/
+daisyUI 5 configuration documentation: https://daisyui.com/docs/config/
 
-daisyUI without config:
+daisyUI with no configuration:
 
 ```css
 @plugin "daisyui";
 ```
 
-daisyUI config with `light` theme only:
+daisyUI configuration with only the `light` theme:
 
 ```css
 @plugin "daisyui" {
@@ -21,7 +21,7 @@ daisyUI config with `light` theme only:
 }
 ```
 
-daisyUI with all the default configs:
+daisyUI with all default settings:
 
 ```css
 @plugin "daisyui" {
@@ -33,10 +33,10 @@ daisyUI with all the default configs:
   logs: true;
 }
 ```
-An example config:
-In below config, all the built-in themes are enabled while bumblebee is the default theme and synthwave is the prefersdark theme (default dark mode)
-All the other themes are enabled and can be used by adding `data-theme="THEME_NAME"` to the `<html>` element
-root scrollbar gutter is excluded. `daisy-` prefix is used for all daisyUI classes and console.log is disabled
+Example configuration:
+This configuration enables all built-in themes. The `bumblebee` theme is the default theme. The `synthwave` theme is the `prefersdark` theme, which is the default dark mode.
+To use another enabled theme, add `data-theme="THEME_NAME"` to the `<html>` element.
+The configuration excludes the root scrollbar gutter. It uses the `daisy-` prefix for all daisyUI classes and disables console logs.
 ```css
 @plugin "daisyui" {
   themes: light, dark, cupcake, bumblebee --default, emerald, corporate, synthwave --prefersdark, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee, winter, dim, nord, sunset, caramellatte, abyss, silk;
