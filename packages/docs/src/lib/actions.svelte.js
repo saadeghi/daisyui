@@ -87,8 +87,13 @@ export const htmlToJsx = (node) => {
     "stroke-dashoffset": "strokeDashoffset",
     "stroke-linecap": "strokeLinecap",
     "stroke-linejoin": "strokeLinejoin",
+    "stroke-miterlimit": "strokeMiterlimit",
     "stroke-opacity": "strokeOpacity",
     "stroke-width": "strokeWidth",
+    autocomplete: "autoComplete",
+    inputmode: "inputMode",
+    // keep before popovertarget, which is a prefix of it and would match first
+    popovertargetaction: "popoverTargetAction",
     popovertarget: "popoverTarget",
     "anchor-name": "anchorName",
     "position-anchor": "positionAnchor",
