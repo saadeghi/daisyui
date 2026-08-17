@@ -1420,9 +1420,6 @@
     <loc>https://daisyui.com/alternative/flux/</loc>
   </url>
   <url>
-    <loc>https://daisyui.com/docs/skill/copilot/</loc>
-  </url>
-  <url>
     <loc>https://daisyui.com/docs/skill/claude-code/</loc>
   </url>
   <url>
@@ -1432,16 +1429,10 @@
     <loc>https://daisyui.com/docs/skill/cursor/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/docs/skill/copilot/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/docs/skill/opencode/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/docs/skill/openclaw/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/docs/skill/windsurf/</loc>
-  </url>
-  <url>
-    <loc>https://daisyui.com/docs/skill/gemini-cli/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/docs/skill/antigravity/</loc>
