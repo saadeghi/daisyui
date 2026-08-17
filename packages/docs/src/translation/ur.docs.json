@@ -1028,7 +1028,7 @@
   "For CI/CD, run the command without `--watch` to generate the output.css file once.": "CI /CD کے لیے، ایک بار output.css فائل بنانے کے لیے `--watch` کے بغیر کمانڈ چلائیں۔",
   "title: Install Tailwind CSS and daisyUI for Zola\ndesc: How to install Tailwind CSS and daisyUI in a Zola project, without Node.js": "ٹائٹل: زولا ڈیسک کے لیے ٹیل ونڈ CSS اور daisyUI انسٹال کریں: زولا پروجیکٹ میں بغیر Node.js کے Tailwind CSS اور daisyUI کو کیسے انسٹال کریں",
   "1. Create a new Zola project": "1. ایک نیا زولا پروجیکٹ بنائیں",
-  "Install Zole according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "<a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a> کے مطابق Zole انسٹال کریں۔",
+  "Install Zola according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "<a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a> کے مطابق Zole انسٹال کریں۔",
   "Create a new Zola project in called `myblog` and navigate to it:": "`myblog` نامی ایک نیا زولا پروجیکٹ بنائیں اور اس پر جائیں:",
   "2. Get Tailwind CSS executable": "2. Tailwind CSS قابل عمل حاصل کریں۔",
   "3. Get daisyUI bundled JS file": "3. daisyUI بنڈل JS فائل حاصل کریں۔",

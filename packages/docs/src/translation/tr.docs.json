@@ -1028,7 +1028,7 @@
   "For CI/CD, run the command without `--watch` to generate the output.css file once.": "CI /CD için, çıktı.css dosyasını bir kez oluşturmak üzere `--watch` olmadan komutu çalıştırın.",
   "title: Install Tailwind CSS and daisyUI for Zola\ndesc: How to install Tailwind CSS and daisyUI in a Zola project, without Node.js": "title: Zola için Tailwind CSS ve daisyUI kurulumu desc: Tailwind CSS ve daisyUI, Node.js olmadan bir Zola projesine nasıl kurulur",
   "1. Create a new Zola project": "1. Yeni bir Zola projesi oluşturun",
-  "Install Zole according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "Zole'yi <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola dokümanları</a>'e göre yükleyin.",
+  "Install Zola according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "Zole'yi <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola dokümanları</a>'e göre yükleyin.",
   "Create a new Zola project in called `myblog` and navigate to it:": "`myblog` adında yeni bir Zola projesi oluşturun ve ona gidin:",
   "2. Get Tailwind CSS executable": "2. Tailwind CSS çalıştırılabilir dosyasını edinin",
   "3. Get daisyUI bundled JS file": "3. daisyUI paketindeki JS dosyasını edinin",

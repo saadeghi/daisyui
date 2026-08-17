@@ -1028,7 +1028,7 @@
   "For CI/CD, run the command without `--watch` to generate the output.css file once.": "עבור CI /CD, הפעל את הפקודה ללא `--watch` כדי ליצור את הקובץ output.css פעם אחת.",
   "title: Install Tailwind CSS and daisyUI for Zola\ndesc: How to install Tailwind CSS and daisyUI in a Zola project, without Node.js": "כותרת: התקנת Tailwind CSS ו-daisyUI עבור Zola תיאור: כיצד להתקין Tailwind CSS ו-daisyUI בפרויקט Zola, ללא Node.js",
   "1. Create a new Zola project": "1. צור פרויקט Zola חדש",
-  "Install Zole according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "התקן את Zole בהתאם ל-<a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.",
+  "Install Zola according to the <a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.": "התקן את Zole בהתאם ל-<a href=\"https://www.getzola.org/documentation/getting-started/installation/\" rel=\"nofollow\" target=\"_blank\">Zola docs</a>.",
   "Create a new Zola project in called `myblog` and navigate to it:": "צור פרויקט Zola חדש בשם `myblog` ונווט אליו:",
   "2. Get Tailwind CSS executable": "2. קבל קובץ הפעלה של Tailwind CSS",
   "3. Get daisyUI bundled JS file": "3. קבל קובץ JS מצורף daisyUI",

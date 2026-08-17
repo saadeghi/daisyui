@@ -121,7 +121,7 @@ The agent does not need to load the entire documentation or guess from an outdat
 
 The [Quality Inspector](/blueprint/workflow/#6-quality-inspector) MCP tool reviews the code for UI mistakes, visual hierarchy, class names misuse, accessibility, responsive behavior, theme colors, and missing states.
 
-This tool compares the generated code agains the previously introduced rules and instructions. Prevents the LLM from ignoring the rules and if there's visual problem, the LLM is forced to go back and fix it.
+This tool compares the generated code against the previously introduced rules and instructions. Prevents the LLM from ignoring the rules and if there's visual problem, the LLM is forced to go back and fix it.
 
 ## This is where the time and tokens come back
 
