@@ -100,7 +100,7 @@
 
 .sheet-backdrop {
   @layer daisyui.l1.l2.l3 {
-    @apply pointer-events-none fixed inset-0 bg-base-content/60 opacity-0 transition-opacity duration-300;
+    @apply bg-base-content/60 pointer-events-none fixed inset-0 opacity-0 transition-opacity duration-300;
 
     @supports (animation-timeline: scroll()) {
       @media (hover: none) and (pointer: coarse) {
@@ -170,7 +170,7 @@
     @apply flex-col;
 
     .sheet-content {
-      @apply w-full flex-col rounded-t-box;
+      @apply rounded-t-box w-full flex-col;
 
       max-block-size: var(--sheet-full);
     }
@@ -202,7 +202,7 @@
     @apply flex-col-reverse;
 
     .sheet-content {
-      @apply w-full flex-col-reverse rounded-b-box;
+      @apply rounded-b-box w-full flex-col-reverse;
 
       max-block-size: var(--sheet-full);
     }
@@ -237,7 +237,7 @@
     }
 
     .sheet-content {
-      @apply h-[100dvh] flex-row rounded-l-box;
+      @apply rounded-l-box h-[100dvh] flex-row;
 
       max-inline-size: var(--sheet-full);
 
@@ -280,7 +280,7 @@
     }
 
     .sheet-content {
-      @apply h-[100dvh] flex-row-reverse rounded-r-box;
+      @apply rounded-r-box h-[100dvh] flex-row-reverse;
 
       max-inline-size: var(--sheet-full);
 
