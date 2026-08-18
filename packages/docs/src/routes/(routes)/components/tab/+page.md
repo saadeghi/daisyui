@@ -57,9 +57,9 @@ classnames:
 
 ```html
 <div role="tablist" class="$$tabs">
-  <a role="tab" class="$$tab">Tab 1</a>
-  <a role="tab" class="$$tab $$tab-active">Tab 2</a>
-  <a role="tab" class="$$tab">Tab 3</a>
+  <button role="tab" class="$$tab">Tab 1</button>
+  <button role="tab" class="$$tab $$tab-active">Tab 2</button>
+  <button role="tab" class="$$tab">Tab 3</button>
 </div>
 ```
 
@@ -73,9 +73,9 @@ classnames:
 
 ```html
 <div role="tablist" class="$$tabs $$tabs-border">
-  <a role="tab" class="$$tab">Tab 1</a>
-  <a role="tab" class="$$tab $$tab-active">Tab 2</a>
-  <a role="tab" class="$$tab">Tab 3</a>
+  <button role="tab" class="$$tab">Tab 1</button>
+  <button role="tab" class="$$tab $$tab-active">Tab 2</button>
+  <button role="tab" class="$$tab">Tab 3</button>
 </div>
 ```
 
@@ -89,9 +89,9 @@ classnames:
 
 ```html
 <div role="tablist" class="$$tabs $$tabs-lift">
-  <a role="tab" class="$$tab">Tab 1</a>
-  <a role="tab" class="$$tab $$tab-active">Tab 2</a>
-  <a role="tab" class="$$tab">Tab 3</a>
+  <button role="tab" class="$$tab">Tab 1</button>
+  <button role="tab" class="$$tab $$tab-active">Tab 2</button>
+  <button role="tab" class="$$tab">Tab 3</button>
 </div>
 ```
 
@@ -105,9 +105,9 @@ classnames:
 
 ```html
 <div role="tablist" class="$$tabs $$tabs-box">
-  <a role="tab" class="$$tab">Tab 1</a>
-  <a role="tab" class="$$tab $$tab-active">Tab 2</a>
-  <a role="tab" class="$$tab">Tab 3</a>
+  <button role="tab" class="$$tab">Tab 1</button>
+  <button role="tab" class="$$tab $$tab-active">Tab 2</button>
+  <button role="tab" class="$$tab">Tab 3</button>
 </div>
 ```
 
@@ -159,33 +159,33 @@ classnames:
 ```html
 
 <div role="tablist" class="$$tabs $$tabs-lift $$tabs-xs">
-  <a role="tab" class="$$tab">Xsmall</a>
-  <a role="tab" class="$$tab $$tab-active">Xsmall</a>
-  <a role="tab" class="$$tab">Xsmall</a>
+  <button role="tab" class="$$tab">Xsmall</button>
+  <button role="tab" class="$$tab $$tab-active">Xsmall</button>
+  <button role="tab" class="$$tab">Xsmall</button>
 </div>
 
 <div role="tablist" class="$$tabs $$tabs-lift $$tabs-sm">
-  <a role="tab" class="$$tab">Small</a>
-  <a role="tab" class="$$tab $$tab-active">Small</a>
-  <a role="tab" class="$$tab">Small</a>
+  <button role="tab" class="$$tab">Small</button>
+  <button role="tab" class="$$tab $$tab-active">Small</button>
+  <button role="tab" class="$$tab">Small</button>
 </div>
 
 <div role="tablist" class="$$tabs $$tabs-lift">
-  <a role="tab" class="$$tab">Medium</a>
-  <a role="tab" class="$$tab $$tab-active">Medium</a>
-  <a role="tab" class="$$tab">Medium</a>
+  <button role="tab" class="$$tab">Medium</button>
+  <button role="tab" class="$$tab $$tab-active">Medium</button>
+  <button role="tab" class="$$tab">Medium</button>
 </div>
 
 <div role="tablist" class="$$tabs $$tabs-lift $$tabs-lg">
-  <a role="tab" class="$$tab">Large</a>
-  <a role="tab" class="$$tab $$tab-active">Large</a>
-  <a role="tab" class="$$tab">Large</a>
+  <button role="tab" class="$$tab">Large</button>
+  <button role="tab" class="$$tab $$tab-active">Large</button>
+  <button role="tab" class="$$tab">Large</button>
 </div>
 
 <div role="tablist" class="$$tabs $$tabs-lift $$tabs-xl">
-  <a role="tab" class="$$tab">Xlarge</a>
-  <a role="tab" class="$$tab $$tab-active">Xlarge</a>
-  <a role="tab" class="$$tab">Xlarge</a>
+  <button role="tab" class="$$tab">Xlarge</button>
+  <button role="tab" class="$$tab $$tab-active">Xlarge</button>
+  <button role="tab" class="$$tab">Xlarge</button>
 </div>
 ```
 
@@ -376,8 +376,8 @@ classnames:
 
 ```html
 <div role="tablist" class="$$tabs $$tabs-lift">
-  <a role="tab" class="$$tab">Tab 1</a>
-  <a role="tab" class="$$tab $$tab-active text-primary [--tab-bg:orange] [--tab-border-color:red]"> Tab 2</a>
-  <a role="tab" class="$$tab">Tab 3</a>
+  <button role="tab" class="$$tab">Tab 1</button>
+  <button role="tab" class="$$tab $$tab-active text-primary [--tab-bg:orange] [--tab-border-color:red]"> Tab 2</button>
+  <button role="tab" class="$$tab">Tab 3</button>
 </div>
 ```
