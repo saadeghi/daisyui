@@ -99,13 +99,13 @@
     > :nth-child(n + 7) {
       @apply hidden;
     }
-    &:has(:nth-child(3)) {
+    &:has(> :nth-child(3)) {
       --position: 140%;
       > :nth-child(3) {
         --degree: 135deg;
       }
     }
-    &:has(:nth-child(4)) {
+    &:has(> :nth-child(4)) {
       --position: 140%;
       > :nth-child(3) {
         --degree: 165deg;
@@ -114,7 +114,7 @@
         --degree: 105deg;
       }
     }
-    &:has(:nth-child(5)) {
+    &:has(> :nth-child(5)) {
       --position: 180%;
       > :nth-child(3) {
         --degree: 180deg;
@@ -126,7 +126,7 @@
         --degree: 90deg;
       }
     }
-    &:has(:nth-child(6)) {
+    &:has(> :nth-child(6)) {
       --position: 220%;
       > :nth-child(3) {
         --degree: 180deg;
@@ -147,13 +147,13 @@
       > :nth-child(n + 6) {
         @apply hidden;
       }
-      &:has(:nth-child(2)) {
+      &:has(> :nth-child(2)) {
         --position: 140%;
         > :nth-child(2) {
           --degree: 135deg;
         }
       }
-      &:has(:nth-child(3)) {
+      &:has(> :nth-child(3)) {
         --position: 140%;
         > :nth-child(2) {
           --degree: 165deg;
@@ -162,7 +162,7 @@
           --degree: 105deg;
         }
       }
-      &:has(:nth-child(4)) {
+      &:has(> :nth-child(4)) {
         --position: 180%;
         > :nth-child(2) {
           --degree: 180deg;
@@ -174,7 +174,7 @@
           --degree: 90deg;
         }
       }
-      &:has(:nth-child(5)) {
+      &:has(> :nth-child(5)) {
         --position: 220%;
         > :nth-child(2) {
           --degree: 180deg;
