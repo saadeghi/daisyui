@@ -5,7 +5,7 @@
     height: 4rem;
     height: calc(4rem + env(safe-area-inset-bottom));
     padding-bottom: env(safe-area-inset-bottom);
-    > *:where(:not(script, style, template)) {
+    > *:not(:where(script, style, template)) {
       @apply rounded-box relative mb-2 flex h-full max-w-32 shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px bg-transparent;
       transition: opacity 0.2s ease-out;
       @media (hover: hover) {
