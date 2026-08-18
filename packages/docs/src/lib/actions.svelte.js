@@ -40,8 +40,6 @@ export const htmlToJsx = (node) => {
     '"0"': "{0}",
     "&lt;!--": "{/*",
     "--&gt;": "*/}",
-    '<span style="color:var(--syntax-attr-name)"> checked</span><span style="color:var(--syntax-punctuation)">=</span><span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">checked</span><span style="color:var(--syntax-punctuation)">"</span>':
-      '<span style="color:var(--syntax-attr-name)"> defaultChecked</span>',
     '<span style="color:var(--syntax-token)"><span style="color:var(--syntax-token)"><span style="color:var(--syntax-punctuation)"&lt;</span>br</span><span style="color:var(--syntax-punctuation)"&gt;</span></span>':
       '<span style="color:var(--syntax-token)"><span style="color:var(--syntax-token)"><span style="color:var(--syntax-punctuation)"&lt;</span>br /</span><span style="color:var(--syntax-punctuation)"&gt;</span></span>',
     '<span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">0</span><span style="color:var(--syntax-punctuation)">"</span>':
@@ -77,12 +75,24 @@ export const htmlToJsx = (node) => {
     "gi",
   )
 
+  // checked="checked" becomes defaultChecked, otherwise React warns about a checked field with
+  // no onChange handler. The value is dropped too, so this cannot go in attrNamesToReplace.
+  const checkedAttrSpan = new RegExp(
+    '(<span style="color:var\\(--syntax-attr-name\\)">\\s*)checked</span>' +
+      '<span style="color:var\\(--syntax-punctuation\\)">=</span>' +
+      '<span style="color:var\\(--syntax-punctuation\\)">"</span>' +
+      '<span style="color:var\\(--syntax-attr-value\\)">checked</span>' +
+      '<span style="color:var\\(--syntax-punctuation\\)">"</span>',
+    "gi",
+  )
+
   const update = () => {
     node.innerHTML = replaceStrings(originalContent, stringsToReplace)
       .replace(
         attrNameSpan,
         (_match, before, name, after) => before + attrNamesToReplace[name.toLowerCase()] + after,
       )
+      .replace(checkedAttrSpan, "$1defaultChecked</span>")
       // fix the broken tabIndex={0} in JSX tab
       .replaceAll(
         'var(--syntax-punctuation)" tabIndex={0}>',
