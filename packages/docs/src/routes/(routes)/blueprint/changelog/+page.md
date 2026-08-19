@@ -1,12 +1,19 @@
 ---
 title: Blueprint changelog
-desc: New and updated tools, prompts, and resources in daisyUI Blueprint v1.5.
+desc: New and updated tools, prompts, and resources in daisyUI Blueprint.
 layout: docs
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
+
+## v1.6
+
+_August 2026_
+
+- Update MCP SDK
+- Fix: Claude Desktop JSON Schema issue
 
 ## v1.5
 
