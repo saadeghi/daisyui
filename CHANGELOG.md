@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.19](https://github.com/saadeghi/daisyui/compare/v5.7.18...v5.7.19) (2026-08-19)
+
+### Bug Fixes
+
+* alert grid ([#4684](https://github.com/saadeghi/daisyui/issues/4684)) ([3b99c0c](https://github.com/saadeghi/daisyui/commit/3b99c0cedf64c4c3a5c6c2bba1684533c1fa0934))
 ## [5.7.18](https://github.com/saadeghi/daisyui/compare/v5.7.17...v5.7.18) (2026-08-18)
 
 ### Bug Fixes
