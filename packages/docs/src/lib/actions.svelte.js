@@ -79,6 +79,8 @@ export const htmlToJsx = (node) => {
       '<span style="color:var(--syntax-token)"><span style="color:var(--syntax-token)"><span style="color:var(--syntax-punctuation)"&lt;</span>br /</span><span style="color:var(--syntax-punctuation)"&gt;</span></span>',
     '<span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">0</span><span style="color:var(--syntax-punctuation)">"</span>':
       '<span style="color:var(--syntax-punctuation)">{</span><span style="color:var(--syntax-attr-value)">0</span><span style="color:var(--syntax-punctuation)">}</span>',
+    '<span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">-1</span><span style="color:var(--syntax-punctuation)">"</span>':
+      '<span style="color:var(--syntax-punctuation)">{</span><span style="color:var(--syntax-attr-value)">-1</span><span style="color:var(--syntax-punctuation)">}</span>',
     tabindex: "tabIndex",
     "clip-rule": "clipRule",
     "fill-opacity": "fillOpacity",
