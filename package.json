@@ -1,7 +1,7 @@
 {
   "name": "daisyui-monorepo",
   "private": true,
-  "packageManager": "bun@1.3.14",
+  "packageManager": "bun@1.4.0",
   "workspaces": [
     "packages/*"
   ],
@@ -21,7 +21,8 @@
     "lang:validate": "bun packages/docs/src/lib/scripts/validateTranslations.js",
     "bundle": "bun packages/daisyui/functions/bundle.js",
     "lint": "bunx -y oxlint@latest --ignore-pattern packages/playground",
-    "test": "bun test",
+    "check": "bun run --parallel lint test lang:validate",
+    "test": "bun test --parallel=4",
     "api": "cd ../daisyui-api && bun run dev",
     "dev:localapi": "bunx -y concurrently -k 'bun run api' 'PUBLIC_DAISYUI_API_PATH=http://localhost:4000/docs bun run dev'",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",

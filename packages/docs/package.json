@@ -13,7 +13,7 @@
     "build:preview": "bun run --bun build && bun run preview",
     "stats": "open build/stats.html",
     "test": "bun test src",
-    "verify": "bun run test && bun run lang:validate",
+    "verify": "bun run --parallel test lang:validate",
     "verify:build": "bun src/lib/scripts/verifyBuild.js",
     "lang:add": "bun src/lib/scripts/addTranslations.js --write",
     "lang:prune": "bun src/lib/scripts/pruneTranslations.js",
