@@ -8,7 +8,7 @@
     > * {
       @apply grid justify-items-start;
       height: calc(var(--items, 1) * 100%);
-      &:has(*:nth-child(2)) {
+      &:has(> *:nth-child(2)) {
         --items: 2;
         @media (prefers-reduced-motion: no-preference) {
           animation: rotator var(--duration, 10s) linear(0 0% 49%, 0.5 50% 99%, 1 100% 100%)
@@ -18,21 +18,21 @@
           animation: rotator var(--duration, 10s) steps(var(--items), jump-end) infinite;
         }
       }
-      &:has(*:nth-child(3)) {
+      &:has(> *:nth-child(3)) {
         --items: 3;
         @media (prefers-reduced-motion: no-preference) {
           animation: rotator var(--duration, 10s)
             linear(0 0% 32%, 0.333333 33% 65%, 0.666666 66% 99%, 1 100% 100%) infinite;
         }
       }
-      &:has(*:nth-child(4)) {
+      &:has(> *:nth-child(4)) {
         --items: 4;
         @media (prefers-reduced-motion: no-preference) {
           animation: rotator var(--duration, 10s)
             linear(0 0% 24%, 0.25 25% 49%, 0.5 50% 74%, 0.75 75% 99%, 1 100% 100%) infinite;
         }
       }
-      &:has(*:nth-child(5)) {
+      &:has(> *:nth-child(5)) {
         --items: 5;
         @media (prefers-reduced-motion: no-preference) {
           animation: rotator var(--duration, 10s)
@@ -40,7 +40,7 @@
             infinite;
         }
       }
-      &:has(*:nth-child(6)) {
+      &:has(> *:nth-child(6)) {
         --items: 6;
         @media (prefers-reduced-motion: no-preference) {
           animation: rotator var(--duration, 10s)
