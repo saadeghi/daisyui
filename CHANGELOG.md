@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.20](https://github.com/saadeghi/daisyui/compare/v5.7.19...v5.7.20) (2026-08-20)
+
+### Bug Fixes
+
+* text-rotate - selector targets direct children, to avoid style leaking ([#4682](https://github.com/saadeghi/daisyui/issues/4682)) ([44856dc](https://github.com/saadeghi/daisyui/commit/44856dcf850c12d41b92eb301c40004f49d81027))
 ## [5.7.19](https://github.com/saadeghi/daisyui/compare/v5.7.18...v5.7.19) (2026-08-19)
 
 ### Bug Fixes
