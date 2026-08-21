@@ -11,7 +11,8 @@ async function getTestimonials(retry = true) {
     }
     return await response.json()
   } catch (error) {
-    if (!signal.aborted || !retry) throw error
+    if (!retry) throw error
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     return getTestimonials(false)
   }
 }
