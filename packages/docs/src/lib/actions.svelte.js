@@ -1,5 +1,19 @@
 import { prefix } from "$lib/stores"
 
+// A bare `popover` attribute means popover={true} in JSX, but React types it as an enumerated
+// string, so the attribute is dropped and the element is not a popover at all. Anchored on the end
+// of the span so it cannot match popovertarget.
+const barePopoverSpan = new RegExp(
+  '(<span style="color:var\\(--syntax-attr-name\\)">\\s*popover</span>)' +
+    '(?!<span style="color:var\\(--syntax-punctuation\\)">=</span>)',
+  "g",
+)
+const popoverValue =
+  '<span style="color:var(--syntax-punctuation)">=</span>' +
+  '<span style="color:var(--syntax-punctuation)">"</span>' +
+  '<span style="color:var(--syntax-attr-value)">auto</span>' +
+  '<span style="color:var(--syntax-punctuation)">"</span>'
+
 const replaceStrings = (content, replacements) => {
   const re = new RegExp(
     Object.keys(replacements)
@@ -101,6 +115,7 @@ export const htmlToJsx = (node) => {
 
   const update = () => {
     node.innerHTML = replaceStrings(originalContent, stringsToReplace)
+      .replace(barePopoverSpan, `$1${popoverValue}`)
       // fix the broken tabIndex={0} in JSX tab
       .replaceAll(
         'var(--syntax-punctuation)" tabIndex={0}>',
