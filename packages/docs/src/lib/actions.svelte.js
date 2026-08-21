@@ -1,5 +1,19 @@
 import { prefix } from "$lib/stores"
 
+// A bare `popover` attribute means popover={true} in JSX, but React types it as an enumerated
+// string, so the attribute is dropped and the element is not a popover at all. Anchored on the end
+// of the span so it cannot match popovertarget.
+const barePopoverSpan = new RegExp(
+  '(<span style="color:var\\(--syntax-attr-name\\)">\\s*popover</span>)' +
+    '(?!<span style="color:var\\(--syntax-punctuation\\)">=</span>)',
+  "g",
+)
+const popoverValue =
+  '<span style="color:var(--syntax-punctuation)">=</span>' +
+  '<span style="color:var(--syntax-punctuation)">"</span>' +
+  '<span style="color:var(--syntax-attr-value)">auto</span>' +
+  '<span style="color:var(--syntax-punctuation)">"</span>'
+
 const replaceStrings = (content, replacements) => {
   const re = new RegExp(
     Object.keys(replacements)
@@ -44,6 +58,8 @@ export const htmlToJsx = (node) => {
       '<span style="color:var(--syntax-token)"><span style="color:var(--syntax-token)"><span style="color:var(--syntax-punctuation)"&lt;</span>br /</span><span style="color:var(--syntax-punctuation)"&gt;</span></span>',
     '<span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">0</span><span style="color:var(--syntax-punctuation)">"</span>':
       '<span style="color:var(--syntax-punctuation)">{</span><span style="color:var(--syntax-attr-value)">0</span><span style="color:var(--syntax-punctuation)">}</span>',
+    '<span style="color:var(--syntax-punctuation)">"</span><span style="color:var(--syntax-attr-value)">-1</span><span style="color:var(--syntax-punctuation)">"</span>':
+      '<span style="color:var(--syntax-punctuation)">{</span><span style="color:var(--syntax-attr-value)">-1</span><span style="color:var(--syntax-punctuation)">}</span>',
     tabindex: "tabIndex",
     "clip-rule": "clipRule",
     "fill-opacity": "fillOpacity",
@@ -52,11 +68,14 @@ export const htmlToJsx = (node) => {
     "stroke-dashoffset": "strokeDashoffset",
     "stroke-linecap": "strokeLinecap",
     "stroke-linejoin": "strokeLinejoin",
+    "stroke-miterlimit": "strokeMiterlimit",
     "stroke-opacity": "strokeOpacity",
     "stroke-width": "strokeWidth",
+    autocomplete: "autoComplete",
+    inputmode: "inputMode",
+    // keep before popovertarget, which is a prefix of it and would match first
+    popovertargetaction: "popoverTargetAction",
     popovertarget: "popoverTarget",
-    "anchor-name": "anchorName",
-    "position-anchor": "positionAnchor",
   }
 
   // Attribute names that must be renamed only when they are an attribute, not when the same
@@ -93,6 +112,7 @@ export const htmlToJsx = (node) => {
         (_match, before, name, after) => before + attrNamesToReplace[name.toLowerCase()] + after,
       )
       .replace(checkedAttrSpan, "$1defaultChecked</span>")
+      .replace(barePopoverSpan, `$1${popoverValue}`)
       // fix the broken tabIndex={0} in JSX tab
       .replaceAll(
         'var(--syntax-punctuation)" tabIndex={0}>',

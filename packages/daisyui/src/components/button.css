@@ -63,14 +63,14 @@
         content: var(--tw-content);
       }
     }
-  }
 
-  @layer daisyui.l1 {
     &:where(:checked:not(.filter [type="radio"].btn)) {
       --btn-color: var(--color-primary);
       --btn-fg: var(--color-primary-content);
     }
+  }
 
+  @layer daisyui.l1 {
     @media (hover: hover) {
       &:hover {
         --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);

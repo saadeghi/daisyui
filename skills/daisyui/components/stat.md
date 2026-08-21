@@ -1,12 +1,12 @@
-### stat
-Stat is used to show numbers and data in a block
+### Stat
+Use a stat component to show numbers and data in a block.
 
-[stat docs](https://daisyui.com/components/stat/)
+[Stat documentation](https://daisyui.com/components/stat/)
 
 #### Class names
-- Component: `stats`
-- Part: `stat`, `stat-title`, `stat-value`, `stat-desc`, `stat-figure`, `stat-actions`
-- Direction: `stats-horizontal`, `stats-vertical`
+- component: `stats`
+- part: `stat`, `stat-title`, `stat-value`, `stat-desc`, `stat-figure`, `stat-actions`
+- direction: `stats-horizontal`, `stats-vertical`
 
 #### Syntax
 ```html
@@ -16,6 +16,6 @@ Stat is used to show numbers and data in a block
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the direction class names
-- It's horizontal by default but you can make it vertical with the `stats-vertical` class
-- Content includes `stat-title`, `stat-value`, `stat-desc` inside a `stat`
+- `{MODIFIER}` is optional. It can be one of the direction class names.
+- The default layout is horizontal. To make it vertical, use the `stats-vertical` class.
+- Put `stat-title`, `stat-value`, and `stat-desc` in a `stat` element.

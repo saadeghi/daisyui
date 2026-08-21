@@ -1,7 +1,7 @@
-### dock
-Dock (also know as Bottom navigation or Bottom bar) is a UI element that provides navigation options to the user. Dock sticks to the bottom of the screen
+### Dock
+A dock is also called bottom navigation or a bottom bar. It gives navigation options and stays at the bottom of the screen.
 
-[dock docs](https://daisyui.com/components/dock/)
+[Dock documentation](https://daisyui.com/components/dock/)
 
 #### Class names
 - component: `dock`
@@ -13,7 +13,7 @@ Dock (also know as Bottom navigation or Bottom bar) is a UI element that provide
 ```html
 <div class="dock {MODIFIER}">{CONTENT}</div>
 ```
-where content is a list of buttons:
+The content is a list of buttons:
 ```html
 <button>
     <svg>{icon}</svg>
@@ -22,6 +22,6 @@ where content is a list of buttons:
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the size class names
-- To make a button active, add `dock-active` class to the button
-- add `<meta name="viewport" content="viewport-fit=cover">` is required for responsiveness of the dock in iOS
+- `{MODIFIER}` is optional. It can be one of the size class names.
+- To make a button active, add the `dock-active` class to the button.
+- For a responsive dock in iOS, add `<meta name="viewport" content="viewport-fit=cover">`.

@@ -1,7 +1,7 @@
-### navbar
-Navbar is used to show a navigation bar on the top of the page
+### Navbar
+Use a navbar to show navigation at the top of the page.
 
-[navbar docs](https://daisyui.com/components/navbar/)
+[Navbar documentation](https://daisyui.com/components/navbar/)
 
 #### Class names
 - component: `navbar`
@@ -13,6 +13,6 @@ Navbar is used to show a navigation bar on the top of the page
 ```
 
 #### Rules
-- use `navbar-start`, `navbar-center`, `navbar-end` to position content horizontally
-- put anything inside each section
-- suggestion - use `base-200` for background color
+- Use `navbar-start`, `navbar-center`, and `navbar-end` to put content in horizontal positions.
+- Put the applicable content in each section.
+- You can use `base-200` for the background color.

@@ -1,6 +1,6 @@
-### aura
-Aura is a border light effect that can wrap around any component. It is a great way to add a cool, eye-catching visual effect to your components. Aura is useful for the most important button, card, or div that you want to highlight.
-[aura docs](https://daisyui.com/components/aura/)
+### Aura
+An aura adds a light effect around the border of a component. Use it to make an important button, card, or div easy to see.
+[Aura documentation](https://daisyui.com/components/aura/)
 
 #### Class names
 - component: `aura`
@@ -13,10 +13,10 @@ Aura is a border light effect that can wrap around any component. It is a great 
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of each style/size class names
-- you can set custom colors using `text-*` color classes. For example, `text-primary` will use the primary color for the aura
-- you can set custom background color using `bg-*` color classes. For example, `bg-secondary` will use the secondary color for the background of the aura
-- you can set custom animation duration using `duration-*` classes. For example, `duration-1000` will set the animation duration to 1 second
-- aura must have one direct child element
-- aura is good for a button, or a card or a div that you want to highlight
-- do not use aura for multiple elements on the same page because it can be visually overwhelming
+- `{MODIFIER}` is optional. It can include one class name from each style and size category.
+- To set a custom color, use a `text-*` color class. For example, `text-primary` sets the aura to the primary color.
+- To set a custom background color, use a `bg-*` color class. For example, `bg-secondary` sets a secondary-color background.
+- To set a custom animation time, use a `duration-*` class. For example, `duration-1000` sets the animation time to one second.
+- An aura must have one direct child element.
+- Use an aura for an important button, card, or div.
+- Do not use an aura for more than one element on the same page. More than one aura can make the page difficult to view.

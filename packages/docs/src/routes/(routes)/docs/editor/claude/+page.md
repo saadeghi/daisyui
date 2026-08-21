@@ -28,7 +28,7 @@ https://daisyui.com/llms.txt give me a light daisyUI 5 theme with tropical color
 
 ### MCP server
 
-MCP is a an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.  
+MCP is an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.  
 You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in Claude desktop.
 
 <div class="tabs tabs-lift max-sm:tabs-sm">

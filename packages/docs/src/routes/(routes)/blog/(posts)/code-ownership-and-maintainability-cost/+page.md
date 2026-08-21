@@ -30,7 +30,7 @@ What's the catch?
 
 Control comes with a cost: maintenance. Every bug, update, and new feature is now your job. The more you customize, the more you have to maintain. Over time, it will get harder and harder to maintain. 
 
-There will be bugs and issues, and they won't get fixed unless you track them and resolve them manually. The tools and libraries you depend on will evolve and your code won't, unless you actively update it. This leads to technical debt and frustration. Alternatively, you should hire more people just to maintain the exisiting UI library which is direct financial cost.
+There will be bugs and issues, and they won't get fixed unless you track them and resolve them manually. The tools and libraries you depend on will evolve and your code won't, unless you actively update it. This leads to technical debt and frustration. Alternatively, you should hire more people just to maintain the existing UI library which is direct financial cost.
 
 | Aspect             | Owning the Code          | Using libraries         |
 |--------------------|--------------------------|--------------------------|

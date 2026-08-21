@@ -1,8 +1,8 @@
-### calendar
+### Calendar
 
-Calendar includes styles for different calendar libraries
+The calendar component includes styles for different calendar libraries.
 
-[calendar docs](https://daisyui.com/components/calendar/)
+[Calendar documentation](https://daisyui.com/components/calendar/)
 
 #### Class names
 
@@ -13,19 +13,19 @@ Calendar includes styles for different calendar libraries
 
 #### Syntax
 
-For Cally:
+Cally:
 
 ```html
 <calendar-date class="cally">{CONTENT}</calendar-date>
 ```
 
-For React Day Picker:
+React Day Picker:
 
 ```html
 <DayPicker className="react-day-picker"></DayPicker>
 ```
 
-For Vanilla Calendar Pro:
+Vanilla Calendar Pro:
 
 ```html
 <div id="calendar" class="vc"></div>
@@ -38,7 +38,7 @@ const calendar = new Calendar("#calendar")
 calendar.init()
 ```
 
-Or using CDN:
+CDN alternative:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/index.js" defer></script>
@@ -54,4 +54,4 @@ Or using CDN:
 
 #### Rules
 
-- daisyUI supports Cally, React Day Picker and Vanilla Calendar Pro
+- daisyUI supports Cally, React Day Picker, and Vanilla Calendar Pro.

@@ -1,7 +1,7 @@
-### accordion
-Accordion is used for showing and hiding content but only one item can stay open at a time
+### Accordion
+Use the accordion to show and hide content. Only one item can be open at a time.
 
-[accordion docs](https://daisyui.com/components/accordion/)
+[Accordion documentation](https://daisyui.com/components/accordion/)
 
 #### Class names
 - component: `collapse`
@@ -12,7 +12,7 @@ Accordion is used for showing and hiding content but only one item can stay open
 ```html
 <div class="collapse {MODIFIER}">{CONTENT}</div>
 ```
-where content is:
+The content has this structure:
 ```html
 <input type="radio" name="{name}" checked="{checked}" />
 <div class="collapse-title">{title}</div>
@@ -20,8 +20,8 @@ where content is:
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the modifier class names
-- Accordion uses radio inputs. All radio inputs with the same name work together and only one of them can be open at a time
-- If you have more than one set of accordion items on a page, use different names for the radio inputs on each set
-- Replace {name} with a unique name for the accordion group
-- replace `{checked}` with `checked="checked"` if you want the accordion to be open by default
+- `{MODIFIER}` is optional. It can be one of the modifier class names.
+- The accordion uses radio inputs. Radio inputs that have the same name operate as one group. Only one input in the group can be open at a time.
+- If a page has more than one accordion group, use a different radio-input name for each group.
+- Replace `{name}` with a unique name for the accordion group.
+- To open an accordion item by default, replace `{checked}` with `checked="checked"`.

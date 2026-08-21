@@ -1,7 +1,7 @@
-### mockup-browser
-Browser mockup shows a box that looks like a browser window
+### Browser mockup
+A browser mockup is a box in the form of a browser window.
 
-[mockup-browser docs](https://daisyui.com/components/mockup-browser/)
+[Browser mockup documentation](https://daisyui.com/components/mockup-browser/)
 
 #### Class names
 - component: `mockup-browser`
@@ -18,5 +18,5 @@ Browser mockup shows a box that looks like a browser window
 ```
 
 #### Rules
-- For a default mockup, use just `mockup-browser` class name
-- To set a URL in toolbar, add a div with `input` class
+- For a default mockup, use only the `mockup-browser` class name.
+- To set a URL in the toolbar, add a `<div>` with the `input` class.

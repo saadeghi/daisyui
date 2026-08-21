@@ -1,7 +1,7 @@
-### breadcrumbs
-Breadcrumbs helps users to navigate
+### Breadcrumbs
+Use breadcrumbs to help users navigate.
 
-[breadcrumbs docs](https://daisyui.com/components/breadcrumbs/)
+[Breadcrumbs documentation](https://daisyui.com/components/breadcrumbs/)
 
 #### Class names
 - component: `breadcrumbs`
@@ -14,6 +14,6 @@ Breadcrumbs helps users to navigate
 ```
 
 #### Rules
-- breadcrumbs only has one main class name
-- Can contain icons inside the links
-- If you set `max-width` or the list gets larger than the container it will scroll
+- The breadcrumbs component has one main class name.
+- You can put icons in the links.
+- If you set `max-width` or the list becomes wider than its container, the breadcrumbs list scrolls.

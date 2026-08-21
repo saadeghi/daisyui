@@ -1,7 +1,7 @@
-### join
-Join is a container for grouping multiple items, it can be used to group buttons, inputs, etc. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items
+### Join
+A join is a container that groups more than one item. Use it to group buttons, inputs, or other elements. The join applies a border radius to the first and last items. It can make a horizontal or vertical list of items.
 
-[join docs](https://daisyui.com/components/join/)
+[Join documentation](https://daisyui.com/components/join/)
 
 #### Class names
 - component: `join`, `join-item`
@@ -13,7 +13,7 @@ Join is a container for grouping multiple items, it can be used to group buttons
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the direction class names
-- Any direct child of the join element will get joined together
-- Any element with `join-item` will be affected
-- Use `lg:join-horizontal` for responsive layouts
+- `{MODIFIER}` is optional. It can be one of the direction class names.
+- The join element joins all its direct children.
+- The join element affects all elements that have `join-item`.
+- For responsive layouts, use `lg:join-horizontal`.

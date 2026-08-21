@@ -101,7 +101,7 @@ This is prevents a generic UI. Blueprint understands the direction from the prod
 
 <img src="https://img.daisyui.com/images/emoji/0800_woman-teacher_1f469-200d-1f3eb.png" alt="Page Architect" class="lg:ms-4 my-4 block size-48 rounded-box border border-base-300 bg-base-200 p-8 lg:float-end lg:-rotate-2" width="192" height="192" loading="lazy" />
 
-The [Page Architect](/blueprint/workflow/#4-page-architect) MCP tool chooses from 211 page architectures. Each page architecture covers a specific UI's purpose, sections, content heirarchy, actions, navigation, behavior, interaction states, and edge cases.
+The [Page Architect](/blueprint/workflow/#4-page-architect) MCP tool chooses from 211 page architectures. Each page architecture covers a specific UI's purpose, sections, content hierarchy, actions, navigation, behavior, interaction states, and edge cases.
 
 Without a plan, agents tend to improvise one section at a time. That produces pages made of individually plausible blocks without a flow. The Page Architect MCP tool gives the agent a complete route through the page and includes the components where it's needed.
 
@@ -121,7 +121,7 @@ The agent does not need to load the entire documentation or guess from an outdat
 
 The [Quality Inspector](/blueprint/workflow/#6-quality-inspector) MCP tool reviews the code for UI mistakes, visual hierarchy, class names misuse, accessibility, responsive behavior, theme colors, and missing states.
 
-This tool compares the generated code agains the previously introduced rules and instructions. Prevents the LLM from ignoring the rules and if there's visual problem, the LLM is forced to go back and fix it.
+This tool compares the generated code against the previously introduced rules and instructions. Prevents the LLM from ignoring the rules and if there's visual problem, the LLM is forced to go back and fix it.
 
 ## This is where the time and tokens come back
 

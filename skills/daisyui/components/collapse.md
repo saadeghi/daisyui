@@ -1,7 +1,7 @@
-### collapse
-Collapse is used for showing and hiding content
+### Collapse
+Use the collapse component to show and hide content.
 
-[collapse docs](https://daisyui.com/components/collapse/)
+[Collapse documentation](https://daisyui.com/components/collapse/)
 
 #### Class names
 - component: `collapse`
@@ -17,6 +17,6 @@ Collapse is used for showing and hiding content
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the modifier class names
-- instead of `tabindex="0"`, you can use  `<input type="checkbox">` as a first child
-- Can also be a details/summary tag
+- `{MODIFIER}` is optional. It can be one of the modifier class names.
+- As an alternative to `tabindex="0"`, use `<input type="checkbox">` as the first child.
+- You can also use `details` and `summary` tags.

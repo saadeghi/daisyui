@@ -1,10 +1,10 @@
-### text-rotate
-Text Rotate can show up to 6 lines of text, one at a time, with an infinite loop animation. Duration is 10 seconds by default. The animation will pause on hover.
+### Text rotate
+Text rotate can show a maximum of six text lines, one line at a time. It uses a continuous loop animation. The default animation time is 10 seconds. The animation pauses when the pointer is on the text.
 
-[text-rotate docs](https://daisyui.com/components/text-rotate/)
+[Text rotate documentation](https://daisyui.com/components/text-rotate/)
 
-#### Class Names:
-- Component: `text-rotate`
+#### Class names
+- component: `text-rotate`
 
 #### Syntax
 ```html
@@ -19,8 +19,7 @@ Text Rotate can show up to 6 lines of text, one at a time, with an infinite loop
   </span>
 </span>
 ```
-Example:
-Big font size, horizontally centered
+Example with a large font that is horizontally centered:
 ```html
 <span class="text-rotate max-md:text-3xl text-7xl font-title">
   <span class="justify-items-center">
@@ -33,7 +32,7 @@ Big font size, horizontally centered
   </span>
 </span>
 ```
-Rotating words in a sentence, different colors for each word
+Words that change in a sentence, with a different color for each word:
 ```html
 <span>
   Providing AI Agents for 
@@ -46,7 +45,7 @@ Rotating words in a sentence, different colors for each word
   </span>
 </span>
 ```
-Custom line height in case you have a tall font or need more vertical spacing between lines
+Custom line height for a tall font or more vertical space between lines:
 ```html
 <span class="text-rotate max-md:text-3xl text-7xl font-title leading-[2]">
   <span class="justify-items-center">
@@ -61,6 +60,6 @@ Custom line height in case you have a tall font or need more vertical spacing be
 ```
 
 #### Rules
-- `text-rotate` must have one span or div inside it that contains 2 to 6 spans/divs for each line of text
-- Total duration of the loop is 10000 milliseconds by default
-- You can set custom duration using `duration-{value}` utility class, where value is in milliseconds (e.g. `duration-12000` for 12 seconds)
+- `text-rotate` must contain one `<span>` or `<div>`. This child must contain two to six `<span>` or `<div>` elements, one for each text line.
+- The default total loop time is 10000 milliseconds.
+- To set a custom time, use the `duration-{value}` utility class. The value is in milliseconds. For example, use `duration-12000` for 12 seconds.

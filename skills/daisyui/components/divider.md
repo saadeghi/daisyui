@@ -1,7 +1,7 @@
-### divider
-Divider will be used to separate content vertically or horizontally
+### Divider
+Use a divider to separate content vertically or horizontally.
 
-[divider docs](https://daisyui.com/components/divider/)
+[Divider documentation](https://daisyui.com/components/divider/)
 
 #### Class names
 - component: `divider`
@@ -15,5 +15,5 @@ Divider will be used to separate content vertically or horizontally
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of each direction/color/placement class names
-- Omit text for a blank divider
+- `{MODIFIER}` is optional. It can include one class name from each direction, color, and placement category.
+- For a blank divider, do not add text.

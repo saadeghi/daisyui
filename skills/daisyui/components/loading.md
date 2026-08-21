@@ -1,7 +1,7 @@
-### loading
-Loading shows an animation to indicate that something is loading
+### Loading
+Use the loading component to show an animation while a process runs.
 
-[loading docs](https://daisyui.com/components/loading/)
+[Loading documentation](https://daisyui.com/components/loading/)
 
 #### Class names
 - component: `loading`
@@ -14,4 +14,4 @@ Loading shows an animation to indicate that something is loading
 ```
 
 #### Rules
-- {MODIFIER} is optional and can have one of the style/size class names
+- `{MODIFIER}` is optional. It can include one style class name and one size class name.

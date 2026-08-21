@@ -1,7 +1,7 @@
-### indicator
-Indicators are used to place an element on the corner of another element
+### Indicator
+Use an indicator to put an element at the corner of another element.
 
-[indicator docs](https://daisyui.com/components/indicator/)
+[Indicator documentation](https://daisyui.com/components/indicator/)
 
 #### Class names
 - component: `indicator`
@@ -17,5 +17,5 @@ Indicators are used to place an element on the corner of another element
 ```
 
 #### Rules
-- Add all indicator elements (with `indicator-item` class) before the main content
-- {placement} is optional and can have one of each horizontal/vertical class names. default is `indicator-end indicator-top`
+- Put all indicator elements with the `indicator-item` class before the main content.
+- `{placement}` is optional. It can include one horizontal class name and one vertical class name. The default is `indicator-end indicator-top`.

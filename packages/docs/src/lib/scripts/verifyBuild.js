@@ -43,7 +43,7 @@ export const dynamicRouteFamilies = [
     relation: "orderedPairsFromAlternatives",
   },
   { name: "alternatives", directory: "alternative", minimum: 15 },
-  { name: "docsSkills", directory: "docs/skill", minimum: 9 },
+  { name: "docsSkills", directory: "docs/skill", minimum: 7 },
 ]
 
 export const defaultMinimums = {

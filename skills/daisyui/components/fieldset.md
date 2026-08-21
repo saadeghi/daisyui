@@ -1,11 +1,11 @@
-### fieldset
-Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and label as a description
+### Fieldset
+Use a fieldset as a container for related form elements. Use `fieldset-legend` as the title. Use `label` as the description.
 
-[fieldset docs](https://daisyui.com/components/fieldset/)
+[Fieldset documentation](https://daisyui.com/components/fieldset/)
 
 #### Class names
-- Component: `fieldset`, `label`
-- Parts: `fieldset-legend`
+- component: `fieldset`, `label`
+- part: `fieldset-legend`
 
 #### Syntax
 ```html
@@ -17,4 +17,4 @@ Fieldset is a container for grouping related form elements. It includes fieldset
 ```
 
 #### Rules
-- You can use any element as a direct child of fieldset to add form elements
+- The fieldset can have all types of elements as direct children.
