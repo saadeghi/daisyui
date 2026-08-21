@@ -90,7 +90,7 @@ However, accessibility is not binary and it's not installable. You should always
 
 ## Frameworks and libraries
 
-- Taiwlind UI is a set of HTML sections and however the interactive parts are only available for React and Vue (at the time of writing this article).
+- Tailwind UI is a set of HTML sections and however the interactive parts are only available for React and Vue (at the time of writing this article).
 - daisyUI is framework agnostic. It's just CSS and you can use it with any framework or library.
 
 You can use third-party JS plugins or even handle the JS interactivity yourself on both daisyUI and Tailwind UI.
