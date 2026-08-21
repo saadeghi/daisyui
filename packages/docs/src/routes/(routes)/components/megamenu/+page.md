@@ -235,7 +235,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
           </ul>
         </li>
       </ul>
-      <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="md:max-w-sm max-md:w-auto" alt="Tailwind CSS megamenu">
+      <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="md:max-w-sm max-md:w-auto" alt="Tailwind CSS megamenu" />
     </div>
   </div>
 
@@ -266,7 +266,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
           </ul>
         </li>
       </ul>
-      <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="md:max-w-sm max-md:w-auto" alt="Tailwind CSS megamenu component">
+      <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="md:max-w-sm max-md:w-auto" alt="Tailwind CSS megamenu component" />
     </div>
   </div>
 
@@ -349,7 +349,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
           </ul>
         </li>
       </ul>
-      <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="md:max-w-sm max-md:w-auto" alt="Tailwind CSS megamenu">
+      <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="md:max-w-sm max-md:w-auto" alt="Tailwind CSS megamenu" />
     </div>
   </div>
 
@@ -380,7 +380,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
           </ul>
         </li>
       </ul>
-      <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="md:max-w-sm max-md:w-auto" alt="Tailwind CSS megamenu component">
+      <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="md:max-w-sm max-md:w-auto" alt="Tailwind CSS megamenu component" />
     </div>
   </div>
 
@@ -467,7 +467,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
               </ul>
             </li>
           </ul>
-          <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="md:max-w-sm max-md:hidden" alt="Tailwind CSS megamenu">
+          <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="md:max-w-sm max-md:hidden" alt="Tailwind CSS megamenu" />
         </div>
       </div>
       <button popovertarget="d2">Two</button>
@@ -497,7 +497,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
               </ul>
             </li>
           </ul>
-          <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="md:max-w-sm max-md:hidden" alt="Tailwind CSS megamenu component">
+          <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="md:max-w-sm max-md:hidden" alt="Tailwind CSS megamenu component" />
         </div>
       </div>
       <button popovertarget="d3">Three</button>
@@ -579,7 +579,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
               </ul>
             </li>
           </ul>
-          <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="md:max-w-sm max-md:hidden" alt="Tailwind CSS megamenu">
+          <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="md:max-w-sm max-md:hidden" alt="Tailwind CSS megamenu" />
         </div>
       </div>
       <button popovertarget="d2">Two</button>
@@ -609,7 +609,7 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
               </ul>
             </li>
           </ul>
-          <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="md:max-w-sm max-md:hidden" alt="Tailwind CSS megamenu component">
+          <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="md:max-w-sm max-md:hidden" alt="Tailwind CSS megamenu component" />
         </div>
       </div>
       <button popovertarget="d3">Three</button>
