@@ -15,15 +15,15 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Fri, 21 Aug 2026 02:52:06 GMT</lastBuildDate>
-    <pubDate>Fri, 21 Aug 2026 02:52:06 GMT</pubDate>
+    <lastBuildDate>Fri, 21 Aug 2026 10:30:28 GMT</lastBuildDate>
+    <pubDate>Fri, 21 Aug 2026 10:30:28 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
 
     
         <item>
           <title>
-            <![CDATA[ Nexus Dashboard 4.0 ]]>
+            <![CDATA[ Nexus Dashboard 4.1 ]]>
           </title>
           <description>
             <![CDATA[ The ultimate dashboard template
@@ -32,7 +32,7 @@ Made with Tailwind CSS 4 and daisyUI 5
 
 Including:
   - All pages
-  - 6 dashboard layouts (CRM, e-commerce, Gen-AI, Growth, AI Ops, Corporate Finance)
+  - 8 dashboard layouts (CRM, e-commerce, Gen-AI, Growth, AI Ops, Corporate Finance, Site Reliability Engineering, Security Operations)
   - Landing page
   - 10 e-commerce pages with tables, forms, cards, etc
   - File manager app layout
@@ -49,7 +49,7 @@ Including:
   - Apex charts
   - 6 exclusive customizable themes
   - Compatible with all daisyUI themes
-  - 3 bonus dashboard templates (Ecommerce, Finance, Restaurant) made by [daisyUI Dashboard Skill](http://daisyui.com/skills/daisyui-dashboard/)
+  - 10 bonus dashboard templates (Ecommerce, Finance, Restaurant, Cloths Atelier, CRM, Tourism, Book Management, Crisis Management, Health System, Sport Events) made by [daisyUI Dashboard Skill](http://daisyui.com/skills/daisyui-dashboard/)
 
 
 Solo license:
