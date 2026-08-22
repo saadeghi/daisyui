@@ -180,11 +180,11 @@
     }
 
     &:has(.sheet-spacer-half) .sheet-spacer-closed {
-      block-size: calc(100% - var(--sheet-half) - var(--sheet-handle));
+      block-size: calc(var(--sheet-half) - var(--sheet-handle));
     }
 
     .sheet-spacer-half {
-      block-size: var(--sheet-half);
+      block-size: calc(100% - var(--sheet-half));
     }
   }
 }
