@@ -224,6 +224,7 @@
 .sheet-end {
   @layer daisyui.l1.l2 {
     --sheet-half: 50%;
+    --sheet-full: 100%;
     --sheet-snap-axis: x;
     --sheet-snap-align: start;
     --sheet-trans-closed: translateX(calc(100% - var(--sheet-handle)));
@@ -267,6 +268,7 @@
 .sheet-start {
   @layer daisyui.l1.l2 {
     --sheet-half: 50%;
+    --sheet-full: 100%;
     --sheet-snap-axis: x;
     --sheet-snap-align: end;
     --sheet-trans-closed: translateX(calc(-100% + var(--sheet-handle)));
