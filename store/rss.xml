@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Sat, 22 Aug 2026 20:14:39 GMT</lastBuildDate>
-    <pubDate>Sat, 22 Aug 2026 20:14:39 GMT</pubDate>
+    <lastBuildDate>Sun, 23 Aug 2026 16:29:57 GMT</lastBuildDate>
+    <pubDate>Sun, 23 Aug 2026 16:29:57 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -143,8 +143,7 @@ daisyUI Charts is a collection of chart integrations for daisyUI.
 - Provides code examples for React, Vue, Svelte, Vanilla JS
 - Only one package dependency: Apex Charts (Or can be used with CDN link instead of Node package)
 - Easy copy/paste codes, no additional config or styles needed
-- Includes multiple examples for line charts, bar charts, area charts, column charts and pie charts.
-- Coming soon: radial chart, heatmap charts and radar charts ]]>
+- Includes multiple examples for line charts, bar charts, area charts, column charts, pie charts, radial chart, radar charts, heatmap charts, mixed charts ]]>
           </description>
           <link>undefined/</link>
           <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
