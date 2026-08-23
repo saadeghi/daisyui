@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.7.21 (2026-08-23)
+
+### Bug Fixes
+
+* FAB selector style leack for `fab-flower` actions ([#4683](https://github.com/saadeghi/daisyui/issues/4683)) ([e4e6419](https://github.com/saadeghi/daisyui/commit/e4e6419978f5609697575d22a7c4fb9ecf4ebd3a))
 ## [5.7.20](https://github.com/saadeghi/daisyui/compare/v5.7.19...v5.7.20) (2026-08-20)
 
 ### Bug Fixes
