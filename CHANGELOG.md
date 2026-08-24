@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.22](https://github.com/saadeghi/daisyui/compare/v5.7.21...v5.7.22) (2026-08-24)
+
+### Bug Fixes
+
+* floating label position on RTL ([#4701](https://github.com/saadeghi/daisyui/issues/4701)) ([66274aa](https://github.com/saadeghi/daisyui/commit/66274aa83c6e4189ed95a6860e59a9b85c23536e))
 ## 5.7.21 (2026-08-23)
 
 ### Bug Fixes
