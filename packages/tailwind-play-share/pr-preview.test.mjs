@@ -239,7 +239,7 @@ describe("Tailwind Play inputs", () => {
     expect(buildBeforeCss()).toBe('@import "tailwindcss";\n@plugin "daisyui";\n')
   })
 
-  test("excludes changed components and appends their PR CSS", () => {
+  test("excludes changed components and appends their PR CSS inside the utilities layer so markup utilities keep beating component styles like they do in the plugin", () => {
     expect(
       buildAfterCss(
         ["button", "card", "toggle"],
@@ -253,11 +253,21 @@ describe("Tailwind Play inputs", () => {
   exclude: button, card, toggle;
 }
 
-/* PR component: button */
-.btn { color: red; }
+@layer utilities {
+  /* PR component: button */
+  .btn { color: red; }
 
-/* PR component: toggle */
-.toggle { color: blue; }
+  /* PR component: toggle */
+  .toggle { color: blue; }
+}
+`)
+  })
+
+  test("emits no utilities layer block when the PR only deletes component files", () => {
+    expect(buildAfterCss(["button"], [])).toBe(`@import "tailwindcss";
+@plugin "daisyui" {
+  exclude: button;
+}
 `)
   })
 
