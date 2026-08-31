@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.23](https://github.com/saadeghi/daisyui/compare/v5.7.22...v5.7.23) (2026-08-31)
+
+### Bug Fixes
+
+* menu-paged summary hides children (badge, icon, etc) when details is open ([#4710](https://github.com/saadeghi/daisyui/issues/4710)) ([4929505](https://github.com/saadeghi/daisyui/commit/492950573b4c23a84e7cb6309a87e6e084d98250))
 ## [5.7.22](https://github.com/saadeghi/daisyui/compare/v5.7.21...v5.7.22) (2026-08-24)
 
 ### Bug Fixes
