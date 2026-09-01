@@ -275,10 +275,8 @@
   }
 
   @layer daisyui.l1 {
-    &:not([popover]:popover-open) {
-      @apply overflow-y-auto;
-      max-block-size: 80svh;
-    }
+    @apply overflow-y-auto;
+    max-block-size: 80svh;
   }
 }
 
