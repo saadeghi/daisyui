@@ -135,6 +135,70 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
 ```
 
 
+### ~Megamenu with plain links
+#### Links without a popover get the same style and the moving indicator
+<button class="btn sm:hidden" popovertarget="my-megamenu-5">Menu</button>
+<div class="megamenu max-sm:megamenu-vertical w-full p-2 border border-base-300" id="my-megamenu-5" popover>
+  <span class="megamenu-active"></span>
+
+  <button popovertarget="k1">Services</button>
+  <div id="k1" popover>
+    <ul class="menu">
+      <li><button>Enterprise</button></li>
+      <li><button>CRM software</button></li>
+      <li><button>Security</button></li>
+      <li><button>Consulting</button></li>
+    </ul>
+  </div>
+
+  <button popovertarget="k2">Cloud Solutions</button>
+  <div id="k2" popover>
+    <ul class="menu">
+      <li><button>Cloud computing</button></li>
+      <li><button>Storage solutions</button></li>
+      <li><button>Database services</button></li>
+      <li><button>CDN performance</button></li>
+    </ul>
+  </div>
+
+  <a>Documentation</a>
+
+  <a>Pricing</a>
+</div>
+
+```html
+<button class="$$btn sm:hidden" popovertarget="my-megamenu-5">Menu</button>
+
+<div class="$$megamenu max-sm:$$megamenu-vertical p-2 border border-base-300" id="my-megamenu-5" popover>
+  <span class="$$megamenu-active"></span>
+
+  <button popovertarget="k1">Services</button>
+  <div id="k1" popover>
+    <ul class="$$menu">
+      <li><a>Enterprise</a></li>
+      <li><a>CRM software</a></li>
+      <li><a>Security</a></li>
+      <li><a>Consulting</a></li>
+    </ul>
+  </div>
+
+  <button popovertarget="k2">Cloud Solutions</button>
+  <div id="k2" popover>
+    <ul class="$$menu">
+      <li><a>Cloud computing</a></li>
+      <li><a>Storage solutions</a></li>
+      <li><a>Database services</a></li>
+      <li><a>CDN performance</a></li>
+    </ul>
+  </div>
+
+  <a>Documentation</a>
+
+  <a>Pricing</a>
+</div>
+```
+
+
 ### ~Megamenu with wide popovers and horizontal menus
 <button class="btn sm:hidden" popovertarget="my-megamenu-2">Menu</button>
 <div class="megamenu max-sm:megamenu-vertical megamenu-wide w-full p-2 border border-base-300" id="my-megamenu-2" popover>

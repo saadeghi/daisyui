@@ -67,10 +67,58 @@
       }
     }
 
-    &:not(:has([popovertarget]:hover, [popover]:popover-open)) .megamenu-active {
+    & > a:not([popovertarget]) {
+      @apply relative isolate flex cursor-pointer items-center gap-3;
+      padding-inline: var(--mm-p, 1rem);
+      height: var(--size);
+      font-size: var(--fontsize, 0.875rem);
+      border: var(--border) solid transparent;
+      anchor-name: var(--mm-anchor);
+      transition:
+        background-color 200ms ease-out,
+        color 200ms ease-out;
+      &:focus-visible {
+        outline: 2px solid var(--color-base-content);
+        outline-offset: 2px;
+      }
+      &:nth-of-type(1) {
+        --mm-anchor: --mml1;
+      }
+      &:nth-of-type(2) {
+        --mm-anchor: --mml2;
+      }
+      &:nth-of-type(3) {
+        --mm-anchor: --mml3;
+      }
+      &:nth-of-type(4) {
+        --mm-anchor: --mml4;
+      }
+      &:nth-of-type(5) {
+        --mm-anchor: --mml5;
+      }
+      &:nth-of-type(6) {
+        --mm-anchor: --mml6;
+      }
+      &:nth-of-type(7) {
+        --mm-anchor: --mml7;
+      }
+      &:nth-of-type(8) {
+        --mm-anchor: --mml8;
+      }
+      &:nth-of-type(9) {
+        --mm-anchor: --mml9;
+      }
+      &:nth-of-type(10) {
+        --mm-anchor: --mml10;
+      }
+    }
+
+    &:not(:has([popovertarget]:hover, > a:not([popovertarget]):hover, [popover]:popover-open))
+      .megamenu-active {
       background-color: transparent;
     }
     &:has([popovertarget]:hover):not(:has([popover]:popover-open)) .megamenu-active,
+    &:has(> a:not([popovertarget]):hover):not(:has([popover]:popover-open)) .megamenu-active,
     &:has([popover]:popover-open) .megamenu-active {
       inset: anchor(var(--mm-anchor) top) anchor(var(--mm-anchor) end)
         anchor(var(--mm-anchor) bottom) anchor(var(--mm-anchor) start);
@@ -114,6 +162,36 @@
     &:has([popovertarget]:nth-of-type(10):hover):not(:has([popover]:popover-open)),
     &:has([popover]:nth-of-type(10):popover-open) {
       --mm-anchor: --mm10;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(1):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml1;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(2):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml2;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(3):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml3;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(4):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml4;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(5):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml5;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(6):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml6;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(7):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml7;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(8):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml8;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(9):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml9;
+    }
+    &:has(> a:not([popovertarget]):nth-of-type(10):hover):not(:has([popover]:popover-open)) {
+      --mm-anchor: --mml10;
     }
 
     [popovertarget]:has(+ [popover]:popover-open):after {
@@ -188,9 +266,22 @@
           content: none;
         }
       }
+      & > a:not([popovertarget]) {
+        @apply rounded-field mx-2 w-fit gap-2 border-none px-3 py-1.5;
+        height: auto;
+        anchor-name: none;
+        &:hover {
+          @apply bg-base-content/10;
+          box-shadow:
+            0 1px oklch(0% 0 0 / 0.01) inset,
+            0 -1px oklch(100% 0 0 / 0.01) inset;
+        }
+      }
       [popover] {
         @apply relative block max-h-none overflow-visible bg-transparent opacity-100;
         border: none;
+        translate: none;
+        scale: none;
       }
     }
   }
