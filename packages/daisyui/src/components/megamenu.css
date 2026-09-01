@@ -242,7 +242,6 @@
     @apply relative w-full flex-col items-start rounded-none opacity-0;
     background-color: var(--color-base-100);
     border-inline-width: 0;
-    position-area: block-end;
     max-block-size: calc(100% - 0.25rem);
     --mm-backdrop: transparent;
     translate: 0 -0.5rem;
