@@ -280,7 +280,14 @@
 
   @layer daisyui.l1 {
     @apply overflow-y-auto;
+
     max-block-size: 80svh;
+    @supports (max-block-size: -webkit-fill-available) {
+      max-block-size: -webkit-fill-available;
+    }
+    @supports (max-block-size: stretch) {
+      max-block-size: stretch;
+    }
   }
 }
 
