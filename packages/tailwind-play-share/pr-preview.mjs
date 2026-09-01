@@ -482,7 +482,10 @@ export function buildAfterCss(excludeNames, cssFiles) {
   const changedCss = cssFiles
     .map(({ componentName, css }) => `/* PR component: ${componentName} */\n${css.trimEnd()}`)
     .join("\n\n")
-  return `${plugin}\n${changedCss ? `\n${changedCss}\n` : ""}`
+  const wrappedCss = changedCss
+    ? `@layer utilities {\n${changedCss.replace(/^(?=.)/gm, "  ")}\n}`
+    : ""
+  return `${plugin}\n${wrappedCss ? `\n${wrappedCss}\n` : ""}`
 }
 
 export function buildPreviewInputs(baseSha, headSha) {
