@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.25](https://github.com/saadeghi/daisyui/compare/v5.7.24...v5.7.25) (2026-09-01)
+
+### Bug Fixes
+
+* checkbox - add style for aria-checked="mixed" like :indeterminate ([#4713](https://github.com/saadeghi/daisyui/issues/4713)) ([5e5b8b4](https://github.com/saadeghi/daisyui/commit/5e5b8b40a5b11031f15900069acb175de01f0fdc))
 ## [5.7.24](https://github.com/saadeghi/daisyui/compare/v5.7.23...v5.7.24) (2026-09-01)
 
 ### Bug Fixes
