@@ -191,6 +191,10 @@
       [popover] {
         @apply relative block max-h-none overflow-visible bg-transparent opacity-100;
         border: none;
+
+        &:first-of-type {
+          @apply w-full;
+        }
       }
     }
   }
