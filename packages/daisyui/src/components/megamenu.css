@@ -164,7 +164,6 @@
         background-color: var(--mm-backdrop, oklch(0% 0 0/ 0.4));
       }
       border-inline-width: 0;
-      position-area: block-end;
       top: 0;
       inset-inline-start: 0;
       max-block-size: 80svh;
