@@ -30,6 +30,18 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: git fetch --no-tags --depth=1 origin "refs/pull/${PR_NUMBER}/head"
 
+      # Diff from the merge base, not the base branch tip, so a PR branch that is
+      # behind the base does not show unrelated components as changed.
+      - name: Resolve the merge base
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          merge_base="$(gh api "repos/${GITHUB_REPOSITORY}/compare/${BASE_SHA}...${HEAD_SHA}" --jq '.merge_base_commit.sha')"
+          git fetch --no-tags --depth=1 origin "$merge_base"
+          echo "MERGE_BASE_SHA=$merge_base" >> "$GITHUB_ENV"
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -37,7 +49,7 @@ jobs:
 
       - name: Create Tailwind Play comparisons
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BASE_SHA: ${{ env.MERGE_BASE_SHA }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           PREVIEW_OUTPUT: ${{ runner.temp }}/tailwind-play-preview.json
         run: |
