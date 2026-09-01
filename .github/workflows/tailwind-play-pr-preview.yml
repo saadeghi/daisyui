@@ -30,8 +30,6 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: git fetch --no-tags --depth=1 origin "refs/pull/${PR_NUMBER}/head"
 
-      # Diff from the merge base, not the base branch tip, so a PR branch that is
-      # behind the base does not show unrelated components as changed.
       - name: Resolve the merge base
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
