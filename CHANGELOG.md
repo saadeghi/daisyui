@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.24](https://github.com/saadeghi/daisyui/compare/v5.7.23...v5.7.24) (2026-09-01)
+
+### Bug Fixes
+
+* improve skeleton animation for RTL ([#4712](https://github.com/saadeghi/daisyui/issues/4712)) ([16a2857](https://github.com/saadeghi/daisyui/commit/16a2857f3f9a7a7ad73aa631c95c6f3db39638e6))
 ## [5.7.23](https://github.com/saadeghi/daisyui/compare/v5.7.22...v5.7.23) (2026-08-31)
 
 ### Bug Fixes
