@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.27](https://github.com/saadeghi/daisyui/compare/v5.7.26...v5.7.27) (2026-09-01)
+
+### Bug Fixes
+
+* join item border overlap when there's a wrapper ([#4719](https://github.com/saadeghi/daisyui/issues/4719)) ([96fd80a](https://github.com/saadeghi/daisyui/commit/96fd80afc8d614a9755999f35b2dd9f27abfae5d))
+## [5.7.26](https://github.com/saadeghi/daisyui/compare/v5.7.25...v5.7.26) (2026-09-01)
+
+### Bug Fixes
+
+* tooltip font weight ([03217ba](https://github.com/saadeghi/daisyui/commit/03217bae0919bc458c2606533172b62bf4889b33))
 ## [5.7.25](https://github.com/saadeghi/daisyui/compare/v5.7.24...v5.7.25) (2026-09-01)
 
 ### Bug Fixes
