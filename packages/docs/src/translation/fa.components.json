@@ -242,7 +242,7 @@
   "Dropdown using details and summary opens and closes the content when the summary is clicked.": "Dropdown با استفاده از جزئیات و خلاصه محتوا را با کلیک بر روی خلاصه باز و بسته می کند.",
   "Documentation": "Documentation",
   "Pricing": "Pricing",
-  "Links without a popover get the same style and the moving indicator": "Links without a popover get the same style and the moving indicator",
+  "Links and buttons without a popover get the same style and the moving indicator. A button can open a modal or run any action.": "Links and buttons without a popover get the same style and the moving indicator. A button can open a modal or run any action.",
   "Each button must have a corresponding popover with the same id as the popovertarget value. HTML IDs must be unique.": "هر Button باید یک پاپاور متناظر با همان شناسه مقدار popovertarget داشته باشد. شناسه های HTML باید منحصر به فرد باشند.",
   "fab-flower modifier class will open the button in a quarter circle instead of a vertical. The fab-main-action / fab-close button is optional in fab-flower; without it, the first action button also fans out into the arc. fab-flower fits up to 4 action buttons (not including the original button), with or without a fab-main-action / fab-close button.": "کلاس FAB-flower Modifier Button را به جای عمودی در یک چهارم دایره باز می کند. FAB-main-action / FAB-close Button در FAB-flower اختیاری است. بدون آن، اولین اکشن Button نیز به سمت قوس می رود. FAB-flower تا 4 Button عملی (غیر از Button اصلی) با یا بدون FAB-main-action / FAB-close Button متناسب است.",
   "For having multiple choices, use checkboxes.": "برای داشتن چندین گزینه، از چک باکس ها استفاده کنید.",

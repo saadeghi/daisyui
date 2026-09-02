@@ -242,7 +242,7 @@
   "Dropdown using details and summary opens and closes the content when the summary is clicked.": "Το Dropdown χρησιμοποιώντας λεπτομέρειες και σύνοψη ανοίγει και κλείνει το περιεχόμενο όταν γίνεται κλικ στη σύνοψη.",
   "Documentation": "Documentation",
   "Pricing": "Pricing",
-  "Links without a popover get the same style and the moving indicator": "Links without a popover get the same style and the moving indicator",
+  "Links and buttons without a popover get the same style and the moving indicator. A button can open a modal or run any action.": "Links and buttons without a popover get the same style and the moving indicator. A button can open a modal or run any action.",
   "Each button must have a corresponding popover with the same id as the popovertarget value. HTML IDs must be unique.": "Κάθε κουμπί πρέπει να έχει ένα αντίστοιχο popover με το ίδιο αναγνωριστικό με την τιμή popovertarget. Τα αναγνωριστικά HTML πρέπει να είναι μοναδικά.",
   "fab-flower modifier class will open the button in a quarter circle instead of a vertical. The fab-main-action / fab-close button is optional in fab-flower; without it, the first action button also fans out into the arc. fab-flower fits up to 4 action buttons (not including the original button), with or without a fab-main-action / fab-close button.": "Η κλάση τροποποιητή fab-flower θα ανοίξει το κουμπί σε τέταρτο κύκλο αντί για κατακόρυφο. Το κουμπί fab-main-action / fab-close είναι προαιρετικό στο fab-flower. Χωρίς αυτό, το πρώτο κουμπί δράσης βγαίνει επίσης στο τόξο. Το fab-flower χωράει έως και 4 κουμπιά ενεργειών (χωρίς το αρχικό κουμπί), με ή χωρίς κουμπί fab-main-action / fab-close.",
   "For having multiple choices, use checkboxes.": "Για πολλαπλές επιλογές, χρησιμοποιήστε πλαίσια ελέγχου.",

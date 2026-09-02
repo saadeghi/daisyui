@@ -67,12 +67,13 @@
       }
     }
 
-    & > a:not([popovertarget]) {
+    & > :is(a, button):not([popovertarget]) {
       @apply relative isolate flex cursor-pointer items-center gap-3;
       padding-inline: var(--mm-p, 1rem);
       height: var(--size);
       font-size: var(--fontsize, 0.875rem);
       border: var(--border) solid transparent;
+      background-color: transparent;
       anchor-name: var(--mm-anchor);
       transition:
         background-color 200ms ease-out,
@@ -81,44 +82,51 @@
         outline: 2px solid var(--color-base-content);
         outline-offset: 2px;
       }
-      &:nth-of-type(1) {
+      &:nth-child(1 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml1;
       }
-      &:nth-of-type(2) {
+      &:nth-child(2 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml2;
       }
-      &:nth-of-type(3) {
+      &:nth-child(3 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml3;
       }
-      &:nth-of-type(4) {
+      &:nth-child(4 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml4;
       }
-      &:nth-of-type(5) {
+      &:nth-child(5 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml5;
       }
-      &:nth-of-type(6) {
+      &:nth-child(6 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml6;
       }
-      &:nth-of-type(7) {
+      &:nth-child(7 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml7;
       }
-      &:nth-of-type(8) {
+      &:nth-child(8 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml8;
       }
-      &:nth-of-type(9) {
+      &:nth-child(9 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml9;
       }
-      &:nth-of-type(10) {
+      &:nth-child(10 of :is(a, button):not([popovertarget])) {
         --mm-anchor: --mml10;
       }
     }
 
-    &:not(:has([popovertarget]:hover, > a:not([popovertarget]):hover, [popover]:popover-open))
+    &:not(
+        :has(
+          [popovertarget]:hover,
+          > :is(a, button):not([popovertarget]):hover,
+          [popover]:popover-open
+        )
+      )
       .megamenu-active {
       background-color: transparent;
     }
     &:has([popovertarget]:hover):not(:has([popover]:popover-open)) .megamenu-active,
-    &:has(> a:not([popovertarget]):hover):not(:has([popover]:popover-open)) .megamenu-active,
+    &:has(> :is(a, button):not([popovertarget]):hover):not(:has([popover]:popover-open))
+      .megamenu-active,
     &:has([popover]:popover-open) .megamenu-active {
       inset: anchor(var(--mm-anchor) top) anchor(var(--mm-anchor) end)
         anchor(var(--mm-anchor) bottom) anchor(var(--mm-anchor) start);
@@ -163,34 +171,74 @@
     &:has([popover]:nth-of-type(10):popover-open) {
       --mm-anchor: --mm10;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(1):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            1 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml1;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(2):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            2 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml2;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(3):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            3 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml3;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(4):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            4 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml4;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(5):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            5 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml5;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(6):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            6 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml6;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(7):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            7 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml7;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(8):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            8 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml8;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(9):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            9 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml9;
     }
-    &:has(> a:not([popovertarget]):nth-of-type(10):hover):not(:has([popover]:popover-open)) {
+    &:has(
+        > :is(a, button):not([popovertarget]):nth-child(
+            10 of :is(a, button):not([popovertarget])
+          ):hover
+      ):not(:has([popover]:popover-open)) {
       --mm-anchor: --mml10;
     }
 
@@ -266,7 +314,7 @@
           content: none;
         }
       }
-      & > a:not([popovertarget]) {
+      & > :is(a, button):not([popovertarget]) {
         @apply rounded-field mx-2 w-fit gap-2 border-none px-3 py-1.5;
         height: auto;
         anchor-name: none;

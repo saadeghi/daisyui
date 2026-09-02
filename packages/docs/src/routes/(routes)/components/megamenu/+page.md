@@ -135,8 +135,8 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
 ```
 
 
-### ~Megamenu with plain links
-#### Links without a popover get the same style and the moving indicator
+### ~Megamenu with plain links and buttons
+#### Links and buttons without a popover get the same style and the moving indicator. A button can open a modal or run any action.
 <button class="btn sm:hidden" popovertarget="my-megamenu-5">Menu</button>
 <div class="megamenu max-sm:megamenu-vertical w-full p-2 border border-base-300" id="my-megamenu-5" popover>
   <span class="megamenu-active"></span>
@@ -164,6 +164,8 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
   <a>Documentation</a>
 
   <a>Pricing</a>
+
+  <button>Login</button>
 </div>
 
 ```html
@@ -195,6 +197,8 @@ On larger screens, we hide the button and show the megamenu as a horizontal menu
   <a>Documentation</a>
 
   <a>Pricing</a>
+
+  <button onclick="login_modal.showModal()">Login</button>
 </div>
 ```
 

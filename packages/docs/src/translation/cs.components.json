@@ -242,7 +242,7 @@
   "Dropdown using details and summary opens and closes the content when the summary is clicked.": "Dropdown pomocí podrobností a souhrnu otevře a zavře obsah po kliknutí na souhrn.",
   "Documentation": "Documentation",
   "Pricing": "Pricing",
-  "Links without a popover get the same style and the moving indicator": "Links without a popover get the same style and the moving indicator",
+  "Links and buttons without a popover get the same style and the moving indicator. A button can open a modal or run any action.": "Links and buttons without a popover get the same style and the moving indicator. A button can open a modal or run any action.",
   "Each button must have a corresponding popover with the same id as the popovertarget value. HTML IDs must be unique.": "Každý Button musí mít odpovídající popover se stejným id jako hodnota popovertarget. HTML ID musí být jedinečné.",
   "fab-flower modifier class will open the button in a quarter circle instead of a vertical. The fab-main-action / fab-close button is optional in fab-flower; without it, the first action button also fans out into the arc. fab-flower fits up to 4 action buttons (not including the original button), with or without a fab-main-action / fab-close button.": "FAB-květina Třída Modifier otevře Button ve čtvrtkruhu namísto vertikály. FAB-hlavní-akce / FAB-close Button je volitelná u FAB-květina; bez něj se první akce Button také rozproudí do oblouku. FAB-flower se hodí až pro 4 akce Button (nezahrnuje originální Button), s nebo bez FAB-main-action / FAB-close Button.",
   "For having multiple choices, use checkboxes.": "Chcete-li mít více možností, použijte zaškrtávací políčka.",
