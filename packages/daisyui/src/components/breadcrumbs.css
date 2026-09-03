@@ -1,11 +1,11 @@
 .breadcrumbs {
   @layer daisyui.l1.l2.l3 {
-    @apply max-w-full overflow-x-auto py-2;
+    @apply -ms-1 max-w-full overflow-x-auto py-2;
 
     > menu,
     > ul,
     > ol {
-      @apply flex min-h-min min-w-max items-center px-1 whitespace-nowrap;
+      @apply flex min-h-min items-center ps-1 whitespace-nowrap;
 
       > li {
         @apply flex items-center;
