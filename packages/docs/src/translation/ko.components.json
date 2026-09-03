@@ -89,6 +89,7 @@
   "Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside": "Modal는 숨겨진 Checkbox와 함께 작동하며 Label는 Checkbox를 Toggle할 수 있으므로 화면을 덮는 'Modal-backdrop' 클래스가 있는 다른 Label 태그를 사용할 수 있으므로 외부를 클릭하면 Modal를 닫을 수 있습니다.",
   "Dialog modal with a close button at corner": "모서리에 닫기 버튼이 있는 대화 상자 모달",
   "Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS": "Instead of working with click, it shows swap-on item if you add swap-active class name. JS를 사용하여 스왑 활성 클래스를 추가하거나 제거할 수 있습니다.",
+  "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group": "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group",
   "There are 3 methods to use a dropdowns": "드롭다운을 사용하는 방법에는 3가지가 있습니다.",
   "Method 1. details and summary": "방법 1. 세부정보 및 요약",
   "Method 2. popover API and anchor positioning": "방법 2. 팝오버 API 및 앵커 위치 지정",

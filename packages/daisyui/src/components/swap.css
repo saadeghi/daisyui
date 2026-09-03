@@ -70,6 +70,36 @@
   }
 }
 
+.swap-multi {
+  @layer daisyui.l1 {
+    > input {
+      @apply col-start-1 row-start-1 size-full cursor-pointer opacity-0;
+      z-index: 1;
+    }
+
+    > input:first-child {
+      z-index: 2;
+    }
+
+    > input:checked {
+      z-index: 0;
+    }
+
+    /* the input after the checked pair is on top, so every click shows the next item */
+    > input:checked + * + input {
+      z-index: 2;
+    }
+
+    > input + * {
+      @apply pointer-events-none opacity-0;
+    }
+
+    > input:checked + * {
+      @apply opacity-100;
+    }
+  }
+}
+
 .swap-rotate {
   @layer daisyui.l1 {
     .swap-on,

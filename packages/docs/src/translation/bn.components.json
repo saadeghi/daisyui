@@ -89,6 +89,7 @@
   "Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside": "Modal একটি লুকানো Checkbox এর সাথে কাজ করে এবং Labelগুলি Checkbox কে Toggle করতে পারে তাই আমরা 'Modal-ব্যাকড্রপ' ক্লাস সহ আরেকটি Label ট্যাগ ব্যবহার করতে পারি যা স্ক্রীনকে কভার করে যাতে বাইরে ক্লিক করলে আমরা Modal বন্ধ করতে পারি",
   "Dialog modal with a close button at corner": "Modal ডায়ালগ কোণে একটি কাছাকাছি Button সহ",
   "Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS": "ক্লিকের সাথে কাজ করার পরিবর্তে, আপনি Swap- সক্রিয় Class name যোগ করলে এটি Swap-অন আইটেম দেখায়। আপনি JS ব্যবহার করে Swap- সক্রিয় ক্লাস যোগ করতে বা সরাতে পারেন",
+  "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group": "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group",
   "There are 3 methods to use a dropdowns": "একটি ড্রপডাউন ব্যবহার করার জন্য 3টি পদ্ধতি রয়েছে",
   "Method 1. details and summary": "পদ্ধতি 1. বিশদ বিবরণ এবং সারাংশ",
   "Method 2. popover API and anchor positioning": "পদ্ধতি 2. পপওভার API এবং অ্যাঙ্কর পজিশনিং",
