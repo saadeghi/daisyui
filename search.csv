@@ -75,7 +75,7 @@ Label,/components/label/,label floating-label
 Link,/components/link/,link link-hover link-neutral link-primary link-secondary link-accent link-success link-info link-warning link-error
 List,/components/list/,list list-row list-col-wrap list-col-grow
 Loading,/components/loading/,loading loading-spinner loading-dots loading-ring loading-ball loading-bars loading-infinity loading-xs loading-sm loading-md loading-lg loading-xl
-Mask,/components/mask/,mask mask-squircle mask-heart mask-hexagon mask-hexagon-2 mask-decagon mask-pentagon mask-diamond mask-square mask-circle mask-star mask-star-2 mask-triangle mask-triangle-2 mask-triangle-3 mask-triangle-4 mask-half-1 mask-half-2
+Mask,/components/mask/,mask mask-squircle mask-heart mask-hexagon mask-hexagon-2 mask-decagon mask-pentagon mask-diamond mask-circle mask-star mask-star-2 mask-triangle mask-triangle-2 mask-triangle-3 mask-triangle-4 mask-half-1 mask-half-2
 Megamenu,/components/megamenu/,megamenu megamenu-active megamenu-wide megamenu-full megamenu-vertical megamenu-xs megamenu-sm megamenu-md megamenu-lg megamenu-xl
 Menu,/components/menu/,menu menu-title menu-dropdown menu-dropdown-toggle menu-disabled menu-active menu-focus menu-dropdown-show menu-paged menu-xs menu-sm menu-md menu-lg menu-xl menu-vertical menu-horizontal
 Browser mockup,/components/mockup-browser/,mockup-browser mockup-browser-toolbar
@@ -526,7 +526,6 @@ Hexagon-2 (horizontal hexagon),/components/mask/#hexagon-2-horizontal-hexagon,
 Decagon,/components/mask/#decagon,
 Pentagon,/components/mask/#pentagon,
 Diamond,/components/mask/#diamond,
-Square,/components/mask/#square,
 Circle,/components/mask/#circle,
 Star,/components/mask/#star,
 Star-2 (bold star),/components/mask/#star-2-bold-star,
