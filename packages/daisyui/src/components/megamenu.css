@@ -35,34 +35,34 @@
         opacity: 0.25;
         rotate: -135deg;
       }
-      &:nth-of-type(1) {
+      &:nth-child(1 of [popovertarget]) {
         --mm-anchor: --mm1;
       }
-      &:nth-of-type(2) {
+      &:nth-child(2 of [popovertarget]) {
         --mm-anchor: --mm2;
       }
-      &:nth-of-type(3) {
+      &:nth-child(3 of [popovertarget]) {
         --mm-anchor: --mm3;
       }
-      &:nth-of-type(4) {
+      &:nth-child(4 of [popovertarget]) {
         --mm-anchor: --mm4;
       }
-      &:nth-of-type(5) {
+      &:nth-child(5 of [popovertarget]) {
         --mm-anchor: --mm5;
       }
-      &:nth-of-type(6) {
+      &:nth-child(6 of [popovertarget]) {
         --mm-anchor: --mm6;
       }
-      &:nth-of-type(7) {
+      &:nth-child(7 of [popovertarget]) {
         --mm-anchor: --mm7;
       }
-      &:nth-of-type(8) {
+      &:nth-child(8 of [popovertarget]) {
         --mm-anchor: --mm8;
       }
-      &:nth-of-type(9) {
+      &:nth-child(9 of [popovertarget]) {
         --mm-anchor: --mm9;
       }
-      &:nth-of-type(10) {
+      &:nth-child(10 of [popovertarget]) {
         --mm-anchor: --mm10;
       }
     }
@@ -131,44 +131,44 @@
       inset: anchor(var(--mm-anchor) top) anchor(var(--mm-anchor) end)
         anchor(var(--mm-anchor) bottom) anchor(var(--mm-anchor) start);
     }
-    &:has([popovertarget]:nth-of-type(1):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(1):popover-open) {
+    &:has([popovertarget]:nth-child(1 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(1 of [popover]):popover-open) {
       --mm-anchor: --mm1;
     }
-    &:has([popovertarget]:nth-of-type(2):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(2):popover-open) {
+    &:has([popovertarget]:nth-child(2 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(2 of [popover]):popover-open) {
       --mm-anchor: --mm2;
     }
-    &:has([popovertarget]:nth-of-type(3):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(3):popover-open) {
+    &:has([popovertarget]:nth-child(3 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(3 of [popover]):popover-open) {
       --mm-anchor: --mm3;
     }
-    &:has([popovertarget]:nth-of-type(4):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(4):popover-open) {
+    &:has([popovertarget]:nth-child(4 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(4 of [popover]):popover-open) {
       --mm-anchor: --mm4;
     }
-    &:has([popovertarget]:nth-of-type(5):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(5):popover-open) {
+    &:has([popovertarget]:nth-child(5 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(5 of [popover]):popover-open) {
       --mm-anchor: --mm5;
     }
-    &:has([popovertarget]:nth-of-type(6):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(6):popover-open) {
+    &:has([popovertarget]:nth-child(6 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(6 of [popover]):popover-open) {
       --mm-anchor: --mm6;
     }
-    &:has([popovertarget]:nth-of-type(7):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(7):popover-open) {
+    &:has([popovertarget]:nth-child(7 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(7 of [popover]):popover-open) {
       --mm-anchor: --mm7;
     }
-    &:has([popovertarget]:nth-of-type(8):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(8):popover-open) {
+    &:has([popovertarget]:nth-child(8 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(8 of [popover]):popover-open) {
       --mm-anchor: --mm8;
     }
-    &:has([popovertarget]:nth-of-type(9):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(9):popover-open) {
+    &:has([popovertarget]:nth-child(9 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(9 of [popover]):popover-open) {
       --mm-anchor: --mm9;
     }
-    &:has([popovertarget]:nth-of-type(10):hover):not(:has([popover]:popover-open)),
-    &:has([popover]:nth-of-type(10):popover-open) {
+    &:has([popovertarget]:nth-child(10 of [popovertarget]):hover):not(:has([popover]:popover-open)),
+    &:has([popover]:nth-child(10 of [popover]):popover-open) {
       --mm-anchor: --mm10;
     }
     &:has(
