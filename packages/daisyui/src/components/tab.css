@@ -210,14 +210,14 @@
         &:first-child:before {
           --radius-start: none;
         }
-        [dir="rtl"] &:first-child:before {
+        &:dir(rtl):first-child:before {
           transform: rotateY(180deg);
         }
 
         &:last-child:before {
           --radius-end: none;
         }
-        [dir="rtl"] &:last-child:before {
+        &:dir(rtl):last-child:before {
           transform: rotateY(180deg);
         }
       }
