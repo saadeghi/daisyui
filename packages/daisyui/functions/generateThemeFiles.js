@@ -4,12 +4,12 @@ import { getFileNames } from "./getFileNames.js"
 
 export const wrapContent = (themeName, content) => {
   if (themeName === "light") {
-    return `:root,:root:has(input.theme-controller[value=${themeName}]:checked),[data-theme="${themeName}"] {
+    return `:root,:root:has(input.theme-controller[value="${themeName}"]:checked),[data-theme="${themeName}"] {
 ${content}}
 `
   }
 
-  return `:root:has(input.theme-controller[value=${themeName}]:checked),[data-theme="${themeName}"] {
+  return `:root:has(input.theme-controller[value="${themeName}"]:checked),[data-theme="${themeName}"] {
 ${content}}
 `
 }
