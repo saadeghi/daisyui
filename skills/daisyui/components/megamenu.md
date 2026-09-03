@@ -66,4 +66,5 @@ Example of `megamenu-wide` with many menu items:
 - On small screens, use `max-sm:megamenu-vertical` to hide the megamenu. When it is visible, it has a vertical layout. The button with `popovertarget="my-megamenu-1"` opens the megamenu with `id="my-megamenu-1" popover`.
 - On large screens, use `sm:hidden` to hide the button. The megamenu has a horizontal layout. Each button in the megamenu opens its related popover.
 - A megamenu can contain a maximum of 10 popovers.
+- A megamenu can also contain plain links or buttons as direct children, like `<a>Documentation</a>` or `<button>Login</button>`. They get the same style and the same moving indicator, and they do not need a popover. A button is useful for actions like opening a modal.
 - To hide the arrow on each button, add `after:content-none` to the buttons.
