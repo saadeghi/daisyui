@@ -191,6 +191,10 @@
       [popover] {
         @apply relative block max-h-none overflow-visible bg-transparent opacity-100;
         border: none;
+
+        &:first-of-type {
+          @apply w-full;
+        }
       }
     }
   }
@@ -271,6 +275,18 @@
     [popover] {
       @apply relative block overflow-visible bg-transparent opacity-100;
       border: none;
+    }
+  }
+
+  @layer daisyui.l1 {
+    @apply overflow-y-auto;
+
+    max-block-size: 80svh;
+    @supports (max-block-size: -webkit-fill-available) {
+      max-block-size: -webkit-fill-available;
+    }
+    @supports (max-block-size: stretch) {
+      max-block-size: stretch;
     }
   }
 }
