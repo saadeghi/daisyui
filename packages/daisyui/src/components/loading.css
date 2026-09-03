@@ -1,6 +1,6 @@
 .loading {
   @layer daisyui.l1.l2.l3 {
-    @apply pointer-events-none inline-block aspect-square bg-current align-middle;
+    @apply pointer-events-none inline-block aspect-square shrink-0 bg-current align-middle;
     width: calc(var(--size-selector, 0.25rem) * 6);
     mask-size: 100%;
     mask-repeat: no-repeat;
