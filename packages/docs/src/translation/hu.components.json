@@ -276,6 +276,8 @@
   "Popover API is the new HTML standard for creating dropdowns.": "A Popover API a legördülő menük létrehozásának új HTML-szabványa.",
   "Popover is similar to dialog but it still allows focusing on the background elements. It is accessible and we can close the modal using `Esc` key.": "A popover hasonló a párbeszédablakhoz, de továbbra is lehetővé teszi a háttérelemekre való összpontosítást. Elérhető, és a Modal-t az `Esc` gombbal zárhatjuk be.",
   "Rotates through 3 words, in 10 seconds": "10 másodperc alatt 3 szón át forog",
+  "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden": "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden",
+  "Set the duration of one full loop using the --marquee-duration CSS variable": "Set the duration of one full loop using the --marquee-duration CSS variable",
   "Services": "Szolgáltatások",
   "size of component or part": "mérete Component vagy alkatrész",
   "Text labels for each button": "Szöveges címkék minden Button-hoz",
