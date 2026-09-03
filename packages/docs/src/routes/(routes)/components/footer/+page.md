@@ -262,6 +262,7 @@ classnames:
     <div class="grid grid-flow-col gap-4">
       <a>
         <svg
+          aria-label="Twitter"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -273,6 +274,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="YouTube"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -284,6 +286,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="Facebook"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -348,6 +351,7 @@ classnames:
   <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
     <a>
       <svg
+        aria-label="Twitter"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -359,6 +363,7 @@ classnames:
     </a>
     <a>
       <svg
+        aria-label="YouTube"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -370,6 +375,7 @@ classnames:
     </a>
     <a>
       <svg
+        aria-label="Facebook"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -431,6 +437,7 @@ classnames:
     <div class="grid grid-flow-col gap-4">
       <a>
         <svg
+          aria-label="Twitter"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -442,6 +449,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="YouTube"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -453,6 +461,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="Facebook"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -603,6 +612,7 @@ classnames:
     <div class="grid grid-flow-col gap-4">
       <a>
         <svg
+          aria-label="Twitter"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -614,6 +624,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="YouTube"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -625,6 +636,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="Facebook"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -672,6 +684,7 @@ classnames:
     <div class="grid grid-flow-col gap-4">
       <a>
         <svg
+          aria-label="Twitter"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -683,6 +696,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="YouTube"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -694,6 +708,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="Facebook"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -797,6 +812,7 @@ classnames:
     <div class="grid grid-flow-col gap-4">
       <a>
         <svg
+          aria-label="Twitter"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -808,6 +824,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="YouTube"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -819,6 +836,7 @@ classnames:
       </a>
       <a>
         <svg
+          aria-label="Facebook"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
