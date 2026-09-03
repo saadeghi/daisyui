@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.28](https://github.com/saadeghi/daisyui/compare/v5.7.27...v5.7.28) (2026-09-03)
+
+### Bug Fixes
+
+* breadcrumbs item focus ring being cropped ([#4724](https://github.com/saadeghi/daisyui/issues/4724)) ([cc339e7](https://github.com/saadeghi/daisyui/commit/cc339e74d6de53c7bab8e225ffbb6390fee24e87))
 ## [5.7.27](https://github.com/saadeghi/daisyui/compare/v5.7.26...v5.7.27) (2026-09-01)
 
 ### Bug Fixes
