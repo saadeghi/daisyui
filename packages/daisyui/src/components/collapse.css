@@ -86,7 +86,9 @@
       padding: 1rem;
       padding-inline-end: 3rem;
       min-height: 1lh;
-      transition: background-color 0.2s ease-out;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: background-color 0.2s ease-out;
+      }
 
       /* this breaks Collapse with checkbox and close on click outside */
       /* &:has(~ label) {
@@ -289,7 +291,9 @@
     padding: 1rem;
     padding-inline-end: 3rem;
     min-height: 1lh;
-    transition: background-color 0.2s ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: background-color 0.2s ease-out;
+    }
   }
 }
 

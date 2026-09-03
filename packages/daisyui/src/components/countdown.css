@@ -8,7 +8,9 @@
 
     & > * {
       @apply invisible relative inline-block overflow-y-clip;
-      transition: width 0.4s ease-out 0.2s;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: width 0.4s ease-out 0.2s;
+      }
       height: 1em;
       --value-v: calc(mod(max(0, var(--value)), 1000));
       --value-hundreds: calc(round(to-zero, var(--value-v) / 100, 1));
@@ -33,10 +35,12 @@
         white-space: pre;
         text-align: end;
         direction: rtl;
-        transition:
-          all 1s cubic-bezier(1, 0, 0, 1),
-          width 0.2s ease-out 0.2s,
-          opacity 0.2s ease-out 0.2s;
+        @media (prefers-reduced-motion: no-preference) {
+          transition:
+            all 1s cubic-bezier(1, 0, 0, 1),
+            width 0.2s ease-out 0.2s,
+            opacity 0.2s ease-out 0.2s;
+        }
       }
 
       &:before {

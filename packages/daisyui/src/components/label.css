@@ -22,11 +22,13 @@
   @layer daisyui.l1.l2.l3 {
     @apply relative flex;
     ::placeholder {
-      transition:
-        top 0.1s ease-out,
-        translate 0.1s ease-out,
-        scale 0.1s ease-out,
-        opacity 0.1s ease-out;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          top 0.1s ease-out,
+          translate 0.1s ease-out,
+          scale 0.1s ease-out,
+          opacity 0.1s ease-out;
+      }
     }
     > span {
       @apply bg-base-100 absolute start-3 z-1 px-1 opacity-0;
@@ -36,11 +38,13 @@
       border-radius: 2px;
       pointer-events: none;
       translate: 0 -50%;
-      transition:
-        top 0.1s ease-out,
-        translate 0.1s ease-out,
-        scale 0.1s ease-out,
-        opacity 0.1s ease-out;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          top 0.1s ease-out,
+          translate 0.1s ease-out,
+          scale 0.1s ease-out,
+          opacity 0.1s ease-out;
+      }
     }
     &:focus-within,
     &:not(:has(input:placeholder-shown, textarea:placeholder-shown)) {

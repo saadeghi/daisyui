@@ -61,8 +61,11 @@
 
     > span {
       position: absolute;
-      @apply flex transition-colors;
-      transition: border-color 0.2s;
+      @apply flex;
+      transition: none;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: border-color 0.2s;
+      }
       inline-size: var(--otp-w);
       block-size: var(--otp-size);
       background-color: var(--color-base-100);

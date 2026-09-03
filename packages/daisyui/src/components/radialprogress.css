@@ -1,13 +1,15 @@
 .radial-progress {
   @layer daisyui.l1.l2.l3 {
-    @apply relative inline-grid h-[var(--size)] w-[var(--size)] place-content-center rounded-full bg-transparent shrink-0;
+    @apply relative inline-grid h-[var(--size)] w-[var(--size)] shrink-0 place-content-center rounded-full bg-transparent;
     vertical-align: middle;
     box-sizing: content-box;
     --value: 0;
     --size: 5rem;
     --thickness: calc(var(--size) / 10);
     --radialprogress: calc(var(--value) * 1%);
-    transition: --radialprogress 0.3s linear;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: --radialprogress 0.3s linear;
+    }
 
     &:before {
       @apply absolute inset-0 rounded-full;
@@ -30,7 +32,9 @@
 
     &:after {
       @apply absolute rounded-full bg-current;
-      transition: transform 0.3s linear;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: transform 0.3s linear;
+      }
       content: "";
       inset: calc(50% - var(--thickness) / 2);
       transform: rotate(calc(var(--value) * 3.6deg - 90deg)) translate(calc(var(--size) / 2 - 50%));
