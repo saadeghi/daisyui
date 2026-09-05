@@ -56,7 +56,7 @@
     }
 
     details {
-      overflow: hidden;
+      @apply overflow-hidden;
       interpolate-size: allow-keywords;
     }
     details::details-content {
@@ -177,7 +177,7 @@
   @layer daisyui.l1.l2 {
     @apply inline-flex flex-row items-start;
 
-    & > li:not(.menu-title) > details {
+    &:not(.menu-paged) > li:not(.menu-title) > details {
       & > :is(ul, menu) {
         @apply bg-base-100 rounded-box absolute ms-0 mt-4 origin-top py-2 pe-2 opacity-0;
         scale: 95%;
@@ -212,6 +212,47 @@
       }
     }
   }
+
+  @layer daisyui.l1 {
+    &.menu-paged {
+      li:not(.menu-title) {
+        > details {
+          > :is(ul, menu) {
+            @apply w-max flex-row;
+          }
+
+          &:not([open]) {
+            @apply flex flex-row;
+
+            > summary {
+              @apply w-max;
+            }
+
+            > :is(ul, menu) {
+              @apply absolute;
+              inset-block: 0.5rem;
+              inset-inline-start: auto;
+              inset-inline-end: 0.5rem;
+            }
+
+            &::details-content {
+              @apply w-0;
+            }
+          }
+        }
+      }
+
+      :is(&, & :is(ul, menu)):has(> li > details[open]) > li {
+        translate: 0 0;
+      }
+
+      details::details-content {
+        @media (prefers-reduced-motion: no-preference) {
+          transition-property: block-size, width, content-visibility;
+        }
+      }
+    }
+  }
 }
 
 .menu-vertical {
@@ -231,11 +272,24 @@
 
 .menu-paged {
   @layer daisyui.l1.l2 {
+    @apply relative overflow-hidden;
+
     --menu-paged-arrow: 135deg;
     --menu-paged-back-arrow: -45deg;
+    --menu-paged-duration: 0.2s;
+    --menu-paged-delay: 0.06s;
+    --menu-paged-page-top: 2.5625rem;
+    --menu-paged-close-x: 100%;
+    --menu-paged-close-y: 0;
+    --menu-paged-enter-x: 100%;
+    --menu-paged-enter-y: 0;
+    --menu-paged-row-rest-x: -100%;
     [dir="rtl"] & {
       --menu-paged-arrow: -45deg;
       --menu-paged-back-arrow: 135deg;
+      --menu-paged-close-x: -100%;
+      --menu-paged-enter-x: -100%;
+      --menu-paged-row-rest-x: 100%;
     }
 
     :where(li ul, li menu):before {
@@ -243,9 +297,38 @@
       content: var(--tw-content);
     }
 
-    details[open]>summary{
+    :is(&, & :is(ul, menu)):has(> li > details[open]) {
+      > li {
+        translate: var(--menu-paged-row-rest-x) 0;
+
+        &:not(:has(> details[open])) {
+          @apply invisible absolute opacity-0;
+        }
+      }
+    }
+
+    li {
+      position: static;
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: translate, opacity;
+        transition-duration: var(--menu-paged-duration);
+        transition-delay: var(--menu-paged-delay);
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    :where(li:has(> details[open]), details[open]),
+    :where(details[open])::details-content {
+      @apply contents;
+    }
+
+    :where(details[open]:has(> :is(ul, menu) > li > details[open]) > summary) {
+      @apply hidden;
+    }
+
+    details[open] > summary {
       font-size: 0;
-      &:not(:active){
+      &:not(:active) {
         transition-duration: 0s;
       }
       & > * {
@@ -262,22 +345,8 @@
       }
     }
 
-    details::details-content {
-      transition: none;
-    }
-
-    &:has(> li > details[open]) > li:not(:has(> details[open])),
-    :where(:is(ul, menu):has(> li > details[open]) > li:not(:has(> details[open]))) {
-      @apply hidden;
-    }
-
-    :where(li:has(> details[open]), details[open], details[open] > :is(ul, menu)),
-    :where(details[open])::details-content {
-      display: contents;
-    }
-
-    :where(details[open]:has(> :is(ul, menu) > li > details[open]) > summary) {
-      @apply hidden;
+    :where(li > details > summary) {
+      @apply relative z-1;
     }
 
     :where(li > details > summary):after {
@@ -287,21 +356,60 @@
     }
 
     :where(li > details[open] > summary):after {
-      order: -1;
-      @apply justify-self-start;
+      @apply -order-1 justify-self-start;
       rotate: var(--menu-paged-back-arrow);
+    }
+
+    li:not(.menu-title) > details {
+      > :is(ul, menu) {
+        @apply flex flex-col py-0 ps-0 pe-0;
+        background-color: revert-layer;
+        border-radius: revert-layer;
+        animation: revert-layer;
+        box-shadow: revert-layer;
+        scale: 1;
+      }
+
+      &:not([open]) > :is(ul, menu) {
+        @apply invisible absolute z-1;
+        inset-inline: 0.5rem;
+        inset-block-start: var(--menu-paged-page-top);
+        inset-block-end: 0.5rem;
+        translate: var(--menu-paged-close-x) var(--menu-paged-close-y);
+        > li {
+          @apply opacity-0;
+          @media (prefers-reduced-motion: no-preference) {
+            transition-property: opacity;
+            transition-duration: var(--menu-paged-duration);
+            transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          }
+        }
+      }
+
+      &[open] > :is(ul, menu) {
+        @apply visible relative ms-0 mt-0;
+        translate: 0 0;
+        > li {
+          @apply opacity-100;
+        }
+        @media (prefers-reduced-motion: no-preference) {
+          animation: menu-paged-page-in var(--menu-paged-duration) cubic-bezier(0, 0, 0.2, 1)
+            var(--menu-paged-delay) backwards;
+        }
+      }
     }
   }
 }
 
 .menu-xs {
   @layer daisyui.l1.l2 {
+    --menu-paged-page-top: 2.0625rem;
     :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-2 py-1;
       font-size: 0.6875rem;
     }
-    details[open]>summary:before{
+    details[open] > summary:before {
       font-size: 0.6875rem;
     }
 
@@ -313,12 +421,13 @@
 
 .menu-sm {
   @layer daisyui.l1.l2 {
+    --menu-paged-page-top: 2.125rem;
     :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-2.5 py-1;
       font-size: 0.75rem;
     }
-    details[open]>summary:before {
+    details[open] > summary:before {
       font-size: 0.75rem;
     }
 
@@ -335,7 +444,7 @@
       @apply rounded-field px-3 py-1.5;
       font-size: 0.875rem;
     }
-    details[open]>summary:before {
+    details[open] > summary:before {
       font-size: 0.875rem;
     }
 
@@ -347,12 +456,13 @@
 
 .menu-lg {
   @layer daisyui.l1.l2 {
+    --menu-paged-page-top: 2.9375rem;
     :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-4 py-1.5;
       font-size: 1.125rem;
     }
-    details[open]>summary:before {
+    details[open] > summary:before {
       font-size: 1.125rem;
     }
 
@@ -364,12 +474,13 @@
 
 .menu-xl {
   @layer daisyui.l1.l2 {
+    --menu-paged-page-top: 3.3125rem;
     :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field px-5 py-1.5;
       font-size: 1.375rem;
     }
-    details[open]>summary:before {
+    details[open] > summary:before {
       font-size: 1.375rem;
     }
 
@@ -393,5 +504,11 @@
 @keyframes menu {
   0% {
     opacity: 0;
+  }
+}
+
+@keyframes menu-paged-page-in {
+  from {
+    translate: var(--menu-paged-enter-x) var(--menu-paged-enter-y);
   }
 }
