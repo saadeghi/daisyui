@@ -215,6 +215,13 @@
 
   @layer daisyui.l1 {
     &.menu-paged {
+      --menu-paged-close-x: 0;
+      --menu-paged-close-y: -100%;
+      --menu-paged-enter-x: 0;
+      --menu-paged-enter-y: -100%;
+      --menu-paged-row-rest-x: 0;
+      --menu-paged-row-rest-y: -100%;
+
       li:not(.menu-title) {
         > details {
           > :is(ul, menu) {
@@ -240,10 +247,6 @@
             }
           }
         }
-      }
-
-      :is(&, & :is(ul, menu)):has(> li > details[open]) > li {
-        translate: 0 0;
       }
 
       details::details-content {
@@ -284,6 +287,7 @@
     --menu-paged-enter-x: 100%;
     --menu-paged-enter-y: 0;
     --menu-paged-row-rest-x: -100%;
+    --menu-paged-row-rest-y: 0;
     [dir="rtl"] & {
       --menu-paged-arrow: -45deg;
       --menu-paged-back-arrow: 135deg;
@@ -299,7 +303,7 @@
 
     :is(&, & :is(ul, menu)):has(> li > details[open]) {
       > li {
-        translate: var(--menu-paged-row-rest-x) 0;
+        translate: var(--menu-paged-row-rest-x) var(--menu-paged-row-rest-y);
 
         &:not(:has(> details[open])) {
           @apply invisible absolute opacity-0;
