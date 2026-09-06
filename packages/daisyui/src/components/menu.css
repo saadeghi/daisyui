@@ -215,12 +215,14 @@
 
   @layer daisyui.l1 {
     &.menu-paged {
-      --menu-paged-close-x: 0;
-      --menu-paged-close-y: -100%;
-      --menu-paged-enter-x: 0;
-      --menu-paged-enter-y: -100%;
-      --menu-paged-row-rest-x: 0;
-      --menu-paged-row-rest-y: -100%;
+      li,
+      details::details-content {
+        transition: none;
+      }
+
+      li:not(.menu-title) > details[open] > :is(ul, menu) {
+        animation: none;
+      }
 
       li:not(.menu-title) {
         > details {
@@ -246,12 +248,6 @@
               @apply w-0;
             }
           }
-        }
-      }
-
-      details::details-content {
-        @media (prefers-reduced-motion: no-preference) {
-          transition-property: block-size, width, content-visibility;
         }
       }
     }
