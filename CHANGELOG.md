@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.29](https://github.com/saadeghi/daisyui/compare/v5.7.28...v5.7.29) (2026-09-07)
+
+### Bug Fixes
+
+* OTP monospace font-family variable receiving unwanted prefix when prefix option is used. ([c1452df](https://github.com/saadeghi/daisyui/commit/c1452df073f4f15fe4de08a44a93098f64d57473))
 ## [5.7.28](https://github.com/saadeghi/daisyui/compare/v5.7.27...v5.7.28) (2026-09-03)
 
 ### Bug Fixes
