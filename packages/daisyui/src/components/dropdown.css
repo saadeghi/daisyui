@@ -1,7 +1,7 @@
 .dropdown {
   @layer daisyui.l1.l2.l3 {
     @apply relative inline-block;
-    position-area: var(--anchor-v, bottom) var(--anchor-h, span-right);
+    position-area: var(--anchor-v, block-end) var(--anchor-h, span-inline-end);
 
     & > *:not(:has(~ [class*="dropdown-content"])):focus {
       @apply outline-hidden;
@@ -106,7 +106,7 @@
 
 .dropdown-start {
   @layer daisyui.l1.l2 {
-    --anchor-h: span-right;
+    --anchor-h: span-inline-end;
 
     :where(.dropdown-content) {
       @apply end-auto;
@@ -172,7 +172,7 @@
 
 .dropdown-end {
   @layer daisyui.l1.l2 {
-    --anchor-h: span-left;
+    --anchor-h: span-inline-start;
 
     :where(.dropdown-content) {
       @apply end-0;
@@ -226,7 +226,7 @@
 
 .dropdown-bottom {
   @layer daisyui.l1.l2 {
-    --anchor-v: bottom;
+    --anchor-v: block-end;
 
     .dropdown-content {
       @apply top-full bottom-auto origin-top;
@@ -236,7 +236,7 @@
 
 .dropdown-top {
   @layer daisyui.l1.l2 {
-    --anchor-v: top;
+    --anchor-v: block-start;
 
     .dropdown-content {
       @apply top-auto bottom-full origin-bottom;
