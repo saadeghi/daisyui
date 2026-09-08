@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.30](https://github.com/saadeghi/daisyui/compare/v5.7.29...v5.7.30) (2026-09-08)
+
+### Bug Fixes
+
+* list style leaking to nested lists ([ad55d08](https://github.com/saadeghi/daisyui/commit/ad55d0878bc063fd9052370844637849ff77c225))
 ## [5.7.29](https://github.com/saadeghi/daisyui/compare/v5.7.28...v5.7.29) (2026-09-07)
 
 ### Bug Fixes
