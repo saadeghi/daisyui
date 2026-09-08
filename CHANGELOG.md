@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.31](https://github.com/saadeghi/daisyui/compare/v5.7.30...v5.7.31) (2026-09-08)
+
+### Bug Fixes
+
+* keep toast-center horizontally centered in RTL ([#4700](https://github.com/saadeghi/daisyui/issues/4700)) ([e5ca64e](https://github.com/saadeghi/daisyui/commit/e5ca64e7d35c080e67eda442f5c3591e66ad7049))
 ## [5.7.30](https://github.com/saadeghi/daisyui/compare/v5.7.29...v5.7.30) (2026-09-08)
 
 ### Bug Fixes
