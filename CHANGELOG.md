@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.32](https://github.com/saadeghi/daisyui/compare/v5.7.31...v5.7.32) (2026-09-08)
+
+### Bug Fixes
+
+* dropdown RTL positions ([#4716](https://github.com/saadeghi/daisyui/issues/4716)) ([c0fec1b](https://github.com/saadeghi/daisyui/commit/c0fec1ba80be63e587e80fde19dcd898fa422e60))
 ## [5.7.31](https://github.com/saadeghi/daisyui/compare/v5.7.30...v5.7.31) (2026-09-08)
 
 ### Bug Fixes
