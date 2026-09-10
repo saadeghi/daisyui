@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.35](https://github.com/saadeghi/daisyui/compare/v5.7.34...v5.7.35) (2026-09-10)
+
+### Bug Fixes
+
+* prevent badge shrink inside a flex container ([#4745](https://github.com/saadeghi/daisyui/issues/4745)) ([da60fca](https://github.com/saadeghi/daisyui/commit/da60fca6aeea46d45214a7ef13680821a5eeeee4))
 ## [5.7.34](https://github.com/saadeghi/daisyui/compare/v5.7.33...v5.7.34) (2026-09-10)
 
 ### Bug Fixes
