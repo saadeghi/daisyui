@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.36](https://github.com/saadeghi/daisyui/compare/v5.7.35...v5.7.36) (2026-09-10)
+
+### Bug Fixes
+
+* checkbox tick and dash alignment ([#4743](https://github.com/saadeghi/daisyui/issues/4743)) ([0ca4325](https://github.com/saadeghi/daisyui/commit/0ca4325d1b46186b1699b69aefb50745abc23720))
+* loading spinner shrinks inside a flex container ([#4744](https://github.com/saadeghi/daisyui/issues/4744)) ([f585b8e](https://github.com/saadeghi/daisyui/commit/f585b8e320dc13145f076f2ab3588505575d7686))
 ## [5.7.35](https://github.com/saadeghi/daisyui/compare/v5.7.34...v5.7.35) (2026-09-10)
 
 ### Bug Fixes
