@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.34](https://github.com/saadeghi/daisyui/compare/v5.7.33...v5.7.34) (2026-09-10)
+
+### Bug Fixes
+
+* FAB wrong font size when using prefix ([#4729](https://github.com/saadeghi/daisyui/issues/4729)) ([3ce15b4](https://github.com/saadeghi/daisyui/commit/3ce15b4b64614e482417083e498335fbcea1d839))
 ## [5.7.33](https://github.com/saadeghi/daisyui/compare/v5.7.32...v5.7.33) (2026-09-10)
 
 ### Bug Fixes
