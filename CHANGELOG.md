@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.33](https://github.com/saadeghi/daisyui/compare/v5.7.32...v5.7.33) (2026-09-10)
+
+### Bug Fixes
+
+* otp border width and position ([#4730](https://github.com/saadeghi/daisyui/issues/4730)) ([fe56cba](https://github.com/saadeghi/daisyui/commit/fe56cba0cc5c131b57496c54ba3a581dfd26eefc))
 ## [5.7.32](https://github.com/saadeghi/daisyui/compare/v5.7.31...v5.7.32) (2026-09-08)
 
 ### Bug Fixes
