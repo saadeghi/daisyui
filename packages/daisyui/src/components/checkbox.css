@@ -46,6 +46,7 @@
 
       &:before {
         clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%);
+        translate: 3.5% -7%;
         @apply opacity-100;
       }
       @media (forced-colors: active) {
@@ -70,7 +71,7 @@
       );
       &:before {
         @apply rotate-0 opacity-100;
-        translate: 0 -35%;
+        translate: 0 -40%;
         clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 80% 80%, 80% 100%);
       }
     }
