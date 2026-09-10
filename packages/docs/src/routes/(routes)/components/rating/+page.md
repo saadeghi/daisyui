@@ -260,7 +260,7 @@ classnames:
 
 ```html
 <div class="$$rating $$rating-lg $$rating-half">
-  <input type="radio" name="rating-11" class="$$rating-hidden" />
+  <input type="radio" name="rating-11" class="$$rating-hidden" aria-label="clear" />
   <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" aria-label="0.5 star" />
   <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" aria-label="1 star" />
   <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" aria-label="1.5 star" checked="checked" />
