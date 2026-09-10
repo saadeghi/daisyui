@@ -97,6 +97,12 @@
     > input:checked + * {
       @apply opacity-100;
     }
+
+    /* the inputs are invisible, so show keyboard focus on the swap itself */
+    &:has(> input:focus-visible) {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
   }
 }
 
