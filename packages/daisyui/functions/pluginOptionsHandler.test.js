@@ -85,12 +85,12 @@ test("pluginOptionsHandler should return include, exclude, and prefix", () => {
   expect(result.prefix).toEqual("prefix")
 })
 
-test("pluginOptionsHandler should turn a single include or exclude value into a list", () => {
+test("pluginOptionsHandler should turn a single exclude value into a list and leave include as it is", () => {
   const options = { include: "menu", exclude: "megamenu" }
 
   const result = pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
-  expect(result.include).toEqual(["menu"])
+  expect(result.include).toEqual("menu")
   expect(result.exclude).toEqual(["megamenu"])
 })
 
@@ -100,6 +100,15 @@ test("pluginOptionsHandler should split a comma separated exclude string", () =>
   const result = pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
   expect(result.exclude).toEqual(["table", "status"])
+})
+
+test("pluginOptionsHandler should pass a blank include and exclude through, which arrive as 0 from css", () => {
+  const options = { include: 0, exclude: 0 }
+
+  const result = pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+  expect(result.include).toEqual(0)
+  expect(result.exclude).toEqual(0)
 })
 
 test("pluginOptionsHandler should not create duplicate styles for single light theme", () => {

@@ -12,15 +12,8 @@ export const pluginOptionsHandler = (() => {
       prefix = "",
     } = options || {}
 
-    const toList = (value) =>
-      Array.isArray(value)
-        ? value
-        : String(value)
-            .split(",")
-            .map((item) => item.trim())
-            .filter(Boolean)
-    const includeList = include === undefined ? undefined : toList(include)
-    const excludeList = exclude === undefined ? undefined : toList(exclude)
+    const excludeList =
+      typeof exclude === "string" ? exclude.split(",").map((item) => item.trim()) : exclude
 
     if (logs !== false && firstRun) {
       console.log(
@@ -72,7 +65,7 @@ export const pluginOptionsHandler = (() => {
       if (themeArray.length === 1 && themeArray[0].includes("--default")) {
         const [themeName, ...flags] = themeArray[0].split(" ")
         applyTheme(themeName, flags)
-        return { include: includeList, exclude: excludeList, prefix }
+        return { include, exclude: excludeList, prefix }
       }
 
       // default theme
@@ -102,6 +95,6 @@ export const pluginOptionsHandler = (() => {
       })
     }
 
-    return { include: includeList, exclude: excludeList, prefix }
+    return { include, exclude: excludeList, prefix }
   }
 })()
