@@ -13,7 +13,7 @@ Install WordPress according to the [Official WordPress guide](https://wordpress.
 
 ### 2. Install the WindPress plugin
 
-In this guide, we will use the [WindPress](https://wind.press) plugin to install Tailwind CSS and daisyUI in a WordPress project.
+In this guide, we will use the [WindPress](https://github.com/wind-press/windpress) plugin to install Tailwind CSS and daisyUI in a WordPress project.
 
 Navigate to the `Plugins → Add New Plugin` sub-menu.
 

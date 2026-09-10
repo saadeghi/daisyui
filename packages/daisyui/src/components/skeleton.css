@@ -13,6 +13,9 @@
 
     @media (prefers-reduced-motion: no-preference) {
       animation: skeleton 1.8s ease-in-out infinite;
+      &:dir(rtl) {
+        animation-direction: reverse;
+      }
     }
   }
 }

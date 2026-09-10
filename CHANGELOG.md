@@ -2,6 +2,86 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.34](https://github.com/saadeghi/daisyui/compare/v5.7.33...v5.7.34) (2026-09-10)
+
+### Bug Fixes
+
+* FAB wrong font size when using prefix ([#4729](https://github.com/saadeghi/daisyui/issues/4729)) ([3ce15b4](https://github.com/saadeghi/daisyui/commit/3ce15b4b64614e482417083e498335fbcea1d839))
+## [5.7.33](https://github.com/saadeghi/daisyui/compare/v5.7.32...v5.7.33) (2026-09-10)
+
+### Bug Fixes
+
+* otp border width and position ([#4730](https://github.com/saadeghi/daisyui/issues/4730)) ([fe56cba](https://github.com/saadeghi/daisyui/commit/fe56cba0cc5c131b57496c54ba3a581dfd26eefc))
+## [5.7.32](https://github.com/saadeghi/daisyui/compare/v5.7.31...v5.7.32) (2026-09-08)
+
+### Bug Fixes
+
+* dropdown RTL positions ([#4716](https://github.com/saadeghi/daisyui/issues/4716)) ([c0fec1b](https://github.com/saadeghi/daisyui/commit/c0fec1ba80be63e587e80fde19dcd898fa422e60))
+## [5.7.31](https://github.com/saadeghi/daisyui/compare/v5.7.30...v5.7.31) (2026-09-08)
+
+### Bug Fixes
+
+* keep toast-center horizontally centered in RTL ([#4700](https://github.com/saadeghi/daisyui/issues/4700)) ([e5ca64e](https://github.com/saadeghi/daisyui/commit/e5ca64e7d35c080e67eda442f5c3591e66ad7049))
+## [5.7.30](https://github.com/saadeghi/daisyui/compare/v5.7.29...v5.7.30) (2026-09-08)
+
+### Bug Fixes
+
+* list style leaking to nested lists ([ad55d08](https://github.com/saadeghi/daisyui/commit/ad55d0878bc063fd9052370844637849ff77c225))
+## [5.7.29](https://github.com/saadeghi/daisyui/compare/v5.7.28...v5.7.29) (2026-09-07)
+
+### Bug Fixes
+
+* OTP monospace font-family variable receiving unwanted prefix when prefix option is used. ([c1452df](https://github.com/saadeghi/daisyui/commit/c1452df073f4f15fe4de08a44a93098f64d57473))
+## [5.7.28](https://github.com/saadeghi/daisyui/compare/v5.7.27...v5.7.28) (2026-09-03)
+
+### Bug Fixes
+
+* breadcrumbs item focus ring being cropped ([#4724](https://github.com/saadeghi/daisyui/issues/4724)) ([cc339e7](https://github.com/saadeghi/daisyui/commit/cc339e74d6de53c7bab8e225ffbb6390fee24e87))
+## [5.7.27](https://github.com/saadeghi/daisyui/compare/v5.7.26...v5.7.27) (2026-09-01)
+
+### Bug Fixes
+
+* join item border overlap when there's a wrapper ([#4719](https://github.com/saadeghi/daisyui/issues/4719)) ([96fd80a](https://github.com/saadeghi/daisyui/commit/96fd80afc8d614a9755999f35b2dd9f27abfae5d))
+## [5.7.26](https://github.com/saadeghi/daisyui/compare/v5.7.25...v5.7.26) (2026-09-01)
+
+### Bug Fixes
+
+* tooltip font weight ([03217ba](https://github.com/saadeghi/daisyui/commit/03217bae0919bc458c2606533172b62bf4889b33))
+## [5.7.25](https://github.com/saadeghi/daisyui/compare/v5.7.24...v5.7.25) (2026-09-01)
+
+### Bug Fixes
+
+* checkbox - add style for aria-checked="mixed" like :indeterminate ([#4713](https://github.com/saadeghi/daisyui/issues/4713)) ([5e5b8b4](https://github.com/saadeghi/daisyui/commit/5e5b8b40a5b11031f15900069acb175de01f0fdc))
+## [5.7.24](https://github.com/saadeghi/daisyui/compare/v5.7.23...v5.7.24) (2026-09-01)
+
+### Bug Fixes
+
+* improve skeleton animation for RTL ([#4712](https://github.com/saadeghi/daisyui/issues/4712)) ([16a2857](https://github.com/saadeghi/daisyui/commit/16a2857f3f9a7a7ad73aa631c95c6f3db39638e6))
+## [5.7.23](https://github.com/saadeghi/daisyui/compare/v5.7.22...v5.7.23) (2026-08-31)
+
+### Bug Fixes
+
+* menu-paged summary hides children (badge, icon, etc) when details is open ([#4710](https://github.com/saadeghi/daisyui/issues/4710)) ([4929505](https://github.com/saadeghi/daisyui/commit/492950573b4c23a84e7cb6309a87e6e084d98250))
+## [5.7.22](https://github.com/saadeghi/daisyui/compare/v5.7.21...v5.7.22) (2026-08-24)
+
+### Bug Fixes
+
+* floating label position on RTL ([#4701](https://github.com/saadeghi/daisyui/issues/4701)) ([66274aa](https://github.com/saadeghi/daisyui/commit/66274aa83c6e4189ed95a6860e59a9b85c23536e))
+## 5.7.21 (2026-08-23)
+
+### Bug Fixes
+
+* FAB selector style leack for `fab-flower` actions ([#4683](https://github.com/saadeghi/daisyui/issues/4683)) ([e4e6419](https://github.com/saadeghi/daisyui/commit/e4e6419978f5609697575d22a7c4fb9ecf4ebd3a))
+## [5.7.20](https://github.com/saadeghi/daisyui/compare/v5.7.19...v5.7.20) (2026-08-20)
+
+### Bug Fixes
+
+* text-rotate - selector targets direct children, to avoid style leaking ([#4682](https://github.com/saadeghi/daisyui/issues/4682)) ([44856dc](https://github.com/saadeghi/daisyui/commit/44856dcf850c12d41b92eb301c40004f49d81027))
+## [5.7.19](https://github.com/saadeghi/daisyui/compare/v5.7.18...v5.7.19) (2026-08-19)
+
+### Bug Fixes
+
+* alert grid ([#4684](https://github.com/saadeghi/daisyui/issues/4684)) ([3b99c0c](https://github.com/saadeghi/daisyui/commit/3b99c0cedf64c4c3a5c6c2bba1684533c1fa0934))
 ## [5.7.18](https://github.com/saadeghi/daisyui/compare/v5.7.17...v5.7.18) (2026-08-18)
 
 ### Bug Fixes

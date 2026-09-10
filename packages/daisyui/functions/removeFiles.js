@@ -7,7 +7,7 @@ export const removeFiles = async (items = []) => {
     try {
       const stats = await fs.lstat(itemPath)
       if (stats.isDirectory()) {
-        await fs.rmdir(itemPath, { recursive: true })
+        await fs.rm(itemPath, { recursive: true, force: true })
       } else {
         await fs.unlink(itemPath)
       }

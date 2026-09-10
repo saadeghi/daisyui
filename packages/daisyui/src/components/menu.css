@@ -229,6 +229,9 @@
       &:not(:active){
         transition-duration: 0s;
       }
+      & > * {
+        @apply hidden;
+      }
       &:before {
         --tw-content: "Back";
         content: var(--tw-content);

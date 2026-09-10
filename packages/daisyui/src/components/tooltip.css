@@ -10,6 +10,7 @@
     &[data-tip]:before {
       @apply text-neutral-content rounded-field absolute max-w-[20rem] px-2 py-1 text-center whitespace-normal opacity-0;
       font-size: 0.875rem;
+      font-weight: 400;
       line-height: 1.25;
       background-color: var(--tt-bg);
       width: max-content;

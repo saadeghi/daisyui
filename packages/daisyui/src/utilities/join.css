@@ -4,6 +4,8 @@
   --join-se: 0;
   --join-es: 0;
   --join-ee: 0;
+  --join-ml: 0;
+  --join-mt: 0;
   --join-v: 0;
   --join-h: 1;
 
@@ -38,6 +40,11 @@
       --join-es: var(--radius-field);
       --join-ee: var(--radius-field);
     }
+
+    :where(:scope > :not(:first-child)) {
+      --join-ml: calc(var(--border, 1px) * -1 * var(--join-h));
+      --join-mt: calc(var(--border, 1px) * -1 * var(--join-v));
+    }
   }
 }
 
@@ -58,9 +65,9 @@
   border-end-start-radius: var(--join-es);
   border-end-end-radius: var(--join-ee);
 
-  &:not(:first-child, :disabled, [disabled], .btn-disabled) {
-    margin-inline-start: calc(var(--border, 1px) * -1 * var(--join-h));
-    margin-block-start: calc(var(--border, 1px) * -1 * var(--join-v));
+  &:not(:disabled, [disabled], .btn-disabled) {
+    margin-inline-start: var(--join-ml, 0);
+    margin-block-start: var(--join-mt, 0);
   }
 
   &:is(:disabled, [disabled], .btn-disabled) {

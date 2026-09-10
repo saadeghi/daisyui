@@ -455,7 +455,7 @@
                         </svg>
                         Trending on GitHub with
                         {stats?.stargazers_count
-                          ? (Math.ceil(stats.stargazers_count / 1000) * 1000).toLocaleString(
+                          ? (Math.floor(stats.stargazers_count / 1000) * 1000).toLocaleString(
                               "en-US",
                             )
                           : "many"}
@@ -2148,9 +2148,8 @@
             {#await fetchStats() then stats}
               <Countup
                 initial={stats.stargazers_count - 50}
-                value={stats.stargazers_count + 50}
-                roundto={10}
-                duration={10 * 1000}
+                value={stats.stargazers_count + 150}
+                duration={800_000}
               />
             {/await}
           </span>
@@ -2179,10 +2178,9 @@
           <span class="motion-reduce:hidden">
             {#await fetchStats() then stats}
               <Countup
-                initial={stats.dependents_count - 200}
-                value={stats.dependents_count + 200}
-                roundto={10}
-                duration={10 * 1000}
+                initial={stats.dependents_count - 100}
+                value={stats.dependents_count + 100}
+                duration={266_667}
               />
             {/await}
           </span>
@@ -2211,10 +2209,9 @@
           <span class="motion-reduce:hidden">
             {#await fetchStats() then stats}
               <Countup
-                initial={stats.npm_downloads_count_total - 500}
-                value={stats.npm_downloads_count_total + 500}
-                roundto={100}
-                duration={20 * 1000}
+                initial={stats.npm_downloads_count_total - 5000}
+                value={stats.npm_downloads_count_total + 10000}
+                duration={1_463_415}
               />
             {/await}
           </span>

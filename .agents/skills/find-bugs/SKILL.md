@@ -10,6 +10,16 @@ metadata:
 Find only evidence-backed product bugs and leave the user with a plan they can approve or reject.
 Do not implement the plan.
 
+## Required agent routing
+
+- If you are not the `bug_finder` custom agent, delegate the complete task to `bug_finder` and
+  wait for its result. Tell the agent to use this skill. Do not investigate the bug or write the
+  plan in the current agent.
+- If you are the `bug_finder` custom agent, perform this workflow directly. Do not delegate it
+  again.
+- If `bug_finder` is not available, stop and report the problem. Do not run this workflow with a
+  different agent or model.
+
 ## Non-negotiable boundary
 
 - Treat the repository as read-only except for the final `tmp/bugs/*.md` plan files.

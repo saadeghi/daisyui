@@ -26,7 +26,7 @@
           #0000
         ),
       0 4px 3px -2px oklch(0% 0 0 / calc(var(--depth) * 0.08));
-    &:has(:nth-child(2)) {
+    &:has(> :nth-child(2)) {
       grid-template-columns: auto minmax(auto, 1fr);
     }
   }
@@ -106,7 +106,7 @@
     grid-auto-flow: row;
     grid-template-columns: auto;
     text-align: center;
-    &:has(:nth-child(2)) {
+    &:has(> :nth-child(2)) {
       grid-template-columns: auto;
     }
   }
@@ -119,7 +119,7 @@
     grid-auto-flow: column;
     grid-template-columns: auto;
     text-align: start;
-    &:has(:nth-child(2)) {
+    &:has(> :nth-child(2)) {
       grid-template-columns: auto minmax(auto, 1fr);
     }
   }

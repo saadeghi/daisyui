@@ -98,7 +98,7 @@
   const githubStarsLabel = $derived.by(() => {
     if (!Number.isFinite(stargazersCount)) return null
 
-    const thousands = Math.ceil(stargazersCount / 1000)
+    const thousands = Math.floor(stargazersCount / 1000)
     return thousands > 0 ? `${thousands}k` : String(stargazersCount)
   })
 </script>

@@ -51,6 +51,9 @@
         scale: 0.75;
         pointer-events: auto;
       }
+      :dir(rtl)::placeholder {
+        translate: 12.5% calc(-50% - 0.125em);
+      }
       > span {
         @apply opacity-100;
         top: 0;
@@ -58,6 +61,9 @@
         scale: 0.75;
         pointer-events: auto;
         z-index: 2;
+        &:dir(rtl) {
+          translate: 12.5% calc(-50% - 0.125em);
+        }
       }
     }
     &:has(:disabled, [disabled]) {

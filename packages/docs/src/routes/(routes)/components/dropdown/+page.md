@@ -616,7 +616,7 @@ The content gets displayed when the button is focused.
   A normal text and a helper dropdown
   <div class="dropdown dropdown-end">
     <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-info">
-      <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <svg tabindex="0" aria-label="More info" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
     </div>
     <div tabindex="0" class="shadow-sm card card-sm dropdown-content z-1 bg-base-100 rounded-box w-64">
       <div tabindex="0" class="card-body">
@@ -632,6 +632,7 @@ The content gets displayed when the button is focused.
   <div tabindex="0" role="button" class="$$btn $$btn-circle $$btn-ghost $$btn-xs text-info">
     <svg
       tabindex="0"
+      aria-label="More info"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

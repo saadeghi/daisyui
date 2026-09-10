@@ -1191,7 +1191,6 @@
 
 {#snippet blueprintWordmark()}
   <div class="inline-flex flex-col items-end" aria-label="daisyUI Blueprint version 1.5">
-    <span class="me-3 mb-1 font-mono text-[0.625rem] text-blue-500">v1.5</span>
     <span
       class="inline-grid grid-cols-[.5rem_1fr_.5rem] grid-rows-[.5rem_1fr_.5rem] align-middle"
       dir="ltr"
