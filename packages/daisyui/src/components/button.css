@@ -325,8 +325,7 @@
   }
 }
 
-.btn-disabled,
-.btn:is(:disabled, [disabled], [aria-disabled="true"]) {
+.btn:is(.btn-disabled, :disabled, [disabled], [aria-disabled="true"]) {
   @layer daisyui {
     @apply pointer-events-none;
     color: color-mix(in oklch, var(--color-base-content) 20%, #0000);
