@@ -1655,7 +1655,7 @@
   " Gemini LLM setup": " Gemini LLM setup",
   "title: Cursor setup for daisyUI\ndesc: Setup Cursor editor to correctly generate daisyUI code based on your prompt.": "title: Cursor setup for daisyUI\ndesc: Setup Cursor editor to correctly generate daisyUI code based on your prompt.",
   " Cursor LLM setup": " Cursor LLM setup",
-  "You can setup daisyUI's llms.txt file to your workspace so Cursor can use it by default. (<a href=\"https://docs.cursor.com/context/rules\" rel=\"nofollow\" target=\"_blank\">Read more at Cursor docs</a>)": "Ви можете налаштувати файл llms.txt daisyUI у своєму робочому просторі, щоб Cursor міг використовувати його Default. (<a href=\"https://docs.cursor.com/context/rules\" rel=\"nofollow\" target=\"_blank\">Докладніше в Cursor docs</a>)",
+  "You can setup daisyUI's llms.txt file to your workspace so Cursor can use it by default. (<a href=\"https://cursor.com/docs/rules\" rel=\"nofollow\" target=\"_blank\">Read more at Cursor docs</a>)": "Ви можете налаштувати файл llms.txt daisyUI у своєму робочому просторі, щоб Cursor міг використовувати його Default. (<a href=\"https://cursor.com/docs/rules\" rel=\"nofollow\" target=\"_blank\">Докладніше в Cursor docs</a>)",
   ". Or if it's Windows, press ": ". Or if it's Windows, press ",
   ".": ".",
   "You can use <a href=\"https://context7.com/\" rel=\"nofollow\" target=\"_blank\">Context7</a> or <a href=\"https://gitmcp.io/saadeghi/daisyui\" rel=\"nofollow\" target=\"_blank\">daisyUI GitMCP</a> as MCP server in Cursor.": "Ви можете використовувати <a href=\"https://context7.com/\" rel=\"nofollow\" target=\"_blank\">Context7</a> або <a href=\"https://gitmcp.io/saadeghi/daisyui\" rel=\"nofollow\" target=\"_blank\">daisyUI GitMCP</a> як сервер MCP у Cursor.",
