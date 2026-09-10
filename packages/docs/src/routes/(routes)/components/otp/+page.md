@@ -318,3 +318,23 @@ classnames:
   <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
 </label>
 ```
+
+### ~OTP disabled
+
+<label class="otp">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required disabled />
+</label>
+
+```html
+<label class="$$otp">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required disabled />
+</label>
+```
