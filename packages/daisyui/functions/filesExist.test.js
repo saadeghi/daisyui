@@ -32,7 +32,7 @@ directories.forEach((dir) => {
     const files = readdirSync(srcDir).filter((file) => file.endsWith(".css"))
 
     // we need .css for reset but not .js
-    const exclusions = ["reset"]
+    const exclusions = ["reset", "hidden"]
 
     files.forEach((file) => {
       const targetFile = join(targetDir, file)
