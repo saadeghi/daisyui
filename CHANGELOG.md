@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.37](https://github.com/saadeghi/daisyui/compare/v5.7.36...v5.7.37) (2026-09-11)
+
+### Bug Fixes
+
+* OTP disabled style ([#4750](https://github.com/saadeghi/daisyui/issues/4750)) ([02623f0](https://github.com/saadeghi/daisyui/commit/02623f06264ecb3d37c85fcd479c417b51e842e0))
 ## [5.7.36](https://github.com/saadeghi/daisyui/compare/v5.7.35...v5.7.36) (2026-09-10)
 
 ### Bug Fixes
