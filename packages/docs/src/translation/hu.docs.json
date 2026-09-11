@@ -610,7 +610,6 @@
   "Add this to your `opencode.json`:": "Adja hozzá ezt az `opencode.json` fájlhoz:",
   "Agent skill and MCP servers": "Agent skill és MCP szerverek",
   "All parts are compatible with daisyUI themes.": "Minden alkatrész kompatibilis a daisyUI témákkal.",
-  "An MCP server will save you LLM tokens and will generate the code faster.": "Az MCP szerver megmenti az LLM tokeneket, és gyorsabban generálja a kódot.",
   "At some point every Bootstrap website looked the same unless you open a CSS file and write tons of custom CSS.": "Valamikor minden Bootstrap webhely ugyanúgy nézett ki, hacsak nem nyit meg egy CSS-fájlt, és rengeteg egyéni CSS-t nem ír.",
   "Automatic setup": "Automatikus beállítás",
   "But here's the catch: The problem with Bootstrap was not class names! Bootstrap class names were actually really fast to work with.": "De itt van a fogás: a Bootstrap problémája nem az osztálynevek miatt volt! A Bootstrap osztálynevekkel valójában nagyon gyorsan lehetett dolgozni.",
@@ -706,7 +705,6 @@
   "LICENSE: YOUR BLUEPRINT LICENSE KEY": "LICENC: AZ ÖN TERVEZETES LICENCKULCSÁJA",
   "Like Button, Toggle, Card, etc.": "Mint a Button, Toggle, Card stb.",
   "Manual setup": "Kézi beállítás",
-  "MCP (Model Communication Protocol) is an API standard to communicate with AI models. MCP servers are tools that implement this protocol and provide AI models with the necessary information to generate accurate code based on your prompts.": "Az MCP (Model Communication Protocol) egy API szabvány az AI modellekkel való kommunikációhoz. Az MCP-szerverek olyan eszközök, amelyek megvalósítják ezt a protokollt, és az AI-modelleket a szükséges információkkal látják el a pontos kód létrehozásához az Ön utasításai alapján.",
   "MCP is an API to communicate with AI models.": "Az MCP egy API az AI modellekkel való kommunikációhoz.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.": "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.": "Az MCP egy API az AI modellekkel való kommunikációhoz. Hozzáadhat MCP-kiszolgálókat, és Claude kommunikálni fog velük a pontosabb eredmények érdekében.",
@@ -718,7 +716,6 @@
   "MCP is an API to communicate with AI models. You can add MCP servers and Windsurf will communicate with them to get more accurate results.": "Az MCP egy API az AI modellekkel való kommunikációhoz. Hozzáadhat MCP-kiszolgálókat, és a Windsurf kommunikál velük a pontosabb eredmények érdekében.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Zed will communicate with them to get more accurate results.": "Az MCP egy API az AI modellekkel való kommunikációhoz. Hozzáadhat MCP-kiszolgálókat, és a Zed kommunikálni fog velük a pontosabb eredmények érdekében.",
   "MCP is an API to communicate with AI models. You can add MCP servers and OpenCode will communicate with them to get more accurate results.": "Az MCP egy API az AI modellekkel való kommunikációhoz. Hozzáadhat MCP-kiszolgálókat, és az OpenCode kommunikál velük a pontosabb eredmények érdekében.",
-  "MCP servers are more efficient and faster than skills, they provide context on demand, instead of a static skill file.": "Az MCP szerverek hatékonyabbak és gyorsabbak, mint a skill-k, igény szerint kontextust biztosítanak a statikus skill fájl helyett.",
   "Now in `Agent Mode` you can ask AI anything about daisyUI.": "Az `Agent Mode`-ban most bármit kérdezhet az AI-tól a daisyUI-val kapcsolatban.",
   "Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.": "Now in `Agent Mode` you can ask AI anything about daisyUI. írja be a `use context7` szót a prompt végére.",
   "Now in `Agent Mode` you can tell AI to use daisyUI skill. For example:": "Most a \"Agent módban\" megmondhatja az AI-nak, hogy használja a daisyUI skill-t. Például: (`Agent Mode`)",
@@ -1742,5 +1739,7 @@
   "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.": "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.",
   "Run `grok inspect` to confirm Grok Build found the skill.": "Run `grok inspect` to confirm Grok Build found the skill.",
   "User-invocable skills appear as slash commands in Grok Build. For example:": "User-invocable skills appear as slash commands in Grok Build. For example:",
-  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build"
+  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build",
+  "Use the <a href=\"/theme-generator/\">theme generator</a> to edit colors and preview components, then copy the CSS into your project.": "A <a href=\"/theme-generator/\">témagenerátorral</a> szerkessze a színeket és nézze meg a komponenseket, majd másolja a CSS-t a projektbe.",
+  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "Az MCP (Model Context Protocol) szabványos protokollal kapcsolja az AI-alkalmazásokat eszközökhöz és erőforrásokhoz. A daisyUI dokumentációt vagy komponenspéldákat nyújtó szerver kontextust ad az ügynöknek a feladathoz."
 }

@@ -19,7 +19,7 @@ This keeps prompts focused on product requirements. Claude spends less attention
 
 ## Why Blueprint
 
-[Blueprint](/claude-code/use-less-tokens/) is the official daisyUI MCP server. Use it for production UI tasks where you want current daisyUI snippets and design context. It helps Claude avoid low-quality generated markup by grounding the output in real component patterns.
+[Blueprint](/blueprint/) is the official daisyUI MCP server. Use it for production UI tasks where you want current daisyUI snippets and design context. It helps Claude avoid low-quality generated markup by grounding the output in real component patterns.
 
 ```md:prompt
 Build a SaaS billing screen with daisyUI. use Blueprint MCP

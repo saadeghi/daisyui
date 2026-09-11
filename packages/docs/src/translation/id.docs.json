@@ -610,7 +610,6 @@
   "Add this to your `opencode.json`:": "Tambahkan ini ke `opencode.json` Anda:",
   "Agent skill and MCP servers": "Server Agent skill dan MCP",
   "All parts are compatible with daisyUI themes.": "Semua bagian kompatibel dengan tema daisyUI.",
-  "An MCP server will save you LLM tokens and will generate the code faster.": "Server MCP akan menghemat token LLM Anda dan menghasilkan kode lebih cepat.",
   "At some point every Bootstrap website looked the same unless you open a CSS file and write tons of custom CSS.": "Pada titik tertentu, setiap situs web Bootstrap tampak sama kecuali Anda membuka file CSS dan menulis banyak CSS khusus.",
   "Automatic setup": "Pengaturan otomatis",
   "But here's the catch: The problem with Bootstrap was not class names! Bootstrap class names were actually really fast to work with.": "Tapi inilah masalahnya: Masalah dengan Bootstrap bukanlah nama kelas! Nama kelas bootstrap sebenarnya sangat cepat untuk digunakan.",
@@ -706,7 +705,6 @@
   "LICENSE: YOUR BLUEPRINT LICENSE KEY": "LISENSI: KUNCI LISENSI CETAK BIRU ANDA",
   "Like Button, Toggle, Card, etc.": "Seperti Button, Toggle, Card, dll.",
   "Manual setup": "Pengaturan manual",
-  "MCP (Model Communication Protocol) is an API standard to communicate with AI models. MCP servers are tools that implement this protocol and provide AI models with the necessary information to generate accurate code based on your prompts.": "MCP (Model Communication Protocol) adalah standar API untuk berkomunikasi dengan model AI. Server MCP adalah alat yang mengimplementasikan protokol ini dan memberikan model AI informasi yang diperlukan untuk menghasilkan kode akurat berdasarkan perintah Anda.",
   "MCP is an API to communicate with AI models.": "MCP adalah API untuk berkomunikasi dengan model AI.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.": "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.": "MCP adalah API untuk berkomunikasi dengan model AI. Anda dapat menambahkan server MCP dan Claude akan berkomunikasi dengan mereka untuk mendapatkan hasil yang lebih akurat.",
@@ -718,7 +716,6 @@
   "MCP is an API to communicate with AI models. You can add MCP servers and Windsurf will communicate with them to get more accurate results.": "MCP adalah API untuk berkomunikasi dengan model AI. Anda dapat menambahkan server MCP dan Windsurf akan berkomunikasi dengan mereka untuk mendapatkan hasil yang lebih akurat.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Zed will communicate with them to get more accurate results.": "MCP adalah API untuk berkomunikasi dengan model AI. Anda dapat menambahkan server MCP dan Zed akan berkomunikasi dengan mereka untuk mendapatkan hasil yang lebih akurat.",
   "MCP is an API to communicate with AI models. You can add MCP servers and OpenCode will communicate with them to get more accurate results.": "MCP adalah API untuk berkomunikasi dengan model AI. Anda dapat menambahkan server MCP dan OpenCode akan berkomunikasi dengannya untuk mendapatkan hasil yang lebih akurat.",
-  "MCP servers are more efficient and faster than skills, they provide context on demand, instead of a static skill file.": "Server MCP lebih efisien dan lebih cepat dibandingkan skill, server ini menyediakan konteks sesuai permintaan, bukan file skill statis.",
   "Now in `Agent Mode` you can ask AI anything about daisyUI.": "Sekarang dalam `Agent Mode` Anda dapat menanyakan apa pun kepada AI tentang daisyUI.",
   "Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.": "Sekarang dalam `Agent Mode` Anda dapat menanyakan apa pun kepada AI tentang daisyUI. tulis `use context7` di akhir perintah Anda.",
   "Now in `Agent Mode` you can tell AI to use daisyUI skill. For example:": "Sekarang dalam `Agent Mode` Anda dapat memberi tahu AI untuk menggunakan daisyUI skill. Misalnya:",
@@ -1742,5 +1739,7 @@
   "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.": "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.",
   "Run `grok inspect` to confirm Grok Build found the skill.": "Run `grok inspect` to confirm Grok Build found the skill.",
   "User-invocable skills appear as slash commands in Grok Build. For example:": "User-invocable skills appear as slash commands in Grok Build. For example:",
-  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build"
+  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build",
+  "Use the <a href=\"/theme-generator/\">theme generator</a> to edit colors and preview components, then copy the CSS into your project.": "Gunakan <a href=\"/theme-generator/\">generator tema</a> untuk mengedit warna dan melihat pratinjau komponen, lalu salin CSS ke proyek Anda.",
+  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "MCP (Model Context Protocol) menghubungkan aplikasi AI ke alat dan sumber daya melalui protokol standar. Gunakan server dengan dokumentasi atau contoh komponen daisyUI untuk memberi konteks kepada agen selama tugas."
 }

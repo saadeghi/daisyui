@@ -610,7 +610,6 @@
   "Add this to your `opencode.json`:": "이것을 `opencode.json`에 추가하세요:",
   "Agent skill and MCP servers": "Agent skill 및 MCP 서버",
   "All parts are compatible with daisyUI themes.": "모든 부품은 daisyUI 테마와 호환됩니다.",
-  "An MCP server will save you LLM tokens and will generate the code faster.": "MCP 서버는 LLM 토큰을 저장하고 코드를 더 빠르게 생성합니다.",
   "At some point every Bootstrap website looked the same unless you open a CSS file and write tons of custom CSS.": "어떤 시점에서는 CSS 파일을 열고 수많은 사용자 정의 CSS를 작성하지 않는 한 모든 Bootstrap 웹사이트가 동일해 보였습니다.",
   "Automatic setup": "자동 설정",
   "But here's the catch: The problem with Bootstrap was not class names! Bootstrap class names were actually really fast to work with.": "하지만 문제는 다음과 같습니다. Bootstrap의 문제는 클래스 이름이 아니었습니다! 부트스트랩 클래스 이름은 실제로 작업 속도가 정말 빨랐습니다.",
@@ -706,7 +705,6 @@
   "LICENSE: YOUR BLUEPRINT LICENSE KEY": "라이센스: 청사진 라이센스 키",
   "Like Button, Toggle, Card, etc.": "Button, Toggle, Card 등과 같습니다.",
   "Manual setup": "수동 설정",
-  "MCP (Model Communication Protocol) is an API standard to communicate with AI models. MCP servers are tools that implement this protocol and provide AI models with the necessary information to generate accurate code based on your prompts.": "MCP(Model Communication Protocol)는 AI 모델과 통신하기 위한 API 표준입니다. MCP 서버는 이 프로토콜을 구현하고 프롬프트에 따라 정확한 코드를 생성하는 데 필요한 정보를 AI 모델에 제공하는 도구입니다.",
   "MCP is an API to communicate with AI models.": "MCP는 AI 모델과 통신하기 위한 API입니다.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.": "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.": "MCP는 AI 모델과 통신하기 위한 API입니다. MCP 서버를 추가하면 Claude가 해당 서버와 통신하여 보다 정확한 결과를 얻을 수 있습니다.",
@@ -718,7 +716,6 @@
   "MCP is an API to communicate with AI models. You can add MCP servers and Windsurf will communicate with them to get more accurate results.": "MCP는 AI 모델과 통신하기 위한 API입니다. You can add MCP servers and Windsurf will communicate with them to get more accurate results.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Zed will communicate with them to get more accurate results.": "MCP는 AI 모델과 통신하기 위한 API입니다. You can add MCP servers and Zed will communicate with them to get more accurate results.",
   "MCP is an API to communicate with AI models. You can add MCP servers and OpenCode will communicate with them to get more accurate results.": "MCP는 AI 모델과 통신하기 위한 API입니다. You can add MCP servers and OpenCode will communicate with them to get more accurate results.",
-  "MCP servers are more efficient and faster than skills, they provide context on demand, instead of a static skill file.": "MCP 서버는 skill보다 더 효율적이고 빠르며 정적 skill 파일 대신 요청 시 컨텍스트를 제공합니다.",
   "Now in `Agent Mode` you can ask AI anything about daisyUI.": "이제 'Agent 모드'에서는 AI에게 데이지 UI에 관해 무엇이든 물어볼 수 있습니다. (`Agent Mode`)",
   "Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.": "이제 'Agent 모드'에서는 AI에게 데이지 UI에 관해 무엇이든 물어볼 수 있습니다. 프롬프트 끝에 `Agent Mode`을 작성하세요. (`use context7`)",
   "Now in `Agent Mode` you can tell AI to use daisyUI skill. For example:": "Now in `Agent Mode` you can tell AI to use daisyUI skill. 예를 들면:",
@@ -1742,5 +1739,7 @@
   "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.": "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.",
   "Run `grok inspect` to confirm Grok Build found the skill.": "Run `grok inspect` to confirm Grok Build found the skill.",
   "User-invocable skills appear as slash commands in Grok Build. For example:": "User-invocable skills appear as slash commands in Grok Build. For example:",
-  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build"
+  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build",
+  "Use the <a href=\"/theme-generator/\">theme generator</a> to edit colors and preview components, then copy the CSS into your project.": "<a href=\"/theme-generator/\">테마 생성기</a>로 색상을 수정하고 컴포넌트를 미리 본 다음 프로젝트에 CSS를 복사하세요.",
+  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "MCP (Model Context Protocol)는 표준 프로토콜로 AI 애플리케이션을 도구와 리소스에 연결합니다. daisyUI 문서나 컴포넌트 예제를 제공하는 서버로 작업 중 코딩 에이전트에 컨텍스트를 제공하세요."
 }

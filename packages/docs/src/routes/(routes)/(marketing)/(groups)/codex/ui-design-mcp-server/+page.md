@@ -15,7 +15,7 @@ A [UI design MCP server for Codex](/codex/use-less-tokens/) helps when your UI p
 
 Codex UI prompts often include product requirements plus a mini style guide: use accessible controls, avoid hardcoded colors, keep buttons consistent, follow Tailwind CSS, and preserve dark mode. Most of that text repeats across tasks.
 
-With MCP, the prompt can stay shorter. You describe the screen, then tell Codex to use [Blueprint MCP](/codex/use-less-tokens/) for daisyUI context.
+With MCP, the prompt can stay shorter. You describe the screen, then tell Codex to use [Blueprint MCP](/blueprint/) for daisyUI context.
 
 ## Component-aware output
 

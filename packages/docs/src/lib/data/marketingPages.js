@@ -1,6 +1,7 @@
 export const marketingClusters = [
   {
     slug: "codex",
+    showHubLink: true,
     label: "Codex",
     pages: [
       { slug: "", label: "Codex overview", legacySlugs: [] },
@@ -31,16 +32,28 @@ export const marketingClusters = [
       },
       {
         slug: "ui-design-mcp-server",
+        primaryAction: {
+          href: "/docs/mcp/codex/",
+          label: "Set up MCP for Codex",
+        },
         label: "UI design MCP server for Codex",
         legacySlugs: ["ui-design-mcp-server-for-codex"],
       },
       {
         slug: "ui-design-plugin",
+        primaryAction: {
+          href: "/docs/plugin/codex/",
+          label: "Set up the daisyUI plugin for Codex",
+        },
         label: "UI design plugin for Codex",
         legacySlugs: ["ui-design-plugin-for-codex"],
       },
       {
         slug: "ui-design-skill",
+        primaryAction: {
+          href: "/docs/skill/codex/",
+          label: "Set up the daisyUI skill for Codex",
+        },
         label: "UI design skill for Codex",
         legacySlugs: ["ui-design-skill-for-codex"],
       },
@@ -53,6 +66,7 @@ export const marketingClusters = [
   },
   {
     slug: "cursor",
+    showHubLink: true,
     label: "Cursor",
     pages: [
       { slug: "", label: "Cursor overview", legacySlugs: [] },
@@ -78,6 +92,10 @@ export const marketingClusters = [
       },
       {
         slug: "ui-design-skill",
+        primaryAction: {
+          href: "/docs/skill/cursor/",
+          label: "Set up the daisyUI skill for Cursor",
+        },
         label: "Cursor UI design skill",
         legacySlugs: ["cursor-ui-design-skill"],
       },
@@ -103,11 +121,19 @@ export const marketingClusters = [
       },
       {
         slug: "ui-design-mcp-server",
+        primaryAction: {
+          href: "/docs/mcp/cursor/",
+          label: "Set up MCP for Cursor",
+        },
         label: "UI design MCP server for Cursor",
         legacySlugs: ["ui-design-mcp-server-for-cursor"],
       },
       {
         slug: "ui-design-plugin",
+        primaryAction: {
+          href: "/docs/plugin/cursor/",
+          label: "Set up the daisyUI plugin for Cursor",
+        },
         label: "UI design plugin for Cursor",
         legacySlugs: ["ui-design-plugin-for-cursor"],
       },
@@ -115,6 +141,7 @@ export const marketingClusters = [
   },
   {
     slug: "claude-code",
+    showHubLink: true,
     label: "Claude Code",
     pages: [
       { slug: "", label: "Claude Code overview", legacySlugs: [] },
@@ -140,6 +167,10 @@ export const marketingClusters = [
       },
       {
         slug: "ui-design-plugin",
+        primaryAction: {
+          href: "/docs/plugin/claude-code/",
+          label: "Set up the daisyUI plugin for Claude Code",
+        },
         label: "UI design plugin for Claude Code",
         legacySlugs: ["ui-design-plugin-for-claude-code"],
       },
@@ -150,6 +181,10 @@ export const marketingClusters = [
       },
       {
         slug: "ui-design-skill",
+        primaryAction: {
+          href: "/docs/skill/claude-code/",
+          label: "Set up the daisyUI skill for Claude Code",
+        },
         label: "Claude Code UI design skill",
         legacySlugs: ["claude-code-ui-design-skill"],
       },
@@ -170,6 +205,10 @@ export const marketingClusters = [
       },
       {
         slug: "ui-design-mcp-server",
+        primaryAction: {
+          href: "/docs/mcp/claudecode/",
+          label: "Set up MCP for Claude Code",
+        },
         label: "UI design MCP server for Claude Code",
         legacySlugs: ["ui-design-mcp-server-for-claude-code"],
       },
@@ -182,6 +221,7 @@ export const marketingClusters = [
   },
   {
     slug: "claude",
+    showHubLink: true,
     label: "Claude",
     pages: [
       { slug: "", label: "Claude overview", legacySlugs: [] },
@@ -199,6 +239,7 @@ export const marketingClusters = [
   },
   {
     slug: "ai",
+    showHubLink: true,
     label: "AI UI generation",
     pages: [
       { slug: "", label: "AI UI generation overview", legacySlugs: [] },

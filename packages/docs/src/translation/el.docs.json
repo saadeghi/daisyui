@@ -610,7 +610,6 @@
   "Add this to your `opencode.json`:": "Προσθέστε αυτό στο `opencode.json` σας:",
   "Agent skill and MCP servers": "Ικανότητα πράκτορα και διακομιστές MCP",
   "All parts are compatible with daisyUI themes.": "Όλα τα εξαρτήματα είναι συμβατά με θέματα daisyUI.",
-  "An MCP server will save you LLM tokens and will generate the code faster.": "Ένας διακομιστής MCP θα σας εξοικονομήσει διακριτικά LLM και θα δημιουργήσει τον κώδικα πιο γρήγορα.",
   "At some point every Bootstrap website looked the same unless you open a CSS file and write tons of custom CSS.": "Σε κάποιο σημείο, κάθε ιστότοπος Bootstrap έμοιαζε με τον ίδιο τρόπο, εκτός αν ανοίξετε ένα αρχείο CSS και γράψετε τόνους προσαρμοσμένων CSS.",
   "Automatic setup": "Αυτόματη ρύθμιση",
   "But here's the catch: The problem with Bootstrap was not class names! Bootstrap class names were actually really fast to work with.": "Αλλά εδώ είναι το αλιευτικό: Το πρόβλημα με το Bootstrap δεν ήταν τα ονόματα των τάξεων! Τα ονόματα των κλάσεων Bootstrap ήταν πραγματικά πολύ γρήγορα στην εργασία.",
@@ -706,7 +705,6 @@
   "LICENSE: YOUR BLUEPRINT LICENSE KEY": "LICENSE: YOUR BLUEPRINT LICENSE KEY",
   "Like Button, Toggle, Card, etc.": "Όπως τα Button, Toggle, Card, κ.λπ.",
   "Manual setup": "Χειροκίνητη ρύθμιση",
-  "MCP (Model Communication Protocol) is an API standard to communicate with AI models. MCP servers are tools that implement this protocol and provide AI models with the necessary information to generate accurate code based on your prompts.": "Το MCP (Model Communication Protocol) είναι ένα πρότυπο API για επικοινωνία με μοντέλα AI. Οι διακομιστές MCP είναι εργαλεία που υλοποιούν αυτό το πρωτόκολλο και παρέχουν στα μοντέλα AI τις απαραίτητες πληροφορίες για τη δημιουργία ακριβούς κώδικα με βάση τις προτροπές σας.",
   "MCP is an API to communicate with AI models.": "Το MCP είναι ένα API για επικοινωνία με μοντέλα AI.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.": "Το MCP είναι ένα API για επικοινωνία με μοντέλα AI. Μπορείτε να προσθέσετε διακομιστές MCP και το Antigravity θα επικοινωνήσει μαζί τους για να έχετε πιο ακριβή αποτελέσματα.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.": "Το MCP είναι ένα API για επικοινωνία με μοντέλα AI. Μπορείτε να προσθέσετε διακομιστές MCP και το Claude θα επικοινωνήσει μαζί τους για να έχετε πιο ακριβή αποτελέσματα.",
@@ -718,7 +716,6 @@
   "MCP is an API to communicate with AI models. You can add MCP servers and Windsurf will communicate with them to get more accurate results.": "Το MCP είναι ένα API για επικοινωνία με μοντέλα AI. Μπορείτε να προσθέσετε διακομιστές MCP και το Windsurf θα επικοινωνήσει μαζί τους για να έχετε πιο ακριβή αποτελέσματα.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Zed will communicate with them to get more accurate results.": "Το MCP είναι ένα API για επικοινωνία με μοντέλα AI. Μπορείτε να προσθέσετε διακομιστές MCP και το Zed θα επικοινωνήσει μαζί τους για να έχετε πιο ακριβή αποτελέσματα.",
   "MCP is an API to communicate with AI models. You can add MCP servers and OpenCode will communicate with them to get more accurate results.": "Το MCP είναι ένα API για επικοινωνία με μοντέλα AI. Μπορείτε να προσθέσετε διακομιστές MCP και το OpenCode θα επικοινωνήσει μαζί τους για να έχετε πιο ακριβή αποτελέσματα.",
-  "MCP servers are more efficient and faster than skills, they provide context on demand, instead of a static skill file.": "Οι διακομιστές MCP είναι πιο αποτελεσματικοί και πιο γρήγοροι από τους skills, παρέχουν περιβάλλον κατά παραγγελία, αντί για ένα στατικό αρχείο δεξιοτήτων.",
   "Now in `Agent Mode` you can ask AI anything about daisyUI.": "Τώρα στο `Agent Mode` μπορείτε να ρωτήσετε το AI οτιδήποτε για το daisyUI.",
   "Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.": "Τώρα στο `Agent Mode` μπορείτε να ρωτήσετε το AI οτιδήποτε για το daisyUI. γράψτε `use context7` στο τέλος της προτροπής σας.",
   "Now in `Agent Mode` you can tell AI to use daisyUI skill. For example:": "Τώρα στο `Agent Mode` μπορείτε να πείτε στο AI να χρησιμοποιήσει την ικανότητα daisyUI. Για παράδειγμα:",
@@ -1742,5 +1739,7 @@
   "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.": "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.",
   "Run `grok inspect` to confirm Grok Build found the skill.": "Run `grok inspect` to confirm Grok Build found the skill.",
   "User-invocable skills appear as slash commands in Grok Build. For example:": "User-invocable skills appear as slash commands in Grok Build. For example:",
-  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build"
+  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build",
+  "Use the <a href=\"/theme-generator/\">theme generator</a> to edit colors and preview components, then copy the CSS into your project.": "Χρησιμοποιήστε τη <a href=\"/theme-generator/\">γεννήτρια θεμάτων</a> για να επεξεργαστείτε χρώματα και να δείτε components. Μετά αντιγράψτε το CSS στο έργο σας.",
+  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "Το MCP (Model Context Protocol) συνδέει εφαρμογές AI με εργαλεία και πόρους μέσω τυποποιημένου πρωτοκόλλου. Χρησιμοποιήστε server με τεκμηρίωση ή παραδείγματα components daisyUI για να δώσετε context στον agent κατά την εργασία."
 }

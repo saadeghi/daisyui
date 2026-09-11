@@ -610,7 +610,6 @@
   "Add this to your `opencode.json`:": "Ajoutez ceci à votre `opencode.json` :",
   "Agent skill and MCP servers": "Serveurs Agent skill et MCP",
   "All parts are compatible with daisyUI themes.": "Toutes les pièces sont compatibles avec les thèmes daisyUI.",
-  "An MCP server will save you LLM tokens and will generate the code faster.": "Un serveur MCP vous enregistrera des jetons LLM et générera le code plus rapidement.",
   "At some point every Bootstrap website looked the same unless you open a CSS file and write tons of custom CSS.": "À un moment donné, tous les sites Web Bootstrap se ressemblaient à moins que vous n'ouvriez un fichier CSS et n'écriviez des tonnes de CSS personnalisés.",
   "Automatic setup": "Configuration automatique",
   "But here's the catch: The problem with Bootstrap was not class names! Bootstrap class names were actually really fast to work with.": "Mais voici le problème : le problème avec Bootstrap ne venait pas des noms de classe ! Les noms de classes Bootstrap étaient en fait très rapides à utiliser.",
@@ -706,7 +705,6 @@
   "LICENSE: YOUR BLUEPRINT LICENSE KEY": "LICENCE : VOTRE CLÉ DE LICENCE BLUEPRINT",
   "Like Button, Toggle, Card, etc.": "Comme Button, Toggle, Card, etc.",
   "Manual setup": "Configuration manuelle",
-  "MCP (Model Communication Protocol) is an API standard to communicate with AI models. MCP servers are tools that implement this protocol and provide AI models with the necessary information to generate accurate code based on your prompts.": "MCP (Model Communication Protocol) est une norme API pour communiquer avec les modèles d'IA. Les serveurs MCP sont des outils qui implémentent ce protocole et fournissent aux modèles d'IA les informations nécessaires pour générer un code précis basé sur vos invites.",
   "MCP is an API to communicate with AI models.": "MCP est une API pour communiquer avec les modèles d'IA.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.": "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.": "MCP est une API pour communiquer avec les modèles d'IA. Vous pouvez ajouter des serveurs MCP et Claude communiquera avec eux pour obtenir des résultats plus précis.",
@@ -718,7 +716,6 @@
   "MCP is an API to communicate with AI models. You can add MCP servers and Windsurf will communicate with them to get more accurate results.": "MCP est une API pour communiquer avec les modèles d'IA. Vous pouvez ajouter des serveurs MCP et Windsurf communiquera avec eux pour obtenir des résultats plus précis.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Zed will communicate with them to get more accurate results.": "MCP est une API pour communiquer avec les modèles d'IA. Vous pouvez ajouter des serveurs MCP et Zed communiquera avec eux pour obtenir des résultats plus précis.",
   "MCP is an API to communicate with AI models. You can add MCP servers and OpenCode will communicate with them to get more accurate results.": "MCP est une API pour communiquer avec les modèles d'IA. Vous pouvez ajouter des serveurs MCP et OpenCode communiquera avec eux pour obtenir des résultats plus précis.",
-  "MCP servers are more efficient and faster than skills, they provide context on demand, instead of a static skill file.": "Les serveurs MCP sont plus efficaces et plus rapides que les skill, ils fournissent du contexte à la demande, au lieu d'un fichier skill statique.",
   "Now in `Agent Mode` you can ask AI anything about daisyUI.": "Désormais, en « Mode Agent », vous pouvez demander n'importe quoi à l'IA à propos de daisyUI. (`Agent Mode`)",
   "Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.": "Désormais, en « Mode Agent », vous pouvez demander n'importe quoi à l'IA à propos de daisyUI. écrivez `Agent Mode` à la fin de votre invite. (`use context7`)",
   "Now in `Agent Mode` you can tell AI to use daisyUI skill. For example:": "Désormais, en « Mode Agent », vous pouvez demander à l'IA d'utiliser daisyUI skill. Par exemple: (`Agent Mode`)",
@@ -1742,5 +1739,7 @@
   "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.": "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.",
   "Run `grok inspect` to confirm Grok Build found the skill.": "Run `grok inspect` to confirm Grok Build found the skill.",
   "User-invocable skills appear as slash commands in Grok Build. For example:": "User-invocable skills appear as slash commands in Grok Build. For example:",
-  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build"
+  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build",
+  "Use the <a href=\"/theme-generator/\">theme generator</a> to edit colors and preview components, then copy the CSS into your project.": "Utilisez le <a href=\"/theme-generator/\">générateur de thèmes</a> pour modifier les couleurs et prévisualiser les composants, puis copiez le CSS dans votre projet.",
+  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "MCP (Model Context Protocol) relie les applications d’IA aux outils et ressources par un protocole standard. Utilisez un serveur proposant la documentation daisyUI ou des exemples de composants pour donner du contexte à votre agent pendant une tâche."
 }

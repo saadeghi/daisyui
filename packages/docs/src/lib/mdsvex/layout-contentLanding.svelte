@@ -10,6 +10,8 @@
   import { getLegacyMarketingImage } from "$lib/data/marketingPages.js"
   import { t } from "$lib/i18n.svelte.js"
   let { title, desc, children, data, img = "" } = $props()
+  let marketingPrimaryAction = $derived(data?.marketingPrimaryAction ?? null)
+  let marketingHubLink = $derived(data?.marketingHubLink ?? null)
   let seoImage = $derived(
     img ||
       getLegacyMarketingImage($page.url.pathname) ||
@@ -44,7 +46,10 @@
   <div
     class="prose prose-sm lg:prose-h1:text-5xl lg:prose-h2:text-4xl lg:prose-h3:text-3xl md:prose-base w-full max-w-4xl grow pt-10 md:text-sm"
   >
-    <div class="not-prose mb-12 flex items-center justify-between gap-2">
+    <div class="not-prose mb-12 flex flex-wrap items-center justify-between gap-2">
+      {#if marketingHubLink}
+        <a class="link link-hover" href={marketingHubLink.href}>{marketingHubLink.label}</a>
+      {/if}
       <a class="btn btn-xs btn-ghost group" href="/components/">
         See all daisyUI components
         <svg
@@ -127,8 +132,11 @@
             </h2>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <a href="/docs/install/" class="btn-primary btn group rounded-full">
-              How to install daisyUI?
+            <a
+              href={marketingPrimaryAction?.href ?? "/docs/install/"}
+              class="btn-primary btn group h-auto min-h-12 max-w-full rounded-full py-3 text-center whitespace-normal"
+            >
+              {marketingPrimaryAction?.label ?? "How to install daisyUI?"}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

@@ -610,7 +610,6 @@
   "Add this to your `opencode.json`:": "將其添加到您的`opencode.json`中：",
   "Agent skill and MCP servers": "Agent skill 和 MCP 伺服器",
   "All parts are compatible with daisyUI themes.": "所有部分都與 daisyUI 主題相容。",
-  "An MCP server will save you LLM tokens and will generate the code faster.": "MCP 伺服器將為您保存 LLM 令牌並更快地產生程式碼。",
   "At some point every Bootstrap website looked the same unless you open a CSS file and write tons of custom CSS.": "在某些時候，除非您打開 CSS 檔案並編寫大量自訂 CSS，否則每個 Bootstrap 網站看起來都一樣。",
   "Automatic setup": "自動設定",
   "But here's the catch: The problem with Bootstrap was not class names! Bootstrap class names were actually really fast to work with.": "但這裡有一個問題：Bootstrap 的問題不是類別名稱！ Bootstrap 類別名稱實際上使用起來非常快。",
@@ -706,7 +705,6 @@
   "LICENSE: YOUR BLUEPRINT LICENSE KEY": "許可證：您的藍圖許可證密鑰",
   "Like Button, Toggle, Card, etc.": "如Button、Toggle、Card等。",
   "Manual setup": "手動設定",
-  "MCP (Model Communication Protocol) is an API standard to communicate with AI models. MCP servers are tools that implement this protocol and provide AI models with the necessary information to generate accurate code based on your prompts.": "MCP（模型通訊協定）是與 AI 模型通訊的 API 標準。 MCP 伺服器是實現該協議的工具，並為 AI 模型提供必要的信息，以根據您的提示生成準確的程式碼。",
   "MCP is an API to communicate with AI models.": "MCP 是一個與 AI 模型通訊的 API。",
   "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.": "MCP is an API to communicate with AI models. You can add MCP servers and Antigravity will communicate with them to get more accurate results.",
   "MCP is an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.": "MCP 是一個與 AI 模型通訊的 API。您可以新增 MCP 伺服器，Claude 將與它們通訊以獲得更準確的結果。",
@@ -718,7 +716,6 @@
   "MCP is an API to communicate with AI models. You can add MCP servers and Windsurf will communicate with them to get more accurate results.": "MCP 是一個與 AI 模型通訊的 API。您可以新增 MCP 伺服器，Windsurf 將與它們通訊以獲得更準確的結果。",
   "MCP is an API to communicate with AI models. You can add MCP servers and Zed will communicate with them to get more accurate results.": "MCP 是一個與 AI 模型通訊的 API。您可以新增 MCP 伺服器，Zed 將與它們通訊以獲得更準確的結果。",
   "MCP is an API to communicate with AI models. You can add MCP servers and OpenCode will communicate with them to get more accurate results.": "MCP 是一個與 AI 模型通訊的 API。您可以新增 MCP 伺服器，OpenCode 將與它們通訊以獲得更準確的結果。",
-  "MCP servers are more efficient and faster than skills, they provide context on demand, instead of a static skill file.": "MCP 伺服器比 skill 更有效率、更快，它們按需提供上下文，而不是靜態 skill 檔案。",
   "Now in `Agent Mode` you can ask AI anything about daisyUI.": "現在，在「Agent 模式」下，您可以向 AI 詢問有關 daisyUI 的任何資訊。 (`Agent Mode`)",
   "Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.": "現在，在「Agent 模式」下，您可以向 AI 詢問有關 daisyUI 的任何資訊。在提示符號末尾寫下「`Agent Mode`」。 (`use context7`)",
   "Now in `Agent Mode` you can tell AI to use daisyUI skill. For example:": "現在在「Agent 模式」下，您可以告訴 AI 使用 daisyUI skill。例如： (`Agent Mode`)",
@@ -1742,5 +1739,7 @@
   "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.": "Run this command. It installs the skill in Claude Code's project skill directory, which Grok Build reads automatically.",
   "Run `grok inspect` to confirm Grok Build found the skill.": "Run `grok inspect` to confirm Grok Build found the skill.",
   "User-invocable skills appear as slash commands in Grok Build. For example:": "User-invocable skills appear as slash commands in Grok Build. For example:",
-  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build"
+  "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build",
+  "Use the <a href=\"/theme-generator/\">theme generator</a> to edit colors and preview components, then copy the CSS into your project.": "使用<a href=\"/theme-generator/\">主題產生器</a>編輯顏色並預覽元件，然後將 CSS 複製到專案中。",
+  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "MCP (Model Context Protocol) 透過標準協定將 AI 應用程式連接到工具和資源。使用提供 daisyUI 文件或元件範例的伺服器，在任務中為程式設計代理提供上下文。"
 }

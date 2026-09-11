@@ -99,6 +99,8 @@ If for some reason you want to disable all themes and remove all daisyUI colors,
 
 ## <Translate text="How to add a new custom theme?" />
 
+Use the [theme generator](/theme-generator/) to edit colors and preview components, then copy the CSS into your project.
+
 To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the following structure:
 
 ```css:app.css

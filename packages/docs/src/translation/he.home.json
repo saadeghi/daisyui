@@ -13,7 +13,7 @@
   "install-btn": "מדריך להתקין",
   "Preview": "Preview",
   "homepage_h1": "מהיר יותר, נקי יותר, קל יותר לפיתוח <br /> Tailwind  CSS",
-  "homepage_h2": "daisyUI הוא התוסף Tailwind CSS שתאהב! <br /> הוא מספק שמות מחלקות רכיבים שימושיים <br /> כדי לעזור לך לכתוב פחות קוד ולבנות מהר יותר.",
+  "homepage_h2": "daisyUI הוא התוסף ל-Tailwind CSS שתאהבו! <br/>הוא מספק רכיבים המבוססים על CSS בלבד <br/>כדי לעזור לסוכן שלכם לכתוב פחות קוד ולבנות מהר יותר.",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "בפרויקט Tailwind CSS, עליך לכתוב שמות של מחלקות שירות עבור כל רכיב. אלפי שמות כיתות רק כדי לסגנן את האלמנטים הבסיסיים ביותר.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "במקום לכתוב <br /> <span class='text-error'> <span class='font-black'> 100 שמות מחלקות </span> </span>",
   "For every element, every page, every project,<br/>again and again": "לכל אלמנט, כל עמוד, כל פרויקט, <br /> שוב ושוב",

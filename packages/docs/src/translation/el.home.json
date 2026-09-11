@@ -13,7 +13,7 @@
   "install-btn": "Οδηγός εγκατάστασης",
   "Preview": "Preview",
   "homepage_h1": "Ταχύτερη, καθαρότερη, ευκολότερη ανάπτυξη <br /> Tailwind  CSS",
-  "homepage_h2": "Το daisyUI είναι το πρόσθετο Tailwind CSS που θα λατρέψετε! <br /> Παρέχει χρήσιμα ονόματα κλάσεων στοιχείων <br /> για να σας βοηθήσει να γράφετε λιγότερο κώδικα και να δημιουργείτε γρηγορότερα.",
+  "homepage_h2": "Το daisyUI είναι το plugin του Tailwind CSS που θα αγαπήσετε! <br/>Παρέχει components αποκλειστικά με CSS <br/>για να βοηθήσει τον agent σας να γράφει λιγότερο κώδικα και να δημιουργεί πιο γρήγορα.",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Σε ένα έργο Tailwind CSS, πρέπει να γράψετε ονόματα κλάσεων βοηθητικού προγράμματος για κάθε στοιχείο. Χιλιάδες ονόματα κλάσεων μόνο για το στυλ των πιο βασικών στοιχείων.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "αντί να γράψετε <br /> <span class='text-error'> <span class='font-black'> 100 </span> ονόματα κλάσεων </span>",
   "For every element, every page, every project,<br/>again and again": "Για κάθε στοιχείο, κάθε σελίδα, κάθε έργο, <br /> ξανά και ξανά",
