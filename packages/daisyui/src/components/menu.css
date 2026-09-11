@@ -81,7 +81,12 @@
     :where(
       li:not(.menu-title, .disabled) > *:not(ul, menu, details, .menu-title),
       li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
-    ):not(.menu-active, :active, .btn, [aria-current="true"], [aria-current="page"]) {
+    ):not(
+      .menu-active,
+      :active,
+      .btn,
+      [aria-current]:not([aria-current="false"], [aria-current=""])
+    ) {
       &.menu-focus,
       &:focus-visible {
         @apply bg-base-content/10 text-base-content cursor-pointer outline-hidden;
@@ -93,8 +98,7 @@
           .menu-active,
           :active,
           .btn,
-          [aria-current="true"],
-          [aria-current="page"]
+          [aria-current]:not([aria-current="false"], [aria-current=""])
         ):hover,
       li:not(.menu-title, .disabled)
         > details
@@ -102,8 +106,7 @@
           .menu-active,
           :active,
           .btn,
-          [aria-current="true"],
-          [aria-current="page"]
+          [aria-current]:not([aria-current="false"], [aria-current=""])
         ):hover
     ) {
       @apply bg-base-content/10 cursor-pointer outline-hidden;
@@ -129,8 +132,7 @@
       & > *:not(ul, menu, .menu-title, details, .btn).menu-active,
       &
         > *:not(ul, menu, .menu-title, details, .btn):is(
-          [aria-current="true"],
-          [aria-current="page"]
+          [aria-current]:not([aria-current="false"], [aria-current=""])
         ),
       & > details > summary:active {
         @apply outline-hidden;
