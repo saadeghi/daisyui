@@ -36,7 +36,7 @@
     }
   }
   @layer daisyui.l1.l2 {
-    > :is([aria-current="true"], [aria-current="page"]):after {
+    > [aria-current]:not([aria-current="false"], [aria-current=""]):after {
       @apply w-10 bg-current text-current;
     }
   }
@@ -53,7 +53,7 @@
     height: 3rem;
     height: calc(3rem + env(safe-area-inset-bottom));
 
-    :is(.dock-active, [aria-current="true"], [aria-current="page"]) {
+    :is(.dock-active, [aria-current]:not([aria-current="false"], [aria-current=""])) {
       &:after {
         bottom: -0.1rem;
       }
@@ -71,7 +71,7 @@
     height: 3.5rem;
     height: calc(3.5rem + env(safe-area-inset-bottom));
 
-    :is(.dock-active, [aria-current="true"], [aria-current="page"]) {
+    :is(.dock-active, [aria-current]:not([aria-current="false"], [aria-current=""])) {
       &:after {
         bottom: -0.1rem;
       }
@@ -98,7 +98,7 @@
     height: 4.5rem;
     height: calc(4.5rem + env(safe-area-inset-bottom));
 
-    :is(.dock-active, [aria-current="true"], [aria-current="page"]) {
+    :is(.dock-active, [aria-current]:not([aria-current="false"], [aria-current=""])) {
       &:after {
         bottom: 0.4rem;
       }
@@ -115,7 +115,7 @@
     height: 5rem;
     height: calc(5rem + env(safe-area-inset-bottom));
 
-    :is(.dock-active, [aria-current="true"], [aria-current="page"]) {
+    :is(.dock-active, [aria-current]:not([aria-current="false"], [aria-current=""])) {
       &:after {
         bottom: 0.4rem;
       }
