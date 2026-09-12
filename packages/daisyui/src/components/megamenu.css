@@ -179,6 +179,9 @@
       @starting-style {
         @apply opacity-0;
       }
+      :root:has(&) {
+        --page-scroll-lock: ;
+      }
       [popovertarget] {
         @apply pointer-events-none;
         font-size: 0.875rem;
