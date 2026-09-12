@@ -107,6 +107,7 @@ async function generateFiles() {
           "validator",
           "hover3d",
           "textrotate",
+          "marquee",
         ],
         layer: "utilities",
       }),
