@@ -21,9 +21,11 @@
 .drawer-side {
   @layer daisyui.l1.l2.l3 {
     @apply pointer-events-none invisible fixed start-0 top-0 z-10 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain bg-transparent opacity-0;
-    transition:
-      opacity 0.2s ease-out 0.1s allow-discrete,
-      visibility 0.3s ease-out 0.1s allow-discrete;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        opacity 0.2s ease-out 0.1s allow-discrete,
+        visibility 0.3s ease-out 0.1s allow-discrete;
+    }
     height: 100vh;
     height: 100dvh;
 
@@ -38,9 +40,11 @@
 
     > :not(.drawer-overlay) {
       @apply will-change-transform;
-      transition:
-        translate 0.3s ease-out,
-        width 0.2s ease-out;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          translate 0.3s ease-out,
+          width 0.2s ease-out;
+      }
       translate: -100%;
 
       [dir="rtl"] & {

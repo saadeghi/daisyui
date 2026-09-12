@@ -1,11 +1,13 @@
 .modal {
   @layer daisyui.l1.l2.l3 {
     @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
-    transition:
-      overlay 0.3s allow-discrete,
-      visibility 0.3s allow-discrete,
-      background-color 0.3s ease-out,
-      opacity 0.1s ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        overlay 0.3s allow-discrete,
+        visibility 0.3s allow-discrete,
+        background-color 0.3s ease-out,
+        opacity 0.1s ease-out;
+    }
     overflow: clip;
     overscroll-behavior: contain;
     z-index: 999;
@@ -25,7 +27,9 @@
       max-height: none;
       &::backdrop {
         background-color: oklch(0% 0 0/ 0.4);
-        transition: background-color 0.3s ease-out;
+        @media (prefers-reduced-motion: no-preference) {
+          transition: background-color 0.3s ease-out;
+        }
       }
     }
   }
@@ -37,10 +41,12 @@
     &:target,
     .modal-toggle:checked + & {
       @apply pointer-events-auto visible opacity-100;
-      transition:
-        visibility 0s allow-discrete,
-        background-color 0.3s ease-out,
-        opacity 0.1s ease-out;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          visibility 0s allow-discrete,
+          background-color 0.3s ease-out,
+          opacity 0.1s ease-out;
+      }
       background-color: oklch(0% 0 0/ 0.4);
 
       > .modal-box {
@@ -92,11 +98,13 @@
 .modal-box {
   @layer daisyui.l1.l2.l3 {
     @apply bg-base-100 col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
-    transition:
-      translate 0.3s ease-out,
-      scale 0.3s ease-out,
-      opacity 0.2s ease-out 0.05s,
-      box-shadow 0.3s ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        translate 0.3s ease-out,
+        scale 0.3s ease-out,
+        opacity 0.2s ease-out 0.05s,
+        box-shadow 0.3s ease-out;
+    }
     border-top-left-radius: var(--modal-tl, var(--radius-box));
     border-top-right-radius: var(--modal-tr, var(--radius-box));
     border-bottom-left-radius: var(--modal-bl, var(--radius-box));

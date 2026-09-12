@@ -54,9 +54,11 @@
     cursor: ew-resize;
     transform-origin: 100% 100%;
     clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
-    transition:
-      min-width 0.3s ease-out,
-      max-width 0.3s ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        min-width 0.3s ease-out,
+        max-width 0.3s ease-out;
+    }
   }
 }
 .diff-item-2 {
@@ -72,8 +74,10 @@
       outline: 2px solid color-mix(in oklab, var(--color-base-content) 10%, #0000);
       outline-offset: -3px;
       translate: 50% -50%;
-      transition: height 0.3s
-        linear(0, 0.931 13.8%, 1.196 21.4%, 1.343 29.8%, 1.378 36%, 1.365 43.2%, 1.059 78%, 1);
+      @media (prefers-reduced-motion: no-preference) {
+        transition: height 0.3s
+          linear(0, 0.931 13.8%, 1.196 21.4%, 1.343 29.8%, 1.378 36%, 1.365 43.2%, 1.059 78%, 1);
+      }
     }
     > * {
       @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
