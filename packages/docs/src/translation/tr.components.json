@@ -89,6 +89,7 @@
   "Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside": "Modal gizli bir onay kutusuyla çalışır ve etiketler onay kutusunu değiştirebilir, böylece ekranı kaplayan ' modal-backdrop ' sınıfına sahip başka bir etiket etiketi kullanabiliriz, böylece dışarıya tıklandığında kipi kapatabiliriz",
   "Dialog modal with a close button at corner": "Köşede kapat düğmesi bulunan diyalog modeli",
   "Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS": "Tıklamayla çalışmak yerine swap-active sınıf adını eklerseniz swap-on öğesini gösterir. JS'i kullanarak swap-active sınıfını ekleyebilir veya kaldırabilirsiniz",
+  "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group": "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group",
   "There are 3 methods to use a dropdowns": "Açılır menüyü kullanmanın 3 yöntemi vardır",
   "Method 1. details and summary": "Yöntem 1. ayrıntılar ve özet",
   "Method 2. popover API and anchor positioning": "Yöntem 2. açılır pencere API ve bağlantı konumlandırma",

@@ -89,6 +89,7 @@
   "Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside": "Modal funktioniert mit einer versteckten Checkbox, und Labels können die Checkbox mit Toggle umschalten. So können wir ein weiteres Label-Tag mit der Klasse 'modal-backdrop' verwenden, das den Bildschirm abdeckt, damit wir das Modal schließen können, wenn außerhalb geklickt wird",
   "Dialog modal with a close button at corner": "Dialog Modal mit einem schließenden Button an der Ecke",
   "Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS": "Anstatt mit einem Klick zu arbeiten, wird das Swap-on-Element angezeigt, wenn Sie Swap-aktives Class name hinzufügen. Sie können die Swap-aktive Klasse mithilfe von JS hinzufügen oder entfernen",
+  "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group": "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group",
   "There are 3 methods to use a dropdowns": "Es gibt drei Methoden, Dropdowns zu verwenden",
   "Method 1. details and summary": "Methode 1. Details und Zusammenfassung",
   "Method 2. popover API and anchor positioning": "Methode 2. Popover-API und Ankerpositionierung",

@@ -89,6 +89,7 @@
   "Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside": "对话框通过一个隐藏的复选框工作，标签可以切换复选框的状态。因此，我们可以使用另一个带有 'modal-backdrop' 类的标签来覆盖屏幕，这样当点击对话框外部时就可以关闭它。",
   "Dialog modal with a close button at corner": "在角落带有关闭按钮的对话框",
   "Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS": "此方式不依赖于点击，而是通过添加 swap-active 类名来显示 swap-on 项。您可以使用 JS 来添加或移除 swap-active 类。",
+  "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group": "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group",
   "There are 3 methods to use a dropdowns": "有 3 种方法可以使用下拉菜单",
   "Method 1. details and summary": "方法 1. details 和 summary 标签",
   "Method 2. popover API and anchor positioning": "方法 2. Popover API 和锚点定位",
