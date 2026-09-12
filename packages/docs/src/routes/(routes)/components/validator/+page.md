@@ -213,6 +213,10 @@ min="1" max="10"
 
 ```html
 <form class="$$fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+  <!--
+    You can use any way of grouping the validated field with the hint
+    as long as the hint is preceded by only one validated field.
+  -->
   <fieldset class="$$fieldset">
     <label class="$$label">Email</label>
     <input type="email" class="$$input $$validator" placeholder="Email" required />
