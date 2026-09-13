@@ -178,7 +178,7 @@
     &:after {
       transform: translateX(var(--tt-pos, 0.25rem)) translateY(var(--tt-trans, -50%)) rotate(-90deg);
       left: auto;
-      right: calc(var(--tt-tail) + 1px);
+      right: calc(var(--tt-tail) + 2px);
       inset-block: var(--tt-tail-inset, 50% auto);
     }
   }
@@ -197,7 +197,7 @@
 
     &:after {
       transform: translateX(var(--tt-pos, -0.25rem)) translateY(var(--tt-trans, -50%)) rotate(90deg);
-      left: calc(var(--tt-tail) + 1px);
+      left: calc(var(--tt-tail) + 2px);
       right: auto;
       inset-block: var(--tt-tail-inset, 50% auto);
     }
