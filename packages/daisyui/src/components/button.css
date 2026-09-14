@@ -84,7 +84,11 @@
       }
     }
 
-    &:active:not(.btn-active) {
+    &:active:not(
+        .btn-active,
+        [aria-pressed="true"],
+        [aria-current]:not([aria-current="false"], [aria-current=""])
+      ) {
       translate: 0 0.5px;
       --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
       color: var(--btn-fg, var(--color-base-content));
@@ -118,7 +122,8 @@
   }
 }
 
-.btn-active {
+.btn-active,
+.btn:is([aria-pressed="true"], [aria-current]:not([aria-current="false"], [aria-current=""])) {
   @layer daisyui.l1.l2 {
     --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
     color: var(--btn-fg, var(--color-base-content));
