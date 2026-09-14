@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.38](https://github.com/saadeghi/daisyui/compare/v5.7.37...v5.7.38) (2026-09-14)
+
+### Bug Fixes
+
+* style aria-current as active in `dock` ([#4753](https://github.com/saadeghi/daisyui/issues/4753)) ([fe22841](https://github.com/saadeghi/daisyui/commit/fe22841ad7b9b34908ceb386f3729a77206d3cf4))
+* style aria-current as menu-active in menu ([#4752](https://github.com/saadeghi/daisyui/issues/4752)) ([10dc2fb](https://github.com/saadeghi/daisyui/commit/10dc2fb06be9e65b127cfe2b0df57ab64ce4412f))
+* style aria-pressed and aria-current as btn-active in button ([#4754](https://github.com/saadeghi/daisyui/issues/4754)) ([8e495a0](https://github.com/saadeghi/daisyui/commit/8e495a0f44822311034be3febd1f428fc65209ad))
+
 ## [5.7.37](https://github.com/saadeghi/daisyui/compare/v5.7.36...v5.7.37) (2026-09-11)
 
 ### Bug Fixes
