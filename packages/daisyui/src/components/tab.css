@@ -49,7 +49,11 @@
 
       &:checked,
       &:is(label:has(:checked)),
-      &:is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
+      &:is(
+        .tab-active,
+        [aria-selected="true"],
+        [aria-current]:not([aria-current="false"], [aria-current=""])
+      ) {
         & + .tab-content {
           @apply block;
         }
@@ -60,8 +64,7 @@
         :hover,
         .tab-active,
         [aria-selected="true"],
-        [aria-current="true"],
-        [aria-current="page"]
+        [aria-current]:not([aria-current="false"], [aria-current=""])
       ) {
         @apply text-base-content/50;
       }
@@ -137,10 +140,11 @@
         left: var(--tab-p);
         position: absolute;
       }
-      &:is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]):not(
-          .tab-disabled,
-          [disabled]
-        ),
+      &:is(
+          .tab-active,
+          [aria-selected="true"],
+          [aria-current]:not([aria-current="false"], [aria-current=""])
+        ):not(.tab-disabled, [disabled]),
       &:is(input:checked),
       &:is(label:has(:checked)) {
         &:before {
@@ -178,10 +182,11 @@
       padding: var(--tab-paddings);
       border-color: var(--tab-border-colors);
 
-      &:is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]):not(
-          .tab-disabled,
-          [disabled]
-        ),
+      &:is(
+          .tab-active,
+          [aria-selected="true"],
+          [aria-current]:not([aria-current="false"], [aria-current=""])
+        ):not(.tab-disabled, [disabled]),
       &:is(input:checked, label:has(:checked)) {
         --tab-border: var(--border) var(--border) 0 var(--border);
         --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
@@ -229,7 +234,11 @@
 
     &:has(> .tab-content) {
       > .tab:first-child {
-        &:not(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
+        &:not(
+          .tab-active,
+          [aria-selected="true"],
+          [aria-current]:not([aria-current="false"], [aria-current=""])
+        ) {
           --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
             var(--tab-border-color);
         }
@@ -246,7 +255,11 @@
 
     :checked,
     label:has(:checked),
-    :is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
+    :is(
+      .tab-active,
+      [aria-selected="true"],
+      [aria-current]:not([aria-current="false"], [aria-current=""])
+    ) {
       & + .tab-content {
         &:nth-child(1),
         &:nth-child(n + 3) {
@@ -276,10 +289,11 @@
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
-      &:is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]):not(
-          .tab-disabled,
-          [disabled]
-        ),
+      &:is(
+          .tab-active,
+          [aria-selected="true"],
+          [aria-current]:not([aria-current="false"], [aria-current=""])
+        ):not(.tab-disabled, [disabled]),
       &:is(input:checked),
       &:is(label:has(:checked)) {
         --tab-border: var(--border) var(--border) 0 var(--border);
@@ -295,7 +309,11 @@
 
     &:has(> .tab-content) {
       > .tab:first-child {
-        &:not(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
+        &:not(
+          .tab-active,
+          [aria-selected="true"],
+          [aria-current]:not([aria-current="false"], [aria-current=""])
+        ) {
           --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
             var(--tab-border-color);
         }
@@ -313,7 +331,11 @@
 
     :checked,
     label:has(:checked),
-    :is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
+    :is(
+      .tab-active,
+      [aria-selected="true"],
+      [aria-current]:not([aria-current="false"], [aria-current=""])
+    ) {
       & + .tab-content {
         &:nth-child(1),
         &:nth-child(n + 3) {
@@ -343,10 +365,11 @@
       --tab-corner-position: top left, top right;
       /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
-      &:is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]):not(
-          .tab-disabled,
-          [disabled]
-        ),
+      &:is(
+          .tab-active,
+          [aria-selected="true"],
+          [aria-current]:not([aria-current="false"], [aria-current=""])
+        ):not(.tab-disabled, [disabled]),
       &:is(input:checked),
       &:is(label:has(:checked)) {
         --tab-border: 0 var(--border) var(--border) var(--border);
@@ -362,7 +385,11 @@
 
     &:has(> .tab-content) {
       > .tab:first-child {
-        &:not(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
+        &:not(
+          .tab-active,
+          [aria-selected="true"],
+          [aria-current]:not([aria-current="false"], [aria-current=""])
+        ) {
           --tab-border-colors: #0000 var(--tab-border-color) var(--tab-border-color)
             var(--tab-border-color);
         }
@@ -380,7 +407,11 @@
 
     > :checked,
     > :is(label:has(:checked)),
-    > :is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
+    > :is(
+      .tab-active,
+      [aria-selected="true"],
+      [aria-current]:not([aria-current="false"], [aria-current=""])
+    ) {
       & + .tab-content:not(:nth-child(2)) {
         --tabcontent-radius-es: var(--radius-box);
       }
@@ -474,10 +505,11 @@
       }
     }
 
-    > :is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]):not(
-        .tab-disabled,
-        [disabled]
-      ),
+    > :is(
+        .tab-active,
+        [aria-selected="true"],
+        [aria-current]:not([aria-current="false"], [aria-current=""])
+      ):not(.tab-disabled, [disabled]),
     > :is(input:checked),
     > :is(label:has(:checked)) {
       background-color: var(--tab-bg, var(--color-base-100));
