@@ -45,6 +45,22 @@
         }
       }
     }
+    @supports (-moz-appearance: none) {
+      @media (hover: none) and (pointer: coarse) {
+        &:focus {
+          .diff-resizer {
+            min-width: 5cqi;
+            max-width: 5cqi;
+          }
+        }
+        &:has(.diff-item-1:focus) {
+          .diff-resizer {
+            min-width: 95cqi;
+            max-width: 95cqi;
+          }
+        }
+      }
+    }
   }
 }
 .diff-resizer {
@@ -82,6 +98,14 @@
       &:after {
         --tw-content: none;
         content: var(--tw-content);
+      }
+    }
+    @supports (-moz-appearance: none) {
+      @media (hover: none) and (pointer: coarse) {
+        &:after {
+          --tw-content: none;
+          content: var(--tw-content);
+        }
       }
     }
   }
