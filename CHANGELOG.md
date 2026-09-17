@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.39](https://github.com/saadeghi/daisyui/compare/v5.7.38...v5.7.39) (2026-09-17)
+
+### Bug Fixes
+
+* allow Firefox Android to use diff by tap because Firefox Android ignores CSS resize and cannot drag([#4763](https://github.com/saadeghi/daisyui/issues/4763)) ([ac97999](https://github.com/saadeghi/daisyui/commit/ac979991819a6dd3bd74b2aa44af0cbcb39a968d))
+
 ## [5.7.38](https://github.com/saadeghi/daisyui/compare/v5.7.37...v5.7.38) (2026-09-14)
 
 ### Bug Fixes
