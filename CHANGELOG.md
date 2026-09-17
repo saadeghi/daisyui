@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.40](https://github.com/saadeghi/daisyui/compare/v5.7.39...v5.7.40) (2026-09-17)
+
+### Bug Fixes
+
+* style aria-checked as btn-active in button ([#4761](https://github.com/saadeghi/daisyui/issues/4761)) ([276fce3](https://github.com/saadeghi/daisyui/commit/276fce3ec61fae87b3f403e39a22def8565d4260))
+
 ## [5.7.39](https://github.com/saadeghi/daisyui/compare/v5.7.38...v5.7.39) (2026-09-17)
 
 ### Bug Fixes
