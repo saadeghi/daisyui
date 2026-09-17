@@ -1,8 +1,18 @@
 # PR review report
 
-Write `tmp/pr/pr-<number>.md`. Use only these sections and keep them concise.
+Write `tmp/pr/pr-<number>.md`. Start each report with YAML frontmatter that contains `status`.
+Use the current verified PR state in lowercase: `open`, `merged`, or `closed`. A merged PR uses
+`merged`, even if the API also reports it as closed. Check the state when you create or update
+the report. A merge decision or local commit does not change the PR state.
+
+The template shows an open PR. Replace its status with the verified value. Use only these body
+sections and keep them concise.
 
 ```markdown
+---
+status: "open"
+---
+
 # PR #<number>: <title>
 
 PR: <direct GitHub URL>

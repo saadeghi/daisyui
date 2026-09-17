@@ -44,11 +44,14 @@ Review the changed behavior and write a short, evidence-based merge decision.
 7. Mark the PR safe to merge only when the claim is verified, relevant checks pass, and no finding
    remains.
 8. Re-fetch the PR before the verdict. If the head SHA changed, repeat the affected checks.
+   Use the current verified PR state for the report's frontmatter `status`. Use `merged` for a
+   merged PR, `closed` for a PR closed without merge, and `open` for an open PR.
 
 ## Report
 
 Read [references/report.md](references/report.md). Write one report per PR to
-`tmp/pr/pr-<number>.md`. Update an existing report instead of creating a duplicate.
+`tmp/pr/pr-<number>.md`. Include YAML frontmatter with `status`. Update the status in an existing
+report instead of creating a duplicate. Keep the PR state separate from the merge decision.
 
 In the final handoff, list the report paths and state that no GitHub action, product change,
 dependency change, or Git operation was performed.

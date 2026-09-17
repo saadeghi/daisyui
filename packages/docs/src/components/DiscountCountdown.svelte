@@ -62,7 +62,7 @@
           <div
             class={variant === "neutral"
               ? "border-neutral-content/40 rounded-field border border-dashed p-2"
-              : "bg-error text-error-content rounded-field flex flex-col pt-1"}
+              : "bg-error text-error-content rounded-field flex flex-col pt-1 overflow-hidden"}
           >
             <span
               class={variant === "neutral" ? "countdown block text-2xl" : "countdown block xl:mx-2"}
@@ -81,7 +81,7 @@
         <div
           class={variant === "neutral"
             ? "border-neutral-content/40 rounded-field border border-dashed p-2"
-            : "bg-error text-error-content rounded-field flex flex-col pt-1"}
+            : "bg-error text-error-content rounded-field flex flex-col pt-1 overflow-hidden"}
         >
           <span
             class={variant === "neutral" ? "countdown block text-2xl" : "countdown block xl:mx-2"}
@@ -99,7 +99,7 @@
         <div
           class={variant === "neutral"
             ? "border-neutral-content/40 rounded-field border border-dashed p-2"
-            : "bg-error text-error-content rounded-field flex flex-col pt-1"}
+            : "bg-error text-error-content rounded-field flex flex-col pt-1 overflow-hidden"}
         >
           <span
             class={variant === "neutral" ? "countdown block text-2xl" : "countdown block xl:mx-2"}
@@ -117,7 +117,7 @@
         <div
           class={variant === "neutral"
             ? "border-neutral-content/40 rounded-field border border-dashed p-2"
-            : "bg-error text-error-content rounded-field flex flex-col pt-1"}
+            : "bg-error text-error-content rounded-field flex flex-col pt-1 overflow-hidden"}
         >
           <span
             class={variant === "neutral" ? "countdown block text-2xl" : "countdown block xl:mx-2"}

@@ -155,10 +155,13 @@ Create a plan only after answering yes to every item:
   component or were found together.
 - Reuse and update an existing plan when it describes the same root cause; do not create a
   duplicate.
-- Use the filename rules and full structure in [references/bug-plan.md](references/bug-plan.md).
+- Treat these files as bug reports, even though this workflow calls them plans. Each file must
+  have YAML frontmatter with the bug, issue, or PR status. A new local bug uses `status: open`.
+- Use the status rules, filename rules, and full structure in
+  [references/bug-plan.md](references/bug-plan.md).
 - Create `tmp/bugs/` only when at least one finding passes the readiness gate.
-- After writing, re-open every plan and verify that every factual claim points to evidence and
-  that no plan contains implementation code.
+- After writing, re-open every plan. Verify its frontmatter status and each factual claim against
+  evidence. Verify that no plan contains implementation code.
 
 ## Handoff
 
