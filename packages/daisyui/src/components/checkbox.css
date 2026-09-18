@@ -7,9 +7,11 @@
       0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 0 #0000 inset,
       0 0 #0000;
-    transition:
-      background-color 0.2s,
-      box-shadow 0.2s;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        background-color 0.2s,
+        box-shadow 0.2s;
+    }
     --size: calc(var(--size-selector, 0.25rem) * 6);
     width: var(--size);
     height: var(--size);
@@ -19,12 +21,14 @@
       --tw-content: "";
       content: var(--tw-content);
       @apply block size-full rotate-45 bg-current opacity-0;
-      transition:
-        clip-path 0.3s,
-        opacity 0.1s,
-        rotate 0.3s,
-        translate 0.3s;
-      transition-delay: 0.1s;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          clip-path 0.3s,
+          opacity 0.1s,
+          rotate 0.3s,
+          translate 0.3s;
+        transition-delay: 0.1s;
+      }
       clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%);
       box-shadow: 0px 3px 0 0px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
       font-size: 1rem;
