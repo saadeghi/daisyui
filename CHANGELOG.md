@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.42](https://github.com/saadeghi/daisyui/compare/v5.7.41...v5.7.42) (2026-09-18)
+
+### Bug Fixes
+
+* disabled style for input, select, textarea and file-input ([#4769](https://github.com/saadeghi/daisyui/issues/4769)) ([a0ca2b8](https://github.com/saadeghi/daisyui/commit/a0ca2b8739afa511fb169a6e1c3f5de1af170f22))
+
 ## [5.7.41](https://github.com/saadeghi/daisyui/compare/v5.7.40...v5.7.41) (2026-09-18)
 
 ### Bug Fixes
