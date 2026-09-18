@@ -17,6 +17,8 @@ classnames:
   modifier:
   - class: swap-active
     desc: Activates the swap (no need for checkbox)
+  - class: swap-multi
+    desc: Swap between any number of items using radio inputs
   style:
   - class: swap-rotate
     desc: Adds rotate effect to swap
@@ -190,4 +192,31 @@ classnames:
   <div class="$$swap-on">🥳</div>
   <div class="$$swap-off">😭</div>
 </label>
+```
+
+### ~Swap between multiple items
+#### Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group
+
+<div class="swap swap-multi text-6xl">
+  <input type="radio" name="swap-mood" aria-label="Happy" autocomplete="off" checked="checked" />
+  <div>😀</div>
+  <input type="radio" name="swap-mood" aria-label="Cool" autocomplete="off" />
+  <div>😎</div>
+  <input type="radio" name="swap-mood" aria-label="Surprised" autocomplete="off" />
+  <div>🤯</div>
+  <input type="radio" name="swap-mood" aria-label="Sleepy" autocomplete="off" />
+  <div>😴</div>
+</div>
+
+```html
+<div class="$$swap $$swap-multi text-6xl">
+  <input type="radio" name="swap-mood" aria-label="Happy" autocomplete="off" checked="checked" />
+  <div>😀</div>
+  <input type="radio" name="swap-mood" aria-label="Cool" autocomplete="off" />
+  <div>😎</div>
+  <input type="radio" name="swap-mood" aria-label="Surprised" autocomplete="off" />
+  <div>🤯</div>
+  <input type="radio" name="swap-mood" aria-label="Sleepy" autocomplete="off" />
+  <div>😴</div>
+</div>
 ```
