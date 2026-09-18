@@ -276,6 +276,8 @@
   "Popover API is the new HTML standard for creating dropdowns.": "Popover API は、ドロップダウンを作成するための新しい HTML 標準です。",
   "Popover is similar to dialog but it still allows focusing on the background elements. It is accessible and we can close the modal using `Esc` key.": "ポップオーバーはダイアログに似ていますが、それでも背景要素に焦点を当てることができます。アクセス可能であり、「`Esc`」キーを使用して Modal を閉じることができます。",
   "Rotates through 3 words, in 10 seconds": "10 秒で 3 つの単語をローテーションします",
+  "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden": "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden",
+  "Set the duration of one full loop using the --marquee-duration CSS variable": "Set the duration of one full loop using the --marquee-duration CSS variable",
   "Services": "サービス",
   "size of component or part": "Componentまたは部品のサイズ",
   "Text labels for each button": "各 Button のテキスト ラベル",

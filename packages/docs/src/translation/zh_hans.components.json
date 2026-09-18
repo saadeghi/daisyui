@@ -276,6 +276,8 @@
   "Popover API is the new HTML standard for creating dropdowns.": "Popover API 是用于创建下拉菜单的新 HTML 标准。",
   "Popover is similar to dialog but it still allows focusing on the background elements. It is accessible and we can close the modal using `Esc` key.": "弹出窗口类似于对话框，但它仍然允许关注背景元素。它是可以访问的，我们可以使用`Esc`键关闭 Modal。",
   "Rotates through 3 words, in 10 seconds": "10 秒内旋转 3 个单词",
+  "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden": "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden",
+  "Set the duration of one full loop using the --marquee-duration CSS variable": "Set the duration of one full loop using the --marquee-duration CSS variable",
   "Services": "服务",
   "size of component or part": "Component或零件的尺寸",
   "Text labels for each button": "每个 Button 的文本标签",
