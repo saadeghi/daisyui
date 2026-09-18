@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.41](https://github.com/saadeghi/daisyui/compare/v5.7.40...v5.7.41) (2026-09-18)
+
+### Bug Fixes
+
+* [#4766](https://github.com/saadeghi/daisyui/issues/4766) validator colors specificity ([#4767](https://github.com/saadeghi/daisyui/issues/4767)) ([6fcaa55](https://github.com/saadeghi/daisyui/commit/6fcaa55ccad9046510ac1ae06fac2f8e784c9625))
+
 ## [5.7.40](https://github.com/saadeghi/daisyui/compare/v5.7.39...v5.7.40) (2026-09-17)
 
 ### Bug Fixes
