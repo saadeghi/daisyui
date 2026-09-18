@@ -96,7 +96,9 @@
         }
       }
     }
+  }
 
+  @layer daisyui.l1.l2 {
     &:has(> input[disabled]),
     &:is(:disabled, [disabled]),
     fieldset:disabled & {
