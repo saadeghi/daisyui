@@ -16,6 +16,10 @@
     );
     --range-fill-y: 0;
     --range-fill-spread: calc(100cqw * var(--range-fill));
+    /* The fill spread below is sized in cqw. Without a query container on the
+       input itself those units resolve against the viewport, so the thumb's
+       fill shadow is painted at viewport width instead of track width. */
+    container-type: inline-size;
     @apply cursor-pointer overflow-hidden bg-transparent align-middle;
     width: clamp(3rem, 20rem, 100%);
     /* --radius-selector-max is a separate variable because ~ calc(min(calc(--var))) ~ gives build error in PostCSS+Nuxt */
