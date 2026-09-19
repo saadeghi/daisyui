@@ -1,6 +1,9 @@
 .status {
   @layer daisyui.l1.l2.l3 {
-    @apply bg-base-content/20 rounded-selector inline-block aspect-square size-2 bg-center bg-no-repeat align-middle text-black/30;
+    @apply bg-base-content/20 rounded-selector inline-block aspect-square bg-center bg-no-repeat align-middle text-black/30;
+    --size: calc(var(--size-selector, 0.25rem) * 2);
+    width: var(--size);
+    height: var(--size);
     background-image: radial-gradient(
       circle at 35% 30%,
       oklch(1 0 0 / calc(var(--depth) * 0.5)),
@@ -63,30 +66,30 @@
 
 .status-xs {
   @layer daisyui.l1.l2 {
-    @apply size-0.5;
+    --size: calc(var(--size-selector, 0.25rem) * 0.5);
   }
 }
 
 .status-sm {
   @layer daisyui.l1.l2 {
-    @apply size-1;
+    --size: calc(var(--size-selector, 0.25rem) * 1);
   }
 }
 
 .status-md {
   @layer daisyui.l1.l2 {
-    @apply size-2;
+    --size: calc(var(--size-selector, 0.25rem) * 2);
   }
 }
 
 .status-lg {
   @layer daisyui.l1.l2 {
-    @apply size-3;
+    --size: calc(var(--size-selector, 0.25rem) * 3);
   }
 }
 
 .status-xl {
   @layer daisyui.l1.l2 {
-    @apply size-4;
+    --size: calc(var(--size-selector, 0.25rem) * 4);
   }
 }
