@@ -40,7 +40,7 @@
       width: 15%;
       height: 15%;
       top: 7%;
-      right: 7%;
+      inset-inline-end: 7%;
     }
   }
 }
@@ -54,7 +54,7 @@
       width: 15%;
       height: 15%;
       top: 7%;
-      right: 7%;
+      inset-inline-end: 7%;
     }
   }
 }
