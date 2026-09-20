@@ -348,5 +348,9 @@
     &:not(.btn-link, .btn-ghost) {
       @apply bg-base-content/10;
     }
+
+    &.join-item {
+      --btn-border: color-mix(in oklab, var(--color-base-200), #000 calc(var(--depth) * 5%));
+    }
   }
 }
