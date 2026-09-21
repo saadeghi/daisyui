@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.43](https://github.com/saadeghi/daisyui/compare/v5.7.42...v5.7.43) (2026-09-21)
+
+### Bug Fixes
+
+* status size respects theme size variables ([#4774](https://github.com/saadeghi/daisyui/issues/4774)) ([2e34dfe](https://github.com/saadeghi/daisyui/commit/2e34dfe6ffd479009a2f3c2c381564f1e8649525))
+
 ## [5.7.42](https://github.com/saadeghi/daisyui/compare/v5.7.41...v5.7.42) (2026-09-18)
 
 ### Bug Fixes
