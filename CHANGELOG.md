@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.44](https://github.com/saadeghi/daisyui/compare/v5.7.43...v5.7.44) (2026-09-23)
+
+### Bug Fixes
+
+* avatar indicator dot RTL position ([#4773](https://github.com/saadeghi/daisyui/issues/4773)) ([b00cb0c](https://github.com/saadeghi/daisyui/commit/b00cb0cdbc7197213f8cc9cba49d82eabf3c1ada))
+
 ## [5.7.43](https://github.com/saadeghi/daisyui/compare/v5.7.42...v5.7.43) (2026-09-21)
 
 ### Bug Fixes
