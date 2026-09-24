@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.45](https://github.com/saadeghi/daisyui/compare/v5.7.44...v5.7.45) (2026-09-24)
+
+### Bug Fixes
+
+* range shadow size and performance ([#4771](https://github.com/saadeghi/daisyui/issues/4771)) ([cea1c7d](https://github.com/saadeghi/daisyui/commit/cea1c7d5ad2922042e662f434a7ec6843aea365e))
+
 ## [5.7.44](https://github.com/saadeghi/daisyui/compare/v5.7.43...v5.7.44) (2026-09-23)
 
 ### Bug Fixes
