@@ -25,6 +25,18 @@ const replaceStrings = (content, replacements) => {
   return content.replace(re, (matched) => replacements[matched.toLowerCase()])
 }
 
+// minLength and maxLength are numbers in JSX, so their value needs braces instead of quotes.
+// Scoped to the attribute name because a bare value like "4" also appears on aria-label, where a
+// number would be wrong.
+const lengthValueSpan = new RegExp(
+  '(<span style="color:var\\(--syntax-attr-name\\)">\\s*(?:min|max)Length</span>' +
+    '<span style="color:var\\(--syntax-punctuation\\)">=</span>)' +
+    '<span style="color:var\\(--syntax-punctuation\\)">"</span>' +
+    '(<span style="color:var\\(--syntax-attr-value\\)">\\d+</span>)' +
+    '<span style="color:var\\(--syntax-punctuation\\)">"</span>',
+  "gi",
+)
+
 export const prefixClassNames = (node) => {
   const originalContent = node.innerHTML ?? ""
   let prefixValue
@@ -120,6 +132,10 @@ export const htmlToJsx = (node) => {
       .replaceAll(
         'var(--syntax-punctuation)" tabIndex={0}>',
         'var(--syntax-punctuation)" tabindex="0">',
+      )
+      .replace(
+        lengthValueSpan,
+        '$1<span style="color:var(--syntax-punctuation)">{</span>$2<span style="color:var(--syntax-punctuation)">}</span>',
       )
   }
 
