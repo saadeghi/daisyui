@@ -65,50 +65,41 @@ We can open the modal using JS `ID.showModal()` method and close it using `ID.cl
 The ID must be unique for each modal.
 
 ### ~Dialog modal
-#### opens on click using ID.showModal() method. can be closed using ID.close() method
+#### opens and closes on click using the native HTML <dialog> element, which has been supported by all major browsers for quite some time (Safari and Safari iOS added it in version 15.4, released over three years ago).
 
-<button class="btn" onclick={() => my_modal_1.showModal()}>open modal</button>
+<button class="btn" commandfor="my_modal_1" command="show-modal">open modal</button>
 <dialog id="my_modal_1" class="modal">
   <div class="modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click the button below to close</p>
     <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
-      </form>
+      <button class="btn" commandfor="my_modal_1" command="close">Close</button>
     </div>
   </div>
 </dialog>
 
 ```html
-<!-- Open the modal using ID.showModal() method -->
-<button class="$$btn" onclick="my_modal_1.showModal()">open modal</button>
+<!-- Open the modal using the native HTML <dialog> element -->
+<button class="$$btn" commandfor="my_modal_1" command="show-modal">open modal</button>
 <dialog id="my_modal_1" class="$$modal">
   <div class="$$modal-box">
     <h3 class="text-lg font-bold">Hello!</h3>
     <p class="py-4">Press ESC key or click the button below to close</p>
     <div class="$$modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="$$btn">Close</button>
-      </form>
+      <button class="$$btn" commandfor="my_modal_1" command="close">Close</button>
     </div>
   </div>
 </dialog>
 ```
 ```jsx
-{/* Open the modal using document.getElementById('ID').showModal() method */}
-<button className="$$btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>open modal</button>
+{/* Open the modal using the native HTML <dialog> element */}
+<button className="$$btn" commandfor="my_modal_1" command="show-modal">open modal</button>
 <dialog id="my_modal_1" className="$$modal">
   <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Press ESC key or click the button below to close</p>
     <div className="$$modal-action">
-      <form method="dialog">
-        {/* if there is a button in form, it will close the modal */}
-        <button className="$$btn">Close</button>
-      </form>
+      <button className="$$btn" commandfor="my_modal_1" command="close">Close</button>
     </div>
   </div>
 </dialog>
@@ -118,7 +109,7 @@ The ID must be unique for each modal.
 ### ~Dialog modal, closes when clicked outside
 #### there is a second form with 'modal-backdrop' class and it covers the screen so we can close the modal when clicked outside
 
-<button class="btn" onclick={() => my_modal_2.showModal()}>open modal</button>
+<button class="btn" commandfor="my_modal_2" command="show-modal">open modal</button>
 <dialog id="my_modal_2" class="modal">
   <div class="modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
@@ -130,8 +121,8 @@ The ID must be unique for each modal.
 </dialog>
 
 ```html
-<!-- Open the modal using ID.showModal() method -->
-<button class="$$btn" onclick="my_modal_2.showModal()">open modal</button>
+{/* Open the modal using the native HTML <dialog> element */}
+<button class="$$btn" commandfor="my_modal_2" command="show-modal">open modal</button>
 <dialog id="my_modal_2" class="$$modal">
   <div class="$$modal-box">
     <h3 class="text-lg font-bold">Hello!</h3>
@@ -143,8 +134,8 @@ The ID must be unique for each modal.
 </dialog>
 ```
 ```jsx
-{/* Open the modal using document.getElementById('ID').showModal() method */}
-<button className="$$btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>open modal</button>
+{/* Open the modal using the native HTML <dialog> element */}
+<button className="$$btn" commandfor="my_modal_2" command="show-modal">open modal</button>
 <dialog id="my_modal_2" className="$$modal">
   <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
@@ -158,7 +149,7 @@ The ID must be unique for each modal.
 
 
 ### ~Dialog modal with a close button at corner
-<button class="btn" onclick={() => my_modal_3.showModal()}>open modal</button>
+<button class="btn" commandfor="my_modal_3" command="show-modal">open modal</button>
 <dialog id="my_modal_3" class="modal">
   <div class="modal-box">
     <form method="dialog">
@@ -171,8 +162,8 @@ The ID must be unique for each modal.
 </dialog>
 
 ```html
-<!-- You can open the modal using ID.showModal() method -->
-<button class="$$btn" onclick="my_modal_3.showModal()">open modal</button>
+<!-- Open the modal using the native HTML <dialog> element -->
+<button class="$$btn" commandfor="my_modal_3" command="show-modal">open modal</button>
 <dialog id="my_modal_3" class="$$modal">
   <div class="$$modal-box">
     <form method="dialog">
@@ -184,8 +175,8 @@ The ID must be unique for each modal.
 </dialog>
 ```
 ```jsx
-{/* You can open the modal using document.getElementById('ID').showModal() method */}
-<button className="$$btn" onClick={()=>document.getElementById('my_modal_3').showModal()}>open modal</button>
+{/* Open the modal using the native HTML <dialog> element */}
+<button className="$$btn" commandfor="my_modal_3" command="show-modal">open modal</button>
 <dialog id="my_modal_3" className="$$modal">
   <div className="$$modal-box">
     <form method="dialog">
@@ -202,7 +193,7 @@ The ID must be unique for each modal.
 ### ~Dialog modal with custom width
 #### You can use any w-* and max-w-* utility class to customize the width
 
-<button class="btn" onclick={() => my_modal_4.showModal()}>open modal</button>
+<button class="btn" commandfor="my_modal_4" command="show-modal">open modal</button>
 <dialog id="my_modal_4" class="modal">
   <div class="modal-box w-11/12 max-w-5xl">
     <h3 class="font-bold text-lg">Hello!</h3>
@@ -217,8 +208,8 @@ The ID must be unique for each modal.
 </dialog>
 
 ```html
-<!-- You can open the modal using ID.showModal() method -->
-<button class="$$btn" onclick="my_modal_4.showModal()">open modal</button>
+<!-- Open the modal using the native HTML <dialog> element -->
+<button class="$$btn" commandfor="my_modal_4" command="show-modal">open modal</button>
 <dialog id="my_modal_4" class="$$modal">
   <div class="$$modal-box w-11/12 max-w-5xl">
     <h3 class="text-lg font-bold">Hello!</h3>
@@ -233,8 +224,8 @@ The ID must be unique for each modal.
 </dialog>
 ```
 ```jsx
-{/* You can open the modal using document.getElementById('ID').showModal() method */}
-<button className="$$btn" onClick={()=>document.getElementById('my_modal_4').showModal()}>open modal</button>
+{/* Open the modal using the native HTML <dialog> element */}
+<button className="$$btn" commandfor="my_modal_4" command="show-modal">open modal</button>
 <dialog id="my_modal_4" className="$$modal">
   <div className="$$modal-box w-11/12 max-w-5xl">
     <h3 className="font-bold text-lg">Hello!</h3>
@@ -253,7 +244,7 @@ The ID must be unique for each modal.
 ### ~Responsive
 #### Modal goes bottom on SM screen size, goes middle on MD screen size
 
-<button class="btn" onclick={() => my_modal_5.showModal()}>open modal</button>
+<button class="btn" commandfor="my_modal_5" command="show-modal">open modal</button>
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
@@ -268,8 +259,8 @@ The ID must be unique for each modal.
 </dialog>
 
 ```html
-<!-- Open the modal using ID.showModal() method -->
-<button class="$$btn" onclick="my_modal_5.showModal()">open modal</button>
+<!-- Open the modal using the native HTML <dialog> element -->
+<button class="$$btn" commandfor="my_modal_5" command="show-modal">open modal</button>
 <dialog id="my_modal_5" class="$$modal $$modal-bottom sm:$$modal-middle">
   <div class="$$modal-box">
     <h3 class="text-lg font-bold">Hello!</h3>
@@ -284,8 +275,8 @@ The ID must be unique for each modal.
 </dialog>
 ```
 ```jsx
-{/* Open the modal using document.getElementById('ID').showModal() method */}
-<button className="$$btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
+{/* Open the modal using the native HTML <dialog> element */}
+<button className="$$btn" commandfor="my_modal_5" command="show-modal">open modal</button>
 <dialog id="my_modal_5" className="$$modal $$modal-bottom sm:$$modal-middle">
   <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
