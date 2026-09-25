@@ -8,6 +8,14 @@ layout: docs
   import Translate from "$components/Translate.svelte"
 </script>
 
+## v1.8
+
+_September 2026_
+
+- Optimize instructions about interactive elements
+- Optimize instructions about creating multiple pages for fresh projects if needed
+- Optimize design trends catalog and instructions about choosing the design trend
+
 ## v1.6
 
 _August 2026_
