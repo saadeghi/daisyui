@@ -9,8 +9,8 @@
       href="/blueprint/"
       class="alert border-base-300 hover:bg-base-200 bg-base-100 flex w-full justify-center rounded-none border-x-0 border-t-0 p-2 text-center text-xs shadow-none transition-colors"
     >
-      <div class="font-mono text-[0.6875rem]" dir="ltr">
-        daisyUI MCP v1.6: Generate unique UIs now!
+      <div class="font-mono text-[0.6875rem] lg:tracking-wide" dir="ltr">
+        Stop generating AI slop. Use <span class="uppercase text-blue-500 lg:tracking-wider">Blueprint</span> MCP server →
       </div>
     </a>
   </div>
