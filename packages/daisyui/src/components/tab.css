@@ -129,7 +129,9 @@
       &:before {
         content: "";
         background-color: var(--tab-border-color);
-        transition: background-color 0.2s ease;
+        @media (prefers-reduced-motion: no-preference) {
+          transition: background-color 0.2s ease;
+        }
         width: calc(100% - var(--tab-p) * 2);
         height: 3px;
         border-radius: var(--radius-field);

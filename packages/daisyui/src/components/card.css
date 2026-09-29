@@ -1,7 +1,9 @@
 .card {
   @layer daisyui.l1.l2.l3 {
     @apply rounded-box relative flex flex-col;
-    transition: outline 0.2s ease-in-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: outline 0.2s ease-in-out;
+    }
     outline: 2px solid #0000;
     outline-offset: 2px;
 
