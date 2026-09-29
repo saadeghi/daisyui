@@ -54,7 +54,7 @@ Import the CSS file in your index.html
 ```diff:index.html
 <head>
 +  <script type="module">
-+    import "./app/styles.css";
++    import "./app/styles/app.css";
 +  </script>
   <!-- the rest -->
 </head>
