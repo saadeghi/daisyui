@@ -9,8 +9,7 @@ desc: How to install and use daisyUI with Stimulus
 
 > :INFO:
 >
-> Stimulus does not handle CSS, so daisyUI is installed the same way as in any other project.  
-> If you use Rails, follow the [Rails install guide](/docs/install/rails/) instead, because Stimulus already comes with Rails.
+> If you're using Rails, follow the [Rails install guide](/docs/install/rails/).
 
 ### 1. Install
 
@@ -57,7 +56,7 @@ This command creates a `public/output.css` file with the compiled CSS. You can l
 
 ### 4. Add Stimulus
 
-Load Stimulus from a CDN and start the application.
+Load Stimulus from CDN and start the application.
 
 ```html:public/index.html
 <script type="module">
@@ -66,7 +65,9 @@ Load Stimulus from a CDN and start the application.
 </script>
 ```
 
-If you use a bundler, install `@hotwired/stimulus` with npm and import it from the package name instead.
+Or if you're using a bundler:
+  1. Install it with `npm i @hotwired/stimulus`
+  2. Import it like `import { Application } from "@hotwired/stimulus"`
 
 Now you can use daisyUI class names!
 

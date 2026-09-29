@@ -1741,5 +1741,11 @@
   "User-invocable skills appear as slash commands in Grok Build. For example:": "User-invocable skills appear as slash commands in Grok Build. For example:",
   "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build",
   "Use the <a href=\"/theme-generator/\">theme generator</a> to edit colors and preview components, then copy the CSS into your project.": "<a href=\"/theme-generator/\">테마 생성기</a>로 색상을 수정하고 컴포넌트를 미리 본 다음 프로젝트에 CSS를 복사하세요.",
-  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "MCP (Model Context Protocol)는 표준 프로토콜로 AI 애플리케이션을 도구와 리소스에 연결합니다. daisyUI 문서나 컴포넌트 예제를 제공하는 서버로 작업 중 코딩 에이전트에 컨텍스트를 제공하세요."
+  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "MCP (Model Context Protocol)는 표준 프로토콜로 AI 애플리케이션을 도구와 리소스에 연결합니다. daisyUI 문서나 컴포넌트 예제를 제공하는 서버로 작업 중 코딩 에이전트에 컨텍스트를 제공하세요.",
+  "If you're using Rails, follow the <a href=\"/docs/install/rails/\">Rails install guide</a>.": "If you're using Rails, follow the <a href=\"/docs/install/rails/\">Rails install guide</a>.",
+  "4. Add Stimulus": "4. Add Stimulus",
+  "Load Stimulus from CDN and start the application.": "Load Stimulus from CDN and start the application.",
+  "Or if you're using a bundler:": "Or if you're using a bundler:",
+  "Install it with `npm i @hotwired/stimulus`": "Install it with `npm i @hotwired/stimulus`",
+  "Import it like `import { Application } from \"@hotwired/stimulus\"`": "Import it like `import { Application } from \"@hotwired/stimulus\"`"
 }
