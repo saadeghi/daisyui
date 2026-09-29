@@ -276,6 +276,8 @@
   "Popover API is the new HTML standard for creating dropdowns.": "Popover API — это новый стандарт HTML для создания раскрывающихся списков.",
   "Popover is similar to dialog but it still allows focusing on the background elements. It is accessible and we can close the modal using `Esc` key.": "Поповер похож на диалог, но все же позволяет сосредоточиться на элементах фона. Он доступен, и мы можем закрыть Modal, используя клавишу `Esc`.",
   "Rotates through 3 words, in 10 seconds": "Меняется на 3 слова за 10 секунд.",
+  "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden": "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden",
+  "Set the duration of one full loop using the --marquee-duration CSS variable": "Set the duration of one full loop using the --marquee-duration CSS variable",
   "Services": "Услуги",
   "size of component or part": "размер Component или детали",
   "Text labels for each button": "Текстовые метки для каждого Button",
