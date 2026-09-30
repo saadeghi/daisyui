@@ -274,10 +274,6 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--glass-text-shadow-opacity` | opacity of the glass text shadow                         |
 | Join            | `--join-h`                    | horizontal join direction                                |
 |                 | `--join-v`                    | vertical join direction                                  |
-|                 | `--join-ss`                   | start start border radius of the join                    |
-|                 | `--join-se`                   | start end border radius of the join                      |
-|                 | `--join-es`                   | end start border radius of the join                      |
-|                 | `--join-ee`                   | end end border radius of the join                        |
 
 ### Examples of customizing component specific CSS variables
 
