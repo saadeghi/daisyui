@@ -113,6 +113,14 @@ In above example, we exclude the `rootscrollgutter` style which is added to the 
 In above example, we exclude the listed files. All other parts of daisyUI will be available to use. This is useful if you want to opt out of some parts of daisyUI or if you want to mix daisyUI for some parts and another library for the rest.  
 [Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/master/packages/daisyui/src).
 
+```postcss:Example
+@plugin "daisyui" {
+  exclude: themecontroller;
+}
+```
+`themecontroller` is not a file name, it's a special value for `exclude`. In above example, we exclude the [theme-controller](/components/theme-controller/) selectors from themes. Themes will only be applied using `[data-theme]` attribute, without the `:root:has(input.theme-controller[value=THEME]:checked)` selector. This is useful if you don't use theme-controller, because `:has()` selectors on `:root` can slow down style recalculation on large pages.  
+For custom themes added using `@plugin "daisyui/theme"`, use [`themecontroller: false;`](/docs/themes/#how-to-add-a-new-custom-theme) instead.
+
 
 ## prefix
 

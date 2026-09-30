@@ -131,3 +131,36 @@ test("pluginOptionsHandler should prefix theme-controller class when prefix is s
       },
   })
 })
+
+test.each([["themecontroller"], [["modal", "themecontroller"]]])(
+  "pluginOptionsHandler should skip theme-controller selectors with exclude: %p",
+  (exclude) => {
+    mockAddBase.mockReset()
+
+    const options = { themes: ["light --default", "dark"], exclude }
+
+    pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+    expect(mockAddBase).toHaveBeenCalledWith({
+      ":where(:root),[data-theme=light]": { color: "white" },
+    })
+    expect(mockAddBase).toHaveBeenCalledWith({ "[data-theme=dark]": { color: "black" } })
+    expect(
+      mockAddBase.mock.calls.some(([styles]) => JSON.stringify(styles).includes(":has(")),
+    ).toBe(false)
+  },
+)
+
+test("pluginOptionsHandler should keep theme-controller selectors when using include", () => {
+  mockAddBase.mockReset()
+
+  const options = { themes: ["custom"], include: ["button"] }
+
+  pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+  expect(mockAddBase).toHaveBeenCalledWith({
+    ":root:has(input.theme-controller[value=custom]:checked),[data-theme=custom]": {
+      color: "blue",
+    },
+  })
+})

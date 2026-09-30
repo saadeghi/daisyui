@@ -27,6 +27,8 @@ For example, to opt out of the scrollbar-gutter and style, scrollbar-color, you 
 }
 ```
 
+If you exclude both `rootscrolllock` and `rootscrollgutter`, modal and drawer won't add their `:root:has()` rules either, because those rules only exist to set a variable that these two styles use.
+
 Or if you're using CDN, you can disable it from your [customized CDN file](/docs/cdn/) if you need to.
 
 ## Source code
