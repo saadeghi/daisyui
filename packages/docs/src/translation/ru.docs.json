@@ -1741,5 +1741,11 @@
   "User-invocable skills appear as slash commands in Grok Build. For example:": "User-invocable skills appear as slash commands in Grok Build. For example:",
   "See the daisyUI MCP guide for Grok Build": "See the daisyUI MCP guide for Grok Build",
   "Use the <a href=\"/theme-generator/\">theme generator</a> to edit colors and preview components, then copy the CSS into your project.": "Используйте <a href=\"/theme-generator/\">генератор тем</a> для изменения цветов и просмотра компонентов, затем скопируйте CSS в проект.",
-  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "MCP (Model Context Protocol) соединяет приложения ИИ с инструментами и ресурсами через стандартный протокол. Используйте сервер с документацией или примерами компонентов daisyUI, чтобы дать агенту контекст во время задачи."
+  "MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.": "MCP (Model Context Protocol) соединяет приложения ИИ с инструментами и ресурсами через стандартный протокол. Используйте сервер с документацией или примерами компонентов daisyUI, чтобы дать агенту контекст во время задачи.",
+  "If you're using Rails, follow the <a href=\"/docs/install/rails/\">Rails install guide</a>.": "If you're using Rails, follow the <a href=\"/docs/install/rails/\">Rails install guide</a>.",
+  "4. Add Stimulus": "4. Add Stimulus",
+  "Load Stimulus from CDN and start the application.": "Load Stimulus from CDN and start the application.",
+  "Or if you're using a bundler:": "Or if you're using a bundler:",
+  "Install it with `npm i @hotwired/stimulus`": "Install it with `npm i @hotwired/stimulus`",
+  "Import it like `import { Application } from \"@hotwired/stimulus\"`": "Import it like `import { Application } from \"@hotwired/stimulus\"`"
 }
