@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.47](https://github.com/saadeghi/daisyui/compare/v5.7.46...v5.7.47) (2026-09-30)
+
+### Bug Fixes
+
+* btn-link with btn-disabled color ([#4749](https://github.com/saadeghi/daisyui/issues/4749)) ([2719450](https://github.com/saadeghi/daisyui/commit/2719450179f2083fe45f5ea9516fe6930ab69951))
+
 ## [5.7.46](https://github.com/saadeghi/daisyui/compare/v5.7.45...v5.7.46) (2026-09-24)
 
 ### Bug Fixes
