@@ -9,7 +9,9 @@ const css = readFileSync(join(import.meta.dirname, "../src/components/otp.css"),
 // which made the component a full --otp-gap wider on the right than on the left.
 // otp-joined sets --otp-gap to 0rem, so the same formula keeps its old width.
 test("OTP container width leaves no extra gap after the last box", () => {
-  const widths = [...css.matchAll(/&:has\(> span:nth-child\((\d+)\)\) \{\s*width: ([^;]+);/g)]
+  const widths = [
+    ...css.matchAll(/&:has\(\s*>\s*span:nth-child\((\d+)\)\s*\)\s*\{\s*width:\s*([^;]+);/g),
+  ]
   expect(widths.map(([, n]) => Number(n))).toEqual([1, 2, 3, 4, 5, 6, 7, 8])
   for (const [, n, width] of widths) {
     expect(width.trim()).toBe(`calc(var(--stride) * ${n} - var(--otp-gap))`)
