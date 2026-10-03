@@ -46,6 +46,13 @@
       }
     }
 
+    @supports (-webkit-nbsp-mode: space) {
+      > input:focus {
+        padding-inline-start: calc(var(--otp-ch) * 0.5 + 0.25px);
+        text-indent: -0.25px;
+      }
+    }
+
     &:has(> span:nth-child(1)) {
       width: calc(var(--stride) * 1);
     }
