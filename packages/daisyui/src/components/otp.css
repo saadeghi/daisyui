@@ -48,8 +48,7 @@
 
     @supports (-webkit-nbsp-mode: space) {
       > input:focus {
-        padding-inline-start: calc(var(--otp-ch) * 0.5 + 0.25px);
-        text-indent: -0.25px;
+        text-indent: 2px;
       }
     }
 
