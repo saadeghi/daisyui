@@ -21,30 +21,39 @@
     }
 
     :where(:scope > :first-child) {
-      --join-ss: var(--radius-field);
-      --join-se: calc(var(--radius-field) * var(--join-v));
-      --join-es: calc(var(--radius-field) * var(--join-h));
+      --join-ss: var(--join-r-ss, var(--join-r, var(--radius-field)));
+      --join-se: calc(var(--join-r-se, var(--join-r, var(--radius-field))) * var(--join-v));
+      --join-es: calc(var(--join-r-es, var(--join-r, var(--radius-field))) * var(--join-h));
       --join-ee: 0;
     }
 
     :where(:scope > :last-child) {
       --join-ss: 0;
-      --join-se: calc(var(--radius-field) * var(--join-h));
-      --join-es: calc(var(--radius-field) * var(--join-v));
-      --join-ee: var(--radius-field);
+      --join-se: calc(var(--join-r-se, var(--join-r, var(--radius-field))) * var(--join-h));
+      --join-es: calc(var(--join-r-es, var(--join-r, var(--radius-field))) * var(--join-v));
+      --join-ee: var(--join-r-ee, var(--join-r, var(--radius-field)));
     }
 
     :where(:scope > :only-child) {
-      --join-ss: var(--radius-field);
-      --join-se: var(--radius-field);
-      --join-es: var(--radius-field);
-      --join-ee: var(--radius-field);
+      --join-ss: var(--join-r-ss, var(--join-r, var(--radius-field)));
+      --join-se: var(--join-r-se, var(--join-r, var(--radius-field)));
+      --join-es: var(--join-r-es, var(--join-r, var(--radius-field)));
+      --join-ee: var(--join-r-ee, var(--join-r, var(--radius-field)));
     }
 
     :where(:scope > :not(:first-child)) {
       --join-ml: calc(var(--border, 1px) * -1 * var(--join-h));
       --join-mt: calc(var(--border, 1px) * -1 * var(--join-v));
     }
+  }
+
+  /* keep the radius API scoped to the join it is set on, a join inside a join starts from the default */
+  :where(&) {
+    --join-r: initial;
+    --join-r-ss: initial;
+    --join-r-se: initial;
+    --join-r-es: initial;
+    --join-r-ee: initial;
   }
 }
 
