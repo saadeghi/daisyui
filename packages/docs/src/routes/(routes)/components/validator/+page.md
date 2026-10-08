@@ -201,11 +201,11 @@ min="1" max="10"
     <p class="validator-hint hidden">Required</p>
   </fieldset>
 
-  <label class="fieldset">
-    <span class="label">Password</span>
+  <fieldset class="fieldset">
+    <label class="label">Password</label>
     <input type="password" class="input validator" placeholder="Password" required />
-    <span class="validator-hint hidden">Required</span>
-  </label>
+    <p class="validator-hint hidden">Required</p>
+  </fieldset>
 
   <button class="btn btn-neutral mt-4" type="submit">Login</button>
   <button class="btn btn-ghost mt-1" type="reset">Reset</button>
@@ -219,11 +219,11 @@ min="1" max="10"
     <p class="$$validator-hint hidden">Required</p>
   </fieldset>
 
-  <label class="$$fieldset">
-    <span class="$$label">Password</span>
+  <fieldset class="$$fieldset">
+    <label class="$$label">Password</label>
     <input type="password" class="$$input $$validator" placeholder="Password" required />
-    <span class="$$validator-hint hidden">Required</span>
-  </label>
+    <p class="$$validator-hint hidden">Required</p>
+  </fieldset>
 
   <button class="$$btn $$btn-neutral mt-4" type="submit">Login</button>
   <button class="$$btn $$btn-ghost mt-1" type="reset">Reset</button>
