@@ -46,6 +46,12 @@
       }
     }
 
+    @supports (-webkit-nbsp-mode: space) {
+      > input:focus {
+        text-indent: 2px;
+      }
+    }
+
     &:has(> span:nth-child(1)) {
       width: calc(var(--stride) * 1);
     }
