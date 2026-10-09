@@ -328,9 +328,6 @@
 
     details[open] > summary {
       font-size: 0;
-      &:not(:active) {
-        transition-duration: 0s;
-      }
       & > * {
         @apply hidden;
       }
@@ -346,7 +343,7 @@
     }
 
     :where(li > details > summary) {
-      @apply relative z-1;
+      @apply relative z-1 duration-0;
     }
 
     :where(li > details > summary):after {
