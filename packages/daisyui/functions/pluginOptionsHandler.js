@@ -12,6 +12,9 @@ export const pluginOptionsHandler = (() => {
       prefix = "",
     } = options || {}
 
+    const excludeList =
+      typeof exclude === "string" ? exclude.split(",").map((item) => item.trim()) : exclude
+
     if (logs !== false && firstRun) {
       console.log(
         `${atob("Lyoh")} ${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${packageVersion} ${atob("Ki8=")}`,
@@ -62,7 +65,7 @@ export const pluginOptionsHandler = (() => {
       if (themeArray.length === 1 && themeArray[0].includes("--default")) {
         const [themeName, ...flags] = themeArray[0].split(" ")
         applyTheme(themeName, flags)
-        return { include, exclude, prefix }
+        return { include, exclude: excludeList, prefix }
       }
 
       // default theme
@@ -92,6 +95,6 @@ export const pluginOptionsHandler = (() => {
       })
     }
 
-    return { include, exclude, prefix }
+    return { include, exclude: excludeList, prefix }
   }
 })()
