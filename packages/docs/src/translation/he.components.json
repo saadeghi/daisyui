@@ -89,6 +89,7 @@
   "Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside": "Modal עובד עם תיבת סימון נסתרת ותוויות יכולות לשנות את תיבת הסימון כדי שנוכל להשתמש בתגית תווית אחרת עם מחלקה ' modal-backdrop ' המכסה את המסך כדי שנוכל לסגור את המודאל כאשר לוחצים עליו בחוץ",
   "Dialog modal with a close button at corner": "מודל דיאלוג עם כפתור סגירה בפינה",
   "Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS": "במקום לעבוד עם קליק, הוא מציג פריט swap-on אם תוסיף את שם המחלקה swap-active. אתה יכול להוסיף או להסיר מחלקה swap-active באמצעות JS",
+  "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group": "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group",
   "There are 3 methods to use a dropdowns": "ישנן 3 שיטות להשתמש בתפריטים נפתחים",
   "Method 1. details and summary": "שיטה 1. פירוט וסיכום",
   "Method 2. popover API and anchor positioning": "שיטה 2. popover API ומיקום עוגן",
