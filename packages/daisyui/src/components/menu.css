@@ -177,6 +177,25 @@
   @layer daisyui.l1.l2 {
     @apply inline-flex flex-row items-start;
 
+    &.menu-paged {
+      --menu-paged-arrow: -135deg;
+      --menu-paged-back-arrow: 45deg;
+      --menu-paged-close-x: 0;
+      --menu-paged-close-y: 100%;
+      --menu-paged-enter-x: 0;
+      --menu-paged-enter-y: 100%;
+      --menu-paged-row-rest-x: 0;
+      --menu-paged-row-rest-y: -100%;
+
+      [dir="rtl"] & {
+        --menu-paged-arrow: -135deg;
+        --menu-paged-back-arrow: 45deg;
+        --menu-paged-close-x: 0;
+        --menu-paged-enter-x: 0;
+        --menu-paged-row-rest-x: 0;
+      }
+    }
+
     &:not(.menu-paged) > li:not(.menu-title) > details {
       & > :is(ul, menu) {
         @apply bg-base-100 rounded-box absolute ms-0 mt-4 origin-top py-2 pe-2 opacity-0;
@@ -215,15 +234,6 @@
 
   @layer daisyui.l1 {
     &.menu-paged {
-      li,
-      details::details-content {
-        transition: none;
-      }
-
-      li:not(.menu-title) > details[open] > :is(ul, menu) {
-        animation: none;
-      }
-
       li:not(.menu-title) {
         > details {
           > :is(ul, menu) {
