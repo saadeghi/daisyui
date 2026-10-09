@@ -31,7 +31,7 @@
         }
       }
     }
-    @supports (not (timeline-scope: --v)) and (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) {
+    @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) {
       &:focus {
         .diff-resizer:not(input) {
           min-width: 5cqi;
@@ -65,20 +65,24 @@
 
   @layer daisyui.l1 {
     @supports (timeline-scope: --v) {
-      overflow-x: auto;
-      overflow-y: clip;
-      scrollbar-width: none;
-      grid-template-columns: calc(1rem + (1 - var(--diff-pos)) * (100% - 2rem)) 1fr;
-      timeline-scope: --diff-scroll;
-      animation: diff-pos linear both;
-      animation-timeline: --diff-scroll;
+      &:has(.diff-resizer:is(input)) {
+        overflow-x: auto;
+        overflow-y: clip;
+        scrollbar-width: none;
+        grid-template-columns: calc(1rem + (1 - var(--diff-pos)) * (100% - 2rem)) 1fr;
+        timeline-scope: --diff-scroll;
+        animation-name: diff-pos;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: --diff-scroll;
 
-      .diff-resizer:not(input) {
-        display: none;
-      }
+        .diff-resizer:not(input) {
+          display: none;
+        }
 
-      &::-webkit-scrollbar {
-        display: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
   }
@@ -144,10 +148,18 @@
     > * {
       @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
     }
-    @supports (not (timeline-scope: --v)) and (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) {
+    @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) {
       &:after {
         --tw-content: none;
         content: var(--tw-content);
+      }
+    }
+    @supports (timeline-scope: --v) {
+      .diff:has(.diff-resizer:is(input)) & {
+        &:after {
+          --tw-content: "";
+          content: var(--tw-content);
+        }
       }
     }
     @supports (-moz-appearance: none) {
