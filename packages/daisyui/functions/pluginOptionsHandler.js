@@ -19,12 +19,17 @@ export const pluginOptionsHandler = (() => {
       firstRun = false
     }
 
+    // `exclude: themecontroller` removes the :has() theme-controller selectors from themes
+    const excludeThemeController = exclude?.includes("themecontroller") ?? false
+
     const applyTheme = (themeName, flags) => {
       const theme = themesObject[themeName]
       if (theme) {
         // Use prefix for theme-controller class name
         const themeControllerClass = `${prefix}theme-controller`
-        let selector = `${root}:has(input.${themeControllerClass}[value=${themeName}]:checked),[data-theme=${themeName}]`
+        let selector = excludeThemeController
+          ? `[data-theme=${themeName}]`
+          : `${root}:has(input.${themeControllerClass}[value=${themeName}]:checked),[data-theme=${themeName}]`
         if (flags.includes("--default")) {
           selector = `:where(${root}),${selector}`
         }
