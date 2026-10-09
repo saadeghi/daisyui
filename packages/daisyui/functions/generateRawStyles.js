@@ -7,12 +7,47 @@ import postcss from "postcss"
 import selectorParser from "postcss-selector-parser"
 import { compileAndExtractStyles, loadThemes } from "./compileAndExtractStyles.js"
 
+// collect the class names of the top-level rules in a source file
+export function getRootClasses(css) {
+  const classes = new Set()
+  postcss.parse(css).each((node) => {
+    if (node.type !== "rule") return
+    selectorParser((selectors) => {
+      selectors.walkClasses((classNode) => classes.add(classNode.value))
+    }).processSync(node.selector)
+  })
+  return classes
+}
+
 // transform selectors with breakpoint prefix
-export function transformSelector(selector, breakpoint) {
+export function transformSelector(selector, breakpoint, rootClasses = new Set()) {
+  const prefixFirstRootClass = (container) => {
+    let target = null
+    container.walkClasses((classNode) => {
+      if (!target && rootClasses.has(classNode.value)) {
+        target = classNode
+      }
+    })
+    if (target) {
+      target.value = `${breakpoint}:${target.value}`
+    }
+    return Boolean(target)
+  }
+
   return selectorParser((selectors) => {
     selectors.each((selector) => {
-      if (selector.first.type === "class") {
-        selector.first.value = `${breakpoint}:${selector.first.value}`
+      const first = selector.first
+      // a flattened selector list keeps the component class in every argument of a leading :is()/:where()
+      if (first.type === "pseudo" && /^:(is|where)$/.test(first.value) && first.nodes?.length) {
+        let prefixed = false
+        first.nodes.forEach((argument) => {
+          if (prefixFirstRootClass(argument)) prefixed = true
+        })
+        if (prefixed) return
+      }
+      if (prefixFirstRootClass(selector)) return
+      if (first.type === "class") {
+        first.value = `${breakpoint}:${first.value}`
       }
     })
   }).processSync(selector)
@@ -56,7 +91,7 @@ function hasRuleAncestor(rule) {
   return false
 }
 
-export async function generateResponsiveVariants(css) {
+export async function generateResponsiveVariants(css, rootClasses = new Set()) {
   let responsiveStyles = ""
   const root = postcss.parse(css)
 
@@ -67,7 +102,7 @@ export async function generateResponsiveVariants(css) {
       (root) => {
         root.walkRules((rule) => {
           if (!hasRuleAncestor(rule)) {
-            rule.selector = transformSelector(rule.selector, breakpoint)
+            rule.selector = transformSelector(rule.selector, breakpoint, rootClasses)
           }
         })
       },
@@ -94,7 +129,7 @@ async function processFile(
   let stylesContent = await compileAndExtractStyles(styleContent, defaultTheme, theme)
 
   if (responsive && !exclude.includes(file)) {
-    stylesContent = await generateResponsiveVariants(stylesContent)
+    stylesContent = await generateResponsiveVariants(stylesContent, getRootClasses(styleContent))
   }
 
   stylesContent = cleanCss(stylesContent)
