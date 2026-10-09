@@ -26,6 +26,10 @@ classnames:
   import Translate from "$components/Translate.svelte"
 </script>
 
+> :INFO:
+>
+> Browsers with scroll-driven animations move the divider with the `diff-resizer` range input. Other browsers use the draggable empty `diff-resizer` div, so keep both elements in the markup.
+
 ### ~Diff
 <figure class="diff rounded-field aspect-16/9" tabindex="0">
   <div class="diff-item-1" role="img" tabindex="0">
@@ -35,6 +39,7 @@ classnames:
     <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
   <div class="diff-resizer"></div>
+  <input type="range" min="0" max="100" value="50" class="diff-resizer" aria-label="Adjust the diff divider position" />
 </figure>
 
 ```html
@@ -48,6 +53,7 @@ classnames:
       src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
   <div class="$$diff-resizer"></div>
+  <input type="range" min="0" max="100" value="50" class="$$diff-resizer" aria-label="Adjust the diff divider position" />
 </figure>
 ```
 
@@ -61,6 +67,7 @@ classnames:
     <div class="bg-base-200 text-4xl lg:text-9xl font-black grid place-content-center">DAISY</div>
   </div>
   <div class="diff-resizer"></div>
+  <input type="range" min="0" max="100" value="50" class="diff-resizer" aria-label="Adjust the diff divider position" />
 </figure>
 
 ```html
@@ -74,5 +81,6 @@ classnames:
     <div class="bg-base-200 grid place-content-center text-9xl font-black">DAISY</div>
   </div>
   <div class="$$diff-resizer"></div>
+  <input type="range" min="0" max="100" value="50" class="$$diff-resizer" aria-label="Adjust the diff divider position" />
 </figure>
 ```
