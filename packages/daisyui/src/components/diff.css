@@ -12,14 +12,14 @@
     }
     &:focus-visible {
       @apply outline-base-content outline-2 outline-offset-1;
-      .diff-resizer {
+      .diff-resizer:not(input) {
         min-width: 95cqi;
         max-width: 95cqi;
       }
     }
     &:has(.diff-item-1:focus-visible) {
       @apply outline-2 outline-offset-1;
-      .diff-resizer {
+      .diff-resizer:not(input) {
         min-width: 5cqi;
         max-width: 5cqi;
       }
@@ -31,15 +31,15 @@
         }
       }
     }
-    @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
+    @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) {
       &:focus {
-        .diff-resizer {
+        .diff-resizer:not(input) {
           min-width: 5cqi;
           max-width: 5cqi;
         }
       }
       &:has(.diff-item-1:focus) {
-        .diff-resizer {
+        .diff-resizer:not(input) {
           min-width: 95cqi;
           max-width: 95cqi;
         }
@@ -62,17 +62,71 @@
       }
     }
   }
+
+  @layer daisyui.l1 {
+    @supports (timeline-scope: --v) {
+      &:has(.diff-resizer:is(input)) {
+        overflow-x: auto;
+        overflow-y: clip;
+        scrollbar-width: none;
+        grid-template-columns: calc(1rem + (1 - var(--diff-pos)) * (100% - 2rem)) 1fr;
+        timeline-scope: --diff-scroll;
+        animation-name: diff-pos;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: --diff-scroll;
+
+        .diff-resizer:not(input) {
+          display: none;
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
 }
 .diff-resizer {
-  @layer daisyui.l1.l2.l3 {
-    @apply relative isolate z-2 col-start-1 row-start-2 h-3 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
-    transform: scaleY(5) translate(0.32rem, 50%);
-    cursor: ew-resize;
-    transform-origin: 100% 100%;
-    clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
-    transition:
-      min-width 0.3s ease-out,
-      max-width 0.3s ease-out;
+  &:not(input) {
+    @layer daisyui.l1.l2.l3 {
+      @apply relative isolate z-2 col-start-1 row-start-2 h-3 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
+      transform: scaleY(5) translate(0.32rem, 50%);
+      cursor: ew-resize;
+      transform-origin: 100% 100%;
+      clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
+      transition:
+        min-width 0.3s ease-out,
+        max-width 0.3s ease-out;
+    }
+  }
+
+  &:is(input) {
+    @layer daisyui.l1.l2.l3 {
+      @apply hidden;
+    }
+
+    @layer daisyui.l1.l2 {
+      @supports (timeline-scope: --v) {
+        @apply absolute inset-0 z-4 m-0 block h-full w-full cursor-ew-resize opacity-0;
+        grid-column: auto;
+        grid-row: auto;
+
+        &::-webkit-slider-runnable-track,
+        &::-moz-range-track {
+          background: transparent;
+          border: 0;
+        }
+
+        &::-webkit-slider-thumb {
+          view-timeline: --diff-scroll inline;
+        }
+
+        &::-moz-range-thumb {
+          view-timeline: --diff-scroll inline;
+        }
+      }
+    }
   }
 }
 .diff-item-2 {
@@ -94,10 +148,18 @@
     > * {
       @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
     }
-    @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
+    @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) {
       &:after {
         --tw-content: none;
         content: var(--tw-content);
+      }
+    }
+    @supports (timeline-scope: --v) {
+      .diff:has(.diff-resizer:is(input)) & {
+        &:after {
+          --tw-content: "";
+          content: var(--tw-content);
+        }
       }
     }
     @supports (-moz-appearance: none) {
@@ -121,5 +183,14 @@
     > * {
       @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
     }
+  }
+}
+
+@keyframes diff-pos {
+  from {
+    --diff-pos: 0;
+  }
+  to {
+    --diff-pos: 1;
   }
 }
