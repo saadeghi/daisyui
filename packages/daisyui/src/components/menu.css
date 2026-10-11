@@ -51,6 +51,10 @@
         content: "";
         transform-origin: 50% 50%;
         box-shadow: 2px 2px inset;
+        @media (forced-colors: active) {
+          border-style: solid;
+          border-width: 2px 0 0 2px;
+        }
         pointer-events: none;
       }
     }
