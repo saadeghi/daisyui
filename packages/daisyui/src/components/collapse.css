@@ -254,6 +254,10 @@
       content: "";
       transform-origin: 75% 75%;
       box-shadow: 2px 2px;
+      @media (forced-colors: active) {
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+      }
       pointer-events: none;
     }
   }
