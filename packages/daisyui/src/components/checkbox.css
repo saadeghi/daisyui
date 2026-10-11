@@ -74,6 +74,12 @@
         translate: 0 -40%;
         clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 80% 80%, 80% 100%);
       }
+      @media (forced-colors: active) {
+        &:before {
+          @apply rotate-0 bg-transparent [--tw-content:"−"] [clip-path:none];
+          translate: 0;
+        }
+      }
     }
   }
 }
