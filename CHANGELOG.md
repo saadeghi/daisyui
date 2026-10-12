@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.48](https://github.com/saadeghi/daisyui/compare/v5.7.47...v5.7.48) (2026-10-12)
+
+### Bug Fixes
+
+* show the indeterminate checkbox mark in forced colors mode like the checked one ([#4804](https://github.com/saadeghi/daisyui/issues/4804)) ([4f8de95](https://github.com/saadeghi/daisyui/commit/4f8de95c84f28b0fe5b793f2482f2f3949971198))
+
 ## [5.7.47](https://github.com/saadeghi/daisyui/compare/v5.7.46...v5.7.47) (2026-09-30)
 
 ### Bug Fixes
