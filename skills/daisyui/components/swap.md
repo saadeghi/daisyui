@@ -6,7 +6,7 @@ Use the swap component to change the visibility of two elements. Control the swa
 #### Class names
 - component: `swap`
 - part: `swap-on`, `swap-off`, `swap-indeterminate`
-- modifier: `swap-active`
+- modifier: `swap-active`, `swap-multi`
 - style: `swap-rotate`, `swap-flip`
 
 #### Syntax
@@ -31,3 +31,4 @@ Class name:
 - `{MODIFIER}` is optional. It can include one modifier class name and one style class name.
 - Use only a hidden checkbox to control the swap state. As an alternative, use JavaScript to add or remove the `swap-active` class.
 - To show content when the checkbox is indeterminate, use the `swap-indeterminate` class.
+- To swap between more than two items, use the `swap-multi` class and put a radio input before each item. Every click shows the next item.
