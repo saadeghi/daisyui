@@ -1,5 +1,5 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs"
-import { dirname, join, relative, resolve } from "node:path"
+import { dirname, join, relative, resolve, sep } from "node:path"
 import { fileURLToPath } from "node:url"
 import { parseSearchCsv } from "../searchCsv.js"
 
@@ -176,7 +176,11 @@ export const verifyBuild = ({
   }
 
   const files = collectFiles(resolvedBuildDir)
-  const relativeFiles = files.map((filePath) => relative(resolvedBuildDir, filePath))
+  // relative() yields platform separators, but every check below (and the
+  // messages built from these paths) is written in POSIX form.
+  const relativeFiles = files.map((filePath) =>
+    relative(resolvedBuildDir, filePath).replaceAll(sep, "/"),
+  )
   const routeCount = relativeFiles.filter(
     (filePath) => filePath === "index.html" || filePath.endsWith("/index.html"),
   ).length
