@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.50](https://github.com/saadeghi/daisyui/compare/v5.7.49...v5.7.50) (2026-10-13)
+
 ## [5.7.49](https://github.com/saadeghi/daisyui/compare/v5.7.48...v5.7.49) (2026-10-13)
 
 ### Bug Fixes
