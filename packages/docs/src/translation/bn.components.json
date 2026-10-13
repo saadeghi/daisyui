@@ -276,6 +276,8 @@
   "Popover API is the new HTML standard for creating dropdowns.": "Popover API হল ড্রপডাউন তৈরির জন্য নতুন HTML স্ট্যান্ডার্ড।",
   "Popover is similar to dialog but it still allows focusing on the background elements. It is accessible and we can close the modal using `Esc` key.": "পপওভার ডায়ালগের মতো কিন্তু এটি এখনও পটভূমি উপাদানগুলিতে ফোকাস করার অনুমতি দেয়৷ এটি অ্যাক্সেসযোগ্য এবং আমরা `Esc` কী ব্যবহার করে Modal বন্ধ করতে পারি।",
   "Rotates through 3 words, in 10 seconds": "10 সেকেন্ডে 3টি শব্দের মাধ্যমে ঘোরে৷",
+  "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden": "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden",
+  "Set the duration of one full loop using the --marquee-duration CSS variable": "Set the duration of one full loop using the --marquee-duration CSS variable",
   "Services": "সেবা",
   "size of component or part": "Component বা অংশের আকার",
   "Text labels for each button": "প্রতিটি Button এর জন্য পাঠ্য লেবেল",

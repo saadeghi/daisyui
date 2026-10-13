@@ -276,6 +276,8 @@
   "Popover API is the new HTML standard for creating dropdowns.": "Popover API는 드롭다운 생성을 위한 새로운 HTML 표준입니다.",
   "Popover is similar to dialog but it still allows focusing on the background elements. It is accessible and we can close the modal using `Esc` key.": "팝오버는 대화 상자와 유사하지만 여전히 배경 요소에 집중할 수 있습니다. 액세스 가능하며 `Esc` 키를 사용하여 Modal를 닫을 수 있습니다.",
   "Rotates through 3 words, in 10 seconds": "10초 안에 3단어를 순환합니다.",
+  "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden": "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden",
+  "Set the duration of one full loop using the --marquee-duration CSS variable": "Set the duration of one full loop using the --marquee-duration CSS variable",
   "Services": "서비스",
   "size of component or part": "Component 또는 부품의 크기",
   "Text labels for each button": "각 Button의 텍스트 라벨",

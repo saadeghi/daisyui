@@ -276,6 +276,8 @@
   "Popover API is the new HTML standard for creating dropdowns.": "API Popover là tiêu chuẩn HTML mới để tạo danh sách thả xuống.",
   "Popover is similar to dialog but it still allows focusing on the background elements. It is accessible and we can close the modal using `Esc` key.": "Popover tương tự như hộp thoại nhưng vẫn cho phép tập trung vào các thành phần nền. Nó có thể truy cập được và chúng ta có thể đóng Modal bằng phím `Esc`.",
   "Rotates through 3 words, in 10 seconds": "Xoay qua 3 từ, trong 10 giây",
+  "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden": "Put two copies of the content inside the marquee, so the loop is seamless. Hide the second copy from screen readers using aria-hidden",
+  "Set the duration of one full loop using the --marquee-duration CSS variable": "Set the duration of one full loop using the --marquee-duration CSS variable",
   "Services": "Dịch vụ",
   "size of component or part": "kích thước của Component hoặc một phần",
   "Text labels for each button": "Nhãn văn bản cho mỗi Button",
