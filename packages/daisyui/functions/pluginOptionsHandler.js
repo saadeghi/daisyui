@@ -24,7 +24,7 @@ export const pluginOptionsHandler = (() => {
       if (theme) {
         // Use prefix for theme-controller class name
         const themeControllerClass = `${prefix}theme-controller`
-        let selector = `${root}:has(input.${themeControllerClass}[value=${themeName}]:checked),[data-theme=${themeName}]`
+        let selector = `${root}:has(input.${themeControllerClass}[value="${themeName}"]:checked),[data-theme="${themeName}"]`
         if (flags.includes("--default")) {
           selector = `:where(${root}),${selector}`
         }
@@ -32,9 +32,7 @@ export const pluginOptionsHandler = (() => {
 
         if (flags.includes("--prefersdark")) {
           // Use :root:not([data-theme]) for dark mode specificity
-          const darkSelector =
-            root === ":root" ? ":root:not([data-theme])" : `${root}:not([data-theme])`
-          addBase({ "@media (prefers-color-scheme: dark)": { [darkSelector]: theme } })
+          addBase({ "@media (prefers-color-scheme: dark)": { [`${root}:not([data-theme])`]: theme } })
         }
       }
     }
@@ -45,9 +43,7 @@ export const pluginOptionsHandler = (() => {
       }
 
       if (themesObject["dark"]) {
-        const darkSelector =
-          root === ":root" ? ":root:not([data-theme])" : `${root}:not([data-theme])`
-        addBase({ "@media (prefers-color-scheme: dark)": { [darkSelector]: themesObject["dark"] } })
+        addBase({ "@media (prefers-color-scheme: dark)": { [`${root}:not([data-theme])`]: themesObject["dark"] } })
       }
 
       themeOrder.forEach((themeName) => {
@@ -77,10 +73,8 @@ export const pluginOptionsHandler = (() => {
       themeArray.forEach((themeOption) => {
         const [themeName, ...flags] = themeOption.split(" ")
         if (flags.includes("--prefersdark")) {
-          const darkSelector =
-            root === ":root" ? ":root:not([data-theme])" : `${root}:not([data-theme])`
           addBase({
-            "@media (prefers-color-scheme: dark)": { [darkSelector]: themesObject[themeName] },
+            "@media (prefers-color-scheme: dark)": { [`${root}:not([data-theme])`]: themesObject[themeName] },
           })
         }
       })
