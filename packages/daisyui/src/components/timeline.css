@@ -24,7 +24,7 @@
         &:last-child {
           @apply col-start-3 col-end-[none] row-start-2 row-end-auto;
         }
-        @media print {
+        @media print, (forced-colors: active) {
           border: 0.1px solid var(--color-base-300);
         }
       }
