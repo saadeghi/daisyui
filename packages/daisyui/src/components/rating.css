@@ -12,6 +12,10 @@
 
       width: calc(var(--size) * 1);
       height: calc(var(--size));
+      @media (forced-colors: active) {
+        background-color: CanvasText;
+        forced-color-adjust: none;
+      }
 
       @media (prefers-reduced-motion: no-preference) {
         animation: rating 0.25s ease-out;
