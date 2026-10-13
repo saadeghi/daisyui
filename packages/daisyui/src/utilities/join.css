@@ -6,6 +6,7 @@
   --join-ee: 0;
   --join-ml: 0;
   --join-mt: 0;
+  --join-last: 0;
   --join-v: 0;
   --join-h: 1;
 
@@ -32,6 +33,7 @@
       --join-se: calc(var(--radius-field) * var(--join-h));
       --join-es: calc(var(--radius-field) * var(--join-v));
       --join-ee: var(--radius-field);
+      --join-last: 1;
     }
 
     :where(:scope > :only-child) {
@@ -55,6 +57,7 @@
       --join-se: initial;
       --join-es: initial;
       --join-ee: initial;
+      --join-last: initial;
     }
   }
 
@@ -72,8 +75,8 @@
 
   &:is(:disabled, [disabled], .btn-disabled) {
     border-width: var(--border, 1px);
-    border-inline-end-width: calc(var(--border, 1px) * var(--join-v));
-    border-block-end-width: calc(var(--border, 1px) * var(--join-h));
+    border-inline-end-width: calc(var(--border, 1px) * max(var(--join-v), var(--join-last, 0)));
+    border-block-end-width: calc(var(--border, 1px) * max(var(--join-h), var(--join-last, 0)));
   }
 }
 
