@@ -118,7 +118,7 @@
         transform: rotateY(0deg);
         inset-inline-start: -0.75rem;
       }
-      [dir="rtl"] &:before {
+      &:dir(rtl):before {
         transform: rotateY(180deg);
       }
     }
@@ -149,7 +149,7 @@
         transform: rotateY(180deg);
         inset-inline-start: 100%;
       }
-      [dir="rtl"] &:before {
+      &:dir(rtl):before {
         transform: rotateY(0deg);
       }
     }
