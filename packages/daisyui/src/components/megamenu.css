@@ -34,6 +34,10 @@
         display: block;
         opacity: 0.25;
         rotate: -135deg;
+        @media (forced-colors: active) {
+          border-style: solid;
+          border-width: 2px 0 0 2px;
+        }
       }
       &:nth-of-type(1) {
         --mm-anchor: --mm1;
