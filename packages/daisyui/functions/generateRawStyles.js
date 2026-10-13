@@ -89,6 +89,7 @@ async function processFile(
   responsive,
   exclude,
   layer,
+  unlayered,
 ) {
   const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), "utf-8")
   let stylesContent = await compileAndExtractStyles(styleContent, defaultTheme, theme)
@@ -99,7 +100,7 @@ async function processFile(
 
   stylesContent = cleanCss(stylesContent)
 
-  if (layer) {
+  if (layer && !unlayered.includes(file)) {
     stylesContent = `@layer ${layer} {\n${stylesContent}\n}`
   }
 
@@ -115,6 +116,7 @@ export async function generateRawStyles({
   responsive = false,
   exclude = [],
   layer = null,
+  unlayered = [],
 }) {
   try {
     const { defaultTheme, theme } = await loadThemes()
@@ -124,11 +126,19 @@ export async function generateRawStyles({
 
     // Process all files concurrently
     const processPromises = files.map((file) =>
-      processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude, layer).catch(
-        (fileError) => {
-          throw new Error(`Error processing file ${file}: ${fileError.message}`)
-        },
-      ),
+      processFile(
+        file,
+        stylesDir,
+        distDir,
+        defaultTheme,
+        theme,
+        responsive,
+        exclude,
+        layer,
+        unlayered,
+      ).catch((fileError) => {
+        throw new Error(`Error processing file ${file}: ${fileError.message}`)
+      }),
     )
 
     // Wait for all files to be processed
