@@ -1,0 +1,332 @@
+.sheet {
+  @layer daisyui.l1.l2.l3 {
+    /*
+      public
+
+      --sheet-half (defaults to 50% of size)
+      --sheet-full (defaults to 100% of size of screen)
+    */
+    --sheet-handle: 3em;
+
+    @apply pointer-events-none fixed inset-0 z-50 flex overscroll-none;
+
+    scroll-timeline-name: --sheet-scroll;
+
+    @media (hover: none) and (pointer: coarse) {
+      @apply overflow-auto;
+
+      scroll-timeline-axis: var(--sheet-snap-axis);
+      scroll-snap-type: var(--sheet-snap-axis) mandatory;
+      scrollbar-width: none;
+      transition: pointer-events 0s 0.6s;
+
+      &::-webkit-scrollbar {
+        @apply hidden;
+      }
+
+      &:has(:active, :hover) {
+        @apply pointer-events-auto;
+        transition: pointer-events 0s 0s;
+      }
+
+      .sheet-spacer-closed,
+      .sheet-spacer-half {
+        @apply pointer-events-none shrink-0;
+        scroll-snap-align: var(--sheet-snap-align);
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      @apply overflow-hidden;
+
+      .sheet-spacer-closed,
+      .sheet-spacer-half {
+        @apply hidden;
+      }
+
+      &:has(.sheet-radio-closed:checked) {
+        --sheet-state-transform: var(--sheet-trans-closed);
+      }
+
+      &:has(.sheet-radio-half:checked) {
+        --sheet-state-transform: var(--sheet-trans-half);
+      }
+
+      &:has(.sheet-radio-full:checked) {
+        --sheet-state-transform: var(--sheet-trans-full);
+      }
+
+      &:has(.sheet-radio-half) {
+        &:has(.sheet-radio-closed:checked) .sheet-toggle-to-half,
+        &:has(.sheet-radio-half:checked) .sheet-toggle-to-full,
+        &:has(.sheet-radio-full:checked) .sheet-toggle-to-closed {
+          display: block;
+        }
+      }
+
+      &:not(:has(.sheet-radio-half)) {
+        &:has(.sheet-radio-closed:checked) .sheet-toggle-to-full,
+        &:has(.sheet-radio-full:checked) .sheet-toggle-to-closed {
+          display: block;
+        }
+      }
+    }
+
+    .sheet-radio-closed,
+    .sheet-radio-half,
+    .sheet-radio-full {
+      @apply hidden;
+    }
+  }
+}
+
+.sheet-handle {
+  @layer daisyui.l1.l2.l3 {
+    @apply relative flex shrink-0 items-center justify-center;
+    min-block-size: var(--sheet-handle);
+    min-inline-size: var(--sheet-handle);
+    border-radius: inherit;
+
+    @media (hover: none) and (pointer: coarse) {
+      @apply touch-manipulation opacity-70 select-none;
+      transition: opacity 0.2s ease;
+
+      .sheet:has(:active, :hover) & {
+        @apply opacity-100;
+      }
+    }
+  }
+}
+
+.sheet-backdrop {
+  @layer daisyui.l1.l2.l3 {
+    @apply bg-base-content/60 pointer-events-none fixed inset-0 opacity-0 transition-opacity duration-300;
+
+    @supports (animation-timeline: scroll()) {
+      @media (hover: none) and (pointer: coarse) {
+        .sheet-bottom &,
+        .sheet-end & {
+          animation: sheet-fade-in linear both;
+          animation-timeline: --sheet-scroll;
+        }
+
+        .sheet-top &,
+        .sheet-start & {
+          animation: sheet-fade-out linear both;
+          animation-timeline: --sheet-scroll;
+        }
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .sheet:has(.sheet-radio-half:checked) & {
+        @apply pointer-events-auto cursor-pointer opacity-50;
+      }
+
+      .sheet:has(.sheet-radio-full:checked) & {
+        @apply pointer-events-auto cursor-pointer opacity-100;
+      }
+    }
+  }
+}
+
+.sheet-toggle {
+  @layer daisyui.l1.l2.l3 {
+    @media (hover: none) and (pointer: coarse) {
+      @apply hidden;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      @apply absolute inset-0 z-10 hidden cursor-pointer;
+    }
+  }
+}
+
+.sheet-content {
+  @layer daisyui.l1.l2.l3 {
+    @media (hover: none) and (pointer: coarse) {
+      @apply pointer-events-auto z-1 flex shrink-0 overscroll-auto;
+      scroll-snap-align: var(--sheet-snap-align);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      @apply pointer-events-auto absolute flex;
+      transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+      transform: var(--sheet-state-transform, var(--sheet-trans-closed));
+    }
+  }
+}
+
+.sheet-bottom {
+  @layer daisyui.l1.l2 {
+    --sheet-half: 50%;
+    --sheet-full: 100dvh;
+    --sheet-snap-axis: y;
+    --sheet-snap-align: start;
+    --sheet-trans-closed: translateY(calc(100dvh - var(--sheet-handle)));
+    --sheet-trans-half: translateY(calc(100dvh - var(--sheet-half) - var(--sheet-handle)));
+    --sheet-trans-full: translateY(calc(100dvh - 100%));
+
+    @apply flex-col;
+
+    .sheet-content {
+      @apply rounded-t-box w-full flex-col;
+
+      max-block-size: var(--sheet-full);
+    }
+
+    .sheet-spacer-closed {
+      block-size: calc(100% - var(--sheet-handle));
+    }
+
+    &:has(.sheet-spacer-half) .sheet-spacer-closed {
+      block-size: calc(var(--sheet-half) - var(--sheet-handle));
+    }
+
+    .sheet-spacer-half {
+      block-size: calc(100% - var(--sheet-half));
+    }
+  }
+}
+
+.sheet-top {
+  @layer daisyui.l1.l2 {
+    --sheet-half: 50dvh;
+    --sheet-full: 100dvh;
+    --sheet-snap-axis: y;
+    --sheet-snap-align: end;
+    --sheet-trans-closed: translateY(calc(-100dvh + var(--sheet-handle)));
+    --sheet-trans-half: translateY(calc(-100dvh + var(--sheet-half) + var(--sheet-handle)));
+    --sheet-trans-full: translateY(calc(-100dvh + 100%));
+
+    @apply flex-col-reverse;
+
+    .sheet-content {
+      @apply rounded-b-box w-full flex-col-reverse;
+
+      max-block-size: var(--sheet-full);
+    }
+
+    .sheet-spacer-closed {
+      block-size: calc(100% - var(--sheet-handle));
+    }
+
+    &:has(.sheet-spacer-half) .sheet-spacer-closed {
+      block-size: calc(var(--sheet-half) - var(--sheet-handle));
+    }
+
+    .sheet-spacer-half {
+      block-size: calc(100% - var(--sheet-half));
+    }
+  }
+}
+
+.sheet-end {
+  @layer daisyui.l1.l2 {
+    --sheet-half: 50%;
+    --sheet-full: 100%;
+    --sheet-snap-axis: x;
+    --sheet-snap-align: start;
+    --sheet-trans-closed: translateX(calc(100% - var(--sheet-handle)));
+    --sheet-trans-half: translateX(calc(100% - var(--sheet-half) - var(--sheet-handle)));
+    --sheet-trans-full: translateX(0);
+
+    @apply flex-row;
+
+    @media (min-width: 40rem) {
+      --sheet-full: 400px;
+    }
+
+    .sheet-content {
+      @apply rounded-l-box h-[100dvh] flex-row;
+
+      max-inline-size: var(--sheet-full);
+
+      &:dir(rtl) {
+        @apply rounded-r-box;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        inset-inline-end: 0;
+      }
+    }
+
+    .sheet-spacer-closed {
+      inline-size: calc(100% - var(--sheet-handle));
+    }
+
+    &:has(.sheet-spacer-half) .sheet-spacer-closed {
+      inline-size: calc(var(--sheet-half) - var(--sheet-handle));
+    }
+
+    .sheet-spacer-half {
+      inline-size: calc(100% - var(--sheet-half));
+    }
+  }
+}
+
+.sheet-start {
+  @layer daisyui.l1.l2 {
+    --sheet-half: 50%;
+    --sheet-full: 100%;
+    --sheet-snap-axis: x;
+    --sheet-snap-align: end;
+    --sheet-trans-closed: translateX(calc(-100% + var(--sheet-handle)));
+    --sheet-trans-half: translateX(calc(-100% + var(--sheet-half) + var(--sheet-handle)));
+    --sheet-trans-full: translateX(0);
+
+    @apply flex-row-reverse;
+
+    @media (min-width: 40rem) {
+      --sheet-full: 400px;
+    }
+
+    .sheet-content {
+      @apply rounded-r-box h-[100dvh] flex-row-reverse;
+
+      max-inline-size: var(--sheet-full);
+
+      &:dir(rtl) {
+        @apply rounded-l-box;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        inset-inline-start: 0;
+      }
+    }
+
+    .sheet-spacer-closed {
+      inline-size: calc(100% - var(--sheet-handle));
+    }
+
+    &:has(.sheet-spacer-half) .sheet-spacer-closed {
+      inline-size: calc(var(--sheet-half) - var(--sheet-handle));
+    }
+
+    .sheet-spacer-half {
+      inline-size: calc(100% - var(--sheet-half));
+    }
+  }
+}
+
+@keyframes sheet-fade-in {
+  0%,
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sheet-fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
