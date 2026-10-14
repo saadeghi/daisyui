@@ -148,6 +148,9 @@
       &.menu-disabled,
       [disabled] {
         @apply text-base-content/20 pointer-events-none;
+        @media (forced-colors: active) {
+          color: GrayText;
+        }
       }
     }
     .dropdown:focus-within {
