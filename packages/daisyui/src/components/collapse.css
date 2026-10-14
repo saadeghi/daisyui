@@ -27,6 +27,9 @@
     ),
     &:not(.collapse-close):has(> input:is([type="checkbox"], [type="radio"]):checked) {
       grid-template-rows: max-content 1fr;
+      /* lift open collapse above siblings so overflowing content (e.g. dropdowns)
+         isn't covered by the next collapse's stacking context */
+      z-index: 1;
     }
 
     &:is(
@@ -296,6 +299,9 @@
 .collapse-open {
   @layer daisyui.l1.l2 {
     grid-template-rows: max-content 1fr;
+    /* lift open collapse above siblings so overflowing content (e.g. dropdowns)
+       isn't covered by the next collapse's stacking context */
+    z-index: 1;
     > .collapse-content {
       --overflow-delay: 0.2s;
       overflow: visible;
