@@ -53,6 +53,11 @@
         & + .tab-content {
           @apply block;
         }
+        @media (forced-colors: active) {
+          &:not(.tabs-border > *) {
+            border: 1px solid;
+          }
+        }
       }
       &:not(
         :checked,
