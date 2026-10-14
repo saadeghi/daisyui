@@ -11,6 +11,11 @@
     );
     box-shadow: 0 2px 3px -1px color-mix(in oklab, currentColor calc(var(--depth) * 100%), #0000);
   }
+  @layer daisyui.l1 {
+    @media (forced-colors: active) {
+      background-color: CanvasText;
+    }
+  }
 }
 
 .status-primary {
