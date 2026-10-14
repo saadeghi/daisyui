@@ -90,6 +90,9 @@
       &.menu-focus,
       &:focus-visible {
         @apply bg-base-content/10 text-base-content cursor-pointer outline-hidden;
+        @media (forced-colors: active) {
+          outline-offset: -2px;
+        }
       }
     }
     :where(
