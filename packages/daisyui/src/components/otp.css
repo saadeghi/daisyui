@@ -15,7 +15,8 @@
     /* OTP codes read left-to-right (digits are bidi-LTR), so keep the boxes and
        the input aligned by pinning the component to LTR even inside dir="rtl". */
     direction: ltr;
-    clip-path: inset(-3.5px 3.5px -3.5px -3.5px);
+    /* let focus outlines show past the boxes on every side */
+    clip-path: inset(-3.5px);
     border-radius: var(--radius-field);
     font-size: 1.75rem;
     gap: var(--otp-gap);
@@ -46,29 +47,31 @@
       }
     }
 
+    /* width = N boxes + (N-1) gaps, so drop the trailing gap that stride * N
+       would add after the last box (otherwise the group sits off-center) */
     &:has(> span:nth-child(1)) {
-      width: calc(var(--stride) * 1);
+      width: calc(var(--stride) * 1 - var(--otp-gap));
     }
     &:has(> span:nth-child(2)) {
-      width: calc(var(--stride) * 2);
+      width: calc(var(--stride) * 2 - var(--otp-gap));
     }
     &:has(> span:nth-child(3)) {
-      width: calc(var(--stride) * 3);
+      width: calc(var(--stride) * 3 - var(--otp-gap));
     }
     &:has(> span:nth-child(4)) {
-      width: calc(var(--stride) * 4);
+      width: calc(var(--stride) * 4 - var(--otp-gap));
     }
     &:has(> span:nth-child(5)) {
-      width: calc(var(--stride) * 5);
+      width: calc(var(--stride) * 5 - var(--otp-gap));
     }
     &:has(> span:nth-child(6)) {
-      width: calc(var(--stride) * 6);
+      width: calc(var(--stride) * 6 - var(--otp-gap));
     }
     &:has(> span:nth-child(7)) {
-      width: calc(var(--stride) * 7);
+      width: calc(var(--stride) * 7 - var(--otp-gap));
     }
     &:has(> span:nth-child(8)) {
-      width: calc(var(--stride) * 8);
+      width: calc(var(--stride) * 8 - var(--otp-gap));
     }
 
     > span {
