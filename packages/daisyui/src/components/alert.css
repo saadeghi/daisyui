@@ -28,6 +28,13 @@
       0 4px 3px -2px oklch(0% 0 0 / calc(var(--depth) * 0.08));
     &:has(> :nth-child(2)) {
       grid-template-columns: auto minmax(auto, 1fr);
+      /* no icon: the 2nd element is the actions group, so the 1st one grows instead */
+      &:not(:has(> :nth-child(3), > :is(svg, img, i))):has(
+          > :last-child:is(button, .btn, [class*="btn"]),
+          > :last-child > :is(button, .btn, [class*="btn"])
+        ) {
+        grid-template-columns: minmax(auto, 1fr) auto;
+      }
     }
   }
 }
@@ -121,6 +128,13 @@
     text-align: start;
     &:has(> :nth-child(2)) {
       grid-template-columns: auto minmax(auto, 1fr);
+      /* no icon: the 2nd element is the actions group, so the 1st one grows instead */
+      &:not(:has(> :nth-child(3), > :is(svg, img, i))):has(
+          > :last-child:is(button, .btn, [class*="btn"]),
+          > :last-child > :is(button, .btn, [class*="btn"])
+        ) {
+        grid-template-columns: minmax(auto, 1fr) auto;
+      }
     }
   }
 }
