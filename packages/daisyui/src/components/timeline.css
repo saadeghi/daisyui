@@ -34,13 +34,17 @@
       @apply bg-base-300 h-1;
     }
 
-    &:has(.timeline-middle hr) {
-      &:first-child {
-        @apply rounded-e-selector rounded-s-none;
-      }
+    &:has(.timeline-middle) {
+      > li {
+        > hr {
+          &:first-child {
+            @apply rounded-e-selector rounded-s-none;
+          }
 
-      &:last-child {
-        @apply rounded-s-selector rounded-e-none;
+          &:last-child {
+            @apply rounded-s-selector rounded-e-none;
+          }
+        }
       }
     }
 
