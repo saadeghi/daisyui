@@ -47,6 +47,12 @@
       }
     }
 
+    @supports (-webkit-nbsp-mode: space) {
+      > input:focus {
+        text-indent: 2px;
+      }
+    }
+
     /* width = N boxes + (N-1) gaps, so drop the trailing gap that stride * N
        would add after the last box (otherwise the group sits off-center) */
     &:has(> span:nth-child(1)) {
