@@ -86,7 +86,9 @@
       padding: 1rem;
       padding-inline-end: 3rem;
       min-height: 1lh;
-      transition: background-color 0.2s ease-out;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: background-color 0.2s ease-out;
+      }
 
       /* this breaks Collapse with checkbox and close on click outside */
       /* &:has(~ label) {
@@ -254,6 +256,10 @@
       content: "";
       transform-origin: 75% 75%;
       box-shadow: 2px 2px;
+      @media (forced-colors: active) {
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+      }
       pointer-events: none;
     }
   }
@@ -289,7 +295,9 @@
     padding: 1rem;
     padding-inline-end: 3rem;
     min-height: 1lh;
-    transition: background-color 0.2s ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: background-color 0.2s ease-out;
+    }
   }
 }
 

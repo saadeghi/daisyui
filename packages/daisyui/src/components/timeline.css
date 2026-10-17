@@ -24,7 +24,7 @@
         &:last-child {
           @apply col-start-3 col-end-[none] row-start-2 row-end-auto;
         }
-        @media print {
+        @media print, (forced-colors: active) {
           border: 0.1px solid var(--color-base-300);
         }
       }
@@ -34,13 +34,17 @@
       @apply bg-base-300 h-1;
     }
 
-    &:has(.timeline-middle hr) {
-      &:first-child {
-        @apply rounded-e-selector rounded-s-none;
-      }
+    &:has(.timeline-middle) {
+      > li {
+        > hr {
+          &:first-child {
+            @apply rounded-e-selector rounded-s-none;
+          }
 
-      &:last-child {
-        @apply rounded-s-selector rounded-e-none;
+          &:last-child {
+            @apply rounded-s-selector rounded-e-none;
+          }
+        }
       }
     }
 
