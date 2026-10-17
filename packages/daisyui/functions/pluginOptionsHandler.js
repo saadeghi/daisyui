@@ -23,7 +23,8 @@ export const pluginOptionsHandler = (() => {
     }
 
     // `exclude: themecontroller` removes the :has() theme-controller selectors from themes
-    const excludeThemeController = exclude?.includes("themecontroller") ?? false
+    const excludeThemeController =
+      Array.isArray(excludeList) && excludeList.includes("themecontroller")
 
     const applyTheme = (themeName, flags) => {
       const theme = themesObject[themeName]
