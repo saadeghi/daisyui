@@ -12,6 +12,8 @@ export const pluginOptionsHandler = (() => {
       prefix = "",
     } = options || {}
 
+    const includeList =
+      typeof include === "string" ? include.split(",").map((item) => item.trim()) : include
     const excludeList =
       typeof exclude === "string" ? exclude.split(",").map((item) => item.trim()) : exclude
 
@@ -71,7 +73,7 @@ export const pluginOptionsHandler = (() => {
       if (themeArray.length === 1 && themeArray[0].includes("--default")) {
         const [themeName, ...flags] = themeArray[0].split(" ")
         applyTheme(themeName, flags)
-        return { include, exclude: excludeList, prefix }
+        return { include: includeList, exclude: excludeList, prefix }
       }
 
       // default theme
@@ -101,6 +103,6 @@ export const pluginOptionsHandler = (() => {
       })
     }
 
-    return { include, exclude: excludeList, prefix }
+    return { include: includeList, exclude: excludeList, prefix }
   }
 })()

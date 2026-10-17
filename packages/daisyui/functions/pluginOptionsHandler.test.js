@@ -1,5 +1,7 @@
 import { expect, test, mock } from "bun:test"
 import { pluginOptionsHandler } from "./pluginOptionsHandler"
+import { compile } from "tailwindcss"
+import daisyui from "../index.js"
 
 // Mock functions
 const mockAddBase = mock(() => {})
@@ -85,22 +87,59 @@ test("pluginOptionsHandler should return include, exclude, and prefix", () => {
   expect(result.prefix).toEqual("prefix")
 })
 
-test("pluginOptionsHandler should turn a single exclude value into a list and leave include as it is", () => {
+test("pluginOptionsHandler should turn single filter values into lists", () => {
   const options = { include: "menu", exclude: "megamenu" }
 
   const result = pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
-  expect(result.include).toEqual("menu")
+  expect(result.include).toEqual(["menu"])
   expect(result.exclude).toEqual(["megamenu"])
 })
 
-test("pluginOptionsHandler should split a comma separated exclude string", () => {
-  const options = { exclude: "table, status" }
+test("pluginOptionsHandler should split comma separated filter strings", () => {
+  const options = { include: " table, status ", exclude: "table, status" }
 
   const result = pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
+  expect(result.include).toEqual(["table", "status"])
   expect(result.exclude).toEqual(["table", "status"])
 })
+
+test("pluginOptionsHandler should normalize include before the single-theme return", () => {
+  const options = { themes: ["light --default"], include: "table", logs: false }
+
+  const result = pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+  expect(result.include).toEqual(["table"])
+})
+
+const filterBuildCases = [
+  ["include: table;", true, false, false],
+  ["include: table, status;", true, false, true],
+  ["include: tab;", false, true, false],
+  ["include: table, tab; exclude: table;", false, true, false],
+  ["include: table; exclude: tab;", true, false, false],
+  ["include: table; exclude: table;", false, false, false],
+  ["include:; exclude:;", true, true, true],
+]
+const filterCandidates = ["table", "tab", "tabs", "tab-active", "status"]
+const filterPluginModule = { module: daisyui, base: import.meta.dirname }
+
+test.each(filterBuildCases)(
+  "Tailwind filters complete component names with %s",
+  async (filters, hasTable, hasTab, hasStatus) => {
+    const compiler = await compile(
+      `@plugin "daisyui" { logs: false; themes: false; ${filters} } @tailwind utilities;`,
+      { loadModule: mock().mockReturnValue(filterPluginModule) },
+    )
+    const css = compiler.build(filterCandidates)
+
+    expect(css.includes(".table :where(")).toBe(hasTable)
+    expect(css.includes(".tab:is(")).toBe(hasTab)
+    expect(css.includes(".tabs {")).toBe(hasTab)
+    expect(css.includes(".status {")).toBe(hasStatus)
+  },
+)
 
 test("pluginOptionsHandler should pass a blank include and exclude through, which arrive as 0 from css", () => {
   const options = { include: 0, exclude: 0 }
