@@ -24,6 +24,37 @@
         max-width: 5cqi;
       }
     }
+    @supports not (timeline-scope: --v) {
+      &:has(.diff-resizer:is(input)):not(:has(.diff-resizer:not(input))) {
+        .diff-item-1 {
+          @apply static self-start min-w-4 overflow-hidden resize-x border-r-0 shadow-none;
+          height: calc(50% + 2.5px);
+          width: 50cqi;
+          max-width: calc(100cqi - 1rem);
+          clip-path: polygon(0 0, calc(100% - 3px) 0, calc(100% - 3px) 10000px, 0 10000px);
+          transition:
+            min-width 0.3s ease-out,
+            max-width 0.3s ease-out;
+        }
+        .diff-item-2::before {
+          @apply bg-base-100 absolute inset-y-0 z-1 w-0.5;
+          right: 3px;
+          box-shadow: 0 0 0 2px #0000002a;
+          content: "";
+        }
+        .diff-item-2::after {
+          right: 4px;
+        }
+        &:focus-visible .diff-item-1 {
+          min-width: 95cqi;
+          max-width: 95cqi;
+        }
+        &:has(.diff-item-1:focus-visible) .diff-item-1 {
+          min-width: 5cqi;
+          max-width: 5cqi;
+        }
+      }
+    }
     &:hover {
       .diff-item-2 {
         &::after {
@@ -31,21 +62,21 @@
         }
       }
     }
-    @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) {
+    @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) and (not (timeline-scope: --v)) {
       &:focus {
-        .diff-resizer:not(input) {
+        .diff-resizer {
           min-width: 5cqi;
           max-width: 5cqi;
         }
       }
       &:has(.diff-item-1:focus) {
-        .diff-resizer:not(input) {
+        .diff-resizer {
           min-width: 95cqi;
           max-width: 95cqi;
         }
       }
     }
-    @supports (-moz-appearance: none) {
+    @supports (-moz-appearance: none) and (not (timeline-scope: --v)) {
       @media (hover: none) and (pointer: coarse) {
         &:focus {
           .diff-resizer {
@@ -78,6 +109,15 @@
 
         .diff-resizer:not(input) {
           display: none;
+        }
+
+        &:focus-visible {
+          animation-name: none;
+          --diff-pos: 0;
+        }
+        &:has(.diff-item-1:focus-visible) {
+          animation-name: none;
+          --diff-pos: 1;
         }
 
         &::-webkit-scrollbar {
