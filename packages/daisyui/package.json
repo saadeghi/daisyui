@@ -76,6 +76,7 @@
     "functions/nestCssLayers.js",
     "functions/plugin.js",
     "functions/pluginOptionsHandler.js",
+    "functions/removeScrollLockSetters.js",
     "functions/themeOrder.js",
     "functions/themeOrder.d.ts",
     "functions/variables.js",
