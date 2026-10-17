@@ -16,23 +16,30 @@ const blueprintProductIds = [
 
 export function isDiscountValid(discount) {
   if (discount?.data?.attributes?.expires_at) {
-    const expiresAt = new Date(discount.data.attributes.expires_at).toISOString()
-    return expiresAt > new Date().toISOString()
+    const expiresAt = new Date(discount.data.attributes.expires_at).getTime()
+    return expiresAt > Date.now()
   }
   return false
 }
 
 export async function fetchActiveDiscount(apiPath) {
-  const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
-    fetch(`${apiPath}/api/discount_shorttime.json`),
+  const responses = await Promise.allSettled([
     fetch(`${apiPath}/api/discount_special.json`),
+    fetch(`${apiPath}/api/discount_shorttime.json`),
   ])
 
-  const shorttimeDiscount = await shorttimeDiscountResponse.json()
-  const specialDiscount = await specialDiscountResponse.json()
+  for (const result of responses) {
+    if (result.status !== "fulfilled" || !result.value.ok) continue
 
-  if (isDiscountValid(specialDiscount)) return specialDiscount
-  if (isDiscountValid(shorttimeDiscount)) return shorttimeDiscount
+    try {
+      const discount = await result.value.json()
+      if (isDiscountValid(discount)) return discount
+    } catch {
+      // Skip an invalid optional response and try the next discount.
+      continue
+    }
+  }
+
   return null
 }
 
