@@ -11,6 +11,9 @@
     &[aria-checked="true"],
     &:has(> :checked, > :is([type="checkbox"], [type="radio"]):focus-visible) {
       outline-color: currentColor;
+      @media (forced-colors: active) {
+        outline-color: Highlight;
+      }
     }
     &:has(> :checked:focus-visible),
     &[aria-checked="true"]:focus-visible,
