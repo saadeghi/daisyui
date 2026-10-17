@@ -26,6 +26,10 @@ classnames:
   import Translate from "$components/Translate.svelte"
 </script>
 
+> :INFO:
+>
+> The `diff-resizer` range input moves the divider in browsers with scroll-driven animations. In other browsers, drag the knob on the divider (the native resize handle of `diff-item-1` sits there). The input is hidden from the keyboard (`tabindex="-1"`); focus the `diff` container to show the first item, then `diff-item-1` to show the second one. Markup that uses an empty `diff-resizer` div keeps working.
+
 ### ~Diff
 <figure class="diff rounded-field aspect-16/9" tabindex="0">
   <div class="diff-item-1" role="img" tabindex="0">
@@ -34,7 +38,7 @@ classnames:
   <div class="diff-item-2" role="img">
     <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
-  <div class="diff-resizer"></div>
+  <input type="range" min="0" max="100" value="50" class="diff-resizer" tabindex="-1" aria-label="Adjust the diff divider position" />
 </figure>
 
 ```html
@@ -47,7 +51,7 @@ classnames:
       alt="daisy"
       src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
-  <div class="$$diff-resizer"></div>
+  <input type="range" min="0" max="100" value="50" class="$$diff-resizer" tabindex="-1" aria-label="Adjust the diff divider position" />
 </figure>
 ```
 
@@ -60,7 +64,7 @@ classnames:
   <div class="diff-item-2" role="img">
     <div class="bg-base-200 text-4xl lg:text-9xl font-black grid place-content-center">DAISY</div>
   </div>
-  <div class="diff-resizer"></div>
+  <input type="range" min="0" max="100" value="50" class="diff-resizer" tabindex="-1" aria-label="Adjust the diff divider position" />
 </figure>
 
 ```html
@@ -73,6 +77,6 @@ classnames:
   <div class="$$diff-item-2" role="img">
     <div class="bg-base-200 grid place-content-center text-9xl font-black">DAISY</div>
   </div>
-  <div class="$$diff-resizer"></div>
+  <input type="range" min="0" max="100" value="50" class="$$diff-resizer" tabindex="-1" aria-label="Adjust the diff divider position" />
 </figure>
 ```
