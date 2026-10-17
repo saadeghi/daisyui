@@ -5,7 +5,10 @@
   background-image: var(--page-scroll-lock)
     linear-gradient(var(--root-bg, #0000), var(--root-bg, #0000));
 
-  transition: var(--page-scroll-lock) background-color 0.3s ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: var(--page-scroll-lock) background-color 0.3s ease-out;
+  }
+
   animation: var(--page-scroll-lock) set-page-has-scroll forwards;
   animation-timeline: var(--page-scroll-lock) scroll();
 

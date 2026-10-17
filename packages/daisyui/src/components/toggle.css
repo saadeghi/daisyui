@@ -15,9 +15,11 @@
 
     padding: var(--toggle-p);
     box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000) inset;
-    transition:
-      color 0.3s,
-      grid-template-columns 0.2s;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        color 0.3s,
+        grid-template-columns 0.2s;
+    }
     --input-color: color-mix(in oklab, var(--color-base-content) 50%, #0000);
     --toggle-p: calc(var(--size) * 0.125);
     --size: calc(var(--size-selector, 0.25rem) * 6);
@@ -27,9 +29,11 @@
     /* icons in toggle */
     > * {
       @apply z-1 col-span-1 col-start-2 row-start-1 h-full cursor-pointer appearance-none bg-transparent p-0.5;
-      transition:
-        opacity 0.2s,
-        rotate 0.4s;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          opacity 0.2s,
+          rotate 0.4s;
+      }
       border: none;
       &:focus {
         @apply outline-hidden;
@@ -58,10 +62,12 @@
       translate: 0;
       --tw-content: "";
       content: var(--tw-content);
-      transition:
-        background-color 0.1s,
-        translate 0.2s,
-        inset-inline-start 0.2s;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          background-color 0.1s,
+          translate 0.2s,
+          inset-inline-start 0.2s;
+      }
       box-shadow:
         0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,

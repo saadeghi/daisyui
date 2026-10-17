@@ -11,7 +11,7 @@
 
 .avatar {
   @layer daisyui.l1.l2.l3 {
-    @apply relative inline-flex align-middle self-center;
+    @apply relative inline-flex align-middle;
 
     & > div {
       @apply block aspect-square overflow-hidden;
@@ -20,6 +20,9 @@
     img {
       @apply h-full w-full object-cover;
     }
+  }
+  @layer daisyui.l1.l2.l3.l4 {
+    @apply self-center;
   }
 }
 

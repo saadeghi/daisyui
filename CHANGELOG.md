@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.50](https://github.com/saadeghi/daisyui/compare/v5.7.49...v5.7.50) (2026-10-13)
+
+## [5.7.49](https://github.com/saadeghi/daisyui/compare/v5.7.48...v5.7.49) (2026-10-13)
+
+### Bug Fixes
+
+* **divider:** keep the divider line visible in forced colors mode ([#4798](https://github.com/saadeghi/daisyui/issues/4798)) ([23b1176](https://github.com/saadeghi/daisyui/commit/23b117666f5a1098cd8fb4b323fb1d1d8b3a444c))
+* **loading:** keep the loading indicator visible in forced colors mode ([#4794](https://github.com/saadeghi/daisyui/issues/4794)) ([1d2a0ba](https://github.com/saadeghi/daisyui/commit/1d2a0ba2d9e7fd6670eff150190bdd4650d023b7))
+* **megamenu:** keep the item arrows visible in forced colors mode ([#4802](https://github.com/saadeghi/daisyui/issues/4802)) ([f20c247](https://github.com/saadeghi/daisyui/commit/f20c2477db8b2a36cff0a1c2ead9ba626a5b30d2))
+* **progress:** keep the progress bar visible in forced colors mode ([#4795](https://github.com/saadeghi/daisyui/issues/4795)) ([d9de949](https://github.com/saadeghi/daisyui/commit/d9de9497311953963b743c74e2fb8b19795654a5))
+* **radial-progress:** keep the ring visible in forced colors mode ([#4797](https://github.com/saadeghi/daisyui/issues/4797)) ([3647266](https://github.com/saadeghi/daisyui/commit/36472661ba14c6d6cc86bec35992594a556763ed))
+* **rating:** keep the rating items visible in forced colors mode ([#4796](https://github.com/saadeghi/daisyui/issues/4796)) ([123ef13](https://github.com/saadeghi/daisyui/commit/123ef13a1fcafef6418524f86942ebc4865507f5))
+* **timeline:** keep the connector lines visible in forced colors mode ([#4799](https://github.com/saadeghi/daisyui/issues/4799)) ([3f71bf1](https://github.com/saadeghi/daisyui/commit/3f71bf1eea62b0ebccb5984ab65aab610eb610f9))
+
+## [5.7.48](https://github.com/saadeghi/daisyui/compare/v5.7.47...v5.7.48) (2026-10-12)
+
+### Bug Fixes
+
+* show the indeterminate checkbox mark in forced colors mode like the checked one ([#4804](https://github.com/saadeghi/daisyui/issues/4804)) ([4f8de95](https://github.com/saadeghi/daisyui/commit/4f8de95c84f28b0fe5b793f2482f2f3949971198))
+
 ## [5.7.47](https://github.com/saadeghi/daisyui/compare/v5.7.46...v5.7.47) (2026-09-30)
 
 ### Bug Fixes
