@@ -9,7 +9,7 @@ desc: How to install Tailwind CSS and daisyUI in a Laravel project
 
 ### 1. Create a new Laravel project
 
-Install PHP, Composer and Laravel Installer according to the [official Laravel documentation](https://laravel.com/docs/12.x/installation#creating-a-laravel-project)
+Install PHP, Composer and Laravel Installer according to the [official Laravel documentation](https://laravel.com/docs/13.x/installation#creating-a-laravel-project)
 
 Create a new Laravel project
 
@@ -42,12 +42,8 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 Run your Laravel project
 
 ```sh:Terminal
-php artisan serve
+composer run dev
 ```
-And on another terminal tab, run Vite
 
-```sh:Terminal
-npm run dev
-```
 
 Now you can use daisyUI class names!
