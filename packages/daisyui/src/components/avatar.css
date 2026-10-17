@@ -44,6 +44,9 @@
       height: 15%;
       top: 7%;
       inset-inline-end: 7%;
+      @media (forced-colors: active) {
+        background-color: CanvasText;
+      }
     }
   }
 }
