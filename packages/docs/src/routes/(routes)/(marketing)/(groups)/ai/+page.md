@@ -13,6 +13,12 @@ keywords: ai ui generation, ai frontend code generation, prompt to ui, llm ui ge
 
 AI can create a screen quickly. Revisions become harder when every component is a new utility-class recipe. daisyUI gives models readable component names they can reuse across prompts and pages.
 
+## Choose your AI workflow
+
+- Use a coding agent: [Codex](/codex/), [Claude Code](/claude-code/), or [Cursor](/cursor/).
+- Work with [Claude prompts](/claude/) to describe and generate an interface.
+- Choose a setup method: [skills](/docs/skill/) supply reusable instructions, [plugins](/docs/plugin/) package the skill for installation, and [MCP](/docs/mcp/) connects tools and resources during a task.
+
 ## AI UI generation guides
 
 <MarketingPageLinks />

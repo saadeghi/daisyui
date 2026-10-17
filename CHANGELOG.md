@@ -2,6 +2,139 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.7.50](https://github.com/saadeghi/daisyui/compare/v5.7.49...v5.7.50) (2026-10-13)
+
+## [5.7.49](https://github.com/saadeghi/daisyui/compare/v5.7.48...v5.7.49) (2026-10-13)
+
+### Bug Fixes
+
+* **divider:** keep the divider line visible in forced colors mode ([#4798](https://github.com/saadeghi/daisyui/issues/4798)) ([23b1176](https://github.com/saadeghi/daisyui/commit/23b117666f5a1098cd8fb4b323fb1d1d8b3a444c))
+* **loading:** keep the loading indicator visible in forced colors mode ([#4794](https://github.com/saadeghi/daisyui/issues/4794)) ([1d2a0ba](https://github.com/saadeghi/daisyui/commit/1d2a0ba2d9e7fd6670eff150190bdd4650d023b7))
+* **megamenu:** keep the item arrows visible in forced colors mode ([#4802](https://github.com/saadeghi/daisyui/issues/4802)) ([f20c247](https://github.com/saadeghi/daisyui/commit/f20c2477db8b2a36cff0a1c2ead9ba626a5b30d2))
+* **progress:** keep the progress bar visible in forced colors mode ([#4795](https://github.com/saadeghi/daisyui/issues/4795)) ([d9de949](https://github.com/saadeghi/daisyui/commit/d9de9497311953963b743c74e2fb8b19795654a5))
+* **radial-progress:** keep the ring visible in forced colors mode ([#4797](https://github.com/saadeghi/daisyui/issues/4797)) ([3647266](https://github.com/saadeghi/daisyui/commit/36472661ba14c6d6cc86bec35992594a556763ed))
+* **rating:** keep the rating items visible in forced colors mode ([#4796](https://github.com/saadeghi/daisyui/issues/4796)) ([123ef13](https://github.com/saadeghi/daisyui/commit/123ef13a1fcafef6418524f86942ebc4865507f5))
+* **timeline:** keep the connector lines visible in forced colors mode ([#4799](https://github.com/saadeghi/daisyui/issues/4799)) ([3f71bf1](https://github.com/saadeghi/daisyui/commit/3f71bf1eea62b0ebccb5984ab65aab610eb610f9))
+
+## [5.7.48](https://github.com/saadeghi/daisyui/compare/v5.7.47...v5.7.48) (2026-10-12)
+
+### Bug Fixes
+
+* show the indeterminate checkbox mark in forced colors mode like the checked one ([#4804](https://github.com/saadeghi/daisyui/issues/4804)) ([4f8de95](https://github.com/saadeghi/daisyui/commit/4f8de95c84f28b0fe5b793f2482f2f3949971198))
+
+## [5.7.47](https://github.com/saadeghi/daisyui/compare/v5.7.46...v5.7.47) (2026-09-30)
+
+### Bug Fixes
+
+* btn-link with btn-disabled color ([#4749](https://github.com/saadeghi/daisyui/issues/4749)) ([2719450](https://github.com/saadeghi/daisyui/commit/2719450179f2083fe45f5ea9516fe6930ab69951))
+
+## [5.7.46](https://github.com/saadeghi/daisyui/compare/v5.7.45...v5.7.46) (2026-09-24)
+
+### Bug Fixes
+
+* adjust tooltip tail position for themes with more radius ([#4759](https://github.com/saadeghi/daisyui/issues/4759)) ([cc43e58](https://github.com/saadeghi/daisyui/commit/cc43e587bccfb5248ab14aa1a951f71dfcf6d1bc))
+
+## [5.7.45](https://github.com/saadeghi/daisyui/compare/v5.7.44...v5.7.45) (2026-09-24)
+
+### Bug Fixes
+
+* range shadow size and performance ([#4771](https://github.com/saadeghi/daisyui/issues/4771)) ([cea1c7d](https://github.com/saadeghi/daisyui/commit/cea1c7d5ad2922042e662f434a7ec6843aea365e))
+
+## [5.7.44](https://github.com/saadeghi/daisyui/compare/v5.7.43...v5.7.44) (2026-09-23)
+
+### Bug Fixes
+
+* avatar indicator dot RTL position ([#4773](https://github.com/saadeghi/daisyui/issues/4773)) ([b00cb0c](https://github.com/saadeghi/daisyui/commit/b00cb0cdbc7197213f8cc9cba49d82eabf3c1ada))
+
+## [5.7.43](https://github.com/saadeghi/daisyui/compare/v5.7.42...v5.7.43) (2026-09-21)
+
+### Bug Fixes
+
+* status size respects theme size variables ([#4774](https://github.com/saadeghi/daisyui/issues/4774)) ([2e34dfe](https://github.com/saadeghi/daisyui/commit/2e34dfe6ffd479009a2f3c2c381564f1e8649525))
+
+## [5.7.42](https://github.com/saadeghi/daisyui/compare/v5.7.41...v5.7.42) (2026-09-18)
+
+### Bug Fixes
+
+* disabled style for input, select, textarea and file-input ([#4769](https://github.com/saadeghi/daisyui/issues/4769)) ([a0ca2b8](https://github.com/saadeghi/daisyui/commit/a0ca2b8739afa511fb169a6e1c3f5de1af170f22))
+
+## [5.7.41](https://github.com/saadeghi/daisyui/compare/v5.7.40...v5.7.41) (2026-09-18)
+
+### Bug Fixes
+
+* [#4766](https://github.com/saadeghi/daisyui/issues/4766) validator colors specificity ([#4767](https://github.com/saadeghi/daisyui/issues/4767)) ([6fcaa55](https://github.com/saadeghi/daisyui/commit/6fcaa55ccad9046510ac1ae06fac2f8e784c9625))
+
+## [5.7.40](https://github.com/saadeghi/daisyui/compare/v5.7.39...v5.7.40) (2026-09-17)
+
+### Bug Fixes
+
+* style aria-checked as btn-active in button ([#4761](https://github.com/saadeghi/daisyui/issues/4761)) ([276fce3](https://github.com/saadeghi/daisyui/commit/276fce3ec61fae87b3f403e39a22def8565d4260))
+
+## [5.7.39](https://github.com/saadeghi/daisyui/compare/v5.7.38...v5.7.39) (2026-09-17)
+
+### Bug Fixes
+
+* allow Firefox Android to use diff by tap because Firefox Android ignores CSS resize and cannot drag([#4763](https://github.com/saadeghi/daisyui/issues/4763)) ([ac97999](https://github.com/saadeghi/daisyui/commit/ac979991819a6dd3bd74b2aa44af0cbcb39a968d))
+
+## [5.7.38](https://github.com/saadeghi/daisyui/compare/v5.7.37...v5.7.38) (2026-09-14)
+
+### Bug Fixes
+
+* style aria-current as active in `dock` ([#4753](https://github.com/saadeghi/daisyui/issues/4753)) ([fe22841](https://github.com/saadeghi/daisyui/commit/fe22841ad7b9b34908ceb386f3729a77206d3cf4))
+* style aria-current as menu-active in menu ([#4752](https://github.com/saadeghi/daisyui/issues/4752)) ([10dc2fb](https://github.com/saadeghi/daisyui/commit/10dc2fb06be9e65b127cfe2b0df57ab64ce4412f))
+* style aria-pressed and aria-current as btn-active in button ([#4754](https://github.com/saadeghi/daisyui/issues/4754)) ([8e495a0](https://github.com/saadeghi/daisyui/commit/8e495a0f44822311034be3febd1f428fc65209ad))
+
+## [5.7.37](https://github.com/saadeghi/daisyui/compare/v5.7.36...v5.7.37) (2026-09-11)
+
+### Bug Fixes
+
+* OTP disabled style ([#4750](https://github.com/saadeghi/daisyui/issues/4750)) ([02623f0](https://github.com/saadeghi/daisyui/commit/02623f06264ecb3d37c85fcd479c417b51e842e0))
+## [5.7.36](https://github.com/saadeghi/daisyui/compare/v5.7.35...v5.7.36) (2026-09-10)
+
+### Bug Fixes
+
+* checkbox tick and dash alignment ([#4743](https://github.com/saadeghi/daisyui/issues/4743)) ([0ca4325](https://github.com/saadeghi/daisyui/commit/0ca4325d1b46186b1699b69aefb50745abc23720))
+* loading spinner shrinks inside a flex container ([#4744](https://github.com/saadeghi/daisyui/issues/4744)) ([f585b8e](https://github.com/saadeghi/daisyui/commit/f585b8e320dc13145f076f2ab3588505575d7686))
+## [5.7.35](https://github.com/saadeghi/daisyui/compare/v5.7.34...v5.7.35) (2026-09-10)
+
+### Bug Fixes
+
+* prevent badge shrink inside a flex container ([#4745](https://github.com/saadeghi/daisyui/issues/4745)) ([da60fca](https://github.com/saadeghi/daisyui/commit/da60fca6aeea46d45214a7ef13680821a5eeeee4))
+## [5.7.34](https://github.com/saadeghi/daisyui/compare/v5.7.33...v5.7.34) (2026-09-10)
+
+### Bug Fixes
+
+* FAB wrong font size when using prefix ([#4729](https://github.com/saadeghi/daisyui/issues/4729)) ([3ce15b4](https://github.com/saadeghi/daisyui/commit/3ce15b4b64614e482417083e498335fbcea1d839))
+## [5.7.33](https://github.com/saadeghi/daisyui/compare/v5.7.32...v5.7.33) (2026-09-10)
+
+### Bug Fixes
+
+* otp border width and position ([#4730](https://github.com/saadeghi/daisyui/issues/4730)) ([fe56cba](https://github.com/saadeghi/daisyui/commit/fe56cba0cc5c131b57496c54ba3a581dfd26eefc))
+## [5.7.32](https://github.com/saadeghi/daisyui/compare/v5.7.31...v5.7.32) (2026-09-08)
+
+### Bug Fixes
+
+* dropdown RTL positions ([#4716](https://github.com/saadeghi/daisyui/issues/4716)) ([c0fec1b](https://github.com/saadeghi/daisyui/commit/c0fec1ba80be63e587e80fde19dcd898fa422e60))
+## [5.7.31](https://github.com/saadeghi/daisyui/compare/v5.7.30...v5.7.31) (2026-09-08)
+
+### Bug Fixes
+
+* keep toast-center horizontally centered in RTL ([#4700](https://github.com/saadeghi/daisyui/issues/4700)) ([e5ca64e](https://github.com/saadeghi/daisyui/commit/e5ca64e7d35c080e67eda442f5c3591e66ad7049))
+## [5.7.30](https://github.com/saadeghi/daisyui/compare/v5.7.29...v5.7.30) (2026-09-08)
+
+### Bug Fixes
+
+* list style leaking to nested lists ([ad55d08](https://github.com/saadeghi/daisyui/commit/ad55d0878bc063fd9052370844637849ff77c225))
+## [5.7.29](https://github.com/saadeghi/daisyui/compare/v5.7.28...v5.7.29) (2026-09-07)
+
+### Bug Fixes
+
+* OTP monospace font-family variable receiving unwanted prefix when prefix option is used. ([c1452df](https://github.com/saadeghi/daisyui/commit/c1452df073f4f15fe4de08a44a93098f64d57473))
+## [5.7.28](https://github.com/saadeghi/daisyui/compare/v5.7.27...v5.7.28) (2026-09-03)
+
+### Bug Fixes
+
+* breadcrumbs item focus ring being cropped ([#4724](https://github.com/saadeghi/daisyui/issues/4724)) ([cc339e7](https://github.com/saadeghi/daisyui/commit/cc339e74d6de53c7bab8e225ffbb6390fee24e87))
 ## [5.7.27](https://github.com/saadeghi/daisyui/compare/v5.7.26...v5.7.27) (2026-09-01)
 
 ### Bug Fixes

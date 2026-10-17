@@ -22,8 +22,6 @@ classnames:
     desc: pentagon
   - class: mask-diamond
     desc: diamond
-  - class: mask-square
-    desc: square
   - class: mask-circle
     desc: circle
   - class: mask-star
@@ -123,17 +121,6 @@ classnames:
 <img
   class="$$mask $$mask-diamond"
   alt="Diamond CSS mask"
-  src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-```
-
-
-### ~Square
-<img alt="Square CSS mask" class="mask mask-square w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-
-```html
-<img
-  class="$$mask $$mask-square"
-  alt="Square CSS mask"
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 

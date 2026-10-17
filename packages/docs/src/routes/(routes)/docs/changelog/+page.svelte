@@ -6,6 +6,6 @@
 
 <SEO title={`daisyUI Changelog`} desc={`daisyUI Changelog`} />
 
-<div class="changelog-body prose">
+<div class="changelog-body prose" dir="ltr">
   <Changelog />
 </div>

@@ -24,7 +24,7 @@ In chat window type this and Cursor will use daisyUI's llms.txt file to generate
 
 ### Project-level permanent setup
 
-You can setup daisyUI's llms.txt file to your workspace so Cursor can use it by default. ([Read more at Cursor docs](https://docs.cursor.com/context/rules))
+You can setup daisyUI's llms.txt file to your workspace so Cursor can use it by default. ([Read more at Cursor docs](https://cursor.com/docs/rules))
 
 Run this command to save the llms.txt file to `.cursor/rules/daisyui.mdc`
 

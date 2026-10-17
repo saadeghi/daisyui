@@ -15,7 +15,7 @@ A [UI design MCP server for Cursor](/cursor/reduce-token-usage/) gives Agent Mod
 
 Cursor works inside the editor, so it can move quickly from prompt to code. Speed is not enough when the repo contains mixed UI patterns. The agent needs a source of truth for components, themes, and repeated layout parts.
 
-[Blueprint MCP](/cursor/reduce-token-usage/) separates the screen request from the design reference. You describe the admin layout, checkout flow, or dashboard. The MCP server provides daisyUI component context.
+[Blueprint MCP](/blueprint/) separates the screen request from the design reference. You describe the admin layout, checkout flow, or dashboard. The MCP server provides daisyUI component context.
 
 ## Example target
 

@@ -19,7 +19,7 @@ Get a [Blueprint license key](/blueprint/checkout/).
 Install Codex CLI if you haven't already.
 
 ```sh
-npm install -g @codex/cli
+npm install -g @openai/codex
 ```
 
 ### Step 3: Configure MCP settings

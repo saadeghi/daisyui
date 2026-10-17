@@ -1,10 +1,22 @@
 .otp {
   @layer daisyui.l1.l2.l3 {
-    @apply relative inline-flex font-mono;
+    @apply relative inline-flex;
+    font-family: var(
+      --font-mono,
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      Monaco,
+      Consolas,
+      "Liberation Mono",
+      "Courier New",
+      monospace
+    );
     /* OTP codes read left-to-right (digits are bidi-LTR), so keep the boxes and
        the input aligned by pinning the component to LTR even inside dir="rtl". */
     direction: ltr;
-    clip-path: inset(-3.5px 3.5px -3.5px -3.5px);
+    /* let focus outlines show past the boxes on every side */
+    clip-path: inset(-3.5px);
     border-radius: var(--radius-field);
     font-size: 1.75rem;
     gap: var(--otp-gap);
@@ -21,7 +33,8 @@
     > input {
       @apply pointer-events-none start-0 z-1 m-0 appearance-none border-0 bg-transparent p-0 outline-0;
       field-sizing: content;
-      padding-inline-start: calc(var(--otp-ch) * 0.5 + var(--border));
+      padding-inline-start: calc(var(--otp-ch) * 0.5 - 1px);
+      text-indent: 1px;
       line-height: 1;
       letter-spacing: calc(var(--stride) - var(--otp-ch));
       font-variant-numeric: tabular-nums;
@@ -34,35 +47,46 @@
       }
     }
 
+    @supports (-webkit-nbsp-mode: space) {
+      > input:focus {
+        text-indent: 2px;
+      }
+    }
+
+    /* width = N boxes + (N-1) gaps, so drop the trailing gap that stride * N
+       would add after the last box (otherwise the group sits off-center) */
     &:has(> span:nth-child(1)) {
-      width: calc(var(--stride) * 1);
+      width: calc(var(--stride) * 1 - var(--otp-gap));
     }
     &:has(> span:nth-child(2)) {
-      width: calc(var(--stride) * 2);
+      width: calc(var(--stride) * 2 - var(--otp-gap));
     }
     &:has(> span:nth-child(3)) {
-      width: calc(var(--stride) * 3);
+      width: calc(var(--stride) * 3 - var(--otp-gap));
     }
     &:has(> span:nth-child(4)) {
-      width: calc(var(--stride) * 4);
+      width: calc(var(--stride) * 4 - var(--otp-gap));
     }
     &:has(> span:nth-child(5)) {
-      width: calc(var(--stride) * 5);
+      width: calc(var(--stride) * 5 - var(--otp-gap));
     }
     &:has(> span:nth-child(6)) {
-      width: calc(var(--stride) * 6);
+      width: calc(var(--stride) * 6 - var(--otp-gap));
     }
     &:has(> span:nth-child(7)) {
-      width: calc(var(--stride) * 7);
+      width: calc(var(--stride) * 7 - var(--otp-gap));
     }
     &:has(> span:nth-child(8)) {
-      width: calc(var(--stride) * 8);
+      width: calc(var(--stride) * 8 - var(--otp-gap));
     }
 
     > span {
       position: absolute;
-      @apply flex transition-colors;
-      transition: border-color 0.2s;
+      @apply flex;
+      transition: none;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: border-color 0.2s;
+      }
       inline-size: var(--otp-w);
       block-size: var(--otp-size);
       background-color: var(--color-base-100);
@@ -74,12 +98,9 @@
         0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
         0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
       &:nth-child(1) {
-        left: 1px;
+        left: 0;
         @supports (font: -apple-system-body) {
-          left: 2px;
-        }
-        @supports (-moz-appearance: none) {
-          left: 0px;
+          left: 1px;
         }
       }
       &:nth-child(2) {
@@ -130,7 +151,7 @@
       outline: 2px solid #0000;
       outline-offset: 1px;
       z-index: 10;
-      margin-inline-start: calc(-1 * (var(--otp-gap) + var(--otp-ch) * 0.5 + var(--border)));
+      margin-inline-start: calc(-1 * (var(--otp-gap) + var(--otp-ch) * 0.5));
     }
 
     &:focus-within {
@@ -140,6 +161,17 @@
       }
       &:after {
         outline-color: var(--input-color);
+      }
+    }
+
+    &:has(> input:disabled) {
+      @apply cursor-not-allowed;
+      > input {
+        @apply text-base-content/40;
+      }
+      > span {
+        @apply border-base-200 bg-base-200;
+        box-shadow: none;
       }
     }
   }

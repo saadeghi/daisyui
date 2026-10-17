@@ -13,7 +13,7 @@
   "install-btn": "ইন্সটল সহায়িকা",
   "Preview": "প্রিভিউ",
   "homepage_h1": "তাড়াতাড়ি, পরিষ্কার, সহজ <br />Tailwind&nbsp;CSS উন্নয়ন",
-  "homepage_h2": "daisyUI হলো সেই Tailwind CSS প্লাগইন যা আপনি ভালোবাসবেন! <br/>এটি উপকারী উপাদান ক্লাস নাম সরবরাহ করে <br/>আপনাকে কম কোড লিখতে এবং দ্রুত গঠন করতে সাহায্য করে।",
+  "homepage_h2": "daisyUI হলো Tailwind CSS plugin যা আপনার ভালো লাগবে! <br/>এটি শুধু CSS দিয়ে তৈরি components দেয় <br/>যাতে আপনার agent কম কোড লিখে আরও দ্রুত তৈরি করতে পারে।",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "একটি Tailwind CSS প্রজেক্টে, আপনাকে প্রতিটি উপাদানের জন্য ইউটিলিটি ক্লাসের নাম লিখতে হবে। হাজার হাজার ক্লাসের নাম শুধুমাত্র সবচেয়ে মৌলিক ইলিমেন্টস স্টাইল করার জন্য লিখতে হবে।",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "<br /> <span class='text-error'><span class='font-black'>100</span> class names</span> লেখার পরিবর্তে",
   "For every element, every page, every project,<br/>again and again": "প্রতিটি ইলিমেন্ট, প্রতিটি পৃষ্ঠা, প্রতিটি প্রজেক্টের জন্য,<br/>বারবার",

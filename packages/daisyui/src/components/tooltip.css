@@ -3,8 +3,10 @@
     @apply relative inline-block;
     --tt-bg: var(--color-neutral);
     --tt-off: calc(100% + 0.5rem);
-    --tt-tail: calc(100% + 1px + 0.25rem);
-    --tt-tail-off: 0.5rem;
+    --tt-radius: min(var(--radius-field), 0.8rem);
+    --tt-overlap: clamp(1px, calc(var(--radius-field) / 8), 2px);
+    --tt-tail: calc(100% + var(--tt-overlap) + 0.25rem);
+    --tt-tail-off: max(0.5rem, var(--tt-radius));
 
     & > .tooltip-content,
     &[data-tip]:before {
@@ -166,6 +168,7 @@
 
 .tooltip-left {
   @layer daisyui.l1.l2 {
+    --tt-tail-off: clamp(0.5rem, var(--tt-radius) + 3px, 0.8rem - 2px);
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem))
@@ -186,6 +189,7 @@
 
 .tooltip-right {
   @layer daisyui.l1.l2 {
+    --tt-tail-off: clamp(0.5rem, var(--tt-radius) + 3px, 0.8rem - 2px);
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem))

@@ -1,6 +1,6 @@
 import fs from "node:fs"
 import path from "node:path"
-import { getMarketingCluster } from "$lib/data/marketingPages.js"
+import { getMarketingCluster, marketingPages } from "$lib/data/marketingPages.js"
 
 function getPageLabel(pageFile, slug) {
   const content = fs.readFileSync(pageFile, "utf8")
@@ -12,7 +12,11 @@ function getPageLabel(pageFile, slug) {
 export function load({ url }) {
   const cluster = getMarketingCluster(url.pathname)
 
-  if (!cluster) return { pages: [] }
+  if (!cluster) return { pages: [], marketingPrimaryAction: null, marketingHubLink: null }
+
+  const pathname = url.pathname.endsWith("/") ? url.pathname : `${url.pathname}/`
+  const currentPage = marketingPages.find((entry) => entry.path === pathname)
+  const hubPath = `/${cluster.slug}/`
 
   const clusterDir = path.resolve("src/routes/(routes)/(marketing)/(groups)", cluster.slug)
   const pages = fs
@@ -30,5 +34,10 @@ export function load({ url }) {
   return {
     pageGroupLabel: cluster.label,
     pages,
+    marketingPrimaryAction: currentPage?.primaryAction ?? null,
+    marketingHubLink:
+      cluster.showHubLink && currentPage && pathname !== hubPath
+        ? { href: hubPath, label: cluster.label }
+        : null,
   }
 }

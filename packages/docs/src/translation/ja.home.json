@@ -13,7 +13,7 @@
   "install-btn": "インストールガイド",
   "Preview": "プレビュー",
   "homepage_h1": "速く、シンプルで、使いやすい <br />Tailwind&nbsp;CSS開発",
-  "homepage_h2": "daisyUIは、あなたがきっと気に入るTailwind CSSプラグインです！ <br/>このプラグインは便利なコンポーネントクラス名を提供し、 <br/>少ないコードで効率的に開発できます。",
+  "homepage_h2": "daisyUIは、きっと気に入るTailwind CSSプラグインです！ <br/>CSSだけで作られたコンポーネントを提供し、 <br/>エージェントがより少ないコードで、より速く開発できるようにします。",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Tailwind CSSのプロジェクトでは、すべての要素にユーティリティクラス名を記述する必要があります。最も基本的な要素にスタイルを適用するために何千ものクラス名が必要です。",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "<span class='text-error'><span class='font-black'>100</span> class names</span><br />を書く代わりに",
   "For every element, every page, every project,<br/>again and again": "すべての要素、すべてのページ、すべてのプロジェクトに対して、<br/>何度も何度も",

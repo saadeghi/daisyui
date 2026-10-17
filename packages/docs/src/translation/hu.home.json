@@ -13,7 +13,7 @@
   "install-btn": "Telepítési útmutató",
   "Preview": "Előnézet",
   "homepage_h1": "Gyorsabb, letisztultabb, egyszerűbb <br />Tailwind&nbsp;CSS fejlesztés",
-  "homepage_h2": "A daisyUI a Tailwind CSS bővítmény, amit imádni fogsz! <br/>Hasznos komponens osztályneveket biztosít <br/>hogy kevesebb kódot írj és gyorsabban alkoss.",
+  "homepage_h2": "A daisyUI az a Tailwind CSS plugin, amelyet imádni fogsz! <br/>Kizárólag CSS-re épülő komponenseket kínál, <br/>hogy az ágensed kevesebb kódot írjon és gyorsabban fejlesszen.",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "A Tailwind CSS projektben minden elemhez külön utility osztályneveket kell írnod. Több ezer osztálynév, hogy csak a legalapvetőbb elemek stílusát formázd.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "Ahelyett, hogy írnál<br /> <span class='text-error'><span class='font-black'>100</span> osztálynevet</span>",
   "For every element, every page, every project,<br/>again and again": "Minden elemhez, minden oldalhoz, minden projekthez,<br/>újra meg újra",

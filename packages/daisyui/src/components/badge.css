@@ -1,6 +1,6 @@
 .badge {
   @layer daisyui.l1.l2.l3 {
-    @apply rounded-selector inline-flex items-center justify-center gap-2 align-middle;
+    @apply rounded-selector inline-flex shrink-0 items-center justify-center gap-2 align-middle;
     color: var(--badge-fg);
     border: var(--border) solid var(--badge-color, var(--color-base-200));
     font-size: 0.875rem;

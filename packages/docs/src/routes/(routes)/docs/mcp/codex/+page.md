@@ -45,7 +45,7 @@ Blueprint is the official MCP server for daisyUI. [Read more about Blueprint](/b
 2. Install Codex CLI (if you haven't already)
 
 ```sh:Terminal
-npm install -g @codex/cli
+npm install -g @openai/codex
 ```
 3. Run this command to add Blueprint MCP server.  
   - Set your Blueprint `LICENSE` and `EMAIL` address in the command below.

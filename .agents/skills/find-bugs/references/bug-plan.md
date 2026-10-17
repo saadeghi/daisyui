@@ -11,12 +11,32 @@ instead of creating a duplicate.
 Use one file for multiple symptoms only when they have the same proven root cause and the same
 solution. Otherwise, write a separate file for each bug.
 
+## Status
+
+These files are bug reports with solution options. They use bug status values, not implementation
+plan status values. Start every file with YAML frontmatter that contains `status`.
+
+- Use `open` for an unresolved local bug. Use `closed` only after a verified fix or a confirmed
+  decision to close the bug.
+- If the report is about a specific PR, use its current verified state in lowercase: `open`,
+  `merged`, or `closed`. A merged PR uses `merged`, even if the API also reports it as closed.
+- If the report is about a specific issue, use its current verified issue state, such as `open`
+  or `closed`.
+- Make clear which item the status describes. A link to a PR or issue does not change the status
+  source of a local bug report.
+- Check the status each time you create or update the file. A local fix or commit does not prove
+  that a remote PR or issue changed state.
+
 ## Required structure
 
-Use only these sections and keep each section concise. Do not add frontmatter, extra sections,
-implementation code, or a patch.
+Include the required frontmatter. Use only these body sections and keep each section concise.
+Do not add extra sections, implementation code, or a patch.
 
 ```markdown
+---
+status: "open"
+---
+
 # Summary
 
 <Describe the issue.>

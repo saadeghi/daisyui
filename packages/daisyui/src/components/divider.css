@@ -16,7 +16,7 @@
       @apply h-0.5 w-full grow;
       background-color: var(--divider-color);
     }
-    @media print {
+    @media print, (forced-colors: active) {
       &:before,
       &:after {
         border: 0.5px solid;

@@ -10,7 +10,7 @@ desc: How to setup daisyUI MCP server in your coding tools so AI can use it to g
   const editors = data.editors
 </script>
 
-MCP (Model Communication Protocol) is an API standard to communicate with AI models. MCP servers are tools that implement this protocol and provide AI models with the necessary information to generate accurate code based on your prompts.
+MCP (Model Context Protocol) connects AI applications to tools and resources through a standard protocol. Use a server that provides daisyUI documentation or component examples to give your coding agent context during a task.
 
 ## Install daisyUI MCP server
 

@@ -1,6 +1,9 @@
 .progress {
   @layer daisyui.l1.l2.l3 {
     @apply rounded-box text-base-content relative h-2 w-full appearance-none overflow-hidden bg-current/20;
+    @media (forced-colors: active) {
+      border: 1px solid;
+    }
     &:indeterminate {
       background-image: repeating-linear-gradient(
         90deg,
@@ -37,6 +40,9 @@
     @supports (-moz-appearance: none) {
       &::-moz-progress-bar {
         @apply rounded-box bg-current;
+        @media (forced-colors: active) {
+          background-color: CanvasText;
+        }
         @media (prefers-reduced-motion: no-preference) {
           transition: inline-size 0.3s ease;
         }
@@ -51,6 +57,9 @@
       &::-webkit-progress-value {
         @apply rounded-box;
         background-color: currentColor;
+        @media (forced-colors: active) {
+          background-color: CanvasText;
+        }
         @media (prefers-reduced-motion: no-preference) {
           transition: inline-size 0.3s ease;
         }

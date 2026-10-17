@@ -5,6 +5,7 @@ import {
   extractKeyframes,
   generateMediaQuery,
   generateResponsiveVariants,
+  getRootClasses,
   transformSelector,
   wrapInLayer,
 } from "./generateRawStyles.js"
@@ -13,6 +14,52 @@ test("transformSelector prefixes root-level class selectors", () => {
   expect(transformSelector(".btn:hover, .card > .title", "md")).toBe(
     ".md\\:btn:hover, .md\\:card > .title",
   )
+})
+
+test("transformSelector prefixes the component class when it is nested in another selector", () => {
+  const rootClasses = new Set(["input", "input-xl"])
+
+  expect(transformSelector(".floating-label:has(.input-xl)", "md", rootClasses)).toBe(
+    ".floating-label:has(.md\\:input-xl)",
+  )
+  expect(transformSelector("fieldset:disabled .input", "md", rootClasses)).toBe(
+    "fieldset:disabled .md\\:input",
+  )
+  expect(transformSelector(".input-xl .floating-label", "md", rootClasses)).toBe(
+    ".md\\:input-xl .floating-label",
+  )
+})
+
+test("transformSelector prefixes every argument of a leading :is() list", () => {
+  const rootClasses = new Set(["menu", "tabs-lift", "tabs-box"])
+
+  expect(
+    transformSelector(
+      ":is(.menu :where(li > details > summary), .menu :where(li > .menu-dropdown-toggle)):after",
+      "sm",
+      rootClasses,
+    ),
+  ).toBe(
+    ":is(.sm\\:menu :where(li > details > summary), .sm\\:menu :where(li > .menu-dropdown-toggle)):after",
+  )
+  expect(transformSelector(":is(.tabs-lift, .tabs-box) > .tab", "sm", rootClasses)).toBe(
+    ":is(.sm\\:tabs-lift, .sm\\:tabs-box) > .tab",
+  )
+  expect(transformSelector(".menu :is(.foo, .bar)", "sm", rootClasses)).toBe(
+    ".sm\\:menu :is(.foo, .bar)",
+  )
+})
+
+test("getRootClasses collects the classes of top-level rules only", () => {
+  const classes = getRootClasses(`
+    .input-xl {
+      --size: 1rem;
+      .floating-label:has(&) { --font-size: 1rem }
+    }
+    .input, .input-ghost { color: red }
+  `)
+
+  expect([...classes].sort()).toEqual(["input", "input-ghost", "input-xl"])
 })
 
 test("escapeBreakpointColon escapes generated breakpoint class separators", () => {

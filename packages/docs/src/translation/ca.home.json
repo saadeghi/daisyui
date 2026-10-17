@@ -13,7 +13,7 @@
   "install-btn": "Guia d'instal·lació",
   "Preview": "Vista prèvia",
   "homepage_h1": "Més ràpid, més net, més fàcil <br />Desenvolupament de Tailwind&nbsp;CSS",
-  "homepage_h2": "daisyUI és l'extensió de Tailwind CSS que t'encantarà! <br/>Proporciona noms de classes de components útils <br/>per ajudar-te a escriure menys codi i construir més ràpidament.",
+  "homepage_h2": "daisyUI és el plugin de Tailwind CSS que t’encantarà! <br/>Ofereix components fets només amb CSS <br/>per ajudar el teu agent a escriure menys codi i construir més de pressa.",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "En un projecte de Tailwind CSS, has d'escriure noms de classes d'utilitat per a cada element. Milers de noms de classe només per estilitzar els elements més bàsics.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "en lloc d'escriure<br /> <span class='text-error'><span class='font-black'>100</span> noms de classe</span>",
   "For every element, every page, every project,<br/>again and again": "Per a cada element, cada pàgina, cada projecte, una vegada i una altra",

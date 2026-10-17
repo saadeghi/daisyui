@@ -13,7 +13,7 @@
   "install-btn": "Průvodce instalací",
   "Preview": "Náhled",
   "homepage_h1": "Rychlejší, čistší, jednodušší <br />vývoj Tailwind&nbsp;CSS",
-  "homepage_h2": "daisyUI je plugin pro Tailwind CSS, který si zamilujete! <br/>Poskytuje užitečné názvy tříd komponent <br/>pro psaní méně kódu a rychlejší vývoj.",
+  "homepage_h2": "daisyUI je plugin pro Tailwind CSS, který si zamilujete! <br/>Nabízí komponenty vytvořené pouze pomocí CSS <br/>a pomáhá vašemu agentovi psát méně kódu a tvořit rychleji.",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "V projektu Tailwind CSS musíte psát názvy tříd pro každý prvek. Tisíce názvů tříd jen pro stylování nejzákladnějších prvků.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "místo psaní<br /> <span class='text-error'><span class='font-black'>100</span> názvů tříd</span>",
   "For every element, every page, every project,<br/>again and again": "Pro každý prvek, každou stránku, každý projekt,<br/>znovu a znovu",

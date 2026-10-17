@@ -55,7 +55,7 @@
     .slice(0, limit) as testimonial, index}
     <div class="card card-sm">
       <div class="card-body gap-4">
-        <p use:highlight>
+        <p use:highlight dir="ltr">
           {testimonial.content}
         </p>
         <div>

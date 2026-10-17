@@ -181,7 +181,7 @@ classnames:
 
 ```html
 <input type="range" min="0" max="100" value="40" 
-  class="$$range text-blue-300 [--range-bg:orange] [--range-thumb:blue] [--range-fill:0]" />
+  class="$$range text-blue-300 [--$$range-bg:orange] [--$$range-thumb:blue] [--$$range-fill:0]" />
 ```
 
 

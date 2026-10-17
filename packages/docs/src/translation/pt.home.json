@@ -13,7 +13,7 @@
   "install-btn": "Guia de instalação",
   "Preview": "Visualizar",
   "homepage_h1": "Rápido, limpo, fácil <br />Desenvolvimento Tailwind&nbsp;CSS",
-  "homepage_h2": "daisyUI é o plugin Tailwind CSS que você vai adorar! <br/>Ele fornece nomes de classe de componentes úteis <br/>para ajudar você a escrever menos código e construir mais rápido.",
+  "homepage_h2": "daisyUI é o plugin do Tailwind CSS que você vai adorar! <br/>Ele oferece componentes feitos apenas com CSS <br/>para ajudar seu agente a escrever menos código e desenvolver mais rápido.",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Em um projeto Tailwind CSS, você precisa escrever nomes de classes de utilitário para cada elemento. Milhares de nomes de classe apenas para estilizar os elementos mais básicos.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "em vez de escrever<br /> <span class='text-error'><span class='font-black'>100</span> nomes de classe</span>",
   "For every element, every page, every project,<br/>again and again": "Para cada elemento, cada página, cada projeto,<br/>novamente e novamente",

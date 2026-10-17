@@ -13,7 +13,7 @@
   "install-btn": "راهنمای نصب",
   "Preview": "پیش نمایش",
   "homepage_h1": "توسعه Tailwind&nbsp;CSS <br />سریع‌تر، تمیزتر، آسان‌تر",
-  "homepage_h2": "daisyUI پلاگینی است برای Tailwind CSS که دوست خواهید داشت! <br/>این پلاگین کامپوننت‌های مفیدی را ارائه می‌دهد <br/>تا به شما کمک کند کد کمتری بنویسید و سریع‌تر بسازید.",
+  "homepage_h2": "daisyUI افزونهٔ Tailwind CSS است که عاشقش می‌شوید! <br/>کامپوننت‌هایی فقط با CSS ارائه می‌دهد <br/>تا به ایجنت شما کمک کند کد کمتری بنویسد و سریع‌تر بسازد.",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "در یک پروژه Tailwind CSS، شما باید نام کلاس های کاربردی را برای هر المنت بنویسید. هزاران نام کلاس فقط برای استایل دادن به ابتدایی ترین المنت‌ها.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "به جای نوشتن<br /> <span class='text-error'><span class='font-black'>۱۰۰</span>ها کلاس</span>",
   "For every element, every page, every project,<br/>again and again": "برای هر عنصر، هر صفحه، هر پروژه، <br/> بارها و بارها",

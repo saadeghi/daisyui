@@ -60,6 +60,9 @@
       outline-offset: 2px;
       isolation: isolate;
     }
+  }
+
+  @layer daisyui.l1.l2 {
     &:has(> input[disabled]),
     &:is(:disabled, [disabled]) {
       @apply border-base-200 bg-base-200 placeholder-base-content placeholder-base-content/20 cursor-not-allowed;
@@ -78,7 +81,9 @@
 .file-input-ghost {
   @layer daisyui.l1.l2 {
     @apply bg-transparent;
-    transition: background-color 0.2s;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: background-color 0.2s;
+    }
     box-shadow: none;
     border-color: #0000;
     &::file-selector-button {

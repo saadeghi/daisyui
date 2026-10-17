@@ -24,6 +24,9 @@
   @layer daisyui.l1.l2 {
     @apply start-1/2 end-1/2;
     --toast-x: -50%;
+    &:dir(rtl) {
+      --toast-x: 50%;
+    }
   }
 }
 

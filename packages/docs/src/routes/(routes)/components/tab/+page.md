@@ -377,7 +377,7 @@ classnames:
 ```html
 <div role="tablist" class="$$tabs $$tabs-lift">
   <a role="tab" class="$$tab">Tab 1</a>
-  <a role="tab" class="$$tab $$tab-active text-primary [--tab-bg:orange] [--tab-border-color:red]"> Tab 2</a>
+  <a role="tab" class="$$tab $$tab-active text-primary [--$$tab-bg:orange] [--$$tab-border-color:red]"> Tab 2</a>
   <a role="tab" class="$$tab">Tab 3</a>
 </div>
 ```
