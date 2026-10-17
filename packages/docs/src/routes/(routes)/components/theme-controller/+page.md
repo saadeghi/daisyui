@@ -31,6 +31,10 @@ browserSupport:
 > If you're using [Tailwind CSS prefix](https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option), it won't add prefix to `theme-controller` class.  
 If you're using [daisyUI prefix](/docs/config/#prefix), it will add prefix to `theme-controller` class.
 
+> :INFO:
+>
+> If you don't use theme-controller, you can remove its selectors from themes with [`exclude: themecontroller`](/docs/config/#exclude) (or `themecontroller: false` for [custom themes](/docs/themes/#how-to-add-a-new-custom-theme)). Themes will then only be applied using the `data-theme` attribute.
+
 
 ### ~Theme Controller using a toggle
 <input type="checkbox" autocomplete="off" value="synthwave" bind:checked={checkbox} class="toggle theme-controller"/>

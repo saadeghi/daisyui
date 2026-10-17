@@ -111,6 +111,7 @@ To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the 
   default: true; /* set as default */
   prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
   color-scheme: light; /* color of browser-provided UI */
+  themecontroller: true; /* set to false to skip the theme-controller selector */
 
   --color-base-100: oklch(98% 0.02 240);
   --color-base-200: oklch(95% 0.03 240);
@@ -161,6 +162,8 @@ If you're using CDN and you want to use a custom theme, use it like this:
   /* ...rest of CSS variables like above example */
 }
 ```
+
+If you don't use [theme-controller](/components/theme-controller/), the `[data-theme="mytheme"]` selector alone is enough.
 
 ## <Translate text="How to customize an existing theme?" />
 

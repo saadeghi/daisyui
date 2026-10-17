@@ -2,6 +2,7 @@ const version = ""
 import { pluginOptionsHandler } from "./functions/pluginOptionsHandler.js"
 import { plugin } from "./functions/plugin.js"
 import { nestCssLayers } from "./functions/nestCssLayers.js"
+import { removeScrollLockSetters } from "./functions/removeScrollLockSetters.js"
 import variables from "./functions/variables.js"
 import themesObject from "./theme/object.js"
 import { base, components, utilities } from "./imports.js"
@@ -28,6 +29,12 @@ export default plugin.withOptions(
         return true
       }
 
+      // modal and drawer set --page-scroll-lock, which is only read by rootscrolllock and rootscrollgutter
+      const hasScrollLockReaders =
+        shouldIncludeItem("rootscrolllock") || shouldIncludeItem("rootscrollgutter")
+      const prepareComponentStyles = (styles) =>
+        nestCssLayers(hasScrollLockReaders ? styles : removeScrollLockSetters(styles))
+
       Object.entries(base).forEach(([name, item]) => {
         if (!shouldIncludeItem(name)) return
         item({ addBase, prefix })
@@ -36,7 +43,7 @@ export default plugin.withOptions(
       Object.entries(components).forEach(([name, item]) => {
         if (!shouldIncludeItem(name)) return
         item({
-          addComponents: (styles) => addComponents(nestCssLayers(styles)),
+          addComponents: (styles) => addComponents(prepareComponentStyles(styles)),
           prefix,
         })
       })
