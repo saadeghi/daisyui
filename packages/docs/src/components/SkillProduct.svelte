@@ -39,7 +39,7 @@
     >
       {product.usecase}
     </div>
-    <div class="btn absolute instet-e-8 bottom-8 flex gap-2 font-sans font-medium">
+    <div class="btn instet-e-8 absolute bottom-8 flex gap-2 font-sans font-medium">
       {#if product.originalprice}
         <span class="line-through opacity-40">
           &nbsp;{convertCurrency(product.originalprice)}&nbsp;

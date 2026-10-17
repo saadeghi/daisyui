@@ -13,7 +13,7 @@
 
         <div id="mc_embed_shell" class="card bg-base-200 my-10">
           <div class="card-body flex flex-col gap-4">
-            <h2 class="text-xl font-semibold font-title lg:text-4xl">Don't miss the new posts!</h2>
+            <h2 class="font-title text-xl font-semibold lg:text-4xl">Don't miss the new posts!</h2>
             <form
               action="https://app.kit.com/forms/7041226/subscriptions"
               method="post"

@@ -11,4 +11,3 @@ printChanges(
 if (changes.length && !write) {
   console.log("\nRun with --write to update translation files.")
 }
-

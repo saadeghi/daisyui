@@ -1062,7 +1062,7 @@
   <svg
     aria-label={label}
     xmlns="http://www.w3.org/2000/svg"
-    class="inline-block size-5 text-success"
+    class="text-success inline-block size-5"
     viewBox="0 0 24 24"
   >
     <path
@@ -1080,7 +1080,7 @@
   <svg
     aria-label="No"
     xmlns="http://www.w3.org/2000/svg"
-    class="inline-block size-5 text-error"
+    class="text-error inline-block size-5"
     viewBox="0 0 24 24"
   >
     <path
@@ -1112,8 +1112,8 @@
 
 {#snippet pricingCardContent(plan)}
   {#if plan.popular}
-    <div class="absolute -top-3 start-6 z-2">
-      <span class="badge bg-neutral px-3 font-semibold text-neutral-content shadow-sm">
+    <div class="absolute start-6 -top-3 z-2">
+      <span class="badge bg-neutral text-neutral-content px-3 font-semibold shadow-sm">
         Most popular
       </span>
     </div>
@@ -1129,13 +1129,13 @@
         {plan.price}
       </span>
       {#if plan.cadence}
-        <span class="pb-1 text-sm text-base-content/50">{plan.cadence}</span>
+        <span class="text-base-content/50 pb-1 text-sm">{plan.cadence}</span>
       {/if}
     </div>
 
-    <div class="mt-5 min-h-14 border-y border-base-300 py-3 text-sm">
-      <p class="font-semibold text-base-content">{plan.summary}</p>
-      <p class="mt-0.5 text-base-content/50">{plan.billing}</p>
+    <div class="border-base-300 mt-5 min-h-14 border-y py-3 text-sm">
+      <p class="text-base-content font-semibold">{plan.summary}</p>
+      <p class="text-base-content/50 mt-0.5">{plan.billing}</p>
     </div>
 
     <ul class="mt-6 flex grow flex-col gap-3 text-sm leading-relaxed">
@@ -1160,7 +1160,7 @@
 
     <div class="card-actions mt-8">
       <a
-        class="btn group w-full bg-neutral text-neutral-content"
+        class="btn group bg-neutral text-neutral-content w-full"
         href={plan.href}
         target="_blank"
         rel="noopener noreferrer"
@@ -1178,7 +1178,7 @@
 
 {#snippet floatingToolCard(role, text, motion)}
   <div
-    class="card card-sm card-border w-52 origin-center bg-base-100 text-base-content shadow-xl will-change-transform"
+    class="card card-sm card-border bg-base-100 text-base-content w-52 origin-center shadow-xl will-change-transform"
     style:opacity={motion.opacity}
     style:transform={`translateY(${motion.translateY}px) scale(${motion.scale})`}
   >
@@ -1230,7 +1230,7 @@
   {#if discount && isDiscountValid(discount) && isDiscountApplicableToBlueprint(discount)}
     <dialog bind:this={discountDialog} class="modal">
       <div class="modal-box">
-        <div class="mb-6 grid h-24 place-items-center rounded-lg bg-base-200 p-6 text-center">
+        <div class="bg-base-200 mb-6 grid h-24 place-items-center rounded-lg p-6 text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -1292,7 +1292,7 @@
                     class={`grid ${remaining.days > 0 ? "grid-cols-4" : "grid-cols-3"} gap-2 text-center font-mono`}
                   >
                     {#if remaining.days > 0}
-                      <div class="rounded-field border border-base-content/5 bg-base-200 p-2">
+                      <div class="rounded-field border-base-content/5 bg-base-200 border p-2">
                         <span class="countdown block text-3xl font-normal">
                           <span style={`--value:${remaining.days};`}></span>
                         </span>
@@ -1301,7 +1301,7 @@
                         </span>
                       </div>
                     {/if}
-                    <div class="rounded-field border border-base-content/5 bg-base-200 p-2">
+                    <div class="rounded-field border-base-content/5 bg-base-200 border p-2">
                       <span class="countdown block text-3xl font-normal">
                         <span style={`--value:${remaining.hours};`}></span>
                       </span>
@@ -1309,7 +1309,7 @@
                         {$t("hour")}
                       </span>
                     </div>
-                    <div class="rounded-field border border-base-content/5 bg-base-200 p-2">
+                    <div class="rounded-field border-base-content/5 bg-base-200 border p-2">
                       <span class="countdown block text-3xl font-normal">
                         <span style={`--value:${remaining.minutes};`}></span>
                       </span>
@@ -1317,7 +1317,7 @@
                         {$t("min")}
                       </span>
                     </div>
-                    <div class="rounded-field border border-base-content/5 bg-base-200 p-2">
+                    <div class="rounded-field border-base-content/5 bg-base-200 border p-2">
                       <span class="countdown block text-3xl font-normal">
                         <span style={`--value:${remaining.seconds};`}></span>
                       </span>
@@ -1346,7 +1346,7 @@
     transition:fly={{ y: reducedMotion ? 0 : 16, duration: reducedMotion ? 0 : 300 }}
   >
     <div
-      class="flex flex-wrap items-center justify-center gap-3 rounded-box border border-neutral-content/10 bg-neutral p-2 text-center text-sm font-semibold text-neutral-content shadow-2xl sm:justify-between sm:ps-5"
+      class="rounded-box border-neutral-content/10 bg-neutral text-neutral-content flex flex-wrap items-center justify-center gap-3 border p-2 text-center text-sm font-semibold shadow-2xl sm:justify-between sm:ps-5"
     >
       <div class="flex items-center gap-2">
         <img
@@ -1390,11 +1390,11 @@
   </aside>
 {/if}
 
-<div class="overflow-x-clip bg-base-100 text-base-content">
+<div class="bg-base-100 text-base-content overflow-x-clip">
   <main>
     <section
       use:trackHero
-      class="hero relative min-h-[calc(100svh-4rem)] overflow-hidden border-y border-base-300"
+      class="hero border-base-300 relative min-h-[calc(100svh-4rem)] overflow-hidden border-y"
       style="
         background-image: linear-gradient(var(--color-base-300) 1px, transparent 1px), linear-gradient(90deg, var(--color-base-300) 1px, transparent 1px), linear-gradient(var(--color-base-300) 0.5px, transparent 0.5px), linear-gradient(90deg, var(--color-base-300) 0.5px, var(--color-base-100) 0.5px);
         background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
@@ -1420,7 +1420,7 @@
               <img
                 src="https://img.daisyui.com/images/daisyui/mark.svg"
                 alt="daisyUI"
-                class="relative -mt-6 inline-block size-[1.2em] shrink-0 -rotate-5 border border-dashed border-base-content/5 p-1 object-contain"
+                class="border-base-content/5 relative -mt-6 inline-block size-[1.2em] shrink-0 -rotate-5 border border-dashed object-contain p-1"
                 width="96"
                 height="96"
               />
@@ -1442,7 +1442,7 @@
               {$t("MCP Server")}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="-mt-6 inline-block size-[1.2em] shrink-0 rotate-5 border border-dashed border-base-content/5 p-2 align-middle"
+                class="border-base-content/5 -mt-6 inline-block size-[1.2em] shrink-0 rotate-5 border border-dashed p-2 align-middle"
                 viewBox="0 0 195 195"
                 fill="none"
                 aria-label="Model Context Protocol"
@@ -1470,13 +1470,13 @@
           </h1>
 
           <div
-            class="mt-8 max-w-2xl text-base leading-relaxed text-base-content/65 transition-[opacity,transform] duration-700 [transition-delay:380ms] motion-reduce:transition-none sm:text-lg"
+            class="text-base-content/65 mt-8 max-w-2xl text-base leading-relaxed transition-[opacity,transform] [transition-delay:380ms] duration-700 motion-reduce:transition-none sm:text-lg"
             class:translate-y-4={enhanced && !pageReady}
             class:opacity-0={enhanced && !pageReady}
           >
             <div class="ms-2 py-1.5 max-sm:text-xs">
               <svg
-                class="me-1 mb-1 inline-block size-4 align-middle text-success"
+                class="text-success me-1 mb-1 inline-block size-4 align-middle"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 665.8 1000"
                 aria-hidden="true"
@@ -1490,7 +1490,7 @@
             </div>
             <div class="ms-2 py-1.5 max-sm:text-xs">
               <svg
-                class="me-1 mb-1 inline-block size-4 align-middle text-success"
+                class="text-success me-1 mb-1 inline-block size-4 align-middle"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 665.8 1000"
                 aria-hidden="true"
@@ -1554,7 +1554,7 @@
             </div>
             <div class="ms-2 py-1.5 max-sm:text-xs">
               <svg
-                class="me-1 mb-1 inline-block size-4 align-middle text-success"
+                class="text-success me-1 mb-1 inline-block size-4 align-middle"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 665.8 1000"
                 aria-hidden="true"
@@ -1568,7 +1568,7 @@
             </div>
             <div class="ms-2 py-1.5 max-sm:text-xs">
               <svg
-                class="me-1 mb-1 inline-block size-4 align-middle text-success"
+                class="text-success me-1 mb-1 inline-block size-4 align-middle"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 665.8 1000"
                 aria-hidden="true"
@@ -1591,7 +1591,7 @@
           </div>
 
           <div
-            class="mt-9 flex flex-wrap items-center gap-3 transition-[opacity,transform] duration-700 [transition-delay:460ms] motion-reduce:transition-none"
+            class="mt-9 flex flex-wrap items-center gap-3 transition-[opacity,transform] [transition-delay:460ms] duration-700 motion-reduce:transition-none"
             class:translate-y-4={enhanced && !pageReady}
             class:opacity-0={enhanced && !pageReady}
           >
@@ -1613,7 +1613,7 @@
           </div>
 
           <p
-            class="mt-5 max-w-xl text-xs leading-relaxed text-base-content/45 transition-[opacity,transform] duration-700 [transition-delay:520ms] motion-reduce:transition-none"
+            class="text-base-content/45 mt-5 max-w-xl text-xs leading-relaxed transition-[opacity,transform] [transition-delay:520ms] duration-700 motion-reduce:transition-none"
             class:translate-y-4={enhanced && !pageReady}
             class:opacity-0={enhanced && !pageReady}
           >
@@ -1625,13 +1625,13 @@
         </div>
 
         <div
-          class="relative mt-8 min-w-0 transition-[opacity,transform] duration-700 [transition-delay:300ms] motion-reduce:transition-none lg:mt-0"
+          class="relative mt-8 min-w-0 transition-[opacity,transform] [transition-delay:300ms] duration-700 motion-reduce:transition-none lg:mt-0"
           class:translate-y-5={enhanced && !pageReady}
           class:opacity-0={enhanced && !pageReady}
         >
           <!-- DO NOT TRANSLATE ANYTHING INSIDE THIS DIV -->
           <div
-            class="mockup-window content-none overflow-visible border border-neutral-content/10 bg-neutral text-neutral-content shadow-2xl"
+            class="mockup-window border-neutral-content/10 bg-neutral text-neutral-content overflow-visible border shadow-2xl content-none"
             dir="ltr"
           >
             <div
@@ -1650,11 +1650,11 @@
                   BLUEPRINT
                 </div>
               </div>
-              <div class="flex gap-3 text-neutral-content">
-                <span class="shrink-0 text-warning">❯</span>
+              <div class="text-neutral-content flex gap-3">
+                <span class="text-warning shrink-0">❯</span>
                 <span>Make a landing page for my food tracking app. Use Blueprint MCP</span>
               </div>
-              <div class="flex gap-3 text-neutral-content/65">
+              <div class="text-neutral-content/65 flex gap-3">
                 <span class="shrink-0">●</span>
                 <span>
                   Blueprint plans the page context, directs the design, retrieves accurate component
@@ -1667,7 +1667,7 @@
                   <div class="grid grid-cols-[1rem_1fr] gap-2">
                     <span class="text-success">⏺</span>
                     <div class="min-w-0">
-                      <div class="flex items-center gap-1.5 text-neutral-content">
+                      <div class="text-neutral-content flex items-center gap-1.5">
                         <img
                           src={role.icon}
                           alt=""
@@ -1677,7 +1677,7 @@
                         />
                         <span>{role.terminalName}</span>
                       </div>
-                      <div class="mt-0.5 flex gap-2 text-neutral-content/40">
+                      <div class="text-neutral-content/40 mt-0.5 flex gap-2">
                         <span>⎿</span>
                         <span>{role.output}</span>
                       </div>
@@ -1687,9 +1687,9 @@
               </div>
 
               <div
-                class="flex gap-3 border-t border-neutral-content/10 pt-3 text-neutral-content/65"
+                class="border-neutral-content/10 text-neutral-content/65 flex gap-3 border-t pt-3"
               >
-                <span class="shrink-0 text-success">●</span>
+                <span class="text-success shrink-0">●</span>
                 <span>Finished in 5m 10s · All tests passed · 100/100</span>
               </div>
             </div>
@@ -1699,7 +1699,7 @@
     </section>
 
     <section
-      class="border-b border-base-300"
+      class="border-base-300 border-b"
       aria-label={$t("Interface examples")}
       use:trackBlueprintCarouselVisibility
       data-blueprint-carousel
@@ -1710,7 +1710,7 @@
         >
           <div class="order-2 min-w-0 lg:order-1">
             <p
-              class="mb-3 hidden font-mono text-xs tracking-[0.18em] text-base-content/60 uppercase lg:block"
+              class="text-base-content/60 mb-3 hidden font-mono text-xs tracking-[0.18em] uppercase lg:block"
             >
               {$t("MADE WITH BLUEPRINT MCP")}
             </p>
@@ -1824,11 +1824,11 @@
           >
             <div
               bind:this={blueprintCarouselCard}
-              class="relative size-full [transform:translate3d(0,0,0)] [transform-style:preserve-3d] [will-change:transform] after:absolute after:-bottom-8 after:left-1/2 after:block after:h-4 after:w-[70%] after:rounded-full after:bg-[#0006] after:content-[''] after:[translate:-50%_0] after:blur-[1rem]"
+              class="relative size-full [transform:translate3d(0,0,0)] [will-change:transform] [transform-style:preserve-3d] after:absolute after:-bottom-8 after:left-1/2 after:block after:h-4 after:w-[70%] after:[translate:-50%_0] after:rounded-full after:bg-[#0006] after:blur-[1rem] after:content-['']"
               data-blueprint-card
             >
               <div
-                class="absolute inset-0 overflow-hidden rounded-lg border-2 border-black bg-base-200 [backface-visibility:hidden] [transform:translateZ(0.1px)] [will-change:transform]"
+                class="bg-base-200 absolute inset-0 [transform:translateZ(0.1px)] overflow-hidden rounded-lg border-2 border-black [will-change:transform] [backface-visibility:hidden]"
                 data-blueprint-face="front"
               >
                 <a
@@ -1847,7 +1847,7 @@
                 </a>
               </div>
               <div
-                class="absolute inset-0 overflow-hidden rounded-lg border-2 border-black bg-base-200 [backface-visibility:hidden] [transform:rotateY(180deg)_translateZ(0.1px)] [will-change:transform]"
+                class="bg-base-200 absolute inset-0 [transform:rotateY(180deg)_translateZ(0.1px)] overflow-hidden rounded-lg border-2 border-black [will-change:transform] [backface-visibility:hidden]"
                 data-blueprint-face="back"
                 aria-hidden="true"
               >
@@ -1864,16 +1864,16 @@
       </div>
     </section>
 
-    <section class="border-b border-base-300 bg-base-200/45">
+    <section class="border-base-300 bg-base-200/45 border-b">
       <div class="mx-auto max-w-7xl px-4 py-12 sm:px-8 lg:py-16">
-        <p class="text-center font-mono text-xs tracking-[0.18em] text-base-content/45 uppercase">
+        <p class="text-base-content/45 text-center font-mono text-xs tracking-[0.18em] uppercase">
           {$t("Blueprint MCP server works with coding agents")}
         </p>
         <div class="flex justify-center">
           <div class="my-20 flex flex-wrap items-center justify-center gap-16">
             {#each codingTools as tool}
               <div
-                class="group tooltip flex size-14 items-center justify-center rounded-field border border-base-300 bg-base-200 p-3 sm:size-16 lg:size-20"
+                class="group tooltip rounded-field border-base-300 bg-base-200 flex size-14 items-center justify-center border p-3 sm:size-16 lg:size-20"
                 data-tip={tool.name}
               >
                 <img
@@ -1895,7 +1895,7 @@
     <section
       id="problem"
       use:revealOnScroll={"problem"}
-      class="scroll-mt-20 bg-neutral/90 text-neutral-content"
+      class="bg-neutral/90 text-neutral-content scroll-mt-20"
     >
       <div
         class="mx-auto max-w-7xl px-4 py-24 transition-[opacity,transform] duration-700 motion-reduce:transition-none sm:px-8 lg:py-36"
@@ -1904,14 +1904,14 @@
       >
         <div class="grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
           <div>
-            <div class="font-mono text-xs text-error">{$t("ALL WEBSITES LOOK THE SAME")}</div>
+            <div class="text-error font-mono text-xs">{$t("ALL WEBSITES LOOK THE SAME")}</div>
             <h2
               class="font-title mt-5 max-w-4xl text-6xl leading-[0.84] font-semibold tracking-[-0.055em] sm:text-8xl lg:text-9xl"
             >
               {$t("Sick of")} <span class="whitespace-nowrap">{$t("AI slop?")}</span>
             </h2>
           </div>
-          <p class="max-w-2xl text-lg leading-relaxed text-neutral-content/60 lg:pb-2">
+          <p class="text-neutral-content/60 max-w-2xl text-lg leading-relaxed lg:pb-2">
             {$t(
               "AI-generated sites arrive with outdated dependencies, stale syntax, copy-paste layouts, the same color palettes, purple gradients, inconsistent spacing, and a structure so mediocre that no one wants to use it.",
             )}
@@ -1919,7 +1919,7 @@
         </div>
 
         <div
-          class="relative mt-16 transition-[opacity,transform] duration-700 [transition-delay:120ms] motion-reduce:transition-none lg:pr-[40%]"
+          class="relative mt-16 transition-[opacity,transform] [transition-delay:120ms] duration-700 motion-reduce:transition-none lg:pr-[40%]"
           class:scale-[0.985]={pageReady && !visibleSections.includes("problem")}
           class:opacity-0={pageReady && !visibleSections.includes("problem")}
           dir="ltr"
@@ -1927,7 +1927,7 @@
           <img
             src="https://img.daisyui.com/images/content/ai-slop.webp"
             alt={$t("Example of a generic AI-generated landing page")}
-            class="w-full rounded-lg object-cover object-top outline outline-error"
+            class="outline-error w-full rounded-lg object-cover object-top outline"
             width="1200"
             height="1311"
             loading="lazy"
@@ -1935,7 +1935,7 @@
 
           <div class="pointer-events-none absolute inset-0 hidden lg:block">
             <svg
-              class="absolute inset-0 size-full text-error"
+              class="text-error absolute inset-0 size-full"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
               aria-hidden="true"
@@ -1953,66 +1953,66 @@
             </svg>
 
             <span
-              class="absolute top-[11%] left-[48%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-error bg-base-100"
+              class="border-error bg-base-100 absolute top-[11%] left-[48%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2"
               aria-hidden="true"
             ></span>
             <span
-              class="absolute top-[19.5%] left-[39.6%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-error bg-base-100"
+              class="border-error bg-base-100 absolute top-[19.5%] left-[39.6%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2"
               aria-hidden="true"
             ></span>
             <span
-              class="absolute top-[34.5%] left-[48%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-error bg-base-100"
+              class="border-error bg-base-100 absolute top-[34.5%] left-[48%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2"
               aria-hidden="true"
             ></span>
             <span
-              class="absolute top-[29%] left-[28.2%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-error bg-base-100"
+              class="border-error bg-base-100 absolute top-[29%] left-[28.2%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2"
               aria-hidden="true"
             ></span>
             <span
-              class="absolute top-[50%] left-[51%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-error bg-base-100"
+              class="border-error bg-base-100 absolute top-[50%] left-[51%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2"
               aria-hidden="true"
             ></span>
             <span
-              class="absolute top-[58%] left-[51%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-error bg-base-100"
+              class="border-error bg-base-100 absolute top-[58%] left-[51%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2"
               aria-hidden="true"
             ></span>
             <span
-              class="absolute top-[80%] left-[51%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-error bg-base-100"
+              class="border-error bg-base-100 absolute top-[80%] left-[51%] size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2"
               aria-hidden="true"
             ></span>
 
             <div
-              class="absolute top-[11%] left-[63%] -translate-y-1/2 whitespace-nowrap border border-error bg-error px-3 py-2 text-xs font-semibold text-error-content xl:text-sm"
+              class="border-error bg-error text-error-content absolute top-[11%] left-[63%] -translate-y-1/2 border px-3 py-2 text-xs font-semibold whitespace-nowrap xl:text-sm"
             >
               {$t("The most mediocre layout")}
             </div>
             <div
-              class="absolute top-[19.5%] left-[63%] -translate-y-1/2 whitespace-nowrap border border-error bg-error px-3 py-2 text-xs font-semibold text-error-content xl:text-sm"
+              class="border-error bg-error text-error-content absolute top-[19.5%] left-[63%] -translate-y-1/2 border px-3 py-2 text-xs font-semibold whitespace-nowrap xl:text-sm"
             >
               {$t("Boring, inauthentic color palette")}
             </div>
             <div
-              class="absolute top-[36%] left-[63%] -translate-y-1/2 whitespace-nowrap border border-error bg-error px-3 py-2 text-xs font-semibold text-error-content xl:text-sm"
+              class="border-error bg-error text-error-content absolute top-[36%] left-[63%] -translate-y-1/2 border px-3 py-2 text-xs font-semibold whitespace-nowrap xl:text-sm"
             >
               {$t("Looks like every other AI-generated site")}
             </div>
             <div
-              class="absolute top-[28.5%] left-[63%] -translate-y-1/2 whitespace-nowrap border border-error bg-error px-3 py-2 text-xs font-semibold text-error-content xl:text-sm"
+              class="border-error bg-error text-error-content absolute top-[28.5%] left-[63%] -translate-y-1/2 border px-3 py-2 text-xs font-semibold whitespace-nowrap xl:text-sm"
             >
               {$t("Inconsistent components, no design system")}
             </div>
             <div
-              class="absolute top-[50%] left-[63%] -translate-y-1/2 whitespace-nowrap border border-error bg-error px-3 py-2 text-xs font-semibold text-error-content xl:text-sm"
+              class="border-error bg-error text-error-content absolute top-[50%] left-[63%] -translate-y-1/2 border px-3 py-2 text-xs font-semibold whitespace-nowrap xl:text-sm"
             >
               {$t("Inaccessible, inefficient, and unmaintainable code")}
             </div>
             <div
-              class="absolute top-[59%] left-[63%] -translate-y-1/2 whitespace-nowrap border border-error bg-error px-3 py-2 text-xs font-semibold text-error-content xl:text-sm"
+              class="border-error bg-error text-error-content absolute top-[59%] left-[63%] -translate-y-1/2 border px-3 py-2 text-xs font-semibold whitespace-nowrap xl:text-sm"
             >
               {$t("AI slop content and lack of structure")}
             </div>
             <div
-              class="absolute top-[80%] left-[63%] -translate-y-1/2 whitespace-nowrap border border-error bg-error px-3 py-2 text-xs font-semibold text-error-content xl:text-sm"
+              class="border-error bg-error text-error-content absolute top-[80%] left-[63%] -translate-y-1/2 border px-3 py-2 text-xs font-semibold whitespace-nowrap xl:text-sm"
             >
               {$t("Purple gradients everywhere")}
             </div>
@@ -2020,7 +2020,7 @@
 
           <div class="mt-5 grid gap-2 lg:hidden">
             {#each ["The most mediocre layout", "Boring, inauthentic color palette", "Looks like every other AI-generated site", "Inconsistent components, no design system", "Inaccessible, inefficient, and unmaintainable code", "AI slop content and lack of structure", "Purple gradients everywhere"] as issue}
-              <div class="border border-error px-3 py-2 text-sm text-error">
+              <div class="border-error text-error border px-3 py-2 text-sm">
                 <span class="me-2" aria-hidden="true">×</span>{$t(issue)}
               </div>
             {/each}
@@ -2036,7 +2036,7 @@
         class:opacity-0={pageReady && !visibleSections.includes("skills")}
       >
         <div>
-          <div class="font-mono text-xs text-error">
+          <div class="text-error font-mono text-xs">
             {$t("TRYING TO FIX THE SLOP WITH INSTRUCTIONS?")}
           </div>
           <h2
@@ -2044,12 +2044,12 @@
           >
             {$t("Your LLM ignores the instructions and skills.")}
           </h2>
-          <p class="mt-8 max-w-xl text-base leading-relaxed text-neutral-content/60 sm:text-lg">
+          <p class="text-neutral-content/60 mt-8 max-w-xl text-base leading-relaxed sm:text-lg">
             {$t(
               "Agent skills are collections of instructions and rules. Check the logs and the pattern is familiar: the model reads a few files, skips the rest, ignores inconvenient rules, and moves on.",
             )}
           </p>
-          <p class="mt-4 max-w-xl text-base leading-relaxed text-neutral-content/60 sm:text-lg">
+          <p class="text-neutral-content/60 mt-4 max-w-xl text-base leading-relaxed sm:text-lg">
             {$t(
               "UI work needs more context than most tasks. Yet as the instruction set grows, the chance of selective reading grows with it.",
             )}
@@ -2057,13 +2057,13 @@
         </div>
 
         <div class="min-w-0">
-          <div class="stats stats-vertical w-full border border-neutral-content/10 bg-neutral">
+          <div class="stats stats-vertical border-neutral-content/10 bg-neutral w-full border">
             <div class="stat">
               <div class="stat-title text-neutral-content/45">{$t("Skill files inspected")}</div>
-              <div class="stat-value font-title mb-2 text-2xl text-neutral-content sm:text-3xl">
+              <div class="stat-value font-title text-neutral-content mb-2 text-2xl sm:text-3xl">
                 {$t("Ignored 40% of the rules")}
               </div>
-              <div class="stat-desc whitespace-normal text-error">
+              <div class="stat-desc text-error whitespace-normal">
                 <span class="block">{$t("Skipped 23 files due to overconfidence")}</span>
                 <span class="mt-1 block">
                   {$t("Ignored the rules and treated them as suggestions only")}
@@ -2073,45 +2073,45 @@
           </div>
 
           <!-- DO NOT TRANSLATE ANYTHING INSIDE THIS DIV -->
-          <ul class="list mt-5 border-y border-neutral-content/10 font-mono text-xs">
-            <li class="list-row items-center rounded-none border-b border-neutral-content/10">
+          <ul class="list border-neutral-content/10 mt-5 border-y font-mono text-xs">
+            <li class="list-row border-neutral-content/10 items-center rounded-none border-b">
               <span class="status status-success status-lg" aria-hidden="true"></span>
-              <span class="grow text-neutral-content">SKILL.md</span>
+              <span class="text-neutral-content grow">SKILL.md</span>
               <span class="text-success">read</span>
             </li>
-            <li class="list-row items-center rounded-none border-b border-neutral-content/10">
+            <li class="list-row border-neutral-content/10 items-center rounded-none border-b">
               <span class="status status-success status-lg" aria-hidden="true"></span>
-              <span class="grow text-neutral-content">references/components.md</span>
+              <span class="text-neutral-content grow">references/components.md</span>
               <span class="text-success">Lines 1 to 120</span>
             </li>
-            <li class="list-row items-center rounded-none border-b border-neutral-content/10">
+            <li class="list-row border-neutral-content/10 items-center rounded-none border-b">
               <span class="status status-success status-lg" aria-hidden="true"></span>
-              <span class="grow text-neutral-content">references/themes.md</span>
+              <span class="text-neutral-content grow">references/themes.md</span>
               <span class="text-success">Lines 1 to 120</span>
             </li>
             <li
-              class="list-row items-center rounded-none border-b border-neutral-content/10 opacity-55"
+              class="list-row border-neutral-content/10 items-center rounded-none border-b opacity-55"
             >
               <span class="status status-error status-lg" aria-hidden="true"></span>
               <span class="grow">references/design.md</span>
               <span>partially ignored</span>
             </li>
             <li
-              class="list-row items-center rounded-none border-b border-neutral-content/10 opacity-55"
+              class="list-row border-neutral-content/10 items-center rounded-none border-b opacity-55"
             >
               <span class="status status-error status-lg" aria-hidden="true"></span>
               <span class="grow">references/anti-patterns.md</span>
               <span>partially ignored</span>
             </li>
             <li
-              class="list-row items-center rounded-none border-b border-neutral-content/10 opacity-55"
+              class="list-row border-neutral-content/10 items-center rounded-none border-b opacity-55"
             >
               <span class="status status-error status-lg" aria-hidden="true"></span>
               <span class="grow">references/accessibility.md</span>
               <span>partially ignored</span>
             </li>
             <li
-              class="list-row items-center rounded-none border-b border-neutral-content/10 opacity-55"
+              class="list-row border-neutral-content/10 items-center rounded-none border-b opacity-55"
             >
               <span class="status status-error status-lg" aria-hidden="true"></span>
               <span class="grow">references/responsive.md</span>
@@ -2136,10 +2136,10 @@
       </div>
     </section>
 
-    <section class="border-b border-neutral-content/10 bg-neutral/90 text-neutral-content">
+    <section class="border-neutral-content/10 bg-neutral/90 text-neutral-content border-b">
       <div class="mx-auto max-w-7xl px-4 py-24 sm:px-8 lg:py-36">
         <div class="mx-auto max-w-[40rem]">
-          <div class="font-mono text-xs text-error uppercase">
+          <div class="text-error font-mono text-xs uppercase">
             {$t("Wasted time, wasted effort, wasted tokens")}
           </div>
           <h2
@@ -2153,7 +2153,7 @@
               loading="lazy"
             />
           </h2>
-          <div class="mt-10 space-y-5 text-base leading-relaxed text-neutral-content/65 sm:text-lg">
+          <div class="text-neutral-content/65 mt-10 space-y-5 text-base leading-relaxed sm:text-lg">
             <p>
               {$t(
                 "Without clear instructions, AI creates the same generic UI for everyone. That's why trends like purple buttons and gradients quickly became overused.",
@@ -2175,7 +2175,7 @@
       </div>
     </section>
 
-    <section class="overflow-hidden border-b border-base-300 py-20 sm:py-28">
+    <section class="border-base-300 overflow-hidden border-b py-20 sm:py-28">
       <div class="mx-auto max-w-7xl px-2 text-center sm:px-6">
         <p class="font-title mb-8 text-3xl font-semibold tracking-tight sm:text-5xl">
           {$t("No slop. No skip. No waste.")}
@@ -2224,11 +2224,11 @@
       </div>
     </section>
 
-    <section id="workflow" class="scroll-mt-16 border-b border-base-300 bg-base-200/45">
+    <section id="workflow" class="border-base-300 bg-base-200/45 scroll-mt-16 border-b">
       <div class="mx-auto max-w-7xl px-4 pt-24 sm:px-8 lg:pt-36">
         <div class="grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
           <div>
-            <div class="font-mono text-xs text-success">{$t("THE REAL SOLUTION")}</div>
+            <div class="text-success font-mono text-xs">{$t("THE REAL SOLUTION")}</div>
             <h2
               class="font-title mt-5 text-5xl leading-[0.88] font-semibold tracking-[-0.05em] sm:text-7xl lg:text-8xl"
             >
@@ -2239,7 +2239,7 @@
             <p class="text-2xl leading-tight font-semibold sm:text-3xl">
               {$t("Introducing a mandatory MCP workflow.")}
             </p>
-            <p class="mt-5 max-w-2xl leading-relaxed text-base-content/60">
+            <p class="text-base-content/60 mt-5 max-w-2xl leading-relaxed">
               {$t(
                 "Every tool has a defined job and a strict execution order. Each tool provides the necessary resources and functionality to your agent. The agent must follow these rules sequentially. It cannot skip steps, invent component syntax, or mark unfinished work as complete.",
               )}
@@ -2249,7 +2249,7 @@
 
         <div class="mt-14 max-w-full overflow-x-auto">
           <div
-            class="stats stats-vertical w-full min-w-0 bg-base-300 shadow-sm sm:stats-horizontal"
+            class="stats stats-vertical bg-base-300 sm:stats-horizontal w-full min-w-0 shadow-sm"
           >
             <div class="stat">
               <div class="stat-title">{$t("Rules and principles")}</div>
@@ -2279,10 +2279,10 @@
             {#each expertRoles as role, index}
               <article
                 use:trackTool={index}
-                class="flex min-h-[54svh] flex-col justify-center border-t border-base-300 py-16 last:border-b"
+                class="border-base-300 flex min-h-[54svh] flex-col justify-center border-t py-16 last:border-b"
               >
                 <div class="flex flex-wrap items-center gap-3">
-                  <span class="font-mono text-xs text-base-content/35">{role.number}</span>
+                  <span class="text-base-content/35 font-mono text-xs">{role.number}</span>
                   <span class="badge badge-soft badge-sm">{$t(role.requirement)}</span>
                 </div>
                 <h3 class="font-title mt-6 text-4xl leading-none font-bold sm:text-5xl">
@@ -2296,10 +2296,10 @@
                   />
                   {$t(role.name)}
                 </h3>
-                <p class="mt-6 max-w-xl text-lg leading-relaxed text-base-content/65">
+                <p class="text-base-content/65 mt-6 max-w-xl text-lg leading-relaxed">
                   {$t(role.description)}
                 </p>
-                <p class="mt-5 max-w-xl text-sm leading-relaxed text-base-content/45">
+                <p class="text-base-content/45 mt-5 max-w-xl text-sm leading-relaxed">
                   {$t(role.detail)}
                 </p>
               </article>
@@ -2313,42 +2313,42 @@
                   {@const position = floatingCardPosition(roleIndex, cardIndex)}
                   {#if position === "top-left"}
                     <div
-                      class="pointer-events-none absolute start-0 top-[30%] z-2 hidden -translate-x-1/2 -rotate-2 rtl:translate-x-1/2 rtl:rotate-2 lg:block"
+                      class="pointer-events-none absolute start-0 top-[30%] z-2 hidden -translate-x-1/2 -rotate-2 lg:block rtl:translate-x-1/2 rtl:rotate-2"
                       aria-hidden="true"
                     >
                       {@render floatingToolCard(role, card, toolCardMotion[roleIndex][cardIndex])}
                     </div>
                   {:else if position === "top-right"}
                     <div
-                      class="pointer-events-none absolute end-0 top-[30%] z-2 hidden translate-x-1/2 rotate-2 rtl:-translate-x-1/2 rtl:-rotate-2 lg:block"
+                      class="pointer-events-none absolute end-0 top-[30%] z-2 hidden translate-x-1/2 rotate-2 lg:block rtl:-translate-x-1/2 rtl:-rotate-2"
                       aria-hidden="true"
                     >
                       {@render floatingToolCard(role, card, toolCardMotion[roleIndex][cardIndex])}
                     </div>
                   {:else if position === "middle-left"}
                     <div
-                      class="pointer-events-none absolute start-0 top-1/2 z-2 hidden -translate-x-1/2 -translate-y-1/2 -rotate-2 rtl:translate-x-1/2 rtl:rotate-2 lg:block"
+                      class="pointer-events-none absolute start-0 top-1/2 z-2 hidden -translate-x-1/2 -translate-y-1/2 -rotate-2 lg:block rtl:translate-x-1/2 rtl:rotate-2"
                       aria-hidden="true"
                     >
                       {@render floatingToolCard(role, card, toolCardMotion[roleIndex][cardIndex])}
                     </div>
                   {:else if position === "middle-right"}
                     <div
-                      class="pointer-events-none absolute end-0 top-1/2 z-2 hidden translate-x-1/2 -translate-y-1/2 rotate-2 rtl:-translate-x-1/2 rtl:-rotate-2 lg:block"
+                      class="pointer-events-none absolute end-0 top-1/2 z-2 hidden translate-x-1/2 -translate-y-1/2 rotate-2 lg:block rtl:-translate-x-1/2 rtl:-rotate-2"
                       aria-hidden="true"
                     >
                       {@render floatingToolCard(role, card, toolCardMotion[roleIndex][cardIndex])}
                     </div>
                   {:else if position === "bottom-left"}
                     <div
-                      class="pointer-events-none absolute start-0 bottom-[30%] z-2 hidden -translate-x-1/2 -rotate-2 rtl:translate-x-1/2 rtl:rotate-2 lg:block"
+                      class="pointer-events-none absolute start-0 bottom-[30%] z-2 hidden -translate-x-1/2 -rotate-2 lg:block rtl:translate-x-1/2 rtl:rotate-2"
                       aria-hidden="true"
                     >
                       {@render floatingToolCard(role, card, toolCardMotion[roleIndex][cardIndex])}
                     </div>
                   {:else}
                     <div
-                      class="pointer-events-none absolute end-0 bottom-[30%] z-2 hidden translate-x-1/2 rotate-2 rtl:-translate-x-1/2 rtl:-rotate-2 lg:block"
+                      class="pointer-events-none absolute end-0 bottom-[30%] z-2 hidden translate-x-1/2 rotate-2 lg:block rtl:-translate-x-1/2 rtl:-rotate-2"
                       aria-hidden="true"
                     >
                       {@render floatingToolCard(role, card, toolCardMotion[roleIndex][cardIndex])}
@@ -2359,7 +2359,7 @@
 
               <!-- DO NOT TRANSLATE ANYTHING INSIDE THIS DIV -->
               <div
-                class="mockup-window max-h-[calc(100svh-7rem)] overflow-y-auto border border-neutral-content/10 bg-neutral text-neutral-content shadow-2xl"
+                class="mockup-window border-neutral-content/10 bg-neutral text-neutral-content max-h-[calc(100svh-7rem)] overflow-y-auto border shadow-2xl"
                 dir="ltr"
                 aria-hidden="true"
               >
@@ -2367,16 +2367,16 @@
                   class="min-h-[29rem] space-y-3 p-4 pt-10 font-mono text-[0.6875rem] leading-[1.45] sm:p-6 sm:pt-10 sm:text-xs"
                 >
                   <div class="flex gap-3">
-                    <span class="shrink-0 text-warning">❯</span>
+                    <span class="text-warning shrink-0">❯</span>
                     <span>Generate a landing page for my iOS food tracking app</span>
                   </div>
-                  <div class="flex gap-3 text-neutral-content/65">
-                    <span class="shrink-0 text-success">●</span>
+                  <div class="text-neutral-content/65 flex gap-3">
+                    <span class="text-success shrink-0">●</span>
                     <span>Using the daisyUI Blueprint MCP server</span>
                   </div>
 
                   {#if toolProgress.every((progress) => progress === 0)}
-                    <div class="flex gap-3 pt-3 text-neutral-content/35">
+                    <div class="text-neutral-content/35 flex gap-3 pt-3">
                       <span>↓</span>
                       <span>Scroll to run the mandatory workflow</span>
                     </div>
@@ -2388,7 +2388,7 @@
                         <div class="grid grid-cols-[1rem_1fr] gap-2">
                           <span class="text-success">⏺</span>
                           <div class="min-w-0">
-                            <div class="break-words text-neutral-content">
+                            <div class="text-neutral-content break-words">
                               <img
                                 src={role.icon}
                                 alt=""
@@ -2403,7 +2403,7 @@
                               {/if}
                             </div>
                             {#if toolProgress[index] >= 1}
-                              <div class="mt-1 flex gap-2 text-neutral-content/40">
+                              <div class="text-neutral-content/40 mt-1 flex gap-2">
                                 <span>⎿</span>
                                 <span>{role.output}</span>
                               </div>
@@ -2416,13 +2416,13 @@
 
                   {#if toolProgress[expertRoles.length - 1] >= 1}
                     <div
-                      class="flex gap-3 border-t border-neutral-content/10 pt-4 text-neutral-content/65"
+                      class="border-neutral-content/10 text-neutral-content/65 flex gap-3 border-t pt-4"
                       transition:fly={{
                         y: reducedMotion ? 0 : 10,
                         duration: reducedMotion ? 0 : 340,
                       }}
                     >
-                      <span class="shrink-0 text-success">●</span>
+                      <span class="text-success shrink-0">●</span>
                       <span>Finished in 5m 10s · Using the daisyUI Blueprint MCP server</span>
                     </div>
                   {/if}
@@ -2437,7 +2437,7 @@
     <section
       id="convert"
       use:revealOnScroll={"convert"}
-      class="scroll-mt-16 border-b border-base-300"
+      class="border-base-300 scroll-mt-16 border-b"
     >
       <div
         class="mx-auto max-w-7xl px-4 py-24 transition-[opacity,transform] duration-700 motion-reduce:transition-none sm:px-8 lg:py-36"
@@ -2453,7 +2453,7 @@
             </h2>
           </div>
           <p
-            class="max-w-2xl text-lg leading-relaxed text-base-content/60 lg:justify-self-end lg:pb-2"
+            class="text-base-content/60 max-w-2xl text-lg leading-relaxed lg:justify-self-end lg:pb-2"
           >
             {$t(
               "Blueprint gives your agent the tools to understand the source first. It extracts the structure, chooses the matching daisyUI components, supplies exact snippets, and checks the conversion when the code is done.",
@@ -2463,13 +2463,13 @@
 
         <div class="mt-16 grid auto-rows-[minmax(17rem,auto)] gap-4 lg:grid-cols-12">
           <article
-            class="card card-border overflow-hidden bg-neutral text-start text-neutral-content lg:col-span-7 lg:row-span-2"
+            class="card card-border bg-neutral text-neutral-content overflow-hidden text-start lg:col-span-7 lg:row-span-2"
           >
             <div class="card-body justify-between p-7 sm:p-10">
               <div>
                 <div class="flex items-center gap-4" aria-label={$t("Figma converts to daisyUI")}>
                   <span
-                    class="flex size-14 items-center justify-center rounded-box bg-neutral-content/10 p-3"
+                    class="rounded-box bg-neutral-content/10 flex size-14 items-center justify-center p-3"
                   >
                     <svg
                       class="size-full"
@@ -2502,7 +2502,7 @@
                   </span>
                   <span class="text-neutral-content/40">{@render arrowIcon()}</span>
                   <span
-                    class="flex size-14 items-center justify-center rounded-box bg-neutral-content/10 p-3"
+                    class="rounded-box bg-neutral-content/10 flex size-14 items-center justify-center p-3"
                   >
                     <img
                       src="https://img.daisyui.com/images/daisyui/mark.svg"
@@ -2517,18 +2517,18 @@
                 <h3 class="font-title mt-9 text-4xl leading-none font-bold sm:text-5xl">
                   {$t(conversionTools[0].title)}
                 </h3>
-                <p class="mt-5 max-w-xl leading-relaxed text-neutral-content/60">
+                <p class="text-neutral-content/60 mt-5 max-w-xl leading-relaxed">
                   {$t(conversionTools[0].description)}
                 </p>
               </div>
 
-              <div class="mt-14 border-t border-neutral-content/10 pt-6 font-mono text-xs">
+              <div class="border-neutral-content/10 mt-14 border-t pt-6 font-mono text-xs">
                 <div class="text-neutral-content/40">{conversionTools[0].input}</div>
-                <div class="mt-3 flex items-center gap-3 text-success">
+                <div class="text-success mt-3 flex items-center gap-3">
                   {@render arrowIcon()}
                   <span>{conversionTools[0].output}</span>
                 </div>
-                <div class="mt-7 break-all text-[0.6875rem] text-neutral-content/30">
+                <div class="text-neutral-content/30 mt-7 text-[0.6875rem] break-all">
                   {conversionTools[0].toolName}
                 </div>
               </div>
@@ -2542,7 +2542,7 @@
                 aria-label={$t("Tailwind CSS converts to daisyUI")}
               >
                 <span
-                  class="flex size-14 items-center justify-center rounded-box border border-base-300 bg-base-100 p-3"
+                  class="rounded-box border-base-300 bg-base-100 flex size-14 items-center justify-center border p-3"
                 >
                   <svg
                     class="size-full"
@@ -2571,7 +2571,7 @@
                 </span>
                 <span class="text-base-content/35">{@render arrowIcon()}</span>
                 <span
-                  class="flex size-14 items-center justify-center rounded-box border border-base-300 bg-base-100 p-3"
+                  class="rounded-box border-base-300 bg-base-100 flex size-14 items-center justify-center border p-3"
                 >
                   <img
                     src="https://img.daisyui.com/images/daisyui/mark.svg"
@@ -2586,7 +2586,7 @@
               <h3 class="font-title mt-7 text-3xl leading-none font-bold">
                 {$t(conversionTools[1].title)}
               </h3>
-              <p class="mt-4 leading-relaxed text-base-content/60">
+              <p class="text-base-content/60 mt-4 leading-relaxed">
                 {$t(conversionTools[1].description)}
               </p>
             </div>
@@ -2599,7 +2599,7 @@
                 aria-label={$t("Screenshot converts to daisyUI")}
               >
                 <span
-                  class="flex size-14 items-center justify-center rounded-box border border-base-300 bg-base-200 p-3 text-base-content/70"
+                  class="rounded-box border-base-300 bg-base-200 text-base-content/70 flex size-14 items-center justify-center border p-3"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -2618,7 +2618,7 @@
                 </span>
                 <span class="text-base-content/35">{@render arrowIcon()}</span>
                 <span
-                  class="flex size-14 items-center justify-center rounded-box border border-base-300 bg-base-200 p-3"
+                  class="rounded-box border-base-300 bg-base-200 flex size-14 items-center justify-center border p-3"
                 >
                   <img
                     src="https://img.daisyui.com/images/daisyui/mark.svg"
@@ -2633,7 +2633,7 @@
               <h3 class="font-title mt-7 text-3xl leading-none font-bold">
                 {$t(conversionTools[2].title)}
               </h3>
-              <p class="mt-4 leading-relaxed text-base-content/60">
+              <p class="text-base-content/60 mt-4 leading-relaxed">
                 {$t(conversionTools[2].description)}
               </p>
             </div>
@@ -2643,7 +2643,7 @@
             <div class="card-body p-7 sm:p-8">
               <div class="flex items-center gap-4" aria-label={$t("Bootstrap converts to daisyUI")}>
                 <span
-                  class="flex size-14 items-center justify-center rounded-box border border-base-300 bg-base-200 p-3"
+                  class="rounded-box border-base-300 bg-base-200 flex size-14 items-center justify-center border p-3"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -2664,7 +2664,7 @@
                 </span>
                 <span class="text-base-content/35">{@render arrowIcon()}</span>
                 <span
-                  class="flex size-14 items-center justify-center rounded-box border border-base-300 bg-base-200 p-3"
+                  class="rounded-box border-base-300 bg-base-200 flex size-14 items-center justify-center border p-3"
                 >
                   <img
                     src="https://img.daisyui.com/images/daisyui/mark.svg"
@@ -2679,14 +2679,14 @@
               <h3 class="font-title mt-7 text-3xl leading-none font-bold">
                 {$t(conversionTools[3].title)}
               </h3>
-              <p class="mt-4 leading-relaxed text-base-content/60">
+              <p class="text-base-content/60 mt-4 leading-relaxed">
                 {$t(conversionTools[3].description)}
               </p>
             </div>
           </article>
 
           <article
-            class="card card-border overflow-hidden bg-neutral text-start text-neutral-content lg:col-span-7"
+            class="card card-border bg-neutral text-neutral-content overflow-hidden text-start lg:col-span-7"
           >
             <div class="card-body p-7 sm:p-9">
               <div
@@ -2694,7 +2694,7 @@
                 aria-label={$t("Image palette converts to daisyUI")}
               >
                 <span
-                  class="grid size-14 grid-cols-2 overflow-hidden rounded-box border border-neutral-content/15"
+                  class="rounded-box border-neutral-content/15 grid size-14 grid-cols-2 overflow-hidden border"
                   role="img"
                   aria-label={$t("Image color palette")}
                 >
@@ -2705,7 +2705,7 @@
                 </span>
                 <span class="text-neutral-content/45">{@render arrowIcon()}</span>
                 <span
-                  class="flex size-14 items-center justify-center rounded-box bg-neutral-content/10 p-3"
+                  class="rounded-box bg-neutral-content/10 flex size-14 items-center justify-center p-3"
                 >
                   <img
                     src="https://img.daisyui.com/images/daisyui/mark.svg"
@@ -2720,7 +2720,7 @@
               <h3 class="font-title mt-7 text-3xl leading-[0.95] font-bold sm:text-4xl">
                 {$t("Picture color palette to a daisyUI theme")}
               </h3>
-              <p class="mt-4 max-w-2xl leading-relaxed text-neutral-content/65">
+              <p class="text-neutral-content/65 mt-4 max-w-2xl leading-relaxed">
                 {$t(conversionTools[4].description)}
               </p>
             </div>
@@ -2729,7 +2729,7 @@
       </div>
     </section>
 
-    <section id="demos" use:revealOnScroll={"demos"} class="border-b border-base-300">
+    <section id="demos" use:revealOnScroll={"demos"} class="border-base-300 border-b">
       <div
         class="mx-auto max-w-[96rem] px-4 py-24 transition-[opacity,transform] duration-700 motion-reduce:transition-none sm:px-8 lg:py-36"
         class:translate-y-4={pageReady && !visibleSections.includes("demos")}
@@ -2744,7 +2744,7 @@
             </h2>
           </div>
           <p
-            class="max-w-2xl text-lg leading-relaxed text-base-content/60 lg:justify-self-end lg:pb-2"
+            class="text-base-content/60 max-w-2xl text-lg leading-relaxed lg:justify-self-end lg:pb-2"
           >
             {$t(
               "Watch Blueprint's MCP server create unique, authentic UIs from a simple prompt. The server gives your AI agent the context it needs: design-system principles, code snippets, and UX direction. When the page is finished, Blueprint inspects the code and fixes visual issues.",
@@ -2756,8 +2756,8 @@
           class="carousel carousel-center mt-16 w-full gap-4 lg:grid lg:grid-cols-2 lg:overflow-visible"
         >
           <div id="demo-1" class="carousel-item w-[92%] md:w-[68%] lg:w-full">
-            <article class="card card-border w-full overflow-hidden bg-base-100">
-              <div class="aspect-video bg-base-200">
+            <article class="card card-border bg-base-100 w-full overflow-hidden">
+              <div class="bg-base-200 aspect-video">
                 <iframe
                   class="h-full w-full"
                   src="https://www.youtube.com/embed/Z70rWqKRitI?autoplay=0&controls=1&rel=0&modestbranding=1"
@@ -2770,8 +2770,8 @@
             </article>
           </div>
           <div id="demo-2" class="carousel-item w-[92%] md:w-[68%] lg:w-full">
-            <article class="card card-border w-full overflow-hidden bg-base-100">
-              <div class="aspect-video bg-base-200">
+            <article class="card card-border bg-base-100 w-full overflow-hidden">
+              <div class="bg-base-200 aspect-video">
                 <iframe
                   class="h-full w-full"
                   src="https://www.youtube.com/embed/Y6WAi5ILAKI?autoplay=0&controls=1&rel=0&modestbranding=1"
@@ -2784,8 +2784,8 @@
             </article>
           </div>
           <div id="demo-3" class="carousel-item w-[92%] md:w-[68%] lg:w-full">
-            <article class="card card-border w-full overflow-hidden bg-base-100">
-              <div class="aspect-video bg-base-200">
+            <article class="card card-border bg-base-100 w-full overflow-hidden">
+              <div class="bg-base-200 aspect-video">
                 <iframe
                   class="h-full w-full"
                   src="https://www.youtube.com/embed/H2sG-3iL3PA?autoplay=0&controls=1&rel=0&modestbranding=1"
@@ -2798,8 +2798,8 @@
             </article>
           </div>
           <div id="demo-4" class="carousel-item w-[92%] md:w-[68%] lg:w-full">
-            <article class="card card-border w-full overflow-hidden bg-base-100">
-              <div class="aspect-video bg-base-200">
+            <article class="card card-border bg-base-100 w-full overflow-hidden">
+              <div class="bg-base-200 aspect-video">
                 <iframe
                   class="h-full w-full"
                   src="https://www.youtube.com/embed/IPNnK0mcKoY?autoplay=0&controls=1&rel=0&modestbranding=1"
@@ -2818,7 +2818,7 @@
     <section
       id="compare"
       use:revealOnScroll={"compare"}
-      class="scroll-mt-16 border-b border-base-300 bg-base-200/45"
+      class="border-base-300 bg-base-200/45 scroll-mt-16 border-b"
     >
       <div
         class="mx-auto max-w-7xl px-4 py-24 transition-[opacity,transform] duration-700 motion-reduce:transition-none sm:px-8 lg:py-36"
@@ -2827,17 +2827,17 @@
       >
         <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-end">
           <div>
-            <div class="font-mono text-xs text-base-content/45">
+            <div class="text-base-content/45 font-mono text-xs">
               {$t("COMPARE WITH OTHER OPTIONS")}
             </div>
             <h2
-              class="font-title mt-5 whitespace-nowrap text-4xl leading-[0.82] font-semibold tracking-[-0.06em] sm:text-7xl lg:text-8xl"
+              class="font-title mt-5 text-4xl leading-[0.82] font-semibold tracking-[-0.06em] whitespace-nowrap sm:text-7xl lg:text-8xl"
             >
               {$t("All-in-one.")}
             </h2>
           </div>
           <p
-            class="max-w-2xl text-lg leading-relaxed text-base-content/60 lg:justify-self-end lg:pb-2"
+            class="text-base-content/60 max-w-2xl text-lg leading-relaxed lg:justify-self-end lg:pb-2"
           >
             {$t(
               "Documentation context helps an LLM answer questions. Blueprint surrounds that official source with project setup, creative direction, page architecture, exact component retrieval, conversion workflows, and a final inspection gate.",
@@ -2845,8 +2845,8 @@
           </p>
         </div>
 
-        <div class="mt-16 max-w-full overflow-x-auto border border-base-300 bg-base-100">
-          <table class="table table-sm min-w-[64rem]">
+        <div class="border-base-300 bg-base-100 mt-16 max-w-full overflow-x-auto border">
+          <table class="table-sm table min-w-[64rem]">
             <caption class="sr-only">
               {$t("Comparison of daisyUI Blueprint MCP, daisyUI Skill, Context7 MCP, and GitMCP")}
             </caption>
@@ -2881,26 +2881,26 @@
       </div>
     </section>
 
-    <section id="faq" class="scroll-mt-16 border-b border-base-300">
+    <section id="faq" class="border-base-300 scroll-mt-16 border-b">
       <div
         class="mx-auto grid max-w-7xl gap-14 px-4 py-24 sm:px-8 lg:grid-cols-[.7fr_1.3fr] lg:py-36"
       >
         <div>
           <h2
-            class="font-title mt-5 text-7xl leading-[0.82] font-semibold tracking-[-0.06em] text-base-content/10 sm:text-8xl lg:text-9xl"
+            class="font-title text-base-content/10 mt-5 text-7xl leading-[0.82] font-semibold tracking-[-0.06em] sm:text-8xl lg:text-9xl"
           >
             F.A.Q.
           </h2>
-          <p class="mt-7 max-w-sm text-sm leading-relaxed text-base-content/55">
+          <p class="text-base-content/55 mt-7 max-w-sm text-sm leading-relaxed">
             {$t("Need something else? Email")}
             <a class="link link-hover" href="mailto:help@daisyui.com">help@daisyui.com</a>
             {$t("and we will help.")}
           </p>
         </div>
 
-        <div class="divide-y divide-base-300 border-y border-base-300">
+        <div class="divide-base-300 border-base-300 divide-y border-y">
           {#each faqItems as faq, index}
-            <div class="collapse collapse-plus rounded-none">
+            <div class="collapse-plus collapse rounded-none">
               <input
                 type="radio"
                 name="blueprint-faq"
@@ -2910,7 +2910,7 @@
               <div class="collapse-title px-1 text-base font-semibold">
                 {$t(faq.question)}
               </div>
-              <div class="collapse-content px-1 text-sm leading-relaxed text-base-content/65">
+              <div class="collapse-content text-base-content/65 px-1 text-sm leading-relaxed">
                 <p class="pb-2">{$t(faq.answer)}</p>
                 {#if faq.href}
                   <a
@@ -2929,7 +2929,7 @@
       </div>
     </section>
 
-    <section id="pricing" class="scroll-mt-16 border-b border-base-300 bg-base-200/45">
+    <section id="pricing" class="border-base-300 bg-base-200/45 scroll-mt-16 border-b">
       <div class="mx-auto max-w-7xl px-4 py-24 sm:px-8 lg:py-36">
         <h2
           class="font-title max-w-3xl text-5xl leading-[0.9] font-semibold tracking-[-0.055em] sm:text-7xl"
@@ -2942,7 +2942,7 @@
             {#if plan.popular}
               <div class="aura aura-rainbow h-full w-full motion-reduce:animate-none">
                 <article
-                  class="card h-full w-full bg-base-100 shadow-sm transition-shadow duration-300 hover:shadow-lg motion-reduce:transition-none"
+                  class="card bg-base-100 h-full w-full shadow-sm transition-shadow duration-300 hover:shadow-lg motion-reduce:transition-none"
                   aria-labelledby={`pricing-${plan.slug}`}
                 >
                   {@render pricingCardContent(plan)}
@@ -2950,7 +2950,7 @@
               </div>
             {:else}
               <article
-                class="card card-border relative h-full bg-base-100 shadow-sm transition-shadow duration-300 hover:shadow-lg motion-reduce:transition-none"
+                class="card card-border bg-base-100 relative h-full shadow-sm transition-shadow duration-300 hover:shadow-lg motion-reduce:transition-none"
                 aria-labelledby={`pricing-${plan.slug}`}
               >
                 {@render pricingCardContent(plan)}
@@ -2959,18 +2959,18 @@
           {/each}
         </div>
 
-        <p class="mt-8 text-center text-sm text-base-content/50">
+        <p class="text-base-content/50 mt-8 text-center text-sm">
           3 day free trial - cancel anytime · Secure checkout · License key delivered by email
         </p>
       </div>
     </section>
 
-    <section class="-mb-20 bg-neutral text-neutral-content">
+    <section class="bg-neutral text-neutral-content -mb-20">
       <div class="mx-auto max-w-7xl px-4 py-24 sm:px-8 lg:py-32">
         <div class="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             {@render blueprintWordmark()}
-            <p class="mt-10 font-mono text-xs tracking-[0.18em] text-neutral-content/45 uppercase">
+            <p class="text-neutral-content/45 mt-10 font-mono text-xs tracking-[0.18em] uppercase">
               {$t("The official daisyUI MCP server")}
             </p>
             <h2
@@ -2998,11 +2998,11 @@
 
         <div
           role="note"
-          class="alert mt-12 border border-neutral-content/10 bg-neutral-content/5 text-neutral-content"
+          class="alert border-neutral-content/10 bg-neutral-content/5 text-neutral-content mt-12 border"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="size-5 shrink-0 text-success"
+            class="text-success size-5 shrink-0"
             viewBox="0 0 24 24"
             aria-hidden="true"
           >

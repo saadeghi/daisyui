@@ -37,7 +37,7 @@
 
 {#if remaining.done === false}
   {#if tooltip}
-    <span class="tooltip-content text-[0.625rem] pt-2">
+    <span class="tooltip-content pt-2 text-[0.625rem]">
       {@render compactCountdown()}
       <span
         class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-out group-hover:grid-rows-[1fr]"
@@ -62,7 +62,7 @@
           <div
             class={variant === "neutral"
               ? "border-neutral-content/40 rounded-field border border-dashed p-2"
-              : "bg-error text-error-content rounded-field flex flex-col pt-1 overflow-hidden"}
+              : "bg-error text-error-content rounded-field flex flex-col overflow-hidden pt-1"}
           >
             <span
               class={variant === "neutral" ? "countdown block text-2xl" : "countdown block xl:mx-2"}
@@ -81,7 +81,7 @@
         <div
           class={variant === "neutral"
             ? "border-neutral-content/40 rounded-field border border-dashed p-2"
-            : "bg-error text-error-content rounded-field flex flex-col pt-1 overflow-hidden"}
+            : "bg-error text-error-content rounded-field flex flex-col overflow-hidden pt-1"}
         >
           <span
             class={variant === "neutral" ? "countdown block text-2xl" : "countdown block xl:mx-2"}
@@ -99,7 +99,7 @@
         <div
           class={variant === "neutral"
             ? "border-neutral-content/40 rounded-field border border-dashed p-2"
-            : "bg-error text-error-content rounded-field flex flex-col pt-1 overflow-hidden"}
+            : "bg-error text-error-content rounded-field flex flex-col overflow-hidden pt-1"}
         >
           <span
             class={variant === "neutral" ? "countdown block text-2xl" : "countdown block xl:mx-2"}
@@ -117,7 +117,7 @@
         <div
           class={variant === "neutral"
             ? "border-neutral-content/40 rounded-field border border-dashed p-2"
-            : "bg-error text-error-content rounded-field flex flex-col pt-1 overflow-hidden"}
+            : "bg-error text-error-content rounded-field flex flex-col overflow-hidden pt-1"}
         >
           <span
             class={variant === "neutral" ? "countdown block text-2xl" : "countdown block xl:mx-2"}

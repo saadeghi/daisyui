@@ -16,9 +16,9 @@
     <h1 class="text-base-content/30">Coming soon</h1>
   </div>
 {/if}
-<div class="breadcrumbs text-xs m-6">
+<div class="breadcrumbs m-6 text-xs">
   <ul>
-    <li><h1 class="no-underline cursor-text opacity-60">daisyUI Blog</h1></li>
+    <li><h1 class="cursor-text no-underline opacity-60">daisyUI Blog</h1></li>
   </ul>
 </div>
 <div class="grid justify-items-stretch gap-6">

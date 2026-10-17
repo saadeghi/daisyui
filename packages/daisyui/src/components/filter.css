@@ -34,7 +34,8 @@
   }
 
   @layer daisyui.l1 {
-    &:not(:has(:checked:not(.filter-reset))) :is(.filter-reset, [type="reset"]):not(:focus-visible) {
+    &:not(:has(:checked:not(.filter-reset)))
+      :is(.filter-reset, [type="reset"]):not(:focus-visible) {
       @apply invisible;
     }
     &:not(:has(:checked:not(.filter-reset))) :is(.filter-reset, [type="reset"]):not(:focus-visible),
