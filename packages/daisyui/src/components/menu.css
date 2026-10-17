@@ -30,7 +30,7 @@
     }
 
     :where(li > details > summary) {
-      @apply outline-hidden;
+      @apply outline-none;
 
       &::-webkit-details-marker {
         @apply hidden;
