@@ -33,22 +33,23 @@
         white-space: pre;
         text-align: end;
         direction: rtl;
+        top: 0;
         transition:
-          all 1s cubic-bezier(1, 0, 0, 1),
+          transform 1s cubic-bezier(1, 0, 0, 1),
           width 0.2s ease-out 0.2s,
           opacity 0.2s ease-out 0.2s;
       }
 
       &:before {
         width: calc(1ch + var(--show-hundreds) * 1ch);
-        top: calc(var(--first-digits) * -1em);
+        transform: translateY(calc(var(--first-digits) * -1em));
         inset-inline-end: 0;
         opacity: var(--show-tens);
       }
 
       &:after {
         width: 1ch;
-        top: calc(var(--value-ones) * -1em);
+        transform: translateY(calc(var(--value-ones) * -1em));
         inset-inline-start: 0;
       }
     }
