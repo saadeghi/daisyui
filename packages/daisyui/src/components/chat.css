@@ -12,10 +12,17 @@
     min-height: 2rem;
     min-width: 2.5rem;
     max-width: 90%;
+    @media (forced-colors: active) {
+      outline: 1px solid;
+      outline-offset: -1px;
+    }
 
     &:before {
       @apply absolute bottom-0 h-3 w-3;
       background-color: inherit;
+      @media (forced-colors: active) {
+        background-color: CanvasText;
+      }
       content: "";
       mask-repeat: no-repeat;
       mask-image: var(--mask-chat);
