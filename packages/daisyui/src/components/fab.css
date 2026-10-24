@@ -15,9 +15,11 @@
     > [tabindex] {
       &:first-child {
         @apply relative grid;
-        transition-property: opacity, visibility, rotate;
-        transition-duration: 0.2s;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @media (prefers-reduced-motion: no-preference) {
+          transition-property: opacity, visibility, rotate;
+          transition-duration: 0.2s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
       }
     }
 
@@ -37,9 +39,11 @@
     }
     > :nth-child(n + 2) {
       @apply invisible scale-80 opacity-0;
-      transition-property: opacity, scale, visibility;
-      transition-duration: 0.2s;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: opacity, scale, visibility;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
 
       &.fab-main-action,
       &.fab-close {
