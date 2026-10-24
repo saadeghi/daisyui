@@ -10,6 +10,9 @@
     );
     background-size: 200% auto;
     background-position-x: -50%;
+    @media (forced-colors: active) {
+      background-color: GrayText;
+    }
 
     @media (prefers-reduced-motion: no-preference) {
       animation: skeleton 1.8s ease-in-out infinite;
