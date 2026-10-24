@@ -21,6 +21,9 @@
         &:hover {
           @apply text-base-content/10 pointer-events-none opacity-100;
         }
+        @media (forced-colors: active) {
+          color: GrayText;
+        }
       }
       .dock-label {
         font-size: 0.6875rem;
