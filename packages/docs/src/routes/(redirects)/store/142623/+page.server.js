@@ -1,5 +1,5 @@
 export const ssr = false
 import { redirect } from "@sveltejs/kit"
 export function load() {
-  redirect(301, "/store/saas-landingpage/")
+  redirect(301, "/store/")
 }
