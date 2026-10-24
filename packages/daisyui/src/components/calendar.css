@@ -175,6 +175,9 @@
     }
     .rdp-chevron {
       fill: var(--color-base-content);
+      @media (forced-colors: active) {
+        fill: currentColor;
+      }
       width: 1rem;
       height: 1rem;
       display: inline-block;
