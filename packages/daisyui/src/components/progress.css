@@ -66,6 +66,14 @@
       }
     }
   }
+  @layer daisyui.l1 {
+    @media (forced-colors: active) {
+      &:indeterminate {
+        forced-color-adjust: none;
+        color: CanvasText;
+      }
+    }
+  }
 }
 
 .progress-primary {
