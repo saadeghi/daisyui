@@ -10,6 +10,11 @@
     );
     background-size: 200% auto;
     background-position-x: -50%;
+    @media (forced-colors: active) {
+      &:not(.skeleton-text) {
+        outline: 1px solid CanvasText;
+      }
+    }
 
     @media (prefers-reduced-motion: no-preference) {
       animation: skeleton 1.8s ease-in-out infinite;
