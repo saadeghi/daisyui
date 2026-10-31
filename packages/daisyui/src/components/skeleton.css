@@ -11,7 +11,9 @@
     background-size: 200% auto;
     background-position-x: -50%;
     @media (forced-colors: active) {
-      background-color: GrayText;
+      &:not(.skeleton-text) {
+        outline: 1px solid CanvasText;
+      }
     }
 
     @media (prefers-reduced-motion: no-preference) {
