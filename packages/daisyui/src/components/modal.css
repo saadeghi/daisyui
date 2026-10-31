@@ -115,7 +115,8 @@
     overflow-y: auto;
     overscroll-behavior: contain;
     @media (forced-colors: active) {
-      border: 1px solid;
+      outline: 1px solid;
+      outline-offset: -1px;
     }
   }
 }
