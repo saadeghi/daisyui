@@ -116,6 +116,27 @@
         --step-fg: var(--color-error-content);
       }
     }
+
+    @media (forced-colors: active) {
+      :is(
+        .step-neutral,
+        .step-primary,
+        .step-secondary,
+        .step-accent,
+        .step-info,
+        .step-success,
+        .step-warning,
+        .step-error
+      ) {
+        &:after,
+        > .step-icon {
+          forced-color-adjust: none;
+          border-color: CanvasText;
+          background-color: CanvasText;
+          color: Canvas;
+        }
+      }
+    }
   }
 }
 
