@@ -22,9 +22,11 @@
     :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title, .btn)),
     :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
       @apply rounded-field grid grid-flow-col content-start items-center gap-2 px-3 py-1.5 text-start;
-      transition-property: color, background-color, box-shadow;
-      transition-duration: 0.2s;
-      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: color, background-color, box-shadow;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
       grid-auto-columns: minmax(auto, max-content) auto max-content;
       user-select: none;
     }
@@ -46,8 +48,10 @@
         width: 0.375rem;
         rotate: -135deg;
         translate: 0 -1px;
-        transition-property: rotate, translate;
-        transition-duration: 0.2s;
+        @media (prefers-reduced-motion: no-preference) {
+          transition-property: rotate, translate;
+          transition-duration: 0.2s;
+        }
         content: "";
         transform-origin: 50% 50%;
         box-shadow: 2px 2px inset;
@@ -213,6 +217,10 @@
         box-shadow:
           0 1px 3px 0 oklch(0% 0 0/0.1),
           0 1px 2px -1px oklch(0% 0 0/0.1);
+        @media (forced-colors: active) {
+          outline: 1px solid;
+          outline-offset: -1px;
+        }
 
         @media (prefers-reduced-motion: no-preference) {
           @starting-style {
