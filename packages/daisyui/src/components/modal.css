@@ -114,6 +114,10 @@
     box-shadow: oklch(0% 0 0/ 0.25) 0px 25px 50px -12px;
     overflow-y: auto;
     overscroll-behavior: contain;
+    @media (forced-colors: active) {
+      outline: 1px solid;
+      outline-offset: -1px;
+    }
   }
 }
 
