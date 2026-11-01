@@ -186,10 +186,15 @@
       }
     }
 
+    /* snap-icon only needs the half-rem row for the icon. Keep --timeline-col-start
+       at 0 when compact so content stays on the start side (see #4737). */
     &.timeline-snap-icon {
       > li {
-        --timeline-col-start: minmax(0, 1fr);
         --timeline-row-start: 0.5rem;
+      }
+
+      &:not(.timeline-compact) > li {
+        --timeline-col-start: minmax(0, 1fr);
       }
     }
   }
