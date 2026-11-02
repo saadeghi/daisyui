@@ -29,6 +29,11 @@
     &:has(> :nth-child(2)) {
       grid-template-columns: auto minmax(auto, 1fr);
     }
+    /* Keep action controls on the trailing edge when there is no icon spacer */
+    & > :last-child:is(.btn, .join, div:has(.btn)) {
+      justify-self: end;
+      margin-inline-start: auto;
+    }
   }
 }
 
@@ -109,6 +114,10 @@
     &:has(> :nth-child(2)) {
       grid-template-columns: auto;
     }
+    & > :last-child:is(.btn, .join, div:has(.btn)) {
+      justify-self: center;
+      margin-inline-start: 0;
+    }
   }
 }
 
@@ -121,6 +130,10 @@
     text-align: start;
     &:has(> :nth-child(2)) {
       grid-template-columns: auto minmax(auto, 1fr);
+    }
+    & > :last-child:is(.btn, .join, div:has(.btn)) {
+      justify-self: end;
+      margin-inline-start: auto;
     }
   }
 }
