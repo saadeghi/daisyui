@@ -70,6 +70,15 @@
     calendar-month {
       width: 100%;
     }
+    /* Hide Cally month/year select labels the same way the Cally demos do:
+       the visible value comes from the select itself, not the label part. */
+    calendar-select-month,
+    calendar-select-year {
+      &::part(label) {
+        position: absolute;
+        transform: scale(0);
+      }
+    }
   }
 }
 
