@@ -18,6 +18,6 @@ Use the diff component to show a side-by-side comparison of two items.
 
 #### Rules
 - To keep the aspect ratio, add `aspect-16/9` or another aspect-ratio class to the `<figure class="diff">` element.
-- Browsers with scroll-driven animations move the divider with the `diff-resizer` range input. In other browsers, drag the knob on the divider (the native resize handle of `diff-item-1` sits there).
+- Browsers with scroll-driven animations move the divider with the `diff-resizer` range input. In other browsers the input becomes a drag handle: grab the divider line and drag it.
 - Keystrokes move the divider: focusing the `diff` container shows the first item, focusing `diff-item-1` shows the second one. The range input is hidden from the keyboard, so keep both focusable elements (the container and `diff-item-1`) in the markup.
 - Markup that uses an empty `diff-resizer` div (without the range input) keeps working.

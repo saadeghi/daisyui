@@ -28,7 +28,7 @@ classnames:
 
 > :INFO:
 >
-> The `diff-resizer` range input moves the divider in browsers with scroll-driven animations. In other browsers, drag the knob on the divider (the native resize handle of `diff-item-1` sits there). The input is hidden from the keyboard (`tabindex="-1"`); focus the `diff` container to show the first item, then `diff-item-1` to show the second one. Markup that uses an empty `diff-resizer` div keeps working.
+> The `diff-resizer` range input moves the divider in browsers with scroll-driven animations. In other browsers the input becomes a drag handle: grab the divider line and drag it. The input is hidden from the keyboard (`tabindex="-1"`); focus the `diff` container to show the first item, then `diff-item-1` to show the second one. Markup that uses an empty `diff-resizer` div keeps working.
 
 ### ~Diff
 <figure class="diff rounded-field aspect-16/9" tabindex="0">
