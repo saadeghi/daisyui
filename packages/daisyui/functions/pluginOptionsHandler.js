@@ -49,8 +49,10 @@ export const pluginOptionsHandler = (() => {
     }
 
     if (themes === "all") {
+      const appliedAsDefault = new Set()
       if (themesObject["light"]) {
         applyTheme("light", ["--default"])
+        appliedAsDefault.add("light")
       }
 
       if (themesObject["dark"]) {
@@ -58,7 +60,7 @@ export const pluginOptionsHandler = (() => {
       }
 
       themeOrder.forEach((themeName) => {
-        if (themesObject[themeName]) {
+        if (themesObject[themeName] && !appliedAsDefault.has(themeName)) {
           applyTheme(themeName, [])
         }
       })
@@ -73,10 +75,12 @@ export const pluginOptionsHandler = (() => {
       }
 
       // default theme
+      const appliedAsDefault = new Set()
       themeArray.forEach((themeOption) => {
         const [themeName, ...flags] = themeOption.split(" ")
         if (flags.includes("--default")) {
           applyTheme(themeName, ["--default"])
+          appliedAsDefault.add(themeName)
         }
       })
 
@@ -93,7 +97,9 @@ export const pluginOptionsHandler = (() => {
       // other themes
       themeArray.forEach((themeOption) => {
         const [themeName] = themeOption.split(" ")
-        applyTheme(themeName, [])
+        if (!appliedAsDefault.has(themeName)) {
+          applyTheme(themeName, [])
+        }
       })
     }
 

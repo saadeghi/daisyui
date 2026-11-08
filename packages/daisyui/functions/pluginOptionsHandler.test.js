@@ -31,12 +31,7 @@ test("pluginOptionsHandler should apply default themes", () => {
       color: "black",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledWith({
-    ":root:has(input.theme-controller[value=\"light\"]:checked),[data-theme=\"light\"]": {
-      color: "white",
-    },
-  })
-  expect(mockAddBase).toHaveBeenCalledTimes(4)
+  expect(mockAddBase).toHaveBeenCalledTimes(3)
 })
 
 test("pluginOptionsHandler should apply all themes when 'all' is specified", () => {
@@ -59,7 +54,7 @@ test("pluginOptionsHandler should apply all themes when 'all' is specified", () 
       color: "black",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledTimes(4)
+  expect(mockAddBase).toHaveBeenCalledTimes(3)
 })
 
 test("pluginOptionsHandler should handle custom themes", () => {
