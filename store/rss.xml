@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Tue, 13 Oct 2026 11:45:30 GMT</lastBuildDate>
-    <pubDate>Tue, 13 Oct 2026 11:45:30 GMT</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2026 12:15:14 GMT</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2026 12:15:14 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -90,7 +90,7 @@ Team and Enterprise license:
       
         <item>
           <title>
-            <![CDATA[ Scalo Startup Template 4.0 ]]>
+            <![CDATA[ Scalo Startup Template 5.0 ]]>
           </title>
           <description>
             <![CDATA[ Scalo is the ultimate startup front-end template
@@ -100,7 +100,7 @@ Made with Tailwind CSS 4 and daisyUI 5
 Including:
   - Components and blocks
   - 40 Pages
-  - 7 Landing pages (Automation, Developer, Sales, Storage, Crypto, Builder, Cloud AI)
+  - 10 Landings (AI Agents, Fashion, Agentic AI, Builder, Crypto, Cloud, Developer, Automation, Sales, Storage)
   - 7 Pricing sections (Lifetime, Subscription, User-based & comparison-based)
   - 6 Auth pages (Login, Register, 2FA, Forgot password, Reset password, Verify)
   - Settings (Profile, Account, Notification & Manage plans)
@@ -218,32 +218,6 @@ Including Homepage, collections page with filter and sort, product page with ima
       
         <item>
           <title>
-            <![CDATA[ SaaS landing page ]]>
-          </title>
-          <description>
-            <![CDATA[ Production-ready landing page for software products.
-
-Features:
-  - SaaS landing page layout made with daisyUI 5
-  - Available for HTML, React, Svelte, Vue
-
-
-Including:
-  - 2 exclusive daisyUI themes (dark/light)
-  - Compatible with all daisyUI themes (32 themes)
-  - Responsive layout
-  - Hero section, Partner logos, Features section, Integrations cards, Pricing tables, FAQ accordion section, Footer with links and contact form
-  - Pricing table with dynamic price toggle
-  - Theme changer menu
-  - 3D card effect ]]>
-          </description>
-          <link>https://www.creem.io/payment/prod_4bRdZVMQb6QfydHMXMBjG5/</link>
-          <pubDate>Sat, 23 Dec 2023 00:00:00 GMT</pubDate>
-          <guid isPermaLink="false">https://www.creem.io/payment/prod_4bRdZVMQb6QfydHMXMBjG5/</guid>
-        </item>
-      
-        <item>
-          <title>
             <![CDATA[ Documentation template ]]>
           </title>
           <description>
@@ -300,7 +274,7 @@ Including:
             <![CDATA[ Blink template ]]>
           </title>
           <description>
-            <![CDATA[ Blink is a multi-page template for agencies, companies, startups, or small businesses <br/>Available for React and Svelte
+            <![CDATA[ Blink is a well designed, multi-page template for agencies, companies, startups, or small businesses <br/>Available for React and Svelte
 
 Features:
   - Made with Tailwind CSS and daisyUI
@@ -309,7 +283,7 @@ Features:
   - Dark and light theme switch button
 
 Including:
-  - 4 different landing page layouts (Agency, SaaS, Startup, Marketing)
+  - 5 different landing page designs (AI, Agency, SaaS, Startup, App)
   - Pricing page and pricing table
   - Projects (portfolio) page
   - About page
@@ -343,30 +317,6 @@ Including:
           <link>https://www.creem.io/payment/prod_5WTF3NMjAyFXqUppgngpBP/</link>
           <pubDate>Sat, 11 Nov 2023 00:00:00 GMT</pubDate>
           <guid isPermaLink="false">https://www.creem.io/payment/prod_5WTF3NMjAyFXqUppgngpBP/</guid>
-        </item>
-      
-        <item>
-          <title>
-            <![CDATA[ Mobile app landing page ]]>
-          </title>
-          <description>
-            <![CDATA[ Landing page for mobile app introduction.
-
-Features:
-  - A landing page layout made with daisyUI 5
-  - Available for HTML, React, Svelte, Vue
-
-
-Including:
-  - 2 exclusive daisyUI themes (dark/light)
-  - Compatible with all daisyUI themes (32 themes)
-  - Responsive layout
-  - Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons
-  - Theme changer menu ]]>
-          </description>
-          <link>https://www.creem.io/payment/prod_5P3uPzHqmIapdYrfcN3kYa/</link>
-          <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-          <guid isPermaLink="false">https://www.creem.io/payment/prod_5P3uPzHqmIapdYrfcN3kYa/</guid>
         </item>
       
   </channel>
