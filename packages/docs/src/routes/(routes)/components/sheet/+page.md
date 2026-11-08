@@ -750,7 +750,7 @@ You can customize the size of the sheet and the handle using CSS variables:
 | `--sheet-handle` | Size of the sheet handle (defaults to 3em)                          |
 
 ```html
-<div class="sheet sheet-bottom [--sheet-half:20dvh] [--sheet-full:50dvh] [--sheet-handle:40px]">
+<div class="$$sheet $$sheet-bottom [--sheet-half:20dvh] [--sheet-full:50dvh] [--sheet-handle:40px]">
   ...
 </div>
 ```
