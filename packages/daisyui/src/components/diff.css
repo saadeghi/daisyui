@@ -1,6 +1,7 @@
 .diff {
   @layer daisyui.l1.l2 {
     @apply relative grid w-full overflow-hidden select-none;
+    caret-color: transparent;
     align-items: normal;
     grid-template-rows: 1fr 1.8rem 1fr;
     direction: ltr;
@@ -8,50 +9,35 @@
     grid-template-columns: auto 1fr;
     &:focus-visible,
     &:has(.diff-item-1:focus-visible) {
-      @apply outline-base-content outline-2 outline-offset-1;
+      @apply outline-base-content outline-2 outline-offset-1 outline-solid;
     }
     &:focus-visible {
-      @apply outline-base-content outline-2 outline-offset-1;
       .diff-resizer:not(input) {
-        min-width: 95cqi;
-        max-width: 95cqi;
+        min-width: calc(100cqi - 1rem);
+        max-width: calc(100cqi - 1rem);
       }
     }
     &:has(.diff-item-1:focus-visible) {
-      @apply outline-2 outline-offset-1;
       .diff-resizer:not(input) {
-        min-width: 5cqi;
-        max-width: 5cqi;
+        min-width: 1rem;
+        max-width: 1rem;
       }
     }
     @supports not (timeline-scope: --v) {
       &:has(.diff-resizer:is(input)):not(:has(.diff-resizer:not(input))) {
-        .diff-item-1 {
-          @apply static self-start min-w-4 overflow-hidden resize-x border-r-0 shadow-none;
-          height: calc(50% + 2.5px);
-          width: 50cqi;
+        .diff-resizer:is(input) {
+          @apply relative isolate z-2 col-start-1 row-start-2 block h-3 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden appearance-none opacity-0;
+          transform: scaleY(5) translate(0.32rem, 50%);
+          transform-origin: 100% 100%;
+          clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
+        }
+        &:focus-visible .diff-resizer:is(input) {
+          min-width: calc(100cqi - 1rem);
           max-width: calc(100cqi - 1rem);
-          clip-path: polygon(0 0, calc(100% - 3px) 0, calc(100% - 3px) 10000px, 0 10000px);
-          transition:
-            min-width 0.3s ease-out,
-            max-width 0.3s ease-out;
         }
-        .diff-item-2::before {
-          @apply bg-base-100 absolute inset-y-0 z-1 w-0.5;
-          right: 3px;
-          box-shadow: 0 0 0 2px #0000002a;
-          content: "";
-        }
-        .diff-item-2::after {
-          right: 4px;
-        }
-        &:focus-visible .diff-item-1 {
-          min-width: 95cqi;
-          max-width: 95cqi;
-        }
-        &:has(.diff-item-1:focus-visible) .diff-item-1 {
-          min-width: 5cqi;
-          max-width: 5cqi;
+        &:has(.diff-item-1:focus-visible) .diff-resizer:is(input) {
+          min-width: 1rem;
+          max-width: 1rem;
         }
       }
     }
@@ -65,14 +51,14 @@
     @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) and (not (timeline-scope: --v)) {
       &:focus {
         .diff-resizer {
-          min-width: 5cqi;
-          max-width: 5cqi;
+          min-width: 1rem;
+          max-width: 1rem;
         }
       }
       &:has(.diff-item-1:focus) {
         .diff-resizer {
-          min-width: 95cqi;
-          max-width: 95cqi;
+          min-width: calc(100cqi - 1rem);
+          max-width: calc(100cqi - 1rem);
         }
       }
     }
@@ -80,14 +66,14 @@
       @media (hover: none) and (pointer: coarse) {
         &:focus {
           .diff-resizer {
-            min-width: 5cqi;
-            max-width: 5cqi;
+            min-width: 1rem;
+            max-width: 1rem;
           }
         }
         &:has(.diff-item-1:focus) {
           .diff-resizer {
-            min-width: 95cqi;
-            max-width: 95cqi;
+            min-width: calc(100cqi - 1rem);
+            max-width: calc(100cqi - 1rem);
           }
         }
       }
@@ -150,7 +136,7 @@
 
     @layer daisyui.l1.l2 {
       @supports (timeline-scope: --v) {
-        @apply absolute inset-0 z-4 m-0 block h-full w-full cursor-ew-resize opacity-0;
+        @apply absolute inset-0 z-4 m-0 block h-full w-full cursor-ew-resize appearance-none opacity-0;
         grid-column: auto;
         grid-row: auto;
 
@@ -158,13 +144,27 @@
         &::-moz-range-track {
           background: transparent;
           border: 0;
+          height: 100%;
         }
 
         &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 0;
+          height: 100%;
+          border: 0;
+          padding: 0;
+          background: transparent;
           view-timeline: --diff-scroll inline;
         }
 
         &::-moz-range-thumb {
+          appearance: none;
+          width: 0;
+          height: 100%;
+          border: 0;
+          padding: 0;
+          background: transparent;
           view-timeline: --diff-scroll inline;
         }
       }
