@@ -30,7 +30,6 @@ export const dynamicRouteFamilies = [
     directory: "store",
     exclude: ["checkout", "pages"],
     excludePattern: /^\d+$/,
-    minimum: 12,
     requireInSitemap: true,
     requireInSearch: true,
   },
