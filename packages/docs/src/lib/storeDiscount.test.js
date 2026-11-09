@@ -1,5 +1,10 @@
-import { describe, expect, test } from "bun:test"
-import { getDiscountNavbarTarget, isDiscountApplicableToBlueprint } from "./storeDiscount.js"
+import { describe, expect, spyOn, test } from "bun:test"
+import {
+  fetchActiveDiscount,
+  getDiscountNavbarTarget,
+  isDiscountApplicableToBlueprint,
+  isDiscountApplicableToProduct,
+} from "./storeDiscount.js"
 
 const discountFor = (productIds) => ({
   data: {
@@ -7,6 +12,46 @@ const discountFor = (productIds) => ({
       applies_to_products: productIds,
     },
   },
+})
+
+describe("special discount product limits", () => {
+  test("uses the special discount only for selected products without a normal discount fallback", async () => {
+    const special = discountFor(["prod_blink_standard", "prod_blink_bundle"])
+    special.data.attributes.expires_at = "2999-11-14T00:00:00.000Z"
+    const normal = discountFor([])
+    normal.data.attributes.expires_at = special.data.attributes.expires_at
+    const fetchMock = spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(Response.json(normal))
+      .mockResolvedValueOnce(Response.json(special))
+
+    try {
+      const discount = await fetchActiveDiscount("https://example.test")
+
+      expect(discount).toEqual(special)
+      expect(isDiscountApplicableToProduct(discount, ["prod_blink_standard"])).toBe(true)
+      expect(isDiscountApplicableToProduct(discount, ["prod_blink_bundle"])).toBe(true)
+      expect(isDiscountApplicableToProduct(discount, ["prod_other_store"])).toBe(false)
+      expect(isDiscountApplicableToProduct(discount, ["prod_skill"])).toBe(false)
+    } finally {
+      fetchMock.mockRestore()
+    }
+  })
+
+  test("uses the normal discount after the special discount expires", async () => {
+    const special = discountFor(["prod_blink"])
+    special.data.attributes.expires_at = "2000-11-14T00:00:00.000Z"
+    const normal = discountFor([])
+    normal.data.attributes.expires_at = "2999-11-14T00:00:00.000Z"
+    const fetchMock = spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(Response.json(normal))
+      .mockResolvedValueOnce(Response.json(special))
+
+    try {
+      expect(await fetchActiveDiscount("https://example.test")).toEqual(normal)
+    } finally {
+      fetchMock.mockRestore()
+    }
+  })
 })
 
 describe("discount navbar target", () => {

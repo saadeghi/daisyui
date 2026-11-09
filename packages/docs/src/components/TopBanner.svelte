@@ -1,9 +1,30 @@
 <script>
   import { page } from "$app/stores"
+  import Countdown from "svelte-countdown"
+  import { onMount } from "svelte"
+  const attributes = $derived($page.data.specialDiscount?.data?.attributes)
+
+  let now = $state(Date.now())
+
+  onMount(() => {
+    const timer = setInterval(() => {
+      now = Date.now()
+    }, 1000)
+    return () => clearInterval(timer)
+  })
+
+  const dateFormat = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }
 </script>
 
 <!-- Without timer -->
-{#if true && !$page.url.pathname.startsWith("/blueprint/")}
+{#if false && !$page.url.pathname.startsWith("/blueprint/")}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       href="/blueprint/"
@@ -89,5 +110,50 @@
         dashboards with LLM
       </div>
     </a>
+  </div>
+{/if}
+
+<!-- With timer -->
+{#if attributes?.expires_at && now < new Date(attributes.expires_at).getTime()}
+  <div class="bg-base-100 h-20 overflow-y-auto sm:h-10">
+    <div class="bg-base-100 flex min-h-full justify-center rounded-sm">
+      <a
+        data-sveltekit-preload-code="viewport"
+        href={attributes.banner_url || "/store/"}
+        class="alert border-base-300 hover:bg-base-200 bg-base-100 flex w-full justify-center rounded-none border-x-0 border-t-0 p-2 text-center text-[0.6875rem] shadow-none transition-colors"
+      >
+        <p class="leading-relaxed [text-wrap:balance]">
+          <span class="text-base-content/70">
+            <span class="font-bold">{attributes.name}</span>
+            {attributes.banner_text || ""} - Use code
+            <code
+              class="decoration-error font-mono tracking-wide underline decoration-wavy underline-offset-4"
+            >
+              {attributes.code}
+            </code>
+            to get {attributes.amount}% discount
+            <Countdown
+              from={new Date(attributes.expires_at).toLocaleString("en-GB", dateFormat)}
+              dateFormat="DD/MM/YYYY, HH:mm:ss"
+            >
+              {#snippet children({ remaining })}
+                {#if remaining.done === false}
+                  <span class="border-base-content/20 rounded-full border border-dashed px-2 py-1">
+                    <date datetime={attributes.expires_at} class="countdown font-mono text-xs">
+                      {remaining.days * 24 + remaining.hours}h&nbsp;
+                      <span style={`--value:${remaining.minutes}`}></span>
+                      m&nbsp;
+                      <span style={`--value:${remaining.seconds}`}></span>
+                      s
+                    </date>
+                    <!-- remaining -->
+                  </span>
+                {/if}
+              {/snippet}
+            </Countdown>
+          </span>
+        </p>
+      </a>
+    </div>
   </div>
 {/if}
