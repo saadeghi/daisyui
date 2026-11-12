@@ -11,12 +11,12 @@
   --join-h: 1;
 
   @scope (&) {
-    :scope > :where(:focus, :has(:focus)) {
+    :where(:scope > :focus, :scope > :has(:focus)) {
       @apply z-2;
     }
 
     @media (hover: hover) {
-      :scope > :where(.btn:hover, :has(.btn:hover)) {
+      :where(:scope > .btn:hover, :scope > :has(.btn:hover)) {
         @apply z-1;
       }
     }
