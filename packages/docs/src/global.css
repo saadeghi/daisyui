@@ -74,6 +74,8 @@ pre.syntax[tabindex="0"]:focus-visible {
 .code-wrapper {
   background-color: var(--color-neutral);
   border-radius: var(--radius-box);
+  max-width: 100%;
+  min-width: 0;
   pre.syntax {
     direction: ltr;
     padding: 0.75rem 1rem;
@@ -164,9 +166,10 @@ pre.syntax[tabindex="0"]:focus-visible {
     font-family: var(--font-title);
   }
   .code-wrapper {
-    max-width: 100vw;
-    overflow-x: auto;
-    > pre {
+    max-width: 100%;
+    /* Horizontal scroll lives on the inner wrapper from renderHighlightedBlock
+       so the copy button (absolute on the outer relative) stays pinned. */
+    pre.syntax {
       max-height: 32em;
     }
   }
