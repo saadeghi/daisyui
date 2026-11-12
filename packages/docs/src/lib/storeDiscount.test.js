@@ -21,12 +21,14 @@ describe("special discount product limits", () => {
     const normal = discountFor([])
     normal.data.attributes.expires_at = special.data.attributes.expires_at
     const fetchMock = spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(Response.json(normal))
       .mockResolvedValueOnce(Response.json(special))
+      .mockResolvedValueOnce(Response.json(normal))
 
     try {
       const discount = await fetchActiveDiscount("https://example.test")
 
+      expect(fetchMock).toHaveBeenNthCalledWith(1, "https://example.test/api/discount_special.json")
+      expect(fetchMock).toHaveBeenNthCalledWith(2, "https://example.test/api/discount_shorttime.json")
       expect(discount).toEqual(special)
       expect(isDiscountApplicableToProduct(discount, ["prod_blink_standard"])).toBe(true)
       expect(isDiscountApplicableToProduct(discount, ["prod_blink_bundle"])).toBe(true)
@@ -43,11 +45,13 @@ describe("special discount product limits", () => {
     const normal = discountFor([])
     normal.data.attributes.expires_at = "2999-11-14T00:00:00.000Z"
     const fetchMock = spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(Response.json(normal))
       .mockResolvedValueOnce(Response.json(special))
+      .mockResolvedValueOnce(Response.json(normal))
 
     try {
       expect(await fetchActiveDiscount("https://example.test")).toEqual(normal)
+      expect(fetchMock).toHaveBeenNthCalledWith(1, "https://example.test/api/discount_special.json")
+      expect(fetchMock).toHaveBeenNthCalledWith(2, "https://example.test/api/discount_shorttime.json")
     } finally {
       fetchMock.mockRestore()
     }
