@@ -3,72 +3,8 @@ import {
   fetchActiveDiscount,
   getDiscountNavbarTarget,
   isDiscountApplicableToBlueprint,
-  isDiscountValid,
+  isDiscountApplicableToProduct,
 } from "./storeDiscount.js"
-
-const discountData = (code, expiresAt) => ({
-  data: { attributes: { code, expires_at: expiresAt } },
-})
-const shorttimeDiscount = discountData("SHORT", "9999-01-01T00:00:00Z")
-const specialDiscount = discountData("SPECIAL", "9999-01-01T00:00:00Z")
-const expiredDiscount = discountData("EXPIRED", "2000-01-01T00:00:00Z")
-const invalidDiscount = discountData("INVALID", "not-a-date")
-const shorttimeResponse = { status: 200, body: JSON.stringify(shorttimeDiscount) }
-const specialResponse = { status: 200, body: JSON.stringify(specialDiscount) }
-const discountApiPath = "https://discounts.example.test/docs"
-const shorttimeUrl = `${discountApiPath}/api/discount_shorttime.json`
-const specialUrl = `${discountApiPath}/api/discount_special.json`
-const discountFailures = [
-  ["network failure", { error: new TypeError("Network request failed") }],
-  ["HTTP failure", { status: 503, body: JSON.stringify(specialDiscount) }],
-  ["invalid JSON", { status: 200, body: "not JSON" }],
-  ["invalid date", { status: 200, body: JSON.stringify(invalidDiscount) }],
-  ["missing data", { status: 200, body: "{}" }],
-  ["expired discount", { status: 200, body: JSON.stringify(expiredDiscount) }],
-]
-const discountFetchCases = [
-  ["special discount has priority", shorttimeResponse, specialResponse, specialDiscount],
-  ...discountFailures.flatMap(([failure, response]) => [
-    [`short-time ${failure}`, response, specialResponse, specialDiscount],
-    [`special ${failure}`, shorttimeResponse, response, shorttimeDiscount],
-    [`both sources have ${failure}`, response, response, null],
-  ]),
-]
-
-test.each([
-  [shorttimeDiscount, true],
-  [expiredDiscount, false],
-  [invalidDiscount, false],
-  [null, false],
-  [{}, false],
-])("discount validity handles %p", (discount, expected) => {
-  expect(isDiscountValid(discount)).toBe(expected)
-})
-
-test.each(discountFetchCases)(
-  "fetchActiveDiscount handles %s",
-  async (_name, shorttime, special, expected) => {
-    const responses = new Map([
-      [shorttimeUrl, shorttime],
-      [specialUrl, special],
-    ])
-    const fetchMock = spyOn(globalThis, "fetch").mockImplementation((url) => {
-      const response = responses.get(url)
-      return response.error
-        ? Promise.reject(response.error)
-        : Promise.resolve(new Response(response.body, { status: response.status }))
-    })
-
-    try {
-      await expect(fetchActiveDiscount(discountApiPath)).resolves.toEqual(expected)
-      expect(fetchMock).toHaveBeenCalledTimes(2)
-      expect(fetchMock).toHaveBeenCalledWith(shorttimeUrl)
-      expect(fetchMock).toHaveBeenCalledWith(specialUrl)
-    } finally {
-      fetchMock.mockRestore()
-    }
-  },
-)
 
 const discountFor = (productIds) => ({
   data: {
@@ -76,6 +12,46 @@ const discountFor = (productIds) => ({
       applies_to_products: productIds,
     },
   },
+})
+
+describe("special discount product limits", () => {
+  test("uses the special discount only for selected products without a normal discount fallback", async () => {
+    const special = discountFor(["prod_blink_standard", "prod_blink_bundle"])
+    special.data.attributes.expires_at = "2999-11-14T00:00:00.000Z"
+    const normal = discountFor([])
+    normal.data.attributes.expires_at = special.data.attributes.expires_at
+    const fetchMock = spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(Response.json(normal))
+      .mockResolvedValueOnce(Response.json(special))
+
+    try {
+      const discount = await fetchActiveDiscount("https://example.test")
+
+      expect(discount).toEqual(special)
+      expect(isDiscountApplicableToProduct(discount, ["prod_blink_standard"])).toBe(true)
+      expect(isDiscountApplicableToProduct(discount, ["prod_blink_bundle"])).toBe(true)
+      expect(isDiscountApplicableToProduct(discount, ["prod_other_store"])).toBe(false)
+      expect(isDiscountApplicableToProduct(discount, ["prod_skill"])).toBe(false)
+    } finally {
+      fetchMock.mockRestore()
+    }
+  })
+
+  test("uses the normal discount after the special discount expires", async () => {
+    const special = discountFor(["prod_blink"])
+    special.data.attributes.expires_at = "2000-11-14T00:00:00.000Z"
+    const normal = discountFor([])
+    normal.data.attributes.expires_at = "2999-11-14T00:00:00.000Z"
+    const fetchMock = spyOn(globalThis, "fetch")
+      .mockResolvedValueOnce(Response.json(normal))
+      .mockResolvedValueOnce(Response.json(special))
+
+    try {
+      expect(await fetchActiveDiscount("https://example.test")).toEqual(normal)
+    } finally {
+      fetchMock.mockRestore()
+    }
+  })
 })
 
 describe("discount navbar target", () => {

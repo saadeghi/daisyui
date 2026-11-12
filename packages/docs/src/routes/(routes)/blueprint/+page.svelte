@@ -258,6 +258,30 @@
       prompt: "Make an artistic personal site for a photographer",
       model: "GPT 5.6",
     },
+    {
+      file: "japanese-coffee-shop.avif",
+      alt: "Japanese coffee shop landing page",
+      prompt: "create a landingpage for a japanese coffeeshop. Use Blueprint MCP",
+      model: "GPT 5.6",
+    },
+    {
+      file: "piano-teacher.avif",
+      alt: "Piano teacher personal website",
+      prompt: "Design a personal website for a piano teacher. Use Blueprint MCP",
+      model: "GPT 5.6",
+    },
+    {
+      file: "invoice-management-app.avif",
+      alt: "Invoice management app",
+      prompt: "create a UI for an invoice management app. Use Blueprint MCP",
+      model: "GPT 5.6",
+    },
+    {
+      file: "local-cheese-shop.avif",
+      alt: "Local cheese shop website",
+      prompt: "create a website for a local cheese shop. Use Blueprint MCP",
+      model: "GPT 5.6",
+    },
   ]
 
   const conversionTools = [
@@ -822,7 +846,7 @@
       blueprintCarouselAutoplayTimeout = undefined
       if (!blueprintCarouselOnScreen || blueprintCarouselHoverCount > 0) return
       changeBlueprintPreview(1)
-    }, 3000)
+    }, 1000)
   }
 
   const pauseBlueprintCarouselAutoplay = () => {
