@@ -348,5 +348,10 @@
     &:not(.btn-link, .btn-ghost) {
       @apply bg-base-content/10;
     }
+
+    @media (forced-colors: active) {
+      color: GrayText;
+      border-color: GrayText;
+    }
   }
 }

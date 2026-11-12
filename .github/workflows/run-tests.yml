@@ -52,6 +52,15 @@ jobs:
       - name: build package
         run: bun run --bun build
 
+      - name: Check packed package
+        run: |
+          package_test_dir=$(mktemp -d)
+          npm pack ./packages/daisyui --ignore-scripts --pack-destination "$package_test_dir"
+          mkdir -p "$package_test_dir/node_modules/daisyui"
+          tar -xzf "$package_test_dir"/daisyui-*.tgz -C "$package_test_dir/node_modules/daisyui" --strip-components=1
+          cd "$package_test_dir"
+          node --input-type=module -e 'await import("daisyui")'
+
       - name: Run tests
         run: |
           if [ -z "$TEST_FILTER" ]; then

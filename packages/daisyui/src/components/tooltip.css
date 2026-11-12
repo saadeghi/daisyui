@@ -15,6 +15,10 @@
       font-weight: 400;
       line-height: 1.25;
       background-color: var(--tt-bg);
+      @media (forced-colors: active) {
+        outline: 1px solid;
+        outline-offset: -1px;
+      }
       width: max-content;
       pointer-events: none;
       z-index: 2;
@@ -27,6 +31,9 @@
     &:after {
       @apply absolute opacity-0;
       background-color: var(--tt-bg);
+      @media (forced-colors: active) {
+        background-color: CanvasText;
+      }
       content: "";
       pointer-events: none;
       width: 0.625rem;

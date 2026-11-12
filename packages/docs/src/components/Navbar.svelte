@@ -148,7 +148,7 @@
           href="/"
           aria-current="page"
           aria-label="daisyUI"
-          class="me-2 flex w-25 sm:w-35 shrink-0 items-center gap-2"
+          class="me-2 flex w-25 shrink-0 items-center gap-2 sm:w-35"
           oncontextmenu={(e) => {
             e.preventDefault()
             goto("/brand")
@@ -165,7 +165,7 @@
     </div>
     <div class="navbar-center">
       <div
-        class="tabs [--tab-height:2.5rem] tabs-xs xl:tabs-sm translate-y-0 tabs-border hidden items-center lg:flex"
+        class="tabs tabs-xs xl:tabs-sm tabs-border hidden translate-y-0 items-center [--tab-height:2.5rem] lg:flex"
       >
         {#each navbar as item, index}
           {#if item.items && hasText(item.name)}
@@ -174,7 +174,7 @@
               style="anchor-name:--navbar-item-${index}"
               class={`tab gap-1 px-3 font-normal ${isActive(item) ? "tab-active" : ""}`}
             >
-              <span class="px-1 xl:px-2 flex items-center gap-1">
+              <span class="flex items-center gap-1 px-1 xl:px-2">
                 {#if item.icon}
                   <span class="max-lg:hidden">{@html item.icon}</span>
                 {/if}
@@ -245,10 +245,10 @@
               onclick={() => track(`Navbar > ${item.name}`)}
             >
               <span
-                class={`px-1 xl:px-2 flex items-center gap-1 ${shouldShowCountdownTooltip(item) ? "tooltip tooltip-bottom! tooltip-open group" : ""}`}
+                class={`flex items-center gap-1 px-1 xl:px-2 ${shouldShowCountdownTooltip(item) ? "tooltip tooltip-bottom! tooltip-open group" : ""}`}
               >
                 {#if item.icon}
-                  <span class="max-xl:hidden text-base-content group-hover:opacity-100 opacity-50"
+                  <span class="text-base-content opacity-50 group-hover:opacity-100 max-xl:hidden"
                     >{@html item.icon}</span
                   >
                 {/if}
@@ -267,7 +267,7 @@
     </div>
     <div class="navbar-end items-center gap-1 lg:gap-2">
       {#if showSearch}
-        <div class="w-full max-w-30 xl:max-w-40 max-lg:hidden xl:ms-4">
+        <div class="w-full max-w-30 max-lg:hidden xl:ms-4 xl:max-w-40">
           <button
             class="input input-sm input-ghost hover:bg-base-200 focus-visible:bg-base-200 cursor-pointer transition-colors focus:outline-none"
             onclick={() => {
@@ -333,7 +333,9 @@
           </g>
         </svg>
         {#if githubStarsLabel}
-          <span class="text-[0.625rem] font-normal font-mono tabular-nums max-sm:hidden">{githubStarsLabel}</span>
+          <span class="font-mono text-[0.625rem] font-normal tabular-nums max-sm:hidden"
+            >{githubStarsLabel}</span
+          >
         {/if}
       </a>
     </div>

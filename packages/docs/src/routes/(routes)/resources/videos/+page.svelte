@@ -53,7 +53,7 @@
         </div>
       </a>
     {:else}
-      <div class="lg:col-span-2 flex justify-center items-center font-bold text-base-content/20">
+      <div class="text-base-content/20 flex items-center justify-center font-bold lg:col-span-2">
         Coming soon…
       </div>
     {/each}

@@ -14,11 +14,18 @@ export async function loadThemes() {
 }
 
 export async function compileAndExtractStyles(styleContent, defaultTheme, theme) {
+  // Tailwind 4.3.x hoists `@layer daisyui.*` at-rules nested inside selectors to
+  // the top level when resolving `@apply`, flattening the layer nesting. This
+  // later makes `addComponents` emit duplicated compound/descendant selectors.
+  // Swap them for an at-rule Tailwind leaves untouched, then restore the name.
+  const layerPlaceholder = "@daisyui-layer daisyui"
+  const preparedContent = styleContent.replaceAll("@layer daisyui", layerPlaceholder)
+
   const compiledContent = (
     await compile(
       `
     @layer theme{${defaultTheme}${theme}}
-    @layer wrapperStart{${styleContent}}
+    @layer wrapperStart{${preparedContent}}
     @layer wrapperEnd
   `,
       {
@@ -50,5 +57,8 @@ export async function compileAndExtractStyles(styleContent, defaultTheme, theme)
     throw new Error("Invalid wrapper structure in compiled content")
   }
 
-  return compiledContent.substring(openingBraceIndex + 1, closingBraceIndex).trim()
+  return compiledContent
+    .substring(openingBraceIndex + 1, closingBraceIndex)
+    .trim()
+    .replaceAll(layerPlaceholder, "@layer daisyui")
 }

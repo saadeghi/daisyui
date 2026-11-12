@@ -11,9 +11,7 @@
     /* Fill is painted by the thumb's last box-shadow layer, clipped by overflow:hidden.
        These variables let .range-vertical swap the fill from the x axis to the y axis.
        range-dir: 1 for ltr, -1 for rtl */
-    --range-fill-x: calc(
-      (var(--range-dir, 1) * -100cqw) - (var(--range-dir, 1) * var(--range-thumb-size) / 2)
-    );
+    --range-fill-x: calc(var(--range-dir, 1) * (-100cqw - var(--range-thumb-size) / 2));
     --range-fill-y: 0;
     --range-fill-spread: calc(100cqw * var(--range-fill));
     /* The fill spread below is sized in cqw. Without a query container on the
@@ -26,7 +24,8 @@
     --radius-selector-max: calc(
       var(--radius-selector) + var(--radius-selector) + var(--radius-selector)
     );
-    border-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));
+    --range-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));
+    border-radius: var(--range-radius);
     border: none;
     height: var(--range-thumb-size);
 
@@ -57,7 +56,7 @@
 
     &::-webkit-slider-thumb {
       @apply relative box-border;
-      border-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));
+      border-radius: var(--range-radius);
       background-color: var(--range-thumb);
       height: var(--range-thumb-size);
       width: var(--range-thumb-size);
@@ -71,7 +70,6 @@
         0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000),
-        0 0 0 2rem var(--range-thumb) inset,
         var(--range-fill-x) var(--range-fill-y) 0 var(--range-fill-spread);
     }
 
@@ -86,11 +84,17 @@
         border: 1px solid;
       }
     }
+    /* Firefox fills the track natively, no fill shadow needed. */
+    &::-moz-range-progress {
+      background-color: var(--range-progress);
+      block-size: var(--range-thumb-size);
+      opacity: var(--range-fill);
+    }
 
     &::-moz-range-thumb {
       @apply relative box-border;
-      border-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));
-      background-color: currentColor;
+      border-radius: var(--range-radius);
+      background-color: var(--range-thumb);
       height: var(--range-thumb-size);
       width: var(--range-thumb-size);
       border: var(--range-p) solid;
@@ -98,9 +102,7 @@
       box-shadow:
         0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
-        0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000),
-        0 0 0 2rem var(--range-thumb) inset,
-        var(--range-fill-x) var(--range-fill-y) 0 var(--range-fill-spread);
+        0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000);
     }
     &:disabled {
       @apply cursor-not-allowed opacity-30;

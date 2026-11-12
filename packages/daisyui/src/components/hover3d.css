@@ -9,7 +9,9 @@
 
     filter: drop-shadow(var(--shadow) 0.1rem #00000003) drop-shadow(var(--shadow) 0.2rem #00000003)
       drop-shadow(var(--shadow) 0.3rem #00000003) drop-shadow(var(--shadow) 0.4rem #00000003);
-    transition: filter ease-out 400ms;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: filter ease-out 400ms;
+    }
     > :nth-child(n + 2) {
       isolation: isolate;
       z-index: 1;
@@ -18,10 +20,12 @@
       overflow: hidden;
       grid-area: 1/1/4/4;
       transform: rotate3d(var(--transform), 0, 10deg);
-      transition:
-        transform var(--ease) 500ms,
-        scale var(--ease) 500ms,
-        outline-color ease-out 500ms;
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          transform var(--ease) 500ms,
+          scale var(--ease) 500ms,
+          outline-color ease-out 500ms;
+      }
       outline: 0.5px solid #0000;
       outline-offset: -1px;
       &:before {
@@ -35,9 +39,11 @@
         filter: blur(0.75rem);
         background-image: radial-gradient(circle at 50%, #fff3 10%, transparent 50%);
         translate: var(--shine);
-        transition:
-          translate ease-out 400ms,
-          opacity ease-out 400ms;
+        @media (prefers-reduced-motion: no-preference) {
+          transition:
+            translate ease-out 400ms,
+            opacity ease-out 400ms;
+        }
       }
     }
     &:hover {

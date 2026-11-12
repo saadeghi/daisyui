@@ -15,11 +15,15 @@ export default plugin.withOptions((options = {}) => {
       prefersdark = false,
       "color-scheme": colorScheme,
       root = ":root",
+      themecontroller = true,
       ...customThemeTokens
     } = options
 
     const escapedName = escapeCssString(name)
-    let selector = `${root}:has(input.theme-controller[value="${escapedName}"]:checked),[data-theme="${escapedName}"]`
+    let selector =
+      themecontroller === false || themecontroller === "false"
+        ? `[data-theme="${escapedName}"]`
+        : `${root}:has(input.theme-controller[value="${escapedName}"]:checked),[data-theme="${escapedName}"]`
     if (isDefault) {
       selector = `:where(${root}),${selector}`
     }

@@ -35,7 +35,8 @@
       }
       @media (forced-colors: active) {
         &:before {
-          @apply outline -outline-offset-1;
+          outline: 1px solid;
+          outline-offset: -1px;
         }
       }
       @media print {

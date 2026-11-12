@@ -7,11 +7,11 @@
   title={data.params.tag.replace(/-/g, " ")}
   desc={`daisyUI blog posts with '${data.params.tag.replace(/-/g, " ")}' tag`}
 />
-<div class="breadcrumbs text-xs m-6">
+<div class="breadcrumbs m-6 text-xs">
   <ul>
     <li><a class="opacity-60" href="/blog/">daisyUI Blog</a></li>
     <li>
-      <h1 class="no-underline cursor-text opacity-60">{data.params.tag.replace(/-/g, " ")}</h1>
+      <h1 class="cursor-text no-underline opacity-60">{data.params.tag.replace(/-/g, " ")}</h1>
     </li>
   </ul>
 </div>

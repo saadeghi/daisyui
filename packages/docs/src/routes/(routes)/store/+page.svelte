@@ -435,7 +435,7 @@
       />
     {:else}
       <div
-        class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20 py-32"
+        class="text-base-content/20 flex items-center justify-center py-32 font-bold lg:col-span-3"
       >
         Coming soon…
       </div>
@@ -478,7 +478,7 @@
         <div>{product}</div>
       </div>
     {:else}
-      <div class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20">
+      <div class="text-base-content/20 flex items-center justify-center font-bold lg:col-span-3">
         Coming soon…
       </div>
     {/each}

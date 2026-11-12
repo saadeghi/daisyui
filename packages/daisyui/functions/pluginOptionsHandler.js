@@ -12,6 +12,11 @@ export const pluginOptionsHandler = (() => {
       prefix = "",
     } = options || {}
 
+    const includeList =
+      typeof include === "string" ? include.split(",").map((item) => item.trim()) : include
+    const excludeList =
+      typeof exclude === "string" ? exclude.split(",").map((item) => item.trim()) : exclude
+
     if (logs !== false && firstRun) {
       console.log(
         `${atob("Lyoh")} ${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${packageVersion} ${atob("Ki8=")}`,
@@ -19,12 +24,18 @@ export const pluginOptionsHandler = (() => {
       firstRun = false
     }
 
+    // `exclude: themecontroller` removes the :has() theme-controller selectors from themes
+    const excludeThemeController =
+      Array.isArray(excludeList) && excludeList.includes("themecontroller")
+
     const applyTheme = (themeName, flags) => {
       const theme = themesObject[themeName]
       if (theme) {
         // Use prefix for theme-controller class name
         const themeControllerClass = `${prefix}theme-controller`
-        let selector = `${root}:has(input.${themeControllerClass}[value=${themeName}]:checked),[data-theme=${themeName}]`
+        let selector = excludeThemeController
+          ? `[data-theme=${themeName}]`
+          : `${root}:has(input.${themeControllerClass}[value=${themeName}]:checked),[data-theme=${themeName}]`
         if (flags.includes("--default")) {
           selector = `:where(${root}),${selector}`
         }
@@ -62,7 +73,7 @@ export const pluginOptionsHandler = (() => {
       if (themeArray.length === 1 && themeArray[0].includes("--default")) {
         const [themeName, ...flags] = themeArray[0].split(" ")
         applyTheme(themeName, flags)
-        return { include, exclude, prefix }
+        return { include: includeList, exclude: excludeList, prefix }
       }
 
       // default theme
@@ -92,6 +103,6 @@ export const pluginOptionsHandler = (() => {
       })
     }
 
-    return { include, exclude, prefix }
+    return { include: includeList, exclude: excludeList, prefix }
   }
 })()

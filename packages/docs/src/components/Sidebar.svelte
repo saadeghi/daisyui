@@ -403,7 +403,7 @@
         {#if !item.href}
           <h2 class="menu-title flex items-center gap-2 px-1.5">
             {#if item.icon}
-              <span class="ms-1 text-base-content opacity-40">{@html item.icon}</span>
+              <span class="text-base-content ms-1 opacity-40">{@html item.icon}</span>
             {:else if item.iconUrl}
               <img
                 class="ms-1 size-4 shrink-0 object-contain opacity-60"

@@ -191,7 +191,7 @@
   <div
     class={`drawer-side z-40 ${
       hasDesktopSidebar
-        ? "lg:sticky lg:top-16 border-transparent lg:h-[calc(100vh-5rem)]"
+        ? "border-transparent lg:sticky lg:top-16 lg:h-[calc(100vh-5rem)]"
         : "lg:h-screen"
     }`}
     style="scroll-behavior: smooth; scroll-padding-top: 5rem;"

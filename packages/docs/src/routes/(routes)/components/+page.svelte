@@ -33,7 +33,7 @@
             />
           </figure>
           <div class="card-body relative">
-            <h2 class="card-title font-normal text-sm">
+            <h2 class="card-title text-sm font-normal">
               <Translate text={title} />
             </h2>
             <p class="sr-only opacity-50"><Translate text={desc || ""} /></p>

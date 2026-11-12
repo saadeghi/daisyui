@@ -880,7 +880,7 @@ Card,/components/card/`
     class="modal-box relative max-w-4xl p-0 max-md:h-[85vh] md:mt-[10vh] md:h-[clamp(13rem,80vh,80vh)] md:w-11/12"
   >
     <div
-      class="rounded-box h-full overflow-y-auto [scrollbar-width:thin]"
+      class="rounded-box h-full [scrollbar-width:thin] overflow-y-auto"
       style="scroll-padding-top: 3.5rem;"
     >
       <label

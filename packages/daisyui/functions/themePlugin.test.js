@@ -58,3 +58,25 @@ test.each([
   const styles = addBase.mock.calls[0][0]
   expect(Object.values(styles)[0]["color-scheme"]).toBe(expected)
 })
+
+test.each([[false], ["false"]])(
+  "themePlugin skips the theme-controller selector when themecontroller is %p",
+  (themecontroller) => {
+    const { handler } = themePlugin({
+      name: "brand",
+      default: true,
+      themecontroller,
+      "--color-primary": "red",
+    })
+    const addBase = mock(() => {})
+
+    handler({ addBase })
+
+    expect(addBase).toHaveBeenCalledWith({
+      ':where(:root),[data-theme="brand"]': {
+        "color-scheme": "normal",
+        "--color-primary": "red",
+      },
+    })
+  },
+)

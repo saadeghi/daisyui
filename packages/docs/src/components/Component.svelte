@@ -92,11 +92,9 @@
         class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]"
         aria-label="HTML"
       />
-      <div class="tab-content">
-        <div class="grid *:[grid-area:1/1]">
-          <div class="code-wrapper" use:prefixClassNames>
-            {@render html()}
-          </div>
+      <div class="tab-content min-w-0">
+        <div class="code-wrapper" use:prefixClassNames>
+          {@render html()}
         </div>
       </div>
 
@@ -106,16 +104,14 @@
         class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]"
         aria-label="JSX"
       />
-      <div class="tab-content">
-        <div class="grid *:[grid-area:1/1]">
-          <div class="code-wrapper">
-            <div use:htmlToJsx use:prefixClassNames>
-              {#if jsx}
-                {@render jsx()}
-              {:else}
-                {@render html()}
-              {/if}
-            </div>
+      <div class="tab-content min-w-0">
+        <div class="code-wrapper">
+          <div use:htmlToJsx use:prefixClassNames>
+            {#if jsx}
+              {@render jsx()}
+            {:else}
+              {@render html()}
+            {/if}
           </div>
         </div>
       </div>
