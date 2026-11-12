@@ -67,16 +67,6 @@ All notable changes to this project will be documented in this file. See [commit
 * **docs:** skip failed or invalid discount responses when selecting an active discount
 * **preview-bot:** compare PR changes from the merge base ([#4715](https://github.com/saadeghi/daisyui/issues/4715))
 
-### Documentation and Maintenance
-
-* **laravel:** update to Laravel 13 and use `composer run dev` ([#4823](https://github.com/saadeghi/daisyui/issues/4823))
-* document join radius variables, plain megamenu items, and theme-controller options ([#4786](https://github.com/saadeghi/daisyui/issues/4786), [#4721](https://github.com/saadeghi/daisyui/issues/4721), [#4779](https://github.com/saadeghi/daisyui/issues/4779))
-* update translations
-* correct discount mock response order and check request URLs
-* verify that the packed daisyui package can be imported ([#4779](https://github.com/saadeghi/daisyui/issues/4779))
-* configure the release workflow for version 5.8.0
-* format source files
-
 ## [5.7.50](https://github.com/saadeghi/daisyui/compare/v5.7.49...v5.7.50) (2026-10-13)
 
 ## [5.7.49](https://github.com/saadeghi/daisyui/compare/v5.7.48...v5.7.49) (2026-10-13)
