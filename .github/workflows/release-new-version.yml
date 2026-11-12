@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          fetch-depth: 65
+          fetch-depth: 10
           fetch-tags: true
           clean: false
           ref: master
@@ -55,7 +55,7 @@ jobs:
         run: |
           # git add --all packages/bundle/
           cd packages/daisyui
-          bunx commit-and-tag-version --commit-all --infile ../../CHANGELOG.md --release-as 5.8.0
+          bunx commit-and-tag-version --commit-all --infile ../../CHANGELOG.md ${{ inputs.release-type }}
 
       - name: Read package version from package.json
         id: package-version

@@ -6,7 +6,76 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Features
 
-* v5.8 ([#4857](https://github.com/saadeghi/daisyui/issues/4857)) ([d1c2282](https://github.com/saadeghi/daisyui/commit/d1c2282a25810b4f2149469b11b289da6ee753ce)), closes [#4718](https://github.com/saadeghi/daisyui/issues/4718) [#4781](https://github.com/saadeghi/daisyui/issues/4781) [#4723](https://github.com/saadeghi/daisyui/issues/4723) [#4616](https://github.com/saadeghi/daisyui/issues/4616) [#4848](https://github.com/saadeghi/daisyui/issues/4848) [#4846](https://github.com/saadeghi/daisyui/issues/4846) [#4851](https://github.com/saadeghi/daisyui/issues/4851), references [#4651](https://github.com/saadeghi/daisyui/issues/4651) [#4665](https://github.com/saadeghi/daisyui/issues/4665) [#4680](https://github.com/saadeghi/daisyui/issues/4680) [#4691](https://github.com/saadeghi/daisyui/issues/4691) [#4715](https://github.com/saadeghi/daisyui/issues/4715) [#4726](https://github.com/saadeghi/daisyui/issues/4726) [#4728](https://github.com/saadeghi/daisyui/issues/4728) [#4756](https://github.com/saadeghi/daisyui/issues/4756) [#4758](https://github.com/saadeghi/daisyui/issues/4758) [#4760](https://github.com/saadeghi/daisyui/issues/4760) [#4780](https://github.com/saadeghi/daisyui/issues/4780) [#4783](https://github.com/saadeghi/daisyui/issues/4783) [#4785](https://github.com/saadeghi/daisyui/issues/4785) [#4742](https://github.com/saadeghi/daisyui/issues/4742) [#4737](https://github.com/saadeghi/daisyui/issues/4737) [#4721](https://github.com/saadeghi/daisyui/issues/4721) [#4786](https://github.com/saadeghi/daisyui/issues/4786) [#4788](https://github.com/saadeghi/daisyui/issues/4788) [#4800](https://github.com/saadeghi/daisyui/issues/4800) [#4801](https://github.com/saadeghi/daisyui/issues/4801) [#4803](https://github.com/saadeghi/daisyui/issues/4803) [#4807](https://github.com/saadeghi/daisyui/issues/4807) [#4806](https://github.com/saadeghi/daisyui/issues/4806) [#4811](https://github.com/saadeghi/daisyui/issues/4811) [#4813](https://github.com/saadeghi/daisyui/issues/4813) [#4814](https://github.com/saadeghi/daisyui/issues/4814) [#4815](https://github.com/saadeghi/daisyui/issues/4815) [#4816](https://github.com/saadeghi/daisyui/issues/4816) [#4818](https://github.com/saadeghi/daisyui/issues/4818) [#4819](https://github.com/saadeghi/daisyui/issues/4819) [#4820](https://github.com/saadeghi/daisyui/issues/4820) [#4823](https://github.com/saadeghi/daisyui/issues/4823) [#4779](https://github.com/saadeghi/daisyui/issues/4779) [#4817](https://github.com/saadeghi/daisyui/issues/4817) [#4831](https://github.com/saadeghi/daisyui/issues/4831) [#4841](https://github.com/saadeghi/daisyui/issues/4841) [#4842](https://github.com/saadeghi/daisyui/issues/4842) [#4840](https://github.com/saadeghi/daisyui/issues/4840) [#4839](https://github.com/saadeghi/daisyui/issues/4839) [#4838](https://github.com/saadeghi/daisyui/issues/4838) [#4837](https://github.com/saadeghi/daisyui/issues/4837) [#4836](https://github.com/saadeghi/daisyui/issues/4836) [#4835](https://github.com/saadeghi/daisyui/issues/4835) [#4834](https://github.com/saadeghi/daisyui/issues/4834) [#4830](https://github.com/saadeghi/daisyui/issues/4830) [#4828](https://github.com/saadeghi/daisyui/issues/4828) [#4829](https://github.com/saadeghi/daisyui/issues/4829) [#4833](https://github.com/saadeghi/daisyui/issues/4833) [#4855](https://github.com/saadeghi/daisyui/issues/4855) [#4854](https://github.com/saadeghi/daisyui/issues/4854) [#4847](https://github.com/saadeghi/daisyui/issues/4847) [#4826](https://github.com/saadeghi/daisyui/issues/4826) [#4827](https://github.com/saadeghi/daisyui/issues/4827) [#4852](https://github.com/saadeghi/daisyui/issues/4852)
+* add missing guards for prefers-reduced-motion ([#4651](https://github.com/saadeghi/daisyui/issues/4651))
+* **alert:** adapt layout when the icon is missing ([#4785](https://github.com/saadeghi/daisyui/issues/4785)), closes [#4723](https://github.com/saadeghi/daisyui/issues/4723)
+* **join:** allow setting the border radius from the main element ([#4786](https://github.com/saadeghi/daisyui/issues/4786)), closes [#4616](https://github.com/saadeghi/daisyui/issues/4616)
+* **megamenu:** style plain links and buttons as items ([#4721](https://github.com/saadeghi/daisyui/issues/4721))
+* **menu:** add transitions for paged menus ([#4788](https://github.com/saadeghi/daisyui/issues/4788))
+* **range:** remove redundant calculations and shadows ([#4855](https://github.com/saadeghi/daisyui/issues/4855))
+* add options to skip theme-controller and scroll lock `:root:has()` selectors ([#4779](https://github.com/saadeghi/daisyui/issues/4779))
+
+### Bug Fixes
+
+* prevent duplicated CSS rules generated with Tailwind CSS 4.3.3 ([#4742](https://github.com/saadeghi/daisyui/issues/4742))
+* prefix component classes in responsive selectors in daisyui.css ([#4758](https://github.com/saadeghi/daisyui/issues/4758))
+* **plugin:** match complete component names in the exclude option ([#4726](https://github.com/saadeghi/daisyui/issues/4726))
+* **plugin:** match complete component names in the include option
+* **plugin:** match themecontroller as a complete exclude value
+* **avatar:** keep avatar alignment from overriding chat-image alignment ([#4728](https://github.com/saadeghi/daisyui/issues/4728))
+* **fab:** prevent child layout styles from applying to script, style, and template elements ([#4680](https://github.com/saadeghi/daisyui/issues/4680))
+* **fab:** respect prefers-reduced-motion for transitions ([#4841](https://github.com/saadeghi/daisyui/issues/4841))
+* **footer:** reduce child selector specificity ([#4680](https://github.com/saadeghi/daisyui/issues/4680))
+* **join:** keep the end border of a disabled last item ([#4806](https://github.com/saadeghi/daisyui/issues/4806)), closes [#4807](https://github.com/saadeghi/daisyui/issues/4807)
+* **join:** preserve focus and hover z-index rules during CSS optimization ([#4852](https://github.com/saadeghi/daisyui/issues/4852)), closes [#4851](https://github.com/saadeghi/daisyui/issues/4851)
+* **megamenu:** prevent overflow when closing a vertical menu ([#4718](https://github.com/saadeghi/daisyui/issues/4718))
+* **megamenu:** correct popover width and available height when switching layouts ([#4718](https://github.com/saadeghi/daisyui/issues/4718))
+* **megamenu:** keep popover anchors aligned when plain buttons appear between popover buttons ([#4721](https://github.com/saadeghi/daisyui/issues/4721))
+* **menu:** respect prefers-reduced-motion for item and submenu arrow transitions ([#4842](https://github.com/saadeghi/daisyui/issues/4842))
+* **otp:** correct component centering ([#4781](https://github.com/saadeghi/daisyui/issues/4781)), closes [#4780](https://github.com/saadeghi/daisyui/issues/4780)
+* **otp:** keep focus outlines visible on all sides ([#4781](https://github.com/saadeghi/daisyui/issues/4781))
+* **otp:** prevent a focus shift on iOS/WebKit ([#4783](https://github.com/saadeghi/daisyui/issues/4783))
+* **otp:** show the text cursor ([#4827](https://github.com/saadeghi/daisyui/issues/4827)), closes [#4826](https://github.com/saadeghi/daisyui/issues/4826)
+* **tab:** style aria-current values other than false and empty as active ([#4760](https://github.com/saadeghi/daisyui/issues/4760))
+* **timeline:** round horizontal line ends next to the icon ([#4756](https://github.com/saadeghi/daisyui/issues/4756))
+* **timeline:** keep compact content on the start side with snap-icon ([#4854](https://github.com/saadeghi/daisyui/issues/4854))
+* **avatar:** distinguish online and offline indicators in forced colors mode ([#4820](https://github.com/saadeghi/daisyui/issues/4820))
+* **btn:** show btn-disabled and aria-disabled buttons as disabled in forced colors mode ([#4817](https://github.com/saadeghi/daisyui/issues/4817))
+* **calendar:** show the selected date in forced colors mode ([#4835](https://github.com/saadeghi/daisyui/issues/4835))
+* **calendar:** show React Day Picker month arrows in forced colors mode ([#4840](https://github.com/saadeghi/daisyui/issues/4840))
+* **card:** show checked and focused states on selectable cards in forced colors mode ([#4816](https://github.com/saadeghi/daisyui/issues/4816))
+* **chat:** show the bubble edge and tail in forced colors mode ([#4837](https://github.com/saadeghi/daisyui/issues/4837))
+* **collapse:** keep the arrow visible in forced colors mode ([#4800](https://github.com/saadeghi/daisyui/issues/4800))
+* **dock:** show aria-disabled items as disabled in forced colors mode ([#4838](https://github.com/saadeghi/daisyui/issues/4838))
+* **menu:** keep submenu arrows visible in forced colors mode ([#4801](https://github.com/saadeghi/daisyui/issues/4801))
+* **menu:** keep submenu toggle focus outlines visible in forced colors mode ([#4814](https://github.com/saadeghi/daisyui/issues/4814))
+* **menu:** remove the stray line under an open submenu toggle in forced colors mode ([#4815](https://github.com/saadeghi/daisyui/issues/4815))
+* **menu:** show disabled items as disabled in forced colors mode ([#4818](https://github.com/saadeghi/daisyui/issues/4818))
+* **menu:** show the horizontal submenu edge in forced colors mode ([#4839](https://github.com/saadeghi/daisyui/issues/4839))
+* **modal:** show the modal box edge in forced colors mode ([#4829](https://github.com/saadeghi/daisyui/issues/4829))
+* **progress:** keep the indeterminate progress bar visible in forced colors mode ([#4834](https://github.com/saadeghi/daisyui/issues/4834))
+* use valid outline styles for radio and toggle in forced colors mode ([#4803](https://github.com/saadeghi/daisyui/issues/4803))
+* **select:** show the dropdown arrow in forced colors mode ([#4811](https://github.com/saadeghi/daisyui/issues/4811))
+* **skeleton:** keep the skeleton visible in forced colors mode ([#4833](https://github.com/saadeghi/daisyui/issues/4833))
+* **status:** keep the status dot visible in forced colors mode ([#4813](https://github.com/saadeghi/daisyui/issues/4813))
+* **steps:** show completed steps in forced colors mode ([#4828](https://github.com/saadeghi/daisyui/issues/4828))
+* **tab:** show the active tab in forced colors mode ([#4819](https://github.com/saadeghi/daisyui/issues/4819))
+* **tooltip:** show the tooltip edge and tail in forced colors mode ([#4836](https://github.com/saadeghi/daisyui/issues/4836))
+* **docs:** convert class, for, and checked attributes to JSX at any indentation ([#4665](https://github.com/saadeghi/daisyui/issues/4665))
+* **docs:** use braces for minLength and maxLength values in JSX ([#4691](https://github.com/saadeghi/daisyui/issues/4691))
+* **docs:** keep the copy button visible while code scrolls ([#4847](https://github.com/saadeghi/daisyui/issues/4847)), closes [#4846](https://github.com/saadeghi/daisyui/issues/4846)
+* **docs:** add missing translation keys ([#4830](https://github.com/saadeghi/daisyui/issues/4830))
+* **docs:** skip failed or invalid discount responses when selecting an active discount
+* **preview-bot:** compare PR changes from the merge base ([#4715](https://github.com/saadeghi/daisyui/issues/4715))
+
+### Documentation and Maintenance
+
+* **laravel:** update to Laravel 13 and use `composer run dev` ([#4823](https://github.com/saadeghi/daisyui/issues/4823))
+* document join radius variables, plain megamenu items, and theme-controller options ([#4786](https://github.com/saadeghi/daisyui/issues/4786), [#4721](https://github.com/saadeghi/daisyui/issues/4721), [#4779](https://github.com/saadeghi/daisyui/issues/4779))
+* update translations
+* correct discount mock response order and check request URLs
+* verify that the packed daisyui package can be imported ([#4779](https://github.com/saadeghi/daisyui/issues/4779))
+* configure the release workflow for version 5.8.0
+* format source files
 
 ## [5.7.50](https://github.com/saadeghi/daisyui/compare/v5.7.49...v5.7.50) (2026-10-13)
 
