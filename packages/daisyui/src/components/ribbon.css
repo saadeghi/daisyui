@@ -1,0 +1,98 @@
+.ribbon {
+  @layer daisyui.l1.l2.l3 {
+    @apply bg-neutral text-neutral-content absolute top-4 z-1 w-fit px-3 py-1 text-sm font-semibold;
+    --ribbon-fold: 0.5rem;
+    --ribbon-radius: min(var(--radius-selector, 0.25rem), 0.25rem);
+    inset-inline-end: calc(var(--ribbon-fold) * -1);
+    border-start-start-radius: var(--ribbon-radius);
+    border-end-start-radius: var(--ribbon-radius);
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+
+    &:after {
+      @apply absolute top-full;
+      content: "";
+      inset-inline-end: 0;
+      width: var(--ribbon-fold);
+      height: var(--ribbon-fold);
+      background-color: inherit;
+      filter: brightness(0.7);
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+
+    &:dir(rtl):after {
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+    }
+  }
+}
+
+.ribbon-start {
+  @layer daisyui.l1.l2 {
+    inset-inline-end: auto;
+    inset-inline-start: calc(var(--ribbon-fold) * -1);
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    border-start-end-radius: var(--ribbon-radius);
+    border-end-end-radius: var(--ribbon-radius);
+
+    &:after {
+      inset-inline-end: auto;
+      inset-inline-start: 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+    }
+
+    &:dir(rtl):after {
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+  }
+}
+
+/* colors */
+.ribbon-primary {
+  @layer daisyui.l1.l2 {
+    @apply bg-primary text-primary-content;
+  }
+}
+
+.ribbon-secondary {
+  @layer daisyui.l1.l2 {
+    @apply bg-secondary text-secondary-content;
+  }
+}
+
+.ribbon-accent {
+  @layer daisyui.l1.l2 {
+    @apply bg-accent text-accent-content;
+  }
+}
+
+.ribbon-neutral {
+  @layer daisyui.l1.l2 {
+    @apply bg-neutral text-neutral-content;
+  }
+}
+
+/* state colors */
+.ribbon-info {
+  @layer daisyui.l1.l2 {
+    @apply bg-info text-info-content;
+  }
+}
+
+.ribbon-success {
+  @layer daisyui.l1.l2 {
+    @apply bg-success text-success-content;
+  }
+}
+
+.ribbon-warning {
+  @layer daisyui.l1.l2 {
+    @apply bg-warning text-warning-content;
+  }
+}
+
+.ribbon-error {
+  @layer daisyui.l1.l2 {
+    @apply bg-error text-error-content;
+  }
+}
