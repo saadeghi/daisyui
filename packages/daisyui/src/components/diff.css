@@ -1,6 +1,7 @@
 .diff {
   @layer daisyui.l1.l2 {
     @apply relative grid w-full overflow-hidden select-none;
+    caret-color: transparent;
     align-items: normal;
     grid-template-rows: 1fr 1.8rem 1fr;
     direction: ltr;
@@ -8,20 +9,36 @@
     grid-template-columns: auto 1fr;
     &:focus-visible,
     &:has(.diff-item-1:focus-visible) {
-      @apply outline-base-content outline-2 outline-offset-1;
+      @apply outline-base-content outline-2 outline-offset-1 outline-solid;
     }
     &:focus-visible {
-      @apply outline-base-content outline-2 outline-offset-1;
-      .diff-resizer {
-        min-width: 95cqi;
-        max-width: 95cqi;
+      .diff-resizer:not(input) {
+        min-width: calc(100cqi - 1rem);
+        max-width: calc(100cqi - 1rem);
       }
     }
     &:has(.diff-item-1:focus-visible) {
-      @apply outline-2 outline-offset-1;
-      .diff-resizer {
-        min-width: 5cqi;
-        max-width: 5cqi;
+      .diff-resizer:not(input) {
+        min-width: 1rem;
+        max-width: 1rem;
+      }
+    }
+    @supports not (timeline-scope: --v) {
+      &:has(.diff-resizer:is(input)):not(:has(.diff-resizer:not(input))) {
+        .diff-resizer:is(input) {
+          @apply relative isolate z-2 col-start-1 row-start-2 block h-3 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden appearance-none opacity-0;
+          transform: scaleY(5) translate(0.32rem, 50%);
+          transform-origin: 100% 100%;
+          clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
+        }
+        &:focus-visible .diff-resizer:is(input) {
+          min-width: calc(100cqi - 1rem);
+          max-width: calc(100cqi - 1rem);
+        }
+        &:has(.diff-item-1:focus-visible) .diff-resizer:is(input) {
+          min-width: 1rem;
+          max-width: 1rem;
+        }
       }
     }
     &:hover {
@@ -31,49 +48,130 @@
         }
       }
     }
-    @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
+    @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) and (not (timeline-scope: --v)) {
       &:focus {
         .diff-resizer {
-          min-width: 5cqi;
-          max-width: 5cqi;
+          min-width: 1rem;
+          max-width: 1rem;
         }
       }
       &:has(.diff-item-1:focus) {
         .diff-resizer {
-          min-width: 95cqi;
-          max-width: 95cqi;
+          min-width: calc(100cqi - 1rem);
+          max-width: calc(100cqi - 1rem);
         }
       }
     }
-    @supports (-moz-appearance: none) {
+    @supports (-moz-appearance: none) and (not (timeline-scope: --v)) {
       @media (hover: none) and (pointer: coarse) {
         &:focus {
           .diff-resizer {
-            min-width: 5cqi;
-            max-width: 5cqi;
+            min-width: 1rem;
+            max-width: 1rem;
           }
         }
         &:has(.diff-item-1:focus) {
           .diff-resizer {
-            min-width: 95cqi;
-            max-width: 95cqi;
+            min-width: calc(100cqi - 1rem);
+            max-width: calc(100cqi - 1rem);
           }
+        }
+      }
+    }
+  }
+
+  @layer daisyui.l1 {
+    @supports (timeline-scope: --v) {
+      &:has(.diff-resizer:is(input)) {
+        overflow-x: auto;
+        overflow-y: clip;
+        scrollbar-width: none;
+        timeline-scope: --diff-scroll;
+
+        .diff-resizer:not(input) {
+          display: none;
+        }
+
+        .diff-item-1 {
+          box-sizing: border-box;
+          width: calc(1rem + (1 - var(--diff-pos)) * (100cqi - 2rem));
+          animation-name: diff-pos;
+          animation-timing-function: linear;
+          animation-fill-mode: both;
+          animation-timeline: --diff-scroll;
+        }
+
+        &:focus-visible .diff-item-1 {
+          animation-name: none;
+          --diff-pos: 0;
+        }
+        &:has(.diff-item-1:focus-visible) .diff-item-1 {
+          animation-name: none;
+          --diff-pos: 1;
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
         }
       }
     }
   }
 }
 .diff-resizer {
-  @layer daisyui.l1.l2.l3 {
-    @apply relative isolate z-2 col-start-1 row-start-2 h-3 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
-    transform: scaleY(5) translate(0.32rem, 50%);
-    cursor: ew-resize;
-    transform-origin: 100% 100%;
-    clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
-    @media (prefers-reduced-motion: no-preference) {
-      transition:
-        min-width 0.3s ease-out,
-        max-width 0.3s ease-out;
+  &:not(input) {
+    @layer daisyui.l1.l2.l3 {
+      @apply relative isolate z-2 col-start-1 row-start-2 h-3 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
+      transform: scaleY(5) translate(0.32rem, 50%);
+      cursor: ew-resize;
+      transform-origin: 100% 100%;
+      clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          min-width 0.3s ease-out,
+          max-width 0.3s ease-out;
+      }
+    }
+  }
+
+  &:is(input) {
+    @layer daisyui.l1.l2.l3 {
+      @apply hidden;
+    }
+
+    @layer daisyui.l1.l2 {
+      @supports (timeline-scope: --v) {
+        @apply absolute inset-0 z-4 m-0 block h-full w-full cursor-ew-resize appearance-none opacity-0;
+        grid-column: auto;
+        grid-row: auto;
+
+        &::-webkit-slider-runnable-track,
+        &::-moz-range-track {
+          background: transparent;
+          border: 0;
+          height: 100%;
+        }
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 0;
+          height: 100%;
+          border: 0;
+          padding: 0;
+          background: transparent;
+          view-timeline: --diff-scroll inline;
+        }
+
+        &::-moz-range-thumb {
+          appearance: none;
+          width: 0;
+          height: 100%;
+          border: 0;
+          padding: 0;
+          background: transparent;
+          view-timeline: --diff-scroll inline;
+        }
+      }
     }
   }
 }
@@ -98,10 +196,18 @@
     > * {
       @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
     }
-    @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
+    @supports (overflow: -webkit-paged-x) and (-webkit-overflow-scrolling: touch) {
       &:after {
         --tw-content: none;
         content: var(--tw-content);
+      }
+    }
+    @supports (timeline-scope: --v) {
+      .diff:has(.diff-resizer:is(input)) & {
+        &:after {
+          --tw-content: "";
+          content: var(--tw-content);
+        }
       }
     }
     @supports (-moz-appearance: none) {
@@ -125,5 +231,14 @@
     > * {
       @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
     }
+  }
+}
+
+@keyframes diff-pos {
+  from {
+    --diff-pos: 0;
+  }
+  to {
+    --diff-pos: 1;
   }
 }
