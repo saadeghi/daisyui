@@ -4,7 +4,7 @@ import { compile } from "tailwindcss"
 import daisyui from "../index.js"
 
 // Mock functions
-const mockAddBase = mock(() => {})
+const mockAddBase = mock(() => { })
 const mockThemesObject = {
   light: { color: "white" },
   dark: { color: "black" },
@@ -19,7 +19,7 @@ test("pluginOptionsHandler should apply default themes", () => {
   pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
+    ":where(:root),:root:has(input.theme-controller[value=\"light\"]:checked),[data-theme=\"light\"]": {
       color: "white",
     },
   })
@@ -27,16 +27,11 @@ test("pluginOptionsHandler should apply default themes", () => {
     "@media (prefers-color-scheme: dark)": { ":root:not([data-theme])": { color: "black" } },
   })
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]": {
+    ":root:has(input.theme-controller[value=\"dark\"]:checked),[data-theme=\"dark\"]": {
       color: "black",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledWith({
-    ":root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
-      color: "white",
-    },
-  })
-  expect(mockAddBase).toHaveBeenCalledTimes(4)
+  expect(mockAddBase).toHaveBeenCalledTimes(3)
 })
 
 test("pluginOptionsHandler should apply all themes when 'all' is specified", () => {
@@ -47,7 +42,7 @@ test("pluginOptionsHandler should apply all themes when 'all' is specified", () 
   pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
+    ":where(:root),:root:has(input.theme-controller[value=\"light\"]:checked),[data-theme=\"light\"]": {
       color: "white",
     },
   })
@@ -55,11 +50,11 @@ test("pluginOptionsHandler should apply all themes when 'all' is specified", () 
     "@media (prefers-color-scheme: dark)": { ":root:not([data-theme])": { color: "black" } },
   })
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]": {
+    ":root:has(input.theme-controller[value=\"dark\"]:checked),[data-theme=\"dark\"]": {
       color: "black",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledTimes(4)
+  expect(mockAddBase).toHaveBeenCalledTimes(3)
 })
 
 test("pluginOptionsHandler should handle custom themes", () => {
@@ -70,7 +65,7 @@ test("pluginOptionsHandler should handle custom themes", () => {
   pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":root:has(input.theme-controller[value=custom]:checked),[data-theme=custom]": {
+    ":root:has(input.theme-controller[value=\"custom\"]:checked),[data-theme=\"custom\"]": {
       color: "blue",
     },
   })
@@ -160,7 +155,7 @@ test("pluginOptionsHandler should not create duplicate styles for single light t
   // Should be called exactly once
   expect(mockAddBase).toHaveBeenCalledTimes(1)
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
+    ":where(:root),:root:has(input.theme-controller[value=\"light\"]:checked),[data-theme=\"light\"]": {
       color: "white",
     },
   })
@@ -176,7 +171,7 @@ test("pluginOptionsHandler should not create duplicate styles for single dark th
   // Should be called exactly once
   expect(mockAddBase).toHaveBeenCalledTimes(1)
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":where(:root),:root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]": {
+    ":where(:root),:root:has(input.theme-controller[value=\"dark\"]:checked),[data-theme=\"dark\"]": {
       color: "black",
     },
   })
@@ -190,10 +185,10 @@ test("pluginOptionsHandler should prefix theme-controller class when prefix is s
   pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":where(:root),:root:has(input.myprefix-theme-controller[value=light]:checked),[data-theme=light]":
-      {
-        color: "white",
-      },
+    ":where(:root),:root:has(input.myprefix-theme-controller[value=\"light\"]:checked),[data-theme=\"light\"]":
+    {
+      color: "white",
+    },
   })
 })
 
@@ -207,9 +202,9 @@ test.each([["themecontroller"], [["modal", "themecontroller"]]])(
     pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
     expect(mockAddBase).toHaveBeenCalledWith({
-      ":where(:root),[data-theme=light]": { color: "white" },
+      ':where(:root),[data-theme="light"]': { color: "white" },
     })
-    expect(mockAddBase).toHaveBeenCalledWith({ "[data-theme=dark]": { color: "black" } })
+    expect(mockAddBase).toHaveBeenCalledWith({ '[data-theme="dark"]': { color: "black" } })
     expect(
       mockAddBase.mock.calls.some(([styles]) => JSON.stringify(styles).includes(":has(")),
     ).toBe(false)
@@ -224,7 +219,7 @@ test("pluginOptionsHandler should keep theme-controller selectors when using inc
   pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
 
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":root:has(input.theme-controller[value=custom]:checked),[data-theme=custom]": {
+    ':root:has(input.theme-controller[value="custom"]:checked),[data-theme="custom"]': {
       color: "blue",
     },
   })
