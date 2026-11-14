@@ -116,7 +116,7 @@
 {/if}
 
 <!-- With timer -->
-{#if attributes?.expires_at && now < new Date(attributes.expires_at).getTime()}
+{#if false && attributes?.expires_at && now < new Date(attributes.expires_at).getTime()}
   <div class="bg-base-100 h-20 overflow-y-auto sm:h-10">
     <div class="bg-base-100 flex min-h-full justify-center rounded-sm">
       <a
