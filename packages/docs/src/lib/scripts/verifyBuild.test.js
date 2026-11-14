@@ -76,6 +76,23 @@ describe("build verification", () => {
     expect(Object.values(metrics.dynamicRoutes).every((count) => count > 0)).toBe(true)
   })
 
+  test("counts routes and data files in nested directories", () => {
+    const buildDir = createValidBuildFixture()
+    const options = {
+      buildDir,
+      minimums: { routes: 1, dataFiles: 1, searchRows: 1, sitemapUrls: 1 },
+      routeFamilies: dynamicRouteFamilies.map((family) => ({ ...family, minimum: 1 })),
+    }
+    const before = verifyBuild(options)
+
+    writeFixtureFile(buildDir, join("docs", "nested", "example", "index.html"))
+    writeFixtureFile(buildDir, join("docs", "nested", "example", "__data.json"))
+    const after = verifyBuild(options)
+
+    expect(after.routes).toBe(before.routes + 1)
+    expect(after.dataFiles).toBe(before.dataFiles + 1)
+  })
+
   test("rejects analyzer output from a normal build", () => {
     const buildDir = createValidBuildFixture()
     writeFixtureFile(buildDir, "stats.html")
