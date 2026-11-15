@@ -14,8 +14,8 @@ test("packCss combines themes and CSS directories with layer wrapping and exclus
   for (const directory of ["theme", "base", "components", "utilities", "colors"]) {
     await mkdir(join(dir, directory), { recursive: true })
   }
-  await writeFile(join(dir, "theme", "light.css"), ":root{color:white}")
-  await writeFile(join(dir, "theme", "dark.css"), ":root{color:black}")
+  await writeFile(join(dir, "theme", "light.css"), "@layer base{:root{color:white}}")
+  await writeFile(join(dir, "theme", "dark.css"), "@layer base{:root{color:black}}")
   await writeFile(join(dir, "base", "reset.css"), "*,::before{box-sizing:border-box}")
   await writeFile(join(dir, "components", "button.css"), ".btn{color:red}")
   await writeFile(join(dir, "utilities", "glass.css"), ".glass{opacity:.5}")
@@ -32,7 +32,7 @@ await packCss({ outputFile: "daisyui.css", exclude: { colors: ["skip"] } });`,
   )
 
   const result = await readFile(join(dir, "daisyui.css"), "utf-8")
-  expect(result).toContain("@layer base")
+  expect(result.match(/@layer base/g)).toHaveLength(2)
   expect(result).toContain(".btn")
   expect(result).toContain("@layer utilities")
   expect(result).toContain(".text-primary")
