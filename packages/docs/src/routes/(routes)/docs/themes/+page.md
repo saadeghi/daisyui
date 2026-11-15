@@ -190,6 +190,8 @@ Set the levels you want to change:
 
 A light `base-content` needs a higher percentage than a dark one, roughly `35%` for dark themes and `60%` for light ones. Before setting a value, measure the contrast of `color-mix(in oklab, var(--color-base-content) <mix>, <surface>)` for your colors. The [theme generator](/theme-generator/) fills `--dim-mix-2` and `--dim-mix-3` with the lowest values that reach these targets.
 
+When the operating system requests `prefers-contrast: more`, borders and dimmed text are painted at full `base-content` strength; disabled content keeps its level.
+
 These are plain custom properties, so they inherit. Custom styles can use them too:
 
 ```css

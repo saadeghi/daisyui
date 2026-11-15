@@ -1,0 +1,7 @@
+/* High contrast request: paint borders and dimmed text at full base-content strength. */
+@media (prefers-contrast: more) {
+  :root {
+    --dim-mix-2: 100%;
+    --dim-mix-3: 100%;
+  }
+}
