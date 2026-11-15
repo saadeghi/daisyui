@@ -1,6 +1,6 @@
 ---
 title: Segmented Control
-desc: Segmented Control is a set of radio inputs where the selected option is raised above the group.
+desc: Segmented Control is a set of radio or checkbox inputs where the selected option is raised above the group.
 source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/segmentedcontrol.css
 layout: components
 classnames:
@@ -9,7 +9,7 @@ classnames:
       desc: Container of the segments
   part:
     - class: segmented-control-item
-      desc: A single segment (a label wrapping a radio input, or a radio input)
+      desc: A single segment (a label wrapping a radio or checkbox input, or a radio or checkbox input)
     - class: segmented-control-indicator
       desc: The element that slides behind the selected segment
   color:
@@ -119,6 +119,42 @@ classnames:
     Team
   </label>
   <span class="$$segmented-control-indicator"></span>
+</fieldset>
+```
+
+### ~Multiple choice
+
+#### Checkbox inputs allow multiple selected segments. Every checked segment paints its own chip, so the sliding indicator is used for single select only
+
+<fieldset class="segmented-control" aria-label="Text style">
+  <label class="segmented-control-item">
+    <input type="checkbox" name="style" checked>
+    Bold
+  </label>
+  <label class="segmented-control-item">
+    <input type="checkbox" name="style">
+    Italic
+  </label>
+  <label class="segmented-control-item">
+    <input type="checkbox" name="style" checked>
+    Underline
+  </label>
+</fieldset>
+
+```html
+<fieldset class="$$segmented-control" aria-label="Text style">
+  <label class="$$segmented-control-item">
+    <input type="checkbox" name="style" checked />
+    Bold
+  </label>
+  <label class="$$segmented-control-item">
+    <input type="checkbox" name="style" />
+    Italic
+  </label>
+  <label class="$$segmented-control-item">
+    <input type="checkbox" name="style" checked />
+    Underline
+  </label>
 </fieldset>
 ```
 

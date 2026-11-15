@@ -687,5 +687,6 @@
   "Add `disabled` to the radio input or to the `fieldset`": "Add `disabled` to the radio input or to the `fieldset`",
   "Day": "Day",
   "Week": "Week",
-  "Month": "Month"
+  "Month": "Month",
+  "Checkbox inputs allow multiple selected segments. Every checked segment paints its own chip, so the sliding indicator is used for single select only": "Checkbox inputs allow multiple selected segments. Every checked segment paints its own chip, so the sliding indicator is used for single select only"
 }
