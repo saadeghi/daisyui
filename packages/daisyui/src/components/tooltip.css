@@ -2,11 +2,16 @@
   @layer daisyui.l1.l2.l3 {
     @apply relative inline-block;
     --tt-bg: var(--color-neutral);
-    --tt-off: calc(100% + 0.5rem);
+    --tt-off: 0.5rem;
     --tt-radius: min(var(--radius-field), 0.8rem);
     --tt-overlap: clamp(1px, calc(var(--radius-field) / 8), 2px);
     --tt-tail: calc(100% + var(--tt-overlap) + 0.25rem);
     --tt-tail-off: max(0.5rem, var(--tt-radius));
+
+    @supports (anchor-scope: --tip) {
+      anchor-name: --tip;
+      anchor-scope: --tip;
+    }
 
     & > .tooltip-content,
     &[data-tip]:before {
@@ -25,7 +30,15 @@
       --tw-content: attr(data-tip);
       content: var(--tw-content);
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, 0.25rem));
-      inset: auto auto var(--tt-off) 50%;
+      inset: auto auto calc(100% + var(--tt-off)) 50%;
+
+      @supports (anchor-scope: --tip) {
+        position: fixed;
+        inset: auto;
+        position-anchor: --tip;
+        bottom: calc(anchor(--tip top) + var(--tt-off));
+        left: anchor(--tip center);
+      }
     }
 
     &:after {
@@ -46,6 +59,14 @@
       mask-image: var(--mask-tooltip);
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, 0.25rem));
       inset: auto auto var(--tt-tail) 50%;
+
+      @supports (anchor-scope: --tip) {
+        position: fixed;
+        inset: auto;
+        position-anchor: --tip;
+        bottom: calc(anchor(--tip top) + var(--tt-off) + var(--tt-overlap) - 0.25rem);
+        left: anchor(--tip center);
+      }
     }
 
     @media (prefers-reduced-motion: no-preference) {
@@ -84,12 +105,22 @@
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, 0.25rem));
-      inset: auto auto var(--tt-off) 50%;
+      inset: auto auto calc(100% + var(--tt-off)) 50%;
+
+      @supports (anchor-scope: --tip) {
+        bottom: calc(anchor(--tip top) + var(--tt-off));
+        left: anchor(--tip center);
+      }
     }
 
     &:after {
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, 0.25rem));
       inset: auto auto var(--tt-tail) 50%;
+
+      @supports (anchor-scope: --tip) {
+        bottom: calc(anchor(--tip top) + var(--tt-off) + var(--tt-overlap) - 0.25rem);
+        left: anchor(--tip center);
+      }
     }
   }
 }
@@ -99,13 +130,25 @@
     > .tooltip-content,
     &[data-tip]:before {
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, -0.25rem));
-      inset: var(--tt-off) auto auto 50%;
+      inset: calc(100% + var(--tt-off)) auto auto 50%;
+
+      @supports (anchor-scope: --tip) {
+        bottom: auto;
+        top: calc(anchor(--tip bottom) + var(--tt-off));
+        left: anchor(--tip center);
+      }
     }
 
     &:after {
       transform: translateX(var(--tt-trans, -50%)) translateY(var(--tt-pos, -0.25rem))
         rotate(180deg);
       inset: var(--tt-tail) auto auto 50%;
+
+      @supports (anchor-scope: --tip) {
+        bottom: auto;
+        top: calc(anchor(--tip bottom) + var(--tt-off) + var(--tt-overlap) - 0.25rem);
+        left: anchor(--tip center);
+      }
     }
   }
 }
@@ -121,12 +164,22 @@
       left: auto;
       right: auto;
       inset-inline: 0 auto;
+
+      @supports (anchor-scope: --tip) {
+        bottom: calc(anchor(--tip top) + var(--tt-off));
+        inset-inline: anchor(--tip self-start) auto;
+      }
     }
 
     &:after {
       left: auto;
       right: auto;
       inset-inline: var(--tt-tail-off) auto;
+
+      @supports (anchor-scope: --tip) {
+        bottom: calc(anchor(--tip top) + var(--tt-off) + var(--tt-overlap) - 0.25rem);
+        inset-inline-start: calc(anchor(--tip self-start) + var(--tt-tail-off));
+      }
     }
   }
 }
@@ -142,12 +195,22 @@
       inset-inline: auto;
       left: 50%;
       right: auto;
+
+      @supports (anchor-scope: --tip) {
+        bottom: calc(anchor(--tip top) + var(--tt-off));
+        left: anchor(--tip center);
+      }
     }
 
     &:after {
       inset-inline: auto;
       left: 50%;
       right: auto;
+
+      @supports (anchor-scope: --tip) {
+        bottom: calc(anchor(--tip top) + var(--tt-off) + var(--tt-overlap) - 0.25rem);
+        left: anchor(--tip center);
+      }
     }
   }
 }
@@ -163,12 +226,22 @@
       left: auto;
       right: auto;
       inset-inline: auto 0;
+
+      @supports (anchor-scope: --tip) {
+        bottom: calc(anchor(--tip top) + var(--tt-off));
+        inset-inline: auto anchor(--tip self-end);
+      }
     }
 
     &:after {
       left: auto;
       right: auto;
       inset-inline: auto var(--tt-tail-off);
+
+      @supports (anchor-scope: --tip) {
+        bottom: calc(anchor(--tip top) + var(--tt-off) + var(--tt-overlap) - 0.25rem);
+        inset-inline-end: calc(anchor(--tip self-end) + var(--tt-tail-off));
+      }
     }
   }
 }
@@ -181,8 +254,14 @@
       transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem))
         translateY(var(--tt-trans, -50%));
       left: auto;
-      right: var(--tt-off);
+      right: calc(100% + var(--tt-off));
       inset-block: var(--tt-inset, 50% auto);
+
+      @supports (anchor-scope: --tip) {
+        bottom: auto;
+        top: anchor(--tip center);
+        right: calc(anchor(--tip left) + var(--tt-off));
+      }
     }
 
     &:after {
@@ -190,6 +269,12 @@
       left: auto;
       right: calc(var(--tt-tail) + 1px);
       inset-block: var(--tt-tail-inset, 50% auto);
+
+      @supports (anchor-scope: --tip) {
+        bottom: auto;
+        top: anchor(--tip center);
+        right: calc(anchor(--tip left) + var(--tt-overlap) + 0.25rem + 1px);
+      }
     }
   }
 }
@@ -201,9 +286,15 @@
     &[data-tip]:before {
       transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem))
         translateY(var(--tt-trans, -50%));
-      left: var(--tt-off);
+      left: calc(100% + var(--tt-off));
       right: auto;
       inset-block: var(--tt-inset, 50% auto);
+
+      @supports (anchor-scope: --tip) {
+        bottom: auto;
+        top: anchor(--tip center);
+        left: calc(anchor(--tip right) + var(--tt-off));
+      }
     }
 
     &:after {
@@ -211,6 +302,12 @@
       left: calc(var(--tt-tail) + 1px);
       right: auto;
       inset-block: var(--tt-tail-inset, 50% auto);
+
+      @supports (anchor-scope: --tip) {
+        bottom: auto;
+        top: anchor(--tip center);
+        left: calc(anchor(--tip right) + var(--tt-overlap) + 0.25rem + 1px);
+      }
     }
   }
 }
