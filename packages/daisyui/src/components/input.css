@@ -113,7 +113,11 @@
 
       &::placeholder,
       ::placeholder {
-        color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5), #0000);
+        color: color-mix(
+          in oklab,
+          var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5),
+          #0000
+        );
       }
     }
 

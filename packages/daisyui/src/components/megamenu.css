@@ -321,7 +321,11 @@
         @apply pointer-events-none;
         font-size: 0.875rem;
         font-weight: 600;
-        color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 0.8), transparent);
+        color: color-mix(
+          in oklab,
+          var(--color-base-content) calc(var(--dim-mix-3, 50%) * 0.8),
+          transparent
+        );
         &:after {
           content: none;
         }
@@ -421,7 +425,11 @@
       @apply pointer-events-none;
       font-size: 0.875rem;
       font-weight: 600;
-      color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 0.8), transparent);
+      color: color-mix(
+        in oklab,
+        var(--color-base-content) calc(var(--dim-mix-3, 50%) * 0.8),
+        transparent
+      );
       &:after {
         content: none;
       }

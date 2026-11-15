@@ -67,13 +67,21 @@
     &:is(:disabled, [disabled]) {
       @apply border-base-200 bg-base-200 placeholder-base-content placeholder-base-content/20 cursor-not-allowed;
       box-shadow: none;
-      color: color-mix(in oklch, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5), #0000);
+      color: color-mix(
+        in oklch,
+        var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5),
+        #0000
+      );
 
       &::file-selector-button {
         @apply border-base-200 bg-base-200 cursor-not-allowed;
         --btn-border: #0000;
         background-image: none;
-        --btn-fg: color-mix(in oklch, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5), #0000);
+        --btn-fg: color-mix(
+          in oklch,
+          var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5),
+          #0000
+        );
       }
     }
   }
