@@ -39,6 +39,11 @@ const createValidBuildFixture = () => {
     writeFixtureFile(buildDir, filePath, content)
   }
   writeFixtureFile(buildDir, "docs/example/index.html", '<h2 id="section">Section</h2>')
+  writeFixtureFile(
+    buildDir,
+    "resources/videos/index.html",
+    '<a href="/resources/videos/fixture">Video</a><a href="https://www.youtube.com/watch?v=external">External video</a>',
+  )
 
   for (const family of dynamicRouteFamilies) {
     writeFixtureFile(buildDir, join(family.directory, "fixture", "index.html"))
@@ -99,6 +104,47 @@ describe("build verification", () => {
         routeFamilies: [{ name: "store", directory: "store", minimum: 2 }],
       }),
     ).toThrow("dynamic route family store has 1 routes; expected at least 2")
+  })
+
+  test("accepts a complete video listing below the former fixed minimum", () => {
+    const buildDir = createValidBuildFixture()
+    const metrics = verifyBuild({
+      buildDir,
+      minimums: { routes: 1, dataFiles: 1, searchRows: 1, sitemapUrls: 1 },
+      routeFamilies: dynamicRouteFamilies.filter((family) => family.name === "videos"),
+    })
+
+    expect(metrics.dynamicRoutes.videos).toBe(1)
+  })
+
+  test("rejects a video link with no built page", () => {
+    const buildDir = createValidBuildFixture()
+    writeFixtureFile(
+      buildDir,
+      "resources/videos/index.html",
+      '<a href="/resources/videos/fixture/">Video</a><a href="/resources/videos/missing/">Missing</a>',
+    )
+
+    expect(() =>
+      verifyBuild({
+        buildDir,
+        minimums: { routes: 1, dataFiles: 1, searchRows: 1, sitemapUrls: 1 },
+        routeFamilies: dynamicRouteFamilies.filter((family) => family.name === "videos"),
+      }),
+    ).toThrow("listing links to a missing dynamic route: /resources/videos/missing/")
+  })
+
+  test("rejects a video listing with no local video links", () => {
+    const buildDir = createValidBuildFixture()
+    writeFixtureFile(buildDir, "resources/videos/index.html", "No videos")
+
+    expect(() =>
+      verifyBuild({
+        buildDir,
+        minimums: { routes: 1, dataFiles: 1, searchRows: 1, sitemapUrls: 1 },
+        routeFamilies: dynamicRouteFamilies.filter((family) => family.name === "videos"),
+      }),
+    ).toThrow("dynamic route family videos has no links in its listing")
   })
 
   test("does not count legacy numeric store redirects as current products", () => {

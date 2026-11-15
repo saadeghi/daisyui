@@ -34,7 +34,7 @@ export const dynamicRouteFamilies = [
     requireInSearch: true,
   },
   { name: "skills", directory: "skills", minimum: 3, requireInSitemap: true },
-  { name: "videos", directory: "resources/videos", minimum: 137 },
+  { name: "videos", directory: "resources/videos", requireLinkedRoutes: true },
   {
     name: "comparisons",
     directory: "compare",
@@ -264,6 +264,26 @@ export const verifyBuild = ({
   )
   for (const family of routeFamilies) {
     const count = routeFamilyCounts[family.name]
+    if (family.requireLinkedRoutes) {
+      const listingPath = join(resolvedBuildDir, family.directory, "index.html")
+      const listing = existsSync(listingPath) ? readFileSync(listingPath, "utf8") : ""
+      const routePrefix = `/${family.directory}/`
+      const linkedRoutes = new Set(
+        [...listing.matchAll(/<a\b[^>]*\bhref=(["'])(.*?)\1/g)]
+          .map((match) => match[2])
+          .filter((href) => href.startsWith(routePrefix))
+          .map((href) => href.slice(routePrefix.length).replace(/\/$/, ""))
+          .filter(Boolean),
+      )
+      if (linkedRoutes.size === 0) {
+        errors.push(`dynamic route family ${family.name} has no links in its listing`)
+      }
+      for (const route of linkedRoutes) {
+        if (!routeFamilyEntries[family.name].includes(route)) {
+          errors.push(`listing links to a missing dynamic route: ${routePrefix}${route}/`)
+        }
+      }
+    }
     const minimum = family.minimum ?? 1
     if (count < minimum) {
       errors.push(
