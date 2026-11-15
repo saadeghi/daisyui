@@ -3,7 +3,7 @@
     @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
 
     --size: calc(var(--size-field, 0.25rem) * var(--sl-size-mul, 10));
-    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+    --input-color: color-mix(in oklab, var(--color-base-content) var(--dim-mix-2, 20%), #0000);
 
     width: clamp(3rem, 20rem, 100%);
     height: var(--size);
@@ -41,6 +41,13 @@
       background-image: none;
     }
 
+    &::placeholder,
+    select::placeholder {
+      /* color to work with safari, opacity 1 overrides the UA dimming */
+      color: color-mix(in oklab, var(--color-base-content) var(--dim-mix-3, 50%), #0000);
+      opacity: 1;
+    }
+
     select {
       @apply -ms-3 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-3 pe-7;
       height: calc(100% - calc(var(--border) * 2));
@@ -48,11 +55,6 @@
       background: inherit;
       border-radius: inherit;
       border-style: none;
-
-      &::placeholder {
-        /* color and opacity to work with safari */
-        @apply text-base-content opacity-50;
-      }
 
       &:focus,
       &:focus-within {
@@ -88,14 +90,13 @@
       @apply border-base-200 bg-base-200 cursor-not-allowed;
       &:is(select),
       :is(select) {
-        @apply text-base-content/40;
+        color: color-mix(in oklab, var(--color-base-content) var(--dim-mix-1, 40%), #0000);
       }
       box-shadow: none;
 
       &::placeholder,
       ::placeholder {
-        /* color and opacity to work with safari */
-        @apply text-base-content opacity-20;
+        color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5), #0000);
       }
     }
 

@@ -739,11 +739,11 @@
       color: var(--color-base-content);
 
       &:hover {
-        color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+        color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
       }
 
       &:disabled {
-        color: color-mix(in oklab, var(--color-base-content) 30%, transparent);
+        color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.75), transparent);
       }
     }
 
@@ -806,11 +806,11 @@
       }
 
       &:disabled {
-        color: color-mix(in oklab, var(--color-base-content) 30%, transparent);
+        color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.75), transparent);
         opacity: 0.8;
 
         &:hover {
-          color: color-mix(in oklab, var(--color-base-content) 30%, transparent);
+          color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.75), transparent);
         }
       }
 
@@ -854,7 +854,7 @@
 
     [data-vc-week-numbers="title"],
     .vc-week-numbers__title {
-      color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+      color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
     }
 
     [data-vc-week-numbers="title"] {
@@ -876,7 +876,7 @@
 
     [data-vc-week-number],
     .vc-week-number {
-      color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+      color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
 
       &:hover {
         color: color-mix(in oklab, var(--color-base-content) 80%, transparent);
@@ -908,7 +908,7 @@
 
     [data-vc-week-day],
     .vc-week__day {
-      color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+      color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
     }
 
     [data-vc-week-day] {
@@ -966,7 +966,7 @@
       &[data-vc-date-month="next"] {
         [data-vc-date-btn],
         .vc-date__btn {
-          color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+          color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 0.8), transparent);
         }
       }
 
@@ -976,7 +976,7 @@
         [data-vc-date-btn],
         .vc-date__btn {
           pointer-events: none;
-          color: color-mix(in oklab, var(--color-base-content) 30%, transparent);
+          color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.75), transparent);
           opacity: 0.8;
         }
       }
@@ -1103,11 +1103,11 @@
           [data-vc-date-btn],
           .vc-date__btn {
             background-color: var(--color-base-300);
-            color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+            color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
 
             &:hover {
               background-color: var(--color-base-300);
-              color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+              color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
             }
           }
         }
@@ -1117,11 +1117,11 @@
           [data-vc-date-btn],
           .vc-date__btn {
             background-color: var(--color-base-200);
-            color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+            color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
 
             &:hover {
               background-color: var(--color-base-200);
-              color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+              color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
             }
           }
         }
@@ -1143,7 +1143,7 @@
         &[data-vc-date-month="next"] {
           [data-vc-date-btn],
           .vc-date__btn {
-            color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+            color: color-mix(in oklab, var(--color-base-content) var(--dim-mix-3, 50%), transparent);
           }
         }
       }
@@ -1180,7 +1180,7 @@
         &[data-vc-date-disabled] {
           [data-vc-date-btn],
           .vc-date__btn {
-            color: color-mix(in oklab, var(--color-base-content) 30%, transparent);
+            color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.75), transparent);
             opacity: 0.8;
           }
         }
@@ -1195,7 +1195,7 @@
           &[data-vc-date-disabled] {
             [data-vc-date-btn],
             .vc-date__btn {
-              color: color-mix(in oklab, var(--color-base-content) 30%, transparent);
+              color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.75), transparent);
             }
           }
 
@@ -1203,7 +1203,7 @@
           &[data-vc-date-month="next"] {
             [data-vc-date-btn],
             .vc-date__btn {
-              color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+              color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 0.8), transparent);
             }
           }
         }
@@ -1213,11 +1213,11 @@
           [data-vc-date-btn],
           .vc-date__btn {
             background-color: var(--color-base-100);
-            color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+            color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 0.8), transparent);
 
             &:hover {
               background-color: var(--color-base-200);
-              color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+              color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
             }
           }
         }
@@ -1234,7 +1234,7 @@
         &[data-vc-date-disabled][data-vc-date-month="next"] {
           [data-vc-date-btn],
           .vc-date__btn {
-            color: color-mix(in oklab, var(--color-base-content) 30%, transparent);
+            color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.75), transparent);
             opacity: 0.8;
           }
         }
@@ -1269,11 +1269,11 @@
             [data-vc-date-btn],
             .vc-date__btn {
               background-color: var(--color-base-300);
-              color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+              color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
 
               &:hover {
                 background-color: var(--color-base-300);
-                color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+                color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
               }
             }
           }
@@ -1283,11 +1283,11 @@
             [data-vc-date-btn],
             .vc-date__btn {
               background-color: var(--color-base-200);
-              color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+              color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
 
               &:hover {
                 background-color: var(--color-base-200);
-                color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+                color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 1.2), transparent);
               }
             }
           }
@@ -1585,7 +1585,7 @@
       &:hover input {
         &::-webkit-slider-thumb,
         &::-moz-range-thumb {
-          border-color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+          border-color: color-mix(in oklab, var(--color-base-content) calc(var(--dim-mix-3, 50%) * 0.8), transparent);
         }
       }
 

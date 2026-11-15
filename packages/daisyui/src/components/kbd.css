@@ -3,9 +3,8 @@
   @layer daisyui.l1.l2.l3 {
     @apply bg-base-200 text-base-content rounded-field inline-flex shrink-0 items-center justify-center align-middle;
     padding-inline: 0.5em;
-    border: var(--border) solid color-mix(in srgb, var(--color-base-content) 20%, #0000);
-    border-bottom: calc(var(--border) + 1px) solid
-      color-mix(in srgb, var(--color-base-content) 20%, #0000);
+    border: var(--border) solid color-mix(in srgb, var(--color-base-content) var(--dim-mix-2, 20%), #0000);
+    border-bottom: calc(var(--border) + 1px) solid color-mix(in srgb, var(--color-base-content) var(--dim-mix-2, 20%), #0000);
     --size: calc(var(--size-selector, 0.25rem) * 6);
     font-size: 0.875rem;
     height: var(--size);
