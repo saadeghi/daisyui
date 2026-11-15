@@ -1,0 +1,228 @@
+.segmented-control {
+  @layer daisyui.l1.l2.l3 {
+    @apply bg-base-200 relative inline-flex items-center align-middle;
+
+    --size: calc(var(--size-field, 0.25rem) * var(--segmented-control-size-mul, 10));
+    --segmented-control-p: calc(var(--size-field, 0.25rem) * 0.75);
+
+    height: var(--size);
+    padding: var(--segmented-control-p);
+    anchor-scope: --segmented-control-selected;
+    isolation: isolate;
+    gap: var(--segmented-control-p);
+    font-size: var(--segmented-control-font-size, 0.875rem);
+    border-radius: calc(var(--radius-field) + var(--segmented-control-p));
+    box-shadow:
+      0 -0.5px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 0.5px oklch(0% 0 0 / calc(var(--depth) * 0.05)) inset;
+    touch-action: manipulation;
+  }
+}
+
+.segmented-control-item {
+  @layer daisyui.l1.l2.l3 {
+    @apply relative z-1 inline-flex h-full shrink-0 cursor-pointer items-center justify-center text-center whitespace-nowrap select-none;
+
+    min-width: calc(var(--size-field, 0.25rem) * 8);
+    padding-inline: calc(var(--size-field, 0.25rem) * 3);
+    border: var(--border) solid #0000;
+    border-radius: var(--radius-field);
+    color: var(--color-base-content);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: background-color, border-color, box-shadow;
+      transition-duration: 150ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:is(label) {
+      > input {
+        @apply absolute inset-0 size-full cursor-pointer appearance-none opacity-0;
+      }
+    }
+
+    &:is(input[type="radio"]) {
+      @apply appearance-none;
+      &:after {
+        --tw-content: attr(aria-label);
+        content: var(--tw-content);
+      }
+    }
+
+    &:is(:checked, label:has(:checked)) {
+      anchor-name: --segmented-control-selected;
+      background-color: var(--segmented-control-color, var(--color-base-100));
+      border-color: var(
+        --segmented-control-color,
+        color-mix(in oklab, var(--color-base-content) 20%, #0000)
+      );
+      color: var(--segmented-control-color-content, var(--color-base-content));
+      box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
+    }
+
+    &:focus-visible,
+    &:has(> input:focus-visible) {
+      outline: 2px solid var(--color-base-content);
+      outline-offset: -2px;
+    }
+
+    @media (hover: hover) {
+      &:not(:checked, label:has(:checked)):hover {
+        background-color: var(
+          --segmented-control-hover,
+          color-mix(in oklab, var(--color-base-100) 60%, #0000)
+        );
+      }
+    }
+
+    &:is(:disabled, label:has(> input:disabled), [aria-disabled="true"]) {
+      @apply cursor-not-allowed;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @media (forced-colors: active) {
+      &:is(:checked, label:has(:checked)):not(:focus-visible, :has(> input:focus-visible)) {
+        outline: 1px solid;
+        outline-offset: -1px;
+      }
+    }
+
+    @supports (anchor-name: --segmented-control-selected) {
+      .segmented-control:has(> .segmented-control-indicator) & {
+        background-color: #0000;
+        border-color: #0000;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.segmented-control-xs {
+  @layer daisyui.l1.l2 {
+    --segmented-control-size-mul: 6;
+    --segmented-control-font-size: 0.6875rem;
+  }
+}
+
+.segmented-control-sm {
+  @layer daisyui.l1.l2 {
+    --segmented-control-size-mul: 8;
+    --segmented-control-font-size: 0.75rem;
+  }
+}
+
+.segmented-control-md {
+  @layer daisyui.l1.l2 {
+    --segmented-control-size-mul: 10;
+    --segmented-control-font-size: 0.875rem;
+  }
+}
+
+.segmented-control-lg {
+  @layer daisyui.l1.l2 {
+    --segmented-control-size-mul: 12;
+    --segmented-control-font-size: 1.125rem;
+  }
+}
+
+.segmented-control-xl {
+  @layer daisyui.l1.l2 {
+    --segmented-control-size-mul: 14;
+    --segmented-control-font-size: 1.375rem;
+  }
+}
+
+.segmented-control-primary {
+  @layer daisyui.l1.l2 {
+    --segmented-control-color: var(--color-primary);
+    --segmented-control-color-content: var(--color-primary-content);
+    --segmented-control-hover: color-mix(in oklab, var(--color-primary) 20%, #0000);
+  }
+}
+
+.segmented-control-secondary {
+  @layer daisyui.l1.l2 {
+    --segmented-control-color: var(--color-secondary);
+    --segmented-control-color-content: var(--color-secondary-content);
+    --segmented-control-hover: color-mix(in oklab, var(--color-secondary) 20%, #0000);
+  }
+}
+
+.segmented-control-accent {
+  @layer daisyui.l1.l2 {
+    --segmented-control-color: var(--color-accent);
+    --segmented-control-color-content: var(--color-accent-content);
+    --segmented-control-hover: color-mix(in oklab, var(--color-accent) 20%, #0000);
+  }
+}
+
+.segmented-control-neutral {
+  @layer daisyui.l1.l2 {
+    --segmented-control-color: var(--color-neutral);
+    --segmented-control-color-content: var(--color-neutral-content);
+    --segmented-control-hover: color-mix(in oklab, var(--color-neutral) 20%, #0000);
+  }
+}
+
+.segmented-control-success {
+  @layer daisyui.l1.l2 {
+    --segmented-control-color: var(--color-success);
+    --segmented-control-color-content: var(--color-success-content);
+    --segmented-control-hover: color-mix(in oklab, var(--color-success) 20%, #0000);
+  }
+}
+
+.segmented-control-warning {
+  @layer daisyui.l1.l2 {
+    --segmented-control-color: var(--color-warning);
+    --segmented-control-color-content: var(--color-warning-content);
+    --segmented-control-hover: color-mix(in oklab, var(--color-warning) 20%, #0000);
+  }
+}
+
+.segmented-control-info {
+  @layer daisyui.l1.l2 {
+    --segmented-control-color: var(--color-info);
+    --segmented-control-color-content: var(--color-info-content);
+    --segmented-control-hover: color-mix(in oklab, var(--color-info) 20%, #0000);
+  }
+}
+
+.segmented-control-error {
+  @layer daisyui.l1.l2 {
+    --segmented-control-color: var(--color-error);
+    --segmented-control-color-content: var(--color-error-content);
+    --segmented-control-hover: color-mix(in oklab, var(--color-error) 20%, #0000);
+  }
+}
+
+.segmented-control-indicator {
+  @layer daisyui.l1.l2.l3 {
+    @apply pointer-events-none absolute z-0;
+
+    display: none;
+
+    @supports (anchor-name: --segmented-control-selected) {
+      display: block;
+      position-anchor: --segmented-control-selected;
+      inset: anchor(top) anchor(right) anchor(bottom) anchor(left);
+      background-color: var(--segmented-control-color, var(--color-base-100));
+      border: var(--border) solid
+        var(--segmented-control-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
+      border-radius: var(--radius-field);
+      box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          inset 300ms linear(0, 0.5 10%, 0.9 30%, 1.05 50%, 1.1 75%, 1),
+          background-color 200ms ease-out;
+      }
+
+      @media (forced-colors: active) {
+        outline: 1px solid;
+        outline-offset: -1px;
+      }
+    }
+  }
+}
