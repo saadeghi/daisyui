@@ -136,8 +136,8 @@
     &:has(> :is(a, button):not([popovertarget]):hover):not(:has([popover]:popover-open))
       .megamenu-active,
     &:has([popover]:popover-open) .megamenu-active {
-      inset: anchor(var(--mm-anchor) top) anchor(var(--mm-anchor) end)
-        anchor(var(--mm-anchor) bottom) anchor(var(--mm-anchor) start);
+      inset: anchor(var(--mm-anchor) top) anchor(var(--mm-anchor) right)
+        anchor(var(--mm-anchor) bottom) anchor(var(--mm-anchor) left);
     }
     &:has([popovertarget]:nth-child(1 of [popovertarget]):hover):not(:has([popover]:popover-open)),
     &:has([popover]:nth-child(1 of [popover]):popover-open) {
