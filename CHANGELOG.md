@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.8.1](https://github.com/saadeghi/daisyui/compare/v5.8.0...v5.8.1) (2026-11-15)
+
+### Bug Fixes
+
+* megamenu RTL hover indicator ([#4863](https://github.com/saadeghi/daisyui/issues/4863)) ([539af7c](https://github.com/saadeghi/daisyui/commit/539af7cb9f0efd7784d72b45e65850fc03a6ef83))
+
 ## [5.8.0](https://github.com/saadeghi/daisyui/compare/v5.7.50...v5.8.0) (2026-11-12)
 
 ### Features
