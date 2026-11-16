@@ -1,65 +1,29 @@
 <script>
   import { page } from "$app/stores"
-  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+  import { discountProgram, secondaryDiscount } from "$lib/discountProgramStore.js"
+  import { selectDiscountOffer } from "$lib/discountProgram.js"
+  import { blueprintProductIds, getProductCreemIds } from "$lib/storeDiscount.js"
   import Countdown from "svelte-countdown"
-  import { onMount } from "svelte"
-  const attributes = $derived($page.data.specialDiscount?.data?.attributes)
+  const attributes = $derived($secondaryDiscount?.data?.attributes)
 
-  let now = $state(Date.now())
-  let blackFriday = $state(null)
+  const now = $derived($discountProgram.now)
   let copyResult = $state(null)
   const copyFeedbackDuration = 3000
-  const blackFridayUrl = `${PUBLIC_DAISYUI_API_PATH}/api/discount_bf.json`
   const millisecondsPerSecond = 1000
   const secondsPerMinute = 60
   const minutesPerHour = 60
 
-  function selectDiscount(promotion, timestamp) {
-    if (
-      !Array.isArray(promotion?.discounts) ||
-      !(
-        Date.parse(promotion.starts_at) <= timestamp && timestamp < Date.parse(promotion.expires_at)
-      )
-    )
-      return null
-
-    for (const discount of promotion.discounts) {
-      if (!discount) continue
-      const start = Date.parse(discount.starts_at)
-      const end = Date.parse(discount.expires_at)
-      if (
-        typeof discount.code === "string" &&
-        discount.code.length > 0 &&
-        Number.isFinite(discount.percentage) &&
-        discount.percentage > 0 &&
-        start <= timestamp &&
-        timestamp < end
-      ) {
-        const next = promotion.discounts.find(
-          (candidate) =>
-            candidate &&
-            Date.parse(candidate.starts_at) === end &&
-            Date.parse(candidate.expires_at) > end &&
-            end < Date.parse(promotion.expires_at) &&
-            Number.isFinite(candidate.percentage) &&
-            candidate.percentage > 0 &&
-            candidate.percentage < discount.percentage,
-        )
-        const previous = promotion.discounts.find(
-          (candidate) =>
-            candidate &&
-            Date.parse(candidate.expires_at) === start &&
-            Date.parse(candidate.starts_at) < start &&
-            Number.isFinite(candidate.percentage) &&
-            candidate.percentage > discount.percentage,
-        )
-        return { discount, previous, next, start, end }
-      }
-    }
-    return null
-  }
-
-  const activeDiscount = $derived(selectDiscount(blackFriday, now))
+  const productScope = $derived(
+    $page.data.product
+      ? getProductCreemIds($page.data.product)
+      : $page.url.pathname.startsWith("/blueprint/")
+        ? blueprintProductIds
+        : undefined,
+  )
+  const selectedOffer = $derived(
+    selectDiscountOffer($discountProgram.programs, $discountProgram.now, productScope),
+  )
+  const activeDiscount = $derived(selectedOffer?.program)
   const copyFeedback = $derived(
     copyResult?.code === activeDiscount?.discount.code && now < copyResult?.until
       ? copyResult
@@ -80,25 +44,6 @@
       : 0,
   )
 
-  onMount(() => {
-    const controller = new AbortController()
-    fetch(blackFridayUrl, { signal: controller.signal })
-      .then((response) => (response.ok ? response.json() : null))
-      .then((promotion) => {
-        if (!controller.signal.aborted) blackFriday = promotion
-      })
-      .catch(() => {
-        // This optional banner stays hidden if the API is unavailable.
-      })
-    const timer = setInterval(() => {
-      now = Date.now()
-    }, 1000)
-    return () => {
-      clearInterval(timer)
-      controller.abort()
-    }
-  })
-
   const dateFormat = {
     year: "numeric",
     month: "numeric",
@@ -110,20 +55,18 @@
 </script>
 
 <!-- decremental -->
-{#if true && activeDiscount}
+{#if activeDiscount}
   <section
     dir="ltr"
-    aria-label="Black Friday daily discounts in UTC"
+    aria-label="Black Friday discounts in UTC"
     class="bg-neutral text-neutral-content border-neutral-content/10 border-b px-4 py-2 font-mono text-xs sm:px-6"
   >
     <div
       class="mx-auto flex max-w-2xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
     >
-      <div class="min-w-0 flex flex-col gap-1">
-        <div class="font-title text-base font-bold uppercase">
-          Black Friday discount
-        </div>
-        <div class="text-[0.6875rem] opacity-60 mb-3">
+      <div class="flex min-w-0 flex-col gap-1">
+        <div class="font-title text-base font-bold uppercase">Black Friday discount</div>
+        <div class="mb-3 text-[0.6875rem] opacity-60">
           For daisyUI
           <a href="/blueprint/" class="link underline-offset-3">MCP</a>,
           <a href="/store/daisyui-figma-library/" class="link underline-offset-3">Figma</a> and
@@ -234,7 +177,7 @@
         >
           <span class="font-bold">Today</span>
           <span class="bg-neutral-content my-2.75 h-2 w-0.5" aria-hidden="true"></span>
-          <span class="text-lg leading-none font-semibold font-title tabular-nums text-error"
+          <span class="font-title text-error text-lg leading-none font-semibold tabular-nums"
             >{activeDiscount.discount.percentage}%</span
           >
         </div>

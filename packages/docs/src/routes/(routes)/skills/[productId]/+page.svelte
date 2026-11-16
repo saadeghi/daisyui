@@ -1,15 +1,12 @@
 <script>
-  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+  import { discountProgram } from "$lib/discountProgramStore.js"
+  import { selectSecondaryDiscount } from "$lib/discountProgram.js"
   import SEO from "$components/SEO.svelte"
   import DiscountCountdown from "$components/DiscountCountdown.svelte"
   import Clipboard from "$components/Clipboard.svelte"
   import { codingTools } from "$lib/data/codingTools.js"
   import { fade, slide } from "svelte/transition"
-  import {
-    fetchActiveDiscount,
-    getProductCreemIds,
-    isDiscountApplicableToProduct,
-  } from "$lib/storeDiscount.js"
+  import { getProductCreemIds } from "$lib/storeDiscount.js"
 
   let { data } = $props()
 
@@ -97,15 +94,13 @@
     }, 2000)
   }
 
-  let currentDate = $state(new Date().toISOString())
-  $effect(() => {
-    const interval = setInterval(() => {
-      currentDate = new Date().toISOString()
-    }, 1000)
-    return () => clearInterval(interval)
-  })
-
-  const fetchDiscount = fetchActiveDiscount(PUBLIC_DAISYUI_API_PATH)
+  const discount = $derived(
+    selectSecondaryDiscount(
+      $discountProgram.programs,
+      $discountProgram.now,
+      getProductCreemIds(data.product),
+    ),
+  )
 </script>
 
 <SEO
@@ -201,60 +196,57 @@
   </a>
 </div>
 
-{#await fetchDiscount then discount}
-  {@const productIds = getProductCreemIds(data.product)}
-  {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate && isDiscountApplicableToProduct(discount, productIds)}
-    <div class="my-12">
-      <div
-        class="alert bg-neutral text-neutral-content min-h-24 border-transparent"
-        transition:slide={{ duration: 400 }}
+{#if discount}
+  <div class="my-12">
+    <div
+      class="alert bg-neutral text-neutral-content min-h-24 border-transparent"
+      transition:slide={{ duration: 400 }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="mx-4 size-6"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="mx-4 size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
-          />
-        </svg>
-        <div
-          class="flex w-full flex-col items-center justify-between gap-10 sm:flex-row"
-          transition:fade={{ duration: 400 }}
-        >
-          <div class="flex flex-col gap-1">
-            <h2 class="text-lg font-bold">
-              {discount.data.attributes.name}
-            </h2>
-            <div class="text-neutral-content/70 text-sm [text-wrap:balance]">
-              Use <span
-                data-tip={isClipboardButtonPressed ? "copied" : "copy"}
-                class="tooltip tooltip-error"
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+        />
+      </svg>
+      <div
+        class="flex w-full flex-col items-center justify-between gap-10 sm:flex-row"
+        transition:fade={{ duration: 400 }}
+      >
+        <div class="flex flex-col gap-1">
+          <h2 class="text-lg font-bold">
+            {discount.data.attributes.name}
+          </h2>
+          <div class="text-neutral-content/70 text-sm [text-wrap:balance]">
+            Use <span
+              data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+              class="tooltip tooltip-error"
+            >
+              <button
+                class="badge badge-error cursor-copy px-2 font-mono tracking-wide"
+                onclick={() => copyText(discount.data.attributes.code)}
               >
-                <button
-                  class="badge badge-error cursor-copy px-2 font-mono tracking-wide"
-                  onclick={() => copyText(discount.data.attributes.code)}
-                >
-                  {discount.data.attributes.code}
-                </button>
-              </span>
-              code at checkout to get {discount.data.attributes.amount}% discount.
-            </div>
+                {discount.data.attributes.code}
+              </button>
+            </span>
+            code at checkout to get {discount.data.attributes.amount}% discount.
           </div>
-
-          {#if discount.data.attributes.expires_at}
-            <DiscountCountdown expiresAt={discount.data.attributes.expires_at} variant="neutral" />
-          {/if}
         </div>
+
+        {#if discount.data.attributes.expires_at}
+          <DiscountCountdown expiresAt={discount.data.attributes.expires_at} variant="neutral" />
+        {/if}
       </div>
     </div>
-  {/if}
-{/await}
+  </div>
+{/if}
 
 <div class="mx-auto py-10">
   <!-- title -->

@@ -1,8 +1,7 @@
 <script>
+  import { secondaryDiscount } from "$lib/discountProgramStore.js"
   import { goto } from "$app/navigation"
   import { page } from "$app/stores"
-  import { onMount } from "svelte"
-  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import LogoHorizontal from "$components/LogoHorizontal.svelte"
   import TopBanner from "$components/TopBanner.svelte"
   import ThemeChange from "$components/ThemeChange.svelte"
@@ -10,7 +9,7 @@
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
   import DiscountCountdown from "$components/DiscountCountdown.svelte"
   import { track } from "$lib/analytics.svelte.js"
-  import { fetchActiveDiscount, getDiscountNavbarTarget } from "$lib/storeDiscount.js"
+  import { getDiscountNavbarTarget } from "$lib/storeDiscount.js"
 
   import { t } from "$lib/i18n.svelte.js"
 
@@ -36,16 +35,8 @@
     onPreFetchSearch,
     children,
   } = $props()
-  let activeDiscount = $state(null)
+  const activeDiscount = $derived($secondaryDiscount)
   let switchNavbarStyle = $derived(scrollY > 40)
-
-  onMount(async () => {
-    try {
-      activeDiscount = await fetchActiveDiscount(PUBLIC_DAISYUI_API_PATH)
-    } catch (error) {
-      console.error("Error loading active discount", error)
-    }
-  })
 
   const matchesActivePath = (item) => {
     if (!item) return false

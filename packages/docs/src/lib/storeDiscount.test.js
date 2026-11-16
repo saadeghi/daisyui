@@ -1,6 +1,6 @@
-import { describe, expect, spyOn, test } from "bun:test"
+import { selectDiscountOffer } from "./discountProgram.js"
+import { describe, expect, test } from "bun:test"
 import {
-  fetchActiveDiscount,
   getDiscountNavbarTarget,
   isDiscountApplicableToBlueprint,
   isDiscountApplicableToProduct,
@@ -10,51 +10,37 @@ const discountFor = (productIds) => ({
   data: {
     attributes: {
       applies_to_products: productIds,
+      code: "TEST",
+      amount: 20,
     },
   },
 })
 
 describe("special discount product limits", () => {
-  test("uses the special discount only for selected products without a normal discount fallback", async () => {
+  test("uses the special offer for eligible products and the short-time offer for other products", () => {
     const special = discountFor(["prod_blink_standard", "prod_blink_bundle"])
     special.data.attributes.expires_at = "2999-11-14T00:00:00.000Z"
     const normal = discountFor([])
     normal.data.attributes.expires_at = special.data.attributes.expires_at
-    const fetchMock = spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(Response.json(special))
-      .mockResolvedValueOnce(Response.json(normal))
-
-    try {
-      const discount = await fetchActiveDiscount("https://example.test")
-
-      expect(fetchMock).toHaveBeenNthCalledWith(1, "https://example.test/api/discount_special.json")
-      expect(fetchMock).toHaveBeenNthCalledWith(2, "https://example.test/api/discount_shorttime.json")
-      expect(discount).toEqual(special)
-      expect(isDiscountApplicableToProduct(discount, ["prod_blink_standard"])).toBe(true)
-      expect(isDiscountApplicableToProduct(discount, ["prod_blink_bundle"])).toBe(true)
-      expect(isDiscountApplicableToProduct(discount, ["prod_other_store"])).toBe(false)
-      expect(isDiscountApplicableToProduct(discount, ["prod_skill"])).toBe(false)
-    } finally {
-      fetchMock.mockRestore()
-    }
+    const programs = { special, "short-time": normal }
+    const timestamp = Date.parse("2026-11-16T00:00:00Z")
+    expect(selectDiscountOffer(programs, timestamp, ["prod_blink_standard"]).discount).toEqual(
+      special,
+    )
+    expect(selectDiscountOffer(programs, timestamp, ["prod_other_store"]).discount).toEqual(normal)
+    expect(selectDiscountOffer(programs, timestamp, ["prod_skill"]).discount).toEqual(normal)
+    expect(isDiscountApplicableToProduct(special, ["prod_other_store"])).toBe(false)
   })
 
-  test("uses the normal discount after the special discount expires", async () => {
+  test("uses the short-time offer after the special offer expires", () => {
     const special = discountFor(["prod_blink"])
     special.data.attributes.expires_at = "2000-11-14T00:00:00.000Z"
     const normal = discountFor([])
     normal.data.attributes.expires_at = "2999-11-14T00:00:00.000Z"
-    const fetchMock = spyOn(globalThis, "fetch")
-      .mockResolvedValueOnce(Response.json(special))
-      .mockResolvedValueOnce(Response.json(normal))
-
-    try {
-      expect(await fetchActiveDiscount("https://example.test")).toEqual(normal)
-      expect(fetchMock).toHaveBeenNthCalledWith(1, "https://example.test/api/discount_special.json")
-      expect(fetchMock).toHaveBeenNthCalledWith(2, "https://example.test/api/discount_shorttime.json")
-    } finally {
-      fetchMock.mockRestore()
-    }
+    expect(
+      selectDiscountOffer({ special, "short-time": normal }, Date.parse("2026-11-16T00:00:00Z"))
+        .discount,
+    ).toEqual(normal)
   })
 })
 

@@ -1,3 +1,5 @@
+import { appliesToProduct } from "./discountProgram.js"
+
 export const discountDateFormat = {
   year: "numeric",
   month: "numeric",
@@ -7,41 +9,12 @@ export const discountDateFormat = {
   second: "2-digit",
 }
 
-const blueprintProductIds = [
+export const blueprintProductIds = [
   "prod_5E7U1fS3URoEtdjqJr3R9d",
   "prod_7bSjj3UImBhfsYHclXQHt4",
   "prod_4GWzcIFPubIXjTBvzo9pKA",
   "prod_4EC2CMwyCoPAeJ6GhKabZd",
 ]
-
-export function isDiscountValid(discount) {
-  if (discount?.data?.attributes?.expires_at) {
-    const expiresAt = new Date(discount.data.attributes.expires_at).getTime()
-    return expiresAt > Date.now()
-  }
-  return false
-}
-
-export async function fetchActiveDiscount(apiPath) {
-  const responses = await Promise.allSettled([
-    fetch(`${apiPath}/api/discount_special.json`),
-    fetch(`${apiPath}/api/discount_shorttime.json`),
-  ])
-
-  for (const result of responses) {
-    if (result.status !== "fulfilled" || !result.value.ok) continue
-
-    try {
-      const discount = await result.value.json()
-      if (isDiscountValid(discount)) return discount
-    } catch {
-      // Skip an invalid optional response and try the next discount.
-      continue
-    }
-  }
-
-  return null
-}
 
 export function extractCreemProductId(url) {
   if (!url || typeof url !== "string") return null
@@ -71,9 +44,7 @@ export function getProductCreemIds(product) {
 }
 
 export function isDiscountApplicableToProduct(discount, productIds) {
-  const appliesTo = discount?.data?.attributes?.applies_to_products
-  if (!appliesTo?.length) return true
-  return appliesTo.some((id) => productIds.includes(id))
+  return appliesToProduct(discount?.data?.attributes, productIds)
 }
 
 export function isDiscountApplicableToBlueprint(discount) {

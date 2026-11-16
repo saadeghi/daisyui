@@ -1,7 +1,7 @@
 <script>
   import DiscountCountdown from "$components/DiscountCountdown.svelte"
 
-  let { product, productKey, convertCurrency, productDiscount = true } = $props()
+  let { product, productKey, convertCurrency, productDiscount = null } = $props()
 </script>
 
 <div class="relative">

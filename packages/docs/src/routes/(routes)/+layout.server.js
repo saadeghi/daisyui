@@ -35,26 +35,10 @@ const getStargazersCount = createBuildMemo(async () => {
 
 const getBlogSidebarPagesForBuild = createBuildMemo(getBlogSidebarPages)
 
-const getSpecialDiscountForBuild = createBuildMemo(async () => {
-  try {
-    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_special.json`, {
-      signal: AbortSignal.timeout(10_000),
-    })
-    if (!response.ok) return null
-
-    const discount = await response.json()
-    const expiresAt = new Date(discount?.data?.attributes?.expires_at).getTime()
-    return expiresAt > Date.now() ? discount : null
-  } catch {
-    return null
-  }
-})
-
 export async function load() {
-  const [blogSidebarPages, stargazersCount, specialDiscount] = await Promise.all([
+  const [blogSidebarPages, stargazersCount] = await Promise.all([
     getBlogSidebarPagesForBuild(),
     getStargazersCount(),
-    getSpecialDiscountForBuild(),
   ])
   const sidebarWithDynamicPages = {
     ...sidebar,
@@ -73,6 +57,5 @@ export async function load() {
     themes,
     daisyuiVersion: version,
     stargazersCount,
-    specialDiscount,
   }
 }

@@ -1,38 +1,20 @@
 <script>
-  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+  import { discountProgram } from "$lib/discountProgramStore.js"
+  import { selectSecondaryDiscount } from "$lib/discountProgram.js"
   import { onMount } from "svelte"
   import SEO from "$components/SEO.svelte"
   import SkillProduct from "$components/SkillProduct.svelte"
   import { codingTools } from "$lib/data/codingTools.js"
   import { t } from "$lib/i18n.svelte.js"
   import { fade, slide } from "svelte/transition"
-  import {
-    discountDateFormat,
-    fetchActiveDiscount,
-    getProductCreemIds,
-    isDiscountApplicableToProduct,
-  } from "$lib/storeDiscount.js"
+  import { discountDateFormat, getProductCreemIds } from "$lib/storeDiscount.js"
   let { data } = $props()
-  let currentDate = $state(new Date().toISOString())
-  $effect(() => {
-    const interval = setInterval(() => {
-      currentDate = new Date().toISOString()
-    }, 1000)
-    return () => clearInterval(interval)
-  })
 
-  let discount = $state(null)
-  const fetchDiscount = fetchActiveDiscount(PUBLIC_DAISYUI_API_PATH)
-  fetchDiscount.then((d) => {
-    discount = d
-  })
-
-  function getProductDiscount(product) {
-    if (!discount?.data?.attributes?.expires_at) return null
-    if (new Date(discount.data.attributes.expires_at).toISOString() <= currentDate) return null
-    const productIds = getProductCreemIds(product)
-    if (!isDiscountApplicableToProduct(discount, productIds)) return null
-    return discount.data.attributes
+  function getProductDiscount(product, programs, timestamp) {
+    return (
+      selectSecondaryDiscount(programs, timestamp, getProductCreemIds(product))?.data.attributes ??
+      null
+    )
   }
 
   function convertCurrency(number) {
@@ -123,7 +105,11 @@
         {product}
         productKey={product._key}
         {convertCurrency}
-        productDiscount={getProductDiscount(product)}
+        productDiscount={getProductDiscount(
+          product,
+          $discountProgram.programs,
+          $discountProgram.now,
+        )}
       />
     {:else}
       <div class="list-row">{$t("Coming soon…")}</div>

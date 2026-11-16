@@ -12,7 +12,7 @@
 >
   <div class="relative flex grow items-center">
     <div
-      class={`rounded-box gallery-column-reveal w-full ${false && productDiscount ? "outline-error outline-4 outline-offset-4" : ""}`}
+      class={`rounded-box gallery-column-reveal w-full ${productDiscount ? "outline-error outline-4 outline-offset-4" : ""}`}
     >
       <div class="gallery-column-reveal-images">
         {#each product.media.filter((media) => media.type === "image") as media}
@@ -53,7 +53,7 @@
         {/each}
       </div>
     </div>
-    {#if false && productDiscount?.expires_at}
+    {#if productDiscount?.expires_at}
       <div class="absolute start-6 -top-5 z-2 flex gap-1.5">
         <div
           class="bg-error text-error-content rounded-field font-title p-2 text-center text-sm font-semibold text-shadow-2xs text-shadow-white/30 xl:px-4 xl:tracking-widest"
