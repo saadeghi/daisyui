@@ -1,6 +1,6 @@
 ---
 title: Calendar
-desc: Calendar includes styles for different calendar libraries.
+desc: Calendar integrations with daisyUI themes.
 source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/calendar.css
 layout: components
 classnames:
@@ -14,29 +14,37 @@ classnames:
 ---
 
 <script>
+  import { onMount } from "svelte"
   import Component from "$components/Component.svelte"
   import Translate from "$components/Translate.svelte"
 
   import { prefixClassNames } from "$lib/actions.svelte.js"
+  import { prefix } from "$lib/stores"
+
+  let mounted = false
+  onMount(() => {
+    mounted = true
+  })
 </script>
 
 <svelte:head>
   <script type="module" src="https://unpkg.com/cally"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@litopis/dom@0.5.2/styles/daisyui.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@litopis/elements@0.5.2/dist/index.global.js"></script>
 </svelte:head>
 
 > :INFO:
 >
 > You can also use the native HTML `<input type="date">` for a date picker. [Read more](/components/input/#date-input)
 
-## daisyUI supports 3 calendar libraries
+## daisyUI supports 4 calendar libraries
 
-daisyUI includes styles for 3 popular calendar libraries.  
-Use any of them, based on your needs.  
-You don't need to import the CSS files for these libraries. daisyUI will style them automatically.
+Use Cally, React Day Picker, Vanilla Calendar Pro or Litopis with daisyUI. Styles for the first three libraries are included in daisyUI. Litopis provides a separate daisyUI adapter stylesheet.
 
 - [Cally web component](https://github.com/WickyNilliams/cally) - Works everywhere
 - [React Day picker](https://github.com/gpbl/react-day-picker) - React only
 - [Vanilla Calendar Pro](https://github.com/uvarov-frontend/vanilla-calendar-pro) - Works everywhere
+- [Litopis](https://github.com/dschewchenko/litopis) - Works everywhere
 
 ## 1. Cally Calendar
 
@@ -174,3 +182,77 @@ calendar.init()
 ```
 
 </div>
+
+## 4. Litopis
+
+Litopis is a date picker library with [DOM bindings](https://dschewchenko.github.io/litopis/integrations/#plain-dom), [Web Components](https://dschewchenko.github.io/litopis/integrations/web-components/) and adapters for [React](https://dschewchenko.github.io/litopis/integrations/react/), [Vue](https://dschewchenko.github.io/litopis/integrations/vue/), [Solid](https://dschewchenko.github.io/litopis/integrations/solid/) and [Svelte](https://dschewchenko.github.io/litopis/integrations/svelte/).
+
+The examples use the Litopis Web Component. Import its daisyUI adapter for the calendar. Add daisyUI's `input` class to the input.
+
+```:Install
+npm i @litopis/elements @litopis/dom
+```
+
+```js
+import "@litopis/elements";
+import "@litopis/dom/styles/daisyui.css";
+```
+
+### ~Litopis popup date picker example
+#### Example using daisyUI styles
+
+<div class="w-full max-w-sm">
+  {#if mounted}
+    <litopis-date-picker
+      label="Departure date"
+      name="departure"
+      mode="popover"
+      format="yyyy-mm-dd"
+    >
+      <input slot="input" type="text" placeholder="Choose a date" class={`${$prefix}input`} />
+    </litopis-date-picker>
+  {/if}
+</div>
+
+```html
+<litopis-date-picker
+  label="Departure date"
+  name="departure"
+  mode="popover"
+  format="yyyy-mm-dd"
+>
+  <input slot="input" type="text" placeholder="Choose a date" class="$$input" />
+</litopis-date-picker>
+```
+
+### ~Litopis calendar example
+#### Inline calendar with a daisyUI input
+
+<div class="w-full max-w-sm">
+  {#if mounted}
+    <litopis-date-picker
+      label="Appointment date"
+      name="appointment"
+      mode="inline"
+      format="yyyy-mm-dd"
+    >
+      <input
+        slot="input"
+        type="text"
+        placeholder="Choose a date"
+        class={`${$prefix}input`}
+      />
+    </litopis-date-picker>
+  {/if}
+</div>
+
+```html
+<litopis-date-picker
+  label="Appointment date"
+  name="appointment"
+  mode="inline"
+  format="yyyy-mm-dd"
+>
+  <input slot="input" type="text" placeholder="Choose a date" class="$$input" />
+</litopis-date-picker>
+```
