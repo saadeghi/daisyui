@@ -1,0 +1,1 @@
+import{Lt as e}from"../chunks/DgKegXV0.js";import{t}from"../chunks/RBUMsNVG.js";var n=e({prerender:()=>!0,trailingSlash:()=>r}),r=`always`;export{t as component,n as universal};
