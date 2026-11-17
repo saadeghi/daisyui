@@ -71,7 +71,7 @@
         [aria-selected="true"],
         [aria-current]:not([aria-current="false"], [aria-current=""])
       ) {
-        @apply text-base-content/50;
+        @apply text-base-content/75;
       }
 
       &:not(input):empty {

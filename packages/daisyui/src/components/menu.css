@@ -181,7 +181,7 @@
 
 .menu-title {
   @layer daisyui.l1.l2.l3 {
-    @apply text-base-content/40 px-3 py-2;
+    @apply text-base-content/75 px-3 py-2;
     font-size: 0.875rem;
     font-weight: 600;
   }
