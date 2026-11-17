@@ -84,6 +84,14 @@
           translate: 0;
         }
       }
+      @media print {
+        &:before {
+          @apply rotate-0 bg-transparent;
+          --tw-content: "−";
+          clip-path: none;
+          translate: 0;
+        }
+      }
     }
   }
 }
