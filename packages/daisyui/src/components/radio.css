@@ -1,6 +1,8 @@
 .radio {
   @layer daisyui.l1.l2.l3 {
-    @apply relative inline-block shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
+    @apply relative inline-block shrink-0 cursor-pointer appearance-none rounded-full align-middle;
+    --radio-p: 0.25rem;
+    padding: var(--radio-p);
     border: var(--border) solid var(--input-color, color-mix(in srgb, currentColor 20%, #0000));
     box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset;
     --size: calc(var(--size-selector, 0.25rem) * 6);
@@ -105,7 +107,7 @@
 
 .radio-xs {
   @layer daisyui.l1.l2 {
-    padding: 0.125rem;
+    --radio-p: 0.125rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 4);
     }
@@ -114,7 +116,7 @@
 
 .radio-sm {
   @layer daisyui.l1.l2 {
-    padding: 0.1875rem;
+    --radio-p: 0.1875rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 5);
     }
@@ -123,7 +125,7 @@
 
 .radio-md {
   @layer daisyui.l1.l2 {
-    padding: 0.25rem;
+    --radio-p: 0.25rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 6);
     }
@@ -132,7 +134,7 @@
 
 .radio-lg {
   @layer daisyui.l1.l2 {
-    padding: 0.3125rem;
+    --radio-p: 0.3125rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 7);
     }
@@ -141,7 +143,7 @@
 
 .radio-xl {
   @layer daisyui.l1.l2 {
-    padding: 0.375rem;
+    --radio-p: 0.375rem;
     &:is([type="radio"]) {
       --size: calc(var(--size-selector, 0.25rem) * 8);
     }
@@ -150,10 +152,10 @@
 
 @keyframes radio {
   0% {
-    padding: 5px;
+    padding: calc(var(--radio-p) + 1px);
   }
 
   50% {
-    padding: 3px;
+    padding: calc(var(--radio-p) - 1px);
   }
 }
