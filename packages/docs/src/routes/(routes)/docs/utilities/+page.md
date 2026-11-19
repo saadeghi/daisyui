@@ -216,6 +216,10 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--sc-size-mul`               | size multiplier of the control                           |
 |                 | `--sc-font-size`              | font size of the segments                                |
 |                 | `--sc-p`                      | padding of the control                                   |
+|                 | `--sc-div-w`                  | width of the segment dividers                            |
+|                 | `--sc-div-color`              | color of the segment dividers                            |
+|                 | `--sc-div-inset`              | vertical inset of the segment dividers                   |
+|                 | `--sc-div-shift`              | horizontal position of the segment dividers              |
 |                 | `--sci-duration`              | duration of the indicator slide                          |
 |                 | `--sci-ease`                  | easing of the indicator slide                            |
 |                 | `--size`                      | height of the control                                    |

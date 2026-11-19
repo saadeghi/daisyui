@@ -688,5 +688,9 @@
   "Day": "Day",
   "Week": "Week",
   "Month": "Month",
-  "Checkbox inputs allow multiple selected segments. Every checked segment paints its own chip, so the sliding indicator is used for single select only": "Checkbox inputs allow multiple selected segments. Every checked segment paints its own chip, so the sliding indicator is used for single select only"
+  "Checkbox inputs allow multiple selected segments. Every checked segment paints its own chip, so the sliding indicator is used for single select only": "Checkbox inputs allow multiple selected segments. Every checked segment paints its own chip, so the sliding indicator is used for single select only",
+  "The segments and the indicator follow the border radius of the control": "The segments and the indicator follow the border radius of the control",
+  "Add `segmented-control-delimited` to the control to show a divider between all segments": "Add `segmented-control-delimited` to the control to show a divider between all segments",
+  "Add `segmented-control-item-delimited` to a segment to show a divider before only that segment": "Add `segmented-control-item-delimited` to a segment to show a divider before only that segment",
+  "Add `segmented-control-joined` to connect the segments. Only the outer corners of the first and last segment stay rounded": "Add `segmented-control-joined` to connect the segments. Only the outer corners of the first and last segment stay rounded"
 }

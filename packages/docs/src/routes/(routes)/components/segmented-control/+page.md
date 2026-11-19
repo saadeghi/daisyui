@@ -12,6 +12,13 @@ classnames:
       desc: A single segment (a label wrapping a radio or checkbox input, or a radio or checkbox input)
     - class: segmented-control-indicator
       desc: The element that slides behind the selected segment
+  modifier:
+    - class: segmented-control-joined
+      desc: Connects the segments
+    - class: segmented-control-delimited
+      desc: Shows a divider between all segments
+    - class: segmented-control-item-delimited
+      desc: Shows a divider before the segment
   color:
     - class: segmented-control-primary
       desc: primary color
@@ -316,6 +323,84 @@ classnames:
   <label class="$$segmented-control-item"><input type="radio" name="color-error" checked>Day</label>
   <label class="$$segmented-control-item"><input type="radio" name="color-error">Week</label>
   <label class="$$segmented-control-item"><input type="radio" name="color-error">Month</label>
+  <span class="$$segmented-control-indicator"></span>
+</fieldset>
+```
+
+### ~Custom border radius
+
+#### The segments and the indicator follow the border radius of the control
+
+<fieldset class="segmented-control segmented-control-primary rounded-full" aria-label="Custom radius">
+  <label class="segmented-control-item"><input type="radio" name="radius" value="day" checked>Day</label>
+  <label class="segmented-control-item"><input type="radio" name="radius" value="week">Week</label>
+  <label class="segmented-control-item"><input type="radio" name="radius" value="month">Month</label>
+  <span class="segmented-control-indicator"></span>
+</fieldset>
+
+```html
+<fieldset class="$$segmented-control $$segmented-control-primary rounded-full" aria-label="Custom radius">
+  <label class="$$segmented-control-item"><input type="radio" name="radius" value="day" checked>Day</label>
+  <label class="$$segmented-control-item"><input type="radio" name="radius" value="week">Week</label>
+  <label class="$$segmented-control-item"><input type="radio" name="radius" value="month">Month</label>
+  <span class="$$segmented-control-indicator"></span>
+</fieldset>
+```
+
+### ~Delimiters
+
+#### Add `segmented-control-delimited` to the control to show a divider between all segments
+
+<fieldset class="segmented-control segmented-control-delimited" aria-label="Delimited group">
+  <label class="segmented-control-item"><input type="radio" name="delimited" value="day" checked>Day</label>
+  <label class="segmented-control-item"><input type="radio" name="delimited" value="week">Week</label>
+  <label class="segmented-control-item"><input type="radio" name="delimited" value="month">Month</label>
+  <span class="segmented-control-indicator"></span>
+</fieldset>
+
+```html
+<fieldset class="$$segmented-control $$segmented-control-delimited" aria-label="Delimited group">
+  <label class="$$segmented-control-item"><input type="radio" name="delimited" value="day" checked>Day</label>
+  <label class="$$segmented-control-item"><input type="radio" name="delimited" value="week">Week</label>
+  <label class="$$segmented-control-item"><input type="radio" name="delimited" value="month">Month</label>
+  <span class="$$segmented-control-indicator"></span>
+</fieldset>
+```
+
+#### Add `segmented-control-item-delimited` to a segment to show a divider before only that segment
+
+<fieldset class="segmented-control" aria-label="One delimiter">
+  <label class="segmented-control-item"><input type="radio" name="one-divider" value="day" checked>Day</label>
+  <label class="segmented-control-item segmented-control-item-delimited"><input type="radio" name="one-divider" value="week">Week</label>
+  <label class="segmented-control-item"><input type="radio" name="one-divider" value="month">Month</label>
+  <span class="segmented-control-indicator"></span>
+</fieldset>
+
+```html
+<fieldset class="$$segmented-control" aria-label="One delimiter">
+  <label class="$$segmented-control-item"><input type="radio" name="one-divider" value="day" checked>Day</label>
+  <label class="$$segmented-control-item $$segmented-control-item-delimited"><input type="radio" name="one-divider" value="week">Week</label>
+  <label class="$$segmented-control-item"><input type="radio" name="one-divider" value="month">Month</label>
+  <span class="$$segmented-control-indicator"></span>
+</fieldset>
+```
+
+### ~Joined
+
+#### Add `segmented-control-joined` to connect the segments. Only the outer corners of the first and last segment stay rounded
+
+<fieldset class="segmented-control segmented-control-joined segmented-control-delimited" aria-label="Joined group">
+  <label class="segmented-control-item"><input type="radio" name="joined" value="day" checked>Day</label>
+  <label class="segmented-control-item"><input type="radio" name="joined" value="week">Week</label>
+  <label class="segmented-control-item"><input type="radio" name="joined" value="month">Month</label>
+  <span class="segmented-control-indicator"></span>
+</fieldset>
+
+```html
+<fieldset class="$$segmented-control $$segmented-control-joined $$segmented-control-delimited" aria-label="Joined group">
+  <label class="$$segmented-control-item"><input type="radio" name="joined" value="day" checked>Day</label>
+  <label class="$$segmented-control-item"><input type="radio" name="joined" value="week">Week</label>
+  <label class="$$segmented-control-item"><input type="radio" name="joined" value="month">Month</label>
   <span class="$$segmented-control-indicator"></span>
 </fieldset>
 ```
