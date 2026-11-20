@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.8.2](https://github.com/saadeghi/daisyui/compare/v5.8.1...v5.8.2) (2026-11-20)
+
+### Bug Fixes
+
+* **avatar:** print the avatar-online and avatar-offline dots instead of dropping them with the page backgrounds ([#4883](https://github.com/saadeghi/daisyui/issues/4883)) ([61a2488](https://github.com/saadeghi/daisyui/commit/61a2488f4b885ca7eed66ef637e75a44315e0469))
+
 ## [5.8.1](https://github.com/saadeghi/daisyui/compare/v5.8.0...v5.8.1) (2026-11-15)
 
 ### Bug Fixes
