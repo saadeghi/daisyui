@@ -10,6 +10,18 @@ const camelToKebab = (str) => {
   return str.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase()
 }
 
+const vendorPrefixes = ["webkit", "moz", "ms", "o"]
+
+// postcss-js exposes `-webkit-appearance` as `WebkitAppearance`, so camelToKebab drops the dash
+const restoreVendorPrefix = (property) => {
+  if (property.startsWith("--")) return property
+  return vendorPrefixes.some((prefix) => property.startsWith(`${prefix}-`))
+    ? `-${property}`
+    : property
+}
+
+const toCssKey = (key) => restoreVendorPrefix(camelToKebab(key))
+
 // Function to transform object keys from camelCase to kebab-case
 const transformKeys = (obj) => {
   if (typeof obj !== "object" || obj === null) return obj
@@ -20,7 +32,7 @@ const transformKeys = (obj) => {
 
   return Object.fromEntries(
     Object.entries(obj).map(([key, value]) => [
-      camelToKebab(key),
+      toCssKey(key),
       typeof value === "object" ? transformKeys(value) : value,
     ]),
   )

@@ -21,6 +21,28 @@ test("cssToJs compiles CSS and returns a kebab-case JS object string", async () 
   })
 })
 
+test("cssToJs keeps the leading dash on vendor prefixed properties", async () => {
+  const dir = await tempDirs.make()
+  const file = join(dir, "style.css")
+  await writeFile(
+    file,
+    `.probe{-webkit-appearance:none;-moz-appearance:none;-webkit-user-select:none;--webkit-custom:1px}
+.probe::-webkit-slider-thumb{-webkit-mask:linear-gradient(#000, #000)}`,
+  )
+
+  const result = JSON.parse(await cssToJs(file))
+
+  expect(result[".probe"]).toEqual({
+    "-webkit-appearance": "none",
+    "-moz-appearance": "none",
+    "-webkit-user-select": "none",
+    "--webkit-custom": "1px",
+  })
+  expect(result[".probe::-webkit-slider-thumb"]).toEqual({
+    "-webkit-mask": "linear-gradient(#000, #000)",
+  })
+})
+
 test("cssToJs wraps read and parse errors with file context", async () => {
   await expect(cssToJs(join(await tempDirs.make(), "missing.css"))).rejects.toThrow(
     "Error converting CSS to JS:",
