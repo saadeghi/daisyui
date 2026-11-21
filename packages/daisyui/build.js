@@ -88,7 +88,13 @@ async function generateFiles() {
 
     !isDev && generateThemeFiles({ srcDir: "src/themes", distDir: "theme" }),
 
-    !isDev && generateRawStyles({ srcDir: "../src/base", distDir: "../base", layer: "base" }),
+    !isDev &&
+      generateRawStyles({
+        srcDir: "../src/base",
+        distDir: "../base",
+        layer: "base",
+        unlayered: ["hidden"],
+      }),
 
     !isDev &&
       generateRawStyles({
@@ -120,7 +126,12 @@ async function generateFiles() {
         layer: "utilities",
       }),
     generatePlugins({ type: "base", srcDir: "src/themes", distDir: "theme" }),
-    generatePlugins({ type: "base", srcDir: "src/base", distDir: "base", exclude: ["reset"] }),
+    generatePlugins({
+      type: "base",
+      srcDir: "src/base",
+      distDir: "base",
+      exclude: ["reset", "hidden"],
+    }),
     generatePlugins({ type: "component", srcDir: "src/components", distDir: "components" }),
     generatePlugins({ type: "utility", srcDir: "src/utilities", distDir: "utilities" }),
   ])
