@@ -1,7 +1,8 @@
 .radio {
   @layer daisyui.l1.l2.l3 {
     @apply relative inline-block shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
-    border: var(--border) solid var(--input-color, color-mix(in srgb, currentColor 20%, #0000));
+    border: var(--border) solid
+      var(--input-color, color-mix(in srgb, currentColor var(--dim-mix-2, 20%), #0000));
     box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset;
     --size: calc(var(--size-selector, 0.25rem) * 6);
     width: var(--size);

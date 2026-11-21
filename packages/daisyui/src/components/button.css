@@ -338,7 +338,7 @@
 .btn:is(.btn-disabled, :disabled, [disabled], [aria-disabled="true"]) {
   @layer daisyui {
     @apply pointer-events-none;
-    color: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+    color: color-mix(in oklch, var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5), #0000);
     --btn-bg: #0000;
     --btn-border: #0000;
     background-image: none;
