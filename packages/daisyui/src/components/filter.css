@@ -17,14 +17,6 @@
           padding 0.3s,
           border-width 0.1s;
       }
-
-      &.filter-reset {
-        @apply aspect-square;
-        &::after {
-          --tw-content: "×";
-          content: var(--tw-content);
-        }
-      }
     }
 
     > input:not(:last-child),
@@ -44,6 +36,16 @@
       @apply mx-0 w-0 px-0 opacity-0;
       scale: 0;
       border-width: 0;
+    }
+  }
+}
+
+.filter input.filter-reset {
+  @layer daisyui.l1.l2.l3 {
+    @apply aspect-square;
+    &::after {
+      --tw-content: "×";
+      content: var(--tw-content);
     }
   }
 }

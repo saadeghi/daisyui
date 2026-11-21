@@ -15,24 +15,28 @@
         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
       }
     }
+  }
+}
 
-    .swap-on,
-    .swap-indeterminate,
-    input:indeterminate ~ .swap-on {
-      @apply opacity-0;
-    }
+.swap .swap-on,
+.swap .swap-indeterminate,
+.swap input:indeterminate ~ .swap-on {
+  @layer daisyui.l1.l2 {
+    @apply opacity-0;
+  }
+}
 
-    input:is(:checked, :indeterminate) {
-      & ~ .swap-off {
-        @apply opacity-0;
-      }
-    }
+.swap input:is(:checked, :indeterminate) ~ .swap-off {
+  @layer daisyui.l1.l2 {
+    @apply opacity-0;
+  }
+}
 
-    input:checked ~ .swap-on,
-    input:indeterminate ~ .swap-indeterminate {
-      @apply opacity-100;
-      backface-visibility: visible;
-    }
+.swap input:checked ~ .swap-on,
+.swap input:indeterminate ~ .swap-indeterminate {
+  @layer daisyui.l1.l2 {
+    @apply opacity-100;
+    backface-visibility: visible;
   }
 }
 

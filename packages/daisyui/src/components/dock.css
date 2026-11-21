@@ -25,9 +25,6 @@
           color: GrayText;
         }
       }
-      .dock-label {
-        font-size: 0.6875rem;
-      }
       &:after {
         content: "";
         @apply absolute h-1 w-6 rounded-full bg-transparent;
@@ -46,6 +43,11 @@
     > [aria-current]:not([aria-current="false"], [aria-current=""]):after {
       @apply w-10 bg-current text-current;
     }
+  }
+}
+.dock > *:not(:where(script, style, template)) .dock-label {
+  @layer daisyui.l1.l2.l3 {
+    font-size: 0.6875rem;
   }
 }
 .dock-active {
