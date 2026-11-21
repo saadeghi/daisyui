@@ -80,6 +80,7 @@ daisyUI components | [./components/](./components/) | You must read the applicab
 - [radio](./components/radio.md)
 - [range](./components/range.md)
 - [rating](./components/rating.md)
+- [scroll-fade](./components/scroll-fade.md)
 - [select](./components/select.md)
 - [skeleton](./components/skeleton.md)
 - [stack](./components/stack.md)

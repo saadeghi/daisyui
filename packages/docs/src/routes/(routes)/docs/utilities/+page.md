@@ -210,6 +210,9 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--range-p`                   | padding of the range slider thumb                        |
 |                 | `--size`                      | size of the range slider                                 |
 | Rating          | `--size`                      | size of the rating element                               |
+| Scroll fade     | `--scroll-fade-size`          | length of the shade at each edge (default `2rem`)        |
+|                 | `--scroll-fade-color`         | color the shade fades to (default `base-100`)            |
+|                 | `--scroll-fade-offset`        | pinned header height; the top shade stays solid until it |
 | Select          | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the select                                       |
 |                 | `--font-size`                 | font-size of the select                                  |

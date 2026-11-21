@@ -24,6 +24,22 @@ test("minify returns without writing when the file does not exist", async () => 
   await expect(minify(join(await tempDirs.make(), "missing.css"))).resolves.toBeUndefined()
 })
 
+test("minify keeps animation-timeline out of the animation shorthand", async () => {
+  const dir = await tempDirs.make()
+  const filePath = join(dir, "style.css")
+  await writeFile(
+    filePath,
+    ".a { animation-name: fade; animation-timing-function: linear; animation-fill-mode: both; animation-timeline: --t; }\n",
+  )
+
+  await minify(filePath)
+
+  const result = await readFile(filePath, "utf-8")
+  // browsers reject `animation: … --t`, so the timeline must stay its own declaration
+  expect(result).toContain("animation-timeline:--t")
+  expect(result).not.toMatch(/animation:[^;}]*--t/)
+})
+
 test("minifyCssInDirectory minifies only CSS files in provided directories", async () => {
   const dir = await tempDirs.make()
   await mkdir(join(dir, "nested"))
