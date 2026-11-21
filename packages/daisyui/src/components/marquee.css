@@ -1,0 +1,60 @@
+.marquee {
+  @layer daisyui.l1.l2.l3 {
+    @apply flex items-center overflow-hidden;
+    --marquee-duration: 30s;
+    --marquee-dir: 1;
+    &:dir(rtl) {
+      --marquee-dir: -1;
+    }
+
+    > * {
+      @apply flex shrink-0 items-center;
+      min-width: 100%;
+      animation: marquee var(--marquee-duration) linear infinite;
+      @media (prefers-reduced-motion: reduce) {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+.marquee-reverse {
+  @layer daisyui.l1.l2 {
+    > * {
+      animation-direction: reverse;
+    }
+  }
+}
+
+.marquee-vertical {
+  @layer daisyui.l1.l2 {
+    @apply flex-col;
+
+    > * {
+      @apply flex-col;
+      min-width: 0;
+      min-height: 100%;
+      animation-name: marquee-vertical;
+    }
+  }
+}
+
+.marquee-pause-hover {
+  @layer daisyui.l1.l2 {
+    &:hover > * {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes marquee {
+  to {
+    translate: calc(var(--marquee-dir, 1) * -100%) 0;
+  }
+}
+
+@keyframes marquee-vertical {
+  to {
+    translate: 0 -100%;
+  }
+}

@@ -193,6 +193,8 @@ sidebar:
           href: "/components/kbd/"
         - name: "List"
           href: "/components/list/"
+        - name: "Marquee"
+          href: "/components/marquee/"
         - name: "Stat"
           href: "/components/stat/"
         - name: "Status"
