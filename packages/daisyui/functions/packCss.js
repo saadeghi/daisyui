@@ -8,13 +8,13 @@ const readFileContent = async (filePath) => {
 }
 const getThemeDirs = () => ["light", "dark"]
 const createThemePath = (theme) => path.join("./theme", `${theme}.css`)
-const wrapThemeContent = (contents) => `@layer base{\n${contents.join("\n")}\n}`
+// theme files carry their own `@layer base`; a wrapper here would nest base inside itself
 const readThemeCSS = async () => {
   const themeDirs = getThemeDirs()
   const themeContents = await Promise.all(
     themeDirs.map((theme) => readFileContent(createThemePath(theme))),
   )
-  return wrapThemeContent(themeContents)
+  return themeContents.join("\n")
 }
 
 const directoryMap = {
