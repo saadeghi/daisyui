@@ -9,7 +9,7 @@ desc: daisyUI provides a few useful utility classes and CSS variables to help yo
 
 ## <Translate text="Color utility classes" />
 
-All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color.  
+All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color.
 For example you can use `primary` color with any of Tailwind CSS color utilities.
 
 Read more about [color names](/docs/colors/).
@@ -48,7 +48,7 @@ You can also control the opacity of the color like
 
 ## <Translate text="Border radius" />
 
-Tailwind CSS provides fixed values for border radius, such as `rounded-sm`, `rounded-lg`, `rounded-xl`, etc.  
+Tailwind CSS provides fixed values for border radius, such as `rounded-sm`, `rounded-lg`, `rounded-xl`, etc.
 daisyUI provides a few more border radius values which are tokenized for components and can be customized based on the theme.
 
 Change the theme to see the border radius changes:
@@ -260,12 +260,12 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 | Toggle          | `--toggle-p`                  | padding of the toggle                                    |
 |                 | `--size`                      | size of the toggle                                       |
 | Tooltip         | `--tt-bg`                     | background color of the tooltip                          |
-|                 | `--tt-off`                    | offset of the tooltip                                    |
-|                 | `--tt-inset`                  | inset position of the tooltip                            |
-|                 | `--tt-tail`                   | position of the tooltip tail                             |
-|                 | `--tt-tail-inset`             | inset position of the tooltip tail                       |
-|                 | `--tt-tail-off`               | offset of the tooltip tail from start/end                |
-|                 | `--tt-trans`                  | transform offset of the tooltip                          |
+|                 | `--tt-off`                    | gap between trigger and tooltip (main axis)              |
+|                 | `--tt-inset`                  | offset of the tooltip from the trigger (cross axis)      |
+|                 | `--tt-tail`                   | gap between trigger and tail (main axis)                 |
+|                 | `--tt-tail-off`               | distance of the tail from the bubble's start/end corner  |
+|                 | `--tt-tail-inset`             | extra distance added to `--tt-tail-off`                  |
+|                 | `--tt-trans`                  | transform offset of the tooltip (cross axis)             |
 | Glass           | `--glass-blur`                | blur of the glass effect                                 |
 |                 | `--glass-opacity`             | opacity of the glass effect                              |
 |                 | `--glass-reflect-degree`      | degree of the glass reflection                           |
