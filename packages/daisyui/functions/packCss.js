@@ -1,12 +1,13 @@
 import fs from "fs/promises"
 import path from "path"
 import { getFileNames } from "./getFileNames.js"
+import { defaultThemes } from "./themeOrder.js"
 import { cleanCss } from "./cleanCss.js"
 
 const readFileContent = async (filePath) => {
   return await fs.readFile(filePath, "utf8")
 }
-const getThemeDirs = () => ["light", "dark"]
+const getThemeDirs = () => defaultThemes
 const createThemePath = (theme) => path.join("./theme", `${theme}.css`)
 const wrapThemeContent = (contents) => `@layer base{\n${contents.join("\n")}\n}`
 const readThemeCSS = async () => {
