@@ -103,27 +103,29 @@
         }
       }
     }
-    :where(
-      li:not(.menu-title, .disabled)
-        > *:not(ul, menu, details, .menu-title):not(
-          .menu-active,
-          :active,
-          .btn,
-          [aria-current]:not([aria-current="false"], [aria-current=""])
-        ):hover,
-      li:not(.menu-title, .disabled)
-        > details
-        > summary:not(.menu-title):not(
-          .menu-active,
-          :active,
-          .btn,
-          [aria-current]:not([aria-current="false"], [aria-current=""])
-        ):hover
-    ) {
-      @apply bg-base-content/10 cursor-pointer outline-hidden;
-      box-shadow:
-        0 1px oklch(0% 0 0 / 0.01) inset,
-        0 -1px oklch(100% 0 0 / 0.01) inset;
+    @media (hover: hover) {
+      :where(
+        li:not(.menu-title, .disabled)
+          > *:not(ul, menu, details, .menu-title):not(
+            .menu-active,
+            :active,
+            .btn,
+            [aria-current]:not([aria-current="false"], [aria-current=""])
+          ):hover,
+        li:not(.menu-title, .disabled)
+          > details
+          > summary:not(.menu-title):not(
+            .menu-active,
+            :active,
+            .btn,
+            [aria-current]:not([aria-current="false"], [aria-current=""])
+          ):hover
+      ) {
+        @apply bg-base-content/10 cursor-pointer outline-hidden;
+        box-shadow:
+          0 1px oklch(0% 0 0 / 0.01) inset,
+          0 -1px oklch(100% 0 0 / 0.01) inset;
+      }
     }
 
     :where(li:empty) {

@@ -45,6 +45,9 @@
           translate 0.3s ease-out,
           width 0.2s ease-out;
       }
+      @media (forced-colors: active) {
+        border-inline: 1px solid;
+      }
       translate: -100%;
 
       [dir="rtl"] & {

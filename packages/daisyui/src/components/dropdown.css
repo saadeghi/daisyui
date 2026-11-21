@@ -50,10 +50,12 @@
         }
       }
 
-      &.dropdown-hover:hover {
-        .dropdown-content {
-          @apply opacity-100;
-          scale: 100%;
+      @media (hover: hover) {
+        &.dropdown-hover:hover {
+          .dropdown-content {
+            @apply opacity-100;
+            scale: 100%;
+          }
         }
       }
     }

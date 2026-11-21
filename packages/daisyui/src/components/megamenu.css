@@ -132,12 +132,17 @@
       .megamenu-active {
       background-color: transparent;
     }
-    &:has([popovertarget]:hover):not(:has([popover]:popover-open)) .megamenu-active,
-    &:has(> :is(a, button):not([popovertarget]):hover):not(:has([popover]:popover-open))
-      .megamenu-active,
     &:has([popover]:popover-open) .megamenu-active {
       inset: anchor(var(--mm-anchor) top) anchor(var(--mm-anchor) right)
         anchor(var(--mm-anchor) bottom) anchor(var(--mm-anchor) left);
+    }
+    @media (hover: hover) {
+      &:has([popovertarget]:hover):not(:has([popover]:popover-open)) .megamenu-active,
+      &:has(> :is(a, button):not([popovertarget]):hover):not(:has([popover]:popover-open))
+        .megamenu-active {
+        inset: anchor(var(--mm-anchor) top) anchor(var(--mm-anchor) right)
+          anchor(var(--mm-anchor) bottom) anchor(var(--mm-anchor) left);
+      }
     }
     &:has([popovertarget]:nth-child(1 of [popovertarget]):hover):not(:has([popover]:popover-open)),
     &:has([popover]:nth-child(1 of [popover]):popover-open) {
@@ -179,75 +184,77 @@
     &:has([popover]:nth-child(10 of [popover]):popover-open) {
       --mm-anchor: --mm10;
     }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            1 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml1;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            2 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml2;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            3 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml3;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            4 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml4;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            5 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml5;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            6 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml6;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            7 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml7;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            8 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml8;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            9 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml9;
-    }
-    &:has(
-        > :is(a, button):not([popovertarget]):nth-child(
-            10 of :is(a, button):not([popovertarget])
-          ):hover
-      ):not(:has([popover]:popover-open)) {
-      --mm-anchor: --mml10;
+    @media (hover: hover) {
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              1 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml1;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              2 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml2;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              3 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml3;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              4 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml4;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              5 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml5;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              6 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml6;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              7 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml7;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              8 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml8;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              9 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml9;
+      }
+      &:has(
+          > :is(a, button):not([popovertarget]):nth-child(
+              10 of :is(a, button):not([popovertarget])
+            ):hover
+        ):not(:has([popover]:popover-open)) {
+        --mm-anchor: --mml10;
+      }
     }
 
     [popovertarget]:has(+ [popover]:popover-open):after {
@@ -330,11 +337,13 @@
         @apply rounded-field mx-2 w-fit gap-2 border-none px-3 py-1.5;
         height: auto;
         anchor-name: none;
-        &:hover {
-          @apply bg-base-content/10;
-          box-shadow:
-            0 1px oklch(0% 0 0 / 0.01) inset,
-            0 -1px oklch(100% 0 0 / 0.01) inset;
+        @media (hover: hover) {
+          &:hover {
+            @apply bg-base-content/10;
+            box-shadow:
+              0 1px oklch(0% 0 0 / 0.01) inset,
+              0 -1px oklch(100% 0 0 / 0.01) inset;
+          }
         }
       }
       [popover] {
