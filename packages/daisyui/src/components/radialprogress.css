@@ -3,6 +3,7 @@
     @apply relative inline-grid h-[var(--size)] w-[var(--size)] shrink-0 place-content-center rounded-full bg-transparent;
     vertical-align: middle;
     box-sizing: content-box;
+    print-color-adjust: exact;
     --value: 0;
     --size: 5rem;
     --thickness: calc(var(--size) / 10);
