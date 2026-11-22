@@ -23,7 +23,7 @@
           }
         }
 
-        & + *:before {
+        &:not(:first-of-type):before {
           content: "";
           @apply ms-2 me-3 block h-1.5 w-1.5 opacity-40;
           rotate: 45deg;
@@ -31,7 +31,7 @@
           border-right: 1px solid;
           background-color: #0000;
         }
-        [dir="rtl"] & + *:before {
+        [dir="rtl"] &:not(:first-of-type):before {
           rotate: -135deg;
         }
       }
