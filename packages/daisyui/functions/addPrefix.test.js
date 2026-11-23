@@ -239,6 +239,13 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
     expected: { ".prose": "color: red;", ".prose .prefix-btn": "color: blue;" },
   },
   {
+    name: ".not-prose selector",
+    input: { ".prose :where(a.btn):not(:where(.not-prose, .not-prose *))": "color: red;" },
+    expected: {
+      ".prose :where(a.prefix-btn):not(:where(.not-prose, .not-prose *))": "color: red;",
+    },
+  },
+  {
     name: "third-party calendar selectors",
     input: {
       ".react-day-picker": { ".rdp-day": "color: red;" },

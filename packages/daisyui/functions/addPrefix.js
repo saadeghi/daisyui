@@ -1,6 +1,7 @@
 const defaultExcludedPrefixes = ["color-", "size-", "radius-", "border", "depth", "noise"]
 const excludedSelectors = [
   "prose",
+  "not-prose",
   "is-hidden",
   "is-bound",
   "is-disabled",
