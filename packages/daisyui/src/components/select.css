@@ -86,8 +86,7 @@
     &:is(:disabled, [disabled]),
     fieldset:disabled & {
       @apply border-base-200 bg-base-200 cursor-not-allowed;
-      &:is(select),
-      :is(select) {
+      &:is(select) {
         @apply text-base-content/40;
       }
       box-shadow: none;
@@ -97,6 +96,12 @@
         /* color and opacity to work with safari */
         @apply text-base-content opacity-20;
       }
+    }
+
+    &:has(> select[disabled]) select,
+    &:is(:disabled, [disabled]) select,
+    fieldset:disabled & select {
+      @apply text-base-content/40;
     }
 
     &:has(> select[disabled]) > select[disabled] {
