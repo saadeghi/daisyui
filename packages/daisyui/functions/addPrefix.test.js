@@ -1,4 +1,6 @@
-import { expect, test } from "bun:test"
+import { expect, mock, test } from "bun:test"
+import { compile } from "tailwindcss"
+import daisyui from "../index.js"
 import { addPrefix } from "./addPrefix.js"
 
 const prefix = "prefix-"
@@ -239,13 +241,6 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
     expected: { ".prose": "color: red;", ".prose .prefix-btn": "color: blue;" },
   },
   {
-    name: ".not-prose selector",
-    input: { ".prose :where(a.btn):not(:where(.not-prose, .not-prose *))": "color: red;" },
-    expected: {
-      ".prose :where(a.prefix-btn):not(:where(.not-prose, .not-prose *))": "color: red;",
-    },
-  },
-  {
     name: "third-party calendar selectors",
     input: {
       ".react-day-picker": { ".rdp-day": "color: red;" },
@@ -267,6 +262,48 @@ for (const { name, input, expected, prefix: casePrefix = prefix } of [
 ]) {
   test(`addPrefix handles ${name}`, () => {
     expect(addPrefix(input, casePrefix)).toEqual(expected)
+  })
+}
+
+const pluginModule = { module: daisyui, base: import.meta.dirname }
+
+for (const { name, theme = "", options = "", candidate, selector } of [
+  {
+    name: "no prefix",
+    candidate: "btn",
+    selector: ".prose :where(a.btn:not(.btn-link))",
+  },
+  {
+    name: "daisyUI prefix",
+    options: "prefix: d-;",
+    candidate: "d-btn",
+    selector: ".prose :where(a.d-btn:not(.d-btn-link))",
+  },
+  {
+    name: "Tailwind prefix",
+    theme: "@theme prefix(tw);",
+    candidate: "tw:btn",
+    selector: String.raw`.tw\:prose :where(a.tw\:btn:not(.tw\:btn-link))`,
+  },
+  {
+    name: "Tailwind and daisyUI prefixes",
+    theme: "@theme prefix(tw);",
+    options: "prefix: d-;",
+    candidate: "tw:d-btn",
+    selector: String.raw`.tw\:prose :where(a.tw\:d-btn:not(.tw\:d-btn-link))`,
+  },
+]) {
+  test(`.prose .btn rule with ${name}`, async () => {
+    const compiler = await compile(
+      `${theme} @plugin "daisyui" { logs: false; themes: false; include: button; ${options} } @tailwind utilities;`,
+      { loadModule: mock().mockReturnValue(pluginModule) },
+    )
+    const rule = compiler
+      .build([candidate])
+      .split("\n")
+      .find((line) => line.includes("prose :where("))
+
+    expect(rule).toBe(`${selector} {`)
   })
 }
 
