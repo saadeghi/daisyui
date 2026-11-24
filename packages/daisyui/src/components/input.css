@@ -124,10 +124,7 @@
     }
   }
 
-  &[type="url"]:dir(rtl),
-  &[type="tel"]:dir(rtl),
-  &[type="email"]:dir(rtl),
-  &[type="number"]:dir(rtl) {
+  &:is([type="url"], [type="tel"], [type="email"], [type="number"]):dir(rtl) {
     border-start-start-radius: var(--join-se, var(--radius-field));
     border-start-end-radius: var(--join-ss, var(--radius-field));
     border-end-start-radius: var(--join-ee, var(--radius-field));
