@@ -81,6 +81,7 @@ daisyUI components | [./components/](./components/) | You must read the applicab
 - [range](./components/range.md)
 - [rating](./components/rating.md)
 - [select](./components/select.md)
+- [segmented-control](./components/segmented-control.md)
 - [skeleton](./components/skeleton.md)
 - [stack](./components/stack.md)
 - [stat](./components/stat.md)

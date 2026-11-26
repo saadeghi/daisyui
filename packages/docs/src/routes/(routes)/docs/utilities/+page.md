@@ -210,6 +210,19 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--range-p`                   | padding of the range slider thumb                        |
 |                 | `--size`                      | size of the range slider                                 |
 | Rating          | `--size`                      | size of the rating element                               |
+| Segmented control | `--sc-color`                | color of the selected segment                            |
+|                 | `--sc-color-content`          | content color of the selected segment                    |
+|                 | `--sc-hover`                  | hover color of the segments                              |
+|                 | `--sc-size-mul`               | size multiplier of the control                           |
+|                 | `--sc-font-size`              | font size of the segments                                |
+|                 | `--sc-p`                      | padding of the control                                   |
+|                 | `--sc-div-w`                  | width of the segment dividers                            |
+|                 | `--sc-div-color`              | color of the segment dividers                            |
+|                 | `--sc-div-inset`              | vertical inset of the segment dividers                   |
+|                 | `--sc-div-shift`              | horizontal position of the segment dividers              |
+|                 | `--sci-duration`              | duration of the indicator slide                          |
+|                 | `--sci-ease`                  | easing of the indicator slide                            |
+|                 | `--size`                      | height of the control                                    |
 | Select          | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the select                                       |
 |                 | `--font-size`                 | font-size of the select                                  |

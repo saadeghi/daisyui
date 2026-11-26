@@ -1,0 +1,325 @@
+.segmented-control {
+  @layer daisyui.l1.l2.l3 {
+    @apply bg-base-200 relative inline-flex items-center align-middle;
+
+    --size: calc(var(--size-field, 0.25rem) * var(--sc-size-mul, 10));
+    --sc-p: calc(var(--size-field, 0.25rem) * 0.75);
+    --sc-div-w: var(--border, 1px);
+    --sc-div-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+    /* full height by default, so the line reaches the control's edge */
+    --sc-div-inset: calc(var(--sc-p) * -1 - var(--border, 1px));
+    /* the gap between segments is --sc-p; center the line in it (offsets come from the item's padding box, the border is subtracted in the rule) */
+    --sc-div-shift: calc((var(--sc-p) + var(--sc-div-w)) / -2);
+
+    height: var(--size);
+    padding: var(--sc-p);
+
+    /* a nested control's track would paint over the sliding chip, let the outer chip show through */
+    & & {
+      background-color: transparent;
+    }
+    anchor-scope: --sc-selected;
+    isolation: isolate;
+    gap: var(--sc-p);
+    font-size: var(--sc-font-size, 0.875rem);
+    border-radius: calc(var(--radius-field) + var(--sc-p));
+    box-shadow:
+      0 -0.5px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 0.5px oklch(0% 0 0 / calc(var(--depth) * 0.05)) inset;
+    touch-action: manipulation;
+  }
+}
+
+.segmented-control-item {
+  @layer daisyui.l1.l2.l3 {
+    @apply relative inline-flex h-full shrink-0 cursor-pointer items-center justify-center text-center whitespace-nowrap select-none;
+
+    min-width: calc(var(--size-field, 0.25rem) * 8);
+    padding-inline: calc(var(--size-field, 0.25rem) * 3);
+    border: var(--border) solid #0000;
+    /* follow the control's radius, so a custom radius (rounded-full, etc) reaches the segments */
+    border-radius: inherit;
+    color: var(--color-base-content);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: background-color, border-color, box-shadow;
+      transition-duration: 150ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:is(label) {
+      > input {
+        @apply absolute inset-0 size-full cursor-pointer appearance-none opacity-0;
+      }
+    }
+
+    &:is(input[type="radio"], input[type="checkbox"]) {
+      @apply appearance-none;
+      &:after {
+        --tw-content: attr(aria-label);
+        content: var(--tw-content);
+      }
+    }
+
+    &:is(:checked, label:has(:checked)) {
+      anchor-name: --sc-selected;
+      background-color: var(--sc-color, var(--color-base-100));
+      border-color: var(--sc-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
+      color: var(--sc-color-content, var(--color-base-content));
+      box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
+    }
+
+    &:focus-visible,
+    &:has(> input:focus-visible) {
+      outline: 2px solid var(--color-base-content);
+      outline-offset: -2px;
+    }
+
+    @media (hover: hover) {
+      &:not(:checked, label:has(:checked)):hover {
+        background-color: var(--sc-hover, color-mix(in oklab, var(--color-base-100) 60%, #0000));
+      }
+    }
+
+    &:is(:disabled, label:has(> input:disabled), [aria-disabled="true"]) {
+      @apply cursor-not-allowed;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @media (forced-colors: active) {
+      &:is(:checked, label:has(:checked)):not(:focus-visible, :has(> input:focus-visible)) {
+        outline: 1px solid;
+        outline-offset: -1px;
+      }
+    }
+
+    @supports (anchor-name: --sc-selected) {
+      :has(> .segmented-control-indicator):where(
+          :not(:has(> input[type="checkbox"], > .segmented-control-item input[type="checkbox"]))
+        )
+        > & {
+        background-color: #0000;
+        border-color: #0000;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/* the line before every segment except the first; :is keeps the rule valid in browsers without `of` (they just get no lines) */
+:is(
+  .segmented-control-delimited
+    > .segmented-control-item:nth-child(n + 2 of .segmented-control-item),
+  .segmented-control-item-delimited
+)::before {
+  @layer daisyui.l1.l2.l3 {
+    content: "";
+    position: absolute;
+    /* behind the indicator, so the sliding chip covers the line */
+    z-index: -2;
+    inset-block: var(--sc-div-inset);
+    inset-inline-start: calc(var(--sc-div-shift) - var(--border, 1px));
+    width: var(--sc-div-w);
+    background-color: var(--sc-div-color);
+    pointer-events: none;
+  }
+}
+
+.segmented-control-joined {
+  @layer daisyui.l1.l2.l3 {
+    gap: 0;
+    /* the segments touch and reach the control edge, no padding ring */
+    padding: 0;
+    /* no padding to compensate, the line only needs the item border */
+    --sc-div-inset: calc(var(--border, 1px) * -1);
+    /* the line sits on the boundary */
+    --sc-div-shift: calc(var(--sc-div-w) / -2);
+
+    > .segmented-control-item {
+      border-radius: 0;
+    }
+
+    > .segmented-control-item:nth-child(1 of .segmented-control-item) {
+      border-start-start-radius: inherit;
+      border-end-start-radius: inherit;
+    }
+
+    > .segmented-control-item:nth-last-child(1 of .segmented-control-item) {
+      border-start-end-radius: inherit;
+      border-end-end-radius: inherit;
+    }
+
+    /* the indicator can only inherit from the control, so switch its corners by the selected item */
+    > .segmented-control-indicator {
+      border-radius: 0;
+    }
+
+    /* :has() cannot be nested inside another :has(), so match the input in its two forms */
+    &:has(
+        > .segmented-control-item:nth-child(1 of .segmented-control-item):checked,
+        > .segmented-control-item:nth-child(1 of .segmented-control-item) :checked
+      )
+      > .segmented-control-indicator {
+      border-start-start-radius: inherit;
+      border-end-start-radius: inherit;
+    }
+
+    &:has(
+        > .segmented-control-item:nth-last-child(1 of .segmented-control-item):checked,
+        > .segmented-control-item:nth-last-child(1 of .segmented-control-item) :checked
+      )
+      > .segmented-control-indicator {
+      border-start-end-radius: inherit;
+      border-end-end-radius: inherit;
+    }
+
+    /* a divider touching the chip would cut through its corner */
+    &.segmented-control-delimited > .segmented-control-item:is(:checked, :has(:checked))::before,
+    &.segmented-control-delimited
+      > .segmented-control-item:is(:checked, :has(:checked))
+      + .segmented-control-item::before,
+    > .segmented-control-item:is(:checked, :has(:checked))
+      + .segmented-control-item-delimited::before,
+    > .segmented-control-item-delimited:is(:checked, :has(:checked))::before {
+      opacity: 0;
+    }
+  }
+}
+
+.segmented-control-xs {
+  @layer daisyui.l1.l2 {
+    --sc-size-mul: 6;
+    --sc-font-size: 0.6875rem;
+  }
+}
+
+.segmented-control-sm {
+  @layer daisyui.l1.l2 {
+    --sc-size-mul: 8;
+    --sc-font-size: 0.75rem;
+  }
+}
+
+.segmented-control-md {
+  @layer daisyui.l1.l2 {
+    --sc-size-mul: 10;
+    --sc-font-size: 0.875rem;
+  }
+}
+
+.segmented-control-lg {
+  @layer daisyui.l1.l2 {
+    --sc-size-mul: 12;
+    --sc-font-size: 1.125rem;
+  }
+}
+
+.segmented-control-xl {
+  @layer daisyui.l1.l2 {
+    --sc-size-mul: 14;
+    --sc-font-size: 1.375rem;
+  }
+}
+
+.segmented-control-primary {
+  @layer daisyui.l1.l2 {
+    --sc-color: var(--color-primary);
+    --sc-color-content: var(--color-primary-content);
+    --sc-hover: color-mix(in oklab, var(--color-primary) 20%, #0000);
+  }
+}
+
+.segmented-control-secondary {
+  @layer daisyui.l1.l2 {
+    --sc-color: var(--color-secondary);
+    --sc-color-content: var(--color-secondary-content);
+    --sc-hover: color-mix(in oklab, var(--color-secondary) 20%, #0000);
+  }
+}
+
+.segmented-control-accent {
+  @layer daisyui.l1.l2 {
+    --sc-color: var(--color-accent);
+    --sc-color-content: var(--color-accent-content);
+    --sc-hover: color-mix(in oklab, var(--color-accent) 20%, #0000);
+  }
+}
+
+.segmented-control-neutral {
+  @layer daisyui.l1.l2 {
+    --sc-color: var(--color-neutral);
+    --sc-color-content: var(--color-neutral-content);
+    --sc-hover: color-mix(in oklab, var(--color-neutral) 20%, #0000);
+  }
+}
+
+.segmented-control-success {
+  @layer daisyui.l1.l2 {
+    --sc-color: var(--color-success);
+    --sc-color-content: var(--color-success-content);
+    --sc-hover: color-mix(in oklab, var(--color-success) 20%, #0000);
+  }
+}
+
+.segmented-control-warning {
+  @layer daisyui.l1.l2 {
+    --sc-color: var(--color-warning);
+    --sc-color-content: var(--color-warning-content);
+    --sc-hover: color-mix(in oklab, var(--color-warning) 20%, #0000);
+  }
+}
+
+.segmented-control-info {
+  @layer daisyui.l1.l2 {
+    --sc-color: var(--color-info);
+    --sc-color-content: var(--color-info-content);
+    --sc-hover: color-mix(in oklab, var(--color-info) 20%, #0000);
+  }
+}
+
+.segmented-control-error {
+  @layer daisyui.l1.l2 {
+    --sc-color: var(--color-error);
+    --sc-color-content: var(--color-error-content);
+    --sc-hover: color-mix(in oklab, var(--color-error) 20%, #0000);
+  }
+}
+
+.segmented-control-indicator {
+  @layer daisyui.l1.l2.l3 {
+    @apply pointer-events-none absolute;
+
+    z-index: -1;
+    display: none;
+
+    @supports (anchor-name: --sc-selected) {
+      display: block;
+      position-anchor: --sc-selected;
+      inset: anchor(top) anchor(right) anchor(bottom) anchor(left);
+      background-color: var(--sc-color, var(--color-base-100));
+      border: var(--border) solid
+        var(--sc-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
+      border-radius: inherit;
+      box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
+
+      :has(> input[type="checkbox"], > .segmented-control-item input[type="checkbox"]) > & {
+        display: none;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          inset var(--sci-duration, 300ms)
+            var(--sci-ease, linear(0, 0.5 10%, 0.9 30%, 1.05 50%, 1.1 75%, 1)),
+          border-radius var(--sci-duration, 300ms)
+            var(--sci-ease, linear(0, 0.5 10%, 0.9 30%, 1.05 50%, 1.1 75%, 1)),
+          background-color 200ms ease-out;
+      }
+
+      @media (forced-colors: active) {
+        outline: 1px solid;
+        outline-offset: -1px;
+      }
+    }
+  }
+}
