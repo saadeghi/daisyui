@@ -61,7 +61,7 @@ curl -sLo static/daisyui-theme.mjs https://github.com/saadeghi/daisyui/releases/
 Add Tailwind CSS and daisyUI to your CSS file.  
 Address your HTML and other markup files in the `source` function.
 
-```postcss:input.css
+```postcss:static/input.css
 @import "tailwindcss";
 
 @source not "./daisyui{,*}.mjs";
@@ -69,7 +69,7 @@ Address your HTML and other markup files in the `source` function.
 @plugin "./daisyui.mjs";
 
 /* Optional for custom themes – Docs: https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme */
-@plugin "./daisyui-theme.js"{
+@plugin "./daisyui-theme.mjs"{
   /* custom theme here */
 }
 ```
