@@ -1,0 +1,209 @@
+.scroll-fade {
+  @layer daisyui.l1.l2.l3 {
+    --scroll-fade-size: 2rem;
+    --scroll-fade-color: var(--color-base-100);
+    --scroll-fade-offset: 0px;
+    position: relative;
+    display: flex;
+    overflow: clip;
+    isolation: isolate;
+
+    > .scroll-fade-body {
+      flex: 1 1 auto;
+      overflow: auto;
+      max-width: inherit;
+      max-height: inherit;
+      min-width: 0;
+      min-height: 0;
+      scroll-timeline:
+        --scroll-fade-block block,
+        --scroll-fade-inline inline;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      /* block shades: sticky inside the scroller, so they stay under its scrollbar */
+      &::before,
+      &::after {
+        position: sticky;
+        height: var(--scroll-fade-size);
+      }
+
+      /* the offset extends the leading shade upward instead of moving it down: whatever the pinned
+         header's exact height, its bottom edge always meets the solid part of the shade */
+      &::before {
+        top: 0;
+        height: calc(var(--scroll-fade-offset) + var(--scroll-fade-size));
+        margin-block-end: calc(-1 * (var(--scroll-fade-offset) + var(--scroll-fade-size)));
+        background-image: linear-gradient(
+          to bottom,
+          var(--scroll-fade-color) calc(100% - var(--scroll-fade-size)),
+          #0000
+        );
+      }
+
+      &::after {
+        bottom: 0;
+        margin-block-start: calc(-1 * var(--scroll-fade-size));
+        background-image: linear-gradient(to top, var(--scroll-fade-color), #0000);
+      }
+
+      /* shade opacity follows the scroll progress of the block axis */
+      @supports (animation-timeline: scroll()) {
+        &::before,
+        &::after {
+          animation-name: scroll-fade-in;
+          animation-timing-function: linear;
+          animation-fill-mode: both;
+          animation-timeline: --scroll-fade-block;
+        }
+
+        &::before {
+          animation-range: 0 var(--scroll-fade-size);
+        }
+
+        &::after {
+          animation-range: calc(100% - var(--scroll-fade-size)) 100%;
+          animation-direction: reverse;
+        }
+      }
+    }
+  }
+}
+
+.scroll-fade-x {
+  @layer daisyui.l1.l2 {
+    /* fixed shades take their containing block from here, so they pin to the edges */
+    contain: paint;
+
+    > .scroll-fade-body {
+      &::before,
+      &::after {
+        position: fixed;
+        width: var(--scroll-fade-size);
+        height: auto;
+        margin: 0;
+      }
+
+      &::before {
+        inset: 0 auto 0 0;
+        background-image: linear-gradient(to right, var(--scroll-fade-color), #0000);
+      }
+
+      &::after {
+        inset: 0 0 0 auto;
+        background-image: linear-gradient(to left, var(--scroll-fade-color), #0000);
+      }
+
+      &:dir(rtl) {
+        &::before {
+          inset: 0 0 0 auto;
+          background-image: linear-gradient(to left, var(--scroll-fade-color), #0000);
+        }
+
+        &::after {
+          inset: 0 auto 0 0;
+          background-image: linear-gradient(to right, var(--scroll-fade-color), #0000);
+        }
+      }
+
+      /* shade opacity follows the scroll progress of the inline axis */
+      @supports (animation-timeline: scroll()) {
+        &::before,
+        &::after {
+          animation-name: scroll-fade-in;
+          animation-timing-function: linear;
+          animation-fill-mode: both;
+          animation-timeline: --scroll-fade-inline;
+        }
+
+        &::before {
+          animation-range: 0 var(--scroll-fade-size);
+        }
+
+        &::after {
+          animation-range: calc(100% - var(--scroll-fade-size)) 100%;
+          animation-direction: reverse;
+        }
+      }
+    }
+
+    /* Firefox does not pin fixed descendants of a scroll container to its scrollport, so the shade
+       is pinned to the root instead and reads the scroller's timeline through the root scope */
+    @supports (-moz-appearance: none) {
+      timeline-scope: --scroll-fade-inline;
+
+      > .scroll-fade-body {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        width: var(--scroll-fade-size);
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      &::before {
+        inset-inline-start: 0;
+        background-image: linear-gradient(to right, var(--scroll-fade-color), #0000);
+      }
+
+      &::after {
+        inset-inline-end: 0;
+        background-image: linear-gradient(to left, var(--scroll-fade-color), #0000);
+      }
+
+      &:dir(rtl) {
+        &::before {
+          background-image: linear-gradient(to left, var(--scroll-fade-color), #0000);
+        }
+
+        &::after {
+          background-image: linear-gradient(to right, var(--scroll-fade-color), #0000);
+        }
+      }
+
+      @supports (animation-timeline: scroll()) {
+        &::before,
+        &::after {
+          animation-name: scroll-fade-in;
+          animation-timing-function: linear;
+          animation-fill-mode: both;
+          animation-timeline: --scroll-fade-inline;
+        }
+
+        &::before {
+          animation-range: 0 var(--scroll-fade-size);
+        }
+
+        &::after {
+          animation-range: calc(100% - var(--scroll-fade-size)) 100%;
+          animation-direction: reverse;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scroll-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

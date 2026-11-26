@@ -297,6 +297,8 @@ sidebar:
           href: "/components/join/"
         - name: "Mask"
           href: "/components/mask/"
+        - name: "Scroll fade"
+          href: "/components/scroll-fade/"
         - name: "Stack"
           href: "/components/stack/"
         - {}
