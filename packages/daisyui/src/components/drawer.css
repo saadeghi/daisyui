@@ -31,7 +31,9 @@
 
     > .drawer-overlay {
       @apply sticky top-0 cursor-pointer place-self-stretch;
-      background-color: oklch(0% 0 0 / 40%);
+      @media (prefers-reduced-motion: no-preference) {
+        transition: background-color 0.2s ease-out 0.1s;
+      }
     }
 
     > * {
@@ -74,6 +76,10 @@
   @layer daisyui.l1.l2 {
     :where(&:checked ~ .drawer-side) {
       @apply pointer-events-auto visible overflow-y-auto opacity-100;
+
+      > .drawer-overlay {
+        background-color: oklch(0% 0 0 / 40%);
+      }
 
       > :not(.drawer-overlay) {
         translate: 0%;
