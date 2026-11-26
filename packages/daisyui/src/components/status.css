@@ -10,6 +10,10 @@
       #0000
     );
     box-shadow: 0 2px 3px -1px color-mix(in oklab, currentColor calc(var(--depth) * 100%), #0000);
+    @media print {
+      outline: calc(var(--size) / 2) solid;
+      outline-offset: calc(var(--size) / -2);
+    }
   }
   @layer daisyui.l1 {
     @media (forced-colors: active) {
