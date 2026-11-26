@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test"
 import breakpoints from "./breakpoints.js"
-import themeOrder from "./themeOrder.js"
+import themeOrder, { defaultThemes } from "./themeOrder.js"
 import variables from "./variables.js"
 
 test("breakpoint aliases stay in Tailwind order", () => {
@@ -17,6 +17,11 @@ test("themeOrder starts with automatic defaults and contains each theme once", (
   expect(themeOrder.slice(0, 2)).toEqual(["light", "dark"])
   expect(new Set(themeOrder).size).toBe(themeOrder.length)
   expect(themeOrder).toContain("silk")
+})
+
+test("defaultThemes is the single source for the automatic themes", () => {
+  expect(defaultThemes).toEqual(["light", "dark"])
+  expect(defaultThemes).toEqual(themeOrder.slice(0, 2))
 })
 
 test("variables exposes the public token groups used by generated plugins", () => {

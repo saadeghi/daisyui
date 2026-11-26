@@ -1,4 +1,4 @@
-export default [
+const themeOrder = [
   "light",
   "dark",
   "cupcake",
@@ -35,3 +35,8 @@ export default [
   "abyss",
   "silk",
 ]
+
+// The first two themes are the automatic defaults.
+export const defaultThemes = themeOrder.slice(0, 2)
+
+export default themeOrder

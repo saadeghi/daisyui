@@ -1,17 +1,14 @@
 import fs from "fs/promises"
 import { getFileNames } from "./getFileNames.js"
-import themeOrder from "./themeOrder.js"
+import themeOrder, { defaultThemes } from "./themeOrder.js"
 
 export const generateChunks = async (filename) => {
   try {
     let content = ""
-    // let content = '@layer base, themes, components, utilities;\n';
-    // content += `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@next/preflight.min.css) layer(base);\n`;
 
     const themes = await getFileNames("./theme", ".css", false)
-    const allowedThemes = ["light", "dark"]
     themeOrder.forEach((theme) => {
-      if (themes.includes(theme) && allowedThemes.includes(theme)) {
+      if (themes.includes(theme) && defaultThemes.includes(theme)) {
         content += `@import url(theme/${theme}.css);\n`
       }
     })
