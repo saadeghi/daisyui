@@ -22,7 +22,7 @@ A styled input and button can look complete while missing a label and form behav
 </div>
 ```
 
-This example uses plain HTML, Tailwind CSS 4.3.3, and daisyUI 5.7.36. The project already loads its CSS and enables the light and dark themes. [Install daisyUI](/docs/install/) first if your project needs that setup. Installing an agent skill supplies instructions; your application still needs its CSS.
+This example uses plain HTML, Tailwind CSS 4 and daisyUI 5 The project already loads its CSS and enables the light and dark themes. [Install daisyUI](/docs/install/) first if your project needs that setup. Installing an agent skill supplies instructions; your application still needs its CSS.
 
 There is no search handler in this example. The task uses a native GET form on the current page with a field named `q`. If your application already has a search route or handler, ask Codex to preserve it.
 

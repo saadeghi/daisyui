@@ -35,7 +35,7 @@ The service status task below uses [Card](/components/card/) for grouping, [Tabl
 
 ### Service status reference
 
-This reference uses plain HTML with Tailwind CSS 4.3.3 and daisyUI 5.7.36. The project enables the light and dark themes. The two service names and their status values are fictional.
+This reference uses plain HTML with Tailwind CSS 4 and daisyUI 5. The project enables the light and dark themes. The two service names and their status values are fictional.
 
 These are separate static states. Your application must select the correct state and supply its data. The markup does not contact a service or implement retry behavior. A Claude Code generation run has not been recorded for this reference.
 
@@ -116,7 +116,7 @@ This is a proposed prompt for the service status task:
 
 ```text
 Use the daisyUI plugin to build a read-only service status panel.
-The project uses plain HTML, Tailwind CSS 4.3.3, and daisyUI 5.7.36.
+The project uses plain HTML, Tailwind CSS 4, and daisyUI 5.
 Preserve its enabled light and dark themes and existing page shell.
 Use this fictional data: Web service is Operational; Job queue is Delayed.
 Show a short summary, a service status table, and text status labels.
