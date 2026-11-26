@@ -22,10 +22,6 @@
       }
     }
 
-    .rating-hidden {
-      @apply w-2 bg-transparent;
-    }
-
     :checked,
     [aria-checked="true"],
     [aria-current="true"],
@@ -44,6 +40,12 @@
       animation: none;
       scale: 1.1;
     }
+  }
+}
+
+.rating .rating-hidden {
+  @layer daisyui.l1.l2.l3 {
+    @apply w-2 bg-transparent;
   }
 }
 

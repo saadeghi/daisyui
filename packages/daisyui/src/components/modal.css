@@ -35,31 +35,6 @@
   }
 
   @layer daisyui.l1.l2 {
-    &.modal-open,
-    &[open],
-    &:popover-open,
-    &:target,
-    .modal-toggle:checked + & {
-      @apply pointer-events-auto visible opacity-100;
-      @media (prefers-reduced-motion: no-preference) {
-        transition:
-          visibility 0s allow-discrete,
-          background-color 0.3s ease-out,
-          opacity 0.1s ease-out;
-      }
-      background-color: oklch(0% 0 0/ 0.4);
-
-      > .modal-box {
-        translate: 0 0;
-        scale: 1;
-        opacity: 1;
-      }
-
-      :root:has(&) {
-        --page-scroll-lock: ;
-      }
-    }
-
     @starting-style {
       &.modal-open,
       &[open],
@@ -68,6 +43,36 @@
       .modal-toggle:checked + & {
         @apply opacity-0;
       }
+    }
+  }
+}
+
+/* Keep `.modal` first in every selector: the responsive variants of the CDN
+   build prefix the first root class, and with `.modal-toggle:checked + .modal`
+   they would prefix `.modal-toggle` instead. */
+.modal.modal-open,
+.modal[open],
+.modal:popover-open,
+.modal:target,
+.modal:is(.modal-toggle:checked + *) {
+  @layer daisyui.l1.l2 {
+    @apply pointer-events-auto visible opacity-100;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        visibility 0s allow-discrete,
+        background-color 0.3s ease-out,
+        opacity 0.1s ease-out;
+    }
+    background-color: oklch(0% 0 0/ 0.4);
+
+    > .modal-box {
+      translate: 0 0;
+      scale: 1;
+      opacity: 1;
+    }
+
+    :root:has(&) {
+      --page-scroll-lock: ;
     }
   }
 }

@@ -316,3 +316,9 @@
     }
   }
 }
+
+.collapse-close:not([open], .collapse-open) {
+  @layer daisyui.l1.l2 {
+    grid-template-rows: max-content 0fr;
+  }
+}

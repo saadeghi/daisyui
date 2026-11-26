@@ -3,13 +3,6 @@
     font-size: 0.875rem;
     @apply rounded-box relative w-full border-separate border-spacing-0 text-left rtl:text-right;
 
-    tr.row-hover {
-      &,
-      &:nth-child(even) {
-        @apply hover:bg-base-200;
-      }
-    }
-
     :where(th, td) {
       @apply px-4 py-3 align-middle;
     }
@@ -24,25 +17,42 @@
       border-top: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
     }
 
-    :where(.table-pin-rows thead) {
-      @apply sticky top-0 z-1;
-    }
-
-    :where(.table-pin-rows tfoot) {
-      @apply sticky bottom-0 z-1;
-    }
-
-    :where(.table-pin-rows :is(thead, tfoot) tr) {
-      @apply bg-base-100;
-    }
-
-    :where(.table-pin-cols tr th) {
-      @apply bg-base-100 sticky right-0 left-0;
-    }
-
     :where(thead tr :is(td, th), tbody tr:not(:last-child) :is(td, th)) {
       border-bottom: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
     }
+  }
+}
+
+.table tr.row-hover {
+  @layer daisyui.l1.l2.l3 {
+    &,
+    &:nth-child(even) {
+      @apply hover:bg-base-200;
+    }
+  }
+}
+
+.table :where(.table-pin-rows thead) {
+  @layer daisyui.l1.l2.l3 {
+    @apply sticky top-0 z-1;
+  }
+}
+
+.table :where(.table-pin-rows tfoot) {
+  @layer daisyui.l1.l2.l3 {
+    @apply sticky bottom-0 z-1;
+  }
+}
+
+.table :where(.table-pin-rows :is(thead, tfoot) tr) {
+  @layer daisyui.l1.l2.l3 {
+    @apply bg-base-100;
+  }
+}
+
+.table :where(.table-pin-cols tr th) {
+  @layer daisyui.l1.l2.l3 {
+    @apply bg-base-100 sticky right-0 left-0;
   }
 }
 

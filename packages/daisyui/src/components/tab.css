@@ -147,11 +147,6 @@
         left: var(--tab-p);
         position: absolute;
       }
-      &:is(
-          .tab-active,
-          [aria-selected="true"],
-          [aria-current]:not([aria-current="false"], [aria-current=""])
-        ):not(.tab-disabled, [disabled]),
       &:is(input:checked),
       &:is(label:has(:checked)) {
         &:before {
@@ -159,6 +154,20 @@
           border-top: 3px solid;
         }
       }
+    }
+  }
+}
+
+.tabs-border
+  > .tab:is(
+    .tab-active,
+    [aria-selected="true"],
+    [aria-current]:not([aria-current="false"], [aria-current=""])
+  ):not(.tab-disabled, [disabled]) {
+  @layer daisyui.l1.l2 {
+    &:before {
+      --tab-border-color: currentColor;
+      border-top: 3px solid;
     }
   }
 }

@@ -15,22 +15,6 @@
       }
     }
 
-    :where(li > .menu-dropdown:not(.menu-dropdown-show)) {
-      @apply hidden;
-    }
-
-    :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title, .btn)),
-    :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-      @apply rounded-field grid grid-flow-col content-start items-center gap-2 px-3 py-1.5 text-start;
-      @media (prefers-reduced-motion: no-preference) {
-        transition-property: color, background-color, box-shadow;
-        transition-duration: 0.2s;
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-      }
-      grid-auto-columns: minmax(auto, max-content) auto max-content;
-      user-select: none;
-    }
-
     :where(li > details > summary) {
       @apply outline-none;
 
@@ -80,8 +64,7 @@
       block-size: auto;
     }
 
-    :where(li > details[open] > summary):after,
-    :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
+    :where(li > details[open] > summary):after {
       rotate: 45deg;
       translate: 0 1px;
     }
@@ -95,7 +78,6 @@
       .btn,
       [aria-current]:not([aria-current="false"], [aria-current=""])
     ) {
-      &.menu-focus,
       &:focus-visible {
         @apply bg-base-content/10 text-base-content cursor-pointer outline-hidden;
         @media (forced-colors: active) {
@@ -156,7 +138,6 @@
         }
       }
 
-      &.menu-disabled,
       [disabled] {
         @apply text-base-content/20 pointer-events-none;
         @media (forced-colors: active) {
@@ -175,6 +156,60 @@
       &:before {
         @apply hidden;
       }
+    }
+  }
+}
+
+.menu :where(li > .menu-dropdown:not(.menu-dropdown-show)) {
+  @layer daisyui.l1.l2.l3 {
+    @apply hidden;
+  }
+}
+
+.menu :where(li:not(.menu-title) > *:not(ul, menu, details, .menu-title, .btn)),
+.menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+  @layer daisyui.l1.l2.l3 {
+    @apply rounded-field grid grid-flow-col content-start items-center gap-2 px-3 py-1.5 text-start;
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: color, background-color, box-shadow;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    grid-auto-columns: minmax(auto, max-content) auto max-content;
+    user-select: none;
+  }
+}
+
+.menu :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
+  @layer daisyui.l1.l2.l3 {
+    rotate: 45deg;
+    translate: 0 1px;
+  }
+}
+
+.menu
+  :where(
+    li:not(.menu-title, .disabled) > *:not(ul, menu, details, .menu-title),
+    li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
+  ):not(
+    .menu-active,
+    :active,
+    .btn,
+    [aria-current]:not([aria-current="false"], [aria-current=""])
+  ).menu-focus {
+  @layer daisyui.l1.l2.l3 {
+    @apply bg-base-content/10 text-base-content cursor-pointer outline-hidden;
+    @media (forced-colors: active) {
+      outline-offset: -2px;
+    }
+  }
+}
+
+.menu :where(li).menu-disabled {
+  @layer daisyui.l1.l2.l3 {
+    @apply text-base-content/20 pointer-events-none;
+    @media (forced-colors: active) {
+      color: GrayText;
     }
   }
 }

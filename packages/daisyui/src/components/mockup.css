@@ -71,32 +71,34 @@
         @apply inline-block text-right;
       }
     }
+  }
+}
 
-    .mockup-browser-toolbar {
-      @apply my-3 inline-flex w-full items-center pr-[1.4em] rtl:flex-row-reverse;
+.mockup-browser .mockup-browser-toolbar {
+  @layer daisyui.l1.l2.l3 {
+    @apply my-3 inline-flex w-full items-center pr-[1.4em] rtl:flex-row-reverse;
+
+    &:before {
+      content: "";
+      @apply mr-[4.8rem] inline-block aspect-square h-3 rounded-full opacity-30;
+      box-shadow:
+        1.4em 0,
+        2.8em 0,
+        4.2em 0;
+    }
+
+    .input {
+      @apply bg-base-200 mx-auto flex h-full items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap;
+      font-size: 0.75rem;
+      direction: ltr;
 
       &:before {
         content: "";
-        @apply mr-[4.8rem] inline-block aspect-square h-3 rounded-full opacity-30;
-        box-shadow:
-          1.4em 0,
-          2.8em 0,
-          4.2em 0;
-      }
-
-      .input {
-        @apply bg-base-200 mx-auto flex h-full items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap;
-        font-size: 0.75rem;
-        direction: ltr;
-
-        &:before {
-          content: "";
-          @apply size-4 opacity-50;
-          background-color: currentColor;
-          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z' clip-rule='evenodd' /%3E%3C/svg%3E")
-            no-repeat center;
-          mask-size: contain;
-        }
+        @apply size-4 opacity-50;
+        background-color: currentColor;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z' clip-rule='evenodd' /%3E%3C/svg%3E")
+          no-repeat center;
+        mask-size: contain;
       }
     }
   }

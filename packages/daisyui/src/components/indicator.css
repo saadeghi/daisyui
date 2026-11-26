@@ -2,16 +2,18 @@
   @layer daisyui.l1.l2.l3 {
     @apply relative inline-flex;
     width: max-content;
+  }
+}
 
-    :where(.indicator-item) {
-      z-index: 1;
-      @apply absolute whitespace-nowrap;
-      top: var(--indicator-t, 0);
-      bottom: var(--indicator-b, auto);
-      left: var(--indicator-s, auto);
-      right: var(--indicator-e, 0);
-      translate: var(--indicator-x, 50%) var(--indicator-y, -50%);
-    }
+.indicator :where(.indicator-item) {
+  @layer daisyui.l1.l2.l3 {
+    z-index: 1;
+    @apply absolute whitespace-nowrap;
+    top: var(--indicator-t, 0);
+    bottom: var(--indicator-b, auto);
+    left: var(--indicator-s, auto);
+    right: var(--indicator-e, 0);
+    translate: var(--indicator-x, 50%) var(--indicator-y, -50%);
   }
 }
 .indicator-start {

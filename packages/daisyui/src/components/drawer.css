@@ -29,11 +29,6 @@
     height: 100vh;
     height: 100dvh;
 
-    > .drawer-overlay {
-      @apply sticky top-0 cursor-pointer place-self-stretch;
-      background-color: oklch(0% 0 0 / 40%);
-    }
-
     > * {
       @apply col-start-1 row-start-1;
     }
@@ -51,6 +46,13 @@
         translate: 100%;
       }
     }
+  }
+}
+
+.drawer-side > .drawer-overlay {
+  @layer daisyui.l1.l2.l3 {
+    @apply sticky top-0 cursor-pointer place-self-stretch;
+    background-color: oklch(0% 0 0 / 40%);
   }
 }
 
@@ -79,11 +81,13 @@
         translate: 0%;
       }
     }
+  }
+}
 
-    &:focus-visible ~ .drawer-content label.drawer-button {
-      outline: 2px solid;
-      outline-offset: 2px;
-    }
+.drawer-toggle:focus-visible ~ .drawer-content label.drawer-button {
+  @layer daisyui.l1.l2 {
+    outline: 2px solid;
+    outline-offset: 2px;
   }
 }
 

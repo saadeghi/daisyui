@@ -9,14 +9,6 @@
     .dropdown-content {
       @apply absolute;
     }
-    &.dropdown-close .dropdown-content,
-    &:not(details, .dropdown-open, .dropdown-hover:hover, :focus-within) .dropdown-content,
-    &.dropdown-hover:not(:hover)
-      [tabindex]:first-child:focus:not(:focus-visible)
-      ~ .dropdown-content {
-      @apply hidden origin-top opacity-0;
-      scale: 95%;
-    }
 
     &[popover],
     .dropdown-content {
@@ -38,18 +30,6 @@
     }
 
     &:not(.dropdown-close) {
-      &.dropdown-open,
-      &:not(.dropdown-hover):focus,
-      &:focus-within {
-        > [tabindex]:first-child {
-          @apply pointer-events-none;
-        }
-        .dropdown-content {
-          @apply opacity-100;
-          scale: 100%;
-        }
-      }
-
       &.dropdown-hover:hover {
         .dropdown-content {
           @apply opacity-100;
@@ -100,6 +80,31 @@
         @apply hidden origin-top opacity-0;
         scale: 95%;
       }
+    }
+  }
+}
+
+.dropdown.dropdown-close .dropdown-content,
+.dropdown:not(details, .dropdown-open, .dropdown-hover:hover, :focus-within) .dropdown-content,
+.dropdown.dropdown-hover:not(:hover)
+  [tabindex]:first-child:focus:not(:focus-visible)
+  ~ .dropdown-content {
+  @layer daisyui.l1.l2.l3 {
+    @apply hidden origin-top opacity-0;
+    scale: 95%;
+  }
+}
+
+.dropdown:not(.dropdown-close).dropdown-open,
+.dropdown:not(.dropdown-close):not(.dropdown-hover):focus,
+.dropdown:not(.dropdown-close):focus-within {
+  @layer daisyui.l1.l2.l3 {
+    > [tabindex]:first-child {
+      @apply pointer-events-none;
+    }
+    .dropdown-content {
+      @apply opacity-100;
+      scale: 100%;
     }
   }
 }
