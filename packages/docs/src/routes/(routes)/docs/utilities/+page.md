@@ -217,6 +217,9 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--option-px`                 | horizontal padding of the select option                  |
 |                 | `--sl-size-mul`               | size multiplier of the select                            |
 |                 | `--top-mul`                   | floating label top position multiplier                   |
+| Sheet           | `--sheet-half`                | size of the sheet in half state (default 50%)            |
+|                 | `--sheet-full`                | size of the sheet in full state (default 100%)           |
+|                 | `--sheet-handle`              | size of the sheet handle (visible when closed)           |
 | Tab             | `--tabs-height`               | height of the tabs                                       |
 |                 | `--tabs-direction`            | direction of the tabs                                    |
 |                 | `--tab-p`                     | padding of the tab                                       |
