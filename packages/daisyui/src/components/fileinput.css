@@ -17,7 +17,7 @@
       0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
       0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
     --size: calc(var(--size-field, 0.25rem) * 10);
-    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+    --input-color: color-mix(in oklab, var(--color-base-content) var(--dim-mix-2, 20%), #0000);
     &::file-selector-button {
       @apply me-4 cursor-pointer px-4 select-none;
       height: calc(100% + var(--border) * 2);
@@ -67,13 +67,21 @@
     &:is(:disabled, [disabled]) {
       @apply border-base-200 bg-base-200 placeholder-base-content placeholder-base-content/20 cursor-not-allowed;
       box-shadow: none;
-      color: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+      color: color-mix(
+        in oklch,
+        var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5),
+        #0000
+      );
 
       &::file-selector-button {
         @apply border-base-200 bg-base-200 cursor-not-allowed;
         --btn-border: #0000;
         background-image: none;
-        --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+        --btn-fg: color-mix(
+          in oklch,
+          var(--color-base-content) calc(var(--dim-mix-1, 40%) * 0.5),
+          #0000
+        );
       }
     }
   }

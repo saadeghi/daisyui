@@ -20,7 +20,7 @@
         color 0.3s,
         grid-template-columns 0.2s;
     }
-    --input-color: color-mix(in oklab, var(--color-base-content) 50%, #0000);
+    --input-color: color-mix(in oklab, var(--color-base-content) var(--dim-mix-3, 50%), #0000);
     --toggle-p: calc(var(--size) * 0.125);
     --size: calc(var(--size-selector, 0.25rem) * 6);
     width: calc((var(--size) * 2) - (var(--border) + var(--toggle-p)) * 2);

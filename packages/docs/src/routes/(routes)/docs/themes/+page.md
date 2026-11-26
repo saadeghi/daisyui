@@ -165,6 +165,41 @@ If you're using CDN and you want to use a custom theme, use it like this:
 
 If you don't use [theme-controller](/components/theme-controller/), the `[data-theme="mytheme"]` selector alone is enough.
 
+## <Translate text="How to keep dimmed text and borders readable?" />
+
+Some components mix their secondary colors from `--color-base-content` at a fixed percentage. The percentage that stays readable depends on the palette, so each theme can set it:
+
+- `--dim-mix-1`: disabled content. Default `40%` for disabled text in `input`, `select`, `textarea` and `file-input`. Disabled placeholders, `button` and `file-input` file names use half of it, disabled calendar dates three quarters. WCAG 1.4.3 exempts inactive controls, so this level is the weakest.
+- `--dim-mix-2`: borders and separators of inputs, selects, textareas, `file-input`, `otp`, `checkbox`, `radio`, `kbd`, `hr`, blockquotes and table rules. Default `20%`. Target: 3:1 against `base-100`.
+- `--dim-mix-3`: dimmed text, including placeholders, prose bullets and captions, the toggle track and the "today" date of the next month. Default `50%`. Megamenu group titles, out-of-month dates and the calendar range thumb use `0.8` of it, weekday labels, week numbers and the muted labels on tinted dates `1.2`. Target: 4.5:1 against `base-100` and `base-200`.
+
+Themes that don't set these tokens keep the current values. Each token scales every role in its layer, so the proportions stay as they are.
+
+Set the levels you want to change:
+
+```css:app.css
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  /* ...colors... */
+
+  --dim-mix-1: 55%;
+  --dim-mix-2: 46%;
+  --dim-mix-3: 62%;
+}
+```
+
+A light `base-content` needs a higher percentage than a dark one, roughly `35%` for dark themes and `60%` for light ones. Before setting a value, measure the contrast of `color-mix(in oklab, var(--color-base-content) <mix>, <surface>)` for your colors. The [theme generator](/theme-generator/) fills `--dim-mix-2` and `--dim-mix-3` with the lowest values that reach these targets.
+
+When the operating system requests `prefers-contrast: more`, borders and dimmed text are painted at full `base-content` strength; disabled content keeps its level.
+
+These are plain custom properties, so they inherit. Custom styles can use them too:
+
+```css
+.hint {
+  color: color-mix(in oklab, var(--color-base-content) var(--dim-mix-3, 50%), #0000);
+}
+```
+
 ## <Translate text="How to customize an existing theme?" />
 
 To customize a built-in theme, you can use the same structure as adding a new theme, but with the same name as the built-in theme. For example, to customize the `light` theme:

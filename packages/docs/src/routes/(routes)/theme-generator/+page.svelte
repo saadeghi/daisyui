@@ -14,6 +14,7 @@
     validateThemeStructure,
   } from "$lib/themeGeneratorValidation"
   import { parseStoredThemes, selectInitialTheme } from "$lib/themeGeneratorStorage"
+  import { optimalDimMixes, withOptimalDimMixes } from "$lib/dimMix"
   import { browser } from "$app/environment"
   // import { pushState, replaceState } from "$app/navigation"
   import { onMount, tick } from "svelte"
@@ -69,7 +70,15 @@
   const { data } = $props()
   const storedThemesValue = browser ? localStorage.getItem(LS_KEY) : null
   const storedThemes = parseStoredThemes(storedThemesValue)
-  const getInitialThemes = () => storedThemes ?? data.builtinThemes
+  // Themes saved before a token existed (e.g. --dim-mix-*) must pick up its current default,
+  // otherwise the editor has no control for it and the CSS export silently drops it.
+  const mergeThemeDefaults = (theme) => {
+    const fallback =
+      data.builtinThemes.find((builtin) => builtin.name === theme.name) ??
+      data.builtinThemes.find((builtin) => builtin["color-scheme"] === theme["color-scheme"])
+    return fallback ? { ...fallback, ...theme } : theme
+  }
+  const getInitialThemes = () => storedThemes?.map(mergeThemeDefaults) ?? data.builtinThemes
   let showCssModal = $state(false)
   let dice = $state({ rotate: 0 })
   let dockActiveItem = $state("editor")
@@ -163,6 +172,7 @@
         key === "default" ||
         key === "prefersdark" ||
         key.startsWith("--color-") ||
+        key.startsWith("--dim-mix-") ||
         key.startsWith("--radius-") ||
         key.startsWith("--size-") ||
         key === "--border" ||
@@ -219,23 +229,24 @@
 
     // Then, load themes from localStorage
     if (storedThemesValue !== null && !storedThemes) localStorage.removeItem(LS_KEY)
-    builtinThemes = initialThemes.filter((theme) => theme.type === "builtin")
-    customThemes = initialThemes.filter((theme) => theme.type === "custom")
+    builtinThemes = initialThemes.filter((theme) => theme.type === "builtin").map(withOptimalDimMixes)
+    customThemes = initialThemes.filter((theme) => theme.type === "custom").map(withOptimalDimMixes)
 
     // If we have a URL theme, check if it matches an existing custom theme
     if (urlTheme) {
       const isValid = validateThemeStructure(urlTheme)
       if (isValid) {
-        const matchingTheme = findMatchingCustomTheme(urlTheme, customThemes)
+        const urlThemeWithDefaults = withOptimalDimMixes(mergeThemeDefaults(urlTheme))
+        const matchingTheme = findMatchingCustomTheme(urlThemeWithDefaults, customThemes)
 
         if (matchingTheme) {
           // Select the matching theme
           currentTheme = matchingTheme
         } else {
           // Add this theme to custom themes and select it
-          customThemes = [urlTheme, ...customThemes]
-          currentTheme = urlTheme
-          highlightedThemeId = urlTheme.id
+          customThemes = [urlThemeWithDefaults, ...customThemes]
+          currentTheme = urlThemeWithDefaults
+          highlightedThemeId = urlThemeWithDefaults.id
           setTimeout(triggerConfetti, 500)
 
           setTimeout(() => {
@@ -341,9 +352,14 @@
 
   const resetAll = () => {
     if (confirm("Reset all themes to default?")) {
-      builtinThemes = data.builtinThemes
-      currentTheme = data.builtinThemes[0]
+      builtinThemes = data.builtinThemes.map(withOptimalDimMixes)
+      currentTheme = builtinThemes[0]
     }
+  }
+
+  // Overwrites the measured levels; level 1 has no contrast target (WCAG exempts disabled content).
+  const recalculateDimMixes = () => {
+    Object.assign(currentTheme, optimalDimMixes(currentTheme))
   }
 
   const generateCSS = (theme) => {
@@ -362,6 +378,10 @@
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
+    const dimProps = ["--dim-mix-1", "--dim-mix-2", "--dim-mix-3"]
+      .filter((key) => theme[key])
+      .map((key) => `  ${key}: ${theme[key]};`)
+
     const sizeProps = ["--size-selector", "--size-field", "--border"]
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
@@ -370,7 +390,7 @@
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
-    return `\n@plugin "daisyui/theme" {\n${baseProps.join("\n")}\n${cssProps.join("\n")}\n${radiusProps.join("\n")}\n${sizeProps.join("\n")}\n${effectProps.join("\n")}\n}\n`
+    return `\n@plugin "daisyui/theme" {\n${baseProps.join("\n")}\n${cssProps.join("\n")}\n${dimProps.join("\n")}\n${radiusProps.join("\n")}\n${sizeProps.join("\n")}\n${effectProps.join("\n")}\n}\n`
   }
 
   let holdTimeout
@@ -1011,6 +1031,62 @@
           <div class="mx-1.5 flex justify-between py-1">
             {#each values as value, index}
               <div class="bg-base-content h-1.5 w-px" class:opacity-20={value !== "1px"}></div>
+            {/each}
+          </div>
+        </div>
+      </div>
+    {/each}
+
+    <h3 class="divider divider-start text-xs">
+      <span class="flex gap-1.5">
+        <svg
+          class="opacity-40"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="3" cy="8" r="2.5" opacity="0.3" />
+          <circle cx="8" cy="8" r="2.5" opacity="0.6" />
+          <circle cx="13" cy="8" r="2.5" />
+        </svg>
+        Dimmed
+      </span>
+    </h3>
+    <div class="flex items-center justify-between gap-2">
+      <span class="text-base-content/40 text-[0.625rem] italic">
+        Measured: borders (3:1) and placeholders (4.5:1). Other dimmed roles scale from them.
+      </span>
+      <button
+        type="button"
+        class="btn btn-ghost btn-xs shrink-0 text-[0.6875rem]"
+        onclick={recalculateDimMixes}>Recalculate</button
+      >
+    </div>
+    {#each data.dimValues as [key, label, desc, builtin]}
+      <div class="w-full">
+        <div class="mb-2 flex items-end justify-between gap-2" id={`${key}-group`}>
+          <div class="flex flex-col">
+            <span class="text-base-content/70 text-[0.6875rem]">{label}</span>
+            <span class="text-base-content/40 text-[0.625rem] italic">{desc}</span>
+          </div>
+          <span class="font-mono text-[0.6875rem] tabular-nums">{currentTheme[key] ?? "auto"}</span>
+        </div>
+        <div class="bg-base-200 rounded-box p-4 px-6">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value={parseInt(currentTheme[key], 10) || builtin}
+            class="range range-xs max-w-none"
+            aria-labelledby={`${key}-group`}
+            oninput={(e) => (currentTheme[key] = `${e.target.value}%`)}
+          />
+          <div class="mx-1.5 flex justify-between py-1">
+            {#each [0, 20, 40, 60, 80, 100] as tick}
+              <div class="bg-base-content h-1.5 w-px opacity-20"></div>
             {/each}
           </div>
         </div>

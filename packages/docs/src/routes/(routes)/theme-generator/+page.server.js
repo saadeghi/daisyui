@@ -50,6 +50,11 @@ const effectValues = [
   ["--depth", "Depth Effect", "3D depth on fields & selectors", ["0", "1"]],
   ["--noise", "Noise Effect", "Noise pattern on fields & selectors", ["0", "1"]],
 ]
+const dimValues = [
+  ["--dim-mix-1", "Disabled", "disabled text and placeholders", 40],
+  ["--dim-mix-2", "Borders", "inputs, selects, checkboxes, kbd, separators", 20],
+  ["--dim-mix-3", "Text", "placeholders, calendar labels, menu titles, prose marks", 50],
+]
 const colorInitials = {
   "--color-base-100": "b1",
   "--color-base-200": "b2",
@@ -367,5 +372,6 @@ export async function load() {
     sizeValues,
     borderValues,
     effectValues,
+    dimValues,
   }
 }

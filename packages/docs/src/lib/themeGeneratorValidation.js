@@ -6,6 +6,7 @@ const borderWidthPattern = /^(0\.5px|1px|1\.5px|2px)$/
 const depthPattern = /^(0|1)$/
 const noisePattern = /^(0|1)$/
 
+const dimMixPattern = /^(100|[1-9]?\d)%$/
 const colorProperties = new Set([
   "--color-base-100",
   "--color-base-200",
@@ -29,6 +30,7 @@ const colorProperties = new Set([
   "--color-error-content",
 ])
 const radiusProperties = new Set(["--radius-selector", "--radius-field", "--radius-box"])
+const dimProperties = new Set(["--dim-mix-1", "--dim-mix-2", "--dim-mix-3"])
 const sizeProperties = new Set(["--size-selector", "--size-field"])
 const effectProperties = new Set(["--border", "--depth", "--noise"])
 const metadataProperties = new Set(["name", "default", "prefersdark", "id", "type"])
@@ -36,6 +38,7 @@ const styleProperties = new Set([
   "color-scheme",
   ...colorProperties,
   ...radiusProperties,
+  ...dimProperties,
   ...sizeProperties,
   ...effectProperties,
 ])
@@ -122,6 +125,8 @@ export function validateThemeStructure(data) {
         throw new Error(`Invalid color value for ${key}`)
       if (radiusProperties.has(key) && !validateRadius(value))
         throw new Error(`Invalid radius value for ${key}:${value}`)
+      if (dimProperties.has(key) && !(typeof value === "string" && dimMixPattern.test(value)))
+        throw new Error(`Invalid dim mix value for ${key}:${value}`)
       if (sizeProperties.has(key) && !validateSize(value))
         throw new Error(`Invalid size for ${key}`)
       if (key === "--border" && !validateBorderWidth(value))
