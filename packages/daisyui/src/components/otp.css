@@ -164,6 +164,15 @@
       }
     }
 
+    @media (forced-colors: active) {
+      &:not(:has(input:valid:focus)) > span {
+        outline-style: none;
+      }
+      &:not(:focus-within):after {
+        outline-style: none;
+      }
+    }
+
     &:has(> input:disabled) {
       @apply cursor-not-allowed;
       > input {
@@ -172,6 +181,9 @@
       > span {
         @apply border-base-200 bg-base-200;
         box-shadow: none;
+        @media (forced-colors: active) {
+          border-color: GrayText;
+        }
       }
     }
   }
