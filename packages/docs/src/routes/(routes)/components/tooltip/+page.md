@@ -5,53 +5,61 @@ source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/pac
 layout: components
 classnames:
   component:
-  - class: tooltip
-    desc: Container element
+    - class: tooltip
+      desc: Container element
   part:
-  - class: tooltip-content
-    desc: Optional. Setting a div as the content of the tooltip instead of the `data-tip` text
+    - class: tooltip-content
+      desc: Optional. Setting a div as the content of the tooltip instead of the `data-tip` text
   placement:
-  - class: tooltip-top
-    desc: Put tooltip on top
-    default: true
-  - class: tooltip-bottom
-    desc: Put tooltip on bottom
-  - class: tooltip-left
-    desc: Put tooltip on left
-  - class: tooltip-right
-    desc: Put tooltip on right
-  - class: tooltip-start
-    desc: Align tooltip on start
-  - class: tooltip-center
-    desc: Align tooltip on center
-  - class: tooltip-end
-    desc: Align tooltip on end
+    - class: tooltip-top
+      desc: Put tooltip on top
+      default: true
+    - class: tooltip-bottom
+      desc: Put tooltip on bottom
+    - class: tooltip-left
+      desc: Put tooltip on left
+    - class: tooltip-right
+      desc: Put tooltip on right
+    - class: tooltip-start
+      desc: Align tooltip on start
+    - class: tooltip-center
+      desc: Align tooltip on center
+    - class: tooltip-end
+      desc: Align tooltip on end
   modifier:
-  - class: tooltip-open
-    desc: Force open tooltip
+    - class: tooltip-open
+      desc: Force open tooltip
   color:
-  - class: tooltip-primary
-    desc: primary color
-  - class: tooltip-secondary
-    desc: secondary color
-  - class: tooltip-accent
-    desc: accent color
-  - class: tooltip-info
-    desc: info color
-  - class: tooltip-success
-    desc: success color
-  - class: tooltip-warning
-    desc: warning color
-  - class: tooltip-error
-    desc: error color
+    - class: tooltip-primary
+      desc: primary color
+    - class: tooltip-secondary
+      desc: secondary color
+    - class: tooltip-accent
+      desc: accent color
+    - class: tooltip-info
+      desc: info color
+    - class: tooltip-success
+      desc: success color
+    - class: tooltip-warning
+      desc: warning color
+    - class: tooltip-error
+      desc: error color
 ---
 
 <script>
   import Component from "$components/Component.svelte"
   import Translate from "$components/Translate.svelte"
+  import TooltipAxes from "$components/TooltipAxes.svelte"
 </script>
 
+> :INFO:
+>
+> The tooltip custom properties work on two axes: `--tt-off` and `--tt-tail` measure along the main axis (the direction the tooltip opens), `--tt-inset` and `--tt-tail-inset` along the cross axis (the trigger edge). The arrow sits `--tt-tail-off` away from the bubble's start/end corner (derived from `--tt-radius`), and `--tt-tail-inset` adds to that distance. `--tt-trans` shifts the tooltip along the cross axis by a percentage of its own size — horizontal for top/bottom, vertical for left/right.
+
+<TooltipAxes />
+
 ### ~Tooltip
+
 <div class="my-6">
   <div class="tooltip" data-tip="hello">
     <button class="btn">Hover me</button>
@@ -65,6 +73,7 @@ classnames:
 ```
 
 ### ~Tooltip with tooltip-content
+
 <div class="my-6 mt-12">
   <div class="tooltip">
     <div class="tooltip-content">
@@ -77,14 +86,14 @@ classnames:
 ```html
 <div class="$$tooltip">
   <div class="$$tooltip-content">
-    <div class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black">Wow!</div>
+    <div class="-rotate-10 animate-bounce text-2xl font-black text-orange-400">Wow!</div>
   </div>
   <button class="$$btn">Hover me</button>
 </div>
 ```
 
-
 ### ~Force open
+
 <div class="my-6">
   <div class="tooltip tooltip-open" data-tip="hello">
     <button class="btn">Force open</button>
@@ -97,8 +106,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Top
+
 <div class="my-6 flex flex-wrap gap-6">
   <div class="tooltip tooltip-open tooltip-top tooltip-start" data-tip="hello">
     <button class="btn">Top start</button>
@@ -123,8 +132,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Bottom
+
 <div class="my-6 flex flex-wrap gap-6">
   <div class="tooltip tooltip-open tooltip-bottom tooltip-start" data-tip="hello">
     <button class="btn">Bottom start</button>
@@ -149,8 +158,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Left
+
 <div class="my-6 flex flex-col gap-6">
   <div class="tooltip tooltip-open tooltip-left tooltip-start" data-tip="hello">
     <button class="btn">Left start</button>
@@ -175,8 +184,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Right
+
 <div class="my-6 flex items-end flex-col gap-6">
   <div class="tooltip tooltip-open tooltip-right tooltip-start" data-tip="hello">
     <button class="btn">Right start</button>
@@ -202,6 +211,7 @@ classnames:
 ```
 
 ### ~Primary color
+
 <div class="my-6">
   <div data-tip="primary" class="tooltip tooltip-open tooltip-primary">
     <button class="btn btn-primary">primary</button>
@@ -214,8 +224,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Secondary color
+
 <div class="my-6">
   <div data-tip="secondary" class="tooltip tooltip-open tooltip-secondary">
     <button class="btn btn-secondary">secondary</button>
@@ -228,8 +238,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Accent color
+
 <div class="my-6">
   <div data-tip="accent" class="tooltip tooltip-open tooltip-accent">
     <button class="btn btn-accent">accent</button>
@@ -242,8 +252,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Info color
+
 <div class="my-6">
   <div data-tip="info" class="tooltip tooltip-open tooltip-info">
     <button class="btn btn-info">info</button>
@@ -256,8 +266,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Success color
+
 <div class="my-6">
   <div data-tip="success" class="tooltip tooltip-open tooltip-success">
     <button class="btn btn-success">success</button>
@@ -270,8 +280,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Warning color
+
 <div class="my-6">
   <div data-tip="warning" class="tooltip tooltip-open tooltip-warning">
     <button class="btn btn-warning">warning</button>
@@ -284,8 +294,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Error color
+
 <div class="my-6">
   <div data-tip="error" class="tooltip tooltip-open tooltip-error">
     <button class="btn btn-error">error</button>
@@ -298,8 +308,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Responsive tooltip. only show for large screen
+
 <div class="my-6">
   <div class="lg:tooltip" data-tip="hello">
     <button class="btn">Hover me</button>
@@ -313,6 +323,7 @@ classnames:
 ```
 
 ### ~Responsive tooltip position
+
 <div class="my-6">
   <div class="tooltip tooltip-start md:tooltip-right md:tooltip-center" data-tip="hello">
     <button class="btn">Hover me</button>
