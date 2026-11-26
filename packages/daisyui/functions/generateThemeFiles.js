@@ -3,14 +3,16 @@ import path from "path"
 import { getFileNames } from "./getFileNames.js"
 
 export const wrapContent = (themeName, content) => {
-  if (themeName === "light") {
-    return `:root,:root:has(input.theme-controller[value=${themeName}]:checked),[data-theme="${themeName}"] {
-${content}}
-`
-  }
+  const selector =
+    themeName === "light"
+      ? `:root,:root:has(input.theme-controller[value=${themeName}]:checked),[data-theme="${themeName}"]`
+      : `:root:has(input.theme-controller[value=${themeName}]:checked),[data-theme="${themeName}"]`
 
-  return `:root:has(input.theme-controller[value=${themeName}]:checked),[data-theme="${themeName}"] {
+  // same layer as the plugin and daisyui.css, so theme tokens keep one priority
+  return `@layer base {
+${selector} {
 ${content}}
+}
 `
 }
 

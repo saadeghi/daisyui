@@ -9,18 +9,22 @@ const tempDirs = createTempDirTracker("daisyui-theme-files-")
 
 afterEach(tempDirs.cleanup)
 
-test("wrapContent includes :root for the light theme", () => {
+test("wrapContent puts the light theme in the base layer and includes :root", () => {
   expect(wrapContent("light", "--color-primary: red;\n"))
-    .toBe(`:root,:root:has(input.theme-controller[value=light]:checked),[data-theme="light"] {
+    .toBe(`@layer base {
+:root,:root:has(input.theme-controller[value=light]:checked),[data-theme="light"] {
 --color-primary: red;
+}
 }
 `)
 })
 
-test("wrapContent omits :root for non-light themes", () => {
+test("wrapContent puts other themes in the base layer and omits :root", () => {
   expect(wrapContent("dark", "--color-primary: black;\n"))
-    .toBe(`:root:has(input.theme-controller[value=dark]:checked),[data-theme="dark"] {
+    .toBe(`@layer base {
+:root:has(input.theme-controller[value=dark]:checked),[data-theme="dark"] {
 --color-primary: black;
+}
 }
 `)
 })
@@ -35,6 +39,7 @@ test("generateThemeFiles wraps each source theme into the destination directory"
 
   await generateThemeFiles({ srcDir, distDir })
 
+  expect(await readFile(join(distDir, "light.css"), "utf-8")).toContain("@layer base")
   expect(await readFile(join(distDir, "light.css"), "utf-8")).toContain(":root,")
   expect(await readFile(join(distDir, "dark.css"), "utf-8")).toContain('[data-theme="dark"]')
   expect(existsSync(join(distDir, "ignored.css"))).toBe(false)
