@@ -89,6 +89,7 @@
   "Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside": "Modal працює з прихованим Checkbox, а Labels може Toggle Checkbox, щоб ми могли використовувати інший тег Label із класом «Modal-backdrop», який закриває екран, щоб ми могли закрити Modal, коли клацнемо зовні",
   "Dialog modal with a close button at corner": "Діалог Modal із закритим Button у кутку",
   "Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS": "Замість роботи з клацанням, він показує елемент Swap-on, якщо ви додаєте Swap-active Class name. Ви можете додати або видалити Swap-активний клас за допомогою JS",
+  "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group": "Add radio inputs before each item and every click shows the next item. Arrow keys work too, because it is a radio group",
   "There are 3 methods to use a dropdowns": "Існує 3 способи використання спадних меню",
   "Method 1. details and summary": "Спосіб 1. деталі та резюме",
   "Method 2. popover API and anchor positioning": "Спосіб 2. Popover API і позиціонування прив’язки",
