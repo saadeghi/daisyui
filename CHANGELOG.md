@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.8.3](https://github.com/saadeghi/daisyui/compare/v5.8.2...v5.8.3) (2026-11-26)
+
+### Bug Fixes
+
+* **radial-progress:** print the progress ring instead of dropping it with the page backgrounds ([#4882](https://github.com/saadeghi/daisyui/issues/4882)) ([027c21c](https://github.com/saadeghi/daisyui/commit/027c21c4a2ab9232c41163ecb132ed65c84a0a6f))
+
 ## [5.8.2](https://github.com/saadeghi/daisyui/compare/v5.8.1...v5.8.2) (2026-11-20)
 
 ### Bug Fixes
