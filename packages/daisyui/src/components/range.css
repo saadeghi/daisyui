@@ -230,3 +230,162 @@
     }
   }
 }
+
+.range-dual {
+  @layer daisyui.l1.l2.l3 {
+    @apply relative inline-grid items-center;
+    isolation: isolate;
+    --range-thumb-size: calc(var(--size-selector, 0.25rem) * 6);
+    --range-bg: color-mix(in oklab, currentColor 10%, #0000);
+    --range-val-min: min(var(--range-val-1), var(--range-val-2));
+    --range-val-max: max(var(--range-val-1), var(--range-val-2));
+    width: clamp(3rem, 20rem, 100%);
+
+    /* WebKit drops a timeline-scope on the element using it.
+       Each range-dual needs its own parent; two in one parent share the same names. */
+    :has(> &) {
+      timeline-scope: --thumb-1, --thumb-2;
+    }
+
+    /* Only WebKit reports view progress from the inline start; the others need
+       mirroring to match the logical insets below. */
+    &:dir(rtl) {
+      @supports (not (hanging-punctuation: first)) or (not (font: -apple-system-body)) or
+        (not (-webkit-appearance: none)) {
+        --range-val-min: min(1 - var(--range-val-1), 1 - var(--range-val-2));
+        --range-val-max: max(1 - var(--range-val-1), 1 - var(--range-val-2));
+      }
+    }
+
+    @supports (timeline-scope: --v) {
+      /* Longhands: the minifier must not fold animation-timeline into the shorthand. */
+      animation-name: range-handle-1, range-handle-2;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --thumb-1, --thumb-2;
+      animation-range: entry 100% exit 0%;
+    }
+
+    &::before,
+    &::after {
+      @apply pointer-events-none absolute;
+      grid-row: 1 / -1;
+      grid-column: 1;
+    }
+
+    &::after {
+      @apply w-full;
+      content: "";
+      background-color: var(--range-track-bg, var(--range-bg));
+      border-radius: var(--radius-selector);
+      height: var(--range-track-h, calc(var(--range-thumb-size) * 0.5));
+      inset-block: 0;
+      margin-block: auto;
+      z-index: -1;
+    }
+
+    /* Dim once for a fully disabled component. */
+    &:has(> [type="range"]:disabled):not(:has(> [type="range"]:not(:disabled))) {
+      @apply opacity-30;
+    }
+
+    &::before {
+      @apply bg-center bg-no-repeat;
+      content: var(--tw-content, "");
+      opacity: var(--range-fill, 1);
+      --range-thumb-pos-min: calc(
+        var(--range-thumb-size) / 2 + (100% - var(--range-thumb-size)) * var(--range-val-min)
+      );
+      --range-thumb-pos-max: calc(
+        var(--range-thumb-size) / 2 + (100% - var(--range-thumb-size)) * var(--range-val-max)
+      );
+      background-color: currentColor;
+      inset-block: 0;
+      inset-inline-start: var(--range-thumb-pos-min);
+      inset-inline-end: calc(100% - var(--range-thumb-pos-max));
+    }
+
+    & > [type="range"] {
+      @apply pointer-events-none relative z-1 w-full;
+      grid-row: 1;
+      grid-column: 1;
+      --range-bg: #0000;
+      --range-fill: 0;
+
+      &::-webkit-slider-thumb {
+        @apply pointer-events-auto z-1;
+        view-timeline: --thumb-1 inline;
+      }
+      &::-moz-range-thumb {
+        @apply pointer-events-auto z-1;
+        view-timeline: --thumb-1 inline;
+      }
+
+      &:last-of-type {
+        &::-webkit-slider-thumb {
+          view-timeline: --thumb-2 inline;
+        }
+        &::-moz-range-thumb {
+          view-timeline: --thumb-2 inline;
+        }
+      }
+
+      /* A disabled handle loses its center, like the inactive one during keyboard focus. */
+      &:disabled {
+        @apply opacity-100;
+
+        :has(> [type="range"]:not(:disabled)) > & {
+          &::-webkit-slider-thumb {
+            border: calc(0.5 * var(--range-thumb-size)) solid;
+          }
+          &::-moz-range-thumb {
+            border: calc(0.5 * var(--range-thumb-size)) solid;
+          }
+        }
+      }
+
+      &:focus,
+      &:active,
+      &:focus-within {
+        @apply z-2;
+
+        &::-webkit-slider-thumb {
+          @apply z-2;
+        }
+        &::-moz-range-thumb {
+          @apply z-2;
+        }
+      }
+    }
+
+    /* The focused handle stays a dot; the other fills in, so only one reads as active. */
+    &:has(:focus-visible) > [type="range"]:not(:focus-visible) {
+      &::-webkit-slider-thumb {
+        border: calc(0.5 * var(--range-thumb-size)) solid;
+      }
+      &::-moz-range-thumb {
+        border: calc(0.5 * var(--range-thumb-size)) solid;
+      }
+    }
+  }
+}
+
+@keyframes range-handle-1 {
+  0% {
+    --range-val-1: 1;
+  }
+
+  100% {
+    --range-val-1: 0;
+  }
+}
+
+@keyframes range-handle-2 {
+  0% {
+    --range-val-2: 1;
+  }
+
+  100% {
+    --range-val-2: 0;
+  }
+}

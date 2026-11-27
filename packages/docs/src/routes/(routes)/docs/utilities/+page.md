@@ -208,6 +208,10 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--range-fill-x`              | horizontal offset of the range slider fill               |
 |                 | `--range-fill-y`              | vertical offset of the range slider fill                 |
 |                 | `--range-p`                   | padding of the range slider thumb                        |
+|                 | `--range-val-1`               | position of handle 1 in a multi-handle range slider      |
+|                 | `--range-val-2`               | position of handle 2 in a multi-handle range slider      |
+|                 | `--range-val-min`             | position of the lowest handle in a range slider          |
+|                 | `--range-val-max`             | position of the highest handle in a range slider         |
 |                 | `--size`                      | size of the range slider                                 |
 | Rating          | `--size`                      | size of the rating element                               |
 | Select          | `--input-color`               | color of the input                                       |

@@ -7,6 +7,8 @@ classnames:
   component:
   - class: range
     desc: For <input type="range"> tag
+  - class: range-dual
+    desc: Track shared by 2 range inputs
   color:
   - class: range-neutral
     desc: neutral color
@@ -180,7 +182,7 @@ classnames:
 <input type="range" min="0" max="100" value="40" class="range text-blue-300 [--range-bg:orange] [--range-thumb:blue] [--range-fill:0]" />
 
 ```html
-<input type="range" min="0" max="100" value="40" 
+<input type="range" min="0" max="100" value="40"
   class="$$range text-blue-300 [--$$range-bg:orange] [--$$range-thumb:blue] [--$$range-fill:0]" />
 ```
 
@@ -190,4 +192,77 @@ classnames:
 
 ```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-vertical" />
+```
+
+> :WARNING:
+>
+> Every `range-dual` needs its own parent element. If two dual ranges share a parent, their handles will interfere with each other. Use a `fieldset` with `display: contents` as a semantic wrapper that does not affect layout.
+
+### ~Dual range
+#### Two range inputs share one track. Keep each `range-dual` in its own parent element, and apply the same size and color classes to `range-dual` and to each input. In Firefox, set `--range-val-1` and `--range-val-2` on the `range-dual` element from JavaScript, using each handle's position from 0 to 1.
+<fieldset class="contents">
+  <div class="range-dual range-primary">
+    <input type="range" min="0" max="100" value="40" class="range range-primary" />
+    <input type="range" min="0" max="100" value="90" class="range range-primary" />
+  </div>
+</fieldset>
+
+```html
+<fieldset class="contents">
+  <div class="$$range-dual $$range-primary">
+    <input type="range" min="0" max="100" value="40" class="$$range $$range-primary" />
+    <input type="range" min="0" max="100" value="90" class="$$range $$range-primary" />
+  </div>
+</fieldset>
+```
+
+### ~Dual range with one handle disabled
+<fieldset class="contents">
+  <div class="range-dual range-success range-lg">
+    <input type="range" min="0" max="100" value="10" class="range range-success range-lg" disabled />
+    <input type="range" min="0" max="100" value="70" class="range range-success range-lg" />
+  </div>
+</fieldset>
+
+```html
+<fieldset class="contents">
+  <div class="$$range-dual $$range-success $$range-lg">
+    <input type="range" min="0" max="100" value="10" class="$$range $$range-success $$range-lg" disabled />
+    <input type="range" min="0" max="100" value="70" class="$$range $$range-success $$range-lg" />
+  </div>
+</fieldset>
+```
+
+### ~Dual range disabled
+<fieldset class="contents">
+  <div class="range-dual range-info range-sm">
+    <input type="range" min="0" max="100" value="10" class="range range-info range-sm" disabled />
+    <input type="range" min="0" max="100" value="60" class="range range-info range-sm" disabled />
+  </div>
+</fieldset>
+
+```html
+<fieldset class="contents">
+  <div class="$$range-dual $$range-info $$range-sm">
+    <input type="range" min="0" max="100" value="10" class="$$range $$range-info $$range-sm" disabled />
+    <input type="range" min="0" max="100" value="60" class="$$range $$range-info $$range-sm" disabled />
+  </div>
+</fieldset>
+```
+
+### ~Dual range with custom color and no fill
+<fieldset class="contents">
+  <div class="range-dual text-blue-300 [--range-bg:orange] [--range-fill:0]">
+    <input type="range" min="0" max="100" value="20" class="range [--range-thumb:blue]" />
+    <input type="range" min="0" max="100" value="80" class="range [--range-thumb:blue]" />
+  </div>
+</fieldset>
+
+```html
+<fieldset class="contents">
+  <div class="$$range-dual text-blue-300 [--$$range-bg:orange] [--$$range-fill:0]">
+    <input type="range" min="0" max="100" value="20" class="$$range [--$$range-thumb:blue]" />
+    <input type="range" min="0" max="100" value="80" class="$$range [--$$range-thumb:blue]" />
+  </div>
+</fieldset>
 ```
