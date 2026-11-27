@@ -177,6 +177,32 @@
     </div>
     <pre data-prefix="$"><code>deno i -D npm:daisyui@latest</code></pre>
   </div>
+  <label
+    class="tab has-checked:text-neutral-content! gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
+  >
+    <input type="radio" name="install[packagemanager]" class="peer" />
+    <svg
+      class="peer-checked:text-neutral-content! text-base-content max-lg:hidden"
+      width="14"
+      height="14"
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill="currentColor"
+        d="M25.333 3.24a4.666 4.666 0 1 1 0 9.333c-.743 0-1.506.281-1.877.924l-3.06 5.308c-.664 1.152-.359 2.594.048 3.86a4.667 4.667 0 1 1-8.888 0c.407-1.266.712-2.708.048-3.86l-3.061-5.308c-.371-.643-1.133-.924-1.876-.924a4.666 4.666 0 1 1 4.444-3.238c-.407 1.266-.713 2.707-.049 3.86l3.061 5.307c.371.644 1.134.925 1.877.925s1.506-.281 1.877-.924l3.06-5.309c.665-1.152.359-2.593-.047-3.859a4.666 4.666 0 0 1 4.443-6.095"
+      />
+    </svg>
+    vlt
+  </label>
+  <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
+    <div class="absolute top-0 right-0 z-1">
+      {#if onMount}
+        <Clipboard text={`vlt install -D daisyui@latest`} />
+      {/if}
+    </div>
+    <pre data-prefix="$"><code>vlt install -D daisyui@latest</code></pre>
+  </div>
 </div>
 <p class="mx-auto mt-5 mb-2 w-full text-start">2. {$t("install-step-2")}:</p>
 <div class="my-2 w-full max-w-4xl">
