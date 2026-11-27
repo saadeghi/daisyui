@@ -9,3 +9,15 @@
   inherits: false;
   initial-value: 0deg;
 }
+
+@property --range-val-1 {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --range-val-2 {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
