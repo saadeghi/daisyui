@@ -339,7 +339,7 @@ Popover is similar to dialog but it still allows focusing on the background elem
 <div class="modal" id="my-modal-2" popover>
   <div class="modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
-    <p class="py-4">Press ESC key or click the button below to close</p>
+    <p class="py-4">Press ESC key or click outside to close</p>
   </div>
   <div class="modal-backdrop">
     <button popovertarget="my-modal-2" popovertargetaction="hide">close</button>
@@ -353,7 +353,7 @@ Popover is similar to dialog but it still allows focusing on the background elem
 <div class="$$modal" id="my-modal-2" popover>
   <div class="$$modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
-    <p class="py-4">Press ESC key or click the button below to close</p>
+    <p class="py-4">Press ESC key or click outside to close</p>
   </div>
   <div class="$$modal-backdrop">
     <button popovertarget="my-modal-2" popovertargetaction="hide">close</button>
